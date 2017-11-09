@@ -5,6 +5,6 @@
     <title>Insert title here</title>
 </head>
 <body>
-<h2>${word0}${word1}</h2>
+<h2>hello world</h2>
 </body>
 </html>
