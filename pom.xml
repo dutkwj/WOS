@@ -7,13 +7,26 @@
   <version>1.0-SNAPSHOT</version>
   <name>WOS Maven Webapp</name>
   <url>http://maven.apache.org</url>
+    <properties>
+        <spring-data-hadoop.version>2.4.0.RELEASE</spring-data-hadoop.version>
+        <hbase.version>1.0.0</hbase.version>
+        <org.springframework.version>4.3.7.RELEASE</org.springframework.version>
+        <titan.version>1.0.0</titan.version>
+    </properties>
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+
+      <dependency>
+          <groupId>org.apache.hbase</groupId>
+          <artifactId>hbase-client</artifactId>
+          <version>${hbase.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework.data</groupId>
+          <artifactId>spring-data-hadoop</artifactId>
+          <version>${spring-data-hadoop.version}</version>
+      </dependency>
+
     <!--<dependency>-->
       <!--<groupId>org.apache.hadoop</groupId>-->
       <!--<artifactId>hadoop-hdfs</artifactId>-->
@@ -35,21 +48,73 @@
       <version>2.3.23</version>
     </dependency>
 
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-core</artifactId>
+          <version>${org.springframework.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-context</artifactId>
+          <version>${org.springframework.version}</version>
+      </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context-support</artifactId>
-      <version>3.2.9.RELEASE</version>
+      <version>${org.springframework.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
-      <version>3.2.9.RELEASE</version>
+      <version>${org.springframework.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>3.2.9.RELEASE</version>
+      <version>${org.springframework.version}</version>
     </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-test</artifactId>
+          <version>${org.springframework.version}</version>
+          <scope>test</scope>
+      </dependency>
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>RELEASE</version>
+      </dependency>
+
+      <dependency>
+          <groupId>com.thinkaurelius.titan</groupId>
+          <artifactId>titan-core</artifactId>
+          <version>${titan.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>com.thinkaurelius.titan</groupId>
+          <artifactId>titan-hbase</artifactId>
+          <version>${titan.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>com.thinkaurelius.titan</groupId>
+          <artifactId>titan-hadoop</artifactId>
+          <version>${titan.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>com.thinkaurelius.titan</groupId>
+          <artifactId>titan-hadoop-core</artifactId>
+          <version>${titan.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.tinkerpop</groupId>
+          <artifactId>gremlin-driver</artifactId>
+          <version>3.0.1-incubating</version>
+      </dependency>
+      <dependency>
+          <groupId>com.thinkaurelius.titan</groupId>
+          <artifactId>titan-berkeleyje</artifactId>
+          <version>1.0.0</version>
+      </dependency>
   </dependencies>
   <build>
     <finalName>WOS</finalName>

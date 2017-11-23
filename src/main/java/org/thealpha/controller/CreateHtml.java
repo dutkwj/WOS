@@ -14,8 +14,13 @@ import freemarker.template.Configuration;
 import freemarker.template.DefaultObjectWrapper;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
+import org.springframework.stereotype.Component;
 
+@Component("createHtml")
 public class CreateHtml {
+    public void test() {
+        System.out.print("test123");
+    }
     public static void main(String[] args) {
         try {
             //创建一个合适的Configration对象
