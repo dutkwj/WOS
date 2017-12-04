@@ -10,9 +10,17 @@
     <link rel="stylesheet" href="${path}/css/layui.css" type="text/css">
     <link rel="stylesheet" href="${path}/css/buttons.css" type="text/css">
 
+
+    <link rel="stylesheet" href="${path}/css/hero-slider-style.css">                                  <!-- Hero slider style -->
+    <link rel="stylesheet" href="${path}/css/templatemo-style.css">                                   <!-- Templatemo style -->
+
+
     <link rel="stylesheet" href="${path}/css/bootstrap.min.css" type="text/css">
     <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="${path}/css/style1.css">
 
 </head>
 <body>
@@ -48,13 +56,33 @@
 
 </script>
 <br/>
-<div class="layui-container">
-    <div class="layui-row">
-        <div class="layui-col-md2">
-            <img alt="140x140" src="../img/b.jpg" class="img-circle" />
+<#--<div class="layui-container">-->
+    <#--<div class="layui-row">-->
+        <#--<div class="layui-col-md2">-->
+            <#--<img alt="180*180" src="../img/b.jpg" class="img-circle" />-->
+        <#--</div>-->
+        <#--<div class="layui-col-md3">-->
+            <#--<address> <strong><font size="4">Takeo Kanade</font></strong><br /><br />-->
+                <#--h-index:131 | #Paper:662 | #Citation:93218 <br /><br />-->
+                <#--<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br /><br />-->
+                <#--<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Department of Electrical & Computer Engineering,Carnegie Mellon University<br /><br />-->
+                <#--<abbr title="Phone"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 123456</address>-->
+        <#--</div>-->
+    <#--</div>-->
+<#--</div>-->
+<div class="container-fluid tm-section tm-section-2">
+    <div class="row tm-media-row">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <img src="img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">
         </div>
-        <div class="layui-col-md3">
-            <address> <strong>Takeo Kanade</strong><br /> Professor<br /> Department of Electrical & Computer Engineering,Carnegie Mellon University<br /> <abbr title="Phone">123456</address>
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+            <div class="tm-media-text-container">
+                <h3 class="tm-media-title tm-gray-text">Takeo Kanade</h3>
+                <p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218 <br />
+                    <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br />
+                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Department of Electrical & Computer Engineering,Carnegie Mellon University<br />
+                    <abbr title="Phone"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 123456</address></p>
+            </div>
         </div>
     </div>
 </div>
@@ -90,7 +118,7 @@
         </div>
     </div>
 </div>
-<div id="content">123</div>
+<div id="content">   </div>
 <script type="text/javascript">
     $(document).ready(function () {
         $('#nav_relation > li').click(function (e) {
@@ -100,17 +128,25 @@
 
             var navTab = $(this).children('a').text();
             if(navTab == '基本信息') {
-                $("svg").attr("width", 0);
-                $("svg").attr("height", 0);
-                $("#content").text('基本信息');
+                $.get('information',function(result){
+                    $("svg").attr("width", 0);
+                    $("svg").attr("height", 0);
+                    $("#content").html(result);
+                })
+
             } else if(navTab == '潜力指数') {
-                $("svg").attr("width", 0);
-                $("svg").attr("height", 0);
-                $("#content").text('潜力指数');
+                $.get('potential',function (result){
+                    $("svg").attr("width", 0);
+                    $("svg").attr("height", 0);
+                    $("#content").html(result);
+                })
             } else if(navTab == '图灵数') {
-                $("svg").attr("width", 0);
-                $("svg").attr("height", 0);
-                $("#content").text('图灵数');
+                $.get('Turing',function(result){
+                    $("svg").attr("width", 0);
+                    $("svg").attr("height", 0);
+                    $("#content").html(result);
+                })
+
             } else if(navTab == '合作关系') {
                 $.get('cooperateRela', function (result) {
                     $("svg").attr("width", 0);

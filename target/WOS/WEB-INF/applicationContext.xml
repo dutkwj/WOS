@@ -7,7 +7,8 @@
     <mvc:resources mapping="/html/**" location="/html/" />
     <mvc:resources mapping="/img/**" location="/img/" />
     <mvc:resources mapping="/file/**" location="/file/" />
-    <mvc:resources mapping="/data/**" location="/data/" />
+    <mvc:resources mapping="/fonts/**" location="/fonts/" />
+
 
 
 </beans>
