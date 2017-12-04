@@ -15,13 +15,16 @@ import org.springframework.data.hadoop.hbase.RowMapper;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.io.*;
+import java.util.List;
+
 //@RunWith(SpringJUnit4ClassRunner.class)
 //@ContextConfiguration(locations = "/WEB-INF/applicationContext.xml")
 public class HbaseTest {
-    private static final String TABLE_NAME    = "test";
-    private static final String ROW_KEY       = "row1";
-    private static final String COLUMN_FAMILY = "cf";
-    private static final String QUALIFIER     = "a";
+    private static final String TABLE_NAME    = "scholar";
+    private static final String ROW_KEY       = "row4";
+    private static final String COLUMN_FAMILY = "relationship";
+    private static final String QUALIFIER     = "cooperate";
     @Test
     public void test() {
         // 加载Spring配置文件
@@ -54,6 +57,43 @@ public class HbaseTest {
 
     @Test
     public void importCooperateScholarTest() {
-        
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-servlet.xml");
+        HbaseTemplate hbaseTemplate = (HbaseTemplate) applicationContext.getBean("hbaseTemplate");
+        File csv = new File("/home/kangwenjie/Documents/wos/file/cs_author_co_author_count_list.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)  //读取到的内容给line变量
+            {
+                line.substring(0, line.indexOf(","));
+                String authorId = line.substring(0, line.indexOf(","));
+                String cooperateAuthors = line.substring(line.indexOf(",") + 1);
+                cooperateAuthors = cooperateAuthors.replaceAll("\"|\\[|\\]|'", "");
+                System.out.print(cooperateAuthors+"   ");
+                hbaseTemplate.put(TABLE_NAME, authorId, COLUMN_FAMILY, QUALIFIER, cooperateAuthors.getBytes());
+
+                count += 1;
+                System.out.println(count);
+            }
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
     }
+    @Test
+    public void t1() {
+        String s1 = "\\[";
+        System.out.print(s1);
+    }
+
+
 }
