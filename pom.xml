@@ -10,6 +10,7 @@
     <properties>
         <spring-data-hadoop.version>2.4.0.RELEASE</spring-data-hadoop.version>
         <hbase.version>1.0.0</hbase.version>
+        <hadoop.version>2.5.1</hadoop.version>
         <org.springframework.version>4.3.7.RELEASE</org.springframework.version>
         <titan.version>1.0.0</titan.version>
     </properties>
@@ -20,28 +21,49 @@
           <artifactId>hbase-client</artifactId>
           <version>${hbase.version}</version>
       </dependency>
+      <dependency>
+          <groupId>org.apache.hbase</groupId>
+          <artifactId>hbase-server</artifactId>
+          <version>${hbase.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.hbase</groupId>
+          <artifactId>hbase-common</artifactId>
+          <version>${hbase.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.hbase</groupId>
+          <artifactId>hbase-protocol</artifactId>
+          <version>${hbase.version}</version>
+      </dependency>
 
       <dependency>
           <groupId>org.springframework.data</groupId>
           <artifactId>spring-data-hadoop</artifactId>
           <version>${spring-data-hadoop.version}</version>
       </dependency>
+      <dependency>
+          <groupId>org.apache.hadoop</groupId>
+          <artifactId>hadoop-common</artifactId>
+          <version>${hadoop.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.hadoop</groupId>
+          <artifactId>hadoop-hdfs</artifactId>
+          <version>${hadoop.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.hadoop</groupId>
+          <artifactId>hadoop-client</artifactId>
+          <version>${hadoop.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.hadoop</groupId>
+          <artifactId>hadoop-auth</artifactId>
+          <version>${hadoop.version}</version>
+      </dependency>
 
-    <!--<dependency>-->
-      <!--<groupId>org.apache.hadoop</groupId>-->
-      <!--<artifactId>hadoop-hdfs</artifactId>-->
-      <!--<version>2.6.0</version>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>org.apache.hadoop</groupId>-->
-      <!--<artifactId>hadoop-mapreduce-client-jobclient</artifactId>-->
-      <!--<version>2.6.0</version>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>org.apache.hadoop</groupId>-->
-      <!--<artifactId>hadoop-common</artifactId>-->
-      <!--<version>2.6.0</version>-->
-    <!--</dependency>-->
+
     <dependency>
       <groupId>org.freemarker</groupId>
       <artifactId>freemarker</artifactId>
@@ -80,41 +102,46 @@
           <scope>test</scope>
       </dependency>
       <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-aop</artifactId>
+          <version>${org.springframework.version}</version>
+      </dependency>
+      <dependency>
           <groupId>junit</groupId>
           <artifactId>junit</artifactId>
           <version>RELEASE</version>
       </dependency>
 
-      <dependency>
-          <groupId>com.thinkaurelius.titan</groupId>
-          <artifactId>titan-core</artifactId>
-          <version>${titan.version}</version>
-      </dependency>
-      <dependency>
-          <groupId>com.thinkaurelius.titan</groupId>
-          <artifactId>titan-hbase</artifactId>
-          <version>${titan.version}</version>
-      </dependency>
-      <dependency>
-          <groupId>com.thinkaurelius.titan</groupId>
-          <artifactId>titan-hadoop</artifactId>
-          <version>${titan.version}</version>
-      </dependency>
-      <dependency>
-          <groupId>com.thinkaurelius.titan</groupId>
-          <artifactId>titan-hadoop-core</artifactId>
-          <version>${titan.version}</version>
-      </dependency>
-      <dependency>
-          <groupId>org.apache.tinkerpop</groupId>
-          <artifactId>gremlin-driver</artifactId>
-          <version>3.0.1-incubating</version>
-      </dependency>
-      <dependency>
-          <groupId>com.thinkaurelius.titan</groupId>
-          <artifactId>titan-berkeleyje</artifactId>
-          <version>1.0.0</version>
-      </dependency>
+      <!--<dependency>-->
+          <!--<groupId>com.thinkaurelius.titan</groupId>-->
+          <!--<artifactId>titan-core</artifactId>-->
+          <!--<version>${titan.version}</version>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+          <!--<groupId>com.thinkaurelius.titan</groupId>-->
+          <!--<artifactId>titan-hbase</artifactId>-->
+          <!--<version>${titan.version}</version>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+          <!--<groupId>com.thinkaurelius.titan</groupId>-->
+          <!--<artifactId>titan-hadoop</artifactId>-->
+          <!--<version>${titan.version}</version>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+          <!--<groupId>com.thinkaurelius.titan</groupId>-->
+          <!--<artifactId>titan-hadoop-core</artifactId>-->
+          <!--<version>${titan.version}</version>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+          <!--<groupId>org.apache.tinkerpop</groupId>-->
+          <!--<artifactId>gremlin-driver</artifactId>-->
+          <!--<version>3.0.1-incubating</version>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+          <!--<groupId>com.thinkaurelius.titan</groupId>-->
+          <!--<artifactId>titan-berkeleyje</artifactId>-->
+          <!--<version>1.0.0</version>-->
+      <!--</dependency>-->
   </dependencies>
   <build>
     <finalName>WOS</finalName>
