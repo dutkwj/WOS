@@ -1,13 +1,13 @@
-import com.thinkaurelius.titan.core.TitanFactory;
-import com.thinkaurelius.titan.core.TitanGraph;
-import org.apache.commons.configuration.BaseConfiguration;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.hbase.HBaseConfiguration;
+import org.apache.hadoop.hbase.KeyValue;
+import org.apache.hadoop.hbase.client.Get;
+import org.apache.hadoop.hbase.client.HTable;
 import org.apache.hadoop.hbase.util.Bytes;
-import org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversalSource;
-import org.apache.tinkerpop.gremlin.structure.Edge;
-import org.apache.tinkerpop.gremlin.structure.Vertex;
 import org.junit.Test;
 import org.junit.runner.Result;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.data.hadoop.hbase.HbaseTemplate;
@@ -19,12 +19,16 @@ import java.io.*;
 import java.util.List;
 
 //@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(locations = "/WEB-INF/applicationContext.xml")
+//@ContextConfiguration(locations = "classpath:spring-servlet.xml")
 public class HbaseTest {
-    private static final String TABLE_NAME    = "scholar";
-    private static final String ROW_KEY       = "row4";
-    private static final String COLUMN_FAMILY = "relationship";
-    private static final String QUALIFIER     = "cooperate";
+    private static final String TABLE_NAME    = "testTable2";
+    private static final String ROW_KEY       = "r2";
+    private static final String COLUMN_FAMILY = "cf2";
+    private static final String QUALIFIER     = "q1";
+
+    @Autowired
+    private HbaseTemplate hbaseTemplate;
+
     @Test
     public void test() {
         // 加载Spring配置文件
@@ -40,20 +44,20 @@ public class HbaseTest {
         System.out.println(result); // 输出结果是：value1
     }
 
-    @Test
-    public void titanTest(){
-        BaseConfiguration baseConfiguration = new BaseConfiguration();
-        baseConfiguration.setProperty("storage.backend", "hbase");
-        baseConfiguration.setProperty("storage.hostname", "127.0.0.1");
-        baseConfiguration.setProperty("storage.tablename","titan");
-        baseConfiguration.setProperty("index.search.backend","elasticsearch");
-        baseConfiguration.setProperty("index.search.hostname","127.0.0.1");
-
-        TitanGraph titanGraph = TitanFactory.open(baseConfiguration);
-        GraphTraversalSource g = titanGraph.traversal();
-        Vertex saturn = g.V().has("name", "saturn").next();
-        System.out.print(saturn);
-    }
+//    @Test
+//    public void titanTest(){
+//        BaseConfiguration baseConfiguration = new BaseConfiguration();
+//        baseConfiguration.setProperty("storage.backend", "hbase");
+//        baseConfiguration.setProperty("storage.hostname", "127.0.0.1");
+//        baseConfiguration.setProperty("storage.tablename","titan");
+//        baseConfiguration.setProperty("index.search.backend","elasticsearch");
+//        baseConfiguration.setProperty("index.search.hostname","127.0.0.1");
+//
+//        TitanGraph titanGraph = TitanFactory.open(baseConfiguration);
+//        GraphTraversalSource g = titanGraph.traversal();
+//        Vertex saturn = g.V().has("name", "saturn").next();
+//        System.out.print(saturn);
+//    }
 
     @Test
     public void importCooperateScholarTest() {
@@ -90,10 +94,40 @@ public class HbaseTest {
 
     }
     @Test
-    public void t1() {
-        String s1 = "\\[";
-        System.out.print(s1);
+    public void testTempldate() {
+        String result = hbaseTemplate.get("testTable3", "r3", new RowMapper<String>() {
+            public String mapRow(org.apache.hadoop.hbase.client.Result result, int i) throws Exception {
+                return Bytes.toString(result.getValue("cf3".getBytes(), "q3".getBytes()));
+            }
+        });
+        System.out.println(result); // 输出结果是：value1
     }
 
+    @Test
+    public void testHTable() {
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", "100.66.1.209,100.66.2.1,100.66.2.22");
+        conf.set("hbase.zookeeper.property.clientPort", "2181");
+        Get get = new Get(Bytes.toBytes("r3"));
+        try {
+            HTable table = new HTable(conf, Bytes.toBytes("testTable3"));
+            org.apache.hadoop.hbase.client.Result result = table.get(get);
+            for (KeyValue kv : result.list()) {
+                System.out.println("family:" + Bytes.toString(kv.getFamily()));
+                System.out
+                        .println("qualifier:" + Bytes.toString(kv.getQualifier()));
+                System.out.println("value:" + Bytes.toString(kv.getValue()));
+                System.out.println("Timestamp:" + kv.getTimestamp());
+                System.out.println("-------------------------------------------");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void test1() {
+        System.out.print("111");
+    }
 
 }
