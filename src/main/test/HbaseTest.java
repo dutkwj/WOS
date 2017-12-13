@@ -18,13 +18,13 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.io.*;
 import java.util.List;
 
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(locations = "classpath:spring-servlet.xml")
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = "classpath:spring-servlet.xml")
 public class HbaseTest {
-    private static final String TABLE_NAME    = "testTable2";
-    private static final String ROW_KEY       = "r2";
-    private static final String COLUMN_FAMILY = "cf2";
-    private static final String QUALIFIER     = "q1";
+    private static final String TABLE_NAME    = "cs_scholar";
+    private static final String ROW_KEY       = "r";
+    private static final String COLUMN_FAMILY = "relationship";
+    private static final String QUALIFIER     = "cooperate";
 
     @Autowired
     private HbaseTemplate hbaseTemplate;
@@ -61,9 +61,9 @@ public class HbaseTest {
 
     @Test
     public void importCooperateScholarTest() {
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-servlet.xml");
-        HbaseTemplate hbaseTemplate = (HbaseTemplate) applicationContext.getBean("hbaseTemplate");
-        File csv = new File("/home/kangwenjie/Documents/wos/file/cs_author_co_author_count_list.csv");  // CSV文件路径
+//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-servlet.xml");
+//        HbaseTemplate hbaseTemplate = (HbaseTemplate) applicationContext.getBean("hbaseTemplate");
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_co_author_count_list.csv");  // CSV文件路径
         BufferedReader br = null;
         try
         {
@@ -74,18 +74,25 @@ public class HbaseTest {
         }
         String line = "";
         int count = 0;
+        // 787016   4CDAA40  1514846 9CE917C
         try {
             while ((line = br.readLine()) != null)  //读取到的内容给line变量
             {
+                count += 1;
+//                if (count <= 1514846) {
+//                    System.out.println(count);
+//                    continue;
+//                }
                 line.substring(0, line.indexOf(","));
                 String authorId = line.substring(0, line.indexOf(","));
                 String cooperateAuthors = line.substring(line.indexOf(",") + 1);
                 cooperateAuthors = cooperateAuthors.replaceAll("\"|\\[|\\]|'", "");
-                System.out.print(cooperateAuthors+"   ");
                 hbaseTemplate.put(TABLE_NAME, authorId, COLUMN_FAMILY, QUALIFIER, cooperateAuthors.getBytes());
 
-                count += 1;
                 System.out.println(count);
+                System.out.println(authorId);
+                System.out.println(cooperateAuthors);
+
             }
         } catch (IOException e)
         {
@@ -95,12 +102,16 @@ public class HbaseTest {
     }
     @Test
     public void testTempldate() {
-        String result = hbaseTemplate.get("testTable3", "r3", new RowMapper<String>() {
+        //可行FC81526    不可行0D8CD80
+        String result = hbaseTemplate.get("cs_scholar", "0D8CD80", new RowMapper<String>() {
             public String mapRow(org.apache.hadoop.hbase.client.Result result, int i) throws Exception {
-                return Bytes.toString(result.getValue("cf3".getBytes(), "q3".getBytes()));
+                return Bytes.toString(result.getValue("relationship".getBytes(), "cooperate".getBytes()));
             }
         });
+
         System.out.println(result); // 输出结果是：value1
+//        hbaseTemplate.put("testTable", "r1", "cf", "q2", "value2".getBytes());
+
     }
 
     @Test

@@ -27,9 +27,9 @@ public class CooperateRelaController {
     public String helloWorld(Model model) {
         System.out.println("hbaseTemplate");
         System.out.println(hbaseTemplate);
-        String result = hbaseTemplate.get("testTable3", "r3", new RowMapper<String>() {
+        String result = hbaseTemplate.get("cs_scholar", "0D8CD80", new RowMapper<String>() {
             public String mapRow(org.apache.hadoop.hbase.client.Result result, int i) throws Exception {
-                return Bytes.toString(result.getValue("cf3".getBytes(), "q3".getBytes()));
+                return Bytes.toString(result.getValue("relationship".getBytes(), "cooperate".getBytes()));
             }
         });
         System.out.println(result); // 输出结果是：value3

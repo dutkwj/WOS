@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController {
     @RequestMapping("/index")
-    public String helloWorld(Model model) {
+    public String helloWorld(Model model) { 
         return "index.ftl";
     }
 }
