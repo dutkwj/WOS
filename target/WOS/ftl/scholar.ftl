@@ -118,7 +118,22 @@
         </div>
     </div>
 </div>
-<div id="content">   </div>
+<div id="content">  <div class="container-fluid tm-section tm-section-2">
+    <div class="row tm-media-row">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <img src="img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+            <div class="tm-media-text-container">
+                <h3 class="tm-media-title tm-gray-text">Takeo Kanade</h3>
+                <p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218 <br />
+                    <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br />
+                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Department of Electrical & Computer Engineering,Carnegie Mellon University<br />
+                    <abbr title="Phone"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 123456</address></p>
+            </div>
+        </div>
+    </div>
+</div>
 <script type="text/javascript">
     $(document).ready(function () {
         $('#nav_relation > li').click(function (e) {
