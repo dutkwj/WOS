@@ -1,8 +1,6 @@
 import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.hbase.HBaseConfiguration;
-import org.apache.hadoop.hbase.KeyValue;
-import org.apache.hadoop.hbase.client.Get;
-import org.apache.hadoop.hbase.client.HTable;
+import org.apache.hadoop.hbase.*;
+import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.junit.Test;
 import org.junit.runner.Result;
@@ -14,17 +12,21 @@ import org.springframework.data.hadoop.hbase.HbaseTemplate;
 import org.springframework.data.hadoop.hbase.RowMapper;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.thealpha.util.ConfigurationConstant;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:spring-servlet.xml")
 public class HbaseTest {
     private static final String TABLE_NAME    = "cs_scholar";
     private static final String ROW_KEY       = "r";
-    private static final String COLUMN_FAMILY = "relationship";
-    private static final String QUALIFIER     = "cooperate";
+    private static final String COLUMN_FAMILY = "info";
+    private static final String QUALIFIER     = "name";
 
     @Autowired
     private HbaseTemplate hbaseTemplate;
@@ -138,7 +140,227 @@ public class HbaseTest {
 
     @Test
     public void test1() {
+        HashMap<String, String> map = new HashMap<String, String>();
+        map.put("a", "av");
+        map.put("b", "bv");
+        for (Map.Entry entry : map.entrySet()) {
+            System.out.print(entry.getKey());
+            System.out.print(entry.getValue());
+        }
         System.out.print("111");
+    }
+
+    @Test
+    public void importScholarNameTest() {
+        HashMap<String, String> authorIdName = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_id_name.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)  //读取到的内容给line变量
+            {
+                count += 1;
+                line.substring(0, line.indexOf(","));
+                String authorId = line.substring(0, line.indexOf(","));
+                String name = line.substring(line.indexOf(",") + 1);
+                authorIdName.put(authorId, name);
+                System.out.println(count);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : authorIdName.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String name = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_NAME), Bytes.toBytes(name));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_SCHOLAR));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Test
+    public void getResultScanTest() {
+
+        Connection connection = null;
+        Table table = null;
+        ResultScanner results = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", "100.66.1.209,100.66.2.1,100.66.2.22");
+        conf.set("hbase.zookeeper.property.clientPort", "2181");
+
+        List<Get> gets = new ArrayList<Get>();
+        Get get1 = new Get(Bytes.toBytes("r1"));
+        Get get2 = new Get(Bytes.toBytes("r2"));
+        Get get3 = new Get(Bytes.toBytes("r3"));
+        Get get4 = new Get(Bytes.toBytes("r4"));
+        Get get5 = new Get(Bytes.toBytes("r5"));
+        gets.add(get1);
+        gets.add(get2);
+        gets.add(get3);
+        gets.add(get4);
+        gets.add(get5);
+
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf("testTable"));
+//            results = table.getScanner(Bytes.toBytes("cf"), Bytes.toBytes("q1"));
+            org.apache.hadoop.hbase.client.Result[] rs = table.get(gets);
+            for (org.apache.hadoop.hbase.client.Result result : rs) {
+                for (Cell cell : result.rawCells()) {
+                    System.out.println(
+                            "行键:" + new String(CellUtil.cloneRow(cell)) + "\t" +
+                                    "列族:" + new String(CellUtil.cloneFamily(cell)) + "\t" +
+                                    "列名:" + new String(CellUtil.cloneQualifier(cell)) + "\t" +
+                                    "值:" + new String(CellUtil.cloneValue(cell)) + "\t" +
+                                    "时间戳:" + cell.getTimestamp());
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+//            results.close();
+            try {
+                table.close();
+                connection.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @Test
+    public void importRSCooperate() {
+        HashMap<String, String> authorCoAuthorCount = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_co_author_count_list.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+                line.substring(0, line.indexOf(","));
+                String authorId = line.substring(0, line.indexOf(","));
+                String cooperateAuthors = line.substring(line.indexOf(",") + 1);
+                cooperateAuthors = cooperateAuthors.replaceAll("\"|\\[|\\]|'", "");
+                authorCoAuthorCount.put(authorId, cooperateAuthors);
+                System.out.println(count);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : authorCoAuthorCount.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String cooperateCounts = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_COOPERATE), Bytes.toBytes(ConfigurationConstant.QF_COUNT), Bytes.toBytes(cooperateCounts));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void importAuthorIdAff() {
+        HashMap<String, String> authorIdAff = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_id_aff.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+                if (count <= 11) {
+                    continue;
+                }
+                line.substring(0, line.indexOf(","));
+                String authorId = line.substring(0, line.indexOf(",")).replace("\n", "");
+                String aff = line.substring(line.indexOf(",") + 1).replaceAll("\"", "");
+                if (aff != null && !aff.equals("")) {
+                    authorIdAff.put(authorId, aff);
+
+                }
+                System.out.println(count);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : authorIdAff.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String aff = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_AFF), Bytes.toBytes(aff));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_SCHOLAR));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

@@ -110,7 +110,21 @@
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                             <div class="tm-media-text-container">
-                                <h3 class="tm-media-title tm-gray-text">Takeo Kanade</h3>
+                                <h3 class="tm-media-title tm-gray-text">Takeo Kanade${key}1${test123}dddd  ${abc}</h3>
+                                <#list testList as item>
+                                    ${item}
+                                </#list>
+                                <#list scholarCooperate?keys as index>
+                                    <option value="${index}">
+                                        ${scholarCooperate["${index}"]}
+                                    </option>
+                                </#list>
+                            <#list map?keys as index>
+                                <option value="${index}">
+                                ${map["${index}"]}
+                                    ${index}
+                                </option>
+                            </#list>
                                 <p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218
                                     <br/>
                                     <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br/>
