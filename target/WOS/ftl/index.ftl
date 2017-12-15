@@ -101,63 +101,28 @@
                 </div>
             </div>
             <div class="layui-row layui-col-space10">
-                <div class="layui-col-md2">
-                </div>
-                <div class="layui-col-md9" style="border-left: 1px solid #eee;border-right: 1px solid #eee;border-bottom: 1px solid #eee;">
-                    <div class="row tm-media-row">
-                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                            <img src="img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                            <div class="tm-media-text-container">
-                                <h3 class="tm-media-title tm-gray-text">Takeo Kanade${key}1${test123}dddd  ${abc}</h3>
-                                <#list testList as item>
-                                    ${item}
-                                </#list>
-                                <#list scholarCooperate?keys as index>
-                                    <option value="${index}">
-                                        ${scholarCooperate["${index}"]}
-                                    </option>
-                                </#list>
-                            <#list map?keys as index>
-                                <option value="${index}">
-                                ${map["${index}"]}
-                                    ${index}
-                                </option>
-                            </#list>
-                                <p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218
-                                    <br/>
-                                    <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br/>
-                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Department of
-                                    Electrical & Computer Engineering,Carnegie Mellon University<br/>
-                                    <abbr title="Phone"><span class="glyphicon glyphicon-earphone"
-                                                              aria-hidden="true"></span> 123456</address></p>
+                <#list recommendScholars?keys as scholarId>
+                    <div class="layui-col-md2">
+                    </div>
+                    <div class="layui-col-md9" style="border-left: 1px solid #eee;border-right: 1px solid #eee;border-bottom: 1px solid #eee;">
+                        <div class="row tm-media-row">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <img src="img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                <div class="tm-media-text-container">
+                                    <h3 class="tm-media-title tm-gray-text">${recommendScholars["${scholarId}"].name!""} </h3>
+                                    <p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218
+                                        <br/>
+                                        <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br/>
+                                        <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>${recommendScholars["${scholarId}"].aff!""}<br/>
+                                        <abbr title="Phone"><span class="glyphicon glyphicon-earphone"
+                                                                  aria-hidden="true"></span> 123456</address></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="layui-col-md2">
-                </div>
-                <div class="layui-col-md9" style="border-left: 1px solid #eee;border-right: 1px solid #eee;border-bottom: 1px solid #eee;">
-                    <div class="row tm-media-row">
-                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                            <img src="img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                            <div class="tm-media-text-container">
-                                <h3 class="tm-media-title tm-gray-text">Takeo Kanade</h3>
-                                <p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218
-                                    <br/>
-                                    <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br/>
-                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Department of
-                                    Electrical & Computer Engineering,Carnegie Mellon University<br/>
-                                    <abbr title="Phone"><span class="glyphicon glyphicon-earphone"
-                                                              aria-hidden="true"></span> 123456</address></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                </#list>
             </div>
         </div>
 

@@ -213,15 +213,16 @@ public class HbaseTest {
 
         List<Get> gets = new ArrayList<Get>();
         Get get1 = new Get(Bytes.toBytes("r1"));
-        Get get2 = new Get(Bytes.toBytes("r2"));
-        Get get3 = new Get(Bytes.toBytes("r3"));
-        Get get4 = new Get(Bytes.toBytes("r4"));
-        Get get5 = new Get(Bytes.toBytes("r5"));
+//        Get get2 = new Get(Bytes.toBytes("r2"));
+//        Get get3 = new Get(Bytes.toBytes("r3"));
+//        Get get4 = new Get(Bytes.toBytes("r4"));
+//        Get get5 = new Get(Bytes.toBytes("r5"));
+        get1.addFamily(Bytes.toBytes("cf"));
         gets.add(get1);
-        gets.add(get2);
-        gets.add(get3);
-        gets.add(get4);
-        gets.add(get5);
+//        gets.add(get2);
+//        gets.add(get3);
+//        gets.add(get4);
+//        gets.add(get5);
 
         try {
             connection = ConnectionFactory.createConnection(conf);
