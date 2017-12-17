@@ -1,5 +1,6 @@
 package org.thealpha.dao.imple;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.CellUtil;
@@ -7,6 +8,9 @@ import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.util.Bytes;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.hadoop.hbase.HbaseTemplate;
+import org.springframework.data.hadoop.hbase.RowMapper;
 import org.springframework.stereotype.Repository;
 import org.thealpha.dao.inter.ScholarInfoDao;
 import org.thealpha.model.Scholar;
@@ -23,6 +27,9 @@ import java.util.Map;
  */
 @Repository
 public class ScholarInfoDaoImpl implements ScholarInfoDao{
+
+    @Autowired
+    private HbaseTemplate hbaseTemplate;
 
     public List<String> getRecommendScholars() {
         List<String> recommendScholars = new ArrayList<String>();
@@ -41,7 +48,10 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
         return recommendScholars;
     }
 
-    public Map<String, Scholar> getScholarByIds(List<String> ids) {
+    public List<Scholar> getScholarsByIds(List<String> scholarIds) {
+        if (CollectionUtils.isEmpty(scholarIds)) {
+            return null;
+        }
         Configuration conf = HBaseConfiguration.create();
         conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
         conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
@@ -50,13 +60,13 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
         Result[] results = null;
 
         List<Get> gets = new ArrayList<Get>();
-        for (String id : ids) {
+        for (String id : scholarIds) {
             Get get = new Get(Bytes.toBytes(id));
             get.addFamily(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO));
             gets.add(get);
 
         }
-        HashMap<String, Scholar> map = new HashMap<String, Scholar>();
+        List<Scholar> scholarList = new ArrayList<Scholar>();
         try {
             connection = ConnectionFactory.createConnection(conf);
             table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_SCHOLAR));
@@ -74,7 +84,7 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                         scholar.setAff(value);
                     }
                 }
-                map.put(scholar.getIndex(), scholar);
+                scholarList.add(scholar);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -86,6 +96,21 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 e.printStackTrace();
             }
         }
-        return map;
+        return scholarList;
+    }
+
+    public Scholar getScholarById(final String scholarId) {
+        Scholar result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_SCHOLAR, scholarId, new RowMapper<Scholar>() {
+            public Scholar mapRow(Result result, int rowNum) throws Exception {
+                Scholar scholar = new Scholar();
+                String name = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_NAME)));
+                String aff = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_AFF)));
+                scholar.setIndex(scholarId);
+                scholar.setName(name);
+                scholar.setAff(aff);
+                return scholar;
+            }
+        });
+        return result;
     }
 }

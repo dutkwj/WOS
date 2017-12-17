@@ -101,7 +101,7 @@
                 </div>
             </div>
             <div class="layui-row layui-col-space10">
-                <#list recommendScholars?keys as scholarId>
+                <#list recommendScholars as scholar>
                     <div class="layui-col-md2">
                     </div>
                     <div class="layui-col-md9" style="border-left: 1px solid #eee;border-right: 1px solid #eee;border-bottom: 1px solid #eee;">
@@ -111,11 +111,11 @@
                             </div>
                             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                                 <div class="tm-media-text-container">
-                                    <h3 class="tm-media-title tm-gray-text">${recommendScholars["${scholarId}"].name!""} </h3>
+                                    <h3 class="tm-media-title tm-gray-text">${scholar.name!""} </h3>
                                     <p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218
                                         <br/>
                                         <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br/>
-                                        <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>${recommendScholars["${scholarId}"].aff!""}<br/>
+                                        <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>${scholar.aff!""}<br/>
                                         <abbr title="Phone"><span class="glyphicon glyphicon-earphone"
                                                                   aria-hidden="true"></span> 123456</address></p>
                                 </div>

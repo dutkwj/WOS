@@ -96,16 +96,15 @@
     var g1 = svg.append("g");
 
     nodes = [
-        { "name": "云天河"   , "image" : "../img/b.jpg" },
-        { "name": "韩菱纱"   , "image" : "../img/b.jpg" },
-        { "name": "柳梦璃"   , "image" : "../img/b.jpg" }
-    ];
-    edges = [
-        { "source": 0 , "target": 1 , "relation":"挚友" },
-        { "source": 0 , "target": 2 , "relation":"挚友" }
-    ];
+        { "name": "${middleScholar.name!""}"   , "image" : "../img/b.jpg" }];
+    edges = [];
+    var cooperaterIndex = 1;
+    <#list cooperaters as cooperater>
+        nodes.push({"name": "${cooperater.name!""}"   , "image" : "../img/b.jpg"});
+        edges.push({ "source": 0 , "target": cooperaterIndex , "relation":"合作关系" , "count":${cooperater.count!1}});
+        cooperaterIndex = cooperaterIndex + 1;
 
-
+    </#list>
 
     //D3力导向布局
     var force = d3.layout.force()
@@ -122,7 +121,9 @@
             .enter()
             .append("line")
             .style("stroke","#ccc")
-            .style("stroke-width",1);
+            .style("stroke-width",function (d) {
+                return d.count;
+            });
 
     //边上的文字（人物之间的关系）
     var edges_text = g1.selectAll(".linetext")
@@ -131,7 +132,7 @@
             .append("text")
             .attr("class","linetext")
             .text(function(d){
-                return d.relation;
+                return d.count;
             });
 
 

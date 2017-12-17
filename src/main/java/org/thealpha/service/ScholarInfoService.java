@@ -17,12 +17,16 @@ public class ScholarInfoService {
     @Autowired
     private ScholarInfoDao scholarInfoDao;
 
-    public Map<String, Scholar> getRecommendScholars() {
+    public List<Scholar> getRecommendScholars() {
         List<String> recommendScholarIds = scholarInfoDao.getRecommendScholars();
-        return getScholarByIds(recommendScholarIds);
+        return getScholarsByIds(recommendScholarIds);
     }
 
-    public Map<String, Scholar> getScholarByIds(List<String> ids) {
-        return scholarInfoDao.getScholarByIds(ids);
+    public List<Scholar> getScholarsByIds(List<String> scholarIds) {
+        return scholarInfoDao.getScholarsByIds(scholarIds);
+    }
+
+    public Scholar getScholarById(String scholarId) {
+        return scholarInfoDao.getScholarById(scholarId);
     }
 }

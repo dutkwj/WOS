@@ -92,23 +92,26 @@
     <div class="row-fluid">
         <div class="span12">
             <ul class="nav nav-tabs" id="nav_relation">
-                <li class="active" id="baseInfo">
-                    <a href="#">基本信息</a>
-                </li>
-                <li id="li_potentail">
-                    <a href="#">潜力指数</a>
-                </li>
-                <li id="li_turing">
-                    <a href="#">图灵数</a>
-                </li>
-                <li id="li_cooperate">
+                <li class="active" id="li_cooperate">
                     <a href="#" id="a_cooperate">合作关系</a>
+                </li>
+                <li id="li_team">
+                    <a href="#">团队关系</a>
                 </li>
                 <li id="li_teastu">
                     <a href="#" id="a_teastu">师生关系</a>
                 </li>
                 <li id="li_ref">
-                    <a href="#">引用关系</a>
+                    <a href="#">直接引用关系</a>
+                </li>
+                <li id="li_refed">
+                    <a href="#">直接被引关系</a>
+                </li>
+                <li id="li_coRef">
+                    <a href="#">共同引用关系</a>
+                </li>
+                <li id="li_coRefed">
+                    <a href="#">共同被引关系</a>
                 </li>
             </ul>
         </div>
@@ -118,52 +121,30 @@
         </div>
     </div>
 </div>
-<div id="content">  <div class="container-fluid tm-section tm-section-2">
-    <div class="row tm-media-row">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <img src="img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">
-        </div>
-        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-            <div class="tm-media-text-container">
-                <h3 class="tm-media-title tm-gray-text">Takeo Kanade</h3>
-                <p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218 <br />
-                    <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br />
-                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Department of Electrical & Computer Engineering,Carnegie Mellon University<br />
-                    <abbr title="Phone"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 123456</address></p>
-            </div>
-        </div>
-    </div>
+<div id="content">
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
+        $.get('cooperateRela/0DE9F497/count', function (result) {
+            $("svg").attr("width", 0);
+            $("svg").attr("height", 0);
+            $("#content").html(result);
+        });
         $('#nav_relation > li').click(function (e) {
             e.preventDefault();
             $('#nav_relation > li').removeClass('active');
             $(this).addClass('active');
 
             var navTab = $(this).children('a').text();
-            if(navTab == '基本信息') {
-                $.get('information',function(result){
+            if(navTab == '合作关系') {
+                $.get('cooperateRela/0DE9F497/count', function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
                 })
 
-            } else if(navTab == '潜力指数') {
-                $.get('potential',function (result){
-                    $("svg").attr("width", 0);
-                    $("svg").attr("height", 0);
-                    $("#content").html(result);
-                })
-            } else if(navTab == '图灵数') {
-                $.get('Turing',function(result){
-                    $("svg").attr("width", 0);
-                    $("svg").attr("height", 0);
-                    $("#content").html(result);
-                })
-
-            } else if(navTab == '合作关系') {
-                $.get('cooperateRela', function (result) {
+            } else if(navTab == '团队关系') {
+                $.get('worldMap', function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
@@ -174,8 +155,31 @@
                     $("svg").attr("height", 0);
                     $("#content").html(result);
                 })
-            } else if(navTab == '引用关系') {
-                $.get('partnerCountEveYear', function (result) {
+            } else if(navTab == '直接引用关系') {
+                $.get('reference/ref/0DE9F497', function (result) {
+                    $("svg").attr("width", 0);
+                    $("svg").attr("height", 0);
+                    $("#content").html(result);
+                })
+            } else if(navTab == '直接被引关系') {
+                $.get('reference/refed/0DE9F497', function (result) {
+                    $("svg").attr("width", 0);
+                    $("svg").attr("height", 0);
+                    $("#content").html(result);
+                })
+            } else if(navTab == '共同引用关系') {
+                $.get('reference/coRef/0DE9F497', function (result) {
+                    $("svg").attr("width", 0);
+                    $("svg").attr("height", 0);
+                    $("#content").html(result);
+                })
+            } else if(navTab == '共同被引关系') {
+//                $.get('partnerCountEveYear', function (result) {
+//                    $("svg").attr("width", 0);
+//                    $("svg").attr("height", 0);
+//                    $("#content").html(result);
+//                })
+                $.get('reference/coRefed/0DE9F497', function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);

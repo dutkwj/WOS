@@ -14,27 +14,32 @@ import org.springframework.data.hadoop.hbase.HbaseTemplate;
 import org.springframework.data.hadoop.hbase.RowMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.thealpha.model.Cooperater;
+import org.thealpha.model.Scholar;
+import org.thealpha.service.ScholarCooperateService;
+import org.thealpha.service.ScholarInfoService;
+
+import java.util.List;
 
 
 @Controller
 public class CooperateRelaController {
 
     @Autowired
-    private HbaseTemplate hbaseTemplate;
+    private ScholarCooperateService scholarCooperateService;
 
-    @RequestMapping("/cooperateRela")
-    public String helloWorld(Model model) {
-        System.out.println("hbaseTemplate");
-        System.out.println(hbaseTemplate);
-        String result = hbaseTemplate.get("cs_scholar", "0D8CD80", new RowMapper<String>() {
-            public String mapRow(org.apache.hadoop.hbase.client.Result result, int i) throws Exception {
-                return Bytes.toString(result.getValue("relationship".getBytes(), "cooperate".getBytes()));
-            }
-        });
-        System.out.println(result); // 输出结果是：value3
+    @Autowired
+    private ScholarInfoService scholarInfoService;
 
-
+    @RequestMapping("/cooperateRela/{scholarId}/count")
+    public String helloWorld(@PathVariable String scholarId, Model model) {
+        List<Cooperater> cooperaters = scholarCooperateService.getCooperaterById(scholarId);
+        Scholar scholar = scholarInfoService.getScholarById(scholarId);
+        model.addAttribute("cooperaters", cooperaters);
+        model.addAttribute("middleScholar", scholar);
+        System.out.print(scholar.getName());
         return "cooperateRela.ftl";
     }
 }

@@ -27,11 +27,7 @@ public class IndexController {
     @RequestMapping("/index")
     public String helloWorld(@ModelAttribute("test") String test, Model model)
     {
-        Map<String, Scholar> recommendScholars = scholarInfoService.getRecommendScholars();
-        for (Map.Entry entry : recommendScholars.entrySet()) {
-            Scholar scholar = (Scholar)entry.getValue();
-            System.out.println(entry.getKey()+" "+scholar.getAff());
-        }
+        List<Scholar> recommendScholars = scholarInfoService.getRecommendScholars();
         model.addAttribute("recommendScholars", recommendScholars);
         return "index.ftl";
     }

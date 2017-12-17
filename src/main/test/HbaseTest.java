@@ -364,4 +364,235 @@ public class HbaseTest {
         }
     }
 
+    @Test
+    public void addCFTest() throws IOException {
+        // Instantiating configuration class.
+        Configuration conf = HBaseConfiguration.create();
+
+        // Instantiating HBaseAdmin class.
+        HBaseAdmin admin = new HBaseAdmin(conf);
+
+        // Instantiating columnDescriptor class
+        HColumnDescriptor columnDescriptor = new HColumnDescriptor(ConfigurationConstant.CF_PAPERS);
+
+        // Adding column family
+        admin.addColumn(ConfigurationConstant.TABLE_CS_SCHOLAR, columnDescriptor);
+        System.out.println("coloumn added");
+    }
+
+    @Test
+    public void importPaperIds() {
+        HashMap<String, String> authorIdPaperIds = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_id_paper_ids.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+                if (count <= 11) {
+                    continue;
+                }
+                String authorId = line.substring(0, line.indexOf(","));
+                String paperIds = line.substring(line.indexOf(",") + 1);
+                paperIds = paperIds.replaceAll("\"|\\[|\\]|'", "");
+                System.out.println(count);
+                authorIdPaperIds.put(authorId, paperIds);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : authorIdPaperIds.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String paperIds = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PAPERS), Bytes.toBytes(ConfigurationConstant.QF_PAPER_IDS), Bytes.toBytes(paperIds));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_SCHOLAR));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void importPaperAuthors() {
+        HashMap<String, String> paperIdAuthorIds = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_authors.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+                String paperId = line.substring(0, line.indexOf(","));
+                String authorIds = line.substring(line.indexOf(",") + 1);
+                authorIds = authorIds.replaceAll("\"|\\[|\\]|'", "");
+                System.out.println(count);
+                paperIdAuthorIds.put(paperId, authorIds);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : paperIdAuthorIds.entrySet()) {
+            String paperId = (String) entry.getKey();
+            String authorIds = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(paperId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_AUTHORS), Bytes.toBytes(ConfigurationConstant.QF_AUTHOR_IDS), Bytes.toBytes(authorIds));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_PAPER));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void importPaperRef() {
+        HashMap<String, String> paperIdRefIds = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_cs_refed.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+                String paperId = line.substring(0, line.indexOf(","));
+                String refIds = line.substring(line.indexOf(",") + 1);
+                refIds = refIds.replaceAll("\"|\\[|\\]|'", "");
+                System.out.println(count);
+                paperIdRefIds.put(paperId, refIds);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : paperIdRefIds.entrySet()) {
+            String paperId = (String) entry.getKey();
+            String refIds = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(paperId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_REFERENCE), Bytes.toBytes(ConfigurationConstant.QF_REF_IDS), Bytes.toBytes(refIds));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_PAPER));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void importCoPaperRef() {
+        HashMap<String, String> paperIdRefIds = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_cs_co_ref3.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+                String paperId = line.substring(0, line.indexOf(","));
+                String refIds = line.substring(line.indexOf(",") + 1);
+                refIds = refIds.replaceAll("\"|\\[|\\]|'", "");
+                System.out.println(count);
+                paperIdRefIds.put(paperId, refIds);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : paperIdRefIds.entrySet()) {
+            String paperId = (String) entry.getKey();
+            String refIds = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(paperId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_REFERENCE), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_IDS), Bytes.toBytes(refIds));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_PAPER));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

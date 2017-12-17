@@ -10,5 +10,6 @@ import java.util.Map;
  */
 public interface ScholarInfoDao {
     public List<String> getRecommendScholars();
-    public Map<String, Scholar> getScholarByIds(List<String> ids);
+    public List<Scholar> getScholarsByIds(List<String> scholarIds);
+    public Scholar getScholarById(String scholarId);
 }
