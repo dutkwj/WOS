@@ -81,11 +81,29 @@
 <body>
 <script src="../js/d3.v3.min.js" charset="utf-8"></script>
 <script>
+    nodes = [
+        { "name": "${middleScholar.name!""}"   , "image" : "../img/b.jpg" , "id":"${middleScholar.index!""}"}];
+    edges = [];
+    var cooperaterIndex = 1;
+    <#if cooperaters?? && (cooperaters?size>0)>
+        <#list cooperaters as cooperater>
+        nodes.push({"name": "${cooperater.name!""}"   , "image" : "../img/b.jpg", "id":"${cooperater.index!""}"});
+        edges.push({ "source": 0 , "target": cooperaterIndex , "relation":"合作关系" , "count":${cooperater.count!1}});
+        cooperaterIndex = cooperaterIndex + 1;
+
+        </#list>
+    </#if>
+
     var oParentWin= (window.parent)?(window.parent):(window.__parent__);
     var oParentBody= oParentWin.document.body;
 
     var width = oParentBody.clientWidth;
-    var height = oParentBody.clientHeight;
+
+    var h = 0;
+    if (cooperaterIndex > 20) {
+        h = (cooperaterIndex - 20) * 7;
+    }
+    var height = oParentBody.clientHeight + h;
     var img_w = 77;
     var img_h = 80;
     var radius = 30;    //圆形半径
@@ -95,16 +113,7 @@
             .attr("height",height);
     var g1 = svg.append("g");
 
-    nodes = [
-        { "name": "${middleScholar.name!""}"   , "image" : "../img/b.jpg" }];
-    edges = [];
-    var cooperaterIndex = 1;
-    <#list cooperaters as cooperater>
-        nodes.push({"name": "${cooperater.name!""}"   , "image" : "../img/b.jpg"});
-        edges.push({ "source": 0 , "target": cooperaterIndex , "relation":"合作关系" , "count":${cooperater.count!1}});
-        cooperaterIndex = cooperaterIndex + 1;
 
-    </#list>
 
     //D3力导向布局
     var force = d3.layout.force()
@@ -146,19 +155,19 @@
             .attr("fill", function(d, i){
 
                 //创建圆形图片
-                var defs = g1.append("defs").attr("id", "imgdefs")
+                var defs = g1.append("defs").attr("id", "imgdefs");
 
                 var catpattern = defs.append("pattern")
                         .attr("id", "catpattern" + i)
                         .attr("height", 1)
-                        .attr("width", 1)
+                        .attr("width", 1);
 
                 catpattern.append("image")
                         .attr("x", - (img_w / 2 - radius))
                         .attr("y", - (img_h / 2 - radius))
                         .attr("width", img_w)
                         .attr("height", img_h)
-                        .attr("xlink:href", d.image)
+                        .attr("xlink:href", d.image);
 
                 return "url(#catpattern" + i + ")";
 
@@ -170,6 +179,7 @@
                         return 1.0;
                     }
                 });
+                nodes_img.style("cursor", "hand");
             })
             .on("mouseout",function(d,i){
                 //隐去连接线上的文字
@@ -178,6 +188,13 @@
                         return 0.0;
                     }
                 });
+            })
+            .on("click", function (d) {
+                $.get('cooperateRela/'+ d.id +'/count', function (result) {
+                    $("svg").attr("width", 0);
+                    $("svg").attr("height", 0);
+                    $("#content").html(result);
+                })
             })
             .call(force.drag);
 
@@ -199,12 +216,12 @@
     force.on("tick", function(){
 
         //限制结点的边界
-//        nodes.forEach(function(d,i){
-//            d.x = d.x - img_w/2 < 0     ? img_w/2 : d.x ;
-//            d.x = d.x + img_w/2 > width ? width - img_w/2 : d.x ;
-//            d.y = d.y - img_h/2 < 0      ? img_h/2 : d.y ;
-//            d.y = d.y + img_h/2 + text_dy > height ? height - img_h/2 - text_dy : d.y ;
-//        });
+        nodes.forEach(function(d,i){
+            d.x = d.x - img_w/2 < 0     ? img_w/2 : d.x ;
+            d.x = d.x + img_w/2 > width ? width - img_w/2 : d.x ;
+            d.y = d.y - img_h/2 < 0      ? img_h/2 : d.y ;
+            d.y = d.y + img_h/2 + text_dy > height ? height - img_h/2 - text_dy : d.y ;
+        });
 
         //更新连接线的位置
         edges_line.attr("x1",function(d){ return d.source.x; });
@@ -225,11 +242,6 @@
         nodes_text.attr("y",function(d){ return d.y + img_w/2; });
     });
 
-
-    svg.append("g")
-            .attr("transform","translate("+(width/2)+","+(height-50)+")")
-            .append("text")
-            .text("图1");
 
 </script>
 

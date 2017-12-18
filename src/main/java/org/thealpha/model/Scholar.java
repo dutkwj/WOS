@@ -9,6 +9,16 @@ public class Scholar {
     private String aff;
     private int count;
 
+    public String getLatlng() {
+        return latlng;
+    }
+
+    public void setLatlng(String latlng) {
+        this.latlng = latlng;
+    }
+
+    private String latlng;
+
     public int getCount() {
         return count;
     }

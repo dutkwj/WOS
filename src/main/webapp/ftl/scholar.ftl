@@ -156,7 +156,7 @@
                     $("#content").html(result);
                 })
             } else if(navTab == '直接引用关系') {
-                $.get('reference/ref/0DE9F497', function (result) {
+                $.get('reference/ref/7B00834A', function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
