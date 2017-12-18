@@ -6,7 +6,16 @@ package org.thealpha.model;
 public class Cooperater {
     private String index;
     private String name;
+    private String aff;
     private int count;
+
+    public String getAff() {
+        return aff;
+    }
+
+    public void setAff(String aff) {
+        this.aff = aff;
+    }
 
     public String getIndex() {
         return index;

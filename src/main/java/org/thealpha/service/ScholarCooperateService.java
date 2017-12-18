@@ -37,12 +37,13 @@ public class ScholarCooperateService {
         }
         List<Scholar> scholarList = scholarInfoDao.getScholarsByIds(scholarIds);
 
-        Map<String, String> scholarIdNameMap = new HashMap<String, String>();
+        Map<String, Scholar> scholarIdObjectMap = new HashMap<String, Scholar>();
         for (Scholar scholar : scholarList) {
-            scholarIdNameMap.put(scholar.getIndex(), scholar.getName());
+            scholarIdObjectMap.put(scholar.getIndex(), scholar);
         }
         for (Cooperater cooperater : cooperaterList) {
-            cooperater.setName(scholarIdNameMap.get(cooperater.getIndex()));
+            cooperater.setName(scholarIdObjectMap.get(cooperater.getIndex()).getName());
+            cooperater.setAff(scholarIdObjectMap.get(cooperater.getIndex()).getAff());
         }
         return cooperaterList;
     }

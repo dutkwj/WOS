@@ -83,12 +83,12 @@
 <script>
 
     nodes = [
-        { "name": "${middleScholar.name!""}"   , "image" : "../img/b.jpg" , "id":"${middleScholar.index!""}"}];
+        { "name": "${middleScholar.name!""}"   , "image" : "../img/b.jpg" , "id":"${middleScholar.index!""}", "aff":"${middleScholar.aff!""}"}];
     edges = [];
     var coRefedIndex = 1;
     <#if coRefedScholars?? && (coRefedScholars?size>0)>
         <#list coRefedScholars as coRefedScholar>
-        nodes.push({"name": "${coRefedScholar.name!""}"   , "image" : "../img/b.jpg", "id":"${coRefedScholar.index!""}"});
+        nodes.push({"name": "${coRefedScholar.name!""}"   , "image" : "../img/b.jpg", "id":"${coRefedScholar.index!""}", "aff":"${coRefedScholar.aff!""}"});
         edges.push({ "source": 0 , "target": coRefedIndex , "relation":"共同被引关系" , "count":${coRefedScholar.count}});
         coRefedIndex = coRefedIndex + 1;
         </#list>
@@ -186,10 +186,13 @@
                 });
             })
             .on("click", function (d) {
-                $.get('reference/coRefed/'+ d.id, function (result) {
+                $.get('/reference/coRefed/'+ d.id, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
+                    $("#middleScholarName").html(d.name);
+                    $("#middleScholarIndex").attr("value", d.id);
+                    $("#middleScholarAff").html(d.aff);
                 })
             })
             .call(force.drag);

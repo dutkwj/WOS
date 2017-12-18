@@ -43,6 +43,9 @@ public class ReferenceService {
         List<String> paperIds = paperDao.getPaperIdsByAuthorId(authorId);
 //        获得共同引用的论文和数量
         List<String> coRefPapers = referenceDao.getCoRefPapersByPaperIds(paperIds);
+        if (CollectionUtils.isEmpty(coRefPapers)) {
+            return null;
+        }
         Map<String, Integer> paperIdCount = new HashMap<String, Integer>();
 //        获得论文与数量之间的对应关系
         for (String coRefPaper : coRefPapers) {
@@ -84,6 +87,9 @@ public class ReferenceService {
         List<String> paperIds = paperDao.getPaperIdsByAuthorId(authorId);
 //        获得共同被引用的论文和数量
         List<String> coRefedPapers = referenceDao.getCoRefedPapersByPaperIds(paperIds);
+        if (CollectionUtils.isEmpty(coRefedPapers)) {
+            return null;
+        }
         Map<String, Integer> paperIdCount = new HashMap<String, Integer>();
 //        获得论文与数量之间的对应关系
         for (String coRefedPaper : coRefedPapers) {

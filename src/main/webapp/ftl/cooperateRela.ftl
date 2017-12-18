@@ -82,12 +82,12 @@
 <script src="../js/d3.v3.min.js" charset="utf-8"></script>
 <script>
     nodes = [
-        { "name": "${middleScholar.name!""}"   , "image" : "../img/b.jpg" , "id":"${middleScholar.index!""}"}];
+        { "name": "${middleScholar.name!""}"   , "image" : "../img/b.jpg" , "id":"${middleScholar.index!""}", "aff":"${middleScholar.aff!""}"}];
     edges = [];
     var cooperaterIndex = 1;
     <#if cooperaters?? && (cooperaters?size>0)>
         <#list cooperaters as cooperater>
-        nodes.push({"name": "${cooperater.name!""}"   , "image" : "../img/b.jpg", "id":"${cooperater.index!""}"});
+        nodes.push({"name": "${cooperater.name!""}"   , "image" : "../img/b.jpg", "id":"${cooperater.index!""}", "aff":"${cooperater.aff!""}"});
         edges.push({ "source": 0 , "target": cooperaterIndex , "relation":"合作关系" , "count":${cooperater.count!1}});
         cooperaterIndex = cooperaterIndex + 1;
 
@@ -190,10 +190,13 @@
                 });
             })
             .on("click", function (d) {
-                $.get('cooperateRela/'+ d.id +'/count', function (result) {
+                $.get('/cooperateRela/'+ d.id +'/count', function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
+                    $("#middleScholarName").html(d.name);
+                    $("#middleScholarIndex").attr("value", d.id);
+                    $("#middleScholarAff").html(d.aff);
                 })
             })
             .call(force.drag);

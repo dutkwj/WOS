@@ -73,14 +73,15 @@
 <div class="container-fluid tm-section tm-section-2">
     <div class="row tm-media-row">
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <img src="img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">
+            <img src="../img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">
         </div>
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
             <div class="tm-media-text-container">
-                <h3 class="tm-media-title tm-gray-text">Takeo Kanade</h3>
+                <h3 class="tm-media-title tm-gray-text"><span id="middleScholarName">${middleScholar.name}</span></h3>
+                <input type="hidden" id="middleScholarIndex" value="${middleScholar.index}"/>
                 <p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218 <br />
                     <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br />
-                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Department of Electrical & Computer Engineering,Carnegie Mellon University<br />
+                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true" id="middleScholarAff">${middleScholar.aff}</span> <br />
                     <abbr title="Phone"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 123456</address></p>
             </div>
         </div>
@@ -125,19 +126,21 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
-        $.get('cooperateRela/0DE9F497/count', function (result) {
+        $.get('/cooperateRela/${middleScholar.index}/count', function (result) {
             $("svg").attr("width", 0);
             $("svg").attr("height", 0);
             $("#content").html(result);
         });
-        $('#nav_relation > li').click(function (e) {
+        $("#nav_relation > li").click(function (e) {
+
             e.preventDefault();
             $('#nav_relation > li').removeClass('active');
             $(this).addClass('active');
 
             var navTab = $(this).children('a').text();
+            var middleScholarIndex = $("#middleScholarIndex").attr("value");
             if(navTab == '合作关系') {
-                $.get('cooperateRela/0DE9F497/count', function (result) {
+                $.get('/cooperateRela/'+middleScholarIndex+'/count', function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
@@ -156,19 +159,19 @@
                     $("#content").html(result);
                 })
             } else if(navTab == '直接引用关系') {
-                $.get('reference/ref/7B00834A', function (result) {
+                $.get('/reference/ref/'+middleScholarIndex, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
                 })
             } else if(navTab == '直接被引关系') {
-                $.get('reference/refed/0DE9F497', function (result) {
+                $.get('/reference/refed/'+middleScholarIndex, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
                 })
             } else if(navTab == '共同引用关系') {
-                $.get('reference/coRef/0DE9F497', function (result) {
+                $.get('/reference/coRef/'+middleScholarIndex, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
@@ -179,7 +182,7 @@
 //                    $("svg").attr("height", 0);
 //                    $("#content").html(result);
 //                })
-                $.get('reference/coRefed/0DE9F497', function (result) {
+                $.get('/reference/coRefed/'+middleScholarIndex, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);

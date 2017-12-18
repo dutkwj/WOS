@@ -82,12 +82,12 @@
 <script src="../js/d3.v3.min.js" charset="utf-8"></script>
 <script>
     nodes = [
-        { "name": "${middleScholar.name!""}"   , "image" : "../img/b.jpg" , "id":"${middleScholar.index!""}"}];
+        { "name": "${middleScholar.name!""}"   , "image" : "../img/b.jpg" , "id":"${middleScholar.index!""}", "aff":"${middleScholar.aff!""}"}];
     edges = [];
     var refedIndex = 1;
     <#if refedScholars?? && (refedScholars?size>0)>
         <#list refedScholars as refedScholar>
-        nodes.push({"name": "${refedScholar.name!""}"   , "image" : "../img/b.jpg", "id":"${refedScholar.index!""}"});
+        nodes.push({"name": "${refedScholar.name!""}"   , "image" : "../img/b.jpg", "id":"${refedScholar.index!""}", "aff":"${refedScholar.aff!""}"});
         edges.push({ "source": 0 , "target": refedIndex , "relation":"引用关系" , "count":1});
         refedIndex = refedIndex + 1;
         </#list>
@@ -188,10 +188,13 @@
                 });
             })
             .on("click", function (d) {
-                $.get('reference/refed/'+ d.id, function (result) {
+                $.get('/reference/refed/'+ d.id, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
+                    $("#middleScholarName").html(d.name);
+                    $("#middleScholarIndex").attr("value", d.id);
+                    $("#middleScholarAff").html(d.aff);
                 })
             })
             .call(force.drag);
