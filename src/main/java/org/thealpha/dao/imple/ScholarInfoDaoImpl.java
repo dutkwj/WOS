@@ -1,12 +1,17 @@
 package org.thealpha.dao.imple;
 
 import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.CellUtil;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.*;
+import org.apache.hadoop.hbase.filter.CompareFilter;
+import org.apache.hadoop.hbase.filter.Filter;
+import org.apache.hadoop.hbase.filter.SubstringComparator;
+import org.apache.hadoop.hbase.filter.ValueFilter;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.hadoop.hbase.HbaseTemplate;
@@ -14,13 +19,12 @@ import org.springframework.data.hadoop.hbase.RowMapper;
 import org.springframework.stereotype.Repository;
 import org.thealpha.dao.inter.ScholarInfoDao;
 import org.thealpha.model.Scholar;
+import org.thealpha.model.SearchItem;
 import org.thealpha.util.ConfigurationConstant;
+import org.thealpha.util.HbaseUtils;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by kangwenjie on 17-12-14.
@@ -43,9 +47,31 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
         recommendScholars.add("7F27AE02");
         recommendScholars.add("85E123FB");
         recommendScholars.add("77AFDBB5");
-
+        recommendScholars.add("84971266");
+        recommendScholars.add("86108C8B");
 
         return recommendScholars;
+    }
+
+    public List<String> getMoreRecommendScholars() {
+        List<String> moreRecommendScholars = new ArrayList<String>();
+        moreRecommendScholars.add("0DE9F497");
+        moreRecommendScholars.add("80E2C811");
+        moreRecommendScholars.add("7FC8CD3A");
+        moreRecommendScholars.add("80E2C818");
+        moreRecommendScholars.add("843C4E16");
+        moreRecommendScholars.add("0E5CA302");
+        moreRecommendScholars.add("7998D4BA");
+        moreRecommendScholars.add("7F27AE02");
+        moreRecommendScholars.add("85E123FB");
+        moreRecommendScholars.add("77AFDBB5");
+        moreRecommendScholars.add("72D45581");
+        moreRecommendScholars.add("7FE3C782");
+        moreRecommendScholars.add("7F28E352");
+        moreRecommendScholars.add("7555D6F7");
+        moreRecommendScholars.add("6661B38F");
+
+        return moreRecommendScholars;
     }
 
     public List<Scholar> getScholarsByIds(List<String> scholarIds) {
@@ -112,5 +138,48 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
             }
         });
         return result;
+    }
+
+    public List<String> getScholarIdsBySearchItem(SearchItem searchItem) throws IOException {
+        Connection connection = HbaseUtils.getConnection();
+        Table table = HbaseUtils.getTable(ConfigurationConstant.TABLE_CS_SCHOLAR, connection);
+        Scan scan = new Scan();
+        Set<String> scholarNameIndex = null;
+        if (StringUtils.isNotBlank(searchItem.getScholarName())) {
+            scholarNameIndex = new HashSet<String>();
+            scan.setFilter(new ValueFilter(CompareFilter.CompareOp.EQUAL, new SubstringComparator(searchItem.getScholarName())));
+            scan.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_NAME));
+            ResultScanner resultScanner = table.getScanner(scan);
+            for (Result result : resultScanner) {
+                scholarNameIndex.add(Bytes.toString(result.getRow()));
+            }
+        }
+        Set<String> scholarAffIndex = null;
+        if (StringUtils.isNotBlank(searchItem.getAffName())) {
+            scholarAffIndex = new HashSet<String>();
+            scan.setFilter(new ValueFilter(CompareFilter.CompareOp.EQUAL, new SubstringComparator(searchItem.getAffName())));
+            scan.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_AFF));
+            ResultScanner resultScanner = table.getScanner(scan);
+            for (Result result : resultScanner) {
+                scholarAffIndex.add(Bytes.toString(result.getRow()));
+            }
+        }
+        HbaseUtils.closeTableAndConn(table, connection);
+
+        List<String> scholarIds = null;
+        if (CollectionUtils.isNotEmpty(scholarNameIndex) && CollectionUtils.isNotEmpty(scholarAffIndex)) {
+            scholarIds = (List<String>) CollectionUtils.intersection(scholarNameIndex, scholarAffIndex);
+        } else if (CollectionUtils.isNotEmpty(scholarNameIndex)) {
+            scholarIds = new ArrayList<String>();
+            for (String scholarId : scholarNameIndex) {
+                scholarIds.add(scholarId);
+            }
+        } else if (CollectionUtils.isNotEmpty(scholarAffIndex)) {
+            scholarIds = new ArrayList<String>();
+            for (String scholarId : scholarAffIndex) {
+                scholarIds.add(scholarId);
+            }
+        }
+        return scholarIds;
     }
 }

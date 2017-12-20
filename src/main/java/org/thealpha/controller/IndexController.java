@@ -28,7 +28,7 @@ public class IndexController {
     public String helloWorld(@ModelAttribute("test") String test, Model model)
     {
         List<Scholar> recommendScholars = scholarInfoService.getRecommendScholars();
-        model.addAttribute("recommendScholars", recommendScholars);
+        model.addAttribute("scholars", recommendScholars);
         return "index.ftl";
     }
 }

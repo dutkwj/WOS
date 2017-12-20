@@ -15,22 +15,13 @@ body a:hover{
 }
 /*-- banner --*/
 .banner{
-	background:url(../img/chunse.jpeg) no-repeat 0px 0px;
+	/*background:url(../img/chunse.jpeg) no-repeat 0px 0px;*/
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
 	-ms-background-size:cover;
 	min-height:800px;
-}
-.banner1{
-	background:url(../img/chunse.jpeg) no-repeat 0px 0px;
-	background-size:cover;
-	-webkit-background-size:cover;
-	-moz-background-size:cover;
-	-o-background-size:cover;
-	-ms-background-size:cover;
-	min-height:300px;
 }
 .logo{
 	float:left;

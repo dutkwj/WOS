@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="${path}/css/layui.css" type="text/css">
     <link rel="stylesheet" href="${path}/css/buttons.css" type="text/css">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
     <link rel="stylesheet" href="${path}/css/bootstrap.min.css" type="text/css">
 
     <link rel="stylesheet" href="${path}/css/hero-slider-style.css">
@@ -60,8 +60,8 @@
 <div class="banner">
     <div class="container">
     <#--layui-container-->
-        <div class="banner-info1" style="margin-left: 35%">
-            <img src="../img/web_of_scholar.png" alt="wos" width="400" height="62">
+        <div class="banner-info1" style="margin-left: 35%;">
+            <img src="../img/WOS.png" alt="wos" >
         </div>
     <#--<div class="banner-info">-->
     <#--<form>-->
@@ -69,60 +69,70 @@
     <#--<input type="submit" value="搜索" >-->
     <#--</form>-->
     <#--</div>-->
-        <div class="layui-container" style="margin-top: 5%">
-            <div class="layui-row layui-col-space10">
-                <div class="layui-col-md1">
-                </div>
-                <div class="layui-col-md8">
-                    <form class="layui-form" action="">
+        <div class="layui-container">
+            <form class="layui-form" action="/simpleSearch/content">
+                <div class="layui-row layui-col-space10">
+                    <div class="layui-col-md1">
+                    </div>
+                    <div class="layui-col-md8">
                         <div class="layui-form-item">
                             <div class="layui-input-block">
-                                <input type="text" name="title" lay-verify="title" autocomplete="off"
-                                       placeholder="学者姓名/机构名称" class="layui-input">
+                                <input type="text" name="scholarName" lay-verify="title" autocomplete="off"
+                                       placeholder="scholar name" class="layui-input">
                             </div>
                         </div>
-                    </form>
+                    </div>
+                    <div class="layui-col-md3">
+                        <div class="layui-form-item">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button class="layui-btn layui-btn-normal layui-btn-radius" lay-submit="">search</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="layui-col-md3">
-                    <a href="http://www.bootcss.com/" class="button button-primary button-pill button-normal">搜索</a>
-                <#--<a href="http://www.bootcss.com/" class="button button-primary button-pill button-normal">高级搜索</a>-->
-                </div>
-            </div>
+            </form>
         </div>
+        <br/>
         <div class="layui-container">
             <div class="layui-row layui-col-space10">
                 <div class="layui-col-md2">
                 </div>
                 <div class="layui-col-md9" style="border: 1px solid #eee;padding: 0">
                     <ul class="nav navbar-nav">
-                        <li class="active" style="background-color: #eee"><a href="#">推荐学者</a></li>
-                        <li><a href="#">查看更多学者</a></li>
+                        <#if search??>
+                            <li class="active" style="background-color: #eee"><a href="#">search result</a></li>
+                        <#else>
+                            <li class="active" style="background-color: #eee"><a href="#">recommend scholar</a></li>
+                        </#if>
+
+                        <li><a href="/searchMore/index">search more scholar</a></li>
                     </ul>
                 </div>
             </div>
             <div class="layui-row layui-col-space10">
-                <#list recommendScholars as scholar>
-                    <div class="layui-col-md2">
-                    </div>
-                    <div class="layui-col-md9" style="border-left: 1px solid #eee;border-right: 1px solid #eee;border-bottom: 1px solid #eee;">
-                        <div class="row tm-media-row">
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                <img src="img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">
-                            </div>
-                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                                <div class="tm-media-text-container">
-                                    <h3 class="tm-media-title tm-gray-text"><a href="/scholar/baseInfo?authorId=${scholar.index}">${scholar.name!""}</a> </h3>
-                                    <p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218
-                                        <br/>
-                                        <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br/>
-                                        <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>${scholar.aff!""}<br/>
-                                        <abbr title="Phone"><span class="glyphicon glyphicon-earphone"
-                                                                  aria-hidden="true"></span> 123456</address></p>
+                <#if scholars?? && (scholars?size>0)>
+                    <#list scholars as scholar>
+                        <div class="layui-col-md2">
+                        </div>
+                        <div class="layui-col-md9" style="border-left: 1px solid #eee;border-right: 1px solid #eee;border-bottom: 1px solid #eee;">
+                            <div class="row tm-media-row">
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <img src="../img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">
+                                </div>
+                                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                    <div class="tm-media-text-container">
+                                        <h3 class="tm-media-title tm-gray-text"><a href="/scholar/baseInfo?authorId=${scholar.index}">${scholar.name!""}</a> </h3>
+                                        <p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218
+                                            <br/>
+                                            <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br/>
+                                            <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>${scholar.aff!""}<br/>
+                                            <abbr title="Phone"><span class="glyphicon glyphicon-earphone"
+                                                                      aria-hidden="true"></span> 123456</address></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </#list>
+                    </#list>
+                </#if>
             </div>
         </div>
 

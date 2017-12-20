@@ -1,6 +1,7 @@
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.*;
 import org.apache.hadoop.hbase.client.*;
+import org.apache.hadoop.hbase.filter.*;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.junit.Test;
 import org.junit.runner.Result;
@@ -206,7 +207,6 @@ public class HbaseTest {
 
         Connection connection = null;
         Table table = null;
-        ResultScanner results = null;
         Configuration conf = HBaseConfiguration.create();
         conf.set("hbase.zookeeper.quorum", "100.66.1.209,100.66.2.1,100.66.2.22");
         conf.set("hbase.zookeeper.property.clientPort", "2181");
@@ -592,6 +592,31 @@ public class HbaseTest {
             table.put(puts);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void filterTest() throws IOException {
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+        Scan scan = new Scan();
+        Filter filter1 = new ValueFilter(CompareFilter.CompareOp.EQUAL, new SubstringComparator("def"));
+//        Filter filter2 = new ValueFilter(CompareFilter.CompareOp.EQUAL, new SubstringComparator("def1"));
+        scan.setFilter(filter1);
+//        scan.setFilter(filter2);
+//        scan.addColumn(Bytes.toBytes("cf"), Bytes.toBytes("num"));
+//        scan.addColumn(Bytes.toBytes("cf"), Bytes.toBytes("num1"));
+        connection = ConnectionFactory.createConnection(conf);
+        table = connection.getTable(TableName.valueOf("testTable"));
+        ResultScanner resultScanner = table.getScanner(scan);
+        for (org.apache.hadoop.hbase.client.Result result : resultScanner) {
+            System.out.print(Bytes.toString(result.getRow()));
+//            for (Cell cell : result.rawCells()) {
+//                System.out.println(new String(CellUtil.cloneRow(cell)));
+//            }
         }
     }
 
