@@ -55,6 +55,7 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
 
     public List<String> getMoreRecommendScholars() {
         List<String> moreRecommendScholars = new ArrayList<String>();
+        moreRecommendScholars.add("76656227");
         moreRecommendScholars.add("0DE9F497");
         moreRecommendScholars.add("80E2C811");
         moreRecommendScholars.add("7FC8CD3A");
@@ -108,6 +109,10 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                         scholar.setName(value);
                     } else if (ConfigurationConstant.QF_AFF.equals(qualiFier)) {
                         scholar.setAff(value);
+                    } else if (ConfigurationConstant.QF_LAT_LNG.equals(qualiFier)) {
+                        scholar.setLatlng(value);
+                        scholar.setLatitude(value.split(", ")[0]);
+                        scholar.setLongitude(value.split(", ")[1]);
                     }
                 }
                 scholarList.add(scholar);
@@ -131,9 +136,15 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 Scholar scholar = new Scholar();
                 String name = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_NAME)));
                 String aff = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_AFF)));
+                String latlng = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_LAT_LNG)));
                 scholar.setIndex(scholarId);
                 scholar.setName(name);
                 scholar.setAff(aff);
+                if (StringUtils.isNotBlank(latlng)) {
+                    scholar.setLatlng(latlng);
+                    scholar.setLatitude(latlng.split(", ")[0]);
+                    scholar.setLongitude(latlng.split(", ")[1]);
+                }
                 return scholar;
             }
         });

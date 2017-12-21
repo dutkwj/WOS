@@ -14,6 +14,7 @@ import org.springframework.data.hadoop.hbase.RowMapper;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.thealpha.util.ConfigurationConstant;
+import org.thealpha.util.HbaseUtils;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -618,6 +619,49 @@ public class HbaseTest {
 //                System.out.println(new String(CellUtil.cloneRow(cell)));
 //            }
         }
+    }
+
+    @Test
+    public void importAuthorLatLng() throws IOException {
+        HashMap<String, String> authorIdLatLng = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_id_latlng.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+                String authorId = line.substring(0, line.indexOf(","));
+                String latlng = line.substring(line.indexOf(",") + 1);
+                latlng = latlng.replaceAll("\"", "");
+                System.out.println(count);
+                authorIdLatLng.put(authorId, latlng);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+//        0DE9F497 8148E2AE
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : authorIdLatLng.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String latlng = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_LAT_LNG), Bytes.toBytes(latlng));
+            puts.add(put);
+        }
+
+        Connection connection = HbaseUtils.getConnection();
+        Table table = HbaseUtils.getTable(ConfigurationConstant.TABLE_CS_SCHOLAR, connection);
+        table.put(puts);
     }
 
 }

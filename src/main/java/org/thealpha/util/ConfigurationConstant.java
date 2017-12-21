@@ -10,6 +10,7 @@ public class ConfigurationConstant {
     public static final String QF_NAME= "name";
     public static final String QF_AFF= "aff";
     public static final String QF_PAPER_IDS= "paper_ids";
+    public static final String QF_LAT_LNG= "lat_lng";
 
 
     public static final String TABLE_CS_RELATIONSHIP = "cs_relationship";

@@ -39,7 +39,6 @@ public class CooperateRelaController {
         Scholar scholar = scholarInfoService.getScholarById(scholarId);
         model.addAttribute("cooperaters", cooperaters);
         model.addAttribute("middleScholar", scholar);
-        System.out.print(scholar.getName());
         return "cooperateRela.ftl";
     }
 }

@@ -8,6 +8,25 @@ public class Scholar {
     private String name;
     private String aff;
     private int count;
+    private String latlng;
+    private String latitude;
+    private String longitude;
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
 
     public String getLatlng() {
         return latlng;
@@ -16,8 +35,6 @@ public class Scholar {
     public void setLatlng(String latlng) {
         this.latlng = latlng;
     }
-
-    private String latlng;
 
     public int getCount() {
         return count;

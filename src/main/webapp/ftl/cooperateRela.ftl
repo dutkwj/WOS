@@ -254,51 +254,23 @@
 <script>
     var width = oParentBody.clientWidth;
     var height = oParentBody.clientHeight;
-//    var width = 960,
-//            height = 570;
-
-    var places = {
-        HNL: [-157 - 55 / 60 - 21 / 3600, 21 + 19 / 60 + 07 / 3600],
-        HKG: [113 + 54 / 60 + 53 / 3600, 25.30888888888889],
-        SVO: [37 + 24 / 60 + 53 / 3600, 55 + 58 / 60 + 22 / 3600],
-        HAV: [-82 - 24 / 60 - 33 / 3600, 22 + 59 / 60 + 21 / 3600],
-        CCS: [-66 - 59 / 60 - 26 / 3600, 10 + 36 / 60 + 11 / 3600],
-        UIO: [-78 - 21 / 60 - 31 / 3600, 0 + 06 / 60 + 48 / 3600],
-        BJ:[116,39]
-    };
-
-    /*var route = {
-      type: "LineString",
-      coordinates: [
-        places.HNL,
-        places.HKG,
-        places.SVO,
-        places.HAV,
-        places.CCS,
-        places.UIO,
-        places.BJ
-      ]
-    };
-    */
-    var route = {
-        type: "LineString",
-        coordinates: [
-            places.HNL,
-            places.HKG
-        ]
-    };
-    var route1 = {
-        type: "LineString",
-        coordinates: [
-            places.HNL,
-            places.SVO
-        ]
-    };
-
+    var places = {};
+    <#if middleScholar.latlng??>
+        places["${middleScholar.name!""}"] = [${middleScholar.longitude!""}, ${middleScholar.latitude!""}];
+        <#else>
+        places["${middleScholar.name!""}"] = [53, 32];
+    </#if>
+    <#if cooperaters?? && (cooperaters?size>0)>
+        <#list cooperaters as cooperater>
+            <#if cooperater.latlng??>
+            places["${cooperater.name!""}"] = [${cooperater.longitude!""}, ${cooperater.latitude!""}];
+            </#if>
+        </#list>
+    </#if>
     var projection = d3.geo.kavrayskiy7()
             .scale(170)
             .rotate([-40, 0])
-            .translate([width / 2, height / 2])
+            .translate([width / 2 + 20, 350])
             .precision(.1);
 
     var path = d3.geo.path()
@@ -308,7 +280,7 @@
 
     var svg = d3.select("body").append("svg")
             .attr("width", width)
-            .attr("height", height);
+            .attr("height", height / 2 + 100);
 
     svg.append("defs").append("path")
             .datum({type: "Sphere"})
@@ -328,15 +300,18 @@
             .attr("class", "graticule")
             .attr("d", path);
 
-    svg.append("path")
-            .datum(route)
-            .attr("class", "route")
-            .attr("d", path);
-
-    svg.append("path")
-            .datum(route1)
-            .attr("class", "route")
-            .attr("d", path);
+    var route = {type:"LineString"};
+    <#if cooperaters?? && (cooperaters?size>0)>
+        <#list cooperaters as cooperater>
+        <#if cooperater.latlng??>
+        route["coordinates"] = [places["${middleScholar.name!""}"], places["${cooperater.name!""}"]];
+        svg.append("path")
+                .datum(route)
+                .attr("class", "route")
+                .attr("d", path);
+        </#if>
+        </#list>
+    </#if>
 
     var point = svg.append("g")
             .attr("class", "points")
@@ -347,7 +322,6 @@
 
     point.append("circle")
             .attr("r", 4.5);
-
     point.append("text")
             .attr("y", 10)
             .attr("dy", ".71em")
@@ -370,9 +344,9 @@
     d3.select(self.frameElement).style("height", height + "px");
 
     svg.append("g")
-            .attr("transform","translate("+(width/2)+","+(height-250)+")")
+            .attr("transform","translate("+(width/2 - 50)+","+(670)+")")
             .append("text")
-            .text("图2");
+            .text("合作者的地理位置分布图");
 
 </script>
 
