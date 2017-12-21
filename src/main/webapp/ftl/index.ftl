@@ -13,12 +13,7 @@
     <link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
     <link rel="stylesheet" href="${path}/css/bootstrap.min.css" type="text/css">
 
-    <link rel="stylesheet" href="${path}/css/hero-slider-style.css">
-    <!-- Hero slider style -->
     <link rel="stylesheet" href="${path}/css/templatemo-style.css">
-    <!-- Templatemo style -->
-    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -42,7 +37,7 @@
 </ul>
 
 
-<script type="text/javascript" src="../js/layui.js" charset="utf-8"></script>
+<#--<script type="text/javascript" src="../js/layui.js" charset="utf-8"></script>-->
 <script type="text/javascript" src="../js/layui.all.js" charset="utf-8"></script>
 
 <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
@@ -78,7 +73,7 @@
                     <div class="layui-col-md3">
                         <div class="layui-form-item">
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <button class="layui-btn layui-btn-normal layui-btn-radius" lay-submit="">search</button>
+                            <button class="layui-btn layui-btn-radius" lay-submit="">search</button>
                         </div>
                     </div>
                 </div>
@@ -101,118 +96,86 @@
                     </ul>
                 </div>
             </div>
-            <div class="layui-row layui-col-space10">
-                <#if scholars?? && (scholars?size>0)>
-                    <#list scholars as scholar>
-                        <div class="layui-col-md2">
-                        </div>
-                        <div class="layui-col-md9" style="border-left: 1px solid #eee;border-right: 1px solid #eee;border-bottom: 1px solid #eee;">
-                            <div class="row tm-media-row">
-                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                    <img src="../img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">
-                                </div>
-                                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                                    <div class="tm-media-text-container">
-                                        <h3 class="tm-media-title tm-gray-text"><a href="/scholar/baseInfo?authorId=${scholar.index}">${scholar.name!""}</a> </h3>
-                                        <p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218
-                                            <br/>
-                                            <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br/>
-                                            <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>${scholar.aff!""}<br/>
-                                            <abbr title="Phone"><span class="glyphicon glyphicon-earphone"
-                                                                      aria-hidden="true"></span> 123456</address></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </#list>
-                </#if>
+            <div class="layui-row layui-col-space10" id="scholar_list">
             </div>
+            <br/>
+
+            <div class="layui-row layui-col-space10">
+                <div class="layui-col-md5">
+                </div>
+                <div class="layui-col-md7">
+                    <div id="page"></div>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+
         </div>
 
-        <ul id="biuuu_city_list"></ul>
-        <div id="demo20" style="margin-left: 35%;margin-top: 5%"></div>
-
-
-        <#--<script src="//res.layui.com/layui/dist/layui.js" charset="utf-8"></script>-->
-        <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
-        <#--<script>-->
-            <#--layui.use(['laypage', 'layer'], function () {-->
-                <#--var laypage = layui.laypage-->
-                        <#--, layer = layui.layer;-->
-
-                <#--//总页数大于页码总数-->
-                <#--laypage.render({-->
-                    <#--elem: 'demo1'-->
-                    <#--, count: 70 //数据总数-->
-                    <#--, jump: function (obj) {-->
-                        <#--console.log(obj)-->
-                    <#--}-->
-                <#--});-->
-
-                <#--//将一段数组分页展示-->
-
-                <#--//测试数据-->
-                <#--var data = [-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                    <#--'学者1信息',-->
-                <#--];-->
-
-                <#--//调用分页-->
-                <#--laypage.render({-->
-                    <#--elem: 'demo20'-->
-                    <#--, count: data.length-->
-                    <#--, jump: function (obj) {-->
-                        <#--//模拟渲染-->
-                        <#--document.getElementById('biuuu_city_list').innerHTML = function () {-->
-                            <#--var arr = []-->
-                                    <#--, thisData = data.concat().splice(obj.curr * obj.limit - obj.limit, obj.limit);-->
-                            <#--layui.each(thisData, function (index, item) {-->
-                                <#--arr.push('<li>' + item + '</li>');-->
-                            <#--});-->
-                            <#--return arr.join('');-->
-                        <#--}();-->
-                    <#--}-->
-                <#--});-->
-
-            <#--});-->
-        <#--</script>-->
-        <#--<div class="container-fluid tm-section tm-section-2">-->
-            <#--<div class="row tm-media-row">-->
-                <#--<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">-->
-                    <#--<img src="img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">-->
-                <#--</div>-->
-                <#--<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">-->
-                    <#--<div class="tm-media-text-container">-->
-                        <#--<h3 class="tm-media-title tm-gray-text">Takeo Kanade</h3>-->
-                        <#--<p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218-->
-                            <#--<br/>-->
-                            <#--<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br/>-->
-                            <#--<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Department of-->
-                            <#--Electrical & Computer Engineering,Carnegie Mellon University<br/>-->
-                            <#--<abbr title="Phone"><span class="glyphicon glyphicon-earphone"-->
-                                                      <#--aria-hidden="true"></span> 123456</address></p>-->
-                    <#--</div>-->
-                <#--</div>-->
-            <#--</div>-->
-        <#--</div>-->
     </div>
 </div>
+
+<script>
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage
+                ,layer = layui.layer;
+
+        var name = [];
+        var aff = [];
+        var id = [];
+        <#if scholars?? && (scholars?size>0)>
+            <#list scholars as scholar>
+                id.push("${scholar.index!""}");
+                name.push("${scholar.name!""}");
+                aff.push("${scholar.aff!""}");
+            </#list>
+        </#if>
+
+        //调用分页
+        laypage.render({
+            elem: 'page'
+            ,count: id.length
+            ,limit: 5
+            ,jump: function(obj){
+                //模拟渲染
+                document.getElementById('scholar_list').innerHTML = function(){
+                    var arr = [];
+                    var thisData = [];
+                    var subId = id.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                    var subName = name.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                    var subAff = aff.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                    thisData.push(subId);
+                    thisData.push(subName);
+                    thisData.push(subAff);
+                    layui.each(subId, function(index, item){
+//                        arr.push('<li>'+ item +'</li>');
+                        arr.push('<div class="layui-col-md2">' +
+                                '</div>' +
+                                '<div class="layui-col-md9" style="border-left: 1px solid #eee;border-right: 1px solid #eee;border-bottom: 1px solid #eee;">' +
+                                    '<div class="row tm-media-row">' +
+                                        '<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">' +
+                                            '<img src="../img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">' +
+                                        '</div>' +
+                                        '<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">' +
+                                             '<div class="tm-media-text-container">' +
+                                            '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/scholar/baseInfo?authorId=' + thisData[0][index] + '">' + thisData[1][index] + '</a> </h3>' +
+                                            '<p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218' +
+                                            '<br/>' +
+                                            '<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br/>' +
+                                            '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>' + thisData[2][index] + '<br/>' +
+                                            '<abbr title="Phone"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 123456</address></p>' +
+                                            '</div>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>');
+                    });
+                    return arr.join('');
+                }();
+            }
+        });
+
+    });
+</script>
 </body>
 </html>

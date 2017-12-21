@@ -16,7 +16,8 @@
     <#--<script type="text/javascript" src="../js/bootstrap.min.js"></script>-->
     <#--<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>-->
 
-    <script src="../js/layui.js" charset="utf-8"></script>
+    <#--<script src="../js/layui.js" charset="utf-8"></script>-->
+    <script type="text/javascript" src="../js/layui.all.js" charset="utf-8"></script>
 
 </head>
 <body>
@@ -148,31 +149,84 @@
 </script>
 <br/>
 <br/>
+<div class="layui-container" id="scholar_list">
+</div>
+<br/>
 <div class="layui-container">
+    <div class="row tm-media-row">
+        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+            <div id="page"></div>
+
+        </div>
+    </div>
+</div>
+<br/>
+<br/>
+<br/>
+
+<script>
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage
+                ,layer = layui.layer;
+
+        var name = [];
+        var aff = [];
+        var id = [];
     <#if scholars?? && (scholars?size>0)>
         <#list scholars as scholar>
-            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;border-width: 1px">
-                <div class="row tm-media-row">
-                    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
-                    </div>
-                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                        <img src="../img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">
-                    </div>
-                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                        <div class="tm-media-text-container">
-                            <h3 class="tm-media-title tm-gray-text">${scholar.name!""}</h3>
-                            <p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218
-                                <br/>
-                                <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br/>
-                                <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>${scholar.aff!" "}<br/>
-                                <abbr title="Phone"><span class="glyphicon glyphicon-earphone"
-                                                          aria-hidden="true"></span> 123456</address></p>
-                        </div>
-                    </div>
-                </div>
-            </fieldset>
+            id.push("${scholar.index!""}");
+            name.push("${scholar.name!""}");
+            aff.push("${scholar.aff!""}");
         </#list>
     </#if>
-</div>
+
+        //调用分页
+        laypage.render({
+            elem: 'page'
+            ,count: id.length
+            ,limit: 5
+            ,jump: function(obj){
+                //模拟渲染
+                document.getElementById('scholar_list').innerHTML = function(){
+                    var arr = [];
+                    var thisData = [];
+                    var subId = id.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                    var subName = name.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                    var subAff = aff.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                    thisData.push(subId);
+                    thisData.push(subName);
+                    thisData.push(subAff);
+                    layui.each(subId, function(index, item){
+//                        arr.push('<li>'+ item +'</li>');
+                        arr.push('<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;border-width: 1px">' +
+                                    '<div class="row tm-media-row">' +
+                                        '<div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">' +
+                                        '</div>' +
+                                        '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">' +
+                                            '<img src="../img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">' +
+                                        '</div>' +
+                                        '<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">' +
+                                            '<div class="tm-media-text-container">' +
+                                                '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/scholar/baseInfo?authorId=' + thisData[0][index] + '">' + thisData[1][index] + '</a></h3>' +
+                                                '<p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218' +
+                                                '<br/>' +
+                                                '<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br/>' +
+                                                '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>' + thisData[2][index] + '<br/>' +
+                                                '<abbr title="Phone"><span class="glyphicon glyphicon-earphone"' +
+                                                'aria-hidden="true"></span> 123456</address></p>' +
+                                            '</div>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</fieldset>');
+                    });
+                    return arr.join('');
+                }();
+            }
+        });
+
+    });
+</script>
 </body>
 </html>
