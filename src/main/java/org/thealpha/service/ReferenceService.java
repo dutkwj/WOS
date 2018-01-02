@@ -124,6 +124,18 @@ public class ReferenceService {
         for (Scholar scholar : scholars) {
             scholar.setCount(authorIdCount.get(scholar.getIndex()));
         }
+        if (scholars.size() > 200) {
+            int count = 0;
+            List<Scholar> top200Scholars = new ArrayList<Scholar>();
+            for (Scholar scholar : scholars) {
+                count += 1;
+                top200Scholars.add(scholar);
+                if (count >= 200) {
+                    break;
+                }
+            }
+            return top200Scholars;
+        }
         return scholars;
     }
 }

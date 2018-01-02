@@ -11,6 +11,15 @@ public class Cooperater {
     private String latlng;
     private String latitude;
     private String longitude;
+    private double intension;
+
+    public double getIntension() {
+        return intension;
+    }
+
+    public void setIntension(double intension) {
+        this.intension = intension;
+    }
 
     public String getLatitude() {
         return latitude;

@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.thealpha.model.Cooperater;
 import org.thealpha.model.Scholar;
+import org.thealpha.model.YearCount;
 import org.thealpha.service.ScholarCooperateService;
 import org.thealpha.service.ScholarInfoService;
 
@@ -37,8 +38,11 @@ public class CooperateRelaController {
     public String helloWorld(@PathVariable String scholarId, Model model) {
         List<Cooperater> cooperaters = scholarCooperateService.getCooperaterById(scholarId);
         Scholar scholar = scholarInfoService.getScholarById(scholarId);
+
+        List<YearCount> yearCounts = scholarCooperateService.getCooperateYearCountsById(scholarId);
         model.addAttribute("cooperaters", cooperaters);
         model.addAttribute("middleScholar", scholar);
+        model.addAttribute("yearCounts", yearCounts);
         return "cooperateRela.ftl";
     }
 }

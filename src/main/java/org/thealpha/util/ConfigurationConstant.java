@@ -15,9 +15,13 @@ public class ConfigurationConstant {
 
     public static final String TABLE_CS_RELATIONSHIP = "cs_relationship";
     public static final String CF_COOPERATE = "cooperate";
+    public static final String CF_CO_TEAM = "co_team";
     public static final String CF_TEACHER_STUDENT = "teacher_student";
     public static final String CF_REFERENCE = "reference";
     public static final String QF_COUNT = "count";
+    public static final String QF_EVE_YEAR_COUNT = "eve_year_count";
+    public static final String QF_TEAM_INTENSION = "team_intension";
+
 
     public static final String TABLE_CS_PAPER = "cs_paper";
     public static final String CF_AUTHORS = "authors";

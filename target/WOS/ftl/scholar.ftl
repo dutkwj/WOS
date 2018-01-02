@@ -124,6 +124,7 @@
 </div>
 <div id="content">
 </div>
+
 <script type="text/javascript">
     $(document).ready(function () {
         $.get('/cooperateRela/${middleScholar.index}/count', function (result) {
@@ -147,7 +148,7 @@
                 })
 
             } else if(navTab == '团队关系') {
-                $.get('worldMap', function (result) {
+                $.get('/coTeamRela/'+middleScholarIndex, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);

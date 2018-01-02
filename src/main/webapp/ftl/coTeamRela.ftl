@@ -85,10 +85,10 @@
         { "name": "${middleScholar.name!""}"   , "image" : "../img/b.jpg" , "id":"${middleScholar.index!""}", "aff":"${middleScholar.aff!""}"}];
     edges = [];
     var cooperaterIndex = 1;
-    <#if cooperaters?? && (cooperaters?size>0)>
-        <#list cooperaters as cooperater>
-        nodes.push({"name": "${cooperater.name!""}"   , "image" : "../img/b.jpg", "id":"${cooperater.index!""}", "aff":"${cooperater.aff!""}"});
-        edges.push({ "source": 0 , "target": cooperaterIndex , "relation":"合作关系" , "count":${cooperater.count!1}});
+    <#if coTeamers?? && (coTeamers?size>0)>
+        <#list coTeamers as coTeamer>
+        nodes.push({"name": "${coTeamer.name!""}"   , "image" : "../img/b.jpg", "id":"${coTeamer.index!""}", "aff":"${coTeamer.aff!""}"});
+        edges.push({ "source": 0 , "target": cooperaterIndex , "relation":"团队关系" , "intension":${coTeamer.intension!1}});
         cooperaterIndex = cooperaterIndex + 1;
 
         </#list>
@@ -131,7 +131,7 @@
             .append("line")
             .style("stroke","#ccc")
             .style("stroke-width",function (d) {
-                return d.count;
+                return d.intension;
             });
 
     //边上的文字（人物之间的关系）
@@ -141,7 +141,7 @@
             .append("text")
             .attr("class","linetext")
             .text(function(d){
-                return d.count;
+                return d.intension;
             });
 
 
@@ -190,7 +190,7 @@
                 });
             })
             .on("click", function (d) {
-                $.get('/cooperateRela/'+ d.id +'/count', function (result) {
+                $.get('/coTeamRela/'+ d.id, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
@@ -260,10 +260,10 @@
         <#else>
         places["${middleScholar.name!""}"] = [53, 32];
     </#if>
-    <#if cooperaters?? && (cooperaters?size>0)>
-        <#list cooperaters as cooperater>
-            <#if cooperater.latlng??>
-            places["${cooperater.name!""}"] = [${cooperater.longitude!""}, ${cooperater.latitude!""}];
+    <#if coTeamers?? && (coTeamers?size>0)>
+        <#list coTeamers as coTeamer>
+            <#if coTeamer.latlng??>
+            places["${coTeamer.name!""}"] = [${coTeamer.longitude!""}, ${coTeamer.latitude!""}];
             </#if>
         </#list>
     </#if>
@@ -301,10 +301,10 @@
             .attr("d", path);
 
     var route = {type:"LineString"};
-    <#if cooperaters?? && (cooperaters?size>0)>
-        <#list cooperaters as cooperater>
-        <#if cooperater.latlng??>
-        route["coordinates"] = [places["${middleScholar.name!""}"], places["${cooperater.name!""}"]];
+    <#if coTeamers?? && (coTeamers?size>0)>
+        <#list coTeamers as coTeamer>
+        <#if coTeamer.latlng??>
+        route["coordinates"] = [places["${middleScholar.name!""}"], places["${coTeamer.name!""}"]];
         svg.append("path")
                 .datum(route)
                 .attr("class", "route")
@@ -344,7 +344,7 @@
     d3.select(self.frameElement).style("height", height + "px");
 
     svg.append("g")
-            .attr("transform","translate("+(width/2 - 50)+","+(660)+")")
+            .attr("transform","translate("+(width/2 - 50)+","+(670)+")")
             .append("text")
             .text("合作者的地理位置分布图");
 
@@ -370,7 +370,7 @@
         _chart.render = function () { // <-2A
             if (!_svg) {
                 _svg = d3.select("body").append("svg") // <-2B
-                        .attr("height", _height+100)
+                        .attr("height", _height+30)
                         .attr("width", width);
 
                 renderAxes(_svg);
@@ -380,9 +380,9 @@
 
             renderBody(_svg);
             _svg.append("g")
-                    .attr("transform","translate("+((width/2)-50)+","+(_height+28)+")")
+                    .attr("transform","translate("+(width/2)+","+(_height+28)+")")
                     .append("text")
-                    .text("1980-2017年合作者数量折线图");
+                    .text("图3");
         };
 
         function renderAxes(svg) {
@@ -403,7 +403,7 @@
             axesG.append("g")
                     .attr("class", "x axis")
                     .attr("transform", function () {
-                        return "translate(" + ((width-_width)/2 + 50) + "," + yStart() + ")";
+                        return "translate(" + (width-_width)/2 + "," + yStart() + ")";
 //                        return "translate(" + xStart() + "," + yStart() + ")";
                     })
                     .call(xAxis);
@@ -425,7 +425,7 @@
             axesG.append("g")
                     .attr("class", "y axis")
                     .attr("transform", function () {
-                        return "translate(" + ((width-_width)/2+50) + "," + yEnd() + ")";
+                        return "translate(" + (width-_width)/2 + "," + yEnd() + ")";
 //                        return "translate(" + xStart() + "," + yEnd() + ")";
                     })
                     .call(yAxis);
@@ -457,7 +457,7 @@
                 _bodyG = svg.append("g")
                         .attr("class", "body")
                         .attr("transform", "translate("
-                                + ((width-_width)/2+50)   + ","
+                                + (width-_width)/2   + ","
 //                                + xStart() + ","
                                 + yEnd() + ")") // <-2E
                         .attr("clip-path", "url(#body-clip)");
@@ -469,7 +469,7 @@
 
         function renderLines() {
             _line = d3.svg.line() //<-4A
-                    .x(function (d) { return _x(d.x + 1980); })
+                    .x(function (d) { return _x(d.x); })
                     .y(function (d) { return _y(d.y); });
 
             _bodyG.selectAll("path.line")
@@ -501,23 +501,23 @@
                             return _colors(i); //<-4F
                         })
                         .transition() //<-4G
-                        .attr("cx", function (d) { return _x(d.x + 1980); })
+                        .attr("cx", function (d) { return _x(d.x); })
                         .attr("cy", function (d) { return _y(d.y); })
                         .attr("r", 4.5);
             });
         }
 
-//        function xStart() {
-//            return _margins.left;
-//        }
+        function xStart() {
+            return _margins.left;
+        }
 
         function yStart() {
             return _height - _margins.bottom;
         }
-//
-//        function xEnd() {
-//            return _width - _margins.right;
-//        }
+
+        function xEnd() {
+            return _width - _margins.right;
+        }
 
         function yEnd() {
             return _margins.top;
@@ -582,28 +582,17 @@
 
 
     var numberOfSeries = 1,
-            numberOfDataPoint = 37,
+            numberOfDataPoint = 11,
             data = [];
-    <#if yearCounts?? && (yearCounts?size>0)>
-        <#list yearCounts as yearCount>
-            data.push(${yearCount.count!""});
-        </#list>
-    </#if>
-    var testList = [10,1, 20, 3,4,5,6];
-    var j = 0;
-    for (var i = 0; i < numberOfSeries; ++i)
-        data.push(d3.range(j, numberOfDataPoint).map(function (i, j) {
-            return {x: i, y: data[j]};
-        }));
-//    data.push({x: 0, y: 1});
-//
-//    data.push({x: 0, y: 3});
-//    data.push({x: 0, y: 2});
 
+    for (var i = 0; i < numberOfSeries; ++i)
+        data.push(d3.range(numberOfDataPoint).map(function (i) {
+            return {x: i, y: randomData()};
+        }));
 
     var chart = lineChart()
-            .x(d3.scale.linear().domain([1980, 2017]))
-            .y(d3.scale.linear().domain([0, 21]));
+            .x(d3.scale.linear().domain([0, 10]))
+            .y(d3.scale.linear().domain([0, 10]));
 
     data.forEach(function (series) {
         chart.addSeries(series);
@@ -613,6 +602,6 @@
 
 
 </script>
-</body>
 
+</body>
 </html>

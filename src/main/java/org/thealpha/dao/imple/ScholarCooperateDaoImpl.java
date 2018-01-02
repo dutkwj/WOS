@@ -1,5 +1,6 @@
 package org.thealpha.dao.imple;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.CellUtil;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Repository;
 import org.thealpha.dao.inter.ScholarCooperateDao;
 import org.thealpha.model.Cooperater;
 import org.thealpha.model.Scholar;
+import org.thealpha.model.YearCount;
 import org.thealpha.util.ConfigurationConstant;
 
 import java.io.IOException;
@@ -131,6 +133,29 @@ public class ScholarCooperateDaoImpl implements ScholarCooperateDao{
                     }
                 }
                 return  cooperaterList;
+            }
+        });
+        return result;
+    }
+
+    public List<YearCount> getCooperateYearCountsById(String id) {
+        List<YearCount> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new RowMapper<List<YearCount>>() {
+            public List<YearCount> mapRow(Result result, int i) throws Exception {
+                List<YearCount> cooperateYearCountList = new ArrayList<YearCount>();
+                String eveYearCount = Bytes.toString(result.getValue(ConfigurationConstant.CF_COOPERATE.getBytes(), ConfigurationConstant.QF_EVE_YEAR_COUNT.getBytes()));
+                if (StringUtils.isNotBlank(eveYearCount)) {
+                    String[] eveYearCounts = eveYearCount.split(", ");
+                    for (String eve : eveYearCounts) {
+                        YearCount yearCount = new YearCount();
+                        int count = Integer.parseInt(eve.substring(eve.indexOf(":") + 1, eve.length()));
+                        if (count != 0) {
+                            yearCount.setYear(Integer.parseInt(eve.substring(0, eve.indexOf(":"))));
+                            yearCount.setCount(count);
+                            cooperateYearCountList.add(yearCount);
+                        }
+                    }
+                }
+                return  cooperateYearCountList;
             }
         });
         return result;
