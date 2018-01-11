@@ -12,6 +12,8 @@
     <mvc:resources mapping="/img/**" location="/img/" />
     <mvc:resources mapping="/file/**" location="/file/" />
     <mvc:resources mapping="/fonts/**" location="/fonts/" />
+    <mvc:resources mapping="/layui/**" location="/layui/" />
+    <mvc:resources mapping="/Font_Awesome/**" location="/Font_Awesome/" />
 
 
 

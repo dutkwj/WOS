@@ -1,8 +1,10 @@
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.*;
 import org.apache.hadoop.hbase.*;
 import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.filter.*;
 import org.apache.hadoop.hbase.util.Bytes;
+import org.apache.hadoop.io.IOUtils;
 import org.junit.Test;
 import org.junit.runner.Result;
 import org.junit.runner.RunWith;
@@ -772,6 +774,33 @@ public class HbaseTest {
             table.put(puts);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void uploadFileToHDFSTest() throws IOException {
+        Configuration conf = new Configuration(true);
+        conf.set("fs.default.name", "hdfs://100.66.1.209:9000");
+        FileSystem fs = FileSystem.get(conf);
+        Path srcPath = new Path("/home/kangwenjie/IdeaProjects/WOS/src/main/webapp/img/b.jpg");
+        Path dstPath = new Path("/hbase/photo");
+        fs.copyFromLocalFile(false, srcPath, dstPath);
+        fs.close();
+    }
+
+    @Test
+    public void downLoadFileFromHDFSTest() throws IOException {
+        Configuration conf = new Configuration(true);
+        conf.set("fs.default.name", "hdfs://100.66.1.209:9000");
+        FileSystem fs = FileSystem.get(conf);
+        Path  srcPath = new Path("/hbase/photo/b.jpg");
+        InputStream in = fs.open(srcPath);
+        try {
+            //将文件COPY到标准输出(即控制台输出)
+            IOUtils.copyBytes(in, System.out, 4096,false);
+        }finally{
+            IOUtils.closeStream(in);
+            fs.close();
         }
     }
 
