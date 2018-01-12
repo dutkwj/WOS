@@ -7,7 +7,10 @@
     <title>登陆界面</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/component.css" />
-    <link rel="stylesheet" href="${path}/css/layui.css" type="text/css">
+    <link rel="stylesheet" href="../layui/css/layui.css" type="text/css" media="all">
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js" charset="utf-8"></script>
+
+
 </head>
 <body>
 <ul class="layui-nav">
@@ -28,7 +31,7 @@
     </li>
     <li class="layui-nav-item"><a href="">退出</a></li>
 </ul>
-<script type="text/javascript" src="../js/layui.all.js" charset="utf-8"></script>
+<script type="text/javascript" src="../layui/layui.all.js" charset="utf-8"></script>
 <script type="text/javascript">
     layui.use('element', function () {
         var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
@@ -40,30 +43,50 @@
         });
     });
 </script>
-<#--<div class="container demo-1">-->
-        <div id="large-header" class="large-header">
-            <#--<canvas id="demo-canvas"></canvas>-->
-            <div class="logo_box">
-                <#--<h1 class="g-font-size-28--xs g-font-size-40--sm g-font-size-60--md g-color--white"> Web of Scholar</h1>-->
-                    <h1 ><img src="../img/web_of_scholar.png" alt="wos" width="400" height="62"></h1>
-                <form action="#" name="f" method="post">
-                    <div class="input_outer">
-                        <span class="u_user"></span>
-                        <input name="logname" class="text" type="text" placeholder="please input username">
-                    </div>
-                    <div class="input_outer">
-                        <span class="us_uer"></span>
-                        <input name="logpass" class="text" value="" type="password" placeholder="please input password">
-                    </div>
-                    <div class="mb2"><a class="act-but submit" href="javascript:;">login</a></div>
-                </form>
+<div id="large-header" class="large-header">
+    <div class="logo_box">
+            <h1 ><img src="../img/web_of_scholar.png" alt="wos" width="400" height="62"></h1>
+        <form class="layui-form" action="/login/verify" name="f" method="post" id="login_form">
+            <#--<input type="text" name="email" required  lay-verify="email" placeholder="please input email" autocomplete="off" class="layui-input">-->
+
+            <div class="input_outer">
+                <span class="u_user"></span>
+                <input name="logname" class="text" required lay-verify="usererror" type="text" placeholder="please input username">
             </div>
-        </div>
-<#--</div><!-- /container &ndash;&gt;-->
-<script src="../js/TweenLite.min.js"></script>
-<script src="../js/EasePack.min.js"></script>
-<script src="../js/rAF.js"></script>
+            <div class="input_outer">
+                <span class="us_uer"></span>
+                <input name="logpass" class="text" value="" type="password" placeholder="please input password">
+            </div>
+            <div class="mb2"><a lay-submit class="act-but submit" href="javascript:;" onclick="submitForm()">login</a></div>
+        </form>
+    </div>
+</div>
+<#--<script src="../js/TweenLite.min.js"></script>-->
+<#--<script src="../js/EasePack.min.js"></script>-->
+<#--<script src="../js/rAF.js"></script>-->
 <script src="../js/demo-1.js"></script>
-<div style="text-align:center;">
+<#--<div style="text-align:center;">-->
+<script type="text/javascript" src="../layui/layui.js" charset="utf-8"></script>
+
+<#--<script type="text/javascript">-->
+<#--layui.use(['form'], function() {-->
+    <#--var form = layui.form;-->
+    <#--form.verify({-->
+        <#--usererror: function (value) {-->
+            <#--return "test error";-->
+<#--//            var password = document.getElementById('password').value;-->
+<#--//            if (!(password == value)) {-->
+<#--//                return "two input password must be consistent";-->
+<#--//            }-->
+        <#--}-->
+    <#--});-->
+<#--}-->
+<#--</script>-->
+
+<script>
+    function submitForm(){
+        document.getElementById("login_form").submit();
+    }
+</script>
 </body>
 </html>

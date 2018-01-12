@@ -7,8 +7,6 @@
     <title>register</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="${path}/layui/css/layui.css" type="text/css" media="all">
-    <script type="text/javascript" src="../js/jquery.min.js" charset="utf-8"></script>
-    <link rel="stylesheet" type="text/css" href="../css/component.css" />
 
 
 </head>
@@ -31,7 +29,7 @@
     </li>
     <li class="layui-nav-item"><a href="">退出</a></li>
 </ul>
-<script type="text/javascript" src="../js/layui.all.js" charset="utf-8"></script>
+<script type="text/javascript" src="../layui/layui.all.js" charset="utf-8"></script>
 <script type="text/javascript">
     layui.use('element', function () {
         var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
@@ -262,13 +260,7 @@
         });
     });
 
-
-
 </script>
-<script src="../js/TweenLite.min.js"></script>
-<script src="../js/EasePack.min.js"></script>
-<script src="../js/rAF.js"></script>
-<script src="../js/demo-1.js"></script>
 
 </body>
 </html>

@@ -36,18 +36,19 @@ public class RegisterController {
         String uuid = UUID.randomUUID().toString().replace("-", "");
         user.setIndex(uuid);
         String photoName = personalPhoto.getOriginalFilename();
-        user.setPersonalPhoto(photoName);
-        FileOutputStream fos = new FileOutputStream(new File("../photo/" + uuid + "" + photoName.substring(photoName.indexOf("."))));
-        FileInputStream fis = (FileInputStream) personalPhoto.getInputStream();
-        byte[] read = new byte[1024];
-        int len = 0;
-        while((len = fis.read(read))!= -1){
-            fos.write(read,0,len);
+        if (StringUtils.isNotBlank(photoName)) {
+            user.setPersonalPhoto(photoName);
+            FileOutputStream fos = new FileOutputStream(new File("../photo/" + uuid + "" + photoName.substring(photoName.indexOf("."))));
+            FileInputStream fis = (FileInputStream) personalPhoto.getInputStream();
+            byte[] read = new byte[1024];
+            int len = 0;
+            while((len = fis.read(read))!= -1){
+                fos.write(read,0,len);
+            }
+            fis.close();
+            fos.flush();
+            fos.close();
         }
-        fis.close();
-        fos.flush();
-        fos.close();
-
         registerService.saveUser(user);
         return "registerSuccess.ftl";
     }
