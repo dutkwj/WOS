@@ -23,17 +23,22 @@
     <li class="layui-nav-item"><a href="">引用关系</a></li>
 </ul>
 <ul class="layui-nav layui-layout-right">
-    <li class="layui-nav-item">
-        <a href="javascript:;">
-            <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-            <康文杰></康文杰>
-        </a>
-        <dl class="layui-nav-child">
-            <dd><a href="">基本资料</a></dd>
-            <dd><a href="">安全设置</a></dd>
-        </dl>
-    </li>
-    <li class="layui-nav-item"><a href="">退出</a></li>
+    <#if Session.user?exists>
+        <li class="layui-nav-item">
+            <a href="javascript:;">
+                <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                ${Session['user'].name!""}
+            </a>
+            <dl class="layui-nav-child">
+                <dd><a href="">base information</a></dd>
+                <dd><a href="">modify information</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="/logout">logout</a></li>
+        <#else>
+            <li class="layui-nav-item"><a href="/login/index">login</a></li>
+            <li class="layui-nav-item"><a href="/register/index">register</a></li>
+    </#if>
 </ul>
 
 

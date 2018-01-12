@@ -30,48 +30,48 @@ public class RegisterService {
     }
 
     public void saveUser(User user) {
-        String index = user.getIndex();
-        if (StringUtils.isNotBlank(user.getEmail())) {
-            registerDao.saveUser(index, ConfigurationConstant.QF_EMAIL, user.getEmail());
+        String email = user.getEmail();
+        if (StringUtils.isNotBlank(user.getIndex())) {
+            registerDao.saveUser(email, ConfigurationConstant.QF_INDEX, user.getIndex());
         }
         if (StringUtils.isNotBlank(user.getPassword())) {
-            registerDao.saveUser(index, ConfigurationConstant.QF_PASSWORD, user.getPassword());
+            registerDao.saveUser(email, ConfigurationConstant.QF_PASSWORD, user.getPassword());
         }
         if (StringUtils.isNotBlank(user.getName())) {
-            registerDao.saveUser(index, ConfigurationConstant.QF_NAME, user.getName());
+            registerDao.saveUser(email, ConfigurationConstant.QF_NAME, user.getName());
         }
         if (StringUtils.isNotBlank(user.getSex())) {
-            registerDao.saveUser(index, ConfigurationConstant.QF_SEX, user.getSex());
+            registerDao.saveUser(email, ConfigurationConstant.QF_SEX, user.getSex());
         }
         if (StringUtils.isNotBlank(user.getPosition())) {
-            registerDao.saveUser(index, ConfigurationConstant.QF_POSITION, user.getPosition());
+            registerDao.saveUser(email, ConfigurationConstant.QF_POSITION, user.getPosition());
         }
         if (StringUtils.isNotBlank(user.getOrg())) {
-            registerDao.saveUser(index, ConfigurationConstant.QF_ORG, user.getOrg());
+            registerDao.saveUser(email, ConfigurationConstant.QF_ORG, user.getOrg());
         }
         if (StringUtils.isNotBlank(user.getNation())) {
-            registerDao.saveUser(index, ConfigurationConstant.QF_NATION, user.getNation());
+            registerDao.saveUser(email, ConfigurationConstant.QF_NATION, user.getNation());
         }
         if (StringUtils.isNotBlank(user.getBornDate())) {
-            registerDao.saveUser(index, ConfigurationConstant.QF_BORN_DATE, user.getBornDate());
+            registerDao.saveUser(email, ConfigurationConstant.QF_BORN_DATE, user.getBornDate());
         }
         if (StringUtils.isNotBlank(user.getSupervisorName())) {
-            registerDao.saveUser(index, ConfigurationConstant.QF_SUPERVISOR_NAME, user.getSupervisorName());
+            registerDao.saveUser(email, ConfigurationConstant.QF_SUPERVISOR_NAME, user.getSupervisorName());
         }
         if (StringUtils.isNotBlank(user.getGradDate())) {
-            registerDao.saveUser(index, ConfigurationConstant.QF_GRAD_DATE, user.getGradDate());
+            registerDao.saveUser(email, ConfigurationConstant.QF_GRAD_DATE, user.getGradDate());
         }
         if (StringUtils.isNotBlank(user.getGradCollege())) {
-            registerDao.saveUser(index, ConfigurationConstant.QF_GRAD_college, user.getGradCollege());
+            registerDao.saveUser(email, ConfigurationConstant.QF_GRAD_college, user.getGradCollege());
         }
         if (StringUtils.isNotBlank(user.getDegree())) {
-            registerDao.saveUser(index, ConfigurationConstant.QF_DEGREE, user.getDegree());
+            registerDao.saveUser(email, ConfigurationConstant.QF_DEGREE, user.getDegree());
         }
         if (StringUtils.isNotBlank(user.getPersonalPhoto())) {
-            registerDao.saveUser(index, ConfigurationConstant.QF_PERSONAL_PHOTO_NAME, user.getPersonalPhoto());
+            registerDao.saveUser(email, ConfigurationConstant.QF_PERSONAL_PHOTO_NAME, user.getPersonalPhoto());
         }
         if (StringUtils.isNotBlank(user.getResearchField())) {
-            registerDao.saveUser(index, ConfigurationConstant.QF_RESEARCH_FIELD, user.getResearchField());
+            registerDao.saveUser(email, ConfigurationConstant.QF_RESEARCH_FIELD, user.getResearchField());
         }
     }
 }

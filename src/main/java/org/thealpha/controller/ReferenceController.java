@@ -32,7 +32,7 @@ public class ReferenceController {
         List<Scholar> refScholars = referenceService.getRefAuthorsByAuthorId(authorId);
         model.addAttribute("middleScholar", middleScholar);
         model.addAttribute("refScholars", refScholars);
-        return "refRela.ftl";
+        return "refRela";
     }
 
     @RequestMapping("/refed/{authorId}")
@@ -41,7 +41,7 @@ public class ReferenceController {
         List<Scholar> refedScholars = referenceService.getRefedAuthorsByAuthorId(authorId);
         model.addAttribute("middleScholar", middleScholar);
         model.addAttribute("refedScholars", refedScholars);
-        return "refedRela.ftl";
+        return "refedRela";
     }
 
     @RequestMapping("/coRef/{authorId}")
@@ -50,7 +50,7 @@ public class ReferenceController {
         List<Scholar> coRefScholars = referenceService.getCoRefAuthorsByAuthorId(authorId);
         model.addAttribute("middleScholar", middleScholar);
         model.addAttribute("coRefScholars", coRefScholars);
-        return "coRefRela.ftl";
+        return "coRefRela";
     }
 
     @RequestMapping("/coRefed/{authorId}")
@@ -59,6 +59,6 @@ public class ReferenceController {
         List<Scholar> coRefedScholars = referenceService.getCoRefedAuthorsByAuthorId(authorId);
         model.addAttribute("middleScholar", middleScholar);
         model.addAttribute("coRefedScholars", coRefedScholars);
-        return "coRefedRela.ftl";
+        return "coRefedRela";
     }
 }

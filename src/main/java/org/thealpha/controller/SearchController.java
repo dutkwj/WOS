@@ -25,7 +25,7 @@ public class SearchController {
     public String searchMoreIndex(Model model) {
         List<Scholar> moreRecommendScholars = scholarInfoService.getMoreRecommendScholars();
         model.addAttribute("scholars", moreRecommendScholars);
-        return "searchMore.ftl";
+        return "searchMore";
     }
 
     @RequestMapping("/content")
@@ -37,7 +37,7 @@ public class SearchController {
             e.printStackTrace();
         }
         model.addAttribute("scholars", searchScholars);
-        return "searchMore.ftl";
+        return "searchMore";
     }
 
 }

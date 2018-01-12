@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PotentialController {
     @RequestMapping("/potential")
     public String helloWorld(Model model){
-        return "potential.ftl";
+        return "potential";
     }
 }

@@ -37,7 +37,7 @@ public class ConfigurationConstant {
     public static final String TABLE_CS_USER = "cs_user";
     public static final String CF_USER_INFO = "user_info";
     public static final String CF_SCAN_RECORD = "scan_record";
-    public static final String QF_EMAIL = "email";
+    public static final String QF_INDEX = "index";
     public static final String QF_PASSWORD = "password";
     public static final String QF_SEX = "sex";
     public static final String QF_POSITION = "position";

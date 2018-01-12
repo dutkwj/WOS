@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class WorldMapController {
     @RequestMapping("/worldMap")
     public String helloWorld(Model model) {
-        return "worldMap.ftl";
+        return "worldMap";
     }
 }

@@ -15,6 +15,6 @@ public class StudentController {
         //将数据添加到视图数据容器中
         model.addAttribute("word0",word0);
         model.addAttribute("word1",word1);
-        return "Hello.ftl";
+        return "Hello";
     }
 }

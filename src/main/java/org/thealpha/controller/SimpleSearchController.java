@@ -31,7 +31,7 @@ public class SimpleSearchController {
         }
         model.addAttribute("scholars", searchScholars);
         model.addAttribute("search", true);
-        return "index.ftl";
+        return "index";
     }
 
 }

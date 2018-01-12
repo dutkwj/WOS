@@ -20,6 +20,6 @@ public class ScholarController {
     public String baseInfo(@RequestParam String authorId, Model model) {
         Scholar scholar = scholarInfoService.getScholarById(authorId);
         model.addAttribute("middleScholar", scholar);
-        return "scholar.ftl";
+        return "scholar";
     }
 }

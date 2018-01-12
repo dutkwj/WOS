@@ -29,6 +29,6 @@ public class CoTeamRelaController {
         Scholar scholar = scholarInfoService.getScholarById(scholarId);
         model.addAttribute("coTeamers", coTeamers);
         model.addAttribute("middleScholar", scholar);
-        return "coTeamRela.ftl";
+        return "coTeamRela";
     }
 }

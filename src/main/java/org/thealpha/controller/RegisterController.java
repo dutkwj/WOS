@@ -25,7 +25,7 @@ public class RegisterController {
     public String register(Model modle){
         List<String> countryNames = registerService.getAllCountriesName();
         modle.addAttribute("countryNames", countryNames);
-        return "register.ftl";
+        return "register";
     }
 
     @RequestMapping("/addUser")
@@ -50,11 +50,11 @@ public class RegisterController {
             fos.close();
         }
         registerService.saveUser(user);
-        return "registerSuccess.ftl";
+        return "registerSuccess";
     }
 
     @RequestMapping("/success")
     public String registerSuccess(){
-        return "registerSuccess.ftl";
+        return "registerSuccess";
     }
 }

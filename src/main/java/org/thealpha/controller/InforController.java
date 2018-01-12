@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 public class InforController {
     @RequestMapping("/information")
     public String helloword(Model model){
-        return "information.ftl";
+        return "information";
     }
 
 }

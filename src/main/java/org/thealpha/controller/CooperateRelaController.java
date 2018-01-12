@@ -43,6 +43,6 @@ public class CooperateRelaController {
         model.addAttribute("cooperaters", cooperaters);
         model.addAttribute("middleScholar", scholar);
         model.addAttribute("yearCounts", yearCounts);
-        return "cooperateRela.ftl";
+        return "cooperateRela";
     }
 }

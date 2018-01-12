@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PartnerCountController {
     @RequestMapping("/partnerCountEveYear")
     public String helloWorld(Model model) {
-        return "partnerCountEveYear.ftl";
+        return "partnerCountEveYear";
     }
 }

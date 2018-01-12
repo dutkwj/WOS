@@ -16,7 +16,7 @@ public class RegisterDaoImpl implements RegisterDao{
     @Autowired
     private HbaseTemplate hbaseTemplate;
 
-    public void saveUser(String index, String qualifier, String field) {
-        hbaseTemplate.put(ConfigurationConstant.TABLE_CS_USER, index, ConfigurationConstant.CF_USER_INFO, qualifier, Bytes.toBytes(field));
+    public void saveUser(String email, String qualifier, String field) {
+        hbaseTemplate.put(ConfigurationConstant.TABLE_CS_USER, email, ConfigurationConstant.CF_USER_INFO, qualifier, Bytes.toBytes(field));
     }
 }
