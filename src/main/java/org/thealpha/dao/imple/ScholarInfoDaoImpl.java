@@ -37,6 +37,11 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
 
     public List<String> getRecommendScholars() {
         List<String> recommendScholars = new ArrayList<String>();
+//        hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
+//            public Scholar mapRow(Result result, int rowNum) throws Exception {
+//                return null;
+//            }
+//        })
         recommendScholars.add("0DE9F497");
         recommendScholars.add("80E2C811");
         recommendScholars.add("7FC8CD3A");

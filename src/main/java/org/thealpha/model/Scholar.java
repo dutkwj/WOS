@@ -11,6 +11,15 @@ public class Scholar {
     private String latlng;
     private String latitude;
     private String longitude;
+    private double hindex;
+
+    public double getHindex() {
+        return hindex;
+    }
+
+    public void setHindex(double hindex) {
+        this.hindex = hindex;
+    }
 
     public String getLatitude() {
         return latitude;

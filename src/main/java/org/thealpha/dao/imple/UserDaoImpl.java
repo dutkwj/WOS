@@ -33,12 +33,13 @@ public class UserDaoImpl implements UserDao {
         });
     }
 
-    public User getUserNameAndPhotoNameByEmail(String email) {
+    public User getUserNameAndPhotoNameByEmail(final String email) {
         return hbaseTemplate.get(ConfigurationConstant.TABLE_CS_USER, email, new RowMapper<User>() {
             public User mapRow(Result result, int rowNum) throws Exception {
                 User user = new User();
                 String name = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_USER_INFO), Bytes.toBytes(ConfigurationConstant.QF_NAME)));
                 String personalPhotoName = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_USER_INFO), Bytes.toBytes(ConfigurationConstant.QF_PERSONAL_PHOTO_NAME)));
+                user.setEmail(email);
                 if (StringUtils.isNotBlank(name)) {
                     user.setName(name);
                 }

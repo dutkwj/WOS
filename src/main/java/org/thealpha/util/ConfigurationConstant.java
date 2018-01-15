@@ -12,9 +12,10 @@ public class ConfigurationConstant {
     public static final String QF_AFF = "aff";
     public static final String QF_PAPER_IDS = "paper_ids";
     public static final String QF_LAT_LNG = "lat_lng";
+    public static final String QF_HINDEX = "hindex";
 
 
-//    cs_relationship, cooperate:(count, eve_year_count), co_team:(team_intension), teacher_student:()
+    //    cs_relationship, cooperate:(count, eve_year_count), co_team:(team_intension), teacher_student:()
     public static final String TABLE_CS_RELATIONSHIP = "cs_relationship";
     public static final String CF_COOPERATE = "cooperate";
     public static final String CF_CO_TEAM = "co_team";
@@ -50,6 +51,7 @@ public class ConfigurationConstant {
     public static final String QF_DEGREE = "degree";
     public static final String QF_PERSONAL_PHOTO_NAME = "personal_photo_name";
     public static final String QF_RESEARCH_FIELD = "research_field";
+    public static final String QF_WEIGHT = "weight";
 
 
     public static final String ZK_QUORUM = "100.66.1.209,100.66.2.1,100.66.2.22";

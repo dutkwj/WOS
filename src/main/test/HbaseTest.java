@@ -1,3 +1,4 @@
+import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
 import org.apache.hadoop.hbase.*;
@@ -15,6 +16,9 @@ import org.springframework.data.hadoop.hbase.HbaseTemplate;
 import org.springframework.data.hadoop.hbase.RowMapper;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.thealpha.model.Scholar;
+import org.thealpha.model.ScholarWeight;
+import org.thealpha.model.User;
 import org.thealpha.util.ConfigurationConstant;
 import org.thealpha.util.HbaseUtils;
 
@@ -802,6 +806,63 @@ public class HbaseTest {
             IOUtils.closeStream(in);
             fs.close();
         }
+    }
+
+    @Test
+    public void getAllUsers() {
+        List<User> users = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_USER, ConfigurationConstant.CF_SCAN_RECORD, ConfigurationConstant.QF_WEIGHT, new RowMapper<User>() {
+            public User mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
+                String scholarWeights = Bytes.toString(result.value());
+                if (StringUtils.isBlank(scholarWeights)) {
+                    return null;
+                }
+                List<ScholarWeight> scholarWeightList = new ArrayList<ScholarWeight>();
+                for (String scholarWeight : scholarWeights.split(", ")) {
+                    ScholarWeight sw = new ScholarWeight();
+                    sw.setIndex(scholarWeight.substring(0, scholarWeight.indexOf(":")));
+                    sw.setWeight(scholarWeight.indexOf(":") + 1);
+                    scholarWeightList.add(sw);
+                }
+                String eamil = Bytes.toString(result.getRow());
+                User user = new User();
+                user.setEmail(eamil);
+                user.setScholarWeights(scholarWeightList);
+                return user;
+            }
+        });
+        for (User u : users) {
+            System.out.println("email:" + u.getEmail());
+            List<ScholarWeight> scholarWeightList = u.getScholarWeights();
+            for (ScholarWeight scholarWeight : scholarWeightList) {
+                System.out.println(scholarWeight.getIndex() + ", " + scholarWeight.getWeight());
+            }
+        }
+    }
+
+    @Test
+    public void getHighHindexScholar() {
+
+        List<Scholar> scholars = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
+            public Scholar mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
+                Scholar scholar = new Scholar();
+                scholar.setIndex(Bytes.toString(result.getRow()));
+                scholar.setName(Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_NAME))));
+                String latlng = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_LAT_LNG)));
+                String aff = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_AFF)));
+                String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_HINDEX)));
+                if (StringUtils.isNotBlank(latlng)) {
+                    scholar.setLatlng(latlng);
+                }
+                if (StringUtils.isNotBlank(aff)) {
+                    scholar.setAff(aff);
+                }
+                if (StringUtils.isNotBlank(hindex)) {
+                    scholar.setHindex(Double.parseDouble(hindex));
+                }
+                return scholar;
+            }
+        });
+        System.out.println(scholars.size());
     }
 
 }
