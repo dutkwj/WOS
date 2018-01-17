@@ -15,7 +15,7 @@ public class ConfigurationConstant {
     public static final String QF_H_INDEX = "h_index";
 
 
-    //    cs_relationship, cooperate:(count, eve_year_count), co_team:(team_intension), teacher_student:()
+    //    cs_relationship, cooperate:(count, eve_year_count), co_team:(team_intension), teacher_student:(teacher, students)
     public static final String TABLE_CS_RELATIONSHIP = "cs_relationship";
     public static final String CF_COOPERATE = "cooperate";
     public static final String CF_CO_TEAM = "co_team";
@@ -24,9 +24,11 @@ public class ConfigurationConstant {
     public static final String QF_COUNT = "count";
     public static final String QF_EVE_YEAR_COUNT = "eve_year_count";
     public static final String QF_TEAM_INTENSION = "team_intension";
+    public static final String QF_TEACHER = "tacher";
+    public static final String QF_STUDENTS = "students";
 
 
-//    cs_paper, authors:(author_ids), reference:(ref_ids, refed_ids, co_ref_ids, co_refed_ids)
+    //    cs_paper, authors:(author_ids), reference:(ref_ids, refed_ids, co_ref_ids, co_refed_ids)
     public static final String TABLE_CS_PAPER = "cs_paper";
     public static final String CF_AUTHORS = "authors";
     public static final String QF_AUTHOR_IDS = "author_ids";

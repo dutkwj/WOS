@@ -159,7 +159,7 @@
                     $("#content").html(result);
                 })
             } else if(navTab == '师生关系') {
-                $.get('worldMap', function (result) {
+                $.get('/teacherStudent/'+middleScholarIndex, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);

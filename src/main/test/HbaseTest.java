@@ -38,9 +38,6 @@ public class HbaseTest {
     @Autowired
     private HbaseTemplate hbaseTemplate;
 
-    @Autowired
-    private JedisCluster jedisCluster;
-
     @Test
     public void test() {
         // 加载Spring配置文件
@@ -894,6 +891,115 @@ public class HbaseTest {
                 return null;
             }
         });
+    }
+
+    @Test
+    public void importTeacherStudentTest() {
+        Map<String, String> teaStudentsMap = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/tea_stus/cs_teacher_students_2010.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+//                System.out.println(line);
+//                if (count > 10) {
+//                    return;
+//                }
+                String teacher = line.substring(0, line.indexOf(","));
+                String students = line.substring(line.indexOf(",") + 1);
+                students = students.replaceAll("\"|\\[|\\]|'", "");
+                teaStudentsMap.put(teacher, students);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(teaStudentsMap.size());
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : teaStudentsMap.entrySet()) {
+            String teacherId = (String) entry.getKey();
+            String studentsId = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(teacherId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_TEACHER_STUDENT), Bytes.toBytes(ConfigurationConstant.QF_STUDENTS), Bytes.toBytes(studentsId));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void importStudentTeacherTest() {
+        Map<String, String> stuTeaMap = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/MAG师生关系识别结果_v2/2010/cs_relation_2010_2.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            br.readLine();
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+//                System.out.println(line);
+//                if (count > 10) {
+//                    return;
+//                }
+                String[] lines = line.split(",");
+                stuTeaMap.put(lines[0], lines[1]);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(stuTeaMap.size());
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : stuTeaMap.entrySet()) {
+            String studentId = (String) entry.getKey();
+            String teacherId = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(studentId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_TEACHER_STUDENT), Bytes.toBytes(ConfigurationConstant.QF_TEACHER), Bytes.toBytes(teacherId));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

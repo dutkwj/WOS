@@ -120,6 +120,10 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                         scholar.setLatlng(value);
                         scholar.setLatitude(value.split(", ")[0]);
                         scholar.setLongitude(value.split(", ")[1]);
+                    } else if (ConfigurationConstant.QF_H_INDEX.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setHindex(Double.parseDouble(value));
+                        }
                     }
                 }
                 scholarList.add(scholar);
