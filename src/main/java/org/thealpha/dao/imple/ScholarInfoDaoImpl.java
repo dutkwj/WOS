@@ -107,12 +107,14 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 Scholar scholar = new Scholar();
                 for (Cell cell : result.rawCells()) {
                     String rowKey = new String(CellUtil.cloneRow(cell));
+
                     String qualiFier = new String(CellUtil.cloneQualifier(cell));
                     String value = new String(CellUtil.cloneValue(cell));
                     scholar.setIndex(rowKey);
                     if (ConfigurationConstant.QF_NAME.equals(qualiFier)) {
                         scholar.setName(value);
                     } else if (ConfigurationConstant.QF_AFF.equals(qualiFier)) {
+                        value = value.replaceAll("\u2028", " ");
                         scholar.setAff(value);
                     } else if (ConfigurationConstant.QF_LAT_LNG.equals(qualiFier)) {
                         scholar.setLatlng(value);
@@ -142,6 +144,7 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 String name = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_NAME)));
                 String aff = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_AFF)));
                 String latlng = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_LAT_LNG)));
+                String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
                 scholar.setIndex(scholarId);
                 scholar.setName(name);
                 scholar.setAff(aff);
@@ -149,6 +152,9 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                     scholar.setLatlng(latlng);
                     scholar.setLatitude(latlng.split(", ")[0]);
                     scholar.setLongitude(latlng.split(", ")[1]);
+                }
+                if (StringUtils.isNotBlank(hindex)) {
+                    scholar.setHindex(Double.parseDouble(hindex));
                 }
                 return scholar;
             }

@@ -7,16 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.thealpha.model.Scholar;
 import org.thealpha.model.User;
 import org.thealpha.service.RecommendService;
-import org.thealpha.service.ScholarInfoService;
-
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
 public class IndexController {
-
-    @Autowired
-    private ScholarInfoService scholarInfoService;
 
     @Autowired
     private RecommendService recommendService;
@@ -29,7 +24,7 @@ public class IndexController {
         if (user != null) {
             recommendScholars = recommendService.getRecommendScholar(user.getEmail());
         } else {
-            recommendScholars = scholarInfoService.getRecommendScholars();
+            recommendScholars = recommendService.getHindexTop10Scholars();
         }
         model.addAttribute("scholars", recommendScholars);
         return "index";

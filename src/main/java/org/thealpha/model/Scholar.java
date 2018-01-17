@@ -1,9 +1,11 @@
 package org.thealpha.model;
 
+import java.io.Serializable;
+
 /**
  * Created by kangwenjie on 17-12-15.
  */
-public class Scholar {
+public class Scholar implements Serializable{
     private String index;
     private String name;
     private String aff;

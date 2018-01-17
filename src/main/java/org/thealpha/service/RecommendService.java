@@ -8,6 +8,9 @@ import org.thealpha.dao.inter.ScholarInfoDao;
 import org.thealpha.model.Scholar;
 import org.thealpha.model.ScholarWeight;
 import org.thealpha.model.User;
+import org.thealpha.util.ConfigurationConstant;
+import org.thealpha.util.ListTranscoder;
+import redis.clients.jedis.JedisCluster;
 
 import java.util.*;
 
@@ -22,6 +25,9 @@ public class RecommendService {
 
     @Autowired
     private ScholarInfoDao scholarInfoDao;
+
+    @Autowired
+    private JedisCluster jedisCluster;
 
     public void addWeight(String email, String scholarIndx) {
         List<ScholarWeight> scholarWeights = recommendDao.getScholarWeightsByUser(email);
@@ -157,5 +163,11 @@ public class RecommendService {
         }
 
         return numerator / (Math.sqrt(denominatorA) * Math.sqrt(denominatorB));
+    }
+
+    public List<Scholar> getHindexTop10Scholars() {
+        byte[] in = jedisCluster.get(ConfigurationConstant.REDIS_TOP10_SCHOLARS.getBytes());
+        return (List<Scholar>) ListTranscoder.deserialize(in);
+
     }
 }

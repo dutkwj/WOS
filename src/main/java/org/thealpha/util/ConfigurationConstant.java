@@ -4,7 +4,7 @@ package org.thealpha.util;
  * Created by kangwenjie on 17-12-14.
  */
 public class ConfigurationConstant {
-//    cs_scholar, personal_info:(name, aff, lat_lng), papers:(paper_ids)
+//    cs_scholar, personal_info:(name, aff, lat_lng, h_index), papers:(paper_ids)
     public static final String TABLE_CS_SCHOLAR = "cs_scholar";
     public static final String CF_PERSONAL_INFO = "personal_info";
     public static final String CF_PAPERS = "papers";
@@ -12,7 +12,7 @@ public class ConfigurationConstant {
     public static final String QF_AFF = "aff";
     public static final String QF_PAPER_IDS = "paper_ids";
     public static final String QF_LAT_LNG = "lat_lng";
-    public static final String QF_HINDEX = "hindex";
+    public static final String QF_H_INDEX = "h_index";
 
 
     //    cs_relationship, cooperate:(count, eve_year_count), co_team:(team_intension), teacher_student:()
@@ -56,6 +56,9 @@ public class ConfigurationConstant {
 
     public static final String ZK_QUORUM = "100.66.1.209,100.66.2.1,100.66.2.22";
     public static final String ZK_CLIENT_PORT = "2181";
+
+    public static final String REDIS_ALL_SCHOLARS = "redis_all_scholars";
+    public static final String REDIS_TOP10_SCHOLARS = "redis_top10_scholars";
 
 
 }

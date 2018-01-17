@@ -21,15 +21,14 @@ import org.thealpha.model.ScholarWeight;
 import org.thealpha.model.User;
 import org.thealpha.util.ConfigurationConstant;
 import org.thealpha.util.HbaseUtils;
+import org.thealpha.util.ListTranscoder;
+import redis.clients.jedis.JedisCluster;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring-servlet.xml")
+@ContextConfiguration(locations = {"classpath:spring-servlet.xml", "classpath:/redis/spring-redis.xml"})
 public class HbaseTest {
     private static final String TABLE_NAME    = "cs_scholar";
     private static final String ROW_KEY       = "r";
@@ -38,6 +37,9 @@ public class HbaseTest {
 
     @Autowired
     private HbaseTemplate hbaseTemplate;
+
+    @Autowired
+    private JedisCluster jedisCluster;
 
     @Test
     public void test() {
@@ -849,7 +851,7 @@ public class HbaseTest {
                 scholar.setName(Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_NAME))));
                 String latlng = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_LAT_LNG)));
                 String aff = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_AFF)));
-                String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_HINDEX)));
+                String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
                 if (StringUtils.isNotBlank(latlng)) {
                     scholar.setLatlng(latlng);
                 }
@@ -863,6 +865,35 @@ public class HbaseTest {
             }
         });
         System.out.println(scholars.size());
+        Collections.sort(scholars, new Comparator<Scholar>() {
+            public int compare(Scholar o1, Scholar o2) {
+                if (o1.getHindex() > o2.getHindex()) {
+                    return -1;
+                }
+                if (o1.getHindex() < o2.getHindex()) {
+                    return 1;
+                }
+                return 0;
+            }
+        });
+//        jedisCluster.set(ConfigurationConstant.REDIS_ALL_SCHOLARS.getBytes(), ListTranscoder.serialize(scholars));
+
+        List<Scholar> top10Scholars = new ArrayList<Scholar>();
+        for (int i = 0; i < 10; i++) {
+            top10Scholars.add(scholars.get(i));
+        }
+//        jedisCluster.set(ConfigurationConstant.REDIS_TOP10_SCHOLARS.getBytes(), ListTranscoder.serialize(top10Scholars));
+    }
+
+    @Test
+    public void testAff() {
+        hbaseTemplate.get(ConfigurationConstant.TABLE_CS_SCHOLAR, "822F2CBF", ConfigurationConstant.CF_PERSONAL_INFO, ConfigurationConstant.QF_AFF, new RowMapper<Scholar>() {
+            public Scholar mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
+                String aff = Bytes.toString(result.value());
+                System.out.println(aff);
+                return null;
+            }
+        });
     }
 
 }

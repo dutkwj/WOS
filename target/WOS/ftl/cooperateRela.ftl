@@ -575,12 +575,6 @@
         return _chart; // <-1E
     }
 
-    function randomData() {
-        return Math.random() * 9;
-    }
-
-
-
     var numberOfSeries = 1,
             numberOfDataPoint = 37,
             data = [];
@@ -589,17 +583,11 @@
             data.push(${yearCount.count!""});
         </#list>
     </#if>
-    var testList = [10,1, 20, 3,4,5,6];
     var j = 0;
     for (var i = 0; i < numberOfSeries; ++i)
         data.push(d3.range(j, numberOfDataPoint).map(function (i, j) {
             return {x: i, y: data[j]};
         }));
-//    data.push({x: 0, y: 1});
-//
-//    data.push({x: 0, y: 3});
-//    data.push({x: 0, y: 2});
-
 
     var chart = lineChart()
             .x(d3.scale.linear().domain([1980, 2017]))
@@ -608,10 +596,7 @@
     data.forEach(function (series) {
         chart.addSeries(series);
     });
-
     chart.render();
-
-
 </script>
 </body>
 
