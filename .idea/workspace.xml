@@ -7,6 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291e2776-134e-423c-b7f9-68e37a8618e2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/CollectionUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/JedisClusterFactory.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ListTranscoder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/lib/commons-pool2-2.4.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/lib/jedis-2.9.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/CollectionUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/JedisClusterFactory.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/ListTranscoder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/RedisTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Test$1.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/util/JedisClusterFactory.java" />
@@ -14,6 +26,10 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/redis/redis-config.properties" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/redis/spring-redis.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/test/RedisTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/redis/redis-config.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/redis/spring-redis.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/redis/redis-config.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/redis/spring-redis.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CooperateRelaController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CooperateRelaController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/IndexController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/ReferenceController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/ReferenceController.class" />
@@ -1791,7 +1807,7 @@
       <workItem from="1514698148331" duration="41751000" />
       <workItem from="1514968050679" duration="80185000" />
       <workItem from="1515573067930" duration="93560000" />
-      <workItem from="1516158381071" duration="11667000" />
+      <workItem from="1516158381071" duration="12016000" />
     </task>
     <servers />
   </component>
@@ -1828,7 +1844,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="611346000" />
+    <option name="totallyTimeSpent" value="611695000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
