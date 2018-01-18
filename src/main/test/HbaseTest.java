@@ -896,7 +896,7 @@ public class HbaseTest {
     @Test
     public void importTeacherStudentTest() {
         Map<String, String> teaStudentsMap = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/tea_stus/cs_teacher_students_2010.csv");  // CSV文件路径
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/tea_stu/cs_tea_stu.csv");  // CSV文件路径
         BufferedReader br = null;
         try
         {
