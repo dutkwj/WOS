@@ -13,6 +13,7 @@ public class ConfigurationConstant {
     public static final String QF_PAPER_IDS = "paper_ids";
     public static final String QF_LAT_LNG = "lat_lng";
     public static final String QF_H_INDEX = "h_index";
+    public static final String QF_FIELD_NAME = "field_name";
 
 
     //    cs_relationship, cooperate:(count, eve_year_count), co_team:(team_intension), teacher_student:(teacher, students)

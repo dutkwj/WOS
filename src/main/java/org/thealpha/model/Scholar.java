@@ -14,6 +14,15 @@ public class Scholar implements Serializable{
     private String latitude;
     private String longitude;
     private double hindex;
+    private String fieldName;
+
+    public String getFieldName() {
+        return fieldName;
+    }
+
+    public void setFieldName(String fieldName) {
+        this.fieldName = fieldName;
+    }
 
     public double getHindex() {
         return hindex;

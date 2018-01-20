@@ -38,6 +38,9 @@ public class HbaseTest {
     @Autowired
     private HbaseTemplate hbaseTemplate;
 
+    @Autowired
+    private JedisCluster jedisCluster;
+
     @Test
     public void test() {
         // 加载Spring配置文件
@@ -849,6 +852,8 @@ public class HbaseTest {
                 String latlng = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_LAT_LNG)));
                 String aff = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_AFF)));
                 String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
+                String fieldName = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_FIELD_NAME)));
+
                 if (StringUtils.isNotBlank(latlng)) {
                     scholar.setLatlng(latlng);
                 }
@@ -857,6 +862,9 @@ public class HbaseTest {
                 }
                 if (StringUtils.isNotBlank(hindex)) {
                     scholar.setHindex(Double.parseDouble(hindex));
+                }
+                if (StringUtils.isNotBlank(fieldName)) {
+                    scholar.setFieldName(fieldName);
                 }
                 return scholar;
             }
@@ -879,7 +887,7 @@ public class HbaseTest {
         for (int i = 0; i < 10; i++) {
             top10Scholars.add(scholars.get(i));
         }
-//        jedisCluster.set(ConfigurationConstant.REDIS_TOP10_SCHOLARS.getBytes(), ListTranscoder.serialize(top10Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_TOP10_SCHOLARS.getBytes(), ListTranscoder.serialize(top10Scholars));
     }
 
     @Test
@@ -996,6 +1004,65 @@ public class HbaseTest {
         try {
             connection = ConnectionFactory.createConnection(conf);
             table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void importPersonalTagsTest() {
+        Map<String, String> authorField = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/tags/cs_authorid_fieldname_top5refed.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+//                count += 1;
+//                if (count > 10) {
+//                    return;
+//                }
+
+                String[] lines = line.split(",");
+//                System.out.println(line);
+
+                authorField.put(lines[0], lines[1]);
+//                if (lines[0].equals("0DE9F497")) {
+//                    System.out.println(lines);
+//                    return;
+//                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(authorField.size());
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : authorField.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String fieldName = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_FIELD_NAME), Bytes.toBytes(fieldName));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_SCHOLAR));
             table.put(puts);
         } catch (IOException e) {
             e.printStackTrace();

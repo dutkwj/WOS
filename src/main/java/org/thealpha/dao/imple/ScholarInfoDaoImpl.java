@@ -149,6 +149,7 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 String aff = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_AFF)));
                 String latlng = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_LAT_LNG)));
                 String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
+                String fieldName = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_FIELD_NAME)));
                 scholar.setIndex(scholarId);
                 scholar.setName(name);
                 scholar.setAff(aff);
@@ -159,6 +160,9 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 }
                 if (StringUtils.isNotBlank(hindex)) {
                     scholar.setHindex(Double.parseDouble(hindex));
+                }
+                if (StringUtils.isNotBlank(fieldName)) {
+                    scholar.setFieldName(fieldName);
                 }
                 return scholar;
             }

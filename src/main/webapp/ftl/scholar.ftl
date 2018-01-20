@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="${path}/css/hero-slider-style.css">                                  <!-- Hero slider style -->
     <link rel="stylesheet" href="${path}/css/templatemo-style.css">                                   <!-- Templatemo style -->
 
+    <link rel="stylesheet" href="../Font_Awesome/css/font-awesome.min.css" type="text/css">
 
     <link rel="stylesheet" href="${path}/css/bootstrap.min.css" type="text/css">
     <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
@@ -82,12 +83,12 @@
         </div>
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
             <div class="tm-media-text-container">
-                <h3 class="tm-media-title tm-gray-text"><span id="middleScholarName">${middleScholar.name}</span></h3>
+                <h3 class="tm-media-title tm-gray-text"><span id="middleScholarName">${middleScholar.name!""}</span></h3>
                 <input type="hidden" id="middleScholarIndex" value="${middleScholar.index}"/>
-                <p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218 <br />
-                    <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br />
-                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true" id="middleScholarAff">${middleScholar.aff}</span> <br />
-                    <abbr title="Phone"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 123456</address></p>
+                <p class="tm-media-description tm-gray-text-2">h-index:${middleScholar.hindex!""} | #Paper:662 | #Citation:93218 <br />
+                    <#--<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br />-->
+                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true" id="middleScholarAff"></span>&nbsp; ${middleScholar.aff!""} <br />
+                    <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp; ${middleScholar.fieldName!""}</address></p>
             </div>
         </div>
     </div>

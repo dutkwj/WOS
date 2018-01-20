@@ -57,9 +57,12 @@ public class RedisTest {
 //        scholars.add(s2);
 //        scholars.add(s3);
 //        jedisCluster.set("testList".getBytes(), ListTranscoder.serialize(scholars));
+//        for (Scholar scholar : scholars) {
+//            System.out.println(scholar.getHindex());
+//        }
 
         //验证
-        byte[] in = jedisCluster.get(ConfigurationConstant.REDIS_TOP10_SCHOLARS.getBytes());
+        byte[] in = jedisCluster.get("testList".getBytes());
         List<Scholar> list = (List<Scholar>)ListTranscoder.deserialize(in);
         for(Scholar scholar : list){
             System.out.println("testSetEnsemble scholar hindex is:" + scholar.getHindex());

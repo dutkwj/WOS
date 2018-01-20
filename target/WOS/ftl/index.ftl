@@ -127,13 +127,17 @@
                 ,layer = layui.layer;
 
         var name = [];
+        var hindex = [];
         var aff = [];
         var id = [];
+        var fieldName = [];
         <#if scholars?? && (scholars?size>0)>
             <#list scholars as scholar>
                 id.push("${scholar.index!""}");
                 name.push("${scholar.name!""}");
+                hindex.push("${scholar.hindex!""}");
                 aff.push("${scholar.aff!""}");
+                fieldName.push("${scholar.fieldName!""}");
             </#list>
         </#if>
 
@@ -150,9 +154,13 @@
                     var subId = id.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     var subName = name.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     var subAff = aff.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                    var subFieldName = fieldName.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                    var subHindex = hindex.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     thisData.push(subId);
                     thisData.push(subName);
+                    thisData.push(subHindex);
                     thisData.push(subAff);
+                    thisData.push(subFieldName);
                     layui.each(subId, function(index, item){
 //                        arr.push('<li>'+ item +'</li>');
                         arr.push('<div class="layui-col-md2">' +
@@ -165,11 +173,10 @@
                                         '<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">' +
                                              '<div class="tm-media-text-container">' +
                                             '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/scholar/baseInfo?authorId=' + thisData[0][index] + '">' + thisData[1][index] + '</a> </h3>' +
-                                            '<p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218' +
+                                            '<p class="tm-media-description tm-gray-text-2">h-index:' + thisData[2][index] + ' | #Paper:662 | #Citation:93218' +
                                             '<br/>' +
-                                            '<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br/>' +
-                                            '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>' + thisData[2][index] + '<br/>' +
-                                            '<abbr title="Phone"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 123456</address></p>' +
+                                            '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;' + thisData[3][index] + '<br/>' +
+                                            '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;' + thisData[4][index] + '</p>' +
                                             '</div>' +
                                         '</div>' +
                                     '</div>' +
