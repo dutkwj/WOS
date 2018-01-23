@@ -9,9 +9,14 @@
     <list default="true" id="291e2776-134e-423c-b7f9-68e37a8618e2" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/wos.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/wos_index.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/img/w1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/img/wo.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/stickUp.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/stickUp.min.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/img/WOS.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$8.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$6.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$5.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$7.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$6.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$8.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/TuringController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/TuringController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" />
@@ -22,9 +27,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/SearchItem.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/SearchItem.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$3.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$4.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$5.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$6.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$7.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/TuringController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/TuringController.java" />
@@ -66,7 +68,7 @@
       <file leaf-file-name="searchMore.ftl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="300">
               <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
               <folding>
                 <marker date="1516715656319" expanded="true" signature="8897:8931" ph="..." />
@@ -1513,7 +1515,7 @@
       <workItem from="1514968050679" duration="80185000" />
       <workItem from="1515573067930" duration="93560000" />
       <workItem from="1516158381071" duration="23480000" />
-      <workItem from="1516261347252" duration="76460000" />
+      <workItem from="1516261347252" duration="76487000" />
     </task>
     <servers />
   </component>
@@ -1550,7 +1552,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="699619000" />
+    <option name="totallyTimeSpent" value="699646000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2093,7 +2095,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="300">
           <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
           <folding>
             <marker date="1516715656319" expanded="true" signature="8897:8931" ph="..." />
