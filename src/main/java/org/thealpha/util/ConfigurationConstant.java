@@ -4,7 +4,7 @@ package org.thealpha.util;
  * Created by kangwenjie on 17-12-14.
  */
 public class ConfigurationConstant {
-//    cs_scholar, personal_info:(name, aff, lat_lng, h_index), papers:(paper_ids)
+//    cs_scholar, personal_info:(name, aff, lat_lng, h_index, field_name, cooperate_number, co_team_number, students_number, ref_number, refed_number, co_ref_number, co_refed_number), papers:(paper_ids)
     public static final String TABLE_CS_SCHOLAR = "cs_scholar";
     public static final String CF_PERSONAL_INFO = "personal_info";
     public static final String CF_PAPERS = "papers";
@@ -14,6 +14,14 @@ public class ConfigurationConstant {
     public static final String QF_LAT_LNG = "lat_lng";
     public static final String QF_H_INDEX = "h_index";
     public static final String QF_FIELD_NAME = "field_name";
+    public static final String QF_COOPERATE_NUMBER = "cooperate_number";
+    public static final String QF_CO_TEAM_NUMBER = "co_team_number";
+    public static final String QF_STUDENTS_NUMBER = "students_number";
+    public static final String QF_REF_NUMBER = "ref_number";
+    public static final String QF_REFED_NUMBER = "refed_number";
+    public static final String QF_CO_REF_NUMBER = "co_ref_number";
+    public static final String QF_CO_REFED_NUMBER = "co_refed_number";
+
 
 
     //    cs_relationship, cooperate:(count, eve_year_count), co_team:(team_intension), teacher_student:(teacher, students)
@@ -63,5 +71,12 @@ public class ConfigurationConstant {
     public static final String REDIS_ALL_SCHOLARS = "redis_all_scholars";
     public static final String REDIS_TOP10_SCHOLARS = "redis_top10_scholars";
 
+    public static final String REDIS_COOPERATE_NUMBER_TOP100_SCHOLARS = "redis_cooperate_number_top100_scholars";
+    public static final String REDIS_CO_TEAM_NUMBER_TOP100_SCHOLARS = "redis_co_team_number_top100_scholars";
+    public static final String REDIS_STUDENTS_NUMBER_TOP100_SCHOLARS = "redis_students_number_top100_scholars";
+    public static final String REDIS_REF_NUMBER_TOP100_SCHOLARS = "redis_ref_number_top100_scholars";
+    public static final String REDIS_REFED_NUMBER_TOP100_SCHOLARS = "redis_refed_number_top100_scholars";
+    public static final String REDIS_CO_REF_NUMBER_TOP100_SCHOLARS = "redis_co_ref_number_top100_scholars";
+    public static final String REDIS_CO_REFED_NUMBER_TOP100_SCHOLARS = "redis_co_refed_number_top100_scholars";
 
 }

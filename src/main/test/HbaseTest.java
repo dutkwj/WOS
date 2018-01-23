@@ -1069,4 +1069,117 @@ public class HbaseTest {
         }
     }
 
+    @Test
+    public void importStatisticalTest() {
+        Map<String, String> map = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/statistical/cs_authorid_corefednumber.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+//                count += 1;
+//                if (count > 10) {
+//                    return;
+//                }
+
+                String[] lines = line.split(",");
+//                System.out.println(line);
+
+                map.put(lines[0], lines[1]);
+//                if (lines[0].equals("0DE9F497")) {
+//                    System.out.println(lines);
+//                    return;
+//                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(map.size());
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : map.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String value = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_NUMBER), Bytes.toBytes(value));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_SCHOLAR));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void setStatisticalTest() {
+
+        List<Scholar> scholars = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
+            public Scholar mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
+                Scholar scholar = new Scholar();
+                scholar.setIndex(Bytes.toString(result.getRow()));
+                scholar.setName(Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_NAME))));
+                String latlng = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_LAT_LNG)));
+                String aff = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_AFF)));
+                String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
+                String fieldName = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_FIELD_NAME)));
+                String cooperateNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_STUDENTS_NUMBER)));
+
+
+                if (StringUtils.isNotBlank(latlng)) {
+                    scholar.setLatlng(latlng);
+                }
+                if (StringUtils.isNotBlank(aff)) {
+                    scholar.setAff(aff);
+                }
+                if (StringUtils.isNotBlank(hindex)) {
+                    scholar.setHindex(Double.parseDouble(hindex));
+                }
+                if (StringUtils.isNotBlank(fieldName)) {
+                    scholar.setFieldName(fieldName);
+                }
+                if (StringUtils.isNotBlank(cooperateNumber)) {
+                    scholar.setStudentsNumber(Integer.parseInt(cooperateNumber));
+                }
+                return scholar;
+            }
+        });
+        System.out.println(scholars.size());
+        Collections.sort(scholars, new Comparator<Scholar>() {
+            public int compare(Scholar o1, Scholar o2) {
+                if (o1.getStudentsNumber() > o2.getStudentsNumber()) {
+                    return -1;
+                }
+                if (o1.getStudentsNumber() < o2.getStudentsNumber()) {
+                    return 1;
+                }
+                return 0;
+            }
+        });
+//        jedisCluster.set(ConfigurationConstant.REDIS_ALL_SCHOLARS.getBytes(), ListTranscoder.serialize(scholars));
+
+        List<Scholar> top100Scholars = new ArrayList<Scholar>();
+        for (int i = 0; i < 100; i++) {
+            top100Scholars.add(scholars.get(i));
+        }
+        jedisCluster.set(ConfigurationConstant.REDIS_STUDENTS_NUMBER_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+    }
+
 }

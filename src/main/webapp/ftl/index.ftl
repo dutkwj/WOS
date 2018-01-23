@@ -98,6 +98,7 @@
                         </#if>
 
                         <li><a href="/searchMore/index">search more scholar</a></li>
+                        <li><a href="/searchMore/index">statistical rankings</a></li>
                     </ul>
                 </div>
             </div>
