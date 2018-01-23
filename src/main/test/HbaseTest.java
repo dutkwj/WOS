@@ -318,7 +318,7 @@ public class HbaseTest {
     @Test
     public void importAuthorIdAff() {
         HashMap<String, String> authorIdAff = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_id_aff.csv");  // CSV文件路径
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_id_aff2.csv");  // CSV文件路径
         BufferedReader br = null;
         try
         {
@@ -328,14 +328,9 @@ public class HbaseTest {
             e.printStackTrace();
         }
         String line = "";
-        int count = 0;
         try {
             while ((line = br.readLine()) != null)
             {
-                count += 1;
-                if (count <= 11) {
-                    continue;
-                }
                 line.substring(0, line.indexOf(","));
                 String authorId = line.substring(0, line.indexOf(",")).replace("\n", "");
                 String aff = line.substring(line.indexOf(",") + 1).replaceAll("\"", "");
@@ -343,13 +338,12 @@ public class HbaseTest {
                     authorIdAff.put(authorId, aff);
 
                 }
-                System.out.println(count);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-
+        System.out.println(authorIdAff.size());
         Connection connection = null;
         Table table = null;
         Configuration conf = HBaseConfiguration.create();
@@ -869,25 +863,55 @@ public class HbaseTest {
                 return scholar;
             }
         });
-        System.out.println(scholars.size());
-        Collections.sort(scholars, new Comparator<Scholar>() {
-            public int compare(Scholar o1, Scholar o2) {
-                if (o1.getHindex() > o2.getHindex()) {
-                    return -1;
-                }
-                if (o1.getHindex() < o2.getHindex()) {
-                    return 1;
-                }
-                return 0;
+//        System.out.println(scholars.size());
+//        Collections.sort(scholars, new Comparator<Scholar>() {
+//            public int compare(Scholar o1, Scholar o2) {
+//                if (o1.getHindex() > o2.getHindex()) {
+//                    return -1;
+//                }
+//                if (o1.getHindex() < o2.getHindex()) {
+//                    return 1;
+//                }
+//                return 0;
+//            }
+//        });
+        List<Scholar> hindex0_2 = new LinkedList<Scholar>();
+        List<Scholar> hindex2_5 = new LinkedList<Scholar>();
+        List<Scholar> hindex5_10 = new LinkedList<Scholar>();
+        List<Scholar> hindex10_20 = new LinkedList<Scholar>();
+        List<Scholar> hindex20_50 = new LinkedList<Scholar>();
+        List<Scholar> hindex50_100 = new LinkedList<Scholar>();
+        for (Scholar scholar : scholars) {
+            double hindex = scholar.getHindex();
+            if (hindex < 2) {
+                hindex0_2.add(scholar);
+            } else if (hindex < 5) {
+                hindex2_5.add(scholar);
+            } else if (hindex < 10) {
+                hindex5_10.add(scholar);
+            } else if (hindex < 20) {
+                hindex10_20.add(scholar);
+            } else if (hindex < 50) {
+                hindex20_50.add(scholar);
+            } else {
+                hindex50_100.add(scholar);
             }
-        });
+        }
+        System.out.println(hindex0_2.size());
+        System.out.println(hindex2_5.size());
+        System.out.println(hindex5_10.size());
+        System.out.println(hindex10_20.size());
+        System.out.println(hindex20_50.size());
+        System.out.println(hindex50_100.size());
+
+
 //        jedisCluster.set(ConfigurationConstant.REDIS_ALL_SCHOLARS.getBytes(), ListTranscoder.serialize(scholars));
 
-        List<Scholar> top10Scholars = new ArrayList<Scholar>();
-        for (int i = 0; i < 10; i++) {
-            top10Scholars.add(scholars.get(i));
-        }
-        jedisCluster.set(ConfigurationConstant.REDIS_TOP10_SCHOLARS.getBytes(), ListTranscoder.serialize(top10Scholars));
+//        List<Scholar> top10Scholars = new ArrayList<Scholar>();
+//        for (int i = 0; i < 10; i++) {
+//            top10Scholars.add(scholars.get(i));
+//        }
+//        jedisCluster.set(ConfigurationConstant.REDIS_TOP10_SCHOLARS.getBytes(), ListTranscoder.serialize(top10Scholars));
     }
 
     @Test
@@ -1140,7 +1164,7 @@ public class HbaseTest {
                 String aff = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_AFF)));
                 String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
                 String fieldName = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_FIELD_NAME)));
-                String cooperateNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_STUDENTS_NUMBER)));
+                String cooperateNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_NUMBER)));
 
 
                 if (StringUtils.isNotBlank(latlng)) {
@@ -1156,7 +1180,7 @@ public class HbaseTest {
                     scholar.setFieldName(fieldName);
                 }
                 if (StringUtils.isNotBlank(cooperateNumber)) {
-                    scholar.setStudentsNumber(Integer.parseInt(cooperateNumber));
+                    scholar.setCoRefedNumber(Integer.parseInt(cooperateNumber));
                 }
                 return scholar;
             }
@@ -1164,10 +1188,10 @@ public class HbaseTest {
         System.out.println(scholars.size());
         Collections.sort(scholars, new Comparator<Scholar>() {
             public int compare(Scholar o1, Scholar o2) {
-                if (o1.getStudentsNumber() > o2.getStudentsNumber()) {
+                if (o1.getCoRefedNumber() > o2.getCoRefedNumber()) {
                     return -1;
                 }
-                if (o1.getStudentsNumber() < o2.getStudentsNumber()) {
+                if (o1.getCoRefedNumber() < o2.getCoRefedNumber()) {
                     return 1;
                 }
                 return 0;
@@ -1179,7 +1203,7 @@ public class HbaseTest {
         for (int i = 0; i < 100; i++) {
             top100Scholars.add(scholars.get(i));
         }
-        jedisCluster.set(ConfigurationConstant.REDIS_STUDENTS_NUMBER_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_CO_REFED_NUMBER_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
     }
 
 }

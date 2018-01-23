@@ -8,6 +8,6 @@ import org.springframework.ui.Model;
 public class TuringController {
     @RequestMapping("/Turing")
     public String helloWorld(Model model){
-        return "Turing";
+        return "Test";
     }
 }

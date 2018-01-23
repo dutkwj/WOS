@@ -6,6 +6,24 @@ package org.thealpha.model;
 public class SearchItem {
     private String scholarName;
     private String affName;
+    private String qindex;
+    private String hindex;
+
+    public String getQindex() {
+        return qindex;
+    }
+
+    public void setQindex(String qindex) {
+        this.qindex = qindex;
+    }
+
+    public String getHindex() {
+        return hindex;
+    }
+
+    public void setHindex(String hindex) {
+        this.hindex = hindex;
+    }
 
     public String getScholarName() {
         return scholarName;

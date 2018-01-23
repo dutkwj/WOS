@@ -7,60 +7,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../css/layui.css" type="text/css" media="all">
-
-    <!-- Hero slider style -->
     <link rel="stylesheet" href="../css/templatemo-style.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
-
-    <!-- Templatemo style -->
-    <#--<script type="text/javascript" src="../js/bootstrap.min.js"></script>-->
-    <#--<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>-->
-
-    <#--<script src="../js/layui.js" charset="utf-8"></script>-->
-    <script type="text/javascript" src="../js/layui.all.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="../css/stickup.css" type="text/css">
 
 </head>
 <body>
-<ul class="layui-nav">
-    <li class="layui-nav-item"><a href="">合作关系</a></li>
-    <li class="layui-nav-item"><a href="">师生关系</a></li>
-    <li class="layui-nav-item"><a href="">引用关系</a></li>
-</ul>
-<ul class="layui-nav layui-layout-right">
-<#if Session.user?exists>
-    <li class="layui-nav-item">
-        <a href="javascript:;">
-            <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-        ${Session['user'].name!""}
-        </a>
-        <dl class="layui-nav-child">
-            <dd><a href="">base information</a></dd>
-            <dd><a href="">modify information</a></dd>
-        </dl>
-    </li>
-    <li class="layui-nav-item"><a href="/logout">logout</a></li>
-<#else>
-    <li class="layui-nav-item"><a href="/login/index">login</a></li>
-    <li class="layui-nav-item"><a href="/register/index">register</a></li>
-</#if>
-</ul>
-
-
+<div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
+    <ul class="layui-nav">
+        <a href="/index"><img src="../img/w1.png" alt="" style="height: 60px"/></a>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+    <#if Session.user?exists>
+        <li class="layui-nav-item">
+            <a href="javascript:;">
+                <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+            ${Session['user'].name!""}
+            </a>
+            <dl class="layui-nav-child">
+                <dd><a href="">base information</a></dd>
+                <dd><a href="">modify information</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="/logout">logout</a></li>
+    <#else>
+        <li class="layui-nav-item"><a href="/login/index">login</a></li>
+        <li class="layui-nav-item"><a href="/register/index">register</a></li>
+    </#if>
+    </ul>
+</div>
 
 <script type="text/javascript" src="../js/layui.all.js" charset="utf-8"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/stickUp.min.js"></script>
 
-<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 <script type="text/javascript">
     layui.use('element', function () {
-        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
-
-        //监听导航点击
+        var element = layui.element;
         element.on('nav(demo)', function (elem) {
             //console.log(elem)
             layer.msg(elem.text());
         });
     });
+    jQuery(function($) {
+        $(document).ready( function() {
+            $('.topNav').stickUp();
+        });
+    });
 </script>
+<br/>
+<br/>
 
 <div class="layui-container">
 
@@ -84,44 +81,47 @@
         </div>
 
 
-        <div class="layui-form-item">
-            <div class="layui-inline">
-                <label class="layui-form-label">nation</label>
-                <div class="layui-input-inline">
-                    <select name="modules" lay-search="">
-                        <option value="">China</option>
-                        <option value="1">layer</option>
-                        <option value="2">form</option>
-                        <option value="3">layim</option>
-                        <option value="4">element</option>
-                        <option value="5">laytpl</option>
-                        <option value="6">upload</option>
-                        <option value="7">laydate</option>
-                        <option value="8">laypage</option>
-                        <option value="9">flow</option>
-                        <option value="10">util</option>
-                        <option value="11">code</option>
-                        <option value="12">tree</option>
-                        <option value="13">layedit</option>
-                        <option value="14">nav</option>
-                        <option value="15">tab</option>
-                        <option value="16">table</option>
-                        <option value="17">select</option>
-                        <option value="18">checkbox</option>
-                        <option value="19">switch</option>
-                        <option value="20">radio</option>
-                    </select>
-                </div>
-            </div>
-        </div>
+        <#--<div class="layui-form-item">-->
+            <#--<div class="layui-inline">-->
+                <#--<label class="layui-form-label">nation</label>-->
+                <#--<div class="layui-input-inline">-->
+                    <#--<select name="modules" lay-search="">-->
+                        <#--<option value="">China</option>-->
+                        <#--<option value="1">layer</option>-->
+                        <#--<option value="2">form</option>-->
+                        <#--<option value="3">layim</option>-->
+                        <#--<option value="4">element</option>-->
+                        <#--<option value="5">laytpl</option>-->
+                        <#--<option value="6">upload</option>-->
+                        <#--<option value="7">laydate</option>-->
+                        <#--<option value="8">laypage</option>-->
+                        <#--<option value="9">flow</option>-->
+                        <#--<option value="10">util</option>-->
+                        <#--<option value="11">code</option>-->
+                        <#--<option value="12">tree</option>-->
+                        <#--<option value="13">layedit</option>-->
+                        <#--<option value="14">nav</option>-->
+                        <#--<option value="15">tab</option>-->
+                        <#--<option value="16">table</option>-->
+                        <#--<option value="17">select</option>-->
+                        <#--<option value="18">checkbox</option>-->
+                        <#--<option value="19">switch</option>-->
+                        <#--<option value="20">radio</option>-->
+                    <#--</select>-->
+                <#--</div>-->
+            <#--</div>-->
+        <#--</div>-->
 
         <div class="layui-form-item">
             <label class="layui-form-label">q-index</label>
             <div class="layui-input-inline">
-                <select name="quiz1">
-                    <option value="浙江">浙江省</option>
-                    <option value="你的工号">江西省</option>
-                    <option value="你最喜欢的老师">福建省</option>
+                <select name="qindex">
+                    <option value="0-5">[0-5)</option>
+                    <option value="5-10">[5-10)</option>
+                    <option value="10-20">[10-20)</option>
+                    <option value="20-30">[20-30)</option>
+                    <option value="30-50">[30-50)</option>
+                    <option value="50-1000">[50-)</option>
                 </select>
             </div>
             <#--<div class="layui-form-mid layui-word-aux">此处只是演示联动排版，并未做联动交互</div>-->
@@ -130,10 +130,14 @@
         <div class="layui-form-item">
             <label class="layui-form-label">h-index</label>
             <div class="layui-input-inline">
-                <select name="quiz1">
-                    <option value="浙江">浙江省</option>
-                    <option value="你的工号">江西省</option>
-                    <option value="你最喜欢的老师">福建省</option>
+                <select name="hindex">
+                    <option value="0-5">[0-5)</option>
+                    <option value="5-10">[5-10)</option>
+                    <option value="10-20">[10-20)</option>
+                    <option value="20-30">[20-30)</option>
+                    <option value="30-50">[30-50)</option>
+                    <option value="50-1000">[50-)</option>
+
                 </select>
             </div>
         </div>
@@ -177,13 +181,17 @@
                 ,layer = layui.layer;
 
         var name = [];
+        var hindex = [];
         var aff = [];
+        var fieldName = [];
         var id = [];
     <#if scholars?? && (scholars?size>0)>
         <#list scholars as scholar>
             id.push("${scholar.index!""}");
             name.push("${scholar.name!""}");
+            hindex.push("${scholar.hindex!""}");
             aff.push("${scholar.aff!""}");
+            fieldName.push("${scholar.fieldName!""}");
         </#list>
     </#if>
 
@@ -199,10 +207,16 @@
                     var thisData = [];
                     var subId = id.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     var subName = name.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                    var subHindex = hindex.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     var subAff = aff.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                    var subFieldName = fieldName.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+
                     thisData.push(subId);
                     thisData.push(subName);
+                    thisData.push(subHindex);
                     thisData.push(subAff);
+                    thisData.push(subFieldName);
+
                     layui.each(subId, function(index, item){
 //                        arr.push('<li>'+ item +'</li>');
                         arr.push('<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;border-width: 1px">' +
@@ -215,12 +229,10 @@
                                         '<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">' +
                                             '<div class="tm-media-text-container">' +
                                                 '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/scholar/baseInfo?authorId=' + thisData[0][index] + '">' + thisData[1][index] + '</a></h3>' +
-                                                '<p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218' +
+                                                '<p class="tm-media-description tm-gray-text-2">Q-index:131 | H-index:' + thisData[2][index] +
                                                 '<br/>' +
-                                                '<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br/>' +
-                                                '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>' + thisData[2][index] + '<br/>' +
-                                                '<abbr title="Phone"><span class="glyphicon glyphicon-earphone"' +
-                                                'aria-hidden="true"></span> 123456</address></p>' +
+                                                '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ' + thisData[3][index] + '<br/>' +
+                                                '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study Field: ' + thisData[4][index] + '</p>' +
                                             '</div>' +
                                         '</div>' +
                                     '</div>' +

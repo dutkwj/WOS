@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>基于jQuery和CSS3超酷Material Design风格滑动菜单导航特效|DEMO_爱编程w2bc.com</title>
+    <title>statistical rankings</title>
     <link rel="stylesheet" href="../css/layui.css" type="text/css">
     <link rel="stylesheet" href="../css/templatemo-style.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
@@ -40,78 +40,82 @@
     </style>
 </head>
 <body>
-<div class="topNav" style="z-index: 15;margin: 0;padding: 0">
-    <ul class="layui-nav" style="margin: 0;padding: 0">
-        <li class="layui-nav-item" style="left: 89%"><a href="/login/index">login</a></li>
-        <li class="layui-nav-item" style="left: 90%"><a href="/register/index">register</a></li>
+<div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
+    <ul class="layui-nav" style="margin: 0;">
+        <a href="/index"><img src="../img/w1.png" alt="" style="height: 60px"/></a>
     </ul>
-    <#--<ul class="layui-nav layui-layout-right">-->
-    <#--<#if Session.user?exists>-->
-        <#--<li class="layui-nav-item">-->
-            <#--<a href="javascript:;">-->
-                <#--<img src="http://t.cn/RCzsdCq" class="layui-nav-img">-->
-            <#--${Session['user'].name!""}-->
-            <#--</a>-->
-            <#--<dl class="layui-nav-child">-->
-                <#--<dd><a href="">base information</a></dd>-->
-                <#--<dd><a href="">modify information</a></dd>-->
-            <#--</dl>-->
-        <#--</li>-->
-        <#--<li class="layui-nav-item"><a href="/logout">logout</a></li>-->
-    <#--<#else>-->
-        <#--<li class="layui-nav-item"><a href="/login/index">login</a></li>-->
-        <#--<li class="layui-nav-item"><a href="/register/index">register</a></li>-->
-    <#--</#if>-->
-    <#--</ul>-->
-    <!-- START THE NAVBAR -->
-    <div style="height: 80px;background: white;z-index: 15;margin: 0;padding: 0"></div>
-    <#--<div class="navbar-wrapper" style="z-index: 15;margin: 0">-->
-        <div class="navwrapper" style="margin-left:8%;">
-                <div class="navbar navbar-inverse navbar-static-top" style="width: 1550px;">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" style="font-size: 20px">rank items</a>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="menuItem active" style="font-size: 17px"><a href="#">cooperator number<span class="glyphicon glyphicon-arrow-down"></span></a></li>
-                            <li class="menuItem" style="font-size: 17px"><a href="#">team members<span class="glyphicon glyphicon-arrow-down"></span></a></li>
-                            <li class="menuItem" style="font-size: 17px"><a href="#">students number<span class="glyphicon glyphicon-arrow-down"></span></a></li>
-                            <li class="menuItem" style="font-size: 17px"><a href="#">reference number<span class="glyphicon glyphicon-arrow-down"></span></a></li>
-                            <li class="menuItem" style="font-size: 17px"><a href="#">referenced number<span class="glyphicon glyphicon-arrow-down"></span></a></li>
-                            <li class="menuItem" style="font-size: 17px"><a href="#">common reference number<span class="glyphicon glyphicon-arrow-down"></span></a></li>
-                            <li class="menuItem" style="font-size: 17px"><a href="#">common referenced number<span class="glyphicon glyphicon-arrow-down"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-        </div><!-- End Navbar -->
-    <#--</div> <!-- END NAVBAR &ndash;&gt;-->
+    <ul class="layui-nav layui-layout-right">
+    <#if Session.user?exists>
+        <li class="layui-nav-item">
+            <a href="javascript:;">
+                <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+            ${Session['user'].name!""}
+            </a>
+            <dl class="layui-nav-child">
+                <dd><a href="">base information</a></dd>
+                <dd><a href="">modify information</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="/logout">logout</a></li>
+    <#else>
+        <li class="layui-nav-item"><a href="/login/index">login</a></li>
+        <li class="layui-nav-item"><a href="/register/index">register</a></li>
+    </#if>
+    </ul>
+
+    <div style="height: 70px;background: white;z-index: 15;margin: 0;padding: 0"></div>
+<#--<div class="navbar-wrapper" style="z-index: 15;margin: 0">-->
+    <div class="navwrapper" style="margin-left:8%;">
+        <div class="navbar navbar-inverse navbar-static-top" style="width: 1550px;">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="font-size: 20px">rank items</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="menuItem active" style="font-size: 17px"><a href="#">cooperator number<span class="glyphicon glyphicon-arrow-down"></span></a></li>
+                    <li class="menuItem" style="font-size: 17px"><a href="#">team members<span class="glyphicon glyphicon-arrow-down"></span></a></li>
+                    <li class="menuItem" style="font-size: 17px"><a href="#">students number<span class="glyphicon glyphicon-arrow-down"></span></a></li>
+                    <li class="menuItem" style="font-size: 17px"><a href="#">reference number<span class="glyphicon glyphicon-arrow-down"></span></a></li>
+                    <li class="menuItem" style="font-size: 17px"><a href="#">referenced number<span class="glyphicon glyphicon-arrow-down"></span></a></li>
+                    <li class="menuItem" style="font-size: 17px"><a href="#">common reference number<span class="glyphicon glyphicon-arrow-down"></span></a></li>
+                    <li class="menuItem" style="font-size: 17px"><a href="#">common referenced number<span class="glyphicon glyphicon-arrow-down"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 
-
-
-
-<script src="../js/jquery.min.js"></script>
-<script src="../js/jquery.pin.js"></script>
-<script>
-    $(".topNav").pin();
-</script>
-
 <script type="text/javascript" src="../js/layui.all.js" charset="utf-8"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/stickUp.min.js"></script>
+
 <script type="text/javascript">
     layui.use('element', function () {
         var element = layui.element;
         element.on('nav(demo)', function (elem) {
+            //console.log(elem)
             layer.msg(elem.text());
+        });
+    });
+    jQuery(function($) {
+        $(document).ready( function() {
+            $('.topNav').stickUp();
         });
     });
 </script>
 
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <br/>
 <br/>
 

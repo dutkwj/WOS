@@ -19,29 +19,29 @@
 
 </head>
 <body>
-<ul class="layui-nav">
-    <li class="layui-nav-item"><a href="">合作关系</a></li>
-    <li class="layui-nav-item"><a href="">师生关系</a></li>
-    <li class="layui-nav-item"><a href="">引用关系</a></li>
-</ul>
-<ul class="layui-nav layui-layout-right">
-<#if Session.user?exists>
-    <li class="layui-nav-item">
-        <a href="javascript:;">
-            <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-        ${Session['user'].name!""}
-        </a>
-        <dl class="layui-nav-child">
-            <dd><a href="">base information</a></dd>
-            <dd><a href="">modify information</a></dd>
-        </dl>
-    </li>
-    <li class="layui-nav-item"><a href="/logout">logout</a></li>
-<#else>
-    <li class="layui-nav-item"><a href="/login/index">login</a></li>
-    <li class="layui-nav-item"><a href="/register/index">register</a></li>
-</#if>
-</ul>
+<div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
+    <ul class="layui-nav">
+        <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+    <#if Session.user?exists>
+        <li class="layui-nav-item">
+            <a href="javascript:;">
+                <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+            ${Session['user'].name!""}
+            </a>
+            <dl class="layui-nav-child">
+                <dd><a href="">base information</a></dd>
+                <dd><a href="">modify information</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="/logout">logout</a></li>
+    <#else>
+        <li class="layui-nav-item"><a href="/login/index">login</a></li>
+        <li class="layui-nav-item"><a href="/register/index">register</a></li>
+    </#if>
+    </ul>
+</div>
 <script type="text/javascript" src="../layui/layui.all.js" charset="utf-8"></script>
 <script type="text/javascript">
     layui.use('element', function () {

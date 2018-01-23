@@ -22,6 +22,8 @@ import org.thealpha.model.Scholar;
 import org.thealpha.model.SearchItem;
 import org.thealpha.util.ConfigurationConstant;
 import org.thealpha.util.HbaseUtils;
+import org.thealpha.util.ListTranscoder;
+import redis.clients.jedis.JedisCluster;
 
 import java.io.IOException;
 import java.util.*;
@@ -34,6 +36,9 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
 
     @Autowired
     private HbaseTemplate hbaseTemplate;
+
+    @Autowired
+    private JedisCluster jedisCluster;
 
     public List<String> getRecommendScholars() {
         List<String> recommendScholars = new ArrayList<String>();
@@ -124,6 +129,10 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                         if (StringUtils.isNotBlank(value)) {
                             scholar.setHindex(Double.parseDouble(value));
                         }
+                    } else if (ConfigurationConstant.QF_FIELD_NAME.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setFieldName(value);
+                        }
                     }
                 }
                 scholarList.add(scholar);
@@ -194,6 +203,27 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 scholarAffIndex.add(Bytes.toString(result.getRow()));
             }
         }
+
+//        Set<String> scholarHindex = null;
+//        if (StringUtils.isNotBlank(searchItem.getHindex())) {
+//            scholarHindex= new HashSet<String>();
+//            String[] hindexs = searchItem.getHindex().split("-");
+//            double lowHindex = Double.parseDouble(hindexs[0]);
+//            double highHindex = Double.parseDouble(hindexs[1]);
+//            byte[] in = jedisCluster.get(ConfigurationConstant.REDIS_ALL_SCHOLARS.getBytes());
+//            List<Scholar> allScholars = (List<Scholar>) ListTranscoder.deserialize(in);
+//            for (Scholar scholar : allScholars) {
+//                double hindex = scholar.getHindex();
+//                if (hindex >= highHindex) {
+//                    continue;
+//                } else if (hindex < highHindex && hindex >= lowHindex) {
+//                    scholarHindex.add(scholar.getIndex());
+//                } else {
+//                    break;
+//                }
+//            }
+//        }
+
         HbaseUtils.closeTableAndConn(table, connection);
 
         List<String> scholarIds = null;
@@ -210,6 +240,12 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 scholarIds.add(scholarId);
             }
         }
+//        else if (CollectionUtils.isNotEmpty(scholarHindex)) {
+//            scholarIds = new ArrayList<String>();
+//            for (String scholarId : scholarHindex) {
+//                scholarIds.add(scholarId);
+//            }
+//        }
         return scholarIds;
     }
 }

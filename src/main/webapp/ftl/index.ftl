@@ -11,56 +11,64 @@
     <link rel="stylesheet" href="${path}/css/buttons.css" type="text/css">
     <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <link rel="stylesheet" href="${path}/css/bootstrap.min.css" type="text/css">
-
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/stickup.css" type="text/css">
     <link rel="stylesheet" href="${path}/css/templatemo-style.css">
 
 </head>
 <body>
-<ul class="layui-nav">
-    <li class="layui-nav-item"><a href="">合作关系</a></li>
-    <li class="layui-nav-item"><a href="">师生关系</a></li>
-    <li class="layui-nav-item"><a href="">引用关系</a></li>
-</ul>
-<ul class="layui-nav layui-layout-right">
-    <#if Session.user?exists>
-        <li class="layui-nav-item">
-            <a href="javascript:;">
-                <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                ${Session['user'].name!""}
-            </a>
-            <dl class="layui-nav-child">
-                <dd><a href="">base information</a></dd>
-                <dd><a href="">modify information</a></dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item"><a href="/logout">logout</a></li>
-        <#else>
-            <li class="layui-nav-item"><a href="/login/index">login</a></li>
-            <li class="layui-nav-item"><a href="/register/index">register</a></li>
-    </#if>
-</ul>
+<div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
+    <ul class="layui-nav">
+        <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+        <#if Session.user?exists>
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    ${Session['user'].name!""}
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">base information</a></dd>
+                    <dd><a href="">modify information</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="/logout">logout</a></li>
+            <#else>
+                <li class="layui-nav-item"><a href="/login/index">login</a></li>
+                <li class="layui-nav-item"><a href="/register/index">register</a></li>
+        </#if>
+    </ul>
+</div>
 
-
-<#--<script type="text/javascript" src="../js/layui.js" charset="utf-8"></script>-->
 <script type="text/javascript" src="../js/layui.all.js" charset="utf-8"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/stickUp.min.js"></script>
 
-<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 <script type="text/javascript">
     layui.use('element', function () {
-        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
-
-        //监听导航点击
+        var element = layui.element;
         element.on('nav(demo)', function (elem) {
             //console.log(elem)
             layer.msg(elem.text());
         });
     });
+    jQuery(function($) {
+        $(document).ready( function() {
+            $('.topNav').stickUp();
+        });
+    });
 </script>
+
+<br/>
+<br/>
+
+
 <div class="banner">
     <div class="container">
-        <div class="banner-info1" style="margin-left: 35%;">
-            <img src="../img/WOS.png" alt="wos" >
+        <div style="margin-left:25%">
+            <img src="../img/wos.png" alt="wos" >
         </div>
         <div class="layui-container">
             <form class="layui-form" action="/simpleSearch/content">
@@ -98,7 +106,7 @@
                         </#if>
 
                         <li><a href="/searchMore/index">search more scholar</a></li>
-                        <li><a href="/searchMore/index">statistical rankings</a></li>
+                        <li><a href="/rank/index">statistical rankings</a></li>
                     </ul>
                 </div>
             </div>
@@ -174,10 +182,10 @@
                                         '<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">' +
                                              '<div class="tm-media-text-container">' +
                                             '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/scholar/baseInfo?authorId=' + thisData[0][index] + '">' + thisData[1][index] + '</a> </h3>' +
-                                            '<p class="tm-media-description tm-gray-text-2">h-index:' + thisData[2][index] + ' | #Paper:662 | #Citation:93218' +
+                                            '<p class="tm-media-description tm-gray-text-2">Q-index:' + thisData[2][index] + ' | H-index:' + thisData[2][index] +
                                             '<br/>' +
-                                            '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;' + thisData[3][index] + '<br/>' +
-                                            '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;' + thisData[4][index] + '</p>' +
+                                            '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ' + thisData[3][index] + '<br/>' +
+                                            '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study Field: ' + thisData[4][index] + '</p>' +
                                             '</div>' +
                                         '</div>' +
                                     '</div>' +
@@ -189,6 +197,7 @@
         });
 
     });
+
 </script>
 </body>
 </html>
