@@ -42,19 +42,19 @@
             hindex.push("${scholar.hindex!""}");
             aff.push("${scholar.aff!""}");
             fieldName.push("${scholar.fieldName!""}");
-            <#if type=='cooperator number'>
+            <#if type=='Cooperator number'>
                 number.push("${scholar.cooperateNumber!""}");
-                <#elseif type=='team members'>
+                <#elseif type=='Team members'>
                     number.push("${scholar.coTeamNumber!""}");
-                <#elseif type=='students number'>
+                <#elseif type=='Students number'>
                     number.push("${scholar.studentsNumber!""}");
-                <#elseif type=='reference number'>
+                <#elseif type=='Reference number'>
                     number.push("${scholar.refNumber!""}");
-                <#elseif type=='referenced number'>
+                <#elseif type=='Referenced number'>
                     number.push("${scholar.refedNumber!""}");
-                <#elseif type=='common reference number'>
+                <#elseif type=='Common reference number'>
                     number.push("${scholar.coRefNumber!""}");
-                <#elseif type=='common referenced number'>
+                <#elseif type=='Common referenced number'>
                     number.push("${scholar.coRefedNumber!""}");
             </#if>
         </#list>
@@ -88,15 +88,15 @@
                                 '<div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">' +
                                 '</div>' +
                                 '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">' +
-                                '<img src="../img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">' +
+                                '<img src="../img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">' +
                                 '</div>' +
                                 '<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">' +
                                 '<div class="tm-media-text-container">' +
                                 '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/scholar/baseInfo?authorId=' + thisData[0][index] + '">' + thisData[1][index] + '</a></h3>' +
-                                '<p class="tm-media-description tm-gray-text-2">q-index: | h-index:' + thisData[2][index] + ' | ' + "${type}" + ':' + thisData[3][index] +
+                                '<p class="tm-media-description tm-gray-text-2">Q-index: | H-index:' + thisData[2][index] + ' | ' + "${type}" + ':' + thisData[3][index] +
                                 '<br/>' +
-                                '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;' + thisData[4][index] + '<br/>' +
-                                '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;' + thisData[5][index] + '</p>' +
+                                '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ' + thisData[4][index] + '<br/>' +
+                                '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study field: ' + thisData[5][index] + '</p>' +
                                 '</div>' +
                                 '</div>' +
                                 '</div>' +

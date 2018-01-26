@@ -1,5 +1,6 @@
 package org.thealpha.controller;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,7 +24,8 @@ public class IndexController {
         List<Scholar> recommendScholars = null;
         if (user != null) {
             recommendScholars = recommendService.getRecommendScholar(user.getEmail());
-        } else {
+        }
+        if (CollectionUtils.isEmpty(recommendScholars)) {
             recommendScholars = recommendService.getHindexTop10Scholars();
         }
         model.addAttribute("scholars", recommendScholars);

@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Force</title>
+    <title>cooperate</title>
 
     <link rel="stylesheet" type="text/css" href="../css/styles.css"/>
     <script type="text/javascript" src="../js/d3.js"></script>
@@ -81,13 +81,15 @@
 <body>
 <script src="../js/d3.v3.min.js" charset="utf-8"></script>
 <script>
+    $("#statisticalNumber").html("Cooperator number:${middleScholar.cooperateNumber!""}");
+
     nodes = [
-        { "name": "${middleScholar.name!""}"   , "image" : "../img/b.jpg" , "id":"${middleScholar.index!""}", "aff":"${middleScholar.aff!""}"}];
+        { "name": "${middleScholar.name!""}"   , "image" : "../img/scholarImg.png   " , "id":"${middleScholar.index!""}", "hindex":"${middleScholar.hindex!""}", "cooperatorNumber":"${middleScholar.cooperateNumber!""}", "aff":"${middleScholar.aff!""}", "fieldName":"${middleScholar.fieldName!""}"}];
     edges = [];
     var cooperaterIndex = 1;
     <#if cooperaters?? && (cooperaters?size>0)>
         <#list cooperaters as cooperater>
-        nodes.push({"name": "${cooperater.name!""}"   , "image" : "../img/b.jpg", "id":"${cooperater.index!""}", "aff":"${cooperater.aff!""}"});
+        nodes.push({"name": "${cooperater.name!""}"   , "image" : "../img/scholarImg.png", "id":"${cooperater.index!""}", "hindex":"${cooperater.hindex!""}", "cooperatorNumber":"${cooperater.cooperateNumber!""}", "aff":"${cooperater.aff!""}", "fieldName":"${cooperater.fieldName!""}"});
         edges.push({ "source": 0 , "target": cooperaterIndex , "relation":"合作关系" , "count":${cooperater.count!1}});
         cooperaterIndex = cooperaterIndex + 1;
 
@@ -196,7 +198,10 @@
                     $("#content").html(result);
                     $("#middleScholarName").html(d.name);
                     $("#middleScholarIndex").attr("value", d.id);
+                    $("#middleScholarHindex").html(d.hindex);
+                    $("#statisticalNumber").html("Cooperator number:"+d.cooperatorNumber);
                     $("#middleScholarAff").html(d.aff);
+                    $("#middleScholarFieldName").html(d.fieldName);
                 })
             })
             .call(force.drag);
@@ -258,7 +263,7 @@
     <#if middleScholar.latlng??>
         places["${middleScholar.name!""}"] = [${middleScholar.longitude!""}, ${middleScholar.latitude!""}];
         <#else>
-        places["${middleScholar.name!""}"] = [53, 32];
+        places["${middleScholar.name!""}"] = [77.02, 38.54];
     </#if>
     <#if cooperaters?? && (cooperaters?size>0)>
         <#list cooperaters as cooperater>
@@ -344,9 +349,9 @@
     d3.select(self.frameElement).style("height", height + "px");
 
     svg.append("g")
-            .attr("transform","translate("+(width/2 - 50)+","+(660)+")")
+            .attr("transform","translate("+(width/2 - 125)+","+(660)+")")
             .append("text")
-            .text("合作者的地理位置分布图");
+            .text("cooperators' location on the world map");
 
 </script>
 
@@ -380,9 +385,9 @@
 
             renderBody(_svg);
             _svg.append("g")
-                    .attr("transform","translate("+((width/2)-50)+","+(_height+28)+")")
+                    .attr("transform","translate("+((width/2)-170)+","+(_height+28)+")")
                     .append("text")
-                    .text("1980-2017年合作者数量折线图");
+                    .text("cooperators' count every year between 1980 and 2017");
         };
 
         function renderAxes(svg) {

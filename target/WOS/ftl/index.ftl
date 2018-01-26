@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>首页</title>
+    <title>index</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -19,13 +19,13 @@
 <body>
 <div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
     <ul class="layui-nav">
-        <a href="/index"><img src="../img/w1.png" alt="" style="height: 60px"/></a>
+        <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
     </ul>
     <ul class="layui-nav layui-layout-right">
         <#if Session.user?exists>
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    <img src="/hdfs/personalPhoto" class="layui-nav-img">
                     ${Session['user'].name!""}
                 </a>
                 <dl class="layui-nav-child">
@@ -68,7 +68,7 @@
 <div class="banner">
     <div class="container">
         <div style="margin-left:25%">
-            <img src="../img/wo.png" alt="wos" >
+            <img src="../img/wos.png" alt="wos" >
         </div>
         <div class="layui-container">
             <form class="layui-form" action="/simpleSearch/content">
@@ -155,6 +155,8 @@
             elem: 'page'
             ,count: id.length
             ,limit: 5
+            ,prev:'prev page'
+            ,next:'next page'
             ,jump: function(obj){
                 //模拟渲染
                 document.getElementById('scholar_list').innerHTML = function(){
@@ -177,7 +179,7 @@
                                 '<div class="layui-col-md9" style="border-left: 1px solid #eee;border-right: 1px solid #eee;border-bottom: 1px solid #eee;">' +
                                     '<div class="row tm-media-row">' +
                                         '<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">' +
-                                            '<img src="../img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">' +
+                                            '<img src="../img/scholarImg.png" style="width: 60%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">' +
                                         '</div>' +
                                         '<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">' +
                                              '<div class="tm-media-text-container">' +

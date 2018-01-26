@@ -7,6 +7,7 @@ import org.thealpha.dao.inter.PaperDao;
 import org.thealpha.dao.inter.ReferenceDao;
 import org.thealpha.dao.inter.ScholarInfoDao;
 import org.thealpha.model.Scholar;
+import org.thealpha.util.ConfigurationConstant;
 
 import java.util.*;
 
@@ -28,6 +29,12 @@ public class ReferenceService {
     public List<Scholar> getRefAuthorsByAuthorId(String authorId) {
         List<String> paperIds = paperDao.getPaperIdsByAuthorId(authorId);
         List<String> refPaperIds = referenceDao.getRefPaperIdsByPaperIds(paperIds);
+        if (CollectionUtils.isEmpty(refPaperIds)) {
+            return null;
+        }
+        if (refPaperIds.size() > ConfigurationConstant.MAX_SIZE) {
+            refPaperIds = refPaperIds.subList(0, ConfigurationConstant.MAX_SIZE);
+        }
         List<String> authorIds = paperDao.getAuthorIdsByPaperIds(refPaperIds);
         return scholarInfoDao.getScholarsByIds(authorIds);
     }
@@ -35,6 +42,12 @@ public class ReferenceService {
     public List<Scholar> getRefedAuthorsByAuthorId(String authorId) {
         List<String> paperIds = paperDao.getPaperIdsByAuthorId(authorId);
         List<String> refedPaperIds = referenceDao.getRefedPaperIdsByPaperIds(paperIds);
+        if (CollectionUtils.isEmpty(refedPaperIds)) {
+            return null;
+        }
+        if (refedPaperIds.size() > ConfigurationConstant.MAX_SIZE) {
+            refedPaperIds = refedPaperIds.subList(0, ConfigurationConstant.MAX_SIZE);
+        }
         List<String> authorIds = paperDao.getAuthorIdsByPaperIds(refedPaperIds);
         return scholarInfoDao.getScholarsByIds(authorIds);
     }
@@ -46,6 +59,23 @@ public class ReferenceService {
         if (CollectionUtils.isEmpty(coRefPapers)) {
             return null;
         }
+        Collections.sort(coRefPapers, new Comparator<String>() {
+            public int compare(String o1, String o2) {
+                int count1 = Integer.parseInt(o1.substring(o1.indexOf(":") + 1));
+                int count2 = Integer.parseInt(o2.substring(o2.indexOf(":") + 1));
+                if (count1 > count2) {
+                    return -1;
+                }
+                if (count1 < count2) {
+                    return 1;
+                }
+                return 0;
+            }
+        });
+        if (coRefPapers.size() > ConfigurationConstant.MAX_SIZE) {
+            coRefPapers = coRefPapers.subList(0, ConfigurationConstant.MAX_SIZE);
+        }
+
         Map<String, Integer> paperIdCount = new HashMap<String, Integer>();
 //        获得论文与数量之间的对应关系
         for (String coRefPaper : coRefPapers) {
@@ -90,6 +120,23 @@ public class ReferenceService {
         if (CollectionUtils.isEmpty(coRefedPapers)) {
             return null;
         }
+        Collections.sort(coRefedPapers, new Comparator<String>() {
+            public int compare(String o1, String o2) {
+                int count1 = Integer.parseInt(o1.substring(o1.indexOf(":") + 1));
+                int count2 = Integer.parseInt(o2.substring(o2.indexOf(":") + 1));
+                if (count1 > count2) {
+                    return -1;
+                }
+                if (count1 < count2) {
+                    return 1;
+                }
+                return 0;
+            }
+        });
+        if (coRefedPapers.size() > ConfigurationConstant.MAX_SIZE) {
+            coRefedPapers = coRefedPapers.subList(0, ConfigurationConstant.MAX_SIZE);
+        }
+
         Map<String, Integer> paperIdCount = new HashMap<String, Integer>();
 //        获得论文与数量之间的对应关系
         for (String coRefedPaper : coRefedPapers) {
@@ -123,18 +170,6 @@ public class ReferenceService {
         List<Scholar> scholars = scholarInfoDao.getScholarsByIds(authorIdList);
         for (Scholar scholar : scholars) {
             scholar.setCount(authorIdCount.get(scholar.getIndex()));
-        }
-        if (scholars.size() > 200) {
-            int count = 0;
-            List<Scholar> top200Scholars = new ArrayList<Scholar>();
-            for (Scholar scholar : scholars) {
-                count += 1;
-                top200Scholars.add(scholar);
-                if (count >= 200) {
-                    break;
-                }
-            }
-            return top200Scholars;
         }
         return scholars;
     }

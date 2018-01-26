@@ -47,6 +47,10 @@ public class StatisticalRankingsController {
             top100Scholars = rankService.getTop100CoRefed();
         }
         model.addAttribute("scholars", top100Scholars);
+
+        char[] caType = type.toCharArray();
+        caType[0] -= 32;
+        type = String.valueOf(caType);
         model.addAttribute("type", type);
         return "scholarRank";
     }

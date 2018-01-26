@@ -42,10 +42,16 @@ public class ScholarCooperateService {
         }
         for (Cooperater cooperater : cooperaterList) {
             cooperater.setName(scholarIdObjectMap.get(cooperater.getIndex()).getName());
+            cooperater.setName(scholarIdObjectMap.get(cooperater.getIndex()).getName());
+            cooperater.setHindex(scholarIdObjectMap.get(cooperater.getIndex()).getHindex());
             cooperater.setAff(scholarIdObjectMap.get(cooperater.getIndex()).getAff());
             cooperater.setLatlng(scholarIdObjectMap.get(cooperater.getIndex()).getLatlng());
             cooperater.setLatitude(scholarIdObjectMap.get(cooperater.getIndex()).getLatitude());
             cooperater.setLongitude(scholarIdObjectMap.get(cooperater.getIndex()).getLongitude());
+            cooperater.setFieldName(scholarIdObjectMap.get(cooperater.getIndex()).getFieldName());
+            cooperater.setCooperateNumber(scholarIdObjectMap.get(cooperater.getIndex()).getCooperateNumber());
+            cooperater.setCoTeamNumber(scholarIdObjectMap.get(cooperater.getIndex()).getCoTeamNumber());
+            cooperater.setStudentsNumber(scholarIdObjectMap.get(cooperater.getIndex()).getStudentsNumber());
         }
         return cooperaterList;
     }

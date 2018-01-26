@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Force</title>
+    <title>teacher student relationship</title>
 
     <link rel="stylesheet" type="text/css" href="../css/styles.css"/>
     <script type="text/javascript" src="../js/d3.js"></script>
@@ -81,20 +81,22 @@
 <body>
 <script src="../js/d3.v3.min.js" charset="utf-8"></script>
 <script>
+    $("#statisticalNumber").html("Students number:${middleScholar.studentsNumber!""}");
+
     nodes = [
-        { "name": "${middleScholar.name!""}"   , "image" : "../img/b.jpg" , "id":"${middleScholar.index!""}", "aff":"${middleScholar.aff!""}"}];
+        { "name": "${middleScholar.name!""}"   , "image" : "../img/scholarImg.png" , "id":"${middleScholar.index!""}", "hindex":"${middleScholar.hindex!""}", "studentsNumber":"${middleScholar.studentsNumber!""}", "aff":"${middleScholar.aff!""}", "fieldName":"${middleScholar.fieldName!""}"}];
     edges = [];
     var cooperaterIndex = 1;
     <#if students?? && (students?size>0)>
         <#list students as student>
-        nodes.push({"name": "${student.name!""}"   , "image" : "../img/b.jpg", "id":"${student.index!""}", "aff":"${student.aff!""}"});
+        nodes.push({"name": "${student.name!""}"   , "image" : "../img/scholarImg.png", "id":"${student.index!""}", "hindex":"${student.hindex!""}", "studentsNumber":"${student.studentsNumber!""}", "aff":"${student.aff!""}", "fieldName":"${student.fieldName!""}"});
         edges.push({ "source": 0 , "target": cooperaterIndex , "relation":"student", "intension":1, "color":"#ccc"});
         cooperaterIndex = cooperaterIndex + 1;
 
         </#list>
     </#if>
     <#if teacher?exists>
-    nodes.push({"name": "${teacher.name!""}"   , "image" : "../img/b.jpg", "id":"${teacher.index!""}", "aff":"${teacher.aff!""}"});
+    nodes.push({"name": "${teacher.name!""}"   , "image" : "../img/scholarImg.png", "id":"${teacher.index!""}", "aff":"${teacher.aff!""}"});
     edges.push({ "source": 0 , "target": cooperaterIndex , "relation":"teacher", "intension":2, "color":"red"});
     </#if>
 
@@ -202,7 +204,10 @@
                     $("#content").html(result);
                     $("#middleScholarName").html(d.name);
                     $("#middleScholarIndex").attr("value", d.id);
+                    $("#middleScholarHindex").html(d.hindex);
+                    $("#statisticalNumber").html("Students number:"+d.studentsNumber);
                     $("#middleScholarAff").html(d.aff);
+                    $("#middleScholarFieldName").html(d.fieldName);
                 })
             })
             .call(force.drag);

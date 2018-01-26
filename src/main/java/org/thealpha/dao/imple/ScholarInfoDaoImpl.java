@@ -133,6 +133,34 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                         if (StringUtils.isNotBlank(value)) {
                             scholar.setFieldName(value);
                         }
+                    } else if (ConfigurationConstant.QF_COOPERATE_NUMBER.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setCooperateNumber(Integer.parseInt(value));
+                        }
+                    } else if (ConfigurationConstant.QF_CO_TEAM_NUMBER.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setCoTeamNumber(Integer.parseInt(value));
+                        }
+                    } else if (ConfigurationConstant.QF_STUDENTS_NUMBER.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setStudentsNumber(Integer.parseInt(value));
+                        }
+                    } else if (ConfigurationConstant.QF_REF_NUMBER.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setRefNumber(Integer.parseInt(value));
+                        }
+                    } else if (ConfigurationConstant.QF_REFED_NUMBER.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setRefedNumber(Integer.parseInt(value));
+                        }
+                    } else if (ConfigurationConstant.QF_CO_REF_NUMBER.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setCoRefNumber(Integer.parseInt(value));
+                        }
+                    } else if (ConfigurationConstant.QF_CO_REFED_NUMBER.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setCoRefedNumber(Integer.parseInt(value));
+                        }
                     }
                 }
                 scholarList.add(scholar);
@@ -159,6 +187,14 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 String latlng = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_LAT_LNG)));
                 String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
                 String fieldName = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_FIELD_NAME)));
+                String cooperatorNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_COOPERATE_NUMBER)));
+                String coTeamNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_TEAM_NUMBER)));
+                String studentsNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_STUDENTS_NUMBER)));
+                String refNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_REF_NUMBER)));
+                String refedNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_REFED_NUMBER)));
+                String coRefNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REF_NUMBER)));
+                String coRefedNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_NUMBER)));
+
                 scholar.setIndex(scholarId);
                 scholar.setName(name);
                 scholar.setAff(aff);
@@ -172,6 +208,27 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 }
                 if (StringUtils.isNotBlank(fieldName)) {
                     scholar.setFieldName(fieldName);
+                }
+                if (StringUtils.isNotBlank(cooperatorNumber)) {
+                    scholar.setCooperateNumber(Integer.parseInt(cooperatorNumber));
+                }
+                if (StringUtils.isNotBlank(coTeamNumber)) {
+                    scholar.setCoTeamNumber(Integer.parseInt(coTeamNumber));
+                }
+                if (StringUtils.isNotBlank(studentsNumber)) {
+                    scholar.setStudentsNumber(Integer.parseInt(studentsNumber));
+                }
+                if (StringUtils.isNotBlank(refNumber)) {
+                    scholar.setRefNumber(Integer.parseInt(refNumber));
+                }
+                if (StringUtils.isNotBlank(refedNumber)) {
+                    scholar.setRefedNumber(Integer.parseInt(refedNumber));
+                }
+                if (StringUtils.isNotBlank(coRefNumber)) {
+                    scholar.setCoRefNumber(Integer.parseInt(coRefNumber));
+                }
+                if (StringUtils.isNotBlank(coRefedNumber)) {
+                    scholar.setCoRefedNumber(Integer.parseInt(coRefedNumber));
                 }
                 return scholar;
             }

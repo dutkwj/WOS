@@ -7,19 +7,23 @@
     <title>register</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="${path}/layui/css/layui.css" type="text/css" media="all">
-
+    <link href="../css/dialog/normalize.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/dialog/animate.min.css">
+    <link rel="stylesheet" href="../css/dialog/jquery.gDialog.css">
+    <script src="../js/dialog/jquery.js"></script>
+    <script src="../js/dialog/jquery.gDialog.js"></script>
 
 </head>
 <body >
 <div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
     <ul class="layui-nav">
-        <a href="/index"><img src="../img/w1.png" alt="" style="height: 60px"/></a>
+        <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
     </ul>
     <ul class="layui-nav layui-layout-right">
     <#if Session.user?exists>
         <li class="layui-nav-item">
             <a href="javascript:;">
-                <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                <img src="/hdfs/personalPhoto" class="layui-nav-img">
             ${Session['user'].name!""}
             </a>
             <dl class="layui-nav-child">
@@ -34,13 +38,13 @@
     </#if>
     </ul>
 </div>
-
 <script type="text/javascript" src="../layui/layui.all.js" charset="utf-8"></script>
-<script src="../js/jquery.js"></script>
+<#--<script src="../js/jquery.js"></script>-->
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/stickUp.min.js"></script>
 
 <script type="text/javascript">
+
     layui.use('element', function () {
         var element = layui.element;
         element.on('nav(demo)', function (elem) {
@@ -176,7 +180,7 @@
             <#--</div>-->
         <#--</div>-->
         <div class="layui-form-item">
-            <div class="layui-upload">
+            <div >
 
                 <button type="button" class="layui-btn" id="test1">personal photo</button>
                 &nbsp;&nbsp;
@@ -265,16 +269,24 @@
                 }
                 //上传成功
             }
-            ,error: function(){
-                //演示失败状态，并实现重传
-                var demoText = $('#demoText');
-                demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
-                demoText.find('.demo-reload').on('click', function(){
-                    uploadInst.upload();
-                });
-            }
+//            ,error: function(){
+//                //演示失败状态，并实现重传
+////                var demoText = $('#demoText');
+////                demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
+////                demoText.find('.demo-reload').on('click', function(){
+////                    uploadInst.upload();
+////                });
+//            }
         });
     });
+
+    <#if registerError??>
+        $.gDialog.alert("${registerError!"register error"}", {
+            title: "Register Error",
+            animateIn: "bounceIn",
+            animateOut: "bounceOut"
+        });
+    </#if>
 
 </script>
 

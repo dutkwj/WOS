@@ -48,7 +48,7 @@
     <#if Session.user?exists>
         <li class="layui-nav-item">
             <a href="javascript:;">
-                <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                <img src="/hdfs/personalPhoto" class="layui-nav-img">
             ${Session['user'].name!""}
             </a>
             <dl class="layui-nav-child">
@@ -202,6 +202,8 @@
         laypage.render({
             elem: 'page'
             ,count: id.length
+            ,prev:'prev page'
+            ,next:'next page'
             ,limit: 5
             ,jump: function(obj){
                 //模拟渲染
@@ -228,15 +230,15 @@
                                 '<div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">' +
                                 '</div>' +
                                 '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">' +
-                                '<img src="../img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">' +
+                                '<img src="../img/scholarImg.png" style="width: 70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">' +
                                 '</div>' +
                                 '<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">' +
                                 '<div class="tm-media-text-container">' +
                                 '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/scholar/baseInfo?authorId=' + thisData[0][index] + '">' + thisData[1][index] + '</a></h3>' +
-                                '<p class="tm-media-description tm-gray-text-2">q-index: | h-index:' + thisData[2][index] + ' | cooperator number:' + thisData[3][index] +
+                                '<p class="tm-media-description tm-gray-text-2">Q-index: | H-index:' + thisData[2][index] + ' | Cooperator number:' + thisData[3][index] +
                                 '<br/>' +
-                                '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;' + thisData[4][index] + '<br/>' +
-                                '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;' + thisData[5][index] + '</p>' +
+                                '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ' + thisData[4][index] + '<br/>' +
+                                '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study field: ' + thisData[5][index] + '</p>' +
                                 '</div>' +
                                 '</div>' +
                                 '</div>' +

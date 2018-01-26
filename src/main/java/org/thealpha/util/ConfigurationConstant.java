@@ -69,7 +69,9 @@ public class ConfigurationConstant {
     public static final String ZK_CLIENT_PORT = "2181";
 
     public static final String REDIS_ALL_SCHOLARS = "redis_all_scholars";
-    public static final String REDIS_TOP10_SCHOLARS = "redis_top10_scholars";
+    public static final String REDIS_HINDEX_TOP10_SCHOLARS = "redis_hindex_top10_scholars";
+    public static final String REDIS_HINDEX_TOP100_SCHOLARS = "redis_hindex_top100_scholars";
+
 
     public static final String REDIS_COOPERATE_NUMBER_TOP100_SCHOLARS = "redis_cooperate_number_top100_scholars";
     public static final String REDIS_CO_TEAM_NUMBER_TOP100_SCHOLARS = "redis_co_team_number_top100_scholars";
@@ -79,4 +81,5 @@ public class ConfigurationConstant {
     public static final String REDIS_CO_REF_NUMBER_TOP100_SCHOLARS = "redis_co_ref_number_top100_scholars";
     public static final String REDIS_CO_REFED_NUMBER_TOP100_SCHOLARS = "redis_co_refed_number_top100_scholars";
 
+    public static final int MAX_SIZE = 200;
 }

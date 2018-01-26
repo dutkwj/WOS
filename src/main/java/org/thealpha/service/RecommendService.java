@@ -58,6 +58,9 @@ public class RecommendService {
 
     public List<Scholar> getRecommendScholar(String email) {
         List<ScholarWeight> scholarWeights = recommendDao.getScholarWeightsByUser(email);
+        if (CollectionUtils.isEmpty(scholarWeights)) {
+            return null;
+        }
         List<String> scholarIds = new ArrayList<String>();
         for (ScholarWeight scholarWeight : scholarWeights) {
             scholarIds.add(scholarWeight.getIndex());
@@ -166,8 +169,12 @@ public class RecommendService {
     }
 
     public List<Scholar> getHindexTop10Scholars() {
-        byte[] in = jedisCluster.get(ConfigurationConstant.REDIS_TOP10_SCHOLARS.getBytes());
+        byte[] in = jedisCluster.get(ConfigurationConstant.REDIS_HINDEX_TOP10_SCHOLARS.getBytes());
         return (List<Scholar>) ListTranscoder.deserialize(in);
+    }
 
+    public List<Scholar> getHindexTop100Scholars() {
+        byte[] in = jedisCluster.get(ConfigurationConstant.REDIS_HINDEX_TOP100_SCHOLARS.getBytes());
+        return (List<Scholar>) ListTranscoder.deserialize(in);
     }
 }

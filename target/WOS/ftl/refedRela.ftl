@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Force</title>
+    <title>referenced relationship</title>
 
     <link rel="stylesheet" type="text/css" href="../css/styles.css"/>
     <script type="text/javascript" src="../js/d3.js"></script>
@@ -81,13 +81,15 @@
 <body>
 <script src="../js/d3.v3.min.js" charset="utf-8"></script>
 <script>
+    $("#statisticalNumber").html("Referenced number:${middleScholar.refedNumber!""}");
+
     nodes = [
-        { "name": "${middleScholar.name!""}"   , "image" : "../img/b.jpg" , "id":"${middleScholar.index!""}", "aff":"${middleScholar.aff!""}"}];
+        { "name": "${middleScholar.name!""}"   , "image" : "../img/scholarImg.png" , "id":"${middleScholar.index!""}", "hindex":"${middleScholar.hindex!""}", "refedNumber":"${middleScholar.refedNumber!""}", "aff":"${middleScholar.aff!""}", "fieldName":"${middleScholar.fieldName!""}"}];
     edges = [];
     var refedIndex = 1;
     <#if refedScholars?? && (refedScholars?size>0)>
         <#list refedScholars as refedScholar>
-        nodes.push({"name": "${refedScholar.name!""}"   , "image" : "../img/b.jpg", "id":"${refedScholar.index!""}", "aff":"${refedScholar.aff!""}"});
+        nodes.push({"name": "${refedScholar.name!""}"   , "image" : "../img/scholarImg.png", "id":"${refedScholar.index!""}", "hindex":"${refedScholar.hindex!""}", "refedNumber":"${refedScholar.refedNumber!""}", "aff":"${refedScholar.aff!""}", "fieldName":"${refedScholar.fieldName!""}"});
         edges.push({ "source": 0 , "target": refedIndex , "relation":"引用关系" , "count":1});
         refedIndex = refedIndex + 1;
         </#list>
@@ -194,7 +196,10 @@
                     $("#content").html(result);
                     $("#middleScholarName").html(d.name);
                     $("#middleScholarIndex").attr("value", d.id);
+                    $("#middleScholarHindex").html(d.hindex);
+                    $("#statisticalNumber").html("Referenced number:"+d.refedNumber);
                     $("#middleScholarAff").html(d.aff);
+                    $("#middleScholarFieldName").html(d.fieldName);
                 })
             })
             .call(force.drag);

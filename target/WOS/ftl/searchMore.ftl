@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>首页</title>
+    <title>search more</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -15,13 +15,13 @@
 <body>
 <div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
     <ul class="layui-nav">
-        <a href="/index"><img src="../img/w1.png" alt="" style="height: 60px"/></a>
+        <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
     </ul>
     <ul class="layui-nav layui-layout-right">
     <#if Session.user?exists>
         <li class="layui-nav-item">
             <a href="javascript:;">
-                <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                <img src="/hdfs/personalPhoto" class="layui-nav-img">
             ${Session['user'].name!""}
             </a>
             <dl class="layui-nav-child">
@@ -199,6 +199,8 @@
         laypage.render({
             elem: 'page'
             ,count: id.length
+            ,prev:'prev page'
+            ,next:'next page'
             ,limit: 5
             ,jump: function(obj){
                 //模拟渲染
@@ -224,7 +226,7 @@
                                         '<div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">' +
                                         '</div>' +
                                         '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">' +
-                                            '<img src="../img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">' +
+                                            '<img src="../img/scholarImg.png" style="width: 70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">' +
                                         '</div>' +
                                         '<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">' +
                                             '<div class="tm-media-text-container">' +
@@ -232,7 +234,7 @@
                                                 '<p class="tm-media-description tm-gray-text-2">Q-index:131 | H-index:' + thisData[2][index] +
                                                 '<br/>' +
                                                 '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ' + thisData[3][index] + '<br/>' +
-                                                '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study Field: ' + thisData[4][index] + '</p>' +
+                                                '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study field: ' + thisData[4][index] + '</p>' +
                                             '</div>' +
                                         '</div>' +
                                     '</div>' +

@@ -1,5 +1,6 @@
 import org.thealpha.model.Scholar;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -45,5 +46,15 @@ public class Test{
     public void testReplace() {
         String str = "ad.asdas*sdas";
         System.out.println(str.replaceAll("\\*|\\.", ""));
+    }
+
+    @org.junit.Test
+    public void testImg() {
+        File file = new File("");
+        System.out.println(file.getPath());
+        System.out.println(file.toURI().getPath());
+
+        System.out.println(file.exists());
+        System.out.println(file.getAbsolutePath());
     }
 }

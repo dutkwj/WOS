@@ -5,4 +5,5 @@ package org.thealpha.dao.inter;
  */
 public interface RegisterDao {
     void saveUser(String email, String qualifier, String field);
+    boolean isEmailExist(String email);
 }

@@ -19,9 +19,7 @@ import org.thealpha.model.Scholar;
 import org.thealpha.util.ConfigurationConstant;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by kangwenjie on 17-12-16.

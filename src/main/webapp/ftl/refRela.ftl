@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Force</title>
+    <title>reference relationship</title>
 
     <link rel="stylesheet" type="text/css" href="../css/styles.css"/>
     <script type="text/javascript" src="../js/d3.js"></script>
@@ -81,14 +81,15 @@
 <body>
 <script src="../js/d3.v3.min.js" charset="utf-8"></script>
 <script>
+    $("#statisticalNumber").html("Reference number:${middleScholar.refNumber!""}");
 
     nodes = [
-        { "name": "${middleScholar.name!""}"   , "image" : "../img/b.jpg" , "id":"${middleScholar.index!""}", "aff":"${middleScholar.aff!""}"}];
+        { "name": "${middleScholar.name!""}"   , "image" : "../img/scholarImg.png" , "id":"${middleScholar.index!""}", "hindex":"${middleScholar.hindex!""}", "refNumber":"${middleScholar.refNumber!""}", "aff":"${middleScholar.aff!""}", "fieldName":"${middleScholar.fieldName!""}"}];
     edges = [];
     var refIndex = 1;
     <#if refScholars?? && (refScholars?size>0)>
         <#list refScholars as refScholar>
-        nodes.push({"name": "${refScholar.name!""}"   , "image" : "../img/b.jpg", "id":"${refScholar.index!""}", "aff":"${refScholar.aff!""}"});
+        nodes.push({"name": "${refScholar.name!""}"   , "image" : "../img/scholarImg.png", "id":"${refScholar.index!""}", "hindex":"${refScholar.hindex!""}", "refNumber":"${refScholar.refNumber!""}", "aff":"${refScholar.aff!""}", "fieldName":"${refScholar.fieldName!""}"});
         edges.push({ "source": 0 , "target": refIndex , "relation":"引用关系" , "count":1});
         refIndex = refIndex + 1;
         </#list>
@@ -195,7 +196,10 @@
                     $("#content").html(result);
                     $("#middleScholarName").html(d.name);
                     $("#middleScholarIndex").attr("value", d.id);
+                    $("#middleScholarHindex").html(d.hindex);
+                    $("#statisticalNumber").html("Reference number:"+d.refNumber);
                     $("#middleScholarAff").html(d.aff);
+                    $("#middleScholarFieldName").html(d.fieldName);
                 })
             })
             .call(force.drag);

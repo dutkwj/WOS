@@ -6,12 +6,58 @@ package org.thealpha.model;
 public class Cooperater {
     private String index;
     private String name;
+    private double hindex;
     private String aff;
     private int count;
     private String latlng;
     private String latitude;
     private String longitude;
+    private String fieldName;
+    private int cooperateNumber;
+    private int coTeamNumber;
+    private int studentsNumber;
+
+    public double getHindex() {
+        return hindex;
+    }
+
+    public void setHindex(double hindex) {
+        this.hindex = hindex;
+    }
+
+    public String getFieldName() {
+        return fieldName;
+    }
+
+    public void setFieldName(String fieldName) {
+        this.fieldName = fieldName;
+    }
+
     private double intension;
+
+    public int getCooperateNumber() {
+        return cooperateNumber;
+    }
+
+    public void setCooperateNumber(int cooperateNumber) {
+        this.cooperateNumber = cooperateNumber;
+    }
+
+    public int getCoTeamNumber() {
+        return coTeamNumber;
+    }
+
+    public void setCoTeamNumber(int coTeamNumber) {
+        this.coTeamNumber = coTeamNumber;
+    }
+
+    public int getStudentsNumber() {
+        return studentsNumber;
+    }
+
+    public void setStudentsNumber(int studentsNumber) {
+        this.studentsNumber = studentsNumber;
+    }
 
     public double getIntension() {
         return intension;
