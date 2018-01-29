@@ -1,51 +1,60 @@
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.thealpha.controller.CreateHtml;
+import org.thealpha.model.Scholar;
 
-import java.io.*;
+import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.UUID;
+import java.util.Collections;
+import java.util.Comparator;
 
-
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(locations = {"classpath:spring-servlet.xml"})
 public class Test{
+
     @org.junit.Test
-    public void test2() throws IOException{
-//        File countryFile = new File("/home/kangwenjie/IdeaProjects/WOS/src/main/webapp/file/CountryName.txt");  // CSV文件路径
-//        BufferedReader br = null;
-//        try {
-//            br = new BufferedReader(new FileReader(countryFile));
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//        String line = "";
-//        StringBuilder countryNames = new StringBuilder();
-//        while ((line = br.readLine()) != null) {
-//            String name = line.replace("\"", "").split("-")[0];
-//
-//            System.out.println(line);
-//            System.out.println(name);
-//            countryNames.append(name + ",");
-//
-//        }
-//        br.close();
-//
-//        File countryFile2 = new File("/home/kangwenjie/IdeaProjects/WOS/src/main/webapp/file/CountryName2.txt");  // CSV文件路径
-//
-//        BufferedWriter bw = new BufferedWriter(new FileWriter(countryFile2));
-//        bw.write(countryNames.toString());
-//        bw.close();
-        for(int i=0;i<10;i++){
-            String uuid = UUID.randomUUID().toString().replaceAll("-", "");
-            System.out.println(uuid);
+    public void testSort() {
+        Scholar s1 = new Scholar();
+        Scholar s2 = new Scholar();
+        Scholar s3 = new Scholar();
+        Scholar s4 = new Scholar();
+        s1.setHindex(10);
+        s2.setHindex(5);
+        s3.setHindex(20);
+        ArrayList<Scholar> scholars = new ArrayList<Scholar>();
+        scholars.add(s4);
+
+        scholars.add(s1);
+        scholars.add(s2);
+        scholars.add(s3);
+
+        Collections.sort(scholars, new Comparator<Scholar>() {
+            public int compare(Scholar o1, Scholar o2) {
+                if (o1.getHindex() > o2.getHindex()) {
+                    return -1;
+                } else if (o1.getHindex() < o2.getHindex()) {
+                    return 1;
+                }
+                return 0;
+            }
+        });
+        for(int i = 0; i < 4; i++) {
+            System.out.println(scholars.get(i).getHindex());
+
+        }
+        for (Scholar scholar : scholars) {
+            System.out.println(scholar.getHindex());
         }
     }
 
+    @org.junit.Test
+    public void testReplace() {
+        String str = "ad.asdas*sdas";
+        System.out.println(str.replaceAll("\\*|\\.", ""));
+    }
 
+    @org.junit.Test
+    public void testImg() {
+        File file = new File("");
+        System.out.println(file.getPath());
+        System.out.println(file.toURI().getPath());
 
+        System.out.println(file.exists());
+        System.out.println(file.getAbsolutePath());
+    }
 }

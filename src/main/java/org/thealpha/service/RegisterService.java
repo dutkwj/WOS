@@ -74,4 +74,8 @@ public class RegisterService {
             registerDao.saveUser(email, ConfigurationConstant.QF_RESEARCH_FIELD, user.getResearchField());
         }
     }
+
+    public boolean isEmailExist(String email) {
+        return registerDao.isEmailExist(email);
+    }
 }

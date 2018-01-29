@@ -1,5 +1,6 @@
 package org.thealpha.service;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.thealpha.dao.inter.ScholarCooperateDao;
@@ -41,10 +42,16 @@ public class ScholarCooperateService {
         }
         for (Cooperater cooperater : cooperaterList) {
             cooperater.setName(scholarIdObjectMap.get(cooperater.getIndex()).getName());
+            cooperater.setName(scholarIdObjectMap.get(cooperater.getIndex()).getName());
+            cooperater.setHindex(scholarIdObjectMap.get(cooperater.getIndex()).getHindex());
             cooperater.setAff(scholarIdObjectMap.get(cooperater.getIndex()).getAff());
             cooperater.setLatlng(scholarIdObjectMap.get(cooperater.getIndex()).getLatlng());
             cooperater.setLatitude(scholarIdObjectMap.get(cooperater.getIndex()).getLatitude());
             cooperater.setLongitude(scholarIdObjectMap.get(cooperater.getIndex()).getLongitude());
+            cooperater.setFieldName(scholarIdObjectMap.get(cooperater.getIndex()).getFieldName());
+            cooperater.setCooperateNumber(scholarIdObjectMap.get(cooperater.getIndex()).getCooperateNumber());
+            cooperater.setCoTeamNumber(scholarIdObjectMap.get(cooperater.getIndex()).getCoTeamNumber());
+            cooperater.setStudentsNumber(scholarIdObjectMap.get(cooperater.getIndex()).getStudentsNumber());
         }
         return cooperaterList;
     }
@@ -53,11 +60,12 @@ public class ScholarCooperateService {
         List<YearCount> yearCounts = scholarCooperateDao.getCooperateYearCountsById(scholarId);
 //        去掉1980年之前的，合作者数量在20以上的按20算
         List<Integer> years = new ArrayList<Integer>();
+        List<YearCount> removeYearCounts = new ArrayList<YearCount>();
         for (YearCount yearCount: yearCounts) {
             int year = yearCount.getYear();
             int count = yearCount.getCount();
             if (year < 1980) {
-                yearCounts.remove(yearCount);
+                removeYearCounts.add(yearCount);
                 continue;
             } else {
                 years.add(year);
@@ -66,6 +74,9 @@ public class ScholarCooperateService {
                 count = 20;
                 yearCount.setCount(count);
             }
+        }
+        if (CollectionUtils.isNotEmpty(removeYearCounts)) {
+            yearCounts.removeAll(removeYearCounts);
         }
         for (int i = 1980; i < 2017; i++) {
             if (!years.contains(i)) {

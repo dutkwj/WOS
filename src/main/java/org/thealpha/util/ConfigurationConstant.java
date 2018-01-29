@@ -4,7 +4,7 @@ package org.thealpha.util;
  * Created by kangwenjie on 17-12-14.
  */
 public class ConfigurationConstant {
-//    cs_scholar, personal_info:(name, aff, lat_lng), papers:(paper_ids)
+//    cs_scholar, personal_info:(name, aff, lat_lng, h_index, field_name, cooperate_number, co_team_number, students_number, ref_number, refed_number, co_ref_number, co_refed_number), papers:(paper_ids)
     public static final String TABLE_CS_SCHOLAR = "cs_scholar";
     public static final String CF_PERSONAL_INFO = "personal_info";
     public static final String CF_PAPERS = "papers";
@@ -12,9 +12,19 @@ public class ConfigurationConstant {
     public static final String QF_AFF = "aff";
     public static final String QF_PAPER_IDS = "paper_ids";
     public static final String QF_LAT_LNG = "lat_lng";
+    public static final String QF_H_INDEX = "h_index";
+    public static final String QF_FIELD_NAME = "field_name";
+    public static final String QF_COOPERATE_NUMBER = "cooperate_number";
+    public static final String QF_CO_TEAM_NUMBER = "co_team_number";
+    public static final String QF_STUDENTS_NUMBER = "students_number";
+    public static final String QF_REF_NUMBER = "ref_number";
+    public static final String QF_REFED_NUMBER = "refed_number";
+    public static final String QF_CO_REF_NUMBER = "co_ref_number";
+    public static final String QF_CO_REFED_NUMBER = "co_refed_number";
 
 
-//    cs_relationship, cooperate:(count, eve_year_count), co_team:(team_intension), teacher_student:()
+
+    //    cs_relationship, cooperate:(count, eve_year_count), co_team:(team_intension), teacher_student:(teacher, students)
     public static final String TABLE_CS_RELATIONSHIP = "cs_relationship";
     public static final String CF_COOPERATE = "cooperate";
     public static final String CF_CO_TEAM = "co_team";
@@ -23,9 +33,11 @@ public class ConfigurationConstant {
     public static final String QF_COUNT = "count";
     public static final String QF_EVE_YEAR_COUNT = "eve_year_count";
     public static final String QF_TEAM_INTENSION = "team_intension";
+    public static final String QF_TEACHER = "tacher";
+    public static final String QF_STUDENTS = "students";
 
 
-//    cs_paper, authors:(author_ids), reference:(ref_ids, refed_ids, co_ref_ids, co_refed_ids)
+    //    cs_paper, authors:(author_ids), reference:(ref_ids, refed_ids, co_ref_ids, co_refed_ids)
     public static final String TABLE_CS_PAPER = "cs_paper";
     public static final String CF_AUTHORS = "authors";
     public static final String QF_AUTHOR_IDS = "author_ids";
@@ -50,10 +62,24 @@ public class ConfigurationConstant {
     public static final String QF_DEGREE = "degree";
     public static final String QF_PERSONAL_PHOTO_NAME = "personal_photo_name";
     public static final String QF_RESEARCH_FIELD = "research_field";
+    public static final String QF_WEIGHT = "weight";
 
 
     public static final String ZK_QUORUM = "100.66.1.209,100.66.2.1,100.66.2.22";
     public static final String ZK_CLIENT_PORT = "2181";
 
+    public static final String REDIS_ALL_SCHOLARS = "redis_all_scholars";
+    public static final String REDIS_HINDEX_TOP10_SCHOLARS = "redis_hindex_top10_scholars";
+    public static final String REDIS_HINDEX_TOP100_SCHOLARS = "redis_hindex_top100_scholars";
 
+
+    public static final String REDIS_COOPERATE_NUMBER_TOP100_SCHOLARS = "redis_cooperate_number_top100_scholars";
+    public static final String REDIS_CO_TEAM_NUMBER_TOP100_SCHOLARS = "redis_co_team_number_top100_scholars";
+    public static final String REDIS_STUDENTS_NUMBER_TOP100_SCHOLARS = "redis_students_number_top100_scholars";
+    public static final String REDIS_REF_NUMBER_TOP100_SCHOLARS = "redis_ref_number_top100_scholars";
+    public static final String REDIS_REFED_NUMBER_TOP100_SCHOLARS = "redis_refed_number_top100_scholars";
+    public static final String REDIS_CO_REF_NUMBER_TOP100_SCHOLARS = "redis_co_ref_number_top100_scholars";
+    public static final String REDIS_CO_REFED_NUMBER_TOP100_SCHOLARS = "redis_co_refed_number_top100_scholars";
+
+    public static final int MAX_SIZE = 200;
 }

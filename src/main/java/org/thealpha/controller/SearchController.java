@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.thealpha.model.Scholar;
 import org.thealpha.model.SearchItem;
+import org.thealpha.service.RecommendService;
 import org.thealpha.service.ScholarInfoService;
 
 import java.io.IOException;
@@ -21,9 +22,12 @@ public class SearchController {
     @Autowired
     private ScholarInfoService scholarInfoService;
 
+    @Autowired
+    private RecommendService recommendService;
+
     @RequestMapping("/index")
     public String searchMoreIndex(Model model) {
-        List<Scholar> moreRecommendScholars = scholarInfoService.getMoreRecommendScholars();
+        List<Scholar> moreRecommendScholars = recommendService.getHindexTop100Scholars();
         model.addAttribute("scholars", moreRecommendScholars);
         return "searchMore";
     }

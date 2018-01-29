@@ -4,7 +4,7 @@
 <html long="en" class="no-js">
 <head>
     <meta http-equiv="Content-Type"content="text/html; charset=UTF-8">
-    <title>register</title>
+    <title>register success</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="${path}/layui/css/layui.css" type="text/css" media="all">
     <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
@@ -12,21 +12,35 @@
 
 </head>
 <body >
+<<<<<<< HEAD
 <div class="qqq" style="width: 100%;z-index: 250">
     <ul class="layui-nav">
         <li class="layui-nav-item"><a href="">合作关系</a></li>
         <li class="layui-nav-item"><a href="">师生关系</a></li>
         <li class="layui-nav-item"><a href="">引用关系</a></li>
+=======
+<div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
+    <ul class="layui-nav">
+        <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
+>>>>>>> 20d54078917cc68596e592974c46bbb3ce04d4f8
     </ul>
     <ul class="layui-nav layui-layout-right">
     <#if Session.user?exists>
         <li class="layui-nav-item">
             <a href="javascript:;">
+<<<<<<< HEAD
                 <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
             ${Session['user'].name!""}
             </a>
             <dl class="layui-nav-child">
                 <dd><a href="/showPersonalInfo/getUserInfo">base information</a></dd>
+=======
+                <img src="/hdfs/personalPhoto" class="layui-nav-img">
+            ${Session['user'].name!""}
+            </a>
+            <dl class="layui-nav-child">
+                <dd><a href="">base information</a></dd>
+>>>>>>> 20d54078917cc68596e592974c46bbb3ce04d4f8
                 <dd><a href="">modify information</a></dd>
             </dl>
         </li>
@@ -37,6 +51,34 @@
     </#if>
     </ul>
 </div>
+<<<<<<< HEAD
+=======
+<script type="text/javascript" src="../layui/layui.all.js" charset="utf-8"></script>
+<#--<script src="../js/jquery.js"></script>-->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/stickUp.min.js"></script>
+
+<script type="text/javascript">
+
+    layui.use('element', function () {
+        var element = layui.element;
+        element.on('nav(demo)', function (elem) {
+            //console.log(elem)
+            layer.msg(elem.text());
+        });
+    });
+    jQuery(function($) {
+        $(document).ready( function() {
+            $('.topNav').stickUp();
+        });
+    });
+</script>
+
+<br/>
+<br/>
+<br/>
+
+>>>>>>> 20d54078917cc68596e592974c46bbb3ce04d4f8
 <div class="layui-container">
     <div class="layui-row">
         <div class="layui-col-xs2">
@@ -47,7 +89,7 @@
             <br/>
             <br/>
 
-            <i class="icon-ok-sign icon-3x" style="color:#5cb85c"></i>&nbsp;&nbsp;&nbsp;&nbsp; <font size="40px" color="black">register success!&nbsp;<a href="/login/index" style="color: black;cursor: pointer">click me to login!</a></font>
+            <i class="icon-ok-sign icon-3x" style="color:#5cb85c"></i>&nbsp;&nbsp;&nbsp;&nbsp; <font size="10px" color="black">register success!&nbsp;<a href="/login/index" style="color: black;cursor: pointer">click me to login!</a></font>
 
         </div>
     </div>

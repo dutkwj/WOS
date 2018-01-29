@@ -7,7 +7,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.thealpha.model.Scholar;
+import org.thealpha.model.User;
+import org.thealpha.service.RecommendService;
 import org.thealpha.service.ScholarInfoService;
+
+import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/scholar")

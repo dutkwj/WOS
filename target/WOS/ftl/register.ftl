@@ -7,26 +7,45 @@
     <title>register</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="${path}/layui/css/layui.css" type="text/css" media="all">
-
+    <link href="../css/dialog/normalize.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/dialog/animate.min.css">
+    <link rel="stylesheet" href="../css/dialog/jquery.gDialog.css">
+    <script src="../js/dialog/jquery.js"></script>
+    <script src="../js/dialog/jquery.gDialog.js"></script>
 
 </head>
 <body >
+<<<<<<< HEAD
 <div class="qqq" style="width: 100%;z-index: 250">
     <ul class="layui-nav">
         <li class="layui-nav-item"><a href="">合作关系</a></li>
         <li class="layui-nav-item"><a href="">师生关系</a></li>
         <li class="layui-nav-item"><a href="">引用关系</a></li>
+=======
+<div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
+    <ul class="layui-nav">
+        <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
+>>>>>>> 20d54078917cc68596e592974c46bbb3ce04d4f8
     </ul>
     <ul class="layui-nav layui-layout-right">
     <#if Session.user?exists>
         <li class="layui-nav-item">
             <a href="javascript:;">
+<<<<<<< HEAD
                 <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
             ${Session['user'].name!""}
             </a>
             <dl class="layui-nav-child">
                 <dd><a href="/showPersonalInfo/getUserInfo">base information</a></dd>
                 <dd><a href="/modifyPsw/modifyPage">modify information</a></dd>
+=======
+                <img src="/hdfs/personalPhoto" class="layui-nav-img">
+            ${Session['user'].name!""}
+            </a>
+            <dl class="layui-nav-child">
+                <dd><a href="">base information</a></dd>
+                <dd><a href="">modify information</a></dd>
+>>>>>>> 20d54078917cc68596e592974c46bbb3ce04d4f8
             </dl>
         </li>
         <li class="layui-nav-item"><a href="/logout">logout</a></li>
@@ -37,17 +56,28 @@
     </ul>
 </div>
 <script type="text/javascript" src="../layui/layui.all.js" charset="utf-8"></script>
-<script type="text/javascript">
-    layui.use('element', function () {
-        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+<#--<script src="../js/jquery.js"></script>-->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/stickUp.min.js"></script>
 
-        //监听导航点击
+<script type="text/javascript">
+
+    layui.use('element', function () {
+        var element = layui.element;
         element.on('nav(demo)', function (elem) {
             //console.log(elem)
             layer.msg(elem.text());
         });
     });
+    jQuery(function($) {
+        $(document).ready( function() {
+            $('.topNav').stickUp();
+        });
+    });
 </script>
+<br/>
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
@@ -167,7 +197,7 @@
             <#--</div>-->
         <#--</div>-->
         <div class="layui-form-item">
-            <div class="layui-upload">
+            <div >
 
                 <button type="button" class="layui-btn" id="test1">personal photo</button>
                 &nbsp;&nbsp;
@@ -256,16 +286,24 @@
                 }
                 //上传成功
             }
-            ,error: function(){
-                //演示失败状态，并实现重传
-                var demoText = $('#demoText');
-                demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
-                demoText.find('.demo-reload').on('click', function(){
-                    uploadInst.upload();
-                });
-            }
+//            ,error: function(){
+//                //演示失败状态，并实现重传
+////                var demoText = $('#demoText');
+////                demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
+////                demoText.find('.demo-reload').on('click', function(){
+////                    uploadInst.upload();
+////                });
+//            }
         });
     });
+
+    <#if registerError??>
+        $.gDialog.alert("${registerError!"register error"}", {
+            title: "Register Error",
+            animateIn: "bounceIn",
+            animateOut: "bounceOut"
+        });
+    </#if>
 
 </script>
 </script>

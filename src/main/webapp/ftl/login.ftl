@@ -4,7 +4,7 @@
 <html long="en" class="no-js">
 <head>
     <meta http-equiv="Content-Type"content="text/html; charset=UTF-8">
-    <title>登陆界面</title>
+    <title>login</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/component.css" />
     <link rel="stylesheet" href="../layui/css/layui.css" type="text/css" media="all">
@@ -13,27 +13,24 @@
     <link rel="stylesheet" href="../css/dialog/animate.min.css">
     <link rel="stylesheet" href="../css/dialog/jquery.gDialog.css">
 
-    <script type="text/javascript" src="../js/jquery-3.2.1.min.js" charset="utf-8"></script>
     <script src="../js/dialog/jquery.js"></script>
     <script src="../js/dialog/jquery.gDialog.js"></script>
 
 </head>
 <body>
-<div class="qqq" style="width: 100%;z-index: 250">
+<div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
     <ul class="layui-nav">
-        <li class="layui-nav-item"><a href="">合作关系</a></li>
-        <li class="layui-nav-item"><a href="">师生关系</a></li>
-        <li class="layui-nav-item"><a href="">引用关系</a></li>
+        <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
     </ul>
     <ul class="layui-nav layui-layout-right">
     <#if Session.user?exists>
         <li class="layui-nav-item">
             <a href="javascript:;">
-                <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                <img src="/hdfs/personalPhoto" class="layui-nav-img">
             ${Session['user'].name!""}
             </a>
             <dl class="layui-nav-child">
-                <dd><a href="/showPersonalInfo/getUserInfo">base information</a></dd>
+                <dd><a href="">base information</a></dd>
                 <dd><a href="">modify information</a></dd>
             </dl>
         </li>
@@ -47,11 +44,8 @@
 <script type="text/javascript" src="../layui/layui.all.js" charset="utf-8"></script>
 <script type="text/javascript">
     layui.use('element', function () {
-        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
-
-        //监听导航点击
+        var element = layui.element;
         element.on('nav(demo)', function (elem) {
-            //console.log(elem)
             layer.msg(elem.text());
         });
     });
@@ -74,39 +68,19 @@
         </form>
     </div>
 </div>
-<#--<script src="../js/TweenLite.min.js"></script>-->
-<#--<script src="../js/EasePack.min.js"></script>-->
-<#--<script src="../js/rAF.js"></script>-->
 <script src="../js/demo-1.js"></script>
-<#--<div style="text-align:center;">-->
-<script type="text/javascript" src="../layui/layui.js" charset="utf-8"></script>
 
-<#--<script type="text/javascript">-->
-<#--layui.use(['form'], function() {-->
-    <#--var form = layui.form;-->
-    <#--form.verify({-->
-        <#--usererror: function (value) {-->
-            <#--return "test error";-->
-<#--//            var password = document.getElementById('password').value;-->
-<#--//            if (!(password == value)) {-->
-<#--//                return "two input password must be consistent";-->
-<#--//            }-->
-        <#--}-->
-    <#--});-->
-<#--}-->
-<#--</script>-->
 
 <script>
     function submitForm(){
-
         document.getElementById("login_form").submit();
     }
     <#if loginerror??>
-    $.gDialog.alert("${loginerror}", {
-        title: "Login Error",
-        animateIn: "bounceIn",
-        animateOut: "bounceOut"
-    });
+        $.gDialog.alert("${loginerror}", {
+            title: "Login Error",
+            animateIn: "bounceIn",
+            animateOut: "bounceOut"
+        });
     </#if>
 
 </script>

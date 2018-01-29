@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>首页</title>
+    <title>scholar</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="${path}/css/hero-slider-style.css">                                  <!-- Hero slider style -->
     <link rel="stylesheet" href="${path}/css/templatemo-style.css">                                   <!-- Templatemo style -->
 
+    <link rel="stylesheet" href="../Font_Awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/stickup.css" type="text/css">
 
     <link rel="stylesheet" href="${path}/css/bootstrap.min.css" type="text/css">
     <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
@@ -24,21 +26,35 @@
 
 </head>
 <body>
+<<<<<<< HEAD
 <div class="qqq" style="width: 100%;z-index: 250">
     <ul class="layui-nav">
         <li class="layui-nav-item"><a href="">合作关系</a></li>
         <li class="layui-nav-item"><a href="">师生关系</a></li>
         <li class="layui-nav-item"><a href="">引用关系</a></li>
+=======
+<div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
+    <ul class="layui-nav">
+        <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
+>>>>>>> 20d54078917cc68596e592974c46bbb3ce04d4f8
     </ul>
     <ul class="layui-nav layui-layout-right">
     <#if Session.user?exists>
         <li class="layui-nav-item">
             <a href="javascript:;">
+<<<<<<< HEAD
                 <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
             ${Session['user'].name!""}
             </a>
             <dl class="layui-nav-child">
                 <dd><a href="/showPersonalInfo/getUserInfo">base information</a></dd>
+=======
+                <img src="/hdfs/personalPhoto" class="layui-nav-img">
+            ${Session['user'].name!""}
+            </a>
+            <dl class="layui-nav-child">
+                <dd><a href="">base information</a></dd>
+>>>>>>> 20d54078917cc68596e592974c46bbb3ce04d4f8
                 <dd><a href="">modify information</a></dd>
             </dl>
         </li>
@@ -49,17 +65,29 @@
     </#if>
     </ul>
 </div>
+<<<<<<< HEAD
 <script type="text/javascript" src="../js/layui.js" charset="utf-8"></script>
+=======
+
+>>>>>>> 20d54078917cc68596e592974c46bbb3ce04d4f8
 <script type="text/javascript" src="../js/layui.all.js" charset="utf-8"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/stickUp.min.js"></script>
 
 <script type="text/javascript">
-    layui.use('element', function(){
+    layui.use('element', function () {
         var element = layui.element;
-        element.on('nav(demo)', function(elem){
+        element.on('nav(demo)', function (elem) {
+            //console.log(elem)
             layer.msg(elem.text());
         });
     });
-
+    jQuery(function($) {
+        $(document).ready( function() {
+            $('.topNav').stickUp();
+        });
+    });
 </script>
 <br/>
 <#--<div class="layui-container">-->
@@ -79,16 +107,15 @@
 <div class="container-fluid tm-section tm-section-2">
     <div class="row tm-media-row">
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <img src="../img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">
+            <img src="../img/scholarImg.png" style="width: 60%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">
         </div>
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
             <div class="tm-media-text-container">
-                <h3 class="tm-media-title tm-gray-text"><span id="middleScholarName">${middleScholar.name}</span></h3>
+                <h3 class="tm-media-title tm-gray-text"><span id="middleScholarName">${middleScholar.name!""}</span></h3>
                 <input type="hidden" id="middleScholarIndex" value="${middleScholar.index}"/>
-                <p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218 <br />
-                    <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br />
-                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true" id="middleScholarAff">${middleScholar.aff}</span> <br />
-                    <abbr title="Phone"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 123456</address></p>
+                <p class="tm-media-description tm-gray-text-2">Q-index:${middleScholar.hindex!""} | H-index:<span id="middleScholarHindex">${middleScholar.hindex!""}</span> | <span id="statisticalNumber"></span> <br />
+                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: <span id="middleScholarAff">${middleScholar.aff!""}</span> <br />
+                    <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study field: <span id="middleScholarFieldName">${middleScholar.fieldName!""}</span></p>
             </div>
         </div>
     </div>
@@ -100,25 +127,25 @@
         <div class="span12">
             <ul class="nav nav-tabs" id="nav_relation">
                 <li class="active" id="li_cooperate">
-                    <a href="#" id="a_cooperate">合作关系</a>
+                    <a href="#" id="a_cooperate">cooperate relationship</a>
                 </li>
                 <li id="li_team">
-                    <a href="#">团队关系</a>
+                    <a href="#">team relationship</a>
                 </li>
                 <li id="li_teastu">
-                    <a href="#" id="a_teastu">师生关系</a>
+                    <a href="#" id="a_teastu">teacher students relationship</a>
                 </li>
                 <li id="li_ref">
-                    <a href="#">直接引用关系</a>
+                    <a href="#">direct reference relationship</a>
                 </li>
                 <li id="li_refed">
-                    <a href="#">直接被引关系</a>
+                    <a href="#">direct referenced relationship</a>
                 </li>
                 <li id="li_coRef">
-                    <a href="#">共同引用关系</a>
+                    <a href="#">common reference relationship</a>
                 </li>
                 <li id="li_coRefed">
-                    <a href="#">共同被引关系</a>
+                    <a href="#">common referenced relationship</a>
                 </li>
             </ul>
         </div>
@@ -138,6 +165,8 @@
             $("svg").attr("height", 0);
             $("#content").html(result);
         });
+        $("#statisticalNumber").html("Cooperator number:" + ${middleScholar.cooperateNumber!""});
+
         $("#nav_relation > li").click(function (e) {
 
             e.preventDefault();
@@ -146,56 +175,48 @@
 
             var navTab = $(this).children('a').text();
             var middleScholarIndex = $("#middleScholarIndex").attr("value");
-            if(navTab == '合作关系') {
+            if(navTab == 'cooperate relationship') {
                 $.get('/cooperateRela/'+middleScholarIndex+'/count', function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
                 })
 
-            } else if(navTab == '团队关系') {
+            } else if(navTab == 'team relationship') {
                 $.get('/coTeamRela/'+middleScholarIndex, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
+
                 })
-            } else if(navTab == '师生关系') {
-                $.get('worldMap', function (result) {
+            } else if(navTab == 'teacher students relationship') {
+                $.get('/teacherStudent/'+middleScholarIndex, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
                 })
-            } else if(navTab == '直接引用关系') {
+            } else if(navTab == 'direct reference relationship') {
                 $.get('/reference/ref/'+middleScholarIndex, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
                 })
-            } else if(navTab == '直接被引关系') {
+            } else if(navTab == 'direct referenced relationship') {
                 $.get('/reference/refed/'+middleScholarIndex, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
                 })
-            } else if(navTab == '共同引用关系') {
+            } else if(navTab == 'common reference relationship') {
                 $.get('/reference/coRef/'+middleScholarIndex, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
                 })
-            } else if(navTab == '共同被引关系') {
-//                $.get('partnerCountEveYear', function (result) {
-//                    $("svg").attr("width", 0);
-//                    $("svg").attr("height", 0);
-//                    $("#content").html(result);
-//                })
+            } else if(navTab == 'common referenced relationship') {
                 $.get('/reference/coRefed/'+middleScholarIndex, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
-                    $("#content").html(result);
-                })
-            } else {
-                $.get('Hello.ftl', function (result) {
                     $("#content").html(result);
                 })
             }

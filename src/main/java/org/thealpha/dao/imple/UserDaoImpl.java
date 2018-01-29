@@ -40,6 +40,7 @@ public class UserDaoImpl implements UserDao {
                 User user = new User();
                 String name = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_USER_INFO), Bytes.toBytes(ConfigurationConstant.QF_NAME)));
                 String personalPhotoName = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_USER_INFO), Bytes.toBytes(ConfigurationConstant.QF_PERSONAL_PHOTO_NAME)));
+                user.setEmail(email);
                 if (StringUtils.isNotBlank(name)) {
                     user.setName(name);
                 }

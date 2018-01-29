@@ -22,6 +22,8 @@ import org.thealpha.model.Scholar;
 import org.thealpha.model.SearchItem;
 import org.thealpha.util.ConfigurationConstant;
 import org.thealpha.util.HbaseUtils;
+import org.thealpha.util.ListTranscoder;
+import redis.clients.jedis.JedisCluster;
 
 import java.io.IOException;
 import java.util.*;
@@ -35,8 +37,16 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
     @Autowired
     private HbaseTemplate hbaseTemplate;
 
+    @Autowired
+    private JedisCluster jedisCluster;
+
     public List<String> getRecommendScholars() {
         List<String> recommendScholars = new ArrayList<String>();
+//        hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
+//            public Scholar mapRow(Result result, int rowNum) throws Exception {
+//                return null;
+//            }
+//        })
         recommendScholars.add("0DE9F497");
         recommendScholars.add("80E2C811");
         recommendScholars.add("7FC8CD3A");
@@ -102,17 +112,55 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 Scholar scholar = new Scholar();
                 for (Cell cell : result.rawCells()) {
                     String rowKey = new String(CellUtil.cloneRow(cell));
+
                     String qualiFier = new String(CellUtil.cloneQualifier(cell));
                     String value = new String(CellUtil.cloneValue(cell));
                     scholar.setIndex(rowKey);
                     if (ConfigurationConstant.QF_NAME.equals(qualiFier)) {
                         scholar.setName(value);
                     } else if (ConfigurationConstant.QF_AFF.equals(qualiFier)) {
+                        value = value.replaceAll("\u2028", " ");
                         scholar.setAff(value);
                     } else if (ConfigurationConstant.QF_LAT_LNG.equals(qualiFier)) {
                         scholar.setLatlng(value);
                         scholar.setLatitude(value.split(", ")[0]);
                         scholar.setLongitude(value.split(", ")[1]);
+                    } else if (ConfigurationConstant.QF_H_INDEX.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setHindex(Double.parseDouble(value));
+                        }
+                    } else if (ConfigurationConstant.QF_FIELD_NAME.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setFieldName(value);
+                        }
+                    } else if (ConfigurationConstant.QF_COOPERATE_NUMBER.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setCooperateNumber(Integer.parseInt(value));
+                        }
+                    } else if (ConfigurationConstant.QF_CO_TEAM_NUMBER.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setCoTeamNumber(Integer.parseInt(value));
+                        }
+                    } else if (ConfigurationConstant.QF_STUDENTS_NUMBER.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setStudentsNumber(Integer.parseInt(value));
+                        }
+                    } else if (ConfigurationConstant.QF_REF_NUMBER.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setRefNumber(Integer.parseInt(value));
+                        }
+                    } else if (ConfigurationConstant.QF_REFED_NUMBER.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setRefedNumber(Integer.parseInt(value));
+                        }
+                    } else if (ConfigurationConstant.QF_CO_REF_NUMBER.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setCoRefNumber(Integer.parseInt(value));
+                        }
+                    } else if (ConfigurationConstant.QF_CO_REFED_NUMBER.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setCoRefedNumber(Integer.parseInt(value));
+                        }
                     }
                 }
                 scholarList.add(scholar);
@@ -137,6 +185,16 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 String name = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_NAME)));
                 String aff = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_AFF)));
                 String latlng = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_LAT_LNG)));
+                String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
+                String fieldName = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_FIELD_NAME)));
+                String cooperatorNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_COOPERATE_NUMBER)));
+                String coTeamNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_TEAM_NUMBER)));
+                String studentsNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_STUDENTS_NUMBER)));
+                String refNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_REF_NUMBER)));
+                String refedNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_REFED_NUMBER)));
+                String coRefNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REF_NUMBER)));
+                String coRefedNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_NUMBER)));
+
                 scholar.setIndex(scholarId);
                 scholar.setName(name);
                 scholar.setAff(aff);
@@ -144,6 +202,33 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                     scholar.setLatlng(latlng);
                     scholar.setLatitude(latlng.split(", ")[0]);
                     scholar.setLongitude(latlng.split(", ")[1]);
+                }
+                if (StringUtils.isNotBlank(hindex)) {
+                    scholar.setHindex(Double.parseDouble(hindex));
+                }
+                if (StringUtils.isNotBlank(fieldName)) {
+                    scholar.setFieldName(fieldName);
+                }
+                if (StringUtils.isNotBlank(cooperatorNumber)) {
+                    scholar.setCooperateNumber(Integer.parseInt(cooperatorNumber));
+                }
+                if (StringUtils.isNotBlank(coTeamNumber)) {
+                    scholar.setCoTeamNumber(Integer.parseInt(coTeamNumber));
+                }
+                if (StringUtils.isNotBlank(studentsNumber)) {
+                    scholar.setStudentsNumber(Integer.parseInt(studentsNumber));
+                }
+                if (StringUtils.isNotBlank(refNumber)) {
+                    scholar.setRefNumber(Integer.parseInt(refNumber));
+                }
+                if (StringUtils.isNotBlank(refedNumber)) {
+                    scholar.setRefedNumber(Integer.parseInt(refedNumber));
+                }
+                if (StringUtils.isNotBlank(coRefNumber)) {
+                    scholar.setCoRefNumber(Integer.parseInt(coRefNumber));
+                }
+                if (StringUtils.isNotBlank(coRefedNumber)) {
+                    scholar.setCoRefedNumber(Integer.parseInt(coRefedNumber));
                 }
                 return scholar;
             }
@@ -175,6 +260,27 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 scholarAffIndex.add(Bytes.toString(result.getRow()));
             }
         }
+
+//        Set<String> scholarHindex = null;
+//        if (StringUtils.isNotBlank(searchItem.getHindex())) {
+//            scholarHindex= new HashSet<String>();
+//            String[] hindexs = searchItem.getHindex().split("-");
+//            double lowHindex = Double.parseDouble(hindexs[0]);
+//            double highHindex = Double.parseDouble(hindexs[1]);
+//            byte[] in = jedisCluster.get(ConfigurationConstant.REDIS_ALL_SCHOLARS.getBytes());
+//            List<Scholar> allScholars = (List<Scholar>) ListTranscoder.deserialize(in);
+//            for (Scholar scholar : allScholars) {
+//                double hindex = scholar.getHindex();
+//                if (hindex >= highHindex) {
+//                    continue;
+//                } else if (hindex < highHindex && hindex >= lowHindex) {
+//                    scholarHindex.add(scholar.getIndex());
+//                } else {
+//                    break;
+//                }
+//            }
+//        }
+
         HbaseUtils.closeTableAndConn(table, connection);
 
         List<String> scholarIds = null;
@@ -191,6 +297,12 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 scholarIds.add(scholarId);
             }
         }
+//        else if (CollectionUtils.isNotEmpty(scholarHindex)) {
+//            scholarIds = new ArrayList<String>();
+//            for (String scholarId : scholarHindex) {
+//                scholarIds.add(scholarId);
+//            }
+//        }
         return scholarIds;
     }
 }

@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>首页</title>
+    <title>index</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,28 +11,26 @@
     <link rel="stylesheet" href="${path}/css/buttons.css" type="text/css">
     <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <link rel="stylesheet" href="${path}/css/bootstrap.min.css" type="text/css">
-
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/stickup.css" type="text/css">
     <link rel="stylesheet" href="${path}/css/templatemo-style.css">
 
 </head>
 <body>
-<div class="qqq" style="width: 100%; z-index: 250">
-    <ul class="layui-nav" style="width: 100%;">
-        <li class="layui-nav-item"><a href="">合作关系</a></li>
-        <li class="layui-nav-item"><a href="">师生关系</a></li>
-        <li class="layui-nav-item"><a href="">引用关系</a></li>
+<div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
+    <ul class="layui-nav">
+        <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
     </ul>
     <ul class="layui-nav layui-layout-right">
         <#if Session.user?exists>
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    <img src="/hdfs/personalPhoto" class="layui-nav-img">
                     ${Session['user'].name!""}
                 </a>
                 <dl class="layui-nav-child">
-                    <dd><a href="/showPersonalInfo/getUserInfo">base information</a></dd>
-                    <dd><a href="/modifyPsw/modifyPage">modify information</a></dd>
+                    <dd><a href="">base information</a></dd>
+                    <dd><a href="">modify information</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item"><a href="/logout">logout</a></li>
@@ -43,25 +41,34 @@
     </ul>
 </div>
 
-<#--<script type="text/javascript" src="../js/layui.js" charset="utf-8"></script>-->
 <script type="text/javascript" src="../js/layui.all.js" charset="utf-8"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/stickUp.min.js"></script>
 
-<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 <script type="text/javascript">
     layui.use('element', function () {
-        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
-
-        //监听导航点击
+        var element = layui.element;
         element.on('nav(demo)', function (elem) {
             //console.log(elem)
             layer.msg(elem.text());
         });
     });
+    jQuery(function($) {
+        $(document).ready( function() {
+            $('.topNav').stickUp();
+        });
+    });
 </script>
+
+<br/>
+<br/>
+
+
 <div class="banner">
     <div class="container">
-        <div class="banner-info1" style="margin-left: 35%;">
-            <img src="../img/WOS.png" alt="wos" >
+        <div style="margin-left:25%">
+            <img src="../img/wos.png" alt="wos" >
         </div>
         <div class="layui-container">
             <form class="layui-form" action="/simpleSearch/content">
@@ -99,6 +106,7 @@
                         </#if>
 
                         <li><a href="/searchMore/index">search more scholar</a></li>
+                        <li><a href="/rank/index">statistical rankings</a></li>
                     </ul>
                 </div>
             </div>
@@ -128,13 +136,17 @@
                 ,layer = layui.layer;
 
         var name = [];
+        var hindex = [];
         var aff = [];
         var id = [];
+        var fieldName = [];
         <#if scholars?? && (scholars?size>0)>
             <#list scholars as scholar>
                 id.push("${scholar.index!""}");
                 name.push("${scholar.name!""}");
+                hindex.push("${scholar.hindex!""}");
                 aff.push("${scholar.aff!""}");
+                fieldName.push("${scholar.fieldName!""}");
             </#list>
         </#if>
 
@@ -143,6 +155,8 @@
             elem: 'page'
             ,count: id.length
             ,limit: 5
+            ,prev:'prev page'
+            ,next:'next page'
             ,jump: function(obj){
                 //模拟渲染
                 document.getElementById('scholar_list').innerHTML = function(){
@@ -151,9 +165,13 @@
                     var subId = id.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     var subName = name.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     var subAff = aff.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                    var subFieldName = fieldName.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                    var subHindex = hindex.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     thisData.push(subId);
                     thisData.push(subName);
+                    thisData.push(subHindex);
                     thisData.push(subAff);
+                    thisData.push(subFieldName);
                     layui.each(subId, function(index, item){
 //                        arr.push('<li>'+ item +'</li>');
                         arr.push('<div class="layui-col-md2">' +
@@ -161,16 +179,15 @@
                                 '<div class="layui-col-md9" style="border-left: 1px solid #eee;border-right: 1px solid #eee;border-bottom: 1px solid #eee;">' +
                                     '<div class="row tm-media-row">' +
                                         '<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">' +
-                                            '<img src="../img/b.jpg" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">' +
+                                            '<img src="../img/scholarImg.png" style="width: 60%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">' +
                                         '</div>' +
                                         '<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">' +
                                              '<div class="tm-media-text-container">' +
                                             '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/scholar/baseInfo?authorId=' + thisData[0][index] + '">' + thisData[1][index] + '</a> </h3>' +
-                                            '<p class="tm-media-description tm-gray-text-2">h-index:131 | #Paper:662 | #Citation:93218' +
+                                            '<p class="tm-media-description tm-gray-text-2">Q-index:' + thisData[2][index] + ' | H-index:' + thisData[2][index] +
                                             '<br/>' +
-                                            '<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br/>' +
-                                            '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>' + thisData[2][index] + '<br/>' +
-                                            '<abbr title="Phone"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 123456</address></p>' +
+                                            '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ' + thisData[3][index] + '<br/>' +
+                                            '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study Field: ' + thisData[4][index] + '</p>' +
                                             '</div>' +
                                         '</div>' +
                                     '</div>' +
@@ -182,6 +199,7 @@
         });
 
     });
+
 </script>
 <script src="../js/jquery.min.js"></script>
 <script src="../js/stickUp.min.js"></script>

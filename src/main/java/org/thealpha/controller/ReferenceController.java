@@ -1,6 +1,5 @@
 package org.thealpha.controller;
 
-import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,7 +9,6 @@ import org.thealpha.dao.inter.ScholarInfoDao;
 import org.thealpha.model.Scholar;
 import org.thealpha.service.ReferenceService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

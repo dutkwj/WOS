@@ -1,5 +1,7 @@
 package org.thealpha.model;
 
+import java.util.List;
+
 /**
  * Created by kangwenjie on 18-1-5.
  */
@@ -19,6 +21,24 @@ public class User {
     private String degree;
     private String personalPhoto;
     private String researchField;
+    private List<ScholarWeight> scholarWeights;
+    private double similarity;
+
+    public double getSimilarity() {
+        return similarity;
+    }
+
+    public void setSimilarity(double similarity) {
+        this.similarity = similarity;
+    }
+
+    public List<ScholarWeight> getScholarWeights() {
+        return scholarWeights;
+    }
+
+    public void setScholarWeights(List<ScholarWeight> scholarWeights) {
+        this.scholarWeights = scholarWeights;
+    }
 
     public String getPersonalPhoto() {
         return personalPhoto;

@@ -1,3 +1,4 @@
+import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
 import org.apache.hadoop.hbase.*;
@@ -15,17 +16,19 @@ import org.springframework.data.hadoop.hbase.HbaseTemplate;
 import org.springframework.data.hadoop.hbase.RowMapper;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.thealpha.model.Scholar;
+import org.thealpha.model.ScholarWeight;
+import org.thealpha.model.User;
 import org.thealpha.util.ConfigurationConstant;
 import org.thealpha.util.HbaseUtils;
+import org.thealpha.util.ListTranscoder;
+import redis.clients.jedis.JedisCluster;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring-servlet.xml")
+@ContextConfiguration(locations = {"classpath:spring-servlet.xml", "classpath:/redis/spring-redis.xml"})
 public class HbaseTest {
     private static final String TABLE_NAME    = "cs_scholar";
     private static final String ROW_KEY       = "r";
@@ -34,6 +37,9 @@ public class HbaseTest {
 
     @Autowired
     private HbaseTemplate hbaseTemplate;
+
+    @Autowired
+    private JedisCluster jedisCluster;
 
     @Test
     public void test() {
@@ -312,7 +318,7 @@ public class HbaseTest {
     @Test
     public void importAuthorIdAff() {
         HashMap<String, String> authorIdAff = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_id_aff.csv");  // CSV文件路径
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_id_aff2.csv");  // CSV文件路径
         BufferedReader br = null;
         try
         {
@@ -322,14 +328,9 @@ public class HbaseTest {
             e.printStackTrace();
         }
         String line = "";
-        int count = 0;
         try {
             while ((line = br.readLine()) != null)
             {
-                count += 1;
-                if (count <= 11) {
-                    continue;
-                }
                 line.substring(0, line.indexOf(","));
                 String authorId = line.substring(0, line.indexOf(",")).replace("\n", "");
                 String aff = line.substring(line.indexOf(",") + 1).replaceAll("\"", "");
@@ -337,13 +338,12 @@ public class HbaseTest {
                     authorIdAff.put(authorId, aff);
 
                 }
-                System.out.println(count);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-
+        System.out.println(authorIdAff.size());
         Connection connection = null;
         Table table = null;
         Configuration conf = HBaseConfiguration.create();
@@ -802,6 +802,427 @@ public class HbaseTest {
             IOUtils.closeStream(in);
             fs.close();
         }
+    }
+
+    @Test
+    public void getAllUsers() {
+        List<User> users = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_USER, ConfigurationConstant.CF_SCAN_RECORD, ConfigurationConstant.QF_WEIGHT, new RowMapper<User>() {
+            public User mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
+                String scholarWeights = Bytes.toString(result.value());
+                if (StringUtils.isBlank(scholarWeights)) {
+                    return null;
+                }
+                List<ScholarWeight> scholarWeightList = new ArrayList<ScholarWeight>();
+                for (String scholarWeight : scholarWeights.split(", ")) {
+                    ScholarWeight sw = new ScholarWeight();
+                    sw.setIndex(scholarWeight.substring(0, scholarWeight.indexOf(":")));
+                    sw.setWeight(scholarWeight.indexOf(":") + 1);
+                    scholarWeightList.add(sw);
+                }
+                String eamil = Bytes.toString(result.getRow());
+                User user = new User();
+                user.setEmail(eamil);
+                user.setScholarWeights(scholarWeightList);
+                return user;
+            }
+        });
+        for (User u : users) {
+            System.out.println("email:" + u.getEmail());
+            List<ScholarWeight> scholarWeightList = u.getScholarWeights();
+            for (ScholarWeight scholarWeight : scholarWeightList) {
+                System.out.println(scholarWeight.getIndex() + ", " + scholarWeight.getWeight());
+            }
+        }
+    }
+
+    @Test
+    public void getHighHindexScholar() {
+
+        List<Scholar> scholars = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
+            public Scholar mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
+                Scholar scholar = new Scholar();
+                scholar.setIndex(Bytes.toString(result.getRow()));
+                scholar.setName(Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_NAME))));
+                String latlng = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_LAT_LNG)));
+                String aff = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_AFF)));
+                String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
+                String fieldName = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_FIELD_NAME)));
+
+                if (StringUtils.isNotBlank(latlng)) {
+                    scholar.setLatlng(latlng);
+                }
+                if (StringUtils.isNotBlank(aff)) {
+                    scholar.setAff(aff);
+                }
+                if (StringUtils.isNotBlank(hindex)) {
+                    scholar.setHindex(Double.parseDouble(hindex));
+                }
+                if (StringUtils.isNotBlank(fieldName)) {
+                    scholar.setFieldName(fieldName);
+                }
+                return scholar;
+            }
+        });
+        System.out.println(scholars.size());
+        Collections.sort(scholars, new Comparator<Scholar>() {
+            public int compare(Scholar o1, Scholar o2) {
+                if (o1.getHindex() > o2.getHindex()) {
+                    return -1;
+                }
+                if (o1.getHindex() < o2.getHindex()) {
+                    return 1;
+                }
+                return 0;
+            }
+        });
+//        List<Scholar> hindex0_2 = new LinkedList<Scholar>();
+//        List<Scholar> hindex2_5 = new LinkedList<Scholar>();
+//        List<Scholar> hindex5_10 = new LinkedList<Scholar>();
+//        List<Scholar> hindex10_20 = new LinkedList<Scholar>();
+//        List<Scholar> hindex20_50 = new LinkedList<Scholar>();
+//        List<Scholar> hindex50_100 = new LinkedList<Scholar>();
+//        for (Scholar scholar : scholars) {
+//            double hindex = scholar.getHindex();
+//            if (hindex < 2) {
+//                hindex0_2.add(scholar);
+//            } else if (hindex < 5) {
+//                hindex2_5.add(scholar);
+//            } else if (hindex < 10) {
+//                hindex5_10.add(scholar);
+//            } else if (hindex < 20) {
+//                hindex10_20.add(scholar);
+//            } else if (hindex < 50) {
+//                hindex20_50.add(scholar);
+//            } else {
+//                hindex50_100.add(scholar);
+//            }
+//        }
+//        System.out.println(hindex0_2.size());
+//        System.out.println(hindex2_5.size());
+//        System.out.println(hindex5_10.size());
+//        System.out.println(hindex10_20.size());
+//        System.out.println(hindex20_50.size());
+//        System.out.println(hindex50_100.size());
+
+
+//        jedisCluster.set(ConfigurationConstant.REDIS_ALL_SCHOLARS.getBytes(), ListTranscoder.serialize(scholars));
+
+        List<Scholar> top10Scholars = new ArrayList<Scholar>();
+        for (int i = 0; i < 10; i++) {
+            top10Scholars.add(scholars.get(i));
+        }
+        List<Scholar> top100Scholars = new ArrayList<Scholar>();
+        for (int i = 0; i < 100; i++) {
+            top100Scholars.add(scholars.get(i));
+        }
+        jedisCluster.set(ConfigurationConstant.REDIS_HINDEX_TOP10_SCHOLARS.getBytes(), ListTranscoder.serialize(top10Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_HINDEX_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.del("redis_top10_scholars");
+
+    }
+
+    @Test
+    public void testAff() {
+        hbaseTemplate.get(ConfigurationConstant.TABLE_CS_SCHOLAR, "822F2CBF", ConfigurationConstant.CF_PERSONAL_INFO, ConfigurationConstant.QF_AFF, new RowMapper<Scholar>() {
+            public Scholar mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
+                String aff = Bytes.toString(result.value());
+                System.out.println(aff);
+                return null;
+            }
+        });
+    }
+
+    @Test
+    public void importTeacherStudentTest() {
+        Map<String, String> teaStudentsMap = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/tea_stu/cs_tea_stu.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+//                System.out.println(line);
+//                if (count > 10) {
+//                    return;
+//                }
+                String teacher = line.substring(0, line.indexOf(","));
+                String students = line.substring(line.indexOf(",") + 1);
+                students = students.replaceAll("\"|\\[|\\]|'", "");
+                teaStudentsMap.put(teacher, students);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(teaStudentsMap.size());
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : teaStudentsMap.entrySet()) {
+            String teacherId = (String) entry.getKey();
+            String studentsId = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(teacherId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_TEACHER_STUDENT), Bytes.toBytes(ConfigurationConstant.QF_STUDENTS), Bytes.toBytes(studentsId));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void importStudentTeacherTest() {
+        Map<String, String> stuTeaMap = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/MAG师生关系识别结果_v2/2010/cs_relation_2010_2.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            br.readLine();
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+//                System.out.println(line);
+//                if (count > 10) {
+//                    return;
+//                }
+                String[] lines = line.split(",");
+                stuTeaMap.put(lines[0], lines[1]);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(stuTeaMap.size());
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : stuTeaMap.entrySet()) {
+            String studentId = (String) entry.getKey();
+            String teacherId = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(studentId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_TEACHER_STUDENT), Bytes.toBytes(ConfigurationConstant.QF_TEACHER), Bytes.toBytes(teacherId));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void importPersonalTagsTest() {
+        Map<String, String> authorField = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/tags/cs_authorid_fieldname_top5refed.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+//                count += 1;
+//                if (count > 10) {
+//                    return;
+//                }
+
+                String[] lines = line.split(",");
+                String fieldName = lines[1];
+                fieldName = fieldName.replaceAll("\"", "");
+//                System.out.println(line);
+
+                authorField.put(lines[0], fieldName);
+//                if (lines[0].equals("0DE9F497")) {
+//                    System.out.println(lines);
+//                    return;
+//                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(authorField.size());
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : authorField.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String fieldName = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_FIELD_NAME), Bytes.toBytes(fieldName));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_SCHOLAR));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void importStatisticalTest() {
+        Map<String, String> map = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/statistical/cs_authorid_corefednumber.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+//                count += 1;
+//                if (count > 10) {
+//                    return;
+//                }
+
+                String[] lines = line.split(",");
+//                System.out.println(line);
+
+                map.put(lines[0], lines[1]);
+//                if (lines[0].equals("0DE9F497")) {
+//                    System.out.println(lines);
+//                    return;
+//                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(map.size());
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : map.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String value = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_NUMBER), Bytes.toBytes(value));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_SCHOLAR));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void setStatisticalTest() {
+
+        List<Scholar> scholars = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
+            public Scholar mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
+                Scholar scholar = new Scholar();
+                scholar.setIndex(Bytes.toString(result.getRow()));
+                scholar.setName(Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_NAME))));
+                String latlng = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_LAT_LNG)));
+                String aff = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_AFF)));
+                String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
+                String fieldName = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_FIELD_NAME)));
+                String cooperateNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REF_NUMBER)));
+
+
+                if (StringUtils.isNotBlank(latlng)) {
+                    scholar.setLatlng(latlng);
+                }
+                if (StringUtils.isNotBlank(aff)) {
+                    scholar.setAff(aff);
+                }
+                if (StringUtils.isNotBlank(hindex)) {
+                    scholar.setHindex(Double.parseDouble(hindex));
+                }
+                if (StringUtils.isNotBlank(fieldName)) {
+                    scholar.setFieldName(fieldName);
+                }
+                if (StringUtils.isNotBlank(cooperateNumber)) {
+                    scholar.setCoRefNumber(Integer.parseInt(cooperateNumber));
+                }
+                return scholar;
+            }
+        });
+        System.out.println(scholars.size());
+        Collections.sort(scholars, new Comparator<Scholar>() {
+            public int compare(Scholar o1, Scholar o2) {
+                if (o1.getCoRefNumber() > o2.getCoRefNumber()) {
+                    return -1;
+                }
+                if (o1.getCoRefNumber() < o2.getCoRefNumber()) {
+                    return 1;
+                }
+                return 0;
+            }
+        });
+//        jedisCluster.set(ConfigurationConstant.REDIS_ALL_SCHOLARS.getBytes(), ListTranscoder.serialize(scholars));
+
+        List<Scholar> top100Scholars = new ArrayList<Scholar>();
+        for (int i = 0; i < 100; i++) {
+            top100Scholars.add(scholars.get(i));
+        }
+        jedisCluster.set(ConfigurationConstant.REDIS_CO_REF_NUMBER_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+    }
+
+    @Test
+    public void isEmailExist() {
+        boolean isExist = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_USER, "test@123.com", new RowMapper<Boolean>() {
+            public Boolean mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
+                return result.isEmpty();
+            }
+        });
+        System.out.println(isExist);
     }
 
 }

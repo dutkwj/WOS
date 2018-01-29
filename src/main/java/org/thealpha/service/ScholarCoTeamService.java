@@ -50,11 +50,15 @@ public class ScholarCoTeamService {
         }
         for (Cooperater cooperater : coTeamerList) {
             cooperater.setName(scholarIdObjectMap.get(cooperater.getIndex()).getName());
+            cooperater.setHindex(scholarIdObjectMap.get(cooperater.getIndex()).getHindex());
             cooperater.setAff(scholarIdObjectMap.get(cooperater.getIndex()).getAff());
+            cooperater.setFieldName(scholarIdObjectMap.get(cooperater.getIndex()).getFieldName());
             cooperater.setIntension(cooperater.getIntension() / minIntension);
             cooperater.setLatlng(scholarIdObjectMap.get(cooperater.getIndex()).getLatlng());
             cooperater.setLatitude(scholarIdObjectMap.get(cooperater.getIndex()).getLatitude());
             cooperater.setLongitude(scholarIdObjectMap.get(cooperater.getIndex()).getLongitude());
+            cooperater.setCoTeamNumber(scholarIdObjectMap.get(cooperater.getIndex()).getCoTeamNumber());
+
         }
         return coTeamerList;
     }
