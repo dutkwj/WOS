@@ -8,4 +8,7 @@ import org.thealpha.model.User;
 public interface UserDao {
     boolean verifyUser(String email, String password);
     User getUserNameAndPhotoNameByEmail(String email);
+    User getUserInfoByEmail(String email);
+    boolean modifyPsd(String email, String qualifier, String field);
+    boolean modifyInfo(String email,String qualifier,String field);
 }

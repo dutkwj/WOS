@@ -140,4 +140,26 @@ public class User {
     public void setDegree(String degree) {
         this.degree = degree;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "index='" + index + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                ", position='" + position + '\'' +
+                ", org='" + org + '\'' +
+                ", nation='" + nation + '\'' +
+                ", bornDate='" + bornDate + '\'' +
+                ", supervisorName='" + supervisorName + '\'' +
+                ", gradDate='" + gradDate + '\'' +
+                ", gradCollege='" + gradCollege + '\'' +
+                ", degree='" + degree + '\'' +
+                ", personalPhoto='" + personalPhoto + '\'' +
+                ", researchField='" + researchField + '\'' +
+                '}';
+    }
+
 }

@@ -11,29 +11,31 @@
 
 </head>
 <body >
-<ul class="layui-nav">
-    <li class="layui-nav-item"><a href="">合作关系</a></li>
-    <li class="layui-nav-item"><a href="">师生关系</a></li>
-    <li class="layui-nav-item"><a href="">引用关系</a></li>
-</ul>
-<ul class="layui-nav layui-layout-right">
-<#if Session.user?exists>
-    <li class="layui-nav-item">
-        <a href="javascript:;">
-            <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-        ${Session['user'].name!""}
-        </a>
-        <dl class="layui-nav-child">
-            <dd><a href="">base information</a></dd>
-            <dd><a href="">modify information</a></dd>
-        </dl>
-    </li>
-    <li class="layui-nav-item"><a href="/logout">logout</a></li>
-<#else>
-    <li class="layui-nav-item"><a href="/login/index">login</a></li>
-    <li class="layui-nav-item"><a href="/register/index">register</a></li>
-</#if>
-</ul>
+<div class="qqq" style="width: 100%;z-index: 250">
+    <ul class="layui-nav">
+        <li class="layui-nav-item"><a href="">合作关系</a></li>
+        <li class="layui-nav-item"><a href="">师生关系</a></li>
+        <li class="layui-nav-item"><a href="">引用关系</a></li>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+    <#if Session.user?exists>
+        <li class="layui-nav-item">
+            <a href="javascript:;">
+                <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+            ${Session['user'].name!""}
+            </a>
+            <dl class="layui-nav-child">
+                <dd><a href="/showPersonalInfo/getUserInfo">base information</a></dd>
+                <dd><a href="/modifyPsw/modifyPage">modify information</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="/logout">logout</a></li>
+    <#else>
+        <li class="layui-nav-item"><a href="/login/index">login</a></li>
+        <li class="layui-nav-item"><a href="/register/index">register</a></li>
+    </#if>
+    </ul>
+</div>
 <script type="text/javascript" src="../layui/layui.all.js" charset="utf-8"></script>
 <script type="text/javascript">
     layui.use('element', function () {
@@ -135,14 +137,14 @@
             <div class="layui-inline">
                 <label class="layui-form-label">grad date</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="graduateDate" id="graduateDate" placeholder="choose your graduate date" autocomplete="off" class="layui-input">
+                    <input type="text" name="gradDate" id="graduateDate" placeholder="choose your graduate date" autocomplete="off" class="layui-input">
                 </div>
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">grad college</label>
             <div class="layui-input-block">
-                <input type="text" name="graduateCollege" placeholder="please input your graduate college" autocomplete="off" class="layui-input">
+                <input type="text" name="gradCollege" placeholder="please input your graduate college" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
@@ -265,6 +267,19 @@
         });
     });
 
+</script>
+</script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/stickUp.min.js"></script>
+
+<script type="text/javascript">
+    //initiating jQuery
+    jQuery(function($) {
+        $(document).ready( function() {
+            //enabling stickUp on the '.navbar-wrapper' class
+            $('.qqq').stickUp();
+        });
+    });
 </script>
 
 </body>
