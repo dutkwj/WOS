@@ -29,8 +29,8 @@
                     ${Session['user'].name!""}
                 </a>
                 <dl class="layui-nav-child">
-                    <dd><a href="">base information</a></dd>
-                    <dd><a href="">modify information</a></dd>
+                    <dd><a href="/showPersonalInfo/getUserInfo">base information</a></dd>
+                    <dd><a href="/modifyPsw/modifyPage">modify information</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item"><a href="/logout">logout</a></li>
