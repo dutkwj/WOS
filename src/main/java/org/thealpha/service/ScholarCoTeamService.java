@@ -51,6 +51,7 @@ public class ScholarCoTeamService {
         for (Cooperater cooperater : coTeamerList) {
             cooperater.setName(scholarIdObjectMap.get(cooperater.getIndex()).getName());
             cooperater.setHindex(scholarIdObjectMap.get(cooperater.getIndex()).getHindex());
+            cooperater.setQindex(scholarIdObjectMap.get(cooperater.getIndex()).getQindex());
             cooperater.setAff(scholarIdObjectMap.get(cooperater.getIndex()).getAff());
             cooperater.setFieldName(scholarIdObjectMap.get(cooperater.getIndex()).getFieldName());
             cooperater.setIntension(cooperater.getIntension() / minIntension);

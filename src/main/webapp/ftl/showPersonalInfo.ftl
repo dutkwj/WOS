@@ -31,21 +31,19 @@
 
 </head>
 <body >
-<div class="qqq" style="width: 100%;z-index: 250">
-    <ul class="layui-nav" style="width: 100%">
-        <li class="layui-nav-item"><a href="">合作关系</a></li>
-        <li class="layui-nav-item"><a href="">师生关系</a></li>
-        <li class="layui-nav-item"><a href="">引用关系</a></li>
+<div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
+    <ul class="layui-nav">
+        <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
     </ul>
     <ul class="layui-nav layui-layout-right">
     <#if Session.user?exists>
         <li class="layui-nav-item">
             <a href="javascript:;">
-                <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                <img src="/hdfs/personalPhoto" class="layui-nav-img">
             ${Session['user'].name!""}
             </a>
             <dl class="layui-nav-child">
-                <dd><a href="">base information</a></dd>
+                <dd><a href="/showPersonalInfo/getUserInfo">base information</a></dd>
                 <dd><a href="/modifyPsw/modifyPage">modify information</a></dd>
             </dl>
         </li>
@@ -82,7 +80,7 @@
                     <div class="span12 product-background">
                         <div class="row">
                             <div class="span5 product-image">
-                                <img src="../img/b.jpg" alt="">
+                                <img src="/hdfs/personalPhoto" style="width: 200px;height: 200px" alt="">
                             </div>
                             <div class="span7 product-title">
                                 <h1 onmouseover="showEditIcon1(this)" onmouseout="hideEditIcon1(this)">

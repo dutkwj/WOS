@@ -93,7 +93,7 @@
             <div class="tm-media-text-container">
                 <h3 class="tm-media-title tm-gray-text"><span id="middleScholarName">${middleScholar.name!""}</span></h3>
                 <input type="hidden" id="middleScholarIndex" value="${middleScholar.index}"/>
-                <p class="tm-media-description tm-gray-text-2">Q-index:${middleScholar.hindex!""} | H-index:<span id="middleScholarHindex">${middleScholar.hindex!""}</span> | <span id="statisticalNumber"></span> <br />
+                <p class="tm-media-description tm-gray-text-2">Q-index:<span id="middleScholarQindex">${middleScholar.qindex!""}</span> | H-index:<span id="middleScholarHindex">${middleScholar.hindex!""}</span> | <span id="statisticalNumber"></span> <br />
                     <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: <span id="middleScholarAff">${middleScholar.aff!""}</span> <br />
                     <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study field: <span id="middleScholarFieldName">${middleScholar.fieldName!""}</span></p>
             </div>

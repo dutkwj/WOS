@@ -84,12 +84,12 @@
     $("#statisticalNumber").html("Students number:${middleScholar.studentsNumber!""}");
 
     nodes = [
-        { "name": "${middleScholar.name!""}"   , "image" : "../img/scholarImg.png" , "id":"${middleScholar.index!""}", "hindex":"${middleScholar.hindex!""}", "studentsNumber":"${middleScholar.studentsNumber!""}", "aff":"${middleScholar.aff!""}", "fieldName":"${middleScholar.fieldName!""}"}];
+        { "name": "${middleScholar.name!""}"   , "image" : "../img/scholarImg.png" , "id":"${middleScholar.index!""}", "hindex":"${middleScholar.hindex!""}", "qindex":"${middleScholar.qindex!""}", "studentsNumber":"${middleScholar.studentsNumber!""}", "aff":"${middleScholar.aff!""}", "fieldName":"${middleScholar.fieldName!""}"}];
     edges = [];
     var cooperaterIndex = 1;
     <#if students?? && (students?size>0)>
         <#list students as student>
-        nodes.push({"name": "${student.name!""}"   , "image" : "../img/scholarImg.png", "id":"${student.index!""}", "hindex":"${student.hindex!""}", "studentsNumber":"${student.studentsNumber!""}", "aff":"${student.aff!""}", "fieldName":"${student.fieldName!""}"});
+        nodes.push({"name": "${student.name!""}"   , "image" : "../img/scholarImg.png", "id":"${student.index!""}", "hindex":"${student.hindex!""}", "qindex":"${student.qindex!""}", "studentsNumber":"${student.studentsNumber!""}", "aff":"${student.aff!""}", "fieldName":"${student.fieldName!""}"});
         edges.push({ "source": 0 , "target": cooperaterIndex , "relation":"student", "intension":1, "color":"#ccc"});
         cooperaterIndex = cooperaterIndex + 1;
 
@@ -205,6 +205,7 @@
                     $("#middleScholarName").html(d.name);
                     $("#middleScholarIndex").attr("value", d.id);
                     $("#middleScholarHindex").html(d.hindex);
+                    $("#middleScholarQindex").html(d.qindex);
                     $("#statisticalNumber").html("Students number:"+d.studentsNumber);
                     $("#middleScholarAff").html(d.aff);
                     $("#middleScholarFieldName").html(d.fieldName);

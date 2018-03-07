@@ -44,6 +44,7 @@ public class ScholarCooperateService {
             cooperater.setName(scholarIdObjectMap.get(cooperater.getIndex()).getName());
             cooperater.setName(scholarIdObjectMap.get(cooperater.getIndex()).getName());
             cooperater.setHindex(scholarIdObjectMap.get(cooperater.getIndex()).getHindex());
+            cooperater.setQindex(scholarIdObjectMap.get(cooperater.getIndex()).getQindex());
             cooperater.setAff(scholarIdObjectMap.get(cooperater.getIndex()).getAff());
             cooperater.setLatlng(scholarIdObjectMap.get(cooperater.getIndex()).getLatlng());
             cooperater.setLatitude(scholarIdObjectMap.get(cooperater.getIndex()).getLatitude());

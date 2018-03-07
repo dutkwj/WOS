@@ -84,12 +84,12 @@
     $("#statisticalNumber").html("Reference number:${middleScholar.refNumber!""}");
 
     nodes = [
-        { "name": "${middleScholar.name!""}"   , "image" : "../img/scholarImg.png" , "id":"${middleScholar.index!""}", "hindex":"${middleScholar.hindex!""}", "refNumber":"${middleScholar.refNumber!""}", "aff":"${middleScholar.aff!""}", "fieldName":"${middleScholar.fieldName!""}"}];
+        { "name": "${middleScholar.name!""}"   , "image" : "../img/scholarImg.png" , "id":"${middleScholar.index!""}", "hindex":"${middleScholar.hindex!""}",　"qindex":"${middleScholar.qindex!""}", "refNumber":"${middleScholar.refNumber!""}", "aff":"${middleScholar.aff!""}", "fieldName":"${middleScholar.fieldName!""}"}];
     edges = [];
     var refIndex = 1;
     <#if refScholars?? && (refScholars?size>0)>
         <#list refScholars as refScholar>
-        nodes.push({"name": "${refScholar.name!""}"   , "image" : "../img/scholarImg.png", "id":"${refScholar.index!""}", "hindex":"${refScholar.hindex!""}", "refNumber":"${refScholar.refNumber!""}", "aff":"${refScholar.aff!""}", "fieldName":"${refScholar.fieldName!""}"});
+        nodes.push({"name": "${refScholar.name!""}"   , "image" : "../img/scholarImg.png", "id":"${refScholar.index!""}", "hindex":"${refScholar.hindex!""}", "qindex":"${refScholar.qindex!""}", "refNumber":"${refScholar.refNumber!""}", "aff":"${refScholar.aff!""}", "fieldName":"${refScholar.fieldName!""}"});
         edges.push({ "source": 0 , "target": refIndex , "relation":"引用关系" , "count":1});
         refIndex = refIndex + 1;
         </#list>
@@ -197,6 +197,7 @@
                     $("#middleScholarName").html(d.name);
                     $("#middleScholarIndex").attr("value", d.id);
                     $("#middleScholarHindex").html(d.hindex);
+                    $("#middleScholarQindex").html(d.qindex);
                     $("#statisticalNumber").html("Reference number:"+d.refNumber);
                     $("#middleScholarAff").html(d.aff);
                     $("#middleScholarFieldName").html(d.fieldName);

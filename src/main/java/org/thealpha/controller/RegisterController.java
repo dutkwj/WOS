@@ -57,7 +57,7 @@ public class RegisterController {
         try {
             if (StringUtils.isNotBlank(photoName)) {
                 Configuration configuration = new Configuration();
-                configuration.set("fs.default.name", "hdfs://100.66.1.209:9000");
+                configuration.set("fs.default.name", "hdfs://10.1.0.188:9000");
                 FileSystem fileSystem = FileSystem.get(configuration);
                 photoName = uuid + photoName.substring(photoName.indexOf("."));
                 OutputStream outputStream = fileSystem.create(new Path("/hbase/photo/" + photoName));

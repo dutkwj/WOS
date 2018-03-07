@@ -116,12 +116,24 @@
             <label class="layui-form-label">q-index</label>
             <div class="layui-input-inline">
                 <select name="qindex">
-                    <option value="0-5">[0-5)</option>
-                    <option value="5-10">[5-10)</option>
-                    <option value="10-20">[10-20)</option>
-                    <option value="20-30">[20-30)</option>
-                    <option value="30-50">[30-50)</option>
-                    <option value="50-1000">[50-)</option>
+                    <option value="">choose q-index range</option>
+                    <option value="0, 1">[0, 1]</option>
+                    <option value="1, 2">[1, 2]</option>
+                    <option value="2, 3">[2, 3]</option>
+                    <option value="3, 4">[3, 4]</option>
+                    <option value="4, 5">[4, 5]</option>
+                    <option value="5, 6">[5, 6]</option>
+                    <option value="6, 7">[6, 7]</option>
+                    <option value="7, 8">[7, 8]</option>
+                    <option value="8, 9">[8, 9]</option>
+                    <option value="9, 10">[9, 10]</option>
+                    <option value="10, 20">[10, 20]</option>
+                    <option value="20, 30">[20, 30]</option>
+                    <option value="30, 40">[30, 40]</option>
+                    <option value="40, 50">[40, 50]</option>
+                    <option value="50, 70">[50, 70]</option>
+                    <option value="70, 100">[70, 100]</option>
+                    <option value="100, 2000">[100, ∞]</option>
                 </select>
             </div>
             <#--<div class="layui-form-mid layui-word-aux">此处只是演示联动排版，并未做联动交互</div>-->
@@ -131,13 +143,20 @@
             <label class="layui-form-label">h-index</label>
             <div class="layui-input-inline">
                 <select name="hindex">
-                    <option value="0-5">[0-5)</option>
-                    <option value="5-10">[5-10)</option>
-                    <option value="10-20">[10-20)</option>
-                    <option value="20-30">[20-30)</option>
-                    <option value="30-50">[30-50)</option>
-                    <option value="50-1000">[50-)</option>
-
+                    <option value="">choose h-index range</option>
+                    <option value="0, 0">[0]</option>
+                    <option value="1, 1">[1]</option>
+                    <option value="2, 2">[2]</option>
+                    <option value="3, 3">[3]</option>
+                    <option value="4, 4">[4]</option>
+                    <option value="5, 5">[5]</option>
+                    <option value="6, 6">[6]</option>
+                    <option value="7, 7">[7]</option>
+                    <option value="8, 10">[8, 10]</option>
+                    <option value="11, 20">[11, 20]</option>
+                    <option value="21, 30">[21, 30]</option>
+                    <option value="31, 40">[31, 40]</option>
+                    <option value="41, 1000">[41, ∞)</option>
                 </select>
             </div>
         </div>
@@ -182,6 +201,7 @@
 
         var name = [];
         var hindex = [];
+        var qindex = [];
         var aff = [];
         var fieldName = [];
         var id = [];
@@ -190,6 +210,7 @@
             id.push("${scholar.index!""}");
             name.push("${scholar.name!""}");
             hindex.push("${scholar.hindex!""}");
+            qindex.push("${scholar.qindex!""}");
             aff.push("${scholar.aff!""}");
             fieldName.push("${scholar.fieldName!""}");
         </#list>
@@ -210,12 +231,14 @@
                     var subId = id.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     var subName = name.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     var subHindex = hindex.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                    var subQindex = qindex.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     var subAff = aff.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     var subFieldName = fieldName.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
 
                     thisData.push(subId);
                     thisData.push(subName);
                     thisData.push(subHindex);
+                    thisData.push(subQindex);
                     thisData.push(subAff);
                     thisData.push(subFieldName);
 
@@ -231,10 +254,10 @@
                                         '<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">' +
                                             '<div class="tm-media-text-container">' +
                                                 '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/scholar/baseInfo?authorId=' + thisData[0][index] + '">' + thisData[1][index] + '</a></h3>' +
-                                                '<p class="tm-media-description tm-gray-text-2">Q-index:131 | H-index:' + thisData[2][index] +
+                                                '<p class="tm-media-description tm-gray-text-2">Q-index:' + thisData[3][index] + ' | H-index:' + thisData[2][index] +
                                                 '<br/>' +
-                                                '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ' + thisData[3][index] + '<br/>' +
-                                                '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study field: ' + thisData[4][index] + '</p>' +
+                                                '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ' + thisData[4][index] + '<br/>' +
+                                                '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study field: ' + thisData[5][index] + '</p>' +
                                             '</div>' +
                                         '</div>' +
                                     '</div>' +

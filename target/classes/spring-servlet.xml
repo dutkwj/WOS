@@ -67,11 +67,11 @@
 
     <!-- HDFS配置 -->
     <hdp:configuration id="hadoopConfiguration">
-    fs.defaultFS="hdfs://100.66.1.209:9000"
+    fs.defaultFS="hdfs://10.1.0.188:9000"
     </hdp:configuration>
 
     <!-- HBase连接配置 -->
-    <hdp:hbase-configuration id="hbaseConfiguration" zk-quorum="100.66.1.209,100.66.2.1,100.66.2.22" zk-port="2181" delete-connection="false"/>
+    <hdp:hbase-configuration id="hbaseConfiguration" zk-quorum="10.1.0.188,10.1.0.187,10.1.0.183" zk-port="2181" delete-connection="false"/>
 
     <!-- HbaseTemplate Bean配置-->
     <bean id="hbaseTemplate" class="org.springframework.data.hadoop.hbase.HbaseTemplate">

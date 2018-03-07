@@ -137,6 +137,7 @@
 
         var name = [];
         var hindex = [];
+        var qindex = [];
         var aff = [];
         var id = [];
         var fieldName = [];
@@ -145,6 +146,7 @@
                 id.push("${scholar.index!""}");
                 name.push("${scholar.name!""}");
                 hindex.push("${scholar.hindex!""}");
+                qindex.push("${scholar.qindex!""}");
                 aff.push("${scholar.aff!""}");
                 fieldName.push("${scholar.fieldName!""}");
             </#list>
@@ -167,9 +169,11 @@
                     var subAff = aff.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     var subFieldName = fieldName.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     var subHindex = hindex.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                    var subQindex = qindex.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     thisData.push(subId);
                     thisData.push(subName);
                     thisData.push(subHindex);
+                    thisData.push(subQindex);
                     thisData.push(subAff);
                     thisData.push(subFieldName);
                     layui.each(subId, function(index, item){
@@ -184,10 +188,10 @@
                                         '<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">' +
                                              '<div class="tm-media-text-container">' +
                                             '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/scholar/baseInfo?authorId=' + thisData[0][index] + '">' + thisData[1][index] + '</a> </h3>' +
-                                            '<p class="tm-media-description tm-gray-text-2">Q-index:' + thisData[2][index] + ' | H-index:' + thisData[2][index] +
+                                            '<p class="tm-media-description tm-gray-text-2">Q-index:' + thisData[3][index] + ' | H-index:' + thisData[2][index] +
                                             '<br/>' +
-                                            '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ' + thisData[3][index] + '<br/>' +
-                                            '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study Field: ' + thisData[4][index] + '</p>' +
+                                            '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ' + thisData[4][index] + '<br/>' +
+                                            '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study Field: ' + thisData[5][index] + '</p>' +
                                             '</div>' +
                                         '</div>' +
                                     '</div>' +

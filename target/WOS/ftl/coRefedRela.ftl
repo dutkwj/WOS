@@ -84,12 +84,12 @@
     $("#statisticalNumber").html("Common referenced number:${middleScholar.coRefedNumber!""}");
 
     nodes = [
-        { "name": "${middleScholar.name!""}"   , "image" : "../img/scholarImg.png" , "id":"${middleScholar.index!""}", "hindex":"${middleScholar.hindex!""}", "coRefedNumber":"${middleScholar.coRefedNumber!""}", "aff":"${middleScholar.aff!""}", "fieldName":"${middleScholar.fieldName!""}"}];
+        { "name": "${middleScholar.name!""}"   , "image" : "../img/scholarImg.png" , "id":"${middleScholar.index!""}", "hindex":"${middleScholar.hindex!""}", "qindex":"${middleScholar.qindex!""}", "coRefedNumber":"${middleScholar.coRefedNumber!""}", "aff":"${middleScholar.aff!""}", "fieldName":"${middleScholar.fieldName!""}"}];
     edges = [];
     var coRefedIndex = 1;
     <#if coRefedScholars?? && (coRefedScholars?size>0)>
         <#list coRefedScholars as coRefedScholar>
-        nodes.push({"name": "${coRefedScholar.name!""}"   , "image" : "../img/scholarImg.png", "id":"${coRefedScholar.index!""}", "hindex":"${coRefedScholar.hindex!""}", "coRefedNumber":"${coRefedScholar.coRefedNumber!""}", "aff":"${coRefedScholar.aff!""}", "fieldName":"${coRefedScholar.fieldName!""}"});
+        nodes.push({"name": "${coRefedScholar.name!""}"   , "image" : "../img/scholarImg.png", "id":"${coRefedScholar.index!""}", "hindex":"${coRefedScholar.hindex!""}", "qindex":"${coRefedScholar.qindex!""}", "coRefedNumber":"${coRefedScholar.coRefedNumber!""}", "aff":"${coRefedScholar.aff!""}", "fieldName":"${coRefedScholar.fieldName!""}"});
         edges.push({ "source": 0 , "target": coRefedIndex , "relation":"共同被引关系" , "count":${coRefedScholar.count}});
         coRefedIndex = coRefedIndex + 1;
         </#list>
@@ -194,6 +194,7 @@
                     $("#middleScholarName").html(d.name);
                     $("#middleScholarIndex").attr("value", d.id);
                     $("#middleScholarHindex").html(d.hindex);
+                    $("#middleScholarQindex").html(d.qindex);
                     $("#statisticalNumber").html("Common referenced number:"+d.coRefedNumber);
                     $("#middleScholarAff").html(d.aff);
                     $("#middleScholarFieldName").html(d.fieldName);

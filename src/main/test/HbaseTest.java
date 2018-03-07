@@ -129,7 +129,7 @@ public class HbaseTest {
     @Test
     public void testHTable() {
         Configuration conf = HBaseConfiguration.create();
-        conf.set("hbase.zookeeper.quorum", "100.66.1.209,100.66.2.1,100.66.2.22");
+        conf.set("hbase.zookeeper.quorum", "10.1.0.188,10.1.0.187,10.1.0.183");
         conf.set("hbase.zookeeper.property.clientPort", "2181");
         Get get = new Get(Bytes.toBytes("r3"));
         try {
@@ -217,7 +217,7 @@ public class HbaseTest {
         Connection connection = null;
         Table table = null;
         Configuration conf = HBaseConfiguration.create();
-        conf.set("hbase.zookeeper.quorum", "100.66.1.209,100.66.2.1,100.66.2.22");
+        conf.set("hbase.zookeeper.quorum", "10.1.0.188,10.1.0.187,10.1.0.183");
         conf.set("hbase.zookeeper.property.clientPort", "2181");
 
         List<Get> gets = new ArrayList<Get>();
@@ -401,9 +401,6 @@ public class HbaseTest {
             while ((line = br.readLine()) != null)
             {
                 count += 1;
-                if (count <= 11) {
-                    continue;
-                }
                 String authorId = line.substring(0, line.indexOf(","));
                 String paperIds = line.substring(line.indexOf(",") + 1);
                 paperIds = paperIds.replaceAll("\"|\\[|\\]|'", "");
@@ -495,7 +492,7 @@ public class HbaseTest {
     @Test
     public void importPaperRef() {
         HashMap<String, String> paperIdRefIds = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_cs_refed.csv");  // CSV文件路径
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_cs_ref.csv");  // CSV文件路径
         BufferedReader br = null;
         try
         {
@@ -533,7 +530,7 @@ public class HbaseTest {
             String paperId = (String) entry.getKey();
             String refIds = (String) entry.getValue();
             Put put = new Put(Bytes.toBytes(paperId));
-            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_REFERENCE), Bytes.toBytes(ConfigurationConstant.QF_REF_IDS), Bytes.toBytes(refIds));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_REFERENCE), Bytes.toBytes(ConfigurationConstant.QF_REFED_IDS), Bytes.toBytes(refIds));
             puts.add(put);
         }
         try {
@@ -548,7 +545,7 @@ public class HbaseTest {
     @Test
     public void importCoPaperRef() {
         HashMap<String, String> paperIdRefIds = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_cs_co_ref3.csv");  // CSV文件路径
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_cs_co_refed3.csv");  // CSV文件路径
         BufferedReader br = null;
         try
         {
@@ -586,7 +583,7 @@ public class HbaseTest {
             String paperId = (String) entry.getKey();
             String refIds = (String) entry.getValue();
             Put put = new Put(Bytes.toBytes(paperId));
-            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_REFERENCE), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_IDS), Bytes.toBytes(refIds));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_REFERENCE), Bytes.toBytes(ConfigurationConstant.QF_CO_REF_IDS), Bytes.toBytes(refIds));
             puts.add(put);
         }
         try {
@@ -701,27 +698,27 @@ public class HbaseTest {
         }
 
         System.out.println(authorCoTeam.size());
-//        Connection connection = null;
-//        Table table = null;
-//        Configuration conf = HBaseConfiguration.create();
-//        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
-//        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
-//
-//        List<Put> puts = new ArrayList<Put>();
-//        for (Map.Entry entry : authorCoTeam.entrySet()) {
-//            String authorId = (String) entry.getKey();
-//            String coTeam = (String) entry.getValue();
-//            Put put = new Put(Bytes.toBytes(authorId));
-//            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_CO_TEAM), Bytes.toBytes(ConfigurationConstant.QF_TEAM_INTENSION), Bytes.toBytes(coTeam));
-//            puts.add(put);
-//        }
-//        try {
-//            connection = ConnectionFactory.createConnection(conf);
-//            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
-//            table.put(puts);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : authorCoTeam.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String coTeam = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_CO_TEAM), Bytes.toBytes(ConfigurationConstant.QF_TEAM_INTENSION), Bytes.toBytes(coTeam));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
@@ -742,7 +739,7 @@ public class HbaseTest {
             while ((line = br.readLine()) != null)
             {
                 count += 1;
-                System.out.println(line);
+//                System.out.println(line);
                 String authorId = line.substring(0, line.indexOf(","));
                 String yearCounts = line.substring(line.indexOf(",") + 1);
                 yearCounts = yearCounts.replaceAll("\"|\\[|\\]|'", "");
@@ -780,7 +777,7 @@ public class HbaseTest {
     @Test
     public void uploadFileToHDFSTest() throws IOException {
         Configuration conf = new Configuration(true);
-        conf.set("fs.default.name", "hdfs://100.66.1.209:9000");
+        conf.set("fs.default.name", "hdfs://10.1.0.188:9000");
         FileSystem fs = FileSystem.get(conf);
         Path srcPath = new Path("/home/kangwenjie/IdeaProjects/WOS/src/main/webapp/img/b.jpg");
         Path dstPath = new Path("/hbase/photo");
@@ -791,7 +788,7 @@ public class HbaseTest {
     @Test
     public void downLoadFileFromHDFSTest() throws IOException {
         Configuration conf = new Configuration(true);
-        conf.set("fs.default.name", "hdfs://100.66.1.209:9000");
+        conf.set("fs.default.name", "hdfs://10.1.0.188:9000");
         FileSystem fs = FileSystem.get(conf);
         Path  srcPath = new Path("/hbase/photo/b.jpg");
         InputStream in = fs.open(srcPath);
@@ -846,6 +843,7 @@ public class HbaseTest {
                 String latlng = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_LAT_LNG)));
                 String aff = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_AFF)));
                 String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
+                String qindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_Q_INDEX)));
                 String fieldName = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_FIELD_NAME)));
 
                 if (StringUtils.isNotBlank(latlng)) {
@@ -856,6 +854,9 @@ public class HbaseTest {
                 }
                 if (StringUtils.isNotBlank(hindex)) {
                     scholar.setHindex(Double.parseDouble(hindex));
+                }
+                if (StringUtils.isNotBlank(qindex)) {
+                    scholar.setQindex(Double.parseDouble(qindex));
                 }
                 if (StringUtils.isNotBlank(fieldName)) {
                     scholar.setFieldName(fieldName);
@@ -990,7 +991,7 @@ public class HbaseTest {
     @Test
     public void importStudentTeacherTest() {
         Map<String, String> stuTeaMap = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/MAG师生关系识别结果_v2/2010/cs_relation_2010_2.csv");  // CSV文件路径
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/tea_stu/2010/cs_relation_2010_2.csv");  // CSV文件路径
         BufferedReader br = null;
         try
         {
@@ -1105,7 +1106,7 @@ public class HbaseTest {
     @Test
     public void importStatisticalTest() {
         Map<String, String> map = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/statistical/cs_authorid_corefednumber.csv");  // CSV文件路径
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/statistical/cs_authorid_studentsnumber.csv");  // CSV文件路径
         BufferedReader br = null;
         try
         {
@@ -1149,7 +1150,7 @@ public class HbaseTest {
             String authorId = (String) entry.getKey();
             String value = (String) entry.getValue();
             Put put = new Put(Bytes.toBytes(authorId));
-            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_NUMBER), Bytes.toBytes(value));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_STUDENTS_NUMBER), Bytes.toBytes(value));
             puts.add(put);
         }
         try {
@@ -1172,8 +1173,9 @@ public class HbaseTest {
                 String latlng = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_LAT_LNG)));
                 String aff = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_AFF)));
                 String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
+                String qindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_Q_INDEX)));
                 String fieldName = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_FIELD_NAME)));
-                String cooperateNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REF_NUMBER)));
+                String cooperateNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_STUDENTS_NUMBER)));
 
 
                 if (StringUtils.isNotBlank(latlng)) {
@@ -1185,11 +1187,14 @@ public class HbaseTest {
                 if (StringUtils.isNotBlank(hindex)) {
                     scholar.setHindex(Double.parseDouble(hindex));
                 }
+                if (StringUtils.isNotBlank(qindex)) {
+                    scholar.setQindex(Double.parseDouble(qindex));
+                }
                 if (StringUtils.isNotBlank(fieldName)) {
                     scholar.setFieldName(fieldName);
                 }
                 if (StringUtils.isNotBlank(cooperateNumber)) {
-                    scholar.setCoRefNumber(Integer.parseInt(cooperateNumber));
+                    scholar.setStudentsNumber(Integer.parseInt(cooperateNumber));
                 }
                 return scholar;
             }
@@ -1197,10 +1202,10 @@ public class HbaseTest {
         System.out.println(scholars.size());
         Collections.sort(scholars, new Comparator<Scholar>() {
             public int compare(Scholar o1, Scholar o2) {
-                if (o1.getCoRefNumber() > o2.getCoRefNumber()) {
+                if (o1.getStudentsNumber() > o2.getStudentsNumber()) {
                     return -1;
                 }
-                if (o1.getCoRefNumber() < o2.getCoRefNumber()) {
+                if (o1.getStudentsNumber() < o2.getStudentsNumber()) {
                     return 1;
                 }
                 return 0;
@@ -1212,7 +1217,7 @@ public class HbaseTest {
         for (int i = 0; i < 100; i++) {
             top100Scholars.add(scholars.get(i));
         }
-        jedisCluster.set(ConfigurationConstant.REDIS_CO_REF_NUMBER_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_STUDENTS_NUMBER_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
     }
 
     @Test
@@ -1223,6 +1228,112 @@ public class HbaseTest {
             }
         });
         System.out.println(isExist);
+    }
+
+    @Test
+    public void importScholarHindex() {
+        HashMap<String, String> authorIdHindex = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/statistical/q_index.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)  //读取到的内容给line变量
+            {
+                count += 1;
+                line.substring(0, line.indexOf(","));
+                String authorId = line.substring(0, line.indexOf(","));
+                String hindex = line.substring(line.indexOf(",") + 1);
+                authorIdHindex.put(authorId, hindex);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(authorIdHindex.size());
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : authorIdHindex.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String hindex = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_Q_INDEX), Bytes.toBytes(hindex));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_SCHOLAR));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void setAuthorIdHindexRedis() {
+        List<Scholar> scholars = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
+            public Scholar mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
+                Scholar scholar = new Scholar();
+                scholar.setIndex(Bytes.toString(result.getRow()));
+                String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
+                String qindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_Q_INDEX)));
+                if (StringUtils.isNotBlank(hindex)) {
+                    scholar.setHindex(Double.parseDouble(hindex));
+                }
+                if (StringUtils.isNotBlank(qindex)) {
+                    scholar.setQindex(Double.parseDouble(qindex));
+                }
+                return scholar;
+            }
+        });
+        System.out.println(scholars.size());
+        Collections.sort(scholars, new Comparator<Scholar>() {
+            public int compare(Scholar o1, Scholar o2) {
+                if (o1.getQindex() > o2.getQindex()) {
+                    return -1;
+                }
+                if (o1.getQindex() < o2.getQindex()) {
+                    return 1;
+                }
+                return 0;
+            }
+        });
+        int count = 0;
+        HashMap<String, String> m1 = new HashMap<String, String>();
+        HashMap<String, String> m2 = new HashMap<String, String>();
+        HashMap<String, String> m3 = new HashMap<String, String>();
+        HashMap<String, String> m4 = new HashMap<String, String>();
+        for (Scholar scholar : scholars) {
+            if (count <= 500000) {
+                jedisCluster.rpush(ConfigurationConstant.REDIS_QINDEX_0_50W, scholar.getIndex());
+                m1.put(scholar.getIndex(), String.valueOf(scholar.getQindex()));
+            } else if (count <= 1000000) {
+                jedisCluster.rpush(ConfigurationConstant.REDIS_QINDEX_50_100W, scholar.getIndex());
+                m2.put(scholar.getIndex(), String.valueOf(scholar.getQindex()));
+            } else if (count <= 1500000) {
+                jedisCluster.rpush(ConfigurationConstant.REDIS_QINDEX_100_150W, scholar.getIndex());
+                m3.put(scholar.getIndex(), String.valueOf(scholar.getQindex()));
+            } else {
+                jedisCluster.rpush(ConfigurationConstant.REDIS_QINDEX_150_200W, scholar.getIndex());
+                m4.put(scholar.getIndex(), String.valueOf(scholar.getQindex()));
+            }
+            count += 1;
+        }
+        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_QINDEX_0_50W, m1);
+        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_QINDEX_50_100W, m2);
+        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_QINDEX_100_150W, m3);
+        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_QINDEX_150_200W, m4);
+
     }
 
 }

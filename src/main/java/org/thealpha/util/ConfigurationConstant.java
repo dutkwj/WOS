@@ -13,6 +13,7 @@ public class ConfigurationConstant {
     public static final String QF_PAPER_IDS = "paper_ids";
     public static final String QF_LAT_LNG = "lat_lng";
     public static final String QF_H_INDEX = "h_index";
+    public static final String QF_Q_INDEX = "q_index";
     public static final String QF_FIELD_NAME = "field_name";
     public static final String QF_COOPERATE_NUMBER = "cooperate_number";
     public static final String QF_CO_TEAM_NUMBER = "co_team_number";
@@ -65,7 +66,7 @@ public class ConfigurationConstant {
     public static final String QF_WEIGHT = "weight";
 
 
-    public static final String ZK_QUORUM = "100.66.1.209,100.66.2.1,100.66.2.22";
+    public static final String ZK_QUORUM = "10.1.0.188,10.1.0.187,10.1.0.183";
     public static final String ZK_CLIENT_PORT = "2181";
 
     public static final String REDIS_ALL_SCHOLARS = "redis_all_scholars";
@@ -80,6 +81,25 @@ public class ConfigurationConstant {
     public static final String REDIS_REFED_NUMBER_TOP100_SCHOLARS = "redis_refed_number_top100_scholars";
     public static final String REDIS_CO_REF_NUMBER_TOP100_SCHOLARS = "redis_co_ref_number_top100_scholars";
     public static final String REDIS_CO_REFED_NUMBER_TOP100_SCHOLARS = "redis_co_refed_number_top100_scholars";
+
+    public static final String REDIS_HINDEX_0_50W = "redis_hindex_0_50w";
+    public static final String REDIS_HINDEX_50_100W = "redis_hindex_50_100w";
+    public static final String REDIS_HINDEX_100_150W = "redis_hindex_100_150w";
+    public static final String REDIS_HINDEX_150_200W = "redis_hindex_150_200w";
+    public static final String REDIS_QINDEX_0_50W = "redis_qindex_0_50w";
+    public static final String REDIS_QINDEX_50_100W = "redis_qindex_50_100w";
+    public static final String REDIS_QINDEX_100_150W = "redis_qindex_100_150w";
+    public static final String REDIS_QINDEX_150_200W = "redis_qindex_150_200w";
+
+    public static final String REDIS_AUTHORID_HINDEX_0_50W = "redis_authorid_hindex_0_50w";
+    public static final String REDIS_AUTHORID_HINDEX_50_100W = "redis_authorid_hindex_50_100w";
+    public static final String REDIS_AUTHORID_HINDEX_100_150W = "redis_authorid_hindex_100_150w";
+    public static final String REDIS_AUTHORID_HINDEX_150_200W = "redis_authorid_hindex_150_200w";
+    public static final String REDIS_AUTHORID_QINDEX_0_50W = "redis_authorid_qindex_0_50w";
+    public static final String REDIS_AUTHORID_QINDEX_50_100W = "redis_authorid_qindex_50_100w";
+    public static final String REDIS_AUTHORID_QINDEX_100_150W = "redis_authorid_qindex_100_150w";
+    public static final String REDIS_AUTHORID_QINDEX_150_200W = "redis_authorid_qindex_150_200w";
+
 
     public static final int MAX_SIZE = 200;
 }

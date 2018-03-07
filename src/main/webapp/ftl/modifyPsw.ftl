@@ -19,22 +19,20 @@
 
 </head>
 <body>
-<div class="qqq" style="width: 100%;z-index: 250">
-    <ul class="layui-nav" style="width: 100%">
-        <li class="layui-nav-item"><a href="">合作关系</a></li>
-        <li class="layui-nav-item"><a href="">师生关系</a></li>
-        <li class="layui-nav-item"><a href="">引用关系</a></li>
+<div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
+    <ul class="layui-nav">
+        <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
     </ul>
     <ul class="layui-nav layui-layout-right">
     <#if Session.user?exists>
         <li class="layui-nav-item">
             <a href="javascript:;">
-                <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                <img src="/hdfs/personalPhoto" class="layui-nav-img">
             ${Session['user'].name!""}
             </a>
             <dl class="layui-nav-child">
                 <dd><a href="/showPersonalInfo/getUserInfo">base information</a></dd>
-                <dd><a href="">modify information</a></dd>
+                <dd><a href="/modifyPsw/modifyPage">modify information</a></dd>
             </dl>
         </li>
         <li class="layui-nav-item"><a href="/logout">logout</a></li>
@@ -64,11 +62,11 @@
 
             <div class="input_outer">
                 <span class="u_user"></span>
-                <input name="password" class="text" id="password" required lay-verify="password" type="text" value="" placeholder="please input password">
+                <input name="password" class="text" id="password" required lay-verify="password" type="password" value="" placeholder="please input password">
             </div>
             <div class="input_outer">
                 <span class="us_uer"></span>
-                <input name="confirm_the_password" class="text" id="repass" required lay-verify="repass" value="" type="text" placeholder="please confirm the password">
+                <input name="confirm_the_password" class="text" id="repass" required lay-verify="repass" value="" type="password" placeholder="please confirm the password">
             </div>
             <div class="mb2"><a lay-submit class="act-but submit" href="javascript:;" id="submit" >modify</a></div>
         </form>

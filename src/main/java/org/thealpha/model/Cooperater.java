@@ -7,6 +7,7 @@ public class Cooperater {
     private String index;
     private String name;
     private double hindex;
+    private double qindex;
     private String aff;
     private int count;
     private String latlng;
@@ -16,6 +17,14 @@ public class Cooperater {
     private int cooperateNumber;
     private int coTeamNumber;
     private int studentsNumber;
+
+    public double getQindex() {
+        return qindex;
+    }
+
+    public void setQindex(double qindex) {
+        this.qindex = qindex;
+    }
 
     public double getHindex() {
         return hindex;

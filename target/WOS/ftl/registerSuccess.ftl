@@ -60,7 +60,6 @@
 <br/>
 <br/>
 
->>>>>>> 20d54078917cc68596e592974c46bbb3ce04d4f8
 <div class="layui-container">
     <div class="layui-row">
         <div class="layui-col-xs2">

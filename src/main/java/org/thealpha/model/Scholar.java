@@ -14,6 +14,7 @@ public class Scholar implements Serializable{
     private String latitude;
     private String longitude;
     private double hindex;
+    private double qindex;
     private String fieldName;
 
     private int cooperateNumber;
@@ -23,6 +24,14 @@ public class Scholar implements Serializable{
     private int refedNumber;
     private int coRefNumber;
     private int coRefedNumber;
+
+    public double getQindex() {
+        return qindex;
+    }
+
+    public void setQindex(double qindex) {
+        this.qindex = qindex;
+    }
 
     public int getCooperateNumber() {
         return cooperateNumber;

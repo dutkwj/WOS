@@ -84,12 +84,12 @@
     $("#statisticalNumber").html("Team members:${middleScholar.coTeamNumber!""}");
 
     nodes = [
-        { "name": "${middleScholar.name!""}"   , "image" : "../img/scholarImg.png" , "id":"${middleScholar.index!""}", "hindex":"${middleScholar.hindex!""}", "coTeamNumber":"${middleScholar.coTeamNumber!""}", "aff":"${middleScholar.aff!""}", "fieldName":"${middleScholar.fieldName!""}"}];
+        { "name": "${middleScholar.name!""}"   , "image" : "../img/scholarImg.png" , "id":"${middleScholar.index!""}", "hindex":"${middleScholar.hindex!""}", "qindex":"${middleScholar.qindex!""}", "coTeamNumber":"${middleScholar.coTeamNumber!""}", "aff":"${middleScholar.aff!""}", "fieldName":"${middleScholar.fieldName!""}"}];
     edges = [];
     var cooperaterIndex = 1;
     <#if coTeamers?? && (coTeamers?size>0)>
         <#list coTeamers as coTeamer>
-        nodes.push({"name": "${coTeamer.name!""}"   , "image" : "../img/scholarImg.png", "id":"${coTeamer.index!""}", "hindex":"${coTeamer.hindex!""}", "coTeamNumber":"${coTeamer.coTeamNumber!""}", "aff":"${coTeamer.aff!""}", "fieldName":"${coTeamer.fieldName!""}"});
+        nodes.push({"name": "${coTeamer.name!""}"   , "image" : "../img/scholarImg.png", "id":"${coTeamer.index!""}", "hindex":"${coTeamer.hindex!""}", "qindex":"${coTeamer.qindex!""}", "coTeamNumber":"${coTeamer.coTeamNumber!""}", "aff":"${coTeamer.aff!""}", "fieldName":"${coTeamer.fieldName!""}"});
         edges.push({ "source": 0 , "target": cooperaterIndex , "relation":"团队关系" , "intension":${coTeamer.intension!1}});
         cooperaterIndex = cooperaterIndex + 1;
 
@@ -199,6 +199,7 @@
                     $("#middleScholarName").html(d.name);
                     $("#middleScholarIndex").attr("value", d.id);
                     $("#middleScholarHindex").html(d.hindex);
+                    $("#middleScholarQindex").html(d.qindex);
                     $("#statisticalNumber").html("Team members:"+d.coTeamNumber);
                     $("#middleScholarAff").html(d.aff);
                     $("#middleScholarFieldName").html(d.fieldName);
@@ -351,7 +352,7 @@
     svg.append("g")
             .attr("transform","translate("+(width/2 - 50)+","+(670)+")")
             .append("text")
-            .text("合作者的地理位置分布图");
+            .text("team members' location on the world map");
 
 </script>
 

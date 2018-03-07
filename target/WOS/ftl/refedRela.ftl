@@ -84,12 +84,12 @@
     $("#statisticalNumber").html("Referenced number:${middleScholar.refedNumber!""}");
 
     nodes = [
-        { "name": "${middleScholar.name!""}"   , "image" : "../img/scholarImg.png" , "id":"${middleScholar.index!""}", "hindex":"${middleScholar.hindex!""}", "refedNumber":"${middleScholar.refedNumber!""}", "aff":"${middleScholar.aff!""}", "fieldName":"${middleScholar.fieldName!""}"}];
+        { "name": "${middleScholar.name!""}"   , "image" : "../img/scholarImg.png" , "id":"${middleScholar.index!""}", "hindex":"${middleScholar.hindex!""}", "qindex":"${middleScholar.qindex!""}", "refedNumber":"${middleScholar.refedNumber!""}", "aff":"${middleScholar.aff!""}", "fieldName":"${middleScholar.fieldName!""}"}];
     edges = [];
     var refedIndex = 1;
     <#if refedScholars?? && (refedScholars?size>0)>
         <#list refedScholars as refedScholar>
-        nodes.push({"name": "${refedScholar.name!""}"   , "image" : "../img/scholarImg.png", "id":"${refedScholar.index!""}", "hindex":"${refedScholar.hindex!""}", "refedNumber":"${refedScholar.refedNumber!""}", "aff":"${refedScholar.aff!""}", "fieldName":"${refedScholar.fieldName!""}"});
+        nodes.push({"name": "${refedScholar.name!""}"   , "image" : "../img/scholarImg.png", "id":"${refedScholar.index!""}", "hindex":"${refedScholar.hindex!""}", "qindex":"${refedScholar.qindex!""}", "refedNumber":"${refedScholar.refedNumber!""}", "aff":"${refedScholar.aff!""}", "fieldName":"${refedScholar.fieldName!""}"});
         edges.push({ "source": 0 , "target": refedIndex , "relation":"引用关系" , "count":1});
         refedIndex = refedIndex + 1;
         </#list>
@@ -197,6 +197,7 @@
                     $("#middleScholarName").html(d.name);
                     $("#middleScholarIndex").attr("value", d.id);
                     $("#middleScholarHindex").html(d.hindex);
+                    $("#middleScholarQindex").html(d.qindex);
                     $("#statisticalNumber").html("Referenced number:"+d.refedNumber);
                     $("#middleScholarAff").html(d.aff);
                     $("#middleScholarFieldName").html(d.fieldName);
