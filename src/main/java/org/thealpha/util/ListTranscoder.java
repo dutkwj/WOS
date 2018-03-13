@@ -42,11 +42,9 @@ public class ListTranscoder {
                 bis.close();
             }
         } catch (IOException e) {
-//            logger.warn("Caught IOException decoding %d bytes of data",
-//                    in == null ? 0 : in.length, e);
+            throw new IllegalArgumentException("Non-deserializable object", e);
         } catch (ClassNotFoundException e) {
-//            logger.warn("Caught CNFE decoding %d bytes of data",
-//                    in == null ? 0 : in.length, e);
+            throw new IllegalArgumentException("Non-deserializable object", e);
         } finally {
             close(is);
             close(bis);

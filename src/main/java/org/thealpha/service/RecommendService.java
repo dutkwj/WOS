@@ -128,7 +128,6 @@ public class RecommendService {
         for (Map.Entry<String, ScholarWeight> entry : recommendScholars.entrySet()) {
             recomScholarWeights.add(entry.getValue());
         }
-
         Collections.sort(recomScholarWeights, new Comparator<ScholarWeight>() {
             public int compare(ScholarWeight o1, ScholarWeight o2) {
                 if (o1.getRecommendIndex() > o2.getRecommendIndex()) {

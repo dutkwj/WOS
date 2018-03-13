@@ -82,43 +82,6 @@ public class ScholarCooperateDaoImpl implements ScholarCooperateDao{
     }
 
     public List<Cooperater> getCooperatersById(String id) {
-//        Connection connection = null;
-//        Table table = null;
-//        Result result = null;
-//        Configuration conf = HBaseConfiguration.create();
-//        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
-//        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
-//        Get get = new Get(Bytes.toBytes(id));
-//        get.addColumn(Bytes.toBytes(ConfigurationConstant.CF_COOPERATE), Bytes.toBytes(ConfigurationConstant.QF_COUNT));
-//        Cooperater cooperater = new Cooperater();
-//        try {
-//            connection = ConnectionFactory.createConnection(conf);
-//            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
-//            result = table.get(get);
-//            for (Cell cell : result.rawCells()) {
-//                String rowKey = new String(CellUtil.cloneRow(cell));
-//                cooperater.setIndex(rowKey);
-//                String cooperate = new String(CellUtil.cloneValue(cell));
-//                if (cooperate != null && !"".equals(cooperate)) {
-//                    String[] cooperates = cooperate.split(", ");
-//                    for (String co : cooperates) {
-//                        cooperater.setName(co.substring(0, co.indexOf(":")));
-//                        cooperater.setCount(Integer.parseInt(co.substring(co.indexOf(":") + 1, co.length())));
-//                    }
-//                    System.out.print(cooperater.getName() + cooperater.getCount());
-//                }
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        } finally {
-//            try {
-//                table.close();
-//                connection.close();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//        return cooperater;
         List<Cooperater> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new RowMapper<List<Cooperater>>() {
             public List<Cooperater> mapRow(Result result, int i) throws Exception {
                 List<Cooperater> cooperaterList = new ArrayList<Cooperater>();

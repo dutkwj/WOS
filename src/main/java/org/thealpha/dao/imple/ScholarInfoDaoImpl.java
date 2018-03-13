@@ -265,69 +265,6 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 scholarAffIndex.add(Bytes.toString(result.getRow()));
             }
         }
-//        Set<String> scholarHindex = null;
-//        if (StringUtils.isNotBlank(searchItem.getHindex())) {
-//            scholarHindex = new HashSet<String>();
-//            String hindex = searchItem.getHindex();
-//            double lowHindex = Double.parseDouble(hindex.split(", ")[0]);
-//            double highHindex = Double.parseDouble(hindex.split(", ")[1]);
-//            boolean over = false;
-//            List<String> authorIdList = jedisCluster.lrange(ConfigurationConstant.REDIS_HINDEX_0_50W, 0, -1);
-//            for (String authorId : authorIdList) {
-//                double sHindex = Double.parseDouble(jedisCluster.hmget(ConfigurationConstant.REDIS_AUTHORID_HINDEX_0_50W, authorId).get(0));
-//                if (lowHindex > sHindex) {
-//                    over = true;
-//                    break;
-//                }
-//                if (highHindex < sHindex) {
-//                    continue;
-//                }
-//                scholarHindex.add(authorId);
-//            }
-//            if (!over) {
-//                authorIdList = jedisCluster.lrange(ConfigurationConstant.REDIS_HINDEX_50_100W, 0, -1);
-//                for (String authorId : authorIdList) {
-//                    double sHindex = Double.parseDouble(jedisCluster.hmget(ConfigurationConstant.REDIS_AUTHORID_HINDEX_50_100W, authorId).get(0));
-//                    if (lowHindex > sHindex) {
-//                        over = true;
-//                        break;
-//                    }
-//                    if (highHindex < sHindex) {
-//                        continue;
-//                    }
-//                    scholarHindex.add(authorId);
-//                }
-//            }
-//            if (!over) {
-//                authorIdList = jedisCluster.lrange(ConfigurationConstant.REDIS_HINDEX_100_150W, 0, -1);
-//                for (String authorId : authorIdList) {
-//                    double sHindex = Double.parseDouble(jedisCluster.hmget(ConfigurationConstant.REDIS_AUTHORID_HINDEX_100_150W, authorId).get(0));
-//                    if (lowHindex > sHindex) {
-//                        over = true;
-//                        break;
-//                    }
-//                    if (highHindex < sHindex) {
-//                        continue;
-//                    }
-//                    scholarHindex.add(authorId);
-//                }
-//            }
-//            if (!over) {
-//                authorIdList = jedisCluster.lrange(ConfigurationConstant.REDIS_HINDEX_150_200W, 0, -1);
-//                for (String authorId : authorIdList) {
-//                    double sHindex = Double.parseDouble(jedisCluster.hmget(ConfigurationConstant.REDIS_AUTHORID_HINDEX_150_200W, authorId).get(0));
-//                    if (lowHindex > sHindex) {
-//                        over = true;
-//                        break;
-//                    }
-//                    if (highHindex < sHindex) {
-//                        continue;
-//                    }
-//                    scholarHindex.add(authorId);
-//                }
-//            }
-//        }
-
         List<String> scholarQindex = null;
         if (StringUtils.isNotBlank(searchItem.getQindex())) {
             scholarQindex = new ArrayList<String>();

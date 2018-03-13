@@ -77,8 +77,6 @@ public class RegisterController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
         registerService.saveUser(user);
         return "registerSuccess";
     }

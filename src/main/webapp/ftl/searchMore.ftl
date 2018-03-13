@@ -234,7 +234,6 @@
                     var subQindex = qindex.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     var subAff = aff.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     var subFieldName = fieldName.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
-
                     thisData.push(subId);
                     thisData.push(subName);
                     thisData.push(subHindex);
@@ -243,7 +242,6 @@
                     thisData.push(subFieldName);
 
                     layui.each(subId, function(index, item){
-//                        arr.push('<li>'+ item +'</li>');
                         arr.push('<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;border-width: 1px">' +
                                     '<div class="row tm-media-row">' +
                                         '<div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">' +
@@ -267,7 +265,6 @@
                 }();
             }
         });
-
     });
 </script>
 

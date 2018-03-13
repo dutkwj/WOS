@@ -163,7 +163,7 @@ public class HbaseTest {
     @Test
     public void importScholarNameTest() {
         HashMap<String, String> authorIdName = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_id_name.csv");  // CSV文件路径
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_id_name.csv");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(csv));
@@ -173,7 +173,7 @@ public class HbaseTest {
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)  //读取到的内容给line变量
+            while ((line = br.readLine()) != null)
             {
                 count += 1;
                 line.substring(0, line.indexOf(","));
@@ -208,7 +208,6 @@ public class HbaseTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     @Test
@@ -648,7 +647,6 @@ public class HbaseTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
-//        0DE9F497 8148E2AE
         List<Put> puts = new ArrayList<Put>();
         for (Map.Entry entry : authorIdLatLng.entrySet()) {
             String authorId = (String) entry.getKey();
@@ -834,7 +832,6 @@ public class HbaseTest {
 
     @Test
     public void getHighHindexScholar() {
-
         List<Scholar> scholars = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
             public Scholar mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
                 Scholar scholar = new Scholar();
@@ -876,38 +873,6 @@ public class HbaseTest {
                 return 0;
             }
         });
-//        List<Scholar> hindex0_2 = new LinkedList<Scholar>();
-//        List<Scholar> hindex2_5 = new LinkedList<Scholar>();
-//        List<Scholar> hindex5_10 = new LinkedList<Scholar>();
-//        List<Scholar> hindex10_20 = new LinkedList<Scholar>();
-//        List<Scholar> hindex20_50 = new LinkedList<Scholar>();
-//        List<Scholar> hindex50_100 = new LinkedList<Scholar>();
-//        for (Scholar scholar : scholars) {
-//            double hindex = scholar.getHindex();
-//            if (hindex < 2) {
-//                hindex0_2.add(scholar);
-//            } else if (hindex < 5) {
-//                hindex2_5.add(scholar);
-//            } else if (hindex < 10) {
-//                hindex5_10.add(scholar);
-//            } else if (hindex < 20) {
-//                hindex10_20.add(scholar);
-//            } else if (hindex < 50) {
-//                hindex20_50.add(scholar);
-//            } else {
-//                hindex50_100.add(scholar);
-//            }
-//        }
-//        System.out.println(hindex0_2.size());
-//        System.out.println(hindex2_5.size());
-//        System.out.println(hindex5_10.size());
-//        System.out.println(hindex10_20.size());
-//        System.out.println(hindex20_50.size());
-//        System.out.println(hindex50_100.size());
-
-
-//        jedisCluster.set(ConfigurationConstant.REDIS_ALL_SCHOLARS.getBytes(), ListTranscoder.serialize(scholars));
-
         List<Scholar> top10Scholars = new ArrayList<Scholar>();
         for (int i = 0; i < 10; i++) {
             top10Scholars.add(scholars.get(i));
@@ -918,8 +883,6 @@ public class HbaseTest {
         }
         jedisCluster.set(ConfigurationConstant.REDIS_HINDEX_TOP10_SCHOLARS.getBytes(), ListTranscoder.serialize(top10Scholars));
         jedisCluster.set(ConfigurationConstant.REDIS_HINDEX_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
-//        jedisCluster.del("redis_top10_scholars");
-
     }
 
     @Test
@@ -1106,7 +1069,7 @@ public class HbaseTest {
     @Test
     public void importStatisticalTest() {
         Map<String, String> map = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/statistical/cs_authorid_studentsnumber.csv");  // CSV文件路径
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/statistical/cs_authorid_studentsnumber.csv");
         BufferedReader br = null;
         try
         {
@@ -1116,23 +1079,11 @@ public class HbaseTest {
             e.printStackTrace();
         }
         String line = "";
-        int count = 0;
         try {
             while ((line = br.readLine()) != null)
             {
-//                count += 1;
-//                if (count > 10) {
-//                    return;
-//                }
-
                 String[] lines = line.split(",");
-//                System.out.println(line);
-
                 map.put(lines[0], lines[1]);
-//                if (lines[0].equals("0DE9F497")) {
-//                    System.out.println(lines);
-//                    return;
-//                }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -1164,7 +1115,6 @@ public class HbaseTest {
 
     @Test
     public void setStatisticalTest() {
-
         List<Scholar> scholars = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
             public Scholar mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
                 Scholar scholar = new Scholar();
@@ -1176,7 +1126,6 @@ public class HbaseTest {
                 String qindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_Q_INDEX)));
                 String fieldName = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_FIELD_NAME)));
                 String cooperateNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_STUDENTS_NUMBER)));
-
 
                 if (StringUtils.isNotBlank(latlng)) {
                     scholar.setLatlng(latlng);
@@ -1211,7 +1160,6 @@ public class HbaseTest {
                 return 0;
             }
         });
-//        jedisCluster.set(ConfigurationConstant.REDIS_ALL_SCHOLARS.getBytes(), ListTranscoder.serialize(scholars));
 
         List<Scholar> top100Scholars = new ArrayList<Scholar>();
         for (int i = 0; i < 100; i++) {
@@ -1241,11 +1189,9 @@ public class HbaseTest {
             e.printStackTrace();
         }
         String line = "";
-        int count = 0;
         try {
-            while ((line = br.readLine()) != null)  //读取到的内容给line变量
+            while ((line = br.readLine()) != null)
             {
-                count += 1;
                 line.substring(0, line.indexOf(","));
                 String authorId = line.substring(0, line.indexOf(","));
                 String hindex = line.substring(line.indexOf(",") + 1);
@@ -1280,16 +1226,12 @@ public class HbaseTest {
     }
 
     @Test
-    public void setAuthorIdHindexRedis() {
+    public void setAuthorIdQindexRedis() {
         List<Scholar> scholars = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
             public Scholar mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
                 Scholar scholar = new Scholar();
                 scholar.setIndex(Bytes.toString(result.getRow()));
-                String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
                 String qindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_Q_INDEX)));
-                if (StringUtils.isNotBlank(hindex)) {
-                    scholar.setHindex(Double.parseDouble(hindex));
-                }
                 if (StringUtils.isNotBlank(qindex)) {
                     scholar.setQindex(Double.parseDouble(qindex));
                 }

@@ -30,7 +30,6 @@ public class StatisticalRankingsController {
     @RequestMapping("/top100")
     public String getScholarsByType(@RequestParam String type, Model model) {
         List<Scholar> top100Scholars = null;
-        int number = 0;
         if ("cooperator number".equals(type)) {
             top100Scholars = rankService.getTop100Cooperators();
         } else if ("team members".equals(type)) {
@@ -47,7 +46,6 @@ public class StatisticalRankingsController {
             top100Scholars = rankService.getTop100CoRefed();
         }
         model.addAttribute("scholars", top100Scholars);
-
         char[] caType = type.toCharArray();
         caType[0] -= 32;
         type = String.valueOf(caType);

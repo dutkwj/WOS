@@ -82,25 +82,25 @@
 <script src="../js/d3.v3.min.js" charset="utf-8"></script>
 <script>
     $("#statisticalNumber").html("Cooperator number:${middleScholar.cooperateNumber!""}");
-
     nodes = [
-        { "name": "${middleScholar.name!""}"   , "image" : "../img/scholarImg.png   " , "id":"${middleScholar.index!""}", "hindex":"${middleScholar.hindex!""}",　"qindex":"${middleScholar.qindex}", "cooperatorNumber":"${middleScholar.cooperateNumber!""}", "aff":"${middleScholar.aff!""}", "fieldName":"${middleScholar.fieldName!""}"}];
+        { "name": "${middleScholar.name!""}"   , "image" : "../img/scholarImg.png   " , "id":"${middleScholar.index!""}",
+            "hindex":"${middleScholar.hindex!""}",　"qindex":"${middleScholar.qindex}", "cooperatorNumber":"${middleScholar.cooperateNumber!""}",
+            "aff":"${middleScholar.aff!""}", "fieldName":"${middleScholar.fieldName!""}"}];
     edges = [];
     var cooperaterIndex = 1;
     <#if cooperaters?? && (cooperaters?size>0)>
         <#list cooperaters as cooperater>
-        nodes.push({"name": "${cooperater.name!""}"   , "image" : "../img/scholarImg.png", "id":"${cooperater.index!""}", "hindex":"${cooperater.hindex!""}", "qindex":"${cooperater.qindex}", "cooperatorNumber":"${cooperater.cooperateNumber!""}", "aff":"${cooperater.aff!""}", "fieldName":"${cooperater.fieldName!""}"});
+        nodes.push({"name": "${cooperater.name!""}"   , "image" : "../img/scholarImg.png", "id":"${cooperater.index!""}",
+            "hindex":"${cooperater.hindex!""}", "qindex":"${cooperater.qindex}", "cooperatorNumber":"${cooperater.cooperateNumber!""}",
+            "aff":"${cooperater.aff!""}", "fieldName":"${cooperater.fieldName!""}"});
         edges.push({ "source": 0 , "target": cooperaterIndex , "relation":"合作关系" , "count":${cooperater.count!1}});
         cooperaterIndex = cooperaterIndex + 1;
-
         </#list>
     </#if>
 
     var oParentWin= (window.parent)?(window.parent):(window.__parent__);
     var oParentBody= oParentWin.document.body;
-
     var width = oParentBody.clientWidth;
-
     var h = 0;
     if (cooperaterIndex > 20) {
         h = (cooperaterIndex - 20) * 7;
@@ -114,8 +114,6 @@
             .attr("width",width)
             .attr("height",height);
     var g1 = svg.append("g");
-
-
 
     //D3力导向布局
     var force = d3.layout.force()
@@ -155,24 +153,19 @@
             .attr("class", "circleImg")
             .attr("r", radius)
             .attr("fill", function(d, i){
-
                 //创建圆形图片
                 var defs = g1.append("defs").attr("id", "imgdefs");
-
                 var catpattern = defs.append("pattern")
                         .attr("id", "catpattern" + i)
                         .attr("height", 1)
                         .attr("width", 1);
-
                 catpattern.append("image")
                         .attr("x", - (img_w / 2 - radius))
                         .attr("y", - (img_h / 2 - radius))
                         .attr("width", img_w)
                         .attr("height", img_h)
                         .attr("xlink:href", d.image);
-
                 return "url(#catpattern" + i + ")";
-
             })
             .on("mouseover",function(d,i){
                 //显示连接线上的文字
@@ -281,26 +274,20 @@
 
     var path = d3.geo.path()
             .projection(projection);
-
     var graticule = d3.geo.graticule();
-
     var svg = d3.select("body").append("svg")
             .attr("width", width)
             .attr("height", height / 2 + 100);
-
     svg.append("defs").append("path")
             .datum({type: "Sphere"})
             .attr("id", "sphere")
             .attr("d", path);
-
     svg.append("use")
             .attr("class", "stroke")
             .attr("xlink:href", "#sphere");
-
     svg.append("use")
             .attr("class", "fill")
             .attr("xlink:href", "#sphere");
-
     svg.append("path")
             .datum(graticule)
             .attr("class", "graticule")

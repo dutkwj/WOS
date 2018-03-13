@@ -50,11 +50,9 @@ public class ShowPersonalInfoController {
 
     }
     @RequestMapping("/modifyInfo")
-    public String modifyInfo(Model model,User user,HttpSession session,HttpServletResponse response) throws JSONException, IOException {
-//        System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"+user);
+    public String modifyInfo(User user,HttpSession session,HttpServletResponse response) throws JSONException, IOException {
         User users = (User)(session.getAttribute("user"));
         user.setEmail(users.getEmail());
-//        System.out.println("################################################"+user);
         boolean b = userService.modifyInfo(user);
         JSONObject result = new JSONObject();
         if(b){
