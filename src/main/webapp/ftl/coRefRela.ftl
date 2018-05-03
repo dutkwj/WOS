@@ -188,7 +188,7 @@
                 });
             })
             .on("click", function (d) {
-                $.get('/reference/coRef/'+ d.id, function (result) {
+                $.get('/coRef/'+ d.id, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
