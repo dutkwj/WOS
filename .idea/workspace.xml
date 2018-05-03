@@ -7,41 +7,135 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291e2776-134e-423c-b7f9-68e37a8618e2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/flights/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/flights/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/flights/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/flights/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/flights/bleu-linear-gradient.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/flights/flights.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/flights/logo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/file/flights.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/flights.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/echars/echarts.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/echars/extension/bmap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/echars/map/js/world.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/echarts-gl/echarts-gl.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS.war" afterPath="$PROJECT_DIR$/target/WOS.war" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/WOS.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SearchController$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SearchController$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SearchController$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SearchController$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/WorldMapController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Category.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Graph.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Link.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Node.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/lib/jackson-annotations-2.9.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/lib/jackson-core-2.9.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/lib/jackson-databind-2.9.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/img/WOS.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SearchController$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SearchController$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SearchController$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SearchController$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/WorldMapController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Category.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Graph.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Link.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Node.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/WorldMapController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Category.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Graph.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Link.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Node.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/nav/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/nav/leftnav.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/reset.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/styleDialog.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/file/test.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/cooperate.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/cooperateNumber.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/ref.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/team.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/teamCircular.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/echarts.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/mainDialog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/modernizr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/nav/leftnav.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/velocity.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/nav/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/nav/leftnav.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/reset.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/styleDialog.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/file/test.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/ftl/cooperate.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/ftl/cooperateNumber.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/ftl/leftNav.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/ftl/ref.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/ftl/relationGraph.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/ftl/team.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/ftl/teamCircular.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/echarts.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/mainDialog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/modernizr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/nav/leftnav.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/velocity.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CoTeamRelaController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CoTeamRelaController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CooperateRelaController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CooperateRelaController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/HdfsController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/HdfsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/ReferenceController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/ReferenceController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SearchController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SearchController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ListTranscoder.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ListTranscoder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Cooperater.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Cooperater.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/SearchItem.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/SearchItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCooperateService$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCooperateService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCooperateService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCooperateService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarInfoService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarInfoService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ConfigurationConstant.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ConfigurationConstant.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/CoTeamRelaController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/CoTeamRelaController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/CooperateRelaController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/CooperateRelaController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/HdfsController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/HdfsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/ReferenceController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/ReferenceController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SearchController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SearchController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/util/ListTranscoder.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/ListTranscoder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Cooperater.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Cooperater.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/SearchItem.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/SearchItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarInfoService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarInfoService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/util/ConfigurationConstant.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/ConfigurationConstant.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Test.class" afterPath="$PROJECT_DIR$/target/test-classes/Test.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/WOS_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/WOS_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WOS.iml" afterPath="$PROJECT_DIR$/WOS.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/ReferenceController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/ReferenceController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/SearchItem.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/SearchItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarInfoService.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarInfoService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/HbaseTest.java" afterPath="$PROJECT_DIR$/src/main/test/HbaseTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/Test.java" afterPath="$PROJECT_DIR$/src/main/test/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/coRefRela.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/coRefRela.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/scholar.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/scholar.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/WOS/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/statisticalRankings.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/statisticalRankings.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/worldMap.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/worldMap.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/coRefRela.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/coRefRela.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/index.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/index.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/scholar.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/scholar.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/scholarRank.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/scholarRank.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/searchMore.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/searchMore.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/statisticalRankings.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/statisticalRankings.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/worldMap.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/worldMap.ftl" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -71,11 +165,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="flights.ftl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/flights.ftl">
+      <file leaf-file-name="cooperate.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/cooperate.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="159" column="39" lean-forward="false" selection-start-line="159" selection-start-column="39" selection-end-line="159" selection-end-column="39" />
+            <state relative-caret-position="216">
+              <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="leftNav.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CooperateRelaController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CoTeamRelaController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+              <folding>
+                <element signature="e#1952#1960#0" expanded="true" />
+                <element signature="e#2013#2021#0" expanded="true" />
+                <element signature="e#2439#2445#0" expanded="true" />
+                <element signature="e#2554#2560#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/RegisterController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReferenceController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/ReferenceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4248">
+              <caret line="250" column="31" lean-forward="false" selection-start-line="250" selection-start-column="31" selection-end-line="250" selection-end-column="31" />
+              <folding>
+                <element signature="e#1796#1802#0" expanded="true" />
+                <element signature="e#1846#1852#0" expanded="true" />
+                <element signature="e#1905#1913#0" expanded="true" />
+                <element signature="e#4474#4480#0" expanded="true" />
+                <element signature="e#4524#4530#0" expanded="true" />
+                <element signature="e#4583#4591#0" expanded="true" />
+                <element signature="e#7242#7248#0" expanded="true" />
+                <element signature="e#7292#7298#0" expanded="true" />
+                <element signature="e#7351#7359#0" expanded="true" />
+                <element signature="e#10226#10232#0" expanded="true" />
+                <element signature="e#10276#10282#0" expanded="true" />
+                <element signature="e#10335#10343#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="relationGraph.ftl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="865">
+              <caret line="202" column="32" lean-forward="false" selection-start-line="202" selection-start-column="32" selection-end-line="202" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -84,94 +256,28 @@
       <file leaf-file-name="index.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/index.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1523279149327" expanded="true" signature="7524:7611" ph="..." />
-                <marker date="1523279149327" expanded="true" signature="7868:7878" ph="..." />
-                <marker date="1523279149327" expanded="true" signature="8280:8301" ph="..." />
-                <marker date="1523279149327" expanded="true" signature="8736:8742" ph="&amp;nbsp;" />
-                <marker date="1523279149327" expanded="true" signature="8900:8906" ph="&amp;nbsp;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="information.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/information.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="3402">
+              <caret line="189" column="165" lean-forward="false" selection-start-line="189" selection-start-column="165" selection-end-line="189" selection-end-column="165" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modifyPsw.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/modifyPsw.ftl">
+      <file leaf-file-name="searchMore.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="4734">
+              <caret line="263" column="143" lean-forward="false" selection-start-line="263" selection-start-column="143" selection-end-line="263" selection-end-column="143" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="partnerCountEveYear.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/partnerCountEveYear.ftl">
+      <file leaf-file-name="statisticalRankings.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/statisticalRankings.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="refedRela.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/refedRela.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/register.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registerSuccess.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/registerSuccess.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scholar.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/scholar.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1081">
-              <caret line="97" column="37" lean-forward="false" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Hello.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/Hello.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="4122">
+              <caret line="229" column="51" lean-forward="false" selection-start-line="229" selection-start-column="51" selection-end-line="229" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -182,37 +288,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="HTML File" />
         <option value="spring-beans.schema" />
         <option value="Interface" />
         <option value="Class" />
         <option value="JavaScript File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cote</find>
-      <find>coRef</find>
-      <find>aff</find>
-      <find>navbar-nav</find>
-      <find>web_of_scholar</find>
-      <find>web_of_scholar.png</find>
-      <find>banner-info1</find>
-      <find>layui-nav-item</find>
-      <find>navbar-wrapper</find>
-      <find>Test</find>
-      <find>fixe</find>
-      <find>countryNames</find>
-      <find>iou</find>
-      <find>请求接口</find>
-      <find>下一页</find>
-      <find>layui-laypage-prev</find>
-      <find>一</find>
-      <find>下</find>
-      <find>页</find>
-      <find>请求上传接口出现异常</find>
       <find>cooperatorNumber</find>
       <find>cooperateNumber</find>
       <find>fie</find>
@@ -222,7 +308,27 @@
       <find>impor</find>
       <find>importh</find>
       <find>addWeight</find>
-      <find>\&lt;\!DOCTYPE html\&gt;\n\&lt;html style\=\&quot;height\: 100\%\&quot;\&gt;\n\&lt;head\&gt;\n    \&lt;meta charset\=\&quot;utf\-8\&quot;\&gt;\n\&lt;\/head\&gt;\n\&lt;body style\=\&quot;height\: 100\%\; margin\: 0\&quot;\&gt;\n\&lt;div id\=\&quot;container\&quot; style\=\&quot;height\: 100\%\&quot;\&gt;\&lt;\/div\&gt;\n    \&lt;div class\=\&quot;blue\-linear\-hr\&quot;\&gt;\&lt;\/div\&gt;\n    \&lt;section class\=\&quot;container section center section\-create\&quot;\&gt;\n         \&lt;br\&gt;\n         \&lt;br\&gt;\n         \&lt;h2\&gt;Create your own \!\&lt;\/h2\&gt;\n         \&lt;span class\=\&quot;blue\-hr\&quot; style\=\&quot;width\: 120px\;\&quot;\&gt;\&lt;\/span\&gt;\n         \&lt;br\&gt;\n         \&lt;br\&gt;\&lt;p class\=\&quot;highlight\&quot;\&gt;\n         \&lt;\!\-\- react\-text\: 38 \-\-\&gt;\n         Collect tweets about your\n         \&lt;\!\-\- \/react\-text \-\-\&gt;\n         \&lt;strong\&gt; event\&lt;\/strong\&gt;\n         \&lt;\!\-\- react\-text\: 40 \-\-\&gt;\n         \,\n         \&lt;\!\-\- \/react\-text \-\-\&gt;\n         \&lt;strong\&gt; brand\&lt;\/strong\&gt;\n         \&lt;\!\-\- react\-text\: 42 \-\-\&gt;\n         \,\n         \&lt;\!\-\- \/react\-text \-\-\&gt;\n         \&lt;strong\&gt; topic\&lt;\/strong\&gt;\n         \&lt;\!\-\- react\-text\: 44 \-\-\&gt;\n         \.\.\.\n         \&lt;\!\-\- \/react\-text \-\-\&gt;\n         \&lt;br\&gt;\n         \&lt;\!\-\- react\-text\: 46 \-\-\&gt;\n         Engage people with realtime visual display\n         \&lt;\!\-\- \/react\-text \-\-\&gt;\n         \&lt;\/p\&gt;\n         \&lt;br\&gt;\n         \&lt;br\&gt;\n         \&lt;div class\=\&quot;row UseCases\&quot;\&gt;\n             \&lt;div class\=\&quot;four columns\&quot;\&gt;\n                 \&lt;h3\&gt;Big screen\&lt;\/h3\&gt;\n                 \&lt;i class\=\&quot;fa fa\-television\&quot; aria\-hidden\=\&quot;true\&quot;\&gt;\&lt;\/i\&gt;\n                 \&lt;p\&gt;\n                     \&lt;\!\-\- react\-text\: 54 \-\-\&gt;\n                     Display it during your events\,\n                     \&lt;\!\-\- \/react\-text \-\-\&gt;\n                     \&lt;br\&gt;\n                     \&lt;\!\-\- react\-text\: 56 \-\-\&gt;\n                     your presentations\,\n                     \&lt;\!\-\- \/react\-text \-\-\&gt;\n                     \&lt;br\&gt;\n                     \&lt;\!\-\- react\-text\: 58 \-\-\&gt;\n                     in your command center\n                     \&lt;\!\-\- \/react\-text \-\-\&gt;\n                 \&lt;\/p\&gt;\n             \&lt;\/div\&gt;\n             \&lt;div class\=\&quot;four columns\&quot;\&gt;\n                 \&lt;h3\&gt;On your website\&lt;\/h3\&gt;\n                 \&lt;i class\=\&quot;fa fa\-code\&quot; aria\-hidden\=\&quot;true\&quot;\&gt;\&lt;\/i\&gt;\n                 \&lt;p\&gt;\&lt;\!\-\- react\-text\: 63 \-\-\&gt;\n                     Embed it on your website\n                     \&lt;\!\-\- \/react\-text \-\-\&gt;\n                     \&lt;br\&gt;\n                     \&lt;\!\-\- react\-text\: 65 \-\-\&gt;\n                     as simple as a youtube player\n                     \&lt;\!\-\- \/react\-text \-\-\&gt;\n                     \&lt;br\&gt;\n                     \&lt;\!\-\- react\-text\: 67 \-\-\&gt;with one line of code\&lt;\!\-\- \/react\-text \-\-\&gt;\&lt;\/p\&gt;\&lt;\/div\&gt;\&lt;div class\=\&quot;four columns\&quot;\&gt;\&lt;h3\&gt;Everywhere\&lt;\/h3\&gt;\&lt;i class\=\&quot;fa fa\-share\-alt\&quot; aria\-hidden\=\&quot;true\&quot;\&gt;\&lt;\/i\&gt;\&lt;p\&gt;\&lt;\!\-\- react\-text\: 72 \-\-\&gt;Share it as a simple link\&lt;\!\-\- \/react\-text \-\-\&gt;\&lt;br\&gt;\&lt;\!\-\- react\-text\: 74 \-\-\&gt;and create the buzz with a new\&lt;\!\-\- \/react\-text \-\-\&gt;\&lt;br\&gt;\&lt;\!\-\- react\-text\: 76 \-\-\&gt;innovating branding support\&lt;\!\-\- \/react\-text \-\-\&gt;\&lt;\/p\&gt;\&lt;\/div\&gt;\&lt;\/div\&gt;\&lt;br\&gt;\&lt;br\&gt;\&lt;br\&gt;\&lt;br\&gt;\&lt;\/section\&gt;\&lt;div class\=\&quot;blue\-linear\-hr\&quot;\&gt;\&lt;\/div\&gt;\&lt;section class\=\&quot;container References\&quot;\&gt;\&lt;h2 class\=\&quot;center\&quot;\&gt;They trust us\&lt;\/h2\&gt;\&lt;span class\=\&quot;blue\-hr\&quot; style\=\&quot;width\: 70px\;\&quot;\&gt;\&lt;\/span\&gt;\&lt;br\&gt;\&lt;br\&gt;\&lt;div class\=\&quot;logos\&quot;\&gt;\&lt;div class\=\&quot;item\&quot;\&gt;\&lt;img alt\=\&quot;\&quot; src\=\&quot;\/img\/refs\/montpellier\.png\&quot;\&gt;\&lt;\/div\&gt;\&lt;div class\=\&quot;item\&quot;\&gt;\&lt;img alt\=\&quot;\&quot; src\=\&quot;\/img\/refs\/barilla\.png\&quot;\&gt;\&lt;\/div\&gt;\&lt;div class\=\&quot;item\&quot;\&gt;\&lt;img alt\=\&quot;\&quot; src\=\&quot;\/img\/refs\/ogilvy\.png\&quot;\&gt;\&lt;\/div\&gt;\&lt;div class\=\&quot;item\&quot;\&gt;\&lt;img alt\=\&quot;\&quot; src\=\&quot;\/img\/refs\/national\.png\&quot;\&gt;\&lt;\/div\&gt;\&lt;div class\=\&quot;item\&quot;\&gt;\&lt;img alt\=\&quot;\&quot; src\=\&quot;\/img\/refs\/wef\.svg\&quot;\&gt;\&lt;\/div\&gt;\&lt;\/div\&gt;\&lt;\/section\&gt;\&lt;div class\=\&quot;blue\-linear\-hr\&quot;\&gt;\&lt;\/div\&gt;\&lt;section class\=\&quot;container section section\-pricing\&quot;\&gt;\&lt;br\&gt;\&lt;br\&gt;\&lt;h2 class\=\&quot;center\&quot;\&gt;Packages\&lt;\/h2\&gt;\&lt;span class\=\&quot;blue\-hr\&quot; style\=\&quot;width\: 50px\;\&quot;\&gt;\&lt;\/span\&gt;\&lt;br\&gt;\&lt;br\&gt;\&lt;div class\=\&quot;Pricing\&quot;\&gt;\&lt;div class\=\&quot;row\&quot;\&gt;\&lt;div class\=\&quot;offer four columns\&quot;\&gt;\&lt;i class\=\&quot;fa fa\-circle blue\&quot; aria\-hidden\=\&quot;true\&quot;\&gt;\&lt;\/i\&gt;\&lt;h3\&gt;Starter\&lt;\/h3\&gt;\&lt;ul\&gt;\&lt;li\&gt;\&lt;span class\=\&quot;what\&quot;\&gt;Display\&lt;\/span\&gt;\&lt;strong\&gt;Restricted\&lt;\/strong\&gt;\&lt;em\&gt;Login required\&lt;\/em\&gt;\&lt;\/li\&gt;\&lt;li\&gt;\&lt;span class\=\&quot;what\&quot;\&gt;Data\&lt;\/span\&gt;\&lt;strong\&gt;100K tweets\/month\&lt;\/strong\&gt;\&lt;em\&gt;Realtime stops when limit is reached\&lt;\/em\&gt;\&lt;\/li\&gt;\&lt;\/ul\&gt;\&lt;div class\=\&quot;price\&quot;\&gt;\&lt;\/div\&gt;\&lt;a class\=\&quot;button button\-primary\&quot; href\=\&quot;mailto\:contact\@tweetping\.net\&quot;\&gt;Contact Us\&lt;\/a\&gt;\&lt;\/div\&gt;\&lt;div class\=\&quot;offer four columns\&quot;\&gt;\&lt;i class\=\&quot;fa fa\-circle green\&quot; aria\-hidden\=\&quot;true\&quot;\&gt;\&lt;\/i\&gt;\&lt;h3\&gt;Pro\&lt;\/h3\&gt;\&lt;ul\&gt;\&lt;li\&gt;\&lt;span class\=\&quot;what\&quot;\&gt;Display\&lt;\/span\&gt;\&lt;strong\&gt;Public\&lt;\/strong\&gt;\&lt;em\&gt;Share it everywhere\&lt;\/em\&gt;\&lt;\/li\&gt;\&lt;li\&gt;\&lt;span class\=\&quot;what\&quot;\&gt;Data\&lt;\/span\&gt;\&lt;strong\&gt;Unlimited Tweets\&lt;\/strong\&gt;\&lt;em\&gt;\&lt;\!\-\- react\-text\: 134 \-\-\&gt;Realtime never stops\&lt;\!\-\- \/react\-text \-\-\&gt;\&lt;br\&gt;\&lt;\!\-\- react\-text\: 136 \-\-\&gt;\(Max rate\: 30 tweets\/second\)\&lt;\!\-\- \/react\-text \-\-\&gt;\&lt;\/em\&gt;\&lt;\/li\&gt;\&lt;\/ul\&gt;\&lt;div class\=\&quot;price\&quot;\&gt;\&lt;\/div\&gt;\&lt;a class\=\&quot;button button\-primary\&quot; href\=\&quot;mailto\:contact\@tweetping\.net\&quot;\&gt;Contact us\&lt;\/a\&gt;\&lt;\/div\&gt;\&lt;div class\=\&quot;offer four columns\&quot;\&gt;\&lt;i class\=\&quot;fa fa\-circle purple\&quot; aria\-hidden\=\&quot;true\&quot;\&gt;\&lt;\/i\&gt;\&lt;h3\&gt;Lightping\&lt;\/h3\&gt;\&lt;ul\&gt;\&lt;li\&gt;\&lt;span class\=\&quot;what\&quot;\&gt;Display\&lt;\/span\&gt;\&lt;strong\&gt;Adapted\&lt;\/strong\&gt;\&lt;em\&gt;Private\, public\, whitelist\&lt;\/em\&gt;\&lt;\/li\&gt;\&lt;li\&gt;\&lt;span class\=\&quot;what\&quot;\&gt;Data\&lt;\/span\&gt;\&lt;strong\&gt;Custom sources\&lt;\/strong\&gt;\&lt;em\&gt;\&lt;\!\-\- react\-text\: 151 \-\-\&gt;Social data\, internal company data\,\&lt;\!\-\- \/react\-text \-\-\&gt;\&lt;br\&gt;\&lt;\!\-\- react\-text\: 153 \-\-\&gt;OpenData\.\.\.\&lt;\!\-\- \/react\-text \-\-\&gt;\&lt;\/em\&gt;\&lt;\/li\&gt;\&lt;\/ul\&gt;\&lt;div class\=\&quot;price\&quot;\&gt;\&lt;\/div\&gt;\&lt;a class\=\&quot;button button\-primary\&quot; href\=\&quot;http\:\/\/bit\.ly\/2mFjrih\&quot; target\=\&quot;_blank\&quot;\&gt;Learn more\&lt;\/a\&gt;\&lt;\/div\&gt;\&lt;\/div\&gt;\&lt;\/div\&gt;\&lt;div class\=\&quot;question\&quot;\&gt;\&lt;i class\=\&quot;fa fa\-question\-circle\-o\&quot; aria\-hidden\=\&quot;true\&quot;\&gt;\&lt;\/i\&gt;\&lt;\!\-\- react\-text\: 158 \-\-\&gt;If you have any question about pricing contact us at\&lt;\!\-\- \/react\-text \-\-\&gt;\&lt;\!\-\- react\-text\: 159 \-\-\&gt; \&lt;\!\-\- \/react\-text \-\-\&gt;\&lt;a href\=\&quot;mailto\:contact\@tweetping\.net\&quot;\&gt;contact\@tweetping\.net\&lt;\/a\&gt;\&lt;\/div\&gt;\&lt;\/section\&gt;\n\&lt;script type\=\&quot;text\/javascript\&quot; src\=\&quot;\.\.\/js\/echars\/echarts\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\n\&lt;script type\=\&quot;text\/javascript\&quot; src\=\&quot;\.\.\/js\/echarts\-gl\/echarts\-gl\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\n\&lt;\#\-\-\&lt;script type\=\&quot;text\/javascript\&quot; src\=\&quot;http\:\/\/echarts\.baidu\.com\/gallery\/vendors\/echarts\-stat\/ecStat\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\-\-\&gt;\n\&lt;\#\-\-\&lt;script type\=\&quot;text\/javascript\&quot; src\=\&quot;http\:\/\/echarts\.baidu\.com\/gallery\/vendors\/echarts\/extension\/dataTool\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\-\-\&gt;\n\&lt;\#\-\-\&lt;script type\=\&quot;text\/javascript\&quot; src\=\&quot;http\:\/\/echarts\.baidu\.com\/gallery\/vendors\/echarts\/map\/js\/china\.js\&quot;\&gt;\&lt;\/script\&gt;\-\-\&gt;\n\&lt;script type\=\&quot;text\/javascript\&quot; src\=\&quot;http\:\/\/echarts\.baidu\.com\/gallery\/vendors\/echarts\/map\/js\/world\.js\&quot;\&gt;\&lt;\/script\&gt;\n\&lt;\#\-\-\&lt;script type\=\&quot;text\/javascript\&quot; src\=\&quot;http\:\/\/api\.map\.baidu\.com\/api\?v\=2\.0\&amp;ak\=ZUONbpqGBsYGXNIYHicvbAbM\&quot;\&gt;\&lt;\/script\&gt;\-\-\&gt;\n\&lt;script type\=\&quot;text\/javascript\&quot; src\=\&quot;\.\.\/js\/echars\/extension\/bmap\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\n\&lt;\#\-\-\&lt;script type\=\&quot;text\/javascript\&quot; src\=\&quot;http\:\/\/echarts\.baidu\.com\/gallery\/vendors\/simplex\.js\&quot;\&gt;\&lt;\/script\&gt;\-\-\&gt;\n\&lt;script type\=\&quot;text\/javascript\&quot; src\=\&quot;\.\.\/js\/jquery\-3\.2\.1\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\n\&lt;script type\=\&quot;text\/javascript\&quot;\&gt;\n    var dom \= document\.getElementById\(\&quot;container\&quot;\)\;\n    var myChart \= echarts\.init\(dom\)\;\n    var app \= \{\}\;\n    option \= null\;\n    var uploadedDataURL \= \&quot;\.\.\/file\/flights\.json\&quot;\;     \n\n    app\.title \= \'65k\+ 飞机航线\'\;\n\n    myChart\.showLoading\(\)\;\n\n    \$\.getJSON\(uploadedDataURL\, function\(data\) \{\n\n        myChart\.hideLoading\(\)\;\n\n        function getAirportCoord\(idx\) \{\n            return \[data\.airports\[idx\]\[3\]\, data\.airports\[idx\]\[4\]\]\;\n        \}\n        var routes \= data\.routes\.map\(function \(airline\) \{\n            return \[\n                getAirportCoord\(airline\[1\]\)\,\n                getAirportCoord\(airline\[2\]\)\n            \]\;\n        \}\)\;\n\n        myChart\.setOption\(\{\n            geo3D\: \{\n                map\: \'world\'\,\n                shading\: \'realistic\'\,\n                silent\: true\,\n                environment\: \'\#333\'\,\n                realisticMaterial\: \{\n                    roughness\: 0\.8\,\n                    metalness\: 0\n                \}\,\n                postEffect\: \{\n                    enable\: true\n                \}\,\n                groundPlane\: \{\n                    show\: false\n                \}\,\n                light\: \{\n                    main\: \{\n                        intensity\: 1\,\n                        alpha\: 30\n                    \}\,\n                    ambient\: \{\n                        intensity\: 0\n                    \}\n                \}\,\n                viewControl\: \{\n                    distance\: 70\,\n                    alpha\: 89\,\n\n                    panMouseButton\: \'left\'\,\n                    rotateMouseButton\: \'right\'\n                \}\,\n\n                itemStyle\: \{\n                    areaColor\: \'\#000\'\n                \}\,\n\n                regionHeight\: 0\.5\n            \}\,\n            series\: \[\{\n                type\: \'lines3D\'\,\n\n                coordinateSystem\: \'geo3D\'\,\n\n                effect\: \{\n                    show\: true\,\n                    trailWidth\: 1\,\n                    trailOpacity\: 0\.5\,\n                    trailLength\: 0\.2\,\n                    constantSpeed\: 5\n                \}\,\n\n                blendMode\: \'lighter\'\,\n\n                lineStyle\: \{\n                    width\: 0\.2\,\n                    opacity\: 0\.05\n                \}\,\n\n                data\: routes\n            \}\]\n        \}\)\;\n\n        window\.addEventListener\(\'keydown\'\, function \(\) \{\n            myChart\.dispatchAction\(\{\n                type\: \'lines3DToggleEffect\'\,\n                seriesIndex\: 0\n            \}\)\;\n        \}\)\;\n    \}\)\;\;\n    if \(option \&amp;\&amp; typeof option \=\=\= \&quot;object\&quot;\) \{\n        myChart\.setOption\(option\, true\)\;\n    \}\n\&lt;\/script\&gt;\n\&lt;\/body\&gt;\n\&lt;\/html\&gt;</find>
+      <find>coRefJSON</find>
+      <find>directCooperateJSON</find>
+      <find>content</find>
+      <find>row t</find>
+      <find>wos</find>
+      <find>WOw</find>
+      <find>col-md9</find>
+      <find>hidden</find>
+      <find>affiliation</find>
+      <find>row tm-media-row</find>
+      <find>layer.c</find>
+      <find>cd-quick-view</find>
+      <find>cd-trigger</find>
+      <find>cd-close</find>
+      <find>container</find>
+      <find>overlay-layer</find>
+      <find>jquery.min.map</find>
+      <find>cd-item'</find>
+      <find>cd-item</find>
+      <find>velocity.</find>
+      <find>relationship</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -244,57 +350,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ReferenceDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/ReferenceController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/layui.all.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/layui/layui.all.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/upload.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/login.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/ReferenceService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/redis/redis-config.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/HdfsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Scholar.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/util/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/statisticalRankings.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/registerSuccess.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/modifyPsw.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/showPersonalInfo.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCoTeamService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/coTeamRela.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/TeaStuRela.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/refRela.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/refedRela.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/coRefedRela.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/coRefRela.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/RegisterController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/ShowPersonalInfoController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/test/HbaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/util/ListTranscoder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/cooperateRela.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/RecommendService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/echars/echarts.min.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/echarts-gl/echarts-gl.min.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/echars/map/world.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/echars/extension/bmap.min.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/file/flights.json" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/echars/map/js/world.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/flights/flights.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/flights.ftl" />
+        <option value="$PROJECT_DIR$/src/main/test/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/WorldMapController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/test/HbaseTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Category.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Graph.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/echarts.min.js" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Link.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/teamCircular.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/coRefRela.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/team.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/coRef.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/ref.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/SearchItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/scholar.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/mainDialog.js" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Node.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/navStyle.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/nav/demo.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/nav/font-awesome.min.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/relationIndex.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/styleDialog.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/cooperate.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/cooperate2.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/worldMap.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/cooperateNumber.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/relationshipIndex.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/ReferenceController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/statisticalRankings.ftl" />
       </list>
     </option>
   </component>
@@ -342,9 +448,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="67" />
+    <option name="x" value="68" />
     <option name="y" value="52" />
-    <option name="width" value="1853" />
+    <option name="width" value="1841" />
     <option name="height" value="1028" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -365,9 +471,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -391,65 +496,7 @@
               <item name="WOS" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="thealpha" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="thealpha" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="flights" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap.css" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="file" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
@@ -459,74 +506,11 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="ftl" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="flights" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="echars" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="echars" type="462c0819:PsiDirectoryNode" />
-              <item name="map" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="echars" type="462c0819:PsiDirectoryNode" />
-              <item name="map" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts-gl" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -544,9 +528,6 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/zhengwenqing/workspace/WOS/src/main/webapp/ftl/login.ftl&#10;Hello.f&#9;FILE&#9;file:///home/kangwenjie/IdeaProjects/WOS/src/main/webapp/ftl/Hello.ftl" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/js/echars/map/js" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
       <recent name="org.thealpha.controller" />
@@ -555,11 +536,11 @@
       <recent name="org.thealpha.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/css/flights" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/img" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/img/flights" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/file" />
       <recent name="$PROJECT_DIR$/src/main/webapp/ftl" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/js/nav" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/css/nav" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/css" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -575,34 +556,14 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.tomcat8">
-    <configuration name="HbaseTest.getHighHindexScholar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HbaseTest.importMVC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="WOS" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HbaseTest" />
-      <option name="METHOD_NAME" value="getHighHindexScholar" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="HbaseTest.importScholarHindex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="WOS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="HbaseTest" />
-      <option name="METHOD_NAME" value="importScholarHindex" />
+      <option name="METHOD_NAME" value="importMVC" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -674,52 +635,15 @@
       <module name="WOS" />
       <envs />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
+    <configuration name="Test.testReadCsv" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="HbaseTest" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <module name="WOS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="launchBrowser" value="true" />
-      <setting name="launchBrowserUrl" value="" />
-      <setting name="depsClasspath" value="false" />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <option name="METHOD_NAME" value="testReadCsv" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -1182,19 +1106,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcat8" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.HbaseTest.getHighHindexScholar" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.HbaseTest.importScholarHindex" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Test" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.HbaseTest.setStatisticalTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.HbaseTest.setAuthorIdHindexRedis" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Test" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.HbaseTest.setStatisticalTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.HbaseTest.setAuthorIdHindexRedis" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.Test.testReadCsv" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.HbaseTest.importMVC" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.HbaseTest.setAuthorIdHindexRedis" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.HbaseTest.setStatisticalTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Test" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.HbaseTest.getHighHindexScholar" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.HbaseTest.importScholarHindex" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.HbaseTest.importMVC" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.Test.testReadCsv" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.HbaseTest.setAuthorIdHindexRedis" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.HbaseTest.setStatisticalTest" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -1246,31 +1170,19 @@
       <workItem from="1517204272233" duration="954000" />
       <workItem from="1520129643954" duration="94533000" />
       <workItem from="1520487988181" duration="7728000" />
-      <workItem from="1525309319452" duration="212000" />
+      <workItem from="1523272438354" duration="21264000" />
+      <workItem from="1523430910507" duration="55481000" />
+      <workItem from="1523862604322" duration="162156000" />
+      <workItem from="1525310528931" duration="12000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HbaseTest_setAuthorIdHindexRedis - 2018.03.06 at 15h 50m 08s.xml">
-      <configuration name="HbaseTest.setAuthorIdHindexRedis" configurationId="JUnit" />
+    <history-entry file="HbaseTest_importMVC - 2018.04.10 at 16h 29m 30s.xml">
+      <configuration name="HbaseTest.importMVC" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_setAuthorIdHindexRedis - 2018.03.06 at 15h 50m 23s.xml">
-      <configuration name="HbaseTest.setAuthorIdHindexRedis" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HbaseTest_setAuthorIdHindexRedis - 2018.03.06 at 15h 50m 41s.xml">
-      <configuration name="HbaseTest.setAuthorIdHindexRedis" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HbaseTest_setAuthorIdHindexRedis - 2018.03.06 at 15h 51m 18s.xml">
-      <configuration name="HbaseTest.setAuthorIdHindexRedis" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HbaseTest_setAuthorIdHindexRedis - 2018.03.06 at 15h 51m 31s.xml">
-      <configuration name="HbaseTest.setAuthorIdHindexRedis" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HbaseTest_setAuthorIdHindexRedis - 2018.03.06 at 16h 02m 19s.xml">
-      <configuration name="HbaseTest.setAuthorIdHindexRedis" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HbaseTest_setAuthorIdHindexRedis - 2018.03.06 at 19h 19m 46s.xml">
-      <configuration name="HbaseTest.setAuthorIdHindexRedis" configurationId="JUnit" />
+    <history-entry file="HbaseTest_importMVC - 2018.04.10 at 16h 34m 19s.xml">
+      <configuration name="HbaseTest.importMVC" configurationId="JUnit" />
     </history-entry>
     <history-entry file="HbaseTest_setAuthorIdHindexRedis - 2018.03.06 at 20h 17m 33s.xml">
       <configuration name="HbaseTest.setAuthorIdHindexRedis" configurationId="JUnit" />
@@ -1281,9 +1193,24 @@
     <history-entry file="HbaseTest_setAuthorIdHindexRedis - 2018.03.06 at 22h 02m 34s.xml">
       <configuration name="HbaseTest.setAuthorIdHindexRedis" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Test_testReadCsv - 2018.04.09 at 19h 27m 25s.xml">
+      <configuration name="Test.testReadCsv" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test_testReadCsv - 2018.04.09 at 19h 32m 44s.xml">
+      <configuration name="Test.testReadCsv" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test_testReadCsv - 2018.04.09 at 19h 41m 36s.xml">
+      <configuration name="Test.testReadCsv" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test_testReadCsv - 2018.04.09 at 19h 44m 02s.xml">
+      <configuration name="Test.testReadCsv" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test_testReadCsv - 2018.04.09 at 19h 52m 33s.xml">
+      <configuration name="Test.testReadCsv" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="901575000" />
+    <option name="totallyTimeSpent" value="1099079000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1295,7 +1222,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="52" width="1853" height="1028" extended-state="0" />
+    <frame x="68" y="52" width="1841" height="1028" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61264014" sideWeight="0.2884097" order="7" side_tool="true" content_ui="tabs" />
@@ -1307,18 +1234,18 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36813778" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32508072" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38124362" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3809024" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3326157" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6033578" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16891527" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16295491" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -1330,7 +1257,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35339168" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35306782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1344,7 +1271,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="291" />
+      <option name="time" value="369" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1357,34 +1284,22 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="40" column="54" lean-forward="true" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/wos_index.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarInfoDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/SearchItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding />
+          <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hbase/hbase-client/1.0.0/hbase-client-1.0.0-sources.jar!/org/apache/hadoop/hbase/client/Scan.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/RecommendService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="250" column="25" lean-forward="false" selection-start-line="250" selection-start-column="25" selection-end-line="250" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="33" column="49" lean-forward="false" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+        <state relative-caret-position="478">
+          <caret line="174" column="25" lean-forward="false" selection-start-line="174" selection-start-column="25" selection-end-line="174" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1397,293 +1312,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/HbaseTest.java">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="1167" column="115" lean-forward="true" selection-start-line="1167" selection-start-column="115" selection-end-line="1167" selection-end-column="115" />
+        <state relative-caret-position="343">
+          <caret line="195" column="4" lean-forward="false" selection-start-line="195" selection-start-column="4" selection-end-line="195" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/util/ListTranscoder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarInfoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        <state relative-caret-position="307">
+          <caret line="44" column="36" lean-forward="false" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/RecommendService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+        <state relative-caret-position="157">
+          <caret line="50" column="61" lean-forward="false" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
           <folding>
-            <element signature="e#5107#5498#0" expanded="false" />
-            <element signature="e#5497#5498#0" expanded="false" />
+            <element signature="e#2123#2555#0" expanded="true" />
+            <element signature="e#2554#2555#0" expanded="true" />
+            <element signature="e#2622#3054#0" expanded="true" />
+            <element signature="e#3053#3054#0" expanded="true" />
+            <element signature="e#3205#3637#0" expanded="true" />
+            <element signature="e#3636#3637#0" expanded="true" />
+            <element signature="e#3704#4136#0" expanded="true" />
+            <element signature="e#4135#4136#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="83" column="28" lean-forward="false" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="31" column="69" lean-forward="false" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="27" column="67" lean-forward="false" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCoTeamService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/PaperDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/PaperDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ReferenceDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ReferenceDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="46" column="24" lean-forward="false" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1854">
-          <caret line="103" column="28" lean-forward="false" selection-start-line="103" selection-start-column="28" selection-end-line="103" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ReferenceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding>
-            <element signature="e#3550#3558#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/ReferenceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="44" column="40" lean-forward="false" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/refRela.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2286">
-          <caret line="167" column="34" lean-forward="false" selection-start-line="167" selection-start-column="34" selection-end-line="167" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/coTeamRela.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="201" column="61" lean-forward="false" selection-start-line="201" selection-start-column="61" selection-end-line="201" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/coRefRela.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="190" column="44" lean-forward="false" selection-start-line="190" selection-start-column="43" selection-end-line="190" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/showPersonalInfo.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="143" column="50" lean-forward="true" selection-start-line="143" selection-start-column="50" selection-end-line="143" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/echarts-gl/echarts-gl.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="0" column="680113" lean-forward="false" selection-start-line="0" selection-start-column="680113" selection-end-line="0" selection-end-column="680113" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/echars/extension/bmap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="0" column="4414" lean-forward="false" selection-start-line="0" selection-start-column="4414" selection-end-line="0" selection-end-column="4414" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/file/relationship.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/flights/bleu-linear-gradient.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/showInfo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/file/flights.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1647">
-          <caret line="0" column="717385" lean-forward="false" selection-start-line="0" selection-start-column="717385" selection-end-line="0" selection-end-column="717385" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="5" column="1308" lean-forward="true" selection-start-line="5" selection-start-column="1308" selection-end-line="5" selection-end-column="1308" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery.countTo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/echars/echarts.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="0" column="4011" lean-forward="true" selection-start-line="0" selection-start-column="4011" selection-end-line="0" selection-end-column="4011" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/echars/map/js/world.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="0" column="1937" lean-forward="true" selection-start-line="0" selection-start-column="1937" selection-end-line="0" selection-end-column="1937" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="29" />
-          <folding>
-            <element signature="e#1766#1767#0" expanded="true" />
-            <element signature="e#1798#1799#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/flights/logo.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-113">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/flights/flights.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/cooperateRela.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10368">
-          <caret line="576" column="16" lean-forward="false" selection-start-line="576" selection-start-column="16" selection-end-line="576" selection-end-column="16" />
+        <state relative-caret-position="270">
+          <caret line="90" column="100" lean-forward="true" selection-start-line="90" selection-start-column="100" selection-end-line="90" selection-end-column="100" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/index.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/web_of_scholar.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/scholarImg.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/modernizr.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
           <folding>
-            <marker date="1523279149327" expanded="true" signature="7524:7611" ph="..." />
-            <marker date="1523279149327" expanded="true" signature="7868:7878" ph="..." />
-            <marker date="1523279149327" expanded="true" signature="8280:8301" ph="..." />
-            <marker date="1523279149327" expanded="true" signature="8736:8742" ph="&amp;nbsp;" />
-            <marker date="1523279149327" expanded="true" signature="8900:8906" ph="&amp;nbsp;" />
+            <element signature="e#831#832#0" expanded="true" />
+            <element signature="e#875#876#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/information.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/mainDialog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/navIndex.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/navStyle.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/echarts.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/nav/demo.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/nav/classie.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/dialog/normalize.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="3" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/nav/leftnav.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1691,66 +1432,236 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/modifyPsw.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/nav/font-awesome.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="489">
+          <caret line="3" column="28596" lean-forward="false" selection-start-line="3" selection-start-column="28596" selection-end-line="3" selection-end-column="28596" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/partnerCountEveYear.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/nav/leftnav.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/refedRela.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/reset.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/register.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/styleDialog.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="300">
+          <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/registerSuccess.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="355">
+          <caret line="50" column="32" lean-forward="true" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/scholar.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
-          <caret line="97" column="37" lean-forward="false" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
+        <state relative-caret-position="148">
+          <caret line="232" column="0" lean-forward="false" selection-start-line="232" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/relationIndex.ftl" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/cooperateRela.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="101" column="46" lean-forward="true" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/Hello.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/velocity.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="212">
+          <caret line="2" column="9583" lean-forward="false" selection-start-line="2" selection-start-column="9583" selection-end-line="2" selection-end-column="9583" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/flights.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/team.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="159" column="39" lean-forward="false" selection-start-line="159" selection-start-column="39" selection-end-line="159" selection-end-column="39" />
+        <state relative-caret-position="-435">
+          <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/ref.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-420">
+          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarInfoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="134" column="56" lean-forward="true" selection-start-line="134" selection-start-column="56" selection-end-line="134" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ReferenceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/worldMap.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="51" column="6" lean-forward="false" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/cooperateNumber.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/ReferenceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4248">
+          <caret line="250" column="31" lean-forward="false" selection-start-line="250" selection-start-column="31" selection-end-line="250" selection-end-column="31" />
+          <folding>
+            <element signature="e#1796#1802#0" expanded="true" />
+            <element signature="e#1846#1852#0" expanded="true" />
+            <element signature="e#1905#1913#0" expanded="true" />
+            <element signature="e#4474#4480#0" expanded="true" />
+            <element signature="e#4524#4530#0" expanded="true" />
+            <element signature="e#4583#4591#0" expanded="true" />
+            <element signature="e#7242#7248#0" expanded="true" />
+            <element signature="e#7292#7298#0" expanded="true" />
+            <element signature="e#7351#7359#0" expanded="true" />
+            <element signature="e#10226#10232#0" expanded="true" />
+            <element signature="e#10276#10282#0" expanded="true" />
+            <element signature="e#10335#10343#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/cooperate.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3402">
+          <caret line="189" column="165" lean-forward="false" selection-start-line="189" selection-start-column="165" selection-end-line="189" selection-end-column="165" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4734">
+          <caret line="263" column="143" lean-forward="false" selection-start-line="263" selection-start-column="143" selection-end-line="263" selection-end-column="143" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/statisticalRankings.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4122">
+          <caret line="229" column="51" lean-forward="false" selection-start-line="229" selection-start-column="51" selection-end-line="229" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+          <folding>
+            <element signature="e#1952#1960#0" expanded="true" />
+            <element signature="e#2013#2021#0" expanded="true" />
+            <element signature="e#2439#2445#0" expanded="true" />
+            <element signature="e#2554#2560#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="865">
+          <caret line="202" column="32" lean-forward="false" selection-start-line="202" selection-start-column="32" selection-end-line="202" selection-end-column="32" />
           <folding />
         </state>
       </provider>

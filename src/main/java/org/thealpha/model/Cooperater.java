@@ -1,9 +1,12 @@
 package org.thealpha.model;
 
+import java.io.Serializable;
+import java.util.List;
+
 /**
  * Created by kangwenjie on 17-12-15.
  */
-public class Cooperater {
+public class Cooperater implements Serializable{
     private String index;
     private String name;
     private double hindex;
@@ -17,6 +20,15 @@ public class Cooperater {
     private int cooperateNumber;
     private int coTeamNumber;
     private int studentsNumber;
+    private List<Cooperater> subCooperaters;
+
+    public List<Cooperater> getSubCooperaters() {
+        return subCooperaters;
+    }
+
+    public void setSubCooperaters(List<Cooperater> subCooperaters) {
+        this.subCooperaters = subCooperaters;
+    }
 
     public double getQindex() {
         return qindex;
@@ -126,6 +138,21 @@ public class Cooperater {
 
     public int getCount() {
         return count;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Cooperater)) return false;
+
+        Cooperater that = (Cooperater) o;
+
+        return index.equals(that.index);
+    }
+
+    @Override
+    public int hashCode() {
+        return index.hashCode();
     }
 
     public void setCount(int count) {

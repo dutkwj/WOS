@@ -101,6 +101,26 @@ public class ScholarCooperateDaoImpl implements ScholarCooperateDao{
         return result;
     }
 
+    @Override
+    public List<Cooperater> getMVCsById(String id) {
+        List<Cooperater> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new RowMapper<List<Cooperater>>() {
+            public List<Cooperater> mapRow(Result result, int i) throws Exception {
+                List<Cooperater> cooperaterList = new ArrayList<Cooperater>();
+                String MVC = Bytes.toString(result.getValue(ConfigurationConstant.CF_COOPERATE.getBytes(), ConfigurationConstant.QF_MVCS.getBytes()));
+                if (MVC != null && !"".equals(MVC)) {
+                    String[] MVCs = MVC.split(", ");
+                    for (String m : MVCs) {
+                        Cooperater cooperater = new Cooperater();
+                        cooperater.setIndex(m);
+                        cooperaterList.add(cooperater);
+                    }
+                }
+                return  cooperaterList;
+            }
+        });
+        return result;
+    }
+
     public List<YearCount> getCooperateYearCountsById(String id) {
         List<YearCount> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new RowMapper<List<YearCount>>() {
             public List<YearCount> mapRow(Result result, int i) throws Exception {

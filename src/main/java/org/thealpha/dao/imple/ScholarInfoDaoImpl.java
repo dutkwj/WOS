@@ -266,11 +266,10 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
             }
         }
         List<String> scholarQindex = null;
-        if (StringUtils.isNotBlank(searchItem.getQindex())) {
+        if (StringUtils.isNotBlank(searchItem.getMinQindex()) && StringUtils.isNotBlank(searchItem.getMaxQindex())) {
             scholarQindex = new ArrayList<String>();
-            String qindex = searchItem.getQindex();
-            double lowQindex = Double.parseDouble(qindex.split(", ")[0]);
-            double highQindex = Double.parseDouble(qindex.split(", ")[1]);
+            double lowQindex = Double.parseDouble(searchItem.getMinQindex());
+            double highQindex = Double.parseDouble(searchItem.getMaxQindex());
             boolean over = false;
             List<String> authorIdList = null;
             for (int i = 0; i < 50; i++) {
@@ -384,11 +383,10 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
         }
 
         List<String> scholarHindex = null;
-        if (StringUtils.isNotBlank(searchItem.getHindex())) {
+        if (StringUtils.isNotBlank(searchItem.getMinHindex()) && StringUtils.isNotBlank(searchItem.getMaxHindex())) {
             scholarHindex = new ArrayList<String>();
-            String hindex = searchItem.getHindex();
-            double lowHindex = Double.parseDouble(hindex.split(", ")[0]);
-            double highHindex = Double.parseDouble(hindex.split(", ")[1]);
+            double lowHindex = Double.parseDouble(searchItem.getMinHindex());
+            double highHindex = Double.parseDouble(searchItem.getMaxHindex());
             boolean over = false;
             List<String> authorIdList = null;
             for (int i = 0; i < 50; i++) {
@@ -552,9 +550,7 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 scholarIds = (List<String>) CollectionUtils.intersection(scholarIds, scholarQindex);
             }
         }
-        if (scholarIds.size() > 10000) {
-            return scholarIds.subList(0, 10000);
-        }
+
         return scholarIds;
     }
 }

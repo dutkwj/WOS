@@ -1278,4 +1278,56 @@ public class HbaseTest {
 
     }
 
+    @Test
+    public void importMVC() {
+        HashMap<String, String> authorMVCs = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_co_author_top10LIM.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+                line.substring(0, line.indexOf(","));
+                String authorId = line.substring(0, line.indexOf(","));
+                String MVCs = line.substring(line.indexOf(",") + 1);
+                MVCs = MVCs.replaceAll("\"|\\[|\\]|'", "");
+                authorMVCs.put(authorId, MVCs);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(authorMVCs.size());
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : authorMVCs.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String MVCs = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_COOPERATE), Bytes.toBytes(ConfigurationConstant.QF_MVCS), Bytes.toBytes(MVCs));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

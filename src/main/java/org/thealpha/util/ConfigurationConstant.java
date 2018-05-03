@@ -33,6 +33,7 @@ public class ConfigurationConstant {
     public static final String CF_REFERENCE = "reference";
     public static final String QF_COUNT = "count";
     public static final String QF_EVE_YEAR_COUNT = "eve_year_count";
+    public static final String QF_MVCS = "mvcs";
     public static final String QF_TEAM_INTENSION = "team_intension";
     public static final String QF_TEACHER = "tacher";
     public static final String QF_STUDENTS = "students";

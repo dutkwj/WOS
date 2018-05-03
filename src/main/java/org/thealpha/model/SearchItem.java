@@ -6,23 +6,41 @@ package org.thealpha.model;
 public class SearchItem {
     private String scholarName;
     private String affName;
-    private String qindex;
-    private String hindex;
+    private String minQindex;
+    private String maxQindex;
+    private String minHindex;
+    private String maxHindex;
 
-    public String getQindex() {
-        return qindex;
+    public String getMinQindex() {
+        return minQindex;
     }
 
-    public void setQindex(String qindex) {
-        this.qindex = qindex;
+    public void setMinQindex(String minQindex) {
+        this.minQindex = minQindex;
     }
 
-    public String getHindex() {
-        return hindex;
+    public String getMaxQindex() {
+        return maxQindex;
     }
 
-    public void setHindex(String hindex) {
-        this.hindex = hindex;
+    public void setMaxQindex(String maxQindex) {
+        this.maxQindex = maxQindex;
+    }
+
+    public String getMinHindex() {
+        return minHindex;
+    }
+
+    public void setMinHindex(String minHindex) {
+        this.minHindex = minHindex;
+    }
+
+    public String getMaxHindex() {
+        return maxHindex;
+    }
+
+    public void setMaxHindex(String maxHindex) {
+        this.maxHindex = maxHindex;
     }
 
     public String getScholarName() {
