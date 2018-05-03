@@ -1,4 +1,4 @@
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <title>teacher student relationship</title>
@@ -89,14 +89,14 @@
     var cooperaterIndex = 1;
     <#if students?? && (students?size>0)>
         <#list students as student>
-        nodes.push({"name": "${student.name!""}"   , "image" : "../img/scholarImg.png", "id":"${student.index!""}", "hindex":"${student.hindex!""}", "qindex":"${student.qindex!""}", "studentsNumber":"${student.studentsNumber!""}", "aff":"${student.aff!""}", "fieldName":"${student.fieldName!""}"});
+        nodes.push({"name": "${student.name!""}"   , "id":"${student.index!""}", "hindex":"${student.hindex!""}", "qindex":"${student.qindex!""}", "studentsNumber":"${student.studentsNumber!""}", "aff":"${student.aff!""}", "fieldName":"${student.fieldName!""}"});
         edges.push({ "source": 0 , "target": cooperaterIndex , "relation":"student", "intension":1, "color":"#ccc"});
         cooperaterIndex = cooperaterIndex + 1;
 
         </#list>
     </#if>
     <#if teacher?exists>
-    nodes.push({"name": "${teacher.name!""}"   , "image" : "../img/scholarImg.png", "id":"${teacher.index!""}", "aff":"${teacher.aff!""}"});
+    nodes.push({"name": "${teacher.name!""}"   ,  "id":"${teacher.index!""}", "aff":"${teacher.aff!""}"});
     edges.push({ "source": 0 , "target": cooperaterIndex , "relation":"teacher", "intension":2, "color":"red"});
     </#if>
 
@@ -113,92 +113,14 @@
     var img_w = 77;
     var img_h = 80;
     var radius = 30;    //圆形半径
-
+    //创建SVG
     var svg = d3.select("body").append("svg")
             .attr("width",width)
             .attr("height",height);
     var g1 = svg.append("g");
 
-
-
-    //D3力导向布局
-    var force = d3.layout.force()
-            .nodes(nodes)
-            .links(edges)
-            .size([width,height])
-            .linkDistance(200)
-            .charge(-1500)
-            .start();
-
-    //边
-    var edges_line = g1.selectAll("line")
-            .data(edges)
-            .enter()
-            .append("line")
-            .style("stroke",function (d) {
-                return d.color;
-            })
-            .style("stroke-width",function (d) {
-                return d.intension;
-            });
-
-    //边上的文字（人物之间的关系）
-    var edges_text = g1.selectAll(".linetext")
-            .data(edges)
-            .enter()
-            .append("text")
-            .attr("class","linetext")
-            .text(function(d){
-                return d.relation;
-            });
-
-
-    // 圆形图片节点（人物头像）
-    var nodes_img = g1.selectAll("image")
-            .data(nodes)
-            .enter()
-            .append("circle")
-            .attr("class", "circleImg")
-            .attr("r", radius)
-            .attr("fill", function(d, i){
-
-                //创建圆形图片
-                var defs = g1.append("defs").attr("id", "imgdefs");
-
-                var catpattern = defs.append("pattern")
-                        .attr("id", "catpattern" + i)
-                        .attr("height", 1)
-                        .attr("width", 1);
-
-                catpattern.append("image")
-                        .attr("x", - (img_w / 2 - radius))
-                        .attr("y", - (img_h / 2 - radius))
-                        .attr("width", img_w)
-                        .attr("height", img_h)
-                        .attr("xlink:href", d.image);
-
-                return "url(#catpattern" + i + ")";
-
-            })
-            .on("mouseover",function(d,i){
-                //显示连接线上的文字
-                edges_text.style("fill-opacity",function(edge){
-                    if( edge.source === d || edge.target === d ){
-                        return 1.0;
-                    }
-                });
-                nodes_img.style("cursor", "hand");
-            })
-            .on("mouseout",function(d,i){
-                //隐去连接线上的文字
-                edges_text.style("fill-opacity",function(edge){
-                    if( edge.source === d || edge.target === d ){
-                        return 0.0;
-                    }
-                });
-            })
             .on("click", function (d) {
-                $.get('/teacherStudent/'+ d.id, function (result) {
+                $.get('/TeaStuRela/'+ d.id, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
@@ -263,6 +185,5 @@
 <script src="../js/d3.v3.min.js"></script>
 <script src="../js/d3.geo.projection.v0.min.js"></script>
 <script src="../js/topojson.v1.min.js"></script>
-
 </body>
 </html>
