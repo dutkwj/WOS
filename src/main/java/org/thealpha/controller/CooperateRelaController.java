@@ -44,4 +44,9 @@ public class CooperateRelaController {
         model.addAttribute("yearCounts", yearCounts);
         return "cooperateRela";
     }
+
+    @RequestMapping("/flights")
+    public String flights() {
+        return "flights";
+    }
 }
