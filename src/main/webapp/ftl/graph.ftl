@@ -36,7 +36,7 @@
             animationDuration: 3000,
             animationEasingUpdate: 'quinticInOut',
             series: [{
-                name: '节点',
+                name: 'scholar',
                 type: 'graph',
                 layout: 'force',
 
