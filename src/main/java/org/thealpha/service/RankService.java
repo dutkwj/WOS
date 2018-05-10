@@ -52,4 +52,39 @@ public class RankService {
         byte[] in = jedisCluster.get(ConfigurationConstant.REDIS_CO_REFED_NUMBER_TOP100_SCHOLARS.getBytes());
         return (List<Scholar>) ListTranscoder.deserialize(in);
     }
+
+    public List<Scholar> getBottom100Cooperators() {
+        byte[] in = jedisCluster.get(ConfigurationConstant.REDIS_COOPERATE_NUMBER_BOTTOM100_SCHOLARS.getBytes());
+        return (List<Scholar>) ListTranscoder.deserialize(in);
+    }
+
+    public List<Scholar> getBottom100TeamMembers() {
+        byte[] in = jedisCluster.get(ConfigurationConstant.REDIS_CO_TEAM_NUMBER_BOTTOM100_SCHOLARS.getBytes());
+        return (List<Scholar>) ListTranscoder.deserialize(in);
+    }
+
+    public List<Scholar> getBottom100Students() {
+        byte[] in = jedisCluster.get(ConfigurationConstant.REDIS_STUDENTS_NUMBER_BOTTOM100_SCHOLARS.getBytes());
+        return (List<Scholar>) ListTranscoder.deserialize(in);
+    }
+
+    public List<Scholar> getBottom100RefNumber() {
+        byte[] in = jedisCluster.get(ConfigurationConstant.REDIS_REF_NUMBER_BOTTOM100_SCHOLARS.getBytes());
+        return (List<Scholar>) ListTranscoder.deserialize(in);
+    }
+
+    public List<Scholar> getBottom100RefedNumber() {
+        byte[] in = jedisCluster.get(ConfigurationConstant.REDIS_REFED_NUMBER_BOTTOM100_SCHOLARS.getBytes());
+        return (List<Scholar>) ListTranscoder.deserialize(in);
+    }
+
+    public List<Scholar> getBottom100CoRef() {
+        byte[] in = jedisCluster.get(ConfigurationConstant.REDIS_CO_REF_NUMBER_BOTTOM100_SCHOLARS.getBytes());
+        return (List<Scholar>) ListTranscoder.deserialize(in);
+    }
+
+    public List<Scholar> getBottom100CoRefed() {
+        byte[] in = jedisCluster.get(ConfigurationConstant.REDIS_CO_REFED_NUMBER_BOTTOM100_SCHOLARS.getBytes());
+        return (List<Scholar>) ListTranscoder.deserialize(in);
+    }
 }

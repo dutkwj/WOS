@@ -42,6 +42,8 @@ public class ConfigurationConstant {
     //    cs_paper, authors:(author_ids), reference:(ref_ids, refed_ids, co_ref_ids, co_refed_ids)
     public static final String TABLE_CS_PAPER = "cs_paper";
     public static final String CF_AUTHORS = "authors";
+//    paper表也有reference这个列族
+//    public static final String CF_REFERENCE = "reference";
     public static final String QF_AUTHOR_IDS = "author_ids";
     public static final String QF_REF_IDS = "ref_ids";
     public static final String QF_REFED_IDS = "refed_ids";
@@ -82,6 +84,14 @@ public class ConfigurationConstant {
     public static final String REDIS_REFED_NUMBER_TOP100_SCHOLARS = "redis_refed_number_top100_scholars";
     public static final String REDIS_CO_REF_NUMBER_TOP100_SCHOLARS = "redis_co_ref_number_top100_scholars";
     public static final String REDIS_CO_REFED_NUMBER_TOP100_SCHOLARS = "redis_co_refed_number_top100_scholars";
+
+    public static final String REDIS_COOPERATE_NUMBER_BOTTOM100_SCHOLARS = "redis_cooperate_number_bottom100_scholars";
+    public static final String REDIS_CO_TEAM_NUMBER_BOTTOM100_SCHOLARS = "redis_co_team_number_bottom100_scholars";
+    public static final String REDIS_STUDENTS_NUMBER_BOTTOM100_SCHOLARS = "redis_students_number_bottom100_scholars";
+    public static final String REDIS_REF_NUMBER_BOTTOM100_SCHOLARS = "redis_ref_number_bottom100_scholars";
+    public static final String REDIS_REFED_NUMBER_BOTTOM100_SCHOLARS = "redis_refed_number_bottom100_scholars";
+    public static final String REDIS_CO_REF_NUMBER_BOTTOM100_SCHOLARS = "redis_co_ref_number_bottom100_scholars";
+    public static final String REDIS_CO_REFED_NUMBER_BOTTOM100_SCHOLARS = "redis_co_refed_number_bottom100_scholars";
 
     public static final String REDIS_HINDEX_0_50W = "redis_hindex_0_50w";
     public static final String REDIS_HINDEX_50_100W = "redis_hindex_50_100w";

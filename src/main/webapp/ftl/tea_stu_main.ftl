@@ -7,8 +7,8 @@
     <title>scholar rank</title>
     <#--<link rel="stylesheet" href="../css/layui.css" type="text/css">-->
     <#--<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">-->
-    <link rel="stylesheet" href="../css/bootstrap.New.css" type="text/css">
-    <link rel="stylesheet" href="../css/style.New.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap.New.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.New.css" type="text/css">
     <#--<script type="text/javascript" src="../js/layui.all.js" charset="utf-8"></script>-->
 </head>
 <body>
@@ -18,7 +18,7 @@
             <h3 style="font-size: 1.5em">Students Number Ranking</h3>
             <div class="scrollbar scrollbar1" id="style-2" style="height: 100%">
                 <div class="activity-row">
-                    <div class="col-xs-3 activity-img"><img src="../img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
+                    <div class="col-xs-3 activity-img"><img src="/img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
                     <div class="col-xs-7 activity-desc">
                         <h5 style="font-size: 1.6em;font-weight: bold"><a href="/relationGraph/0EE6570D">wang</a></h5>
                         &nbsp;&nbsp;
@@ -29,7 +29,7 @@
                     <div class="clearfix"> </div>
                 </div>
                 <div class="activity-row">
-                    <div class="col-xs-3 activity-img"><img src="../img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
+                    <div class="col-xs-3 activity-img"><img src="/img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
                     <div class="col-xs-7 activity-desc">
                         <h5 style="font-size: 1.6em;font-weight: bold"><a href="/relationGraph/7F3A38EA">r tavakkolimoghaddam</a></h5>
                         &nbsp;&nbsp;
@@ -40,7 +40,7 @@
                     <div class="clearfix"> </div>
                 </div>
                 <div class="activity-row">
-                    <div class="col-xs-3 activity-img"><img src="../img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
+                    <div class="col-xs-3 activity-img"><img src="/img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
                     <div class="col-xs-7 activity-desc">
                         <h5 style="font-size: 1.6em;font-weight: bold"><a href="/relationGraph/7D4A3FE2">dan wang</a></h5>
                         &nbsp;&nbsp;
@@ -51,7 +51,7 @@
                     <div class="clearfix"> </div>
                 </div>
                 <div class="activity-row">
-                    <div class="col-xs-3 activity-img"><img src="../img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
+                    <div class="col-xs-3 activity-img"><img src="/img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
                     <div class="col-xs-7 activity-desc">
                         <h5 style="font-size: 1.6em;font-weight: bold"><a href="/relationGraph/75476F6A">masaru tomita</a></h5>
                         &nbsp;&nbsp;
@@ -62,7 +62,7 @@
                     <div class="clearfix"> </div>
                 </div>
                 <div class="activity-row">
-                    <div class="col-xs-3 activity-img"><img src="../img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
+                    <div class="col-xs-3 activity-img"><img src="/img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
                     <div class="col-xs-7 activity-desc">
                         <h5 style="font-size: 1.6em;font-weight: bold"><a href="/relationGraph/0ECB9992">michael w vannier</a></h5>
                         &nbsp;&nbsp;
@@ -83,7 +83,7 @@
             <h3 style="font-size: 1.5em">Cooperation Tightness Ranking</h3>
             <div class="scrollbar scrollbar1" id="style-2" style="height: 100%">
                 <div class="activity-row">
-                    <div class="col-xs-3 activity-img"><img src="../img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
+                    <div class="col-xs-3 activity-img"><img src="/img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
                     <div class="col-xs-7 activity-desc">
                         <h5 style="font-size: 1.6em;font-weight: bold"><a href="/relationGraph/0EE6570D">wang</a></h5>
                         &nbsp;&nbsp;
@@ -94,7 +94,7 @@
                     <div class="clearfix"> </div>
                 </div>
                 <div class="activity-row">
-                    <div class="col-xs-3 activity-img"><img src="../img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
+                    <div class="col-xs-3 activity-img"><img src="/img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
                     <div class="col-xs-7 activity-desc">
                         <h5 style="font-size: 1.6em;font-weight: bold"><a href="/relationGraph/7EF71524">antonio carlos andrade goncalves</a></h5>
                         &nbsp;&nbsp;
@@ -105,7 +105,7 @@
                     <div class="clearfix"> </div>
                 </div>
                 <div class="activity-row">
-                    <div class="col-xs-3 activity-img"><img src="../img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
+                    <div class="col-xs-3 activity-img"><img src="/img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
                     <div class="col-xs-7 activity-desc">
                         <h5 style="font-size: 1.6em;font-weight: bold"><a href="/relationGraph/0B154AA2">carlos alberto scapim</a></h5>
                         &nbsp;&nbsp;
@@ -116,7 +116,7 @@
                     <div class="clearfix"> </div>
                 </div>
                 <div class="activity-row">
-                    <div class="col-xs-3 activity-img"><img src="../img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
+                    <div class="col-xs-3 activity-img"><img src="/img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
                     <div class="col-xs-7 activity-desc">
                         <h5 style="font-size: 1.6em;font-weight: bold"><a href="/relationGraph/76B8605F">orivaldo arf</a></h5>
                         &nbsp;&nbsp;
@@ -127,7 +127,7 @@
                     <div class="clearfix"> </div>
                 </div>
                 <div class="activity-row">
-                    <div class="col-xs-3 activity-img"><img src="../img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
+                    <div class="col-xs-3 activity-img"><img src="/img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img" ></div>
                     <div class="col-xs-7 activity-desc">
                         <h5 style="font-size: 1.6em;font-weight: bold"><a href="/relationGraph/76B5FADA">salatier buzetti</a></h5>
                         &nbsp;&nbsp;

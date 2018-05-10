@@ -71,6 +71,7 @@ public class HbaseTest {
 //        System.out.print(saturn);
 //    }
 
+    //导入学者与学者合作次数
     @Test
     public void importCooperateScholarTest() {
 //        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-servlet.xml");
@@ -129,7 +130,7 @@ public class HbaseTest {
     @Test
     public void testHTable() {
         Configuration conf = HBaseConfiguration.create();
-        conf.set("hbase.zookeeper.quorum", "10.1.0.188,10.1.0.187,10.1.0.183");
+        conf.set("hbase.zookeeper.quorum", "10.1.0.188,10.1.0.187,10.1.16.122");
         conf.set("hbase.zookeeper.property.clientPort", "2181");
         Get get = new Get(Bytes.toBytes("r3"));
         try {
@@ -160,6 +161,7 @@ public class HbaseTest {
         System.out.print("111");
     }
 
+//    导入学者id与姓名之间的对应关系
     @Test
     public void importScholarNameTest() {
         HashMap<String, String> authorIdName = new HashMap<String, String>();
@@ -216,7 +218,7 @@ public class HbaseTest {
         Connection connection = null;
         Table table = null;
         Configuration conf = HBaseConfiguration.create();
-        conf.set("hbase.zookeeper.quorum", "10.1.0.188,10.1.0.187,10.1.0.183");
+        conf.set("hbase.zookeeper.quorum", "10.1.0.188,10.1.0.187,10.1.16.122");
         conf.set("hbase.zookeeper.property.clientPort", "2181");
 
         List<Get> gets = new ArrayList<Get>();
@@ -260,6 +262,7 @@ public class HbaseTest {
         }
     }
 
+//    导入学者与学者之间合作次数关系
     @Test
     public void importRSCooperate() {
         HashMap<String, String> authorCoAuthorCount = new HashMap<String, String>();
@@ -314,6 +317,7 @@ public class HbaseTest {
         }
     }
 
+//    导入学者id与机构对应关系
     @Test
     public void importAuthorIdAff() {
         HashMap<String, String> authorIdAff = new HashMap<String, String>();
@@ -375,13 +379,14 @@ public class HbaseTest {
         HBaseAdmin admin = new HBaseAdmin(conf);
 
         // Instantiating columnDescriptor class
-        HColumnDescriptor columnDescriptor = new HColumnDescriptor(ConfigurationConstant.CF_CO_TEAM);
+        HColumnDescriptor columnDescriptor = new HColumnDescriptor(ConfigurationConstant.CF_REFERENCE);
 
         // Adding column family
-        admin.addColumn(ConfigurationConstant.TABLE_CS_RELATIONSHIP, columnDescriptor);
+        admin.addColumn(ConfigurationConstant.TABLE_CS_PAPER, columnDescriptor);
         System.out.println("coloumn added");
     }
 
+//    导入学者id和论文id的对应关系
     @Test
     public void importPaperIds() {
         HashMap<String, String> authorIdPaperIds = new HashMap<String, String>();
@@ -435,6 +440,7 @@ public class HbaseTest {
         }
     }
 
+//    导入论文id与学者id的对应关系
     @Test
     public void importPaperAuthors() {
         HashMap<String, String> paperIdAuthorIds = new HashMap<String, String>();
@@ -488,10 +494,11 @@ public class HbaseTest {
         }
     }
 
+//    导入论文之间的引用关系,包括引用和被引用
     @Test
     public void importPaperRef() {
         HashMap<String, String> paperIdRefIds = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_cs_ref.csv");  // CSV文件路径
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_cs_refed.csv");  // CSV文件路径
         BufferedReader br = null;
         try
         {
@@ -529,7 +536,7 @@ public class HbaseTest {
             String paperId = (String) entry.getKey();
             String refIds = (String) entry.getValue();
             Put put = new Put(Bytes.toBytes(paperId));
-            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_REFERENCE), Bytes.toBytes(ConfigurationConstant.QF_REFED_IDS), Bytes.toBytes(refIds));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_REFERENCE), Bytes.toBytes(ConfigurationConstant.QF_REF_IDS), Bytes.toBytes(refIds));
             puts.add(put);
         }
         try {
@@ -541,10 +548,11 @@ public class HbaseTest {
         }
     }
 
+//    导入论文之间的共同引用关系，包括共引和共被引
     @Test
     public void importCoPaperRef() {
         HashMap<String, String> paperIdRefIds = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_cs_co_refed3.csv");  // CSV文件路径
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_cs_co_ref3.csv");  // CSV文件路径
         BufferedReader br = null;
         try
         {
@@ -582,7 +590,7 @@ public class HbaseTest {
             String paperId = (String) entry.getKey();
             String refIds = (String) entry.getValue();
             Put put = new Put(Bytes.toBytes(paperId));
-            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_REFERENCE), Bytes.toBytes(ConfigurationConstant.QF_CO_REF_IDS), Bytes.toBytes(refIds));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_REFERENCE), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_IDS), Bytes.toBytes(refIds));
             puts.add(put);
         }
         try {
@@ -619,6 +627,7 @@ public class HbaseTest {
         }
     }
 
+//    导入学者与经纬度关系
     @Test
     public void importAuthorLatLng() throws IOException {
         HashMap<String, String> authorIdLatLng = new HashMap<String, String>();
@@ -661,6 +670,7 @@ public class HbaseTest {
         table.put(puts);
     }
 
+//    导入学者团队关系
     @Test
     public void importCoTeamRef() {
         Map<String, String> authorCoTeam = new HashMap<String, String>();
@@ -719,6 +729,7 @@ public class HbaseTest {
         }
     }
 
+//    导入学者每年合作者数量变化情况
     @Test
     public void importCoCountEveYear() {
         Map<String, String> authorYearCount = new HashMap<String, String>();
@@ -896,6 +907,7 @@ public class HbaseTest {
         });
     }
 
+//    导入师生关系
     @Test
     public void importTeacherStudentTest() {
         Map<String, String> teaStudentsMap = new HashMap<String, String>();
@@ -1069,7 +1081,7 @@ public class HbaseTest {
     @Test
     public void importStatisticalTest() {
         Map<String, String> map = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/statistical/cs_authorid_studentsnumber.csv");
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/statistical/cs_authorid_corefednumber.csv");
         BufferedReader br = null;
         try
         {
@@ -1101,7 +1113,7 @@ public class HbaseTest {
             String authorId = (String) entry.getKey();
             String value = (String) entry.getValue();
             Put put = new Put(Bytes.toBytes(authorId));
-            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_STUDENTS_NUMBER), Bytes.toBytes(value));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_NUMBER), Bytes.toBytes(value));
             puts.add(put);
         }
         try {
@@ -1125,7 +1137,7 @@ public class HbaseTest {
                 String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
                 String qindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_Q_INDEX)));
                 String fieldName = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_FIELD_NAME)));
-                String cooperateNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_STUDENTS_NUMBER)));
+                String cooperateNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_NUMBER)));
 
                 if (StringUtils.isNotBlank(latlng)) {
                     scholar.setLatlng(latlng);
@@ -1143,7 +1155,7 @@ public class HbaseTest {
                     scholar.setFieldName(fieldName);
                 }
                 if (StringUtils.isNotBlank(cooperateNumber)) {
-                    scholar.setStudentsNumber(Integer.parseInt(cooperateNumber));
+                    scholar.setCoRefedNumber(Integer.parseInt(cooperateNumber));
                 }
                 return scholar;
             }
@@ -1151,11 +1163,11 @@ public class HbaseTest {
         System.out.println(scholars.size());
         Collections.sort(scholars, new Comparator<Scholar>() {
             public int compare(Scholar o1, Scholar o2) {
-                if (o1.getStudentsNumber() > o2.getStudentsNumber()) {
-                    return -1;
-                }
-                if (o1.getStudentsNumber() < o2.getStudentsNumber()) {
+                if (o1.getCoRefedNumber() > o2.getCoRefedNumber()) {
                     return 1;
+                }
+                if (o1.getCoRefedNumber() < o2.getCoRefedNumber()) {
+                    return -1;
                 }
                 return 0;
             }
@@ -1165,7 +1177,7 @@ public class HbaseTest {
         for (int i = 0; i < 100; i++) {
             top100Scholars.add(scholars.get(i));
         }
-        jedisCluster.set(ConfigurationConstant.REDIS_STUDENTS_NUMBER_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_CO_REFED_NUMBER_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
     }
 
     @Test
@@ -1178,6 +1190,7 @@ public class HbaseTest {
         System.out.println(isExist);
     }
 
+//    导入学者的H因子和潜力指数
     @Test
     public void importScholarHindex() {
         HashMap<String, String> authorIdHindex = new HashMap<String, String>();
@@ -1225,15 +1238,16 @@ public class HbaseTest {
         }
     }
 
+//    设置缓存中的学者H因子和潜力指数
     @Test
     public void setAuthorIdQindexRedis() {
         List<Scholar> scholars = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
             public Scholar mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
                 Scholar scholar = new Scholar();
                 scholar.setIndex(Bytes.toString(result.getRow()));
-                String qindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_Q_INDEX)));
+                String qindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
                 if (StringUtils.isNotBlank(qindex)) {
-                    scholar.setQindex(Double.parseDouble(qindex));
+                    scholar.setHindex(Double.parseDouble(qindex));
                 }
                 return scholar;
             }
@@ -1241,10 +1255,10 @@ public class HbaseTest {
         System.out.println(scholars.size());
         Collections.sort(scholars, new Comparator<Scholar>() {
             public int compare(Scholar o1, Scholar o2) {
-                if (o1.getQindex() > o2.getQindex()) {
+                if (o1.getHindex() > o2.getHindex()) {
                     return -1;
                 }
-                if (o1.getQindex() < o2.getQindex()) {
+                if (o1.getHindex() < o2.getHindex()) {
                     return 1;
                 }
                 return 0;
@@ -1257,24 +1271,24 @@ public class HbaseTest {
         HashMap<String, String> m4 = new HashMap<String, String>();
         for (Scholar scholar : scholars) {
             if (count <= 500000) {
-                jedisCluster.rpush(ConfigurationConstant.REDIS_QINDEX_0_50W, scholar.getIndex());
-                m1.put(scholar.getIndex(), String.valueOf(scholar.getQindex()));
+                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_0_50W, scholar.getIndex());
+                m1.put(scholar.getIndex(), String.valueOf(scholar.getHindex()));
             } else if (count <= 1000000) {
-                jedisCluster.rpush(ConfigurationConstant.REDIS_QINDEX_50_100W, scholar.getIndex());
-                m2.put(scholar.getIndex(), String.valueOf(scholar.getQindex()));
+                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_50_100W, scholar.getIndex());
+                m2.put(scholar.getIndex(), String.valueOf(scholar.getHindex()));
             } else if (count <= 1500000) {
-                jedisCluster.rpush(ConfigurationConstant.REDIS_QINDEX_100_150W, scholar.getIndex());
-                m3.put(scholar.getIndex(), String.valueOf(scholar.getQindex()));
+                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_100_150W, scholar.getIndex());
+                m3.put(scholar.getIndex(), String.valueOf(scholar.getHindex()));
             } else {
-                jedisCluster.rpush(ConfigurationConstant.REDIS_QINDEX_150_200W, scholar.getIndex());
-                m4.put(scholar.getIndex(), String.valueOf(scholar.getQindex()));
+                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_150_200W, scholar.getIndex());
+                m4.put(scholar.getIndex(), String.valueOf(scholar.getHindex()));
             }
             count += 1;
         }
-        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_QINDEX_0_50W, m1);
-        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_QINDEX_50_100W, m2);
-        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_QINDEX_100_150W, m3);
-        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_QINDEX_150_200W, m4);
+        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_0_50W, m1);
+        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_50_100W, m2);
+        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_100_150W, m3);
+        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_150_200W, m4);
 
     }
 

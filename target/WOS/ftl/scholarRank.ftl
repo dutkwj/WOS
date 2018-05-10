@@ -16,11 +16,10 @@
 <br/>
 <div class="layui-container">
     <div class="row tm-media-row">
-        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
         </div>
-        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
             <div id="page"></div>
-
         </div>
     </div>
 </div>
@@ -87,8 +86,8 @@
                     thisData.push(subFieldName);
 
                     layui.each(subId, function(index, item){
-                        arr.push('<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;border-width: 1px">' +
-                                '<div class="row tm-media-row" style="background-color: #ffffff">' +
+                        arr.push('<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;background:#ffffff">' +
+                                '<div class="row tm-media-row">' +
                                 '<div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">' +
                                 '</div>' +
                                 '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">' +
