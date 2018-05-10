@@ -24,28 +24,63 @@ public class StatisticalRankingsController {
     public String index(Model model) {
         List<Scholar> top100Scholars = rankService.getTop100Cooperators();
         model.addAttribute("scholars", top100Scholars);
-        return "statisticalRankings";
+//        return "statisticalRankings";
+        return "rankIndex";
     }
 
     @RequestMapping("/top100")
-    public String getScholarsByType(@RequestParam String type, Model model) {
-        List<Scholar> top100Scholars = null;
+    public String getScholarsByType(@RequestParam String type, @RequestParam String range, @RequestParam String upOrDown, Model model) {
+        List<Scholar> scholars = null;
         if ("cooperator number".equals(type)) {
-            top100Scholars = rankService.getTop100Cooperators();
+            if ("down".equals(upOrDown)) {
+                scholars = rankService.getTop100Cooperators();
+            } else {
+                scholars = rankService.getBottom100Cooperators();
+            }
         } else if ("team members".equals(type)) {
-            top100Scholars = rankService.getTop100TeamMembers();
+            if ("down".equals(upOrDown)) {
+                scholars = rankService.getTop100TeamMembers();
+            } else {
+                scholars = rankService.getBottom100TeamMembers();
+            }
         } else if ("students number".equals(type)) {
-            top100Scholars = rankService.getTop100Students();
+            if ("down".equals(upOrDown)) {
+                scholars = rankService.getTop100Students();
+            } else {
+                scholars = rankService.getBottom100Students();
+            }
         } else if ("reference number".equals(type)) {
-            top100Scholars = rankService.getTop100RefNumber();
+            if ("down".equals(upOrDown)) {
+                scholars = rankService.getTop100RefNumber();
+            } else {
+                scholars = rankService.getBottom100RefNumber();
+            }
         } else if ("referenced number".equals(type)) {
-            top100Scholars = rankService.getTop100RefedNumber();
+            if ("down".equals(upOrDown)) {
+                scholars = rankService.getTop100RefedNumber();
+            } else {
+                scholars = rankService.getBottom100RefedNumber();
+            }
         } else if ("common reference number".equals(type)) {
-            top100Scholars = rankService.getTop100CoRef();
+            if ("down".equals(upOrDown)) {
+                scholars = rankService.getTop100CoRef();
+            } else {
+                scholars = rankService.getBottom100CoRef();
+            }
         } else if ("common referenced number".equals(type)) {
-            top100Scholars = rankService.getTop100CoRefed();
+            if ("down".equals(upOrDown)) {
+                scholars = rankService.getTop100CoRefed();
+            } else {
+                scholars = rankService.getBottom100CoRefed();
+            }
         }
-        model.addAttribute("scholars", top100Scholars);
+        if ("top10".equals(range) && scholars.size() > 10) {
+            model.addAttribute("scholars", scholars.subList(0, 10));
+        } else if ("top50".equals(range) && scholars.size() > 50) {
+            model.addAttribute("scholars", scholars.subList(0, 50));
+        } else {
+            model.addAttribute("scholars", scholars);
+        }
         char[] caType = type.toCharArray();
         caType[0] -= 32;
         type = String.valueOf(caType);

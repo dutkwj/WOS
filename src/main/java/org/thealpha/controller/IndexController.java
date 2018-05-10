@@ -29,6 +29,7 @@ public class IndexController {
             recommendScholars = recommendService.getHindexTop10Scholars();
         }
         model.addAttribute("scholars", recommendScholars);
-        return "index";
+//        return "index";
+        return "home";
     }
 }

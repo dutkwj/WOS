@@ -28,9 +28,10 @@ public class CooperateRelaController {
     @Autowired
     private RecommendService recommendService;
 
-    @RequestMapping("/relationGraph/{scholarId}")
-    public String index(@PathVariable String scholarId, Model model) {
+    @RequestMapping("/relationGraph/{scholarId}/{type}")
+    public String index(@PathVariable String scholarId, @PathVariable String type, Model model) {
         model.addAttribute("scholarId", scholarId);
+        model.addAttribute("type", type);
         return "leftNav";
     }
 
