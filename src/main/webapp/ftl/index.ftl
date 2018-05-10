@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="${path}/css/templatemo-style.css">
 
 </head>
-<body>
+<body  style="background-color: #EBEBEB">
 <div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
     <ul class="layui-nav">
         <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
@@ -68,7 +68,7 @@
 <div class="banner">
     <div class="container">
         <div style="margin-left:25%">
-            <img src="../img/wos.png" alt="wos" >
+            <img src="../img/WOS.png" alt="wos" >
         </div>
         <div class="layui-container">
             <form class="layui-form" action="/simpleSearch/content">
@@ -97,12 +97,12 @@
             <div class="layui-row layui-col-space10">
                 <div class="layui-col-md2">
                 </div>
-                <div class="layui-col-md9" style="border: 1px solid #eee;padding: 0">
+                <div class="layui-col-md9" style="border: 1px solid #FFFFFF;padding: 0; background-color: #FFFFFF">
                     <ul class="nav navbar-nav">
                         <#if search??>
-                            <li class="active" style="background-color: #eee"><a href="#">search result</a></li>
+                            <li class="active"><a href="#">search result</a></li>
                         <#else>
-                            <li class="active" style="background-color: #eee"><a href="#">recommend scholar</a></li>
+                            <li class="active"><a href="#">recommend scholar</a></li>
                         </#if>
 
                         <li><a href="/searchMore/index">search more scholar</a></li>
@@ -181,14 +181,13 @@
                         arr.push('<div class="layui-col-md2">' +
                                 '</div>' +
                                 '<div class="layui-col-md9" style="border-left: 1px solid #eee;border-right: 1px solid #eee;border-bottom: 1px solid #eee;">' +
-                                    '<div class="row tm-media-row">' +
+                                    '<div class="row tm-media-row" style="background-color: #ffffff">' +
                                         '<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">' +
                                             '<img src="../img/scholarImg.png" style="width: 60%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">' +
                                         '</div>' +
                                         '<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">' +
                                              '<div class="tm-media-text-container">' +
-                                            //'<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/scholar/baseInfo?authorId=' + thisData[0][index] + '">' + thisData[1][index] + '</a> </h3>' +
-                                            '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/tree?scholarId='+thisData[0][index] +'">' + thisData[1][index] + '</a> </h3>' +
+                                            '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/relationGraph/' + thisData[0][index] + '">' + thisData[1][index] + '</a> </h3>' +
                                             '<p class="tm-media-description tm-gray-text-2">Q-index:' + thisData[3][index] + ' | H-index:' + thisData[2][index] +
                                             '<br/>' +
                                             '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ' + thisData[4][index] + '<br/>' +

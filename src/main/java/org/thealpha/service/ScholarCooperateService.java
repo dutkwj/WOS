@@ -42,7 +42,6 @@ public class ScholarCooperateService {
         }
         for (Cooperater cooperater : cooperaterList) {
             cooperater.setName(scholarIdObjectMap.get(cooperater.getIndex()).getName());
-            cooperater.setName(scholarIdObjectMap.get(cooperater.getIndex()).getName());
             cooperater.setHindex(scholarIdObjectMap.get(cooperater.getIndex()).getHindex());
             cooperater.setQindex(scholarIdObjectMap.get(cooperater.getIndex()).getQindex());
             cooperater.setAff(scholarIdObjectMap.get(cooperater.getIndex()).getAff());
@@ -55,6 +54,34 @@ public class ScholarCooperateService {
             cooperater.setStudentsNumber(scholarIdObjectMap.get(cooperater.getIndex()).getStudentsNumber());
         }
         return cooperaterList;
+    }
+
+    public List<Cooperater> getMVCsById(String scholarId) {
+        List<Cooperater> MVCList = scholarCooperateDao.getMVCsById(scholarId);
+        List<String> scholarIds = new ArrayList<String>();
+        for (Cooperater MVC : MVCList) {
+            scholarIds.add(MVC.getIndex());
+        }
+        List<Scholar> scholarList = scholarInfoDao.getScholarsByIds(scholarIds);
+
+        Map<String, Scholar> scholarIdObjectMap = new HashMap<String, Scholar>();
+        for (Scholar scholar : scholarList) {
+            scholarIdObjectMap.put(scholar.getIndex(), scholar);
+        }
+        for (Cooperater MVC : MVCList) {
+            MVC.setName(scholarIdObjectMap.get(MVC.getIndex()).getName());
+            MVC.setHindex(scholarIdObjectMap.get(MVC.getIndex()).getHindex());
+            MVC.setQindex(scholarIdObjectMap.get(MVC.getIndex()).getQindex());
+            MVC.setAff(scholarIdObjectMap.get(MVC.getIndex()).getAff());
+            MVC.setLatlng(scholarIdObjectMap.get(MVC.getIndex()).getLatlng());
+            MVC.setLatitude(scholarIdObjectMap.get(MVC.getIndex()).getLatitude());
+            MVC.setLongitude(scholarIdObjectMap.get(MVC.getIndex()).getLongitude());
+            MVC.setFieldName(scholarIdObjectMap.get(MVC.getIndex()).getFieldName());
+            MVC.setCooperateNumber(scholarIdObjectMap.get(MVC.getIndex()).getCooperateNumber());
+            MVC.setCoTeamNumber(scholarIdObjectMap.get(MVC.getIndex()).getCoTeamNumber());
+            MVC.setStudentsNumber(scholarIdObjectMap.get(MVC.getIndex()).getStudentsNumber());
+        }
+        return MVCList;
     }
 
     public List<YearCount> getCooperateYearCountsById(String scholarId) {
@@ -94,4 +121,6 @@ public class ScholarCooperateService {
         });
         return yearCounts;
     }
+
+
 }

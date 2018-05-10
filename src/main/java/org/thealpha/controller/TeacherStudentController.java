@@ -1,5 +1,6 @@
 package org.thealpha.controller;
 
+
 import com.google.gson.Gson;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,10 +8,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.thealpha.model.*;
+import org.thealpha.service.RankService;
 import org.thealpha.service.ScholarInfoService;
 import org.thealpha.service.TeacherStudentService;
-
+import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -19,15 +22,26 @@ public class TeacherStudentController {
     @Autowired
     private TeacherStudentService teacherStudentService;
     @Autowired
+    private RankService rankService;
+    @Autowired
     private ScholarInfoService scholarInfoService;
-    @RequestMapping("/influence")
-    public String Influence(@RequestParam String scholarId, Model model) {
+    @RequestMapping("/Advisor-advisee/{scholarId}/tea_stu_main")
+    public String Tea_stu_main(@PathVariable String scholarId, Model model) {
+        List<Scholar> top100Scholars = rankService.getTop100Students();
+        model.addAttribute("scholars", top100Scholars);
+        return "tea_stu_main";
+    }
+    @RequestMapping("/Advisor-advisee/{scholarId}/influence")
+   // @RequestMapping("/influence")
+    public String Influence( String scholarId, Model model) {
         return "influence";
     }
 
-    @RequestMapping("/tree")
-    public String Tree(@RequestParam String scholarId, Model model) {
-        Scholar teacher = teacherStudentService.getTeacherByStudentId(scholarId);//当前学者的老师
+    @RequestMapping("/Advisor-advisee/{scholarId}/tree")
+    public String Tree( @PathVariable String scholarId, Model model) {
+        //真实数据
+        /*Scholar teacher = teacherStudentService.getTeacherByStudentId(scholarId);//当前学者的老师
+
         List<Scholar> tea_stu = teacherStudentService.getStudentsByTeacherId(teacher.getIndex());//当前学者的老师的学生  考虑当前学者无老师的情况
         List<Scholar> stu = teacherStudentService.getStudentsByTeacherId(scholarId);//当前学者的学生  考虑当前学者无学生的情况
         List<Cooperater> cooperatersList = new ArrayList<Cooperater>();
@@ -85,13 +99,13 @@ public class TeacherStudentController {
                 }
             students.removeAll(delList);
 
-            /*if (remove) {
+            *//*if (remove) {
                 students.remove(removedScholar);
-            }*/
+            }*//*
             for (int j = 0; j < students.size(); j++) {
                 Student student = new Student();
                 student.setName(students.get(j).getName());
-                student.setValue(1224);
+                //student.setValue(1224);
                 studentList.add(student);
             }
             teachers.setChildren(studentList);
@@ -100,16 +114,22 @@ public class TeacherStudentController {
         TeacherWarp teacherWarp = new TeacherWarp();
         teacherWarp.setName(teacher.getName());
         teacherWarp.setChildren(teacherList);
+
+        //System.out.println(123);
         Gson gson = new Gson();
+        //System.out.print(0);
         String tea_stu_json = gson.toJson(teacherWarp);
-        model.addAttribute("tea_stu_tree", tea_stu_json);
+        System.out.println(tea_stu_json);
+        model.addAttribute("tea_stu_tree", tea_stu_json);*/
         return "tree";
     }
 
 
-    @RequestMapping("/graph")
-    public String Co_graph(@RequestParam String scholarId, Model model) {
-        Scholar teacher = teacherStudentService.getTeacherByStudentId(scholarId);//当前学者的老师
+    @RequestMapping("/Advisor-advisee/{scholarId}/graph")
+    public String Co_graph(@PathVariable String scholarId, Model model) {
+       // System.out.print(0);
+        //真实数据
+/*        Scholar teacher = teacherStudentService.getTeacherByStudentId(scholarId);//当前学者的老师
         List<Scholar> tea_stu = teacherStudentService.getStudentsByTeacherId(teacher.getIndex());//当前学者的老师的学生  考虑当前学者无老师的情况
         List<Scholar> stu = teacherStudentService.getStudentsByTeacherId(scholarId);//当前学者的学生  考虑当前学者无学生的情况
         List<Cooperater> cooperatersList = new ArrayList<Cooperater>();
@@ -217,7 +237,7 @@ public class TeacherStudentController {
                 }
             }
         }
-        Nodes_Links_new nodes_links = new Nodes_Links_new();
+
         for (int ii = 0; ii < NodeList.size(); ii++) {
             for (int ij = NodeList.size() - 1; ij > ii; ij--) {
                 if (NodeList.get(ij).getName().equals(NodeList.get(ii).getName())) {
@@ -225,88 +245,78 @@ public class TeacherStudentController {
                 }
             }
         }
+        Nodes_Links_new nodes_links = new Nodes_Links_new();
         nodes_links.setData(NodeList);
         nodes_links.setLinks(LinkList);
         nodes_links.setCategories(CategoriesList);
         Gson gson = new Gson();
         String nodes_links_json = gson.toJson(nodes_links);
-        model.addAttribute("graph", nodes_links_json);
-        return "graph_last";
+        System.out.println(nodes_links_json);
+        model.addAttribute("tea_stu_graph", nodes_links_json);*/
+        return "graph";
     }
 
 
-    @RequestMapping("/radar")
-    public String Radar(@RequestParam String scholarId, Model model) {
+    @RequestMapping("/Advisor-advisee/{scholarId}/evalue")
+    public String Radar(@PathVariable String scholarId, Model model) {
+
         Scholar teacher = teacherStudentService.getTeacherByStudentId(scholarId);//当前学者的老师
-        List<Scholar> tea_stu = teacherStudentService.getStudentsByTeacherId(teacher.getIndex());//当前学者的老师的学生  考虑当前学者无老师的情况
         List<Scholar> stu = teacherStudentService.getStudentsByTeacherId(scholarId);//当前学者的学生  考虑当前学者无学生的情况
+        List<Cooperater> co = teacherStudentService.getCooperaterById(scholarId);//当前学者的合作者
         List<Cooperater> cooperatersList = new ArrayList<Cooperater>();
         List<Evalue> evalueList = new ArrayList<Evalue>();
         boolean del = false;
         Scholar delcooperate = null;
-        List<Cooperater> co = teacherStudentService.getCooperaterById(scholarId);//当前学者的合作者
-        for (int k = 0; k < stu.size(); k++) {
-            Cooperater cooperate = new Cooperater();
-            if (CollectionUtils.isNotEmpty(stu) && teacher != null)
-                for (Scholar stus : stu) {
-                    if (stus.getIndex().equals(teacher.getIndex())) {
-                        del = true;
-                        delcooperate = stus;
-                    }
+        if (CollectionUtils.isNotEmpty(stu) && teacher != null) {
+            for (Scholar stus : stu) {
+                if (stus.getIndex().equals(teacher.getIndex())) {
+                    del = true;
+                    delcooperate = stus;
                 }
+            }
             if (del) {
                 stu.remove(delcooperate);
-            }//在所有合作者中找到当前学生
-            //雷达图
-            int[] a = {8, 10, 5, 16, 11, 8, 6, 12, 10, 35, 6, 8, 13, 9, 15, 14, 20, 11, 13, 10, 8, 18, 9, 15, 16, 5, 21, 19};
-            Evalue evalue = new Evalue();
-            for (int h = 0; h < stu.size(); h++) {
-                evalue = new Evalue();
-                evalue.setName(stu.get(h).getName());
-                evalue.setHindex(stu.get(h).getHindex());
-                evalue.setCocount(cooperatersList.get(h).getCount());
-                evalue.setRefednum(stu.get(h).getRefedNumber());
-                evalue.setPapernum(a[h]);
-                evalueList.add(evalue);
             }
         }
-        model.addAttribute("evalue", evalueList);
-        return "radar";
-    }
-
-
-    //合作次数
-    @RequestMapping("/co_count")
-    public String Co_count(@RequestParam String scholarId, Model model) {
-        Scholar teacher = teacherStudentService.getTeacherByStudentId(scholarId);//当前学者的老师
-        List<Scholar> tea_stu = teacherStudentService.getStudentsByTeacherId(teacher.getIndex());//当前学者的老师的学生  考虑当前学者无老师的情况
-        List<Scholar> stu = teacherStudentService.getStudentsByTeacherId(scholarId);//当前学者的学生  考虑当前学者无学生的情况
-        List<Cooperater> cooperatersList = new ArrayList<Cooperater>();
-        List<Evalue> evalueList = new ArrayList<Evalue>();
-        boolean del = false;
-        Scholar delcooperate = null;
-        List<Cooperater> co = teacherStudentService.getCooperaterById(scholarId);//当前学者的合作者
         for (int k = 0; k < stu.size(); k++) {
             Cooperater cooperate = new Cooperater();
-            if (CollectionUtils.isNotEmpty(stu) && teacher != null)
-                for (Scholar stus : stu) {
-                    if (stus.getIndex().equals(teacher.getIndex())) {
-                        del = true;
-                        delcooperate = stus;
-                    }
-                }
-            if (del) {
-                stu.remove(delcooperate);
-            }//在所有合作者中找到当前学生
+            //在所有合作者中找到当前学生
+            //雷达图
             cooperate.setName(stu.get(k).getName());
+            //System.out.println(co.size());
             for (int f = 0; f < co.size(); f++) {
                 if (co.get(f).getName().equals(stu.get(k).getName())) {
                     cooperate.setCount(co.get(f).getCount());
                 }
             }
             cooperatersList.add(cooperate);
+            /*for(int ii=0;ii<cooperatersList1.size();ii++){
+                System.out.println(cooperatersList1.get(ii).getName());
+            }*/
+
         }
+        int[] a = {8, 10, 5, 16, 11, 8, 6, 12, 10, 35, 6, 8, 13, 9, 15, 14, 20, 11, 13, 10, 8, 18, 9, 15, 16, 5, 21, 19};
+
+        for (int h = 0; h < stu.size(); h++) {
+            Evalue evalue = new Evalue();
+            evalue.setName(stu.get(h).getName());
+            evalue.setHindex(stu.get(h).getHindex());
+            evalue.setCocount(cooperatersList.get(h).getCount());
+            evalue.setRefednum(stu.get(h).getRefedNumber());
+            //System.out.println(stu.get(h).getName());
+            //System.out.println(stu.get(h).getRefedNumber());
+            evalue.setPapernum(a[h]);
+            evalueList.add(evalue);
+
+        }
+//        for(int i=0;i<evalueList.size();i++){
+//            System.out.println(evalueList.get(i).getRefednum());
+//        }
+//        for(int ii=0;ii<evalueList.size();ii++){
+//            System.out.println(evalueList.get(ii).getName());
+//        }
         model.addAttribute("cooperate", cooperatersList);
-        return "co_count";
+        model.addAttribute("evalue", evalueList);
+        return "evalue";
     }
 }

@@ -50,10 +50,10 @@
     </ul>
 </div>
 
-<script type="text/javascript" src="../js/layui.all.js" charset="utf-8"></script>
-<script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/stickUp.min.js"></script>
+<script type="text/javascript" src="/js/layui.all.js" charset="utf-8"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/stickUp.min.js"></script>
 
 <script type="text/javascript">
     layui.use('element', function () {
@@ -93,13 +93,18 @@
             <div class="tm-media-text-container">
                 <h3 class="tm-media-title tm-gray-text"><span id="middleScholarName">${middleScholar.name!""}</span></h3>
                 <input type="hidden" id="middleScholarIndex" value="${middleScholar.index}"/>
-                <p class="tm-media-description tm-gray-text-2">Q-index:<span id="middleScholarQindex">${middleScholar.qindex!""}</span> | H-index:<span id="middleScholarHindex">${middleScholar.hindex!""}</span> | <span id="statisticalNumber"></span> <br />
+                <p class="tm-media-description tm-gray-text-2">Q-index:<span id="middleScholarQindex">${middleScholar.qindex!""}</span> |
+                    H-index:<span id="middleScholarHindex">${middleScholar.hindex!""}</span> | <span id="statisticalNumber"></span> <br />
                     <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: <span id="middleScholarAff">${middleScholar.aff!""}</span> <br />
                     <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study field: <span id="middleScholarFieldName">${middleScholar.fieldName!""}</span></p>
             </div>
         </div>
     </div>
 </div>
+<div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
+    <button data-method="confirmTrans" class="layui-btn">配置一个透明的询问框</button>
+</div>
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
 <br/>
 <br/>
 <div class="container-fluid">
@@ -108,6 +113,9 @@
             <ul class="nav nav-tabs" id="nav_relation">
                 <li class="active" id="li_cooperate">
                     <a href="#" id="a_cooperate">cooperate relationship</a>
+                </li>
+                <li id="li_MVC">
+                    <a href="#">most valuable collectors</a>
                 </li>
                 <li id="li_team">
                     <a href="#">team relationship</a>
@@ -135,14 +143,17 @@
         </div>
     </div>
 </div>
-<div id="content">
+<div id="content" style="height: 1000px">
 </div>
 
 <script type="text/javascript">
     $(document).ready(function () {
-        $.get('/cooperateRela/${middleScholar.index}/count', function (result) {
-            $("svg").attr("width", 0);
-            $("svg").attr("height", 0);
+        <#--$.get('/cooperateRela/${middleScholar.index}/count', function (result) {-->
+            <#--$("svg").attr("width", 0);-->
+            <#--$("svg").attr("height", 0);-->
+            <#--$("#content").html(result);-->
+        <#--});-->
+        $.get('/cooperate/${middleScholar.index}/directCooperate', function (result) {
             $("#content").html(result);
         });
         $("#statisticalNumber").html("Cooperator number:" + ${middleScholar.cooperateNumber!""});
@@ -156,18 +167,27 @@
             var navTab = $(this).children('a').text();
             var middleScholarIndex = $("#middleScholarIndex").attr("value");
             if(navTab == 'cooperate relationship') {
-                $.get('/cooperateRela/'+middleScholarIndex+'/count', function (result) {
-                    $("svg").attr("width", 0);
-                    $("svg").attr("height", 0);
+//                $.get('/cooperateRela/'+middleScholarIndex+'/count', function (result) {
+//                    $("svg").attr("width", 0);
+//                    $("svg").attr("height", 0);
+//                    $("#content").html(result);
+//                })
+                $.get('/cooperate/'+middleScholarIndex+'/directCooperate', function (result) {
                     $("#content").html(result);
                 })
 
-            } else if(navTab == 'team relationship') {
-                $.get('/coTeamRela/'+middleScholarIndex, function (result) {
-                    $("svg").attr("width", 0);
-                    $("svg").attr("height", 0);
+            } else if(navTab == 'most valuable collectors') {
+                $.get('/cooperate/'+middleScholarIndex+'/MVC', function (result) {
                     $("#content").html(result);
-
+                })
+            } else if(navTab == 'team relationship') {
+//                $.get('/coTeamRela/'+middleScholarIndex, function (result) {
+//                    $("svg").attr("width", 0);
+//                    $("svg").attr("height", 0);
+//                    $("#content").html(result);
+//                })
+                $.get('/team/'+middleScholarIndex, function (result) {
+                    $("#content").html(result);
                 })
             } else if(navTab == 'teacher students relationship') {
                 //window.open("/tree/"+middleScholarIndex);
@@ -177,27 +197,33 @@
                     $("#content").html(result);
                 })
             } else if(navTab == 'direct reference relationship') {
-                $.get('/reference/ref/'+middleScholarIndex, function (result) {
+                $.get('/ref/'+middleScholarIndex, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
                 })
             } else if(navTab == 'direct referenced relationship') {
-                $.get('/reference/refed/'+middleScholarIndex, function (result) {
+                $.get('/refed/'+middleScholarIndex, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);
                 })
             } else if(navTab == 'common reference relationship') {
-                $.get('/reference/coRef/'+middleScholarIndex, function (result) {
-                    $("svg").attr("width", 0);
-                    $("svg").attr("height", 0);
+//                $.get('/coRef/'+middleScholarIndex, function (result) {
+//                    $("svg").attr("width", 0);
+//                    $("svg").attr("height", 0);
+//                    $("#content").html(result);
+//                })
+                $.get('/coRef/'+middleScholarIndex, function (result) {
                     $("#content").html(result);
                 })
             } else if(navTab == 'common referenced relationship') {
-                $.get('/reference/coRefed/'+middleScholarIndex, function (result) {
-                    $("svg").attr("width", 0);
-                    $("svg").attr("height", 0);
+//                $.get('/coRefed/'+middleScholarIndex, function (result) {
+//                    $("svg").attr("width", 0);
+//                    $("svg").attr("height", 0);
+//                    $("#content").html(result);
+//                })
+                $.get('/coRefed/'+middleScholarIndex, function (result) {
                     $("#content").html(result);
                 })
             }
@@ -208,7 +234,7 @@
 </script>
 <script src="../js/jquery.min.js"></script>
 <script src="../js/stickUp.min.js"></script>
-
+<script type="text/javascript" src="/js/layui.js"></script>
 <script type="text/javascript">
     //initiating jQuery
     jQuery(function($) {
@@ -216,6 +242,27 @@
             //enabling stickUp on the '.navbar-wrapper' class
             $('.qqq').stickUp();
         });
+    });
+
+    layui.use('layer', function(){ //独立版的layer无需执行这一句
+        var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+
+        //触发事件
+        var active = {
+            confirmTrans: function(){
+                //配置一个透明的询问框
+                layer.msg('大部分参数都是可以公用的<br>合理搭配，展示不一样的风格', {
+                    time: 20000, //20s后自动关闭
+                    btn: ['明白了', '知道了', '哦']
+                });
+            }
+        };
+
+        $('#layerDemo .layui-btn').on('click', function(){
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+
     });
 </script>
 </body>

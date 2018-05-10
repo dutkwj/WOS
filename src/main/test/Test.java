@@ -1,6 +1,6 @@
 import org.thealpha.model.Scholar;
 
-import java.io.File;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -56,5 +56,34 @@ public class Test{
 
         System.out.println(file.exists());
         System.out.println(file.getAbsolutePath());
+    }
+
+    @org.junit.Test
+    public void testReadCsv() throws IOException {
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_index_lat_lng.csv");
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+                String latlng = line.substring(line.indexOf(",") + 1);
+                latlng = latlng.replaceAll("\"", "");
+                int commaIndex = latlng.indexOf(", ");
+
+                System.out.println(latlng.substring(0, commaIndex));
+                System.out.println(latlng.substring(commaIndex + 1));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            br.close();
+        }
     }
 }

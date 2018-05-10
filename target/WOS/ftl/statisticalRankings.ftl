@@ -36,10 +36,9 @@
             opacity: 0;
         }
         }
-
     </style>
 </head>
-<body>
+<body style="background-color: #ebebeb">
 <div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
     <ul class="layui-nav" style="margin: 0;">
         <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
@@ -63,7 +62,7 @@
     </#if>
     </ul>
 
-    <div style="height: 70px;background: white;z-index: 15;margin: 0;padding: 0"></div>
+    <div style="height: 70px;background: #ebebeb;z-index: 15;margin: 0;padding: 0"></div>
 <#--<div class="navbar-wrapper" style="z-index: 15;margin: 0">-->
     <div class="navwrapper" style="margin-left:8%;">
         <div class="navbar navbar-inverse navbar-static-top" style="width: 1550px;">
@@ -122,13 +121,12 @@
 <div class="layui-container" id="scholar_list">
 </div>
 <br/>
-<div class="layui-container">
+<div class="layui-container" style="margin-left: 10%">
     <div class="row tm-media-row">
         <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
         </div>
         <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
             <div id="page"></div>
-
         </div>
     </div>
 </div>
@@ -230,7 +228,7 @@
 
                     layui.each(subId, function(index, item){
                         arr.push('<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;border-width: 1px">' +
-                                '<div class="row tm-media-row">' +
+                                '<div class="row tm-media-row" style="background-color: #ffffff">' +
                                 '<div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">' +
                                 '</div>' +
                                 '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">' +
@@ -238,7 +236,7 @@
                                 '</div>' +
                                 '<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">' +
                                 '<div class="tm-media-text-container">' +
-                                '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/scholar/baseInfo?authorId=' + thisData[0][index] + '">' + thisData[1][index] + '</a></h3>' +
+                                '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/relationGraph/' + thisData[0][index] + '">' + thisData[1][index] + '</a></h3>' +
                                 '<p class="tm-media-description tm-gray-text-2">Q-index:' + thisData[3][index] + ' | H-index:' + thisData[2][index] + ' | Cooperator number:' + thisData[4][index] +
                                 '<br/>' +
                                 '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ' + thisData[5][index] + '<br/>' +

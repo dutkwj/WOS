@@ -8,6 +8,7 @@ import org.thealpha.model.SearchItem;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -39,6 +40,14 @@ public class ScholarInfoService {
 
     public List<Scholar> getScholarsBySearchItems(SearchItem searchItem) throws IOException {
         List<String> scholarIds = scholarInfoDao.getScholarIdsBySearchItem(searchItem);
+        if (scholarIds.size() > 200) {
+//            降序的100名学者
+            List<String> downScholarIds = scholarIds.subList(0, 100);
+//            升序的100名学者
+            List<String> upScholarIds = scholarIds.subList(scholarIds.size() - 100, scholarIds.size());
+            downScholarIds.addAll(upScholarIds);
+            scholarIds = downScholarIds;
+        }
         List<Scholar> scholars = scholarInfoDao.getScholarsByIds(scholarIds);
         return scholars;
     }

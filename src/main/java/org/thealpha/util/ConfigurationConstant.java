@@ -33,6 +33,7 @@ public class ConfigurationConstant {
     public static final String CF_REFERENCE = "reference";
     public static final String QF_COUNT = "count";
     public static final String QF_EVE_YEAR_COUNT = "eve_year_count";
+    public static final String QF_MVCS = "mvcs";
     public static final String QF_TEAM_INTENSION = "team_intension";
     public static final String QF_TEACHER = "tacher";
     public static final String QF_STUDENTS = "students";
@@ -66,7 +67,7 @@ public class ConfigurationConstant {
     public static final String QF_WEIGHT = "weight";
 
 
-    public static final String ZK_QUORUM = "10.1.0.188,10.1.0.187,10.1.0.183";
+    public static final String ZK_QUORUM = "10.1.0.188,10.1.0.187,10.1.16.122";
     public static final String ZK_CLIENT_PORT = "2181";
 
     public static final String REDIS_ALL_SCHOLARS = "redis_all_scholars";

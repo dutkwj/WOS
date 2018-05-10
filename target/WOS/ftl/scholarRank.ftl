@@ -88,7 +88,7 @@
 
                     layui.each(subId, function(index, item){
                         arr.push('<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;border-width: 1px">' +
-                                '<div class="row tm-media-row">' +
+                                '<div class="row tm-media-row" style="background-color: #ffffff">' +
                                 '<div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">' +
                                 '</div>' +
                                 '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">' +
