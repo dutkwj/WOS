@@ -7,7 +7,7 @@
     <script src='/js/nav/leftnav.js'></script>
 </head>
 <body style="background-color: #ffffff">
-<div class="account-l fl" style="width:10%;float: left;margin-left: 5%;margin-top: 3%">
+<div class="account-l fl" style="width:12%;float: left;margin-left: 5%;margin-top: 3%">
     <a class="list-title" href="/index">Web of Scholars</a>
     <ul id="accordion" class="accordion">
         <li id="cooperate">
@@ -28,8 +28,12 @@
             </ul>
         </li>
         <li>
-            <div class="link">advisor-advise<i class="fa fa-chevron-down"></i></div>
+            <div class="link" id="tea_main">Advisor-advise<i class="fa fa-chevron-down"></i></div>
             <ul class="submenu">
+                <li><a id="influence">Influence</a></li>
+                <li><a id="tree">Tree</a></li>
+                <li><a id="graph">Graph</a></li>
+                <li><a id="evalue">Evalue</a></li>
             </ul>
         </li>
         <li id="cite">
@@ -43,7 +47,7 @@
         </li>
     </ul>
 </div>
-<div id="bigContainer" style="width: 70%;height: 100%;float: left">
+<div id="bigContainer" style="width: 75%;height: 100%;margin-left:2%;float: left">
 </div>
 
 <script type="text/javascript">
@@ -275,6 +279,51 @@
         $.ajax({
             type:"POST",
             url:'/coRefed/${scholarId!""}',
+            success:function (data) {
+                $("#bigContainer").html(data);
+            }
+        });
+    });
+    $("#tea_main").click(function () {
+        $.ajax({
+            type:"POST",
+            url:'/Advisor-advisee/${scholarId!""}/tea_stu_main',
+            success:function (data) {
+                $("#bigContainer").html(data);
+            }
+        });
+    });
+    $("#influence").click(function () {
+        $.ajax({
+            type:"POST",
+            url:'/Advisor-advisee/${scholarId!""}/influence',
+            success:function (data) {
+                $("#bigContainer").html(data);
+            }
+        });
+    });
+    $("#tree").click(function () {
+        $.ajax({
+            type:"POST",
+            url:'/Advisor-advisee/${scholarId!""}/tree',
+            success:function (data) {
+                $("#bigContainer").html(data);
+            }
+        });
+    });
+    $("#graph").click(function () {
+        $.ajax({
+            type:"POST",
+            url:'/Advisor-advisee/${scholarId!""}/graph',
+            success:function (data) {
+                $("#bigContainer").html(data);
+            }
+        });
+    });
+    $("#evalue").click(function () {
+        $.ajax({
+            type:"POST",
+            url:'/Advisor-advisee/${scholarId!""}/evalue',
             success:function (data) {
                 $("#bigContainer").html(data);
             }

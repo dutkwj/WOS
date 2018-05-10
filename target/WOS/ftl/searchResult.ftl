@@ -16,15 +16,22 @@
 </div>
 <div class="layui-container" id="page-container">
     <div class="row tm-media-row">
-        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
         </div>
-        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
             <div id="page"></div>
         </div>
     </div>
 </div>
 
 <script>
+    var scholars = new Array();
+    <#if hiddenScholars?? && (scholars?size>0)>
+        <#list scholars as scholar>
+        scholars.push({index:"${scholar.index!""}", name:"${scholar.name!""}", qindex:parseFloat("${scholar.qindex}"), hindex:parseFloat("${scholar.hindex}"), aff:"${scholar.aff!""}", fieldName:"${scholar.fieldName!""}"});
+        </#list>
+    </#if>
+
 
     layui.use(['laypage', 'layer'], function(){
         var laypage = layui.laypage
@@ -73,8 +80,8 @@
                     thisData.push(subFieldName);
 
                     layui.each(subId, function(index, item){
-                        arr.push('<fieldset class="layui-elem-field layui-field-title" style="margin-top: 0px;margin-left:14px;border-width: 1px">' +
-                                '<div class="row tm-media-row" style="background-color: #ffffff; width: 1140px">' +
+                        arr.push('<fieldset class="layui-elem-field layui-field-title" style="margin-top: 0px;background: #ffffff">' +
+                                '<div class="row tm-media-row">' +
                                 '<div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">' +
                                 '</div>' +
                                 '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">' +

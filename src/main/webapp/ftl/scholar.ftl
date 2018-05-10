@@ -71,18 +71,18 @@
 </script>
 <br/>
 <#--<div class="layui-container">-->
-    <#--<div class="layui-row">-->
-        <#--<div class="layui-col-md2">-->
-            <#--<img alt="180*180" src="../img/b.jpg" class="img-circle" />-->
-        <#--</div>-->
-        <#--<div class="layui-col-md3">-->
-            <#--<address> <strong><font size="4">Takeo Kanade</font></strong><br /><br />-->
-                <#--h-index:131 | #Paper:662 | #Citation:93218 <br /><br />-->
-                <#--<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br /><br />-->
-                <#--<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Department of Electrical & Computer Engineering,Carnegie Mellon University<br /><br />-->
-                <#--<abbr title="Phone"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 123456</address>-->
-        <#--</div>-->
-    <#--</div>-->
+<#--<div class="layui-row">-->
+<#--<div class="layui-col-md2">-->
+<#--<img alt="180*180" src="../img/b.jpg" class="img-circle" />-->
+<#--</div>-->
+<#--<div class="layui-col-md3">-->
+<#--<address> <strong><font size="4">Takeo Kanade</font></strong><br /><br />-->
+<#--h-index:131 | #Paper:662 | #Citation:93218 <br /><br />-->
+<#--<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Professor<br /><br />-->
+<#--<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Department of Electrical & Computer Engineering,Carnegie Mellon University<br /><br />-->
+<#--<abbr title="Phone"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 123456</address>-->
+<#--</div>-->
+<#--</div>-->
 <#--</div>-->
 <div class="container-fluid tm-section tm-section-2">
     <div class="row tm-media-row">
@@ -93,7 +93,8 @@
             <div class="tm-media-text-container">
                 <h3 class="tm-media-title tm-gray-text"><span id="middleScholarName">${middleScholar.name!""}</span></h3>
                 <input type="hidden" id="middleScholarIndex" value="${middleScholar.index}"/>
-                <p class="tm-media-description tm-gray-text-2">Q-index:<span id="middleScholarQindex">${middleScholar.qindex!""}</span> | H-index:<span id="middleScholarHindex">${middleScholar.hindex!""}</span> | <span id="statisticalNumber"></span> <br />
+                <p class="tm-media-description tm-gray-text-2">Q-index:<span id="middleScholarQindex">${middleScholar.qindex!""}</span> |
+                    H-index:<span id="middleScholarHindex">${middleScholar.hindex!""}</span> | <span id="statisticalNumber"></span> <br />
                     <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: <span id="middleScholarAff">${middleScholar.aff!""}</span> <br />
                     <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study field: <span id="middleScholarFieldName">${middleScholar.fieldName!""}</span></p>
             </div>
@@ -120,7 +121,7 @@
                     <a href="#">team relationship</a>
                 </li>
                 <li id="li_teastu">
-                    <a href="#" id="a_teastu">teacher students relationship</a>
+                    <a href="#">teacher students relationship</a>
                 </li>
                 <li id="li_ref">
                     <a href="#">direct reference relationship</a>
@@ -189,7 +190,8 @@
                     $("#content").html(result);
                 })
             } else if(navTab == 'teacher students relationship') {
-                $.get('/teacherStudent/'+middleScholarIndex, function (result) {
+                //window.open("/tree/"+middleScholarIndex);
+                $.get('/tree/'+middleScholarIndex, function (result) {
                     $("svg").attr("width", 0);
                     $("svg").attr("height", 0);
                     $("#content").html(result);

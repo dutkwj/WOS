@@ -32,6 +32,10 @@
         <li>
             <div class="link">advisor-advise<i class="fa fa-chevron-down"></i></div>
             <ul class="submenu">
+                <li><a id="influence">Influence</a></li>
+                <li><a id="tree">Tree</a></li>
+                <li><a id="graph">Graph</a></li>
+                <li><a id="evalue">Evalue</a></li>
             </ul>
         </li>
         <li>
@@ -389,7 +393,16 @@
             }
         });
     });
+    $("#influence").click(function () {
+        $.ajax({
 
+            type:"POST",
+            url:'/Advisor-advisee/${scholarId!""}/influence',
+            success:function (data) {
+                $("body").html(data);
+            }
+        });
+    });
     $("#middleTeam").click(function () {
         $.ajax({
             type:"POST",

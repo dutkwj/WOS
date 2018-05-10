@@ -5,11 +5,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.thealpha.model.*;
 import org.thealpha.service.RecommendService;
 import org.thealpha.service.ScholarCooperateService;
 import org.thealpha.service.ScholarInfoService;
+import org.thealpha.service.TeacherStudentService;
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
@@ -141,6 +143,11 @@ public class CooperateRelaController {
         return graph;
     }
 
+    @RequestMapping("/flights")
+    public String flights() {
+        return "flights";
+    }
+
     public void setAllMVCNodes(String scholarId, List<Cooperater> cooperaters, List<String> visitedNodes, List<String> joinNodes, List<Node> nodes, List<Link> links) {
         for (Cooperater cooperater : cooperaters) {
             if (!joinNodes.contains(cooperater.getIndex())) {
@@ -197,5 +204,6 @@ public class CooperateRelaController {
         return "cooperateNumber";
 
     }
+
 
 }

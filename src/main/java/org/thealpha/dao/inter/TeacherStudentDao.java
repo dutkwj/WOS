@@ -1,5 +1,6 @@
 package org.thealpha.dao.inter;
 
+import org.thealpha.model.Cooperater;
 import org.thealpha.model.Scholar;
 
 import java.util.List;
@@ -10,4 +11,5 @@ import java.util.List;
 public interface TeacherStudentDao {
     List<String> getStudentsByTeacherId(String teacherId);
     String getTeacherByStudentId(String studentId);
+    public List<Cooperater> getCooperatersById(String id);
 }

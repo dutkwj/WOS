@@ -31,11 +31,17 @@ public class SearchController {
     private RecommendService recommendService;
 
     @RequestMapping("/index")
+    public String searchMoreIndex() {
+        return "searchIndex";
+    }
+
+    @RequestMapping("/init")
     public String searchMoreIndex(Model model) {
         List<Scholar> moreRecommendScholars = recommendService.getHindexTop100Scholars();
         model.addAttribute("scholars", moreRecommendScholars);
-//        return "searchMore";
-        return "searchIndex";
+        model.addAttribute("hiddenScholars", moreRecommendScholars);
+
+        return "searchResult";
     }
 
     @RequestMapping("/content")
@@ -49,16 +55,17 @@ public class SearchController {
 //        用来展示的前100名学者
         if (searchScholars.size() > 100) {
             model.addAttribute("scholars", searchScholars.subList(0, 100));
-        } else
+        } else {
+            model.addAttribute("scholars", searchScholars);
+        }
 //        隐藏的200名学者，用来做排序，前100为降序，后100为升序
         model.addAttribute("hiddenScholars", searchScholars);
 //        return "searchMore";
-        return "searchIndex";
+        return "searchResult";
     }
 
     @RequestMapping("/sort/{sortItem}/{sortType}")
-    @ResponseBody
-    public List<Scholar> sort(@RequestBody List<Scholar> scholars, @PathVariable String sortItem, @PathVariable String sortType) {
+    public String sort(@RequestBody List<Scholar> scholars, @PathVariable String sortItem, @PathVariable String sortType, Model model) {
         if ("q_index".equals(sortItem)) {
             if ("up".equals(sortType)) {
                 Collections.sort(scholars, new Comparator<Scholar>() {
@@ -115,9 +122,76 @@ public class SearchController {
 
         }
         if (scholars.size() > 100) {
-            scholars = scholars.subList(0, 100);
+            model.addAttribute("scholars", scholars.subList(0, 100));
+        } else {
+            model.addAttribute("scholars", scholars);
         }
-        return scholars;
+        model.addAttribute("hiddenScholars", scholars);
+        return "searchResult";
     }
+
+//    @RequestMapping("/sort/{sortItem}/{sortType}")
+//    @ResponseBody
+//    public List<Scholar> sort(@RequestBody List<Scholar> scholars, @PathVariable String sortItem, @PathVariable String sortType) {
+//        if ("q_index".equals(sortItem)) {
+//            if ("up".equals(sortType)) {
+//                Collections.sort(scholars, new Comparator<Scholar>() {
+//                    @Override
+//                    public int compare(Scholar o1, Scholar o2) {
+//                        if (o1.getQindex() < o2.getQindex()) {
+//                            return -1;
+//                        } else if (o1.getQindex() > o2.getQindex()) {
+//                            return 1;
+//                        }
+//                        return 0;
+//                    }
+//                });
+//            } else {
+//                Collections.sort(scholars, new Comparator<Scholar>() {
+//                    @Override
+//                    public int compare(Scholar o1, Scholar o2) {
+//                        if (o1.getQindex() < o2.getQindex()) {
+//                            return 1;
+//                        } else if (o1.getQindex() > o2.getQindex()) {
+//                            return -1;
+//                        }
+//                        return 0;
+//                    }
+//                });
+//            }
+//
+//        } else if ("h_index".equals(sortItem)) {
+//            if ("up".equals(sortType)) {
+//                Collections.sort(scholars, new Comparator<Scholar>() {
+//                    @Override
+//                    public int compare(Scholar o1, Scholar o2) {
+//                        if (o1.getHindex() < o2.getHindex()) {
+//                            return -1;
+//                        } else if (o1.getHindex() > o2.getHindex()) {
+//                            return 1;
+//                        }
+//                        return 0;
+//                    }
+//                });
+//            } else {
+//                Collections.sort(scholars, new Comparator<Scholar>() {
+//                    @Override
+//                    public int compare(Scholar o1, Scholar o2) {
+//                        if (o1.getHindex() < o2.getHindex()) {
+//                            return 1;
+//                        } else if (o1.getHindex() > o2.getHindex()) {
+//                            return -1;
+//                        }
+//                        return 0;
+//                    }
+//                });
+//            }
+//
+//        }
+//        if (scholars.size() > 100) {
+//            scholars = scholars.subList(0, 100);
+//        }
+//        return scholars;
+//    }
 
 }

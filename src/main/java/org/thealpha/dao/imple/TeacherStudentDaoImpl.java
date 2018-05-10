@@ -8,6 +8,7 @@ import org.springframework.data.hadoop.hbase.HbaseTemplate;
 import org.springframework.data.hadoop.hbase.RowMapper;
 import org.springframework.stereotype.Repository;
 import org.thealpha.dao.inter.TeacherStudentDao;
+import org.thealpha.model.Cooperater;
 import org.thealpha.model.Scholar;
 import org.thealpha.util.ConfigurationConstant;
 
@@ -49,5 +50,24 @@ public class TeacherStudentDaoImpl implements TeacherStudentDao{
                 return null;
             }
         });
+    }
+    public List<Cooperater> getCooperatersById(String id) {
+        List<Cooperater> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new RowMapper<List<Cooperater>>() {
+            public List<Cooperater> mapRow(Result result, int i) throws Exception {
+                List<Cooperater> cooperaterList = new ArrayList<Cooperater>();
+                String cooperate = Bytes.toString(result.getValue(ConfigurationConstant.CF_COOPERATE.getBytes(), ConfigurationConstant.QF_COUNT.getBytes()));
+                if (cooperate != null && !"".equals(cooperate)) {
+                    String[] cooperates = cooperate.split(", ");
+                    for (String co : cooperates) {
+                        Cooperater cooperater = new Cooperater();
+                        cooperater.setIndex(co.substring(0, co.indexOf(":")));
+                        cooperater.setCount(Integer.parseInt(co.substring(co.indexOf(":") + 1, co.length())));
+                        cooperaterList.add(cooperater);
+                    }
+                }
+                return  cooperaterList;
+            }
+        });
+        return result;
     }
 }

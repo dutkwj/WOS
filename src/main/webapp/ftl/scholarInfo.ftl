@@ -18,7 +18,7 @@
         </div>
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
             <div class="tm-media-text-container">
-                <h3 class="tm-media-title tm-gray-text" style="font-size:30px"><a style="text-decoration: none" href="/relationGraph/${middleScholar.index!""}">${middleScholar.name!""}</a>
+                <h3 class="tm-media-title tm-gray-text" style="font-size:30px"><a style="text-decoration: none" href="/relationGraph/${middleScholar.index!""}/directCooperate">${middleScholar.name!""}</a>
                 </h3>
                 <p class="tm-media-description tm-gray-text-2" style="font-size:20px">Q-index: ${middleScholar.qindex!""} | H-index: ${middleScholar.hindex!""} <br/>
                     <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ${middleScholar.aff!""} <br/>
