@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291e2776-134e-423c-b7f9-68e37a8618e2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/evalue.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/evalue.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/graph.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/graph.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/influence.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/influence.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/tree.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/tree.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/tea_stu_main.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/tea_stu_main.ftl" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tea_stu_main.ftl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tea_stu_main.ftl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/tea_stu_main.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="107" lean-forward="true" selection-start-line="15" selection-start-column="107" selection-end-line="15" selection-end-column="107" />
+            <state relative-caret-position="273">
+              <caret line="131" column="119" lean-forward="false" selection-start-line="131" selection-start-column="119" selection-end-line="131" selection-end-column="119" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -69,6 +66,23 @@
             <state relative-caret-position="270">
               <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/index.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="189" column="139" lean-forward="false" selection-start-line="189" selection-start-column="124" selection-end-line="189" selection-end-column="139" />
+              <folding>
+                <marker date="1525345704518" expanded="true" signature="7527:7614" ph="..." />
+                <marker date="1525345704518" expanded="true" signature="7694:7719" ph="..." />
+                <marker date="1525345704518" expanded="true" signature="7905:7915" ph="..." />
+                <marker date="1525345704518" expanded="true" signature="8317:8338" ph="..." />
+                <marker date="1525345704518" expanded="true" signature="8761:8767" ph="&amp;nbsp;" />
+                <marker date="1525345704518" expanded="true" signature="8925:8931" ph="&amp;nbsp;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,7 +127,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="evalue.ftl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="evalue.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/evalue.ftl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1320">
@@ -130,16 +144,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2985">
               <caret line="199" column="24" lean-forward="false" selection-start-line="199" selection-start-column="24" selection-end-line="199" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rankIndex.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="133" column="24" lean-forward="false" selection-start-line="133" selection-start-column="24" selection-end-line="133" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -246,11 +250,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/searchResult.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/style.New.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/bootstrap.New.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/tea_stu_main.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/influence.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/graph.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/tree.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/evalue.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/tea_stu_main.ftl" />
       </list>
     </option>
   </component>
@@ -983,12 +987,12 @@
       <workItem from="1525771466710" duration="24957000" />
       <workItem from="1525937643964" duration="4061000" />
       <workItem from="1525948854045" duration="6961000" />
-      <workItem from="1525959721176" duration="2238000" />
+      <workItem from="1525959721176" duration="2657000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1230704000" />
+    <option name="totallyTimeSpent" value="1231123000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1276,14 +1280,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/index.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="157" column="29" lean-forward="true" selection-start-line="157" selection-start-column="29" selection-end-line="157" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="545">
@@ -1393,21 +1389,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/tea_stu_main.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="107" lean-forward="true" selection-start-line="15" selection-start-column="107" selection-end-line="15" selection-end-column="107" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/influence.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1446,6 +1427,36 @@
           <caret line="109" column="10" lean-forward="true" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="189" column="139" lean-forward="false" selection-start-line="189" selection-start-column="124" selection-end-line="189" selection-end-column="139" />
+          <folding>
+            <marker date="1525345704518" expanded="true" signature="7527:7614" ph="..." />
+            <marker date="1525345704518" expanded="true" signature="7694:7719" ph="..." />
+            <marker date="1525345704518" expanded="true" signature="7905:7915" ph="..." />
+            <marker date="1525345704518" expanded="true" signature="8317:8338" ph="..." />
+            <marker date="1525345704518" expanded="true" signature="8761:8767" ph="&amp;nbsp;" />
+            <marker date="1525345704518" expanded="true" signature="8925:8931" ph="&amp;nbsp;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/tea_stu_main.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="131" column="119" lean-forward="false" selection-start-line="131" selection-start-column="119" selection-end-line="131" selection-end-column="119" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

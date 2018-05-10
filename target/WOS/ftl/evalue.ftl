@@ -102,7 +102,7 @@
                     }
                     return series;
                 })()
-            };;
+            };
             if (option && typeof option === "object") {
                 myChart.setOption(option, true);
             }
