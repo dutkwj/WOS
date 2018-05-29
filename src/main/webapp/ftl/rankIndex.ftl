@@ -47,7 +47,7 @@
     <div class="menu" style="background:none">
         <ul style="font-size: 19px">
             <li style="background:none"><a href="/index" style="color:#ffffcc">Home</a></li>
-            <li style="background:none"><a href="http://marioloncarek.com" style="color:#ffffcc">Relationship</a>
+            <li style="background:none"><a href="" style="color:#ffffcc">Relationship</a>
                 <ul>
                     <li><a href="#">Cooperate</a>
                         <ul>
@@ -101,8 +101,8 @@
             <input type="hidden" id="scholarIds" name="scholarIds" value=""/>
             <div class="layui-form-item">
                 <label class="layui-form-label">rank</label>
-                <div class="layui-input-inline">
-                    <select id="sort_item" name="sortItem" onchange="sortItemChange()">
+                <div class="layui-input-inline" style="width:22%;">
+                    <select id="sort_item" name="sortItem" lay-filter="sort_item1">
                         <option value="cooperator number">collaborator number</option>
                         <option value="team members">team number</option>
                         <option value="students number">students number</option>
@@ -110,6 +110,9 @@
                         <option value="referenced number">direct cited number</option>
                         <option value="common reference number">common cite number</option>
                         <option value="common referenced number">common cited number</option>
+                        <option value="potential index">potential index</option>
+                        <option value="potential index by growthrate">potential index by growthrate</option>
+                        <option value="potential index by academicage">potential index by academicage</option>
                     </select>
                 </div>
                 <div class="layui-input-inline">
@@ -119,6 +122,26 @@
                         <option value="top100">top100</option>
                     </select>
                 </div>
+
+                <label class="layui-form-label layui-hide" id="period_label" style="width:12%;">potential peroid</label>
+                <div class="layui-input-inline layui-hide" id="period_select" style="width:10%;">
+                    <select id="potential_peroid" name="sortItem">
+                        <option value="3 years">3 years</option>
+                        <option value="5 years">5 years</option>
+                        <option value="10 years">10 years</option>
+                    </select>
+                </div>
+                <label class="layui-form-label layui-hide" id="academicage_label" style="width:10%;">academicage</label>
+                <div class="layui-input-inline layui-hide" id="academicage_select" style="width:10%;">
+                    <select id="academicage" name="sortItem">
+                        <option value="1-5">1-5</option>
+                        <option value="6-15">6-15</option>
+                        <option value="16-25">16-25</option>
+                        <option value="26-40">26-40</option>
+                        <option value="41-60">41-60</option>
+                        <option value="61-80">61-80</option>
+                    </select>
+                </div>
                 <label class="layui-form-label"><a style="cursor: pointer" class="sort_type" value="up"><span class="glyphicon glyphicon-arrow-up"></span></a>&nbsp;&nbsp;&nbsp;
                     <a style="cursor: pointer" class="sort_type" value="down"><span class="glyphicon glyphicon-arrow-down"></span></a></label>
             </div>
@@ -126,10 +149,35 @@
     </fieldset>
 </div>
 <script type="text/javascript">
-    layui.use('form', function () {
-        var form = layui.form;
-        form.render();
+    $(function(){
+        sortItemReg();
     });
+
+    function sortItemReg(){
+        layui.use('form', function () {
+            var form = layui.form;
+            form.on('select(sort_item1)', function () {
+                if (($('#sort_item').val() == 'potential index')||($('#sort_item').val() == 'potential index by growthrate')){
+                    $('#period_label').removeClass('layui-hide');
+                    $('#period_select').removeClass('layui-hide');
+                    $('#academicage_label').addClass('layui-hide');
+                    $('#academicage_select').addClass('layui-hide');
+                    form.render();
+                } else if($('#sort_item').val() == 'potential index by academicage'){
+                    $('#academicage_label').removeClass('layui-hide');
+                    $('#academicage_select').removeClass('layui-hide');
+                    form.render();
+                } else {
+                    $('#period_label').addClass('layui-hide');
+                    $('#period_select').addClass('layui-hide');
+                    $('#academicage_label').addClass('layui-hide');
+                    $('#academicage_select').addClass('layui-hide');
+                    form.render();
+                }
+            });
+        });
+    }
+
 </script>
 <div id="result" style="position:absolute;top: 25%;left: 20%;opacity: 0.6">
 
@@ -138,7 +186,7 @@
 <script type="text/javascript">
     $.ajax({
         type:"POST",
-        url:'/rank/top100?type=cooperator number&&range=top10&&upOrDown=down',
+        url:'/rank/top100?type=cooperator number&&range=top10&&upOrDown=down&&period=null&&academicage=null',
         success:function (data) {
             $("#result").html(data);
         }
@@ -146,13 +194,39 @@
 
     $(".sort_type").on("click", function (event) {
         event.preventDefault();
-        $.ajax({
-            type:"POST",
-            url:'/rank/top100?type=' + $("#sort_item").val() + '&&range=' + $('#sort_range').val() + '&&upOrDown=' + $(this).attr('value'),
-            success:function (data) {
-                $("#result").html(data);
+        if($("#sort_item").val() != 'potential index' && $("#sort_item").val() != 'potential index by academicage' && $("#sort_item").val() != 'potential index by growthrate'){
+            $.ajax({
+                type:"POST",
+                url:'/rank/top100?type=' + $("#sort_item").val() + '&&range=' + $('#sort_range').val() + '&&upOrDown=' + $(this).attr('value') + '&&period=null&&academicage=null',
+                success:function (data) {
+                    $("#result").html(data);
+                    sortItemReg();
+                }
+            });
+        }
+        else {
+            if($("#sort_item").val() == 'potential index by academicage'){
+                $.ajax({
+                    type:"POST",
+                    url:'/rank/top100?type=' + $("#sort_item").val() + '&&range=' + $('#sort_range').val() + '&&upOrDown=' + $(this).attr('value') + '&&period=' + $("#potential_peroid").val() + '&&academicage=' + $("#academicage").val(),
+                    success:function (data) {
+                        $("#result").html(data);
+                        sortItemReg();
+                    }
+                });
             }
-        });
+            else {
+                $.ajax({
+                    type:"POST",
+                    url:'/rank/top100?type=' + $("#sort_item").val() + '&&range=' + $('#sort_range').val() + '&&upOrDown=' + $(this).attr('value') + '&&period=' + $("#potential_peroid").val() + '&&academicage=null',
+                    success:function (data) {
+                        $("#result").html(data);
+                        sortItemReg();
+                    }
+                });
+            }
+        }
+
     });
 </script>
 

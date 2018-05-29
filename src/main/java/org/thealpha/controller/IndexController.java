@@ -26,7 +26,7 @@ public class IndexController {
             recommendScholars = recommendService.getRecommendScholar(user.getEmail());
         }
         if (CollectionUtils.isEmpty(recommendScholars)) {
-            recommendScholars = recommendService.getHindexTop10Scholars();
+//            recommendScholars = recommendService.getHindexTop10Scholars();
         }
         model.addAttribute("scholars", recommendScholars);
 //        return "index";

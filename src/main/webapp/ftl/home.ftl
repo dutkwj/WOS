@@ -97,7 +97,7 @@
     <div class="menu" style="background:none">
         <ul>
             <li style="background:none"><a href="/index" style="color:#ffffcc">Home</a></li>
-            <li style="background:none"><a href="http://marioloncarek.com" style="color:#ffffcc">Relationship</a>
+            <li style="background:none"><a href="" style="color:#ffffcc">Relationship</a>
                 <ul>
                     <li><a href="#">Cooperate</a>
                         <ul>
