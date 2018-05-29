@@ -7,16 +7,16 @@
 </head>
 <body style="height: 100%; margin: 0">
 
-<script src="../js/echarts.min.js" charset="utf-8"></script>
-<script src="../js/echarts-gl.min.js" charset="utf-8"></script>
-<script src="../js/ecStat.min.js" charset="utf-8"></script>
-<script src="../js/dataTool.min.js" charset="utf-8"></script>
-<script src="../js/china.js" charset="utf-8"></script>
-<script src="../js/world.js" charset="utf-8"></script>
-<script src="../js/bmap.min.js" charset="utf-8"></script>
-<script src="../js/simplex.js" charset="utf-8"></script>
-<script src="../js/d3.v4.min.js" charset="utf-8"></script>
-<link rel="stylesheet" type="text/css" href="../css/styles.css"/>
+<script src="/js/echarts.min.js" charset="utf-8"></script>
+<script src="/js/echarts-gl.min.js" charset="utf-8"></script>
+<script src="/js/ecStat.min.js" charset="utf-8"></script>
+<script src="/js/dataTool.min.js" charset="utf-8"></script>
+<script src="/js/china.js" charset="utf-8"></script>
+<script src="/js/world.js" charset="utf-8"></script>
+<script src="/js/bmap.min.js" charset="utf-8"></script>
+<script src="/js/simplex.js" charset="utf-8"></script>
+<script src="/js/d3.v4.min.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="/css/styles.css"/>
 <div id="gra" style="width:800px; height:800px;position:relative; top:50px; left:300px;">
     <script type="text/javascript">
         var dom = document.getElementById("gra");

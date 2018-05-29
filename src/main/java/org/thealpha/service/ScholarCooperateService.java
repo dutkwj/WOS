@@ -26,8 +26,35 @@ public class ScholarCooperateService {
         return scholarCooperateDao.getAllCooperateScholar();
     }
 
-    public List<Cooperater> getCooperaterById(String scholarId) {
-//        List<Cooperater> cooperaterList = scholarCooperateDao.getCooperatersById(scholarId);
+    public List<Cooperater> getCooperaterCountById(String scholarId) {
+        List<Cooperater> cooperaterList = scholarCooperateDao.getCooperatersById(scholarId);
+        List<String> scholarIds = new ArrayList<String>();
+        for (Cooperater cooperater : cooperaterList) {
+            scholarIds.add(cooperater.getIndex());
+        }
+        List<Scholar> scholarList = scholarInfoDao.getScholarsByIds(scholarIds);
+
+        Map<String, Scholar> scholarIdObjectMap = new HashMap<String, Scholar>();
+        for (Scholar scholar : scholarList) {
+            scholarIdObjectMap.put(scholar.getIndex(), scholar);
+        }
+        for (Cooperater cooperater : cooperaterList) {
+            cooperater.setName(scholarIdObjectMap.get(cooperater.getIndex()).getName());
+            cooperater.setHindex(scholarIdObjectMap.get(cooperater.getIndex()).getHindex());
+            cooperater.setQindex(scholarIdObjectMap.get(cooperater.getIndex()).getQindex());
+            cooperater.setAff(scholarIdObjectMap.get(cooperater.getIndex()).getAff());
+            cooperater.setLatlng(scholarIdObjectMap.get(cooperater.getIndex()).getLatlng());
+            cooperater.setLatitude(scholarIdObjectMap.get(cooperater.getIndex()).getLatitude());
+            cooperater.setLongitude(scholarIdObjectMap.get(cooperater.getIndex()).getLongitude());
+            cooperater.setFieldName(scholarIdObjectMap.get(cooperater.getIndex()).getFieldName());
+            cooperater.setCooperateNumber(scholarIdObjectMap.get(cooperater.getIndex()).getCooperateNumber());
+            cooperater.setCoTeamNumber(scholarIdObjectMap.get(cooperater.getIndex()).getCoTeamNumber());
+            cooperater.setStudentsNumber(scholarIdObjectMap.get(cooperater.getIndex()).getStudentsNumber());
+        }
+        return cooperaterList;
+    }
+
+    public List<Cooperater> getCooperaterIntensityById(String scholarId) {
         List<Cooperater> cooperaterList = scholarCooperateDao.getCooperatersIntensityById(scholarId);
         List<String> scholarIds = new ArrayList<String>();
         for (Cooperater cooperater : cooperaterList) {
@@ -141,7 +168,7 @@ public class ScholarCooperateService {
                 node.setColor("#CCFF66");
                 nodes.add(node);
 
-                List<Cooperater> subCollaborators = getCooperaterById(collaborator.getIndex());
+                List<Cooperater> subCollaborators = getCooperaterIntensityById(collaborator.getIndex());
                 getCollaboratorsByScholarIdAndCI(collaborator.getIndex(), subCollaborators, visitedNodes, visitedEdges, nodes, links, minCI, depth + 1, maxDepth);
             }
             if (!visitedEdges.contains(scholarId + ", " + collaborator.getIndex()) && (collaborator.getIntensity() > minCI) && (depth < maxDepth)) {

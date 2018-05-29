@@ -1,97 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="WOS:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="291e2776-134e-423c-b7f9-68e37a8618e2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Category.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Category.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Category.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Graph.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Link.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CoTeamRelaController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CoTeamRelaController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$13.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CooperateRelaController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CooperateRelaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/HdfsController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/HdfsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/IndexController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/StatisticalRankingsController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/StatisticalRankingsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/WorldMapController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/WorldMapController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Cooperater.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Cooperater.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Graph.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Graph.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Link.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Link.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Node.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Node.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Scholar.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Scholar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/RankService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/RankService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCooperateService$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCooperateService$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCooperateService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCooperateService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ConfigurationConstant.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ConfigurationConstant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/HbaseUtils.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/HbaseUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/CoTeamRelaController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/CoTeamRelaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ListTranscoder.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ListTranscoder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/CooperateRelaController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/CooperateRelaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/HdfsController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/HdfsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/IndexController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/StatisticalRankingsController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/StatisticalRankingsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/WorldMapController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/WorldMapController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Cooperater.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Cooperater.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Node.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Node.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Scholar.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Scholar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/RankService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/RankService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/util/ConfigurationConstant.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/ConfigurationConstant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/util/HbaseUtils.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/HbaseUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$1.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/util/ListTranscoder.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/ListTranscoder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$10.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$10.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$11.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$2.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$3.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$4.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$5.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$6.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$12.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$12.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$7.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$8.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$8.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$9.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Test.class" afterPath="$PROJECT_DIR$/target/test-classes/Test.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WOS.iml" afterPath="$PROJECT_DIR$/WOS.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Graph.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Graph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Link.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Link.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Node.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Node.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/IndexController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Scholar.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Scholar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/service/RankService.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/service/RankService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/redis/redis-config.properties" afterPath="$PROJECT_DIR$/src/main/resources/redis/redis-config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-servlet.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-servlet.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/HbaseTest.java" afterPath="$PROJECT_DIR$/src/main/test/HbaseTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/evalue.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/evalue.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/graph.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/graph.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/influence.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/influence.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/searchResult.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/searchResult.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/worldMap.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/worldMap.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/tea_stu_main.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/tea_stu_main.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/tree.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/tree.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/WOS/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/redis/redis-config.properties" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/redis/redis-config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/spring-servlet.xml" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/spring-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/evalue.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/evalue.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/graph.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/graph.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/home.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/home.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/leftNav.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/leftNav.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/influence.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/influence.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/rankIndex.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/rankIndex.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/relationGraph.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/relationGraph.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/scholarRank.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/scholarRank.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/searchIndex.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/searchIndex.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/searchResult.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/searchResult.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/worldMap.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/worldMap.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/redis/redis-config.properties" afterPath="$PROJECT_DIR$/target/classes/redis/redis-config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-servlet.xml" afterPath="$PROJECT_DIR$/target/classes/spring-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/tea_stu_main.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/tea_stu_main.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/tree.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/tree.ftl" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,113 +99,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HbaseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/HbaseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="1763" column="11" lean-forward="true" selection-start-line="1731" selection-start-column="8" selection-end-line="1763" selection-end-column="11" />
-              <folding>
-                <element signature="e#6358#6374#0" expanded="true" />
-                <element signature="e#6760#6776#0" expanded="true" />
-                <element signature="e#10832#10848#0" expanded="true" />
-                <element signature="e#13045#13061#0" expanded="true" />
-                <element signature="e#15740#15756#0" expanded="true" />
-                <element signature="e#17844#17860#0" expanded="true" />
-                <element signature="e#19941#19957#0" expanded="true" />
-                <element signature="e#22018#22034#0" expanded="true" />
-                <element signature="e#25414#25430#0" expanded="true" />
-                <element signature="e#27070#27086#0" expanded="true" />
-                <element signature="e#29402#29418#0" expanded="true" />
-                <element signature="e#33032#33047#0" expanded="true" />
-                <element signature="e#36609#36618#0" expanded="true" />
-                <element signature="e#36771#36780#0" expanded="true" />
-                <element signature="e#37762#37778#0" expanded="true" />
-                <element signature="e#39978#39994#0" expanded="true" />
-                <element signature="e#42053#42069#0" expanded="true" />
-                <element signature="e#44361#44377#0" expanded="true" />
-                <element signature="e#49057#49066#0" expanded="true" />
-                <element signature="e#49838#49854#0" expanded="true" />
-                <element signature="e#53013#53029#0" expanded="true" />
-                <element signature="e#53081#53097#0" expanded="true" />
-                <element signature="e#53149#53165#0" expanded="true" />
-                <element signature="e#53217#53233#0" expanded="true" />
-                <element signature="e#54638#54654#0" expanded="true" />
-                <element signature="e#56782#56798#0" expanded="true" />
-                <element signature="e#59115#59131#0" expanded="true" />
-                <element signature="e#61294#61310#0" expanded="true" />
-                <element signature="e#63337#63353#0" expanded="true" />
-                <element signature="e#65467#65483#0" expanded="true" />
-                <element signature="e#67621#67637#0" expanded="true" />
-                <element signature="e#69730#69746#0" expanded="true" />
-                <element signature="e#72107#74292#0" expanded="true" />
-                <element signature="e#72337#72349#0" expanded="true" />
-                <element signature="e#74291#74292#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScholarCooperateService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="140" column="38" lean-forward="false" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScholarInfoDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarInfoDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScholarInfoDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-776">
-              <caret line="84" column="25" lean-forward="false" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CooperateRelaController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="297" column="54" lean-forward="true" selection-start-line="297" selection-start-column="54" selection-end-line="297" selection-end-column="54" />
-              <folding>
-                <element signature="e#10822#10830#0" expanded="true" />
-                <element signature="e#10883#10891#0" expanded="true" />
-                <element signature="e#11424#11430#0" expanded="true" />
-                <element signature="e#12636#12642#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Graph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="home.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/home.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="256" column="48" lean-forward="false" selection-start-line="256" selection-start-column="40" selection-end-line="256" selection-end-column="48" />
+            <state relative-caret-position="161">
+              <caret line="100" column="10" lean-forward="false" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="10" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rankIndex.ftl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -237,104 +132,32 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>categories</find>
-      <find>directCooperate</find>
-      <find>webkitDep.nodes</find>
-      <find>influence</find>
-      <find>advisor-advise</find>
-      <find>png</find>
-      <find>tea_main</find>
-      <find>css</find>
-      <find>span_8</find>
-      <find>glyphicon glyphicon-map-marker</find>
-      <find>col-md-4</find>
-      <find>font-family</find>
-      <find>cle</find>
-      <find>bigContainer</find>
-      <find>evalue</find>
-      <find>app</find>
-      <find>a daffertshofer</find>
-      <find>vu</find>
-      <find>&quot;value&quot;: 0</find>
-      <find>setValue(1224)</find>
-      <find>F44336</find>
-      <find>.activity_box h3</find>
-      <find>graph</find>
-      <find>type</find>
-      <find>directCooperateJSON/</find>
-      <find>advisorJSON</find>
-      <find>REDIS_HINDEX_TOP10_SCHOLARS</find>
-      <find>resul</find>
-      <find>10.1.0.187</find>
-      <find>3A1BF50D</find>
+      <find>D:/Potential Index/Result/fortest1/deal/data</find>
+      <find>period_label</find>
+      <find>sort_type</find>
+      <find>MVC</find>
+      <find>code.css</find>
+      <find>sort_item</find>
     </findStrings>
     <replaceStrings>
-      <replace>10.1.16.122</replace>
-      <replace>10.1.27.119</replace>
+      <replace>$USER_HOME$/PycharmProjects/WOS/potential_data/potential_age</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/cooperate2.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/cooperateNumber.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/relationshipIndex.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/ReferenceController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/statisticalRankings.ftl" />
-        <option value="$PROJECT_DIR$/target/WOS/ftl/leftNav.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/Advisor-advisee.ftl" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/WOS.iml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/echarts.min.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/cooperate.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/bootstrapNew.css" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/RankService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/bar.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/graph.New.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/treebeifen.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/tree.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/influence.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/evalue.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/scholarInfo.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/style.New.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/bootstrap.New.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/tea_stu_main.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/register.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/searchResult.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Category.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Node.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/worldMap.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/redis/redis-config.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Graph.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java" />
+        <option value="$PROJECT_DIR$/target/WOS/META-INF/MANIFEST.MF" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/main/test/HbaseTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Link.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" />
       </list>
     </option>
   </component>
@@ -351,10 +174,15 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/src/main/webapp/Font_Awesome/package.json" />
+    </packageJsonPaths>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="105" />
+    <option name="x" value="80" />
     <option name="y" value="52" />
-    <option name="width" value="1789" />
+    <option name="width" value="1825" />
     <option name="height" value="1028" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -396,7 +224,191 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: org.springframework:spring-web:4.3.7.RELEASE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring-web-4.3.7.RELEASE.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="springframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: org.springframework:spring-web:4.3.7.RELEASE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring-web-4.3.7.RELEASE.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="springframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="method" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: org.springframework:spring-web:4.3.7.RELEASE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring-web-4.3.7.RELEASE.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="springframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="method" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="support" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: org.springframework:spring-web:4.3.7.RELEASE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring-web-4.3.7.RELEASE.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="springframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: org.springframework:spring-web:4.3.7.RELEASE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring-web-4.3.7.RELEASE.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -437,6 +449,88 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -485,54 +579,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WOS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WOS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WOS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WOS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redis" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -655,10 +701,6 @@
               <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -724,17 +766,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="AndroidView" />
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
-    <property name="js.eslint.eslintPackage" value="" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -743,15 +792,27 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/js" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected="Tomcat Server.tomcat8">
-    <configuration default="false" name="HbaseTest.importCollaboratorCountByYear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="HbaseTest.setPotentialAcaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="WOS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HbaseTest" />
-      <option name="METHOD_NAME" value="importCollaboratorCountByYear" />
+      <option name="METHOD_NAME" value="setPotentialAcaTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -765,14 +826,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="HbaseTest.importPaperNumberByYear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="HbaseTest.setPotentialGrowthTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="WOS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HbaseTest" />
-      <option name="METHOD_NAME" value="importPaperNumberByYear" />
+      <option name="METHOD_NAME" value="setPotentialGrowthTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -786,14 +847,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="HbaseTest.importRefPapersByYear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="HbaseTest.setPotentialTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="WOS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HbaseTest" />
-      <option name="METHOD_NAME" value="importRefPapersByYear" />
+      <option name="METHOD_NAME" value="setPotentialTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -807,14 +868,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="HbaseTest.importCoRefPapersDetail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="HbaseTest.getHighHindexScholar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="WOS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HbaseTest" />
-      <option name="METHOD_NAME" value="importCoRefPapersDetail" />
+      <option name="METHOD_NAME" value="getHighHindexScholar" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -828,14 +889,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="HbaseTest.getEveryYearCollaboratorsById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="HbaseTest.setStatisticalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="WOS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HbaseTest" />
-      <option name="METHOD_NAME" value="getEveryYearCollaboratorsById" />
+      <option name="METHOD_NAME" value="setStatisticalTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -858,13 +919,6 @@
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -923,10 +977,9 @@
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="WIDTH" value="0" />
+      <option name="HEIGHT" value="0" />
       <module />
       <method />
     </configuration>
@@ -1176,14 +1229,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
     <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1364,123 +1409,66 @@
       </method>
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcat8" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.HbaseTest.importCollaboratorCountByYear" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.HbaseTest.importPaperNumberByYear" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.HbaseTest.importRefPapersByYear" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.HbaseTest.importCoRefPapersDetail" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.HbaseTest.getEveryYearCollaboratorsById" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.HbaseTest.setPotentialAcaTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.HbaseTest.setPotentialGrowthTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.HbaseTest.setPotentialTest" />
+      <item index="3" class="java.lang.String" itemvalue="Tomcat Server.tomcat8" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.HbaseTest.getHighHindexScholar" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.HbaseTest.setStatisticalTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.HbaseTest.getEveryYearCollaboratorsById" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.HbaseTest.importCoRefPapersDetail" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.HbaseTest.importRefPapersByYear" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.HbaseTest.importPaperNumberByYear" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.HbaseTest.importCollaboratorCountByYear" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.HbaseTest.setStatisticalTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.HbaseTest.getHighHindexScholar" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.HbaseTest.setPotentialAcaTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.HbaseTest.setPotentialGrowthTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.HbaseTest.setPotentialTest" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SbtLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="291e2776-134e-423c-b7f9-68e37a8618e2" name="Default" comment="" />
-      <created>1507643014367</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1507643014367</updated>
-      <workItem from="1507643018880" duration="598000" />
-      <workItem from="1507683466342" duration="12660000" />
-      <workItem from="1507731090064" duration="5146000" />
-      <workItem from="1509609836578" duration="56619000" />
-      <workItem from="1510041577634" duration="26984000" />
-      <workItem from="1511271345921" duration="4830000" />
-      <workItem from="1511314745569" duration="17593000" />
-      <workItem from="1511350075182" duration="1860000" />
-      <workItem from="1511414603309" duration="10096000" />
-      <workItem from="1512352599205" duration="654000" />
-      <workItem from="1512405008469" duration="233000" />
-      <workItem from="1512441581915" duration="7778000" />
-      <workItem from="1512485696840" duration="11476000" />
-      <workItem from="1512523734873" duration="4316000" />
-      <workItem from="1512529012042" duration="13838000" />
-      <workItem from="1512554093845" duration="11370000" />
-      <workItem from="1512652586148" duration="149000" />
-      <workItem from="1513160182699" duration="41035000" />
-      <workItem from="1513406962613" duration="137076000" />
-      <workItem from="1514023083907" duration="1218000" />
-      <workItem from="1514036109756" duration="21000" />
-      <workItem from="1514442601630" duration="11000" />
-      <workItem from="1514698148331" duration="41751000" />
-      <workItem from="1514968050679" duration="80185000" />
-      <workItem from="1515573067930" duration="93560000" />
-      <workItem from="1516158381071" duration="23480000" />
-      <workItem from="1516261347252" duration="133792000" />
-      <workItem from="1517204272233" duration="954000" />
-      <workItem from="1520129643954" duration="94533000" />
-      <workItem from="1520487988181" duration="7728000" />
-      <workItem from="1523272438354" duration="21264000" />
-      <workItem from="1523430910507" duration="55481000" />
-      <workItem from="1523862604322" duration="162156000" />
-      <workItem from="1525310528931" duration="12000" />
-      <workItem from="1525346210325" duration="1296000" />
-      <workItem from="1525347523704" duration="23174000" />
-      <workItem from="1525399317083" duration="4655000" />
-      <workItem from="1525410862557" duration="15022000" />
-      <workItem from="1525665434578" duration="29791000" />
-      <workItem from="1525704672622" duration="19470000" />
-      <workItem from="1525771466710" duration="24957000" />
-      <workItem from="1525937643964" duration="4061000" />
-      <workItem from="1525948854045" duration="6961000" />
-      <workItem from="1525959721176" duration="1550000" />
-      <workItem from="1525962145603" duration="13520000" />
-      <workItem from="1526793463299" duration="12302000" />
-      <workItem from="1527235657099" duration="1738000" />
-      <workItem from="1527424304245" duration="30903000" />
-    </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HbaseTest_getEveryYearCollaboratorsById - 2018.05.28 at 20h 53m 27s.xml">
-      <configuration name="HbaseTest.getEveryYearCollaboratorsById" configurationId="JUnit" />
+    <history-entry file="HbaseTest_getHighHindexScholar - 2018.05.29 at 10h 04m 13s.xml">
+      <configuration name="HbaseTest.getHighHindexScholar" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_getEveryYearCollaboratorsById - 2018.05.28 at 20h 53m 58s.xml">
-      <configuration name="HbaseTest.getEveryYearCollaboratorsById" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.05.29 at 10h 06m 20s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_getEveryYearCollaboratorsById - 2018.05.28 at 20h 55m 16s.xml">
-      <configuration name="HbaseTest.getEveryYearCollaboratorsById" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.05.29 at 10h 07m 43s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_getEveryYearCollaboratorsById - 2018.05.28 at 20h 59m 53s.xml">
-      <configuration name="HbaseTest.getEveryYearCollaboratorsById" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.05.29 at 10h 09m 46s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_importCoRefPapersDetail - 2018.05.28 at 15h 28m 04s.xml">
-      <configuration name="HbaseTest.importCoRefPapersDetail" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.05.29 at 10h 17m 25s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_importCoRefPapersDetail - 2018.05.28 at 15h 43m 58s.xml">
-      <configuration name="HbaseTest.importCoRefPapersDetail" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.05.29 at 10h 20m 03s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_importCoRefPapersDetail - 2018.05.28 at 15h 46m 06s.xml">
-      <configuration name="HbaseTest.importCoRefPapersDetail" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.05.29 at 10h 23m 08s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_importCoRefPapersDetail - 2018.05.28 at 15h 48m 51s.xml">
-      <configuration name="HbaseTest.importCoRefPapersDetail" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.05.29 at 10h 26m 32s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_importCoRefPapersDetail - 2018.05.28 at 16h 21m 55s.xml">
-      <configuration name="HbaseTest.importCoRefPapersDetail" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.05.29 at 10h 30m 22s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_importCoRefPapersDetail - 2018.05.28 at 16h 23m 20s.xml">
-      <configuration name="HbaseTest.importCoRefPapersDetail" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.05.29 at 10h 34m 44s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1288479000" />
+    <option name="totallyTimeSpent" value="15424000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1492,13 +1480,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="105" y="52" width="1789" height="1028" extended-state="4" />
+    <frame x="80" y="52" width="1825" height="1028" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61264014" sideWeight="0.2884097" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32831" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22982322" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1518,7 +1506,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42088267" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21073225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20657535" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3519914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1531,36 +1519,22 @@
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="400" />
+      <option name="time" value="406" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1573,43 +1547,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="41" column="55" lean-forward="true" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="109" column="16" lean-forward="false" selection-start-line="109" selection-start-column="16" selection-end-line="119" selection-end-column="19" />
-          <folding>
-            <element signature="e#2454#2886#0" expanded="false" />
-            <element signature="e#2885#2886#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/index.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/register.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/scholarInfo.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="118" lean-forward="false" selection-start-line="20" selection-start-column="118" selection-end-line="20" selection-end-column="174" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1617,6 +1559,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1365">
           <caret line="91" column="126" lean-forward="false" selection-start-line="91" selection-start-column="113" selection-end-line="91" selection-end-column="126" />
+          <folding>
+            <marker date="1526009507948" expanded="true" signature="3356:3391" ph="..." />
+            <marker date="1526009507948" expanded="true" signature="3754:3764" ph="..." />
+            <marker date="1526009507948" expanded="true" signature="4125:4146" ph="..." />
+            <marker date="1526009507948" expanded="true" signature="4548:4554" ph="&amp;nbsp;" />
+            <marker date="1526009507948" expanded="true" signature="4700:4706" ph="&amp;nbsp;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1639,6 +1588,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-469">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1689,20 +1639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="137" column="24" lean-forward="true" selection-start-line="137" selection-start-column="24" selection-end-line="137" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="172" column="49" lean-forward="false" selection-start-line="172" selection-start-column="49" selection-end-line="172" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.9.0/jedis-2.9.0-sources.jar!/redis/clients/jedis/BinaryJedisCluster.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1714,21 +1650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Scholar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="214" column="0" lean-forward="false" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1744,14 +1665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" column="86" lean-forward="false" selection-start-line="90" selection-start-column="86" selection-end-line="90" selection-end-column="86" />
           <folding />
         </state>
       </provider>
@@ -1820,14 +1733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="51" lean-forward="false" selection-start-line="41" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
@@ -1868,14 +1773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="35" column="57" lean-forward="false" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Category.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1884,26 +1781,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/home.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="256" column="48" lean-forward="false" selection-start-line="256" selection-start-column="40" selection-end-line="256" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="86" column="11" lean-forward="false" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1140">
-          <caret line="23" column="112" lean-forward="false" selection-start-line="23" selection-start-column="112" selection-end-line="23" selection-end-column="112" />
           <folding />
         </state>
       </provider>
@@ -1917,50 +1798,6 @@
             <element signature="e#718#719#0" expanded="true" />
             <element signature="e#758#759#0" expanded="true" />
             <element signature="e#790#791#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/HbaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="1763" column="11" lean-forward="true" selection-start-line="1731" selection-start-column="8" selection-end-line="1763" selection-end-column="11" />
-          <folding>
-            <element signature="e#6358#6374#0" expanded="true" />
-            <element signature="e#6760#6776#0" expanded="true" />
-            <element signature="e#10832#10848#0" expanded="true" />
-            <element signature="e#13045#13061#0" expanded="true" />
-            <element signature="e#15740#15756#0" expanded="true" />
-            <element signature="e#17844#17860#0" expanded="true" />
-            <element signature="e#19941#19957#0" expanded="true" />
-            <element signature="e#22018#22034#0" expanded="true" />
-            <element signature="e#25414#25430#0" expanded="true" />
-            <element signature="e#27070#27086#0" expanded="true" />
-            <element signature="e#29402#29418#0" expanded="true" />
-            <element signature="e#33032#33047#0" expanded="true" />
-            <element signature="e#36609#36618#0" expanded="true" />
-            <element signature="e#36771#36780#0" expanded="true" />
-            <element signature="e#37762#37778#0" expanded="true" />
-            <element signature="e#39978#39994#0" expanded="true" />
-            <element signature="e#42053#42069#0" expanded="true" />
-            <element signature="e#44361#44377#0" expanded="true" />
-            <element signature="e#49057#49066#0" expanded="true" />
-            <element signature="e#49838#49854#0" expanded="true" />
-            <element signature="e#53013#53029#0" expanded="true" />
-            <element signature="e#53081#53097#0" expanded="true" />
-            <element signature="e#53149#53165#0" expanded="true" />
-            <element signature="e#53217#53233#0" expanded="true" />
-            <element signature="e#54638#54654#0" expanded="true" />
-            <element signature="e#56782#56798#0" expanded="true" />
-            <element signature="e#59115#59131#0" expanded="true" />
-            <element signature="e#61294#61310#0" expanded="true" />
-            <element signature="e#63337#63353#0" expanded="true" />
-            <element signature="e#65467#65483#0" expanded="true" />
-            <element signature="e#67621#67637#0" expanded="true" />
-            <element signature="e#69730#69746#0" expanded="true" />
-            <element signature="e#72107#74292#0" expanded="true" />
-            <element signature="e#72337#72349#0" expanded="true" />
-            <element signature="e#74291#74292#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2013,6 +1850,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-291">
+          <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1439">
+          <caret line="124" column="40" lean-forward="true" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
+          <folding>
+            <marker date="1527556453222" expanded="true" signature="4763:4798" ph="..." />
+            <marker date="1527556453222" expanded="true" signature="5161:5170" ph="..." />
+            <marker date="1527556453222" expanded="true" signature="5531:5552" ph="..." />
+            <marker date="1527556453222" expanded="true" signature="5958:5964" ph="&amp;nbsp;" />
+            <marker date="1527556453222" expanded="true" signature="6110:6116" ph="&amp;nbsp;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/WOS/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="1354" column="67" lean-forward="true" selection-start-line="1354" selection-start-column="67" selection-end-line="1354" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Scholar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="170" column="102" lean-forward="false" selection-start-line="170" selection-start-column="102" selection-end-line="170" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-776">
@@ -2021,23 +1915,159 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/test/HbaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="140" column="38" lean-forward="false" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="38" />
+        <state relative-caret-position="285">
+          <caret line="1565" column="17" lean-forward="true" selection-start-line="1565" selection-start-column="17" selection-end-line="1565" selection-end-column="17" />
+          <folding>
+            <element signature="e#6358#6374#0" expanded="true" />
+            <element signature="e#6760#6776#0" expanded="true" />
+            <element signature="e#10832#10848#0" expanded="true" />
+            <element signature="e#13045#13061#0" expanded="true" />
+            <element signature="e#15740#15756#0" expanded="true" />
+            <element signature="e#17844#17860#0" expanded="true" />
+            <element signature="e#19941#19957#0" expanded="true" />
+            <element signature="e#22018#22034#0" expanded="true" />
+            <element signature="e#25414#25430#0" expanded="true" />
+            <element signature="e#27070#27086#0" expanded="true" />
+            <element signature="e#29402#29418#0" expanded="true" />
+            <element signature="e#33032#33047#0" expanded="true" />
+            <element signature="e#36214#36555#0" expanded="true" />
+            <element signature="e#36554#36555#0" expanded="true" />
+            <element signature="e#36609#36618#0" expanded="true" />
+            <element signature="e#36771#36780#0" expanded="true" />
+            <element signature="e#37762#37778#0" expanded="true" />
+            <element signature="e#39978#39994#0" expanded="true" />
+            <element signature="e#42053#42069#0" expanded="true" />
+            <element signature="e#44361#44377#0" expanded="true" />
+            <element signature="e#46200#46209#0" expanded="true" />
+            <element signature="e#49092#49433#0" expanded="true" />
+            <element signature="e#49432#49433#0" expanded="true" />
+            <element signature="e#49492#49501#0" expanded="true" />
+            <element signature="e#49770#50111#0" expanded="true" />
+            <element signature="e#50110#50111#0" expanded="true" />
+            <element signature="e#50167#50176#0" expanded="true" />
+            <element signature="e#51443#51452#0" expanded="true" />
+            <element signature="e#53827#54204#0" expanded="true" />
+            <element signature="e#54203#54204#0" expanded="true" />
+            <element signature="e#54263#54272#0" expanded="true" />
+            <element signature="e#54541#54918#0" expanded="true" />
+            <element signature="e#54917#54918#0" expanded="true" />
+            <element signature="e#54974#54983#0" expanded="true" />
+            <element signature="e#56255#56264#0" expanded="true" />
+            <element signature="e#61235#61576#0" expanded="true" />
+            <element signature="e#61575#61576#0" expanded="true" />
+            <element signature="e#61635#61644#0" expanded="true" />
+            <element signature="e#61913#62254#0" expanded="true" />
+            <element signature="e#62253#62254#0" expanded="true" />
+            <element signature="e#62310#62319#0" expanded="true" />
+            <element signature="e#70722#71099#0" expanded="true" />
+            <element signature="e#71098#71099#0" expanded="true" />
+            <element signature="e#71155#71164#0" expanded="true" />
+            <element signature="e#71223#71232#0" expanded="true" />
+            <element signature="e#72288#72304#0" expanded="true" />
+            <element signature="e#74348#74965#0" expanded="true" />
+            <element signature="e#74964#74965#0" expanded="true" />
+            <element signature="e#75463#75479#0" expanded="true" />
+            <element signature="e#75531#75547#0" expanded="true" />
+            <element signature="e#75599#75615#0" expanded="true" />
+            <element signature="e#75667#75683#0" expanded="true" />
+            <element signature="e#77088#77104#0" expanded="true" />
+            <element signature="e#79232#79248#0" expanded="true" />
+            <element signature="e#81565#81581#0" expanded="true" />
+            <element signature="e#83744#83760#0" expanded="true" />
+            <element signature="e#85787#85803#0" expanded="true" />
+            <element signature="e#87917#87933#0" expanded="true" />
+            <element signature="e#90071#90087#0" expanded="true" />
+            <element signature="e#92180#92196#0" expanded="true" />
+            <element signature="e#94557#96742#0" expanded="true" />
+            <element signature="e#94787#94799#0" expanded="true" />
+            <element signature="e#96741#96742#0" expanded="true" />
+            <marker date="1527561182674" expanded="false" signature="68332:68469" ph="(RowMapper) (result, rowNum) → {" />
+            <marker date="1527561182674" expanded="false" signature="70624:70639" ph="}" />
+            <marker date="1527561182674" expanded="false" signature="71909:72046" ph="(result, rowNum) → {" />
+            <marker date="1527561182674" expanded="false" signature="72096:72111" ph="}" />
+            <marker date="1527561182674" expanded="false" signature="75048:75132" ph="(Comparator) (o1, o2) → {" />
+            <marker date="1527561182674" expanded="false" signature="75374:75389" ph="}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1620">
+          <caret line="66" column="51" lean-forward="true" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="23" column="112" lean-forward="false" selection-start-line="23" selection-start-column="112" selection-end-line="23" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="164" column="93" lean-forward="true" selection-start-line="164" selection-start-column="93" selection-end-line="164" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="214" column="0" lean-forward="false" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="297" column="54" lean-forward="true" selection-start-line="297" selection-start-column="54" selection-end-line="297" selection-end-column="54" />
+        <state relative-caret-position="19">
+          <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
           <folding>
-            <element signature="e#10822#10830#0" expanded="true" />
-            <element signature="e#10883#10891#0" expanded="true" />
-            <element signature="e#11424#11430#0" expanded="true" />
-            <element signature="e#12636#12642#0" expanded="true" />
+            <element signature="e#10857#10865#0" expanded="true" />
+            <element signature="e#10918#10926#0" expanded="true" />
+            <element signature="e#11459#11465#0" expanded="true" />
+            <element signature="e#12671#12677#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/home.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="100" column="10" lean-forward="false" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layui/lay/modules/code.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="1095" lean-forward="false" selection-start-line="1" selection-start-column="1095" selection-end-line="1" selection-end-column="1095" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/layui.all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="4" column="85806" lean-forward="false" selection-start-line="4" selection-start-column="85806" selection-end-line="4" selection-end-column="85806" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

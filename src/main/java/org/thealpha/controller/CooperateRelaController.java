@@ -79,7 +79,7 @@ public class CooperateRelaController {
 
     @RequestMapping("/cooperateRela/{scholarId}/count")
     public String helloWorld(@PathVariable String scholarId, Model model, HttpSession session) {
-        List<Cooperater> cooperaters = scholarCooperateService.getCooperaterById(scholarId);
+        List<Cooperater> cooperaters = scholarCooperateService.getCooperaterCountById(scholarId);
         Scholar scholar = scholarInfoService.getScholarById(scholarId);
 
         List<YearCount> yearCounts = scholarCooperateService.getCooperateYearCountsById(scholarId);
@@ -109,7 +109,7 @@ public class CooperateRelaController {
     @RequestMapping(value = "/directCooperateJSON/{scholarId}")
     @ResponseBody
     public Graph getDirectCooperateJSON(@PathVariable String scholarId) {
-        List<Cooperater> cooperaters = scholarCooperateService.getCooperaterById(scholarId);
+        List<Cooperater> cooperaters = scholarCooperateService.getCooperaterCountById(scholarId);
             Scholar scholar = scholarInfoService.getScholarById(scholarId);
 
         Node midNode = new Node();
@@ -160,7 +160,7 @@ public class CooperateRelaController {
         if (g != null) {
             return g;
         }
-        List<Cooperater> cooperaters = scholarCooperateService.getCooperaterById(scholarId);
+        List<Cooperater> cooperaters = scholarCooperateService.getCooperaterCountById(scholarId);
         Scholar scholar = scholarInfoService.getScholarById(scholarId);
 
         List<String> joinNodes = new ArrayList<String>();
@@ -221,7 +221,7 @@ public class CooperateRelaController {
             }
             if (cooperater.getCount() > 5 && !visitedNodes.contains(cooperater.getIndex())) {
                 visitedNodes.add(cooperater.getIndex());
-                List<Cooperater> subCooperaters = scholarCooperateService.getCooperaterById(cooperater.getIndex());
+                List<Cooperater> subCooperaters = scholarCooperateService.getCooperaterCountById(cooperater.getIndex());
                 setAllMVCNodes(cooperater.getIndex(), subCooperaters, visitedNodes, joinNodes, nodes, links);
             }
         }
@@ -229,7 +229,7 @@ public class CooperateRelaController {
 
     @RequestMapping("/cooperate/{scholarId}/worldMap")
     public String worldMap(@PathVariable String scholarId, Model model) {
-        List<Cooperater> cooperaters = scholarCooperateService.getCooperaterById(scholarId);
+        List<Cooperater> cooperaters = scholarCooperateService.getCooperaterCountById(scholarId);
         Scholar scholar = scholarInfoService.getScholarById(scholarId);
         model.addAttribute("cooperaters", cooperaters);
         model.addAttribute("middleScholar", scholar);
@@ -239,7 +239,7 @@ public class CooperateRelaController {
 
     @RequestMapping("/cooperate/{scholarId}/yearCounts")
     public String yearCounts(@PathVariable String scholarId, Model model) {
-        List<Cooperater> cooperaters = scholarCooperateService.getCooperaterById(scholarId);
+        List<Cooperater> cooperaters = scholarCooperateService.getCooperaterCountById(scholarId);
         Scholar scholar = scholarInfoService.getScholarById(scholarId);
         List<YearCount> yearCounts = scholarCooperateService.getCooperateYearCountsById(scholarId);
         model.addAttribute("cooperaters", cooperaters);
@@ -254,7 +254,7 @@ public class CooperateRelaController {
     @RequestMapping("/cooperate/{scholarId}/ci")
     @ResponseBody
     public Graph collaboratorsIntensity(@PathVariable String scholarId, @RequestParam(name = "minCI", defaultValue = "0.01") String minCI, @RequestParam(name = "maxDepth", defaultValue = "1") String maxDepth) {
-        List<Cooperater> cooperaters = scholarCooperateService.getCooperaterById(scholarId);
+        List<Cooperater> cooperaters = scholarCooperateService.getCooperaterCountById(scholarId);
         Scholar scholar = scholarInfoService.getScholarById(scholarId);
 
         List<String> visitedNodes = new ArrayList<String>();

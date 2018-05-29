@@ -1124,6 +1124,405 @@ public class HbaseTest {
         }
     }
 
+    @Test // potential排名
+    public void setPotentialTest() {
+        List<Scholar> scholars = new ArrayList<Scholar>();
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential data/potential/hebing1.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential data/potential/hebing2.csv");
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential data/potential/hebing3.csv");
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        try {
+            while ((line = br.readLine()) != null)
+            {
+//                System.out.println(line);
+                Scholar scholar = new Scholar();
+                if (line.split("\"").length > 1){
+                    String[] lines = line.split("\"");
+//                    System.out.println(lines[0]);
+                    String[] lines1 = lines[0].split(",");
+                    String[] lines2 = lines[2].split(",");
+//                    System.out.println(lines2[1]);
+                    scholar.setIndex(lines1[0]);
+                    scholar.setName(lines1[1]);
+                    scholar.setAff(lines[1]);
+//                    System.out.println(lines2.length);
+                    if (lines2.length == 5){
+                        scholar.setQindex(Double.parseDouble(lines2[2]));
+                        scholar.setHindex(Double.parseDouble(lines2[3]));
+                        scholar.setFieldName(lines2[4]);
+                    }
+                    else {
+                        scholar.setQindex(Double.parseDouble(lines2[2]));
+                        scholar.setHindex(Double.parseDouble(lines2[3]));
+                    }
+
+                }
+                else {
+
+                    String[] lines = line.split(",");
+//                    System.out.println(lines.length);
+                    if (lines.length == 8){
+                        scholar.setIndex(lines[0]);
+                        scholar.setName(lines[1]);
+                        scholar.setAff(lines[3]);
+                        scholar.setQindex(Double.parseDouble(lines[5]));
+                        scholar.setHindex(Double.parseDouble(lines[6]));
+                        scholar.setFieldName(lines[7]);
+                    }
+                    else {
+                        scholar.setIndex(lines[0]);
+                        scholar.setName(lines[1]);
+                        scholar.setAff(lines[3]);
+                        scholar.setQindex(Double.parseDouble(lines[5]));
+                        scholar.setHindex(Double.parseDouble(lines[6]));
+                    }
+
+                }
+
+                scholars.add(scholar);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(scholars.size());
+        Collections.sort(scholars, new Comparator<Scholar>() {
+            public int compare(Scholar o1, Scholar o2) {
+                if (o1.getQindex() > o2.getQindex()) {
+                    return 1;
+                }
+                if (o1.getQindex() < o2.getQindex()) {
+                    return -1;
+                }
+                return 0;
+            }
+        });
+
+        List<Scholar> bottom100Scholars = new ArrayList<Scholar>();
+        for (int i = 0; i < 100; i++) {
+            bottom100Scholars.add(scholars.get(i));
+        }
+
+//        for (int i = 0; i < 100; i++) {
+//            System.out.println(bottom100Scholars.get(i).getQindex());
+//        }
+
+        Collections.sort(scholars, new Comparator<Scholar>() {
+            public int compare(Scholar o1, Scholar o2) {
+                if (o1.getQindex() > o2.getQindex()) {
+                    return -1;
+                }
+                if (o1.getQindex() < o2.getQindex()) {
+                    return 1;
+                }
+                return 0;
+            }
+        });
+
+        List<Scholar> top100Scholars = new ArrayList<Scholar>();
+        for (int i = 0; i < 100; i++) {
+            top100Scholars.add(scholars.get(i));
+        }
+
+//        for (int i = 0; i < 100; i++) {
+//            System.out.println(top100Scholars.get(i).getQindex());
+//        }
+
+
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_INEDX_3YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_INEDX_3YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_INEDX_5YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_INEDX_5YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_INEDX_10YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_INEDX_10YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+    }
+
+    @Test // potential growth排名
+    public void setPotentialGrowthTest() {
+        List<Scholar> scholars = new ArrayList<Scholar>();
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_growth/hebinggrowth1(1).csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_growth/hebinggrowth2(1).csv");
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_growth/hebinggrowth3(1).csv");
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        try {
+            while ((line = br.readLine()) != null)
+            {
+//                System.out.println(line);
+                Scholar scholar = new Scholar();
+                if (line.split("\"").length > 1){
+                    String[] lines = line.split("\"");
+//                    System.out.println(lines[0]);
+                    String[] lines1 = lines[0].split(",");
+                    String[] lines2 = lines[2].split(",");
+//                    System.out.println(lines2[1]);
+                    scholar.setIndex(lines1[0]);
+                    scholar.setName(lines1[1]);
+                    scholar.setAff(lines[1]);
+//                    System.out.println(lines2.length);
+                    scholar.setPotentialgrowth(Double.parseDouble(lines2[2]));
+                    scholar.setHindex(Double.parseDouble(lines2[3]));
+                    scholar.setFieldName(lines2[4]);
+                    scholar.setQindex(Double.parseDouble(lines2[5]));
+
+
+                }
+                else {
+
+                    String[] lines = line.split(",");
+//                    System.out.println(lines.length);
+                    scholar.setIndex(lines[0]);
+                    scholar.setName(lines[1]);
+                    scholar.setAff(lines[3]);
+                    scholar.setPotentialgrowth(Double.parseDouble(lines[5]));
+                    scholar.setHindex(Double.parseDouble(lines[6]));
+                    scholar.setFieldName(lines[7]);
+                    scholar.setQindex(Double.parseDouble(lines[8]));
+
+                }
+
+                scholars.add(scholar);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(scholars.size());
+        Collections.sort(scholars, new Comparator<Scholar>() {
+            public int compare(Scholar o1, Scholar o2) {
+                if (o1.getPotentialgrowth() > o2.getPotentialgrowth()) {
+                    return 1;
+                }
+                if (o1.getPotentialgrowth() < o2.getPotentialgrowth()) {
+                    return -1;
+                }
+                return 0;
+            }
+        });
+
+        List<Scholar> bottom100Scholars = new ArrayList<Scholar>();
+        for (int i = 0; i < 100; i++) {
+            bottom100Scholars.add(scholars.get(i));
+        }
+
+//        for (int i = 0; i < 100; i++) {
+//            System.out.println(bottom100Scholars.get(i).getQindex());
+//        }
+
+        Collections.sort(scholars, new Comparator<Scholar>() {
+            public int compare(Scholar o1, Scholar o2) {
+                if (o1.getPotentialgrowth() > o2.getPotentialgrowth()) {
+                    return -1;
+                }
+                if (o1.getPotentialgrowth() < o2.getPotentialgrowth()) {
+                    return 1;
+                }
+                return 0;
+            }
+        });
+
+        List<Scholar> top100Scholars = new ArrayList<Scholar>();
+        for (int i = 0; i < 100; i++) {
+            top100Scholars.add(scholars.get(i));
+        }
+
+//        for (int i = 0; i < 100; i++) {
+//            System.out.println(top100Scholars.get(i).getQindex());
+//        }
+
+
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_GROWTH_3YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_GROWTH_3YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_GROWTH_5YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_GROWTH_5YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_GROWTH_10YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_GROWTH_10YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+    }
+
+    @Test // potential academic排名
+    public void setPotentialAcaTest() {
+        List<Scholar> scholars = new ArrayList<Scholar>();
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_1_5_1.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_1_5_2.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_1_5_3.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_6_15_1.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_6_15_2.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_6_15_3.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_16_25_1.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_16_25_2.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_16_25_3.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_26_40_1.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_26_40_2.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_26_40_3.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_41_60_1.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_41_60_2.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_41_60_3.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_61_80_1.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_61_80_2.csv");
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_61_80_3.csv");
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        try {
+            while ((line = br.readLine()) != null)
+            {
+//                System.out.println(line);
+                Scholar scholar = new Scholar();
+                if (line.split("\"").length > 1){
+                    String[] lines = line.split("\"");
+//                    System.out.println(lines[0]);
+                    String[] lines1 = lines[0].split(",");
+                    String[] lines2 = lines[2].split(",");
+//                    System.out.println(lines2[1]);
+                    scholar.setIndex(lines1[0]);
+                    scholar.setName(lines1[1]);
+                    scholar.setAcademicage(Integer.parseInt(lines1[2]));
+                    scholar.setAff(lines[1]);
+//                    System.out.println(lines2.length);
+                    if (lines2.length == 5){
+                        scholar.setQindex(Double.parseDouble(lines2[2]));
+                        scholar.setHindex(Double.parseDouble(lines2[3]));
+                        scholar.setFieldName(lines2[4]);
+                    }
+                    else {
+                        scholar.setQindex(Double.parseDouble(lines2[2]));
+                        scholar.setHindex(Double.parseDouble(lines2[3]));
+                    }
+
+                }
+                else {
+
+                    String[] lines = line.split(",");
+//                    System.out.println(lines.length);
+                    if (lines.length == 8){
+                        scholar.setIndex(lines[0]);
+                        scholar.setName(lines[1]);
+                        scholar.setAcademicage(Integer.parseInt(lines[2]));
+                        scholar.setAff(lines[3]);
+                        scholar.setQindex(Double.parseDouble(lines[5]));
+                        scholar.setHindex(Double.parseDouble(lines[6]));
+                        scholar.setFieldName(lines[7]);
+                    }
+                    else {
+                        scholar.setIndex(lines[0]);
+                        scholar.setName(lines[1]);
+                        scholar.setAcademicage(Integer.parseInt(lines[2]));
+                        scholar.setAff(lines[3]);
+                        scholar.setQindex(Double.parseDouble(lines[5]));
+                        scholar.setHindex(Double.parseDouble(lines[6]));
+                    }
+
+                }
+
+                scholars.add(scholar);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(scholars.size());
+        Collections.sort(scholars, new Comparator<Scholar>() {
+            public int compare(Scholar o1, Scholar o2) {
+                if (o1.getQindex() > o2.getQindex()) {
+                    return 1;
+                }
+                if (o1.getQindex() < o2.getQindex()) {
+                    return -1;
+                }
+                return 0;
+            }
+        });
+
+        List<Scholar> bottom100Scholars = new ArrayList<Scholar>();
+        for (int i = 0; i < 100; i++) {
+            bottom100Scholars.add(scholars.get(i));
+        }
+
+//        for (int i = 0; i < 100; i++) {
+//            System.out.println(bottom100Scholars.get(i).getQindex());
+//        }
+
+        Collections.sort(scholars, new Comparator<Scholar>() {
+            public int compare(Scholar o1, Scholar o2) {
+                if (o1.getQindex() > o2.getQindex()) {
+                    return -1;
+                }
+                if (o1.getQindex() < o2.getQindex()) {
+                    return 1;
+                }
+                return 0;
+            }
+        });
+
+        List<Scholar> top100Scholars = new ArrayList<Scholar>();
+        for (int i = 0; i < 100; i++) {
+            top100Scholars.add(scholars.get(i));
+        }
+
+//        for (int i = 0; i < 100; i++) {
+//            System.out.println(top100Scholars.get(i).getQindex());
+//        }
+
+
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_1_5_3YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_1_5_3YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_1_5_5YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_1_5_5YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_1_5_10YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_1_5_10YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_6_15_3YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_6_15_3YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_6_15_5YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_6_15_5YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_6_15_10YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_6_15_10YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_16_25_3YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_16_25_3YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_16_25_5YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_16_25_5YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_16_25_10YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_16_25_10YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_26_40_3YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_26_40_3YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_26_40_5YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_26_40_5YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_26_40_10YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_26_40_10YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_41_60_3YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_41_60_3YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_41_60_5YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_41_60_5YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_41_60_10YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_41_60_10YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_61_80_3YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_61_80_3YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_61_80_5YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_61_80_5YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_61_80_10YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_ACA_61_80_10YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+    }
+
     @Test
     public void setStatisticalTest() {
         List<Scholar> scholars = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
@@ -1136,7 +1535,7 @@ public class HbaseTest {
                 String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
                 String qindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_Q_INDEX)));
                 String fieldName = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_FIELD_NAME)));
-                String cooperateNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_NUMBER)));
+                String cooperateNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_COOPERATE_NUMBER)));
 
                 if (StringUtils.isNotBlank(latlng)) {
                     scholar.setLatlng(latlng);
@@ -1154,7 +1553,7 @@ public class HbaseTest {
                     scholar.setFieldName(fieldName);
                 }
                 if (StringUtils.isNotBlank(cooperateNumber)) {
-                    scholar.setCoRefedNumber(Integer.parseInt(cooperateNumber));
+                    scholar.setCooperateNumber(Integer.parseInt(cooperateNumber));
                 }
                 return scholar;
             }
@@ -1162,10 +1561,10 @@ public class HbaseTest {
         System.out.println(scholars.size());
         Collections.sort(scholars, new Comparator<Scholar>() {
             public int compare(Scholar o1, Scholar o2) {
-                if (o1.getCoRefedNumber() > o2.getCoRefedNumber()) {
+                if (o1.getCooperateNumber() > o2.getCooperateNumber()) {
                     return 1;
                 }
-                if (o1.getCoRefedNumber() < o2.getCoRefedNumber()) {
+                if (o1.getCooperateNumber() < o2.getCooperateNumber()) {
                     return -1;
                 }
                 return 0;
@@ -1173,10 +1572,15 @@ public class HbaseTest {
         });
 
         List<Scholar> top100Scholars = new ArrayList<Scholar>();
+        List<Scholar> bottom100Scholars = new ArrayList<Scholar>();
         for (int i = 0; i < 100; i++) {
+            bottom100Scholars.add(scholars.get(i));
+        }
+        for (int i = scholars.size() - 1; i >= scholars.size() - 101; i--) {
             top100Scholars.add(scholars.get(i));
         }
-        jedisCluster.set(ConfigurationConstant.REDIS_CO_REFED_NUMBER_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_COOPERATE_NUMBER_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_COOPERATE_NUMBER_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
     }
 
     @Test
