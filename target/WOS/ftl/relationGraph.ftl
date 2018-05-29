@@ -145,9 +145,9 @@
                             <#if cooperateType?? && (cooperateType=='directCooperate' || cooperateType=='MVC')>
                                 width: link.coCount,
                             <#elseif teamType?? && (teamType=='weakTeam' || teamType=='middleTeam' || teamType=='strongTeam')>
-                                width: 1,
+                                width: 2,
                             <#elseif refType?? && (refType=='ref' || refType=='refed' || refType=='coRef' || refType=='coRefed')>
-                                width: 1,
+                                width: 2,
                             </#if>
                                 curveness: 0.2
 //                                opacity: link.coCount > 8? 1: 0.2

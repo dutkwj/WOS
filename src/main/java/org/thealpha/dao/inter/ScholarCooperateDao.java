@@ -12,6 +12,8 @@ import java.util.Map;
 public interface ScholarCooperateDao {
     public Map<String, String> getAllCooperateScholar();
     public List<Cooperater> getCooperatersById(String id);
+    public List<Cooperater> getCooperatersIntensityById(String id);
     public List<Cooperater> getMVCsById(String id);
     public List<YearCount> getCooperateYearCountsById(String id);
+    public List<Cooperater> getEveryYearCollaboratorsById(String id);
 }

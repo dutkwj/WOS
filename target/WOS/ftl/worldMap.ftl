@@ -22,7 +22,7 @@
             stroke-opacity: .5;
         }
         .land {
-            fill: #ccff66;
+            fill: #cccc00;
         }
         .boundary {
             fill: none;
@@ -31,7 +31,7 @@
         }
         .points circle {
             fill: #fff;
-            stroke: #ff99cc;
+            stroke: #ff0033;
             stroke-width: 2px;
         }
         .points text {
@@ -41,7 +41,7 @@
         }
         .route {
             fill: none;
-            stroke: #ff99cc;
+            stroke: #ff0033;
             stroke-width: 3px;
         }
     </style>

@@ -16,14 +16,13 @@ import org.springframework.data.hadoop.hbase.HbaseTemplate;
 import org.springframework.data.hadoop.hbase.RowMapper;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.thealpha.model.Scholar;
-import org.thealpha.model.ScholarWeight;
-import org.thealpha.model.User;
+import org.thealpha.model.*;
 import org.thealpha.util.ConfigurationConstant;
 import org.thealpha.util.HbaseUtils;
 import org.thealpha.util.ListTranscoder;
 import redis.clients.jedis.JedisCluster;
 
+import javax.annotation.Resource;
 import java.io.*;
 import java.util.*;
 
@@ -38,7 +37,7 @@ public class HbaseTest {
     @Autowired
     private HbaseTemplate hbaseTemplate;
 
-    @Autowired
+    @Resource
     private JedisCluster jedisCluster;
 
     @Test
@@ -130,7 +129,7 @@ public class HbaseTest {
     @Test
     public void testHTable() {
         Configuration conf = HBaseConfiguration.create();
-        conf.set("hbase.zookeeper.quorum", "10.1.0.188,10.1.0.187,10.1.16.122");
+        conf.set("hbase.zookeeper.quorum", "10.1.0.188,10.1.27.119,10.1.16.122");
         conf.set("hbase.zookeeper.property.clientPort", "2181");
         Get get = new Get(Bytes.toBytes("r3"));
         try {
@@ -218,7 +217,7 @@ public class HbaseTest {
         Connection connection = null;
         Table table = null;
         Configuration conf = HBaseConfiguration.create();
-        conf.set("hbase.zookeeper.quorum", "10.1.0.188,10.1.0.187,10.1.16.122");
+        conf.set("hbase.zookeeper.quorum", "10.1.0.188,10.1.27.119,10.1.16.122");
         conf.set("hbase.zookeeper.property.clientPort", "2181");
 
         List<Get> gets = new ArrayList<Get>();
@@ -498,7 +497,7 @@ public class HbaseTest {
     @Test
     public void importPaperRef() {
         HashMap<String, String> paperIdRefIds = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_cs_refed.csv");  // CSV文件路径
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_cs_ref.csv");  // CSV文件路径
         BufferedReader br = null;
         try
         {
@@ -536,7 +535,7 @@ public class HbaseTest {
             String paperId = (String) entry.getKey();
             String refIds = (String) entry.getValue();
             Put put = new Put(Bytes.toBytes(paperId));
-            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_REFERENCE), Bytes.toBytes(ConfigurationConstant.QF_REF_IDS), Bytes.toBytes(refIds));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_REFERENCE), Bytes.toBytes(ConfigurationConstant.QF_REFED_IDS), Bytes.toBytes(refIds));
             puts.add(put);
         }
         try {
@@ -552,7 +551,7 @@ public class HbaseTest {
     @Test
     public void importCoPaperRef() {
         HashMap<String, String> paperIdRefIds = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_cs_co_ref3.csv");  // CSV文件路径
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_cs_co_refed3.csv");  // CSV文件路径
         BufferedReader br = null;
         try
         {
@@ -590,7 +589,7 @@ public class HbaseTest {
             String paperId = (String) entry.getKey();
             String refIds = (String) entry.getValue();
             Put put = new Put(Bytes.toBytes(paperId));
-            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_REFERENCE), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_IDS), Bytes.toBytes(refIds));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_REFERENCE), Bytes.toBytes(ConfigurationConstant.QF_CO_REF_IDS), Bytes.toBytes(refIds));
             puts.add(put);
         }
         try {
@@ -966,7 +965,7 @@ public class HbaseTest {
     @Test
     public void importStudentTeacherTest() {
         Map<String, String> stuTeaMap = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/tea_stu/2010/cs_relation_2010_2.csv");  // CSV文件路径
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/tea_stu/1970/cs_relation_1970.csv");  // CSV文件路径
         BufferedReader br = null;
         try
         {
@@ -1081,7 +1080,7 @@ public class HbaseTest {
     @Test
     public void importStatisticalTest() {
         Map<String, String> map = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/statistical/cs_authorid_corefednumber.csv");
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/statistical/cs_authorid_studentsnumber.csv");
         BufferedReader br = null;
         try
         {
@@ -1113,7 +1112,7 @@ public class HbaseTest {
             String authorId = (String) entry.getKey();
             String value = (String) entry.getValue();
             Put put = new Put(Bytes.toBytes(authorId));
-            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_NUMBER), Bytes.toBytes(value));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_STUDENTS_NUMBER), Bytes.toBytes(value));
             puts.add(put);
         }
         try {
@@ -1194,7 +1193,7 @@ public class HbaseTest {
     @Test
     public void importScholarHindex() {
         HashMap<String, String> authorIdHindex = new HashMap<String, String>();
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/statistical/q_index.csv");  // CSV文件路径
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/statistical/h_index.csv");  // CSV文件路径
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(csv));
@@ -1226,7 +1225,7 @@ public class HbaseTest {
             String authorId = (String) entry.getKey();
             String hindex = (String) entry.getValue();
             Put put = new Put(Bytes.toBytes(authorId));
-            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_Q_INDEX), Bytes.toBytes(hindex));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX), Bytes.toBytes(hindex));
             puts.add(put);
         }
         try {
@@ -1344,4 +1343,428 @@ public class HbaseTest {
         }
     }
 
+//    导入学者与学者之间的合作强度
+    @Test
+    public void importCollaborationIntensity() {
+        HashMap<String, String> authorCoAuthorCount = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/zhanghuijie/cs_author_collaboration_intensity.csv");  // CSV文件路径
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+//                全部导入会出现内存不够用的情况,分批导入
+//                if (count <= 1000001) {
+//                    continue;
+//                }
+                String authorId = line.substring(0, line.indexOf(","));
+                String cooperateAuthors = line.substring(line.indexOf(",") + 1);
+                cooperateAuthors = cooperateAuthors.replaceAll("\"|\\[|\\]|'", "");
+                authorCoAuthorCount.put(authorId, cooperateAuthors);
+                System.out.println(count);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : authorCoAuthorCount.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String cooperateCounts = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_COOPERATE), Bytes.toBytes(ConfigurationConstant.QF_COLLABORATION_INTENSITY), Bytes.toBytes(cooperateCounts));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //    导入每年的合作者
+    @Test
+    public void importCollaboratorByYear() {
+        HashMap<String, String> authorCoAuthorYear = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/zhanghuijie/cs_author_time_coauthor3.csv");
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+                String authorId = line.substring(0, line.indexOf(","));
+                String cooperateAuthors = line.substring(line.indexOf(",") + 1);
+                cooperateAuthors = cooperateAuthors.replaceAll("\"|\\[|\\]|'", "");
+                authorCoAuthorYear.put(authorId, cooperateAuthors);
+                System.out.println(count);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : authorCoAuthorYear.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String collaboratorsYear = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_COOPERATE), Bytes.toBytes(ConfigurationConstant.QF_EVERY_YEAR_COLLABORATORS), Bytes.toBytes(collaboratorsYear));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+//    导入学者发表论文数量
+    @Test
+    public void importScholarPaperNumber() {
+        HashMap<String, String> authorPaperNumber = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/zhanghuijie/cs_author_paper_number.csv");
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+                String authorId = line.substring(0, line.indexOf(","));
+                String paperNumber = line.substring(line.indexOf(",") + 1);
+                authorPaperNumber.put(authorId, paperNumber);
+                System.out.println(count);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : authorPaperNumber.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String paperNumber = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_PAPERS), Bytes.toBytes(ConfigurationConstant.QF_PAPER_NUMBER), Bytes.toBytes(paperNumber));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_SCHOLAR));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //    导入学者每年合作者数量
+    @Test
+    public void importCollaboratorCountByYear() {
+        HashMap<String, String> authorCoNumberYear = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/zhanghuijie/cs_author_time_conumber.csv");
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+                String authorId = line.substring(0, line.indexOf(","));
+                String coNumber = line.substring(line.indexOf(",") + 1);
+                coNumber = coNumber.replaceAll("\"|\\[|\\]|'", "");
+                authorCoNumberYear.put(authorId, coNumber);
+                System.out.println(count);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : authorCoNumberYear.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String coNumber = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_COOPERATE), Bytes.toBytes(ConfigurationConstant.QF_EVERY_YEAR_CONUMBER), Bytes.toBytes(coNumber));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //    导入学者每年论文数量
+    @Test
+    public void importPaperNumberByYear() {
+        HashMap<String, String> authorPaperNumberYear = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/zhanghuijie/cs_author_time_paper_number.csv");
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+                String authorId = line.substring(0, line.indexOf(","));
+                String paperNumber = line.substring(line.indexOf(",") + 1);
+                paperNumber = paperNumber.replaceAll("\"|\\[|\\]|'", "");
+                authorPaperNumberYear.put(authorId, paperNumber);
+                System.out.println(count);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : authorPaperNumberYear.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String paperNumber = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_COOPERATE), Bytes.toBytes(ConfigurationConstant.QF_EVERY_YEAR_PAPERNUMBER), Bytes.toBytes(paperNumber));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+//    导入论文每年所引用的论文
+    @Test
+    public void importRefPapersByYear() {
+        HashMap<String, String> paperRefPapersYear = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/zhanghuijie/cs_paper_time_refed_papers.csv");
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+                String paperId = line.substring(0, line.indexOf(","));
+                String refPapers = line.substring(line.indexOf(",") + 1);
+                refPapers = refPapers.replaceAll("\"|\\[|\\]|'", "");
+                paperRefPapersYear.put(paperId, refPapers);
+                System.out.println(count);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : paperRefPapersYear.entrySet()) {
+            String paperId = (String) entry.getKey();
+            String refPapers = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(paperId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_REFERENCE), Bytes.toBytes(ConfigurationConstant.QF_EVERY_YEAR_REFED_IDS), Bytes.toBytes(refPapers));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_PAPER));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void importCoRefPapersDetail() {
+        HashMap<String, String> paperCoRefPapersDetail = new HashMap<String, String>();
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/zhanghuijie/cs_paper_co_refed_papers_detail.csv");
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                count += 1;
+                if (count <= 400001) {
+                    continue;
+                }
+                String paperId = line.substring(0, line.indexOf(","));
+                String coRefPapers = line.substring(line.indexOf(",") + 1);
+                coRefPapers = coRefPapers.replaceAll("\"|\\[|\\]|'", "");
+                paperCoRefPapersDetail.put(paperId, coRefPapers);
+                System.out.println(count);
+                if (count > 600000) {
+                    break;
+                }
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : paperCoRefPapersDetail.entrySet()) {
+            String paperId = (String) entry.getKey();
+            String coRefPapers = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(paperId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_REFERENCE), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_PAPERS_DETAIL), Bytes.toBytes(coRefPapers));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_PAPER));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void getEveryYearCollaboratorsById() {
+        String id = "62C8460C";
+        List<Cooperater> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new RowMapper<List<Cooperater>>() {
+            public List<Cooperater> mapRow(org.apache.hadoop.hbase.client.Result result, int i) throws Exception {
+                List<Cooperater> everyYearCollaboratorCountList = new ArrayList<Cooperater>();
+
+                String eveYearCollaborators = Bytes.toString(result.getValue(ConfigurationConstant.CF_COOPERATE.getBytes(), ConfigurationConstant.QF_EVERY_YEAR_COLLABORATORS.getBytes()));
+                if (StringUtils.isNotBlank(eveYearCollaborators)) {
+                    String[] eveYearCollaboratorList = eveYearCollaborators.split(", ");
+
+                    for (String eveYearCollaborator : eveYearCollaboratorList) {
+                        String year = eveYearCollaborator.substring(0, eveYearCollaborator.indexOf(":"));
+                        String collaborators = eveYearCollaborator.substring(eveYearCollaborator.indexOf(":") + 1);
+                        if (StringUtils.isNotBlank(collaborators)) {
+                            String[] collaboratorList = collaborators.split("\\.");
+                            for (String collaborator : collaboratorList) {
+                                Cooperater cooperater = new Cooperater();
+                                cooperater.setYear(year);
+                                if (collaborator.contains("(")) {
+                                    String collaboratorId = collaborator.substring(0, collaborator.indexOf("("));
+                                    String count = collaborator.substring(collaborator.indexOf("(") + 1, collaborator.indexOf(")"));
+                                    cooperater.setIndex(collaboratorId);
+                                    cooperater.setCount(Integer.parseInt(count));
+                                } else {
+                                    cooperater.setIndex(collaborator);
+                                    cooperater.setCount(1);
+                                }
+                                everyYearCollaboratorCountList.add(cooperater);
+                            }
+                        }
+                    }
+                }
+                return  everyYearCollaboratorCountList;
+            }
+        });
+
+        for (Cooperater c : result) {
+            System.out.println(c.getIndex() + " " + c.getCount() + " " + c.getYear());
+        }
+    }
 }

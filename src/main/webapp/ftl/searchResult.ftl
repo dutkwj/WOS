@@ -89,7 +89,7 @@
                                 '</div>' +
                                 '<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">' +
                                 '<div class="tm-media-text-container">' +
-                                '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/relationGraph/' + thisData[0][index] + '">' + thisData[1][index] + '</a></h3>' +
+                                '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/relationGraph/' + thisData[0][index] + '/directCooperate">' + thisData[1][index] + '</a></h3>' +
                                 '<p class="tm-media-description tm-gray-text-2">P-index:' + thisData[3][index] + ' | H-index:' + thisData[2][index] +
                                 '<br/>' +
                                 '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ' + thisData[4][index] + '<br/>' +

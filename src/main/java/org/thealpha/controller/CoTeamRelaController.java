@@ -10,7 +10,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.thealpha.model.*;
 import org.thealpha.service.ScholarCoTeamService;
 import org.thealpha.service.ScholarInfoService;
+import org.thealpha.util.ConfigurationConstant;
+import org.thealpha.util.ListTranscoder;
+import redis.clients.jedis.JedisCluster;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +27,9 @@ public class CoTeamRelaController {
 
     @Autowired
     private ScholarInfoService scholarInfoService;
+
+    @Resource
+    private JedisCluster jedisCluster;
 
     @RequestMapping("/coTeamRela/{scholarId}")
     public String getCoTeamMember(@PathVariable String scholarId, Model model) {
@@ -45,6 +52,10 @@ public class CoTeamRelaController {
     @RequestMapping("/teamJSON/{scholarId}/{teamType}")
     @ResponseBody
     public Graph getTeamJSON(@PathVariable String scholarId, @PathVariable String teamType) {
+        Graph g = (Graph) ListTranscoder.deserialize(jedisCluster.hget(ConfigurationConstant.REDIS_AUTHORID_TEAM_GRAPH.getBytes(), (scholarId + teamType).getBytes()));
+        if (g != null) {
+            return g;
+        }
         List<Cooperater> coTeamers = scholarCoTeamService.getCoTeamersById(scholarId);
         Scholar scholar = scholarInfoService.getScholarById(scholarId);
 
@@ -76,6 +87,7 @@ public class CoTeamRelaController {
         Graph graph = new Graph();
         graph.setNodes(nodes);
         graph.setLinks(links);
+        jedisCluster.hset(ConfigurationConstant.REDIS_AUTHORID_TEAM_GRAPH.getBytes(), (scholarId + teamType).getBytes(), ListTranscoder.serialize(graph));
         return graph;
     }
 

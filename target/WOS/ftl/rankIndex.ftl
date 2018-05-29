@@ -47,7 +47,7 @@
     <div class="menu" style="background:none">
         <ul style="font-size: 19px">
             <li style="background:none"><a href="/index" style="color:#ffffcc">Home</a></li>
-            <li style="background:none"><a href="http://marioloncarek.com" style="color:#ffffcc">Relationship</a>
+            <li style="background:none"><a href="#" style="color:#ffffcc">Relationship</a>
                 <ul>
                     <li><a href="#">Cooperate</a>
                         <ul>
@@ -87,6 +87,10 @@
             </li>
             <#--<li style="background:none"><a href="#" style="color:#ffffcc">API</a>-->
             <#--</li>-->
+            <li style="background:none"><a href="/login/index" style="color:#ffffcc;margin-left: 200%">Login</a>
+            </li>
+            <li style="background:none">    <a href="/register/index" style="color:#ffffcc;margin-left: 150%">Register</a>
+            </li>
         </ul>
     </div>
 </div>

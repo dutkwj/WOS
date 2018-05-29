@@ -5,9 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.thealpha.dao.inter.ScholarCooperateDao;
 import org.thealpha.dao.inter.ScholarInfoDao;
-import org.thealpha.model.Cooperater;
-import org.thealpha.model.Scholar;
-import org.thealpha.model.YearCount;
+import org.thealpha.model.*;
 
 import javax.annotation.Resource;
 import java.util.*;
@@ -29,7 +27,8 @@ public class ScholarCooperateService {
     }
 
     public List<Cooperater> getCooperaterById(String scholarId) {
-        List<Cooperater> cooperaterList = scholarCooperateDao.getCooperatersById(scholarId);
+//        List<Cooperater> cooperaterList = scholarCooperateDao.getCooperatersById(scholarId);
+        List<Cooperater> cooperaterList = scholarCooperateDao.getCooperatersIntensityById(scholarId);
         List<String> scholarIds = new ArrayList<String>();
         for (Cooperater cooperater : cooperaterList) {
             scholarIds.add(cooperater.getIndex());
@@ -122,5 +121,66 @@ public class ScholarCooperateService {
         return yearCounts;
     }
 
+//    根据学者id和合作强度得到合作者
+    public void getCollaboratorsByScholarIdAndCI(String scholarId, List<Cooperater> collaborators, List<String> visitedNodes, List<String> visitedEdges, List<Node> nodes, List<Link> links, double minCI, int depth, int maxDepth) {
+        if (CollectionUtils.isEmpty(collaborators)) {
+            return;
+        }
+        for (Cooperater collaborator : collaborators) {
+            if (!visitedNodes.contains(collaborator.getIndex()) && (collaborator.getIntensity() > minCI) && (depth < maxDepth)) {
+                visitedNodes.add(collaborator.getIndex());
+
+                Node node = new Node();
+                node.setId(collaborator.getIndex());
+                node.setName(collaborator.getName());
+                node.setSize(String.valueOf(collaborator.getIntensity()));
+                node.setQindex(collaborator.getQindex());
+                node.setHindex(collaborator.getHindex());
+                node.setAff(collaborator.getAff());
+                node.setStudyField(collaborator.getFieldName());
+                node.setColor("#CCFF66");
+                nodes.add(node);
+
+                List<Cooperater> subCollaborators = getCooperaterById(collaborator.getIndex());
+                getCollaboratorsByScholarIdAndCI(collaborator.getIndex(), subCollaborators, visitedNodes, visitedEdges, nodes, links, minCI, depth + 1, maxDepth);
+            }
+            if (!visitedEdges.contains(scholarId + ", " + collaborator.getIndex()) && (collaborator.getIntensity() > minCI) && (depth < maxDepth)) {
+                visitedEdges.add(scholarId + ", " + collaborator.getIndex());
+                Link link = new Link();
+                link.setSource(scholarId);
+                link.setTarget(collaborator.getIndex());
+                link.setIntensity(collaborator.getIntensity());
+                links.add(link);
+            }
+        }
+    }
+
+    public List<Cooperater> getEveryYearCollaboratorsById(String scholarId) {
+        List<Cooperater> cooperaterList = scholarCooperateDao.getEveryYearCollaboratorsById(scholarId);
+        List<String> scholarIds = new ArrayList<String>();
+        for (Cooperater cooperater : cooperaterList) {
+            scholarIds.add(cooperater.getIndex());
+        }
+        List<Scholar> scholarList = scholarInfoDao.getScholarsByIds(scholarIds);
+
+        Map<String, Scholar> scholarIdObjectMap = new HashMap<String, Scholar>();
+        for (Scholar scholar : scholarList) {
+            scholarIdObjectMap.put(scholar.getIndex(), scholar);
+        }
+        for (Cooperater cooperater : cooperaterList) {
+            cooperater.setName(scholarIdObjectMap.get(cooperater.getIndex()).getName());
+            cooperater.setHindex(scholarIdObjectMap.get(cooperater.getIndex()).getHindex());
+            cooperater.setQindex(scholarIdObjectMap.get(cooperater.getIndex()).getQindex());
+            cooperater.setAff(scholarIdObjectMap.get(cooperater.getIndex()).getAff());
+            cooperater.setLatlng(scholarIdObjectMap.get(cooperater.getIndex()).getLatlng());
+            cooperater.setLatitude(scholarIdObjectMap.get(cooperater.getIndex()).getLatitude());
+            cooperater.setLongitude(scholarIdObjectMap.get(cooperater.getIndex()).getLongitude());
+            cooperater.setFieldName(scholarIdObjectMap.get(cooperater.getIndex()).getFieldName());
+            cooperater.setCooperateNumber(scholarIdObjectMap.get(cooperater.getIndex()).getCooperateNumber());
+            cooperater.setCoTeamNumber(scholarIdObjectMap.get(cooperater.getIndex()).getCoTeamNumber());
+            cooperater.setStudentsNumber(scholarIdObjectMap.get(cooperater.getIndex()).getStudentsNumber());
+        }
+        return cooperaterList;
+    }
 
 }

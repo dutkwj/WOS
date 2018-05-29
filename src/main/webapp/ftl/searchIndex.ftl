@@ -47,7 +47,7 @@
     <div class="menu" style="background:none">
         <ul style="font-size: 19px">
             <li style="background:none"><a href="/index" style="color:#ffffcc">Home</a></li>
-            <li style="background:none"><a href="http://marioloncarek.com" style="color:#ffffcc">Relationship</a>
+            <li style="background:none"><a href="#" style="color:#ffffcc">Relationship</a>
                 <ul>
                     <li><a href="#">Cooperate</a>
                         <ul>
@@ -87,6 +87,10 @@
             </li>
             <#--<li style="background:none"><a href="#" style="color:#ffffcc">API</a>-->
             <#--</li>-->
+            <li style="background:none"><a href="/login/index" style="color:#ffffcc;margin-left: 200%">Login</a>
+            </li>
+            <li style="background:none">    <a href="/register/index" style="color:#ffffcc;margin-left: 150%">Register</a>
+            </li>
         </ul>
     </div>
 </div>
@@ -112,7 +116,7 @@
             </div>
 
             <div class="layui-form-item">
-                <label class="layui-form-label">p-index</label>
+                <label class="layui-form-label" style="width: 110px;text-align: left">p-index</label>
                 <div class="layui-input-inline" style="width: 50px;">
                     <input type="text" name="minQindex" placeholder="start" autocomplete="off" class="layui-input">
                 </div>
@@ -123,7 +127,7 @@
             </div>
 
             <div class="layui-form-item">
-                <label class="layui-form-label">h-index</label>
+                <label class="layui-form-label" style="width: 110px;text-align: left">h-index</label>
                 <div class="layui-input-inline" style="width: 50px;">
                     <input type="text" name="minHindex" placeholder="start" autocomplete="off" class="layui-input">
                 </div>
@@ -150,7 +154,7 @@
             <input type="hidden" id="scholarIds" name="scholarIds" value=""/>
             <div class="layui-form-item">
                 <label class="layui-form-label">sort</label>
-                <div class="layui-input-inline" style="width: 200px">
+                <div class="layui-input-inline" style="width: 240px">
                     <input type="radio" name="sortItem" value="q_index" title="p-index" checked="">
                     <input type="radio" name="sortItem" value="h_index" title="h-index">
                 </div>
