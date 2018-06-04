@@ -106,7 +106,7 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">rank</label>
                 <div class="layui-input-inline" style="width:22%;">
-                    <select id="sort_item" name="sortItem" lay-select lay-filter="sort_item1">
+                    <select id="sort_item" name="sortItem" lay-filter="sort_item1">
                         <option value="cooperator number">collaborator number</option>
                         <option value="team members">team number</option>
                         <option value="students number">students number</option>
@@ -152,15 +152,13 @@
         </form>
     </fieldset>
 </div>
+<script src="/layui/layui.js"></script>
 <script type="text/javascript">
     $(function(){
         layui.use('form', function () {
             var form = layui.form;
-            console.log('1111111');
             form.on("select(sort_item1)", function () {
-                console.log('2222222');
                 if (($('#sort_item').val() == 'potential index')||($('#sort_item').val() == 'potential index by growthrate')){
-                    console.log($('#sort_item').val());
                     $('#period_label').removeClass('layui-hide');
                     $('#period_select').removeClass('layui-hide');
                     $('#academicage_label').addClass('layui-hide');
@@ -179,6 +177,7 @@
                 }
             });
         });
+
     });
 
 

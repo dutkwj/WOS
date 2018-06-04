@@ -22,7 +22,7 @@
             stroke-opacity: .5;
         }
         .land {
-            fill: #cccc00;
+            fill: #CCFF66;
         }
         .boundary {
             fill: none;
