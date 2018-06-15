@@ -102,7 +102,6 @@ public class CooperateRelaController {
     public String cooperateGraph(@PathVariable String scholarId, @PathVariable String type, Model model) {
         model.addAttribute("cooperateType", type);
         model.addAttribute("scholarId", scholarId);
-//        return "cooperate";
         return "relationGraph";
     }
 
@@ -111,7 +110,6 @@ public class CooperateRelaController {
     public Graph getDirectCooperateJSON(@PathVariable String scholarId) {
         List<Cooperater> cooperaters = scholarCooperateService.getCooperaterCountById(scholarId);
             Scholar scholar = scholarInfoService.getScholarById(scholarId);
-
         Node midNode = new Node();
         midNode.setId(scholarId);
         midNode.setName(scholar.getName());

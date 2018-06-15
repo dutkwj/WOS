@@ -49,7 +49,6 @@
 </div>
 <div id="bigContainer" style="width: 75%;height: 100%;margin-left:2%;float: left">
 </div>
-
 <script type="text/javascript">
     if ("${type}" == "directCooperate") {
         $("#cooperate").addClass("open");
