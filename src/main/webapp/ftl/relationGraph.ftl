@@ -56,16 +56,16 @@
     URL = '/teamJSON/${scholarId!""}/middleTeam';
     <#elseif teamType?? && teamType=='strongTeam'>
     URL = '/teamJSON/${scholarId!""}/strongTeam';
-    <#elseif advisorType?? && advisorType=='tea_stu_main'>
-    URL = '/advisorJSON/${scholarId!""}/tea_stu_main';
-    <#elseif advisorType?? && advisorType=='influence'>
-    URL = '/advisorJSON/${scholarId!""}/influence';
     <#elseif advisorType?? && advisorType=='tree'>
     URL = '/advisorJSON/${scholarId!""}/tree';
     <#elseif advisorType?? && advisorType=='graph'>
     URL = '/advisorJSON/${scholarId!""}/graph';
+    <#elseif advisorType?? && advisorType=='reference'>
+    URL = '/advisorJSON/${scholarId!""}/reference';
     <#elseif advisorType?? && advisorType=='evalue'>
     URL = '/advisorJSON/${scholarId!""}/evalue';
+    <#elseif advisorType?? && advisorType=='student_number_year'>
+    URL = '/advisorJSON/${scholarId!""}/student_number_year';
     <#elseif refType?? && refType=='ref'>
     URL = '/refJSON/${scholarId!""}';
     <#elseif refType?? && refType=='refed'>
@@ -196,16 +196,16 @@
             URL = '/team/' + index + '/middleTeam';
         <#elseif teamType?? && teamType=='strongTeam'>
             URL = '/team/' + index + '/strongTeam';
-        <#elseif advisorType?? && advisorType=='tea_stu_main'>
-            URL = '/Advisor-advisee/' + index + '/tea_stu_main';
-        <#elseif advisorType?? && advisorType=='influence'>
-            URL = '/Advisor-advisee/' + index + '/influence';
         <#elseif advisorType?? && advisorType=='tree'>
             URL = '/Advisor-advisee/' + index + '/tree';
         <#elseif advisorType?? && advisorType=='graph'>
             URL = '/Advisor-advisee/' + index + '/graph';
+        <#elseif advisorType?? && advisorType=='reference'>
+            URL = '/Advisor-advisee/' + index + '/reference';
         <#elseif advisorType?? && advisorType=='evalue'>
             URL = '/Advisor-advisee/' + index + '/evalue';
+        <#elseif advisorType?? && advisorType=='student_number_year'>
+            URL = '/Advisor-advisee/' + index + '/student_number_year';
         <#elseif refType?? && refType=='ref'>
             URL = '/ref/' + index;
         <#elseif refType?? && refType=='refed'>

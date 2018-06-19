@@ -4,16 +4,18 @@ package org.thealpha.util;
  * Created by kangwenjie on 17-12-14.
  */
 public class ConfigurationConstant {
-//    cs_scholar, personal_info:(name, aff, lat_lng, h_index, field_name, cooperate_number, co_team_number, students_number, ref_number, refed_number, co_ref_number, co_refed_number), papers:(paper_ids)
+    //    cs_scholar, personal_info:(name, aff, lat_lng, h_index, field_name, cooperate_number, co_team_number, students_number, ref_number, refed_number, co_ref_number, co_refed_number), papers:(paper_ids,paper_year,paper_year_number)
     public static final String TABLE_CS_SCHOLAR = "cs_scholar";
     public static final String CF_PERSONAL_INFO = "personal_info";
     public static final String CF_PAPERS = "papers";
     public static final String QF_NAME = "name";
-    public static final String QF_AFF = "aff";
+    public static final String QF_AFF = "aff";//机构
     public static final String QF_PAPER_IDS = "paper_ids";
-    public static final String QF_LAT_LNG = "lat_lng";
-    public static final String QF_H_INDEX = "h_index";
-    public static final String QF_Q_INDEX = "q_index";
+    public static final String QF_PAPER_YEAR = "paper_year";
+    public static final String QF_PAPER_YEAR_NUMBER = "paper_year_number";
+    public static final String QF_LAT_LNG = "lat_lng";//经纬度
+    public static final String QF_H_INDEX = "h_index";//每篇论文至少被引了h次的h篇文章
+    public static final String QF_Q_INDEX = "q_index";//
     public static final String QF_FIELD_NAME = "field_name";
     public static final String QF_COOPERATE_NUMBER = "cooperate_number";
     public static final String QF_CO_TEAM_NUMBER = "co_team_number";
@@ -25,7 +27,8 @@ public class ConfigurationConstant {
 
 
 
-    //    cs_relationship, cooperate:(count, eve_year_count), co_team:(team_intension), teacher_student:(teacher, students)
+    //    cs_relationship, cooperate:(count, eve_year_count,first_cooperate_year), co_team:(team_intension),
+    // teacher_student:(teacher,students)
     public static final String TABLE_CS_RELATIONSHIP = "cs_relationship";
     public static final String CF_COOPERATE = "cooperate";
     public static final String CF_CO_TEAM = "co_team";
@@ -33,6 +36,7 @@ public class ConfigurationConstant {
     public static final String CF_REFERENCE = "reference";
     public static final String QF_COUNT = "count";
     public static final String QF_EVE_YEAR_COUNT = "eve_year_count";
+    public static final String QF_FIRST_COOPERATE_YEAR = "first_cooperate_year";
     public static final String QF_MVCS = "mvcs";
     public static final String QF_TEAM_INTENSION = "team_intension";
     public static final String QF_TEACHER = "tacher";
@@ -42,7 +46,7 @@ public class ConfigurationConstant {
     //    cs_paper, authors:(author_ids), reference:(ref_ids, refed_ids, co_ref_ids, co_refed_ids)
     public static final String TABLE_CS_PAPER = "cs_paper";
     public static final String CF_AUTHORS = "authors";
-//    paper表也有reference这个列族
+    //    paper表也有reference这个列族
 //    public static final String CF_REFERENCE = "reference";
     public static final String QF_AUTHOR_IDS = "author_ids";
     public static final String QF_REF_IDS = "ref_ids";
@@ -69,7 +73,7 @@ public class ConfigurationConstant {
     public static final String QF_WEIGHT = "weight";
 
 
-    public static final String ZK_QUORUM = "10.1.0.188,10.1.0.187,10.1.16.122";
+    public static final String ZK_QUORUM = "10.1.0.188,10.1.27.119,10.1.16.122";
     public static final String ZK_CLIENT_PORT = "2181";
 
     public static final String REDIS_ALL_SCHOLARS = "redis_all_scholars";

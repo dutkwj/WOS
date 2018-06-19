@@ -58,7 +58,7 @@ public class CooperateRelaController {
 
     }
 
-    @RequestMapping("/cooperate/{scholarId}/{type}")
+        @RequestMapping("/cooperate/{scholarId}/{type}")
     public String cooperateGraph(@PathVariable String scholarId, @PathVariable String type, Model model) {
         model.addAttribute("cooperateType", type);
         model.addAttribute("scholarId", scholarId);

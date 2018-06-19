@@ -14,6 +14,7 @@ import org.springframework.data.hadoop.hbase.RowMapper;
 import org.springframework.stereotype.Repository;
 import org.thealpha.dao.inter.ScholarCooperateDao;
 import org.thealpha.model.Cooperater;
+import org.thealpha.model.FirstCoYear;
 import org.thealpha.model.Scholar;
 import org.thealpha.model.YearCount;
 import org.thealpha.util.ConfigurationConstant;
@@ -139,6 +140,28 @@ public class ScholarCooperateDaoImpl implements ScholarCooperateDao{
                     }
                 }
                 return  cooperateYearCountList;
+            }
+        });
+        return result;
+    }
+    public List<FirstCoYear> getFirstCooperateYearById(String id) {
+        List<FirstCoYear> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new RowMapper<List<FirstCoYear>>() {
+            public List<FirstCoYear> mapRow(Result result, int i) throws Exception {
+                List<FirstCoYear> firstcooperateYearList = new ArrayList<FirstCoYear>();
+                String firstcooperateYear = Bytes.toString(result.getValue(ConfigurationConstant.CF_COOPERATE.getBytes(), ConfigurationConstant.QF_FIRST_COOPERATE_YEAR.getBytes()));
+                if (StringUtils.isNotBlank(firstcooperateYear)) {
+                    String[] FirstCoYear = firstcooperateYear.split(", ");
+                    for (String eve : FirstCoYear) {
+                        FirstCoYear firstCoYear = new FirstCoYear();
+                        int count = Integer.parseInt(eve.substring(eve.indexOf(":") + 1, eve.length()));
+                        if (count != 0) {
+                            firstCoYear.setCooperate(eve.substring(0, eve.indexOf(":")));
+                            firstCoYear.setYear(count);
+                            firstcooperateYearList.add(firstCoYear);
+                        }
+                    }
+                }
+                return  firstcooperateYearList;
             }
         });
         return result;

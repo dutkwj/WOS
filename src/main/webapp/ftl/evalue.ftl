@@ -18,12 +18,15 @@
 <script src="/js/d3.v4.min.js" charset="utf-8"></script>
 <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
 <div>
+
     <div id="eval" style="height: 80%; width: 60%; margin-left:20px; float: left;">
         <script type="text/javascript">
+
             var dom = document.getElementById("eval");
             var myChart = echarts.init(dom);
             d=[];
             d1=[];
+
             <#if evalue?? && (evalue?size>0)>
                 <#list evalue as evalues>
                 var v = [${evalues.hindex!}, ${evalues.cocount!}, ${evalues.refednum!},${evalues.papernum!}];
