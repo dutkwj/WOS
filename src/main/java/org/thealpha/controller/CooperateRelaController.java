@@ -110,7 +110,7 @@ public class CooperateRelaController {
     @ResponseBody
     public Graph getDirectCooperateJSON(@PathVariable String scholarId) {
         List<Cooperater> cooperaters = scholarCooperateService.getCooperaterCountById(scholarId);
-            Scholar scholar = scholarInfoService.getScholarById(scholarId);
+        Scholar scholar = scholarInfoService.getScholarById(scholarId);
 
         Node midNode = new Node();
         midNode.setId(scholarId);

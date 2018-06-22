@@ -20,6 +20,15 @@ public class Cooperater implements Serializable{
     private int cooperateNumber;
     private int coTeamNumber;
     private int studentsNumber;
+    private String cooperate;
+    public String getCooperate(){
+        return cooperate;
+    }
+    public void setCooperate(String cooperate){
+        this.cooperate=cooperate;
+    }
+
+
     private List<Cooperater> subCooperaters;
 //    合作强度
     private double intensity;

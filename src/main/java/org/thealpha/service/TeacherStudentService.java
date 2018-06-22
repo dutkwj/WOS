@@ -4,9 +4,11 @@ import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.thealpha.dao.inter.ScholarCooperateDao;
 import org.thealpha.dao.inter.ScholarInfoDao;
 import org.thealpha.dao.inter.TeacherStudentDao;
 import org.thealpha.model.Cooperater;
+import org.thealpha.model.FirstCoYear;
 import org.thealpha.model.Scholar;
 
 import java.util.ArrayList;
@@ -26,6 +28,9 @@ public class TeacherStudentService {
     @Autowired
     private ScholarInfoDao scholarInfoDao;
 
+    @Autowired
+    private ScholarCooperateDao scholarCooperateDao;
+
     public List<Scholar> getStudentsByTeacherId(String teacherId) {
         List<String> studentIds = teacherStudentDao.getStudentsByTeacherId(teacherId);
         if (CollectionUtils.isNotEmpty(studentIds)) {
@@ -40,6 +45,16 @@ public class TeacherStudentService {
             return scholarInfoDao.getScholarById(teacherId);
         }
         return null;
+    }
+    public List<FirstCoYear> getFirstCooperateYearById(String scholarId) {
+        List<FirstCoYear> firstCoList = scholarCooperateDao.getFirstCooperateYearById(scholarId);
+       /* for (FirstCoYear firstCoYear: firstCoList) {
+            String cooperate = firstCoYear.getCooperate();
+            int year = firstCoYear.getYear();
+        }*/
+
+
+        return firstCoList;
     }
     public List<Cooperater> getCooperaterById(String scholarId) {
         List<Cooperater> cooperaterList = teacherStudentDao.getCooperatersById(scholarId);

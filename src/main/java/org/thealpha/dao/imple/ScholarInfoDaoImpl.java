@@ -15,6 +15,7 @@ import org.springframework.data.hadoop.hbase.HbaseTemplate;
 import org.springframework.data.hadoop.hbase.RowMapper;
 import org.springframework.stereotype.Repository;
 import org.thealpha.dao.inter.ScholarInfoDao;
+import org.thealpha.model.Paper;
 import org.thealpha.model.Scholar;
 import org.thealpha.model.SearchItem;
 import org.thealpha.util.ConfigurationConstant;
@@ -179,6 +180,7 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
         return scholarList;
     }
 
+
     public Scholar getScholarById(final String scholarId) {
         Scholar result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_SCHOLAR, scholarId, new RowMapper<Scholar>() {
             public Scholar mapRow(Result result, int rowNum) throws Exception {
@@ -196,7 +198,6 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 String refedNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_REFED_NUMBER)));
                 String coRefNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REF_NUMBER)));
                 String coRefedNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_NUMBER)));
-
                 scholar.setIndex(scholarId);
                 scholar.setName(name);
                 scholar.setAff(aff);

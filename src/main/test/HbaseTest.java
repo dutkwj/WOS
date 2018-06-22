@@ -126,19 +126,19 @@ public class HbaseTest {
 
     }
 
+
     @Test
     public void testHTable() {
         Configuration conf = HBaseConfiguration.create();
         conf.set("hbase.zookeeper.quorum", "10.1.0.188,10.1.27.119,10.1.16.122");
         conf.set("hbase.zookeeper.property.clientPort", "2181");
-        Get get = new Get(Bytes.toBytes("r3"));
+        Get get = new Get(Bytes.toBytes("0CAEADF8"));
         try {
-            HTable table = new HTable(conf, Bytes.toBytes("testTable3"));
+            HTable table = new HTable(conf, Bytes.toBytes(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
             org.apache.hadoop.hbase.client.Result result = table.get(get);
             for (KeyValue kv : result.list()) {
                 System.out.println("family:" + Bytes.toString(kv.getFamily()));
-                System.out
-                        .println("qualifier:" + Bytes.toString(kv.getQualifier()));
+                System.out.println("qualifier:" + Bytes.toString(kv.getQualifier()));
                 System.out.println("value:" + Bytes.toString(kv.getValue()));
                 System.out.println("Timestamp:" + kv.getTimestamp());
                 System.out.println("-------------------------------------------");

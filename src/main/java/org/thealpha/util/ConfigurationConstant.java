@@ -9,11 +9,13 @@ public class ConfigurationConstant {
     public static final String CF_PERSONAL_INFO = "personal_info";
     public static final String CF_PAPERS = "papers";
     public static final String QF_NAME = "name";
-    public static final String QF_AFF = "aff";
+    public static final String QF_AFF = "aff";//机构
     public static final String QF_PAPER_IDS = "paper_ids";
-    public static final String QF_LAT_LNG = "lat_lng";
-    public static final String QF_H_INDEX = "h_index";
-    public static final String QF_Q_INDEX = "q_index";
+    public static final String QF_PAPER_YEAR = "paper_year";
+    public static final String QF_PAPER_YEAR_NUMBER = "paper_year_number";
+    public static final String QF_LAT_LNG = "lat_lng";//经纬度
+    public static final String QF_H_INDEX = "h_index";//每篇论文至少被引了h次的h篇文章
+    public static final String QF_Q_INDEX = "q_index";//
     public static final String QF_FIELD_NAME = "field_name";
     public static final String QF_PAPER_NUMBER = "paper_number";
     public static final String QF_COOPERATE_NUMBER = "cooperate_number";
@@ -38,6 +40,7 @@ public class ConfigurationConstant {
     public static final String QF_EVERY_YEAR_CONUMBER = "every_year_conumber";
     public static final String QF_EVERY_YEAR_PAPERNUMBER = "every_year_papernumber";
     public static final String QF_EVE_YEAR_COUNT = "eve_year_count";
+    public static final String QF_FIRST_COOPERATE_YEAR = "first_cooperate_year";
     public static final String QF_MVCS = "mvcs";
     public static final String QF_TEAM_INTENSION = "team_intension";
     public static final String QF_TEACHER = "tacher";
@@ -47,7 +50,7 @@ public class ConfigurationConstant {
     //    cs_paper, authors:(author_ids), reference:(ref_ids, every_year_ref_ids, refed_ids, every_year_refed_ids, co_ref_ids, co_refed_ids)
     public static final String TABLE_CS_PAPER = "cs_paper";
     public static final String CF_AUTHORS = "authors";
-//    paper表也有reference这个列族
+    //    paper表也有reference这个列族
 //    public static final String CF_REFERENCE = "reference";
     public static final String QF_AUTHOR_IDS = "author_ids";
     public static final String QF_REF_IDS = "ref_ids";
