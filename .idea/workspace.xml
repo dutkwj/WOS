@@ -1,123 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/webapp/ftl/evalue.ftl" line="107" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="291e2776-134e-423c-b7f9-68e37a8618e2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater_teastu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/FirstCoYear.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/FirstCoYearCount.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Teacher_0.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Teacher_1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Teacher_2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Teacher_3.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap_feedback.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/style_feedback.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/1.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/11.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/g1.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/g2.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/g3.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/graph_last.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/influence.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/line.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/ll.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/new.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/tea_stu.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/tea_stu_main.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/treebeifen.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/wang.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/yingxiang.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/1.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/11.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/cc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/g1.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/g2.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/g3.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/graph.true.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/graph_last.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/influence.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/line.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/ll.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/new.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/tea_stu.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/tea_stu_main.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/treebeifen.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/wang.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/yingxiang.ftl" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/cc" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/student_number_year.ftl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/graph.true.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/reference.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/TeacherStudentController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/TeacherStudentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$12.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$13.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$14.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$15.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$16.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$17.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$18.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/register2.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/ftl/register2.ftl" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Category.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Category.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Category.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS.war" afterPath="$PROJECT_DIR$/target/WOS.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CoTeamRelaController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CoTeamRelaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CooperateRelaController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CooperateRelaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/HdfsController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/HdfsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/IndexController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/ScholarController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/ScholarController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/StatisticalRankingsController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/StatisticalRankingsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/WorldMapController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/WorldMapController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$4.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Cooperater.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Cooperater.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Links_new.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Links_new.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarInfoService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarInfoService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/TeacherStudentService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/TeacherStudentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Graph.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Graph.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Link.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Link.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Node.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Node.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Scholar.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Scholar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/RankService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/RankService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCooperateService$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCooperateService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCooperateService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCooperateService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ConfigurationConstant.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ConfigurationConstant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/HbaseUtils.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/HbaseUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/TeacherStudentController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/TeacherStudentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ListTranscoder.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ListTranscoder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/CoTeamRelaController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/CoTeamRelaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/CooperateRelaController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/CooperateRelaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/HdfsController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/HdfsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/IndexController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/ScholarController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/ScholarController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/StatisticalRankingsController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/StatisticalRankingsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/WorldMapController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/WorldMapController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$4.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Cooperater.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Cooperater.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Links_new.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Links_new.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarInfoService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarInfoService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/TeacherStudentService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/TeacherStudentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Graph.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Graph.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Link.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Link.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Node.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Node.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Scholar.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Scholar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/RankService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/RankService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/util/ConfigurationConstant.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/ConfigurationConstant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/util/HbaseUtils.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/HbaseUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/util/ListTranscoder.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/ListTranscoder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$1.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$10.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$11.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$2.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$3.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$4.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$5.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$6.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$7.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$8.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$9.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Test.class" afterPath="$PROJECT_DIR$/target/test-classes/Test.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WOS.iml" afterPath="$PROJECT_DIR$/WOS.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/TeacherStudentController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/TeacherStudentController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/PaperDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/PaperDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/IndexController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/ScholarController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/ScholarController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Links_new.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Links_new.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarInfoService.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarInfoService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/service/TeacherStudentService.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/service/TeacherStudentService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Graph.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Graph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Link.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Link.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Node.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Node.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Scholar.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Scholar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/service/RankService.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/service/RankService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/redis/redis-config.properties" afterPath="$PROJECT_DIR$/src/main/resources/redis/redis-config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-servlet.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-servlet.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/HbaseTest.java" afterPath="$PROJECT_DIR$/src/main/test/HbaseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.New.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.New.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/evalue.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/evalue.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/graph.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/graph.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/tree.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/tree.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/searchResult.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/searchResult.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/worldMap.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/worldMap.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/WOS/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/redis/redis-config.properties" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/redis/redis-config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/spring-servlet.xml" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/spring-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/css/style.New.css" afterPath="$PROJECT_DIR$/target/WOS/css/style.New.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/evalue.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/evalue.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/graph.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/graph.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/home.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/home.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/leftNav.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/leftNav.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/rankIndex.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/rankIndex.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/relationGraph.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/relationGraph.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/tree.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/tree.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/redis/redis-config.properties" afterPath="$PROJECT_DIR$/target/classes/redis/redis-config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-servlet.xml" afterPath="$PROJECT_DIR$/target/classes/spring-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/scholarRank.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/scholarRank.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/searchIndex.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/searchIndex.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/searchResult.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/searchResult.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/worldMap.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/worldMap.ftl" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -131,73 +129,28 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DatabaseView">
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="WOS" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HbaseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/HbaseTest.java">
+      <file leaf-file-name="relationGraph.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="135" column="13" lean-forward="true" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2057#2315#0" expanded="true" />
-                <element signature="e#2314#2315#0" expanded="true" />
-                <element signature="e#4888#5149#0" expanded="true" />
-                <element signature="e#5148#5149#0" expanded="true" />
-                <element signature="e#37419#37711#0" expanded="true" />
-                <element signature="e#37710#37711#0" expanded="true" />
-                <element signature="e#49543#49745#0" expanded="true" />
-                <element signature="e#49744#49745#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CoTeamRelaController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+            <state relative-caret-position="1107">
+              <caret line="94" column="38" lean-forward="false" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HbaseTemplate.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-hadoop-hbase/2.4.0.RELEASE/spring-data-hadoop-hbase-2.4.0.RELEASE.jar!/org/springframework/data/hadoop/hbase/HbaseTemplate.class">
+      <file leaf-file-name="leftNav.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="154" column="60" lean-forward="true" selection-start-line="154" selection-start-column="60" selection-end-line="154" selection-end-column="60" />
-              <folding>
-                <element signature="e#6491#6492#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScholarCooperateDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="44" column="50" lean-forward="false" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3689#4643#0" expanded="true" />
-                <element signature="e#3872#3884#0" expanded="true" />
-                <element signature="e#4642#4643#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="279">
+              <caret line="60" column="61" lean-forward="true" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -205,20 +158,68 @@
       <file leaf-file-name="CooperateRelaController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="118" column="92" lean-forward="true" selection-start-line="118" selection-start-column="92" selection-end-line="118" selection-end-column="92" />
+            <state relative-caret-position="1027">
+              <caret line="76" column="25" lean-forward="true" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4720#4726#0" expanded="true" />
+                <element signature="e#4798#4804#0" expanded="true" />
+                <element signature="e#6405#6413#0" expanded="true" />
+                <element signature="e#6466#6474#0" expanded="true" />
+                <element signature="e#6892#6898#0" expanded="true" />
+                <element signature="e#7041#7047#0" expanded="true" />
+                <element signature="e#10853#10861#0" expanded="true" />
+                <element signature="e#10914#10922#0" expanded="true" />
+                <element signature="e#11340#11346#0" expanded="true" />
+                <element signature="e#11455#11461#0" expanded="true" />
+                <element signature="e#12215#12221#0" expanded="true" />
+                <element signature="e#12667#12673#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <file leaf-file-name="searchIndex.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="202">
+              <caret line="173" column="6" lean-forward="true" selection-start-line="173" selection-start-column="6" selection-end-line="173" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searchResult.ftl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchResult.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-226">
+              <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+              <folding>
+                <marker date="1529399422494" expanded="true" signature="3356:3391" ph="..." />
+                <marker date="1529399422494" expanded="true" signature="3754:3764" ph="..." />
+                <marker date="1529399422494" expanded="true" signature="4125:4146" ph="..." />
+                <marker date="1529399422494" expanded="true" signature="4548:4554" ph="&amp;nbsp;" />
+                <marker date="1529399422494" expanded="true" signature="4700:4706" ph="&amp;nbsp;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScholarController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/ScholarController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -226,114 +227,33 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getRefAuthorsByAuthorId</find>
-      <find>console</find>
-      <find>cs_paper</find>
-      <find>getPap</find>
-      <find>rowNum</find>
-      <find>result</find>
-      <find>hbaseTemplate</find>
-      <find>paperDao</find>
-      <find>QF_EVE_YEAR_COUNT</find>
-      <find>YearCount</find>
-      <find>10.1.0.187</find>
-      <find>2001</find>
-      <find>col-md-6 mail-grid-right</find>
-      <find>mail-grid-right1 agile-22</find>
-      <find>contact</find>
-      <find>all</find>
-      <find>studentList</find>
-      <find>influ</find>
-      <find>fee</find>
-      <find>classpath</find>
-      <find>applicationContext</find>
-      <find>directCooperate</find>
-      <find>cooperate</find>
-      <find>relationGraph</find>
-      <find>Model</find>
-      <find>directCooperateJSON</find>
       <find>get</find>
-      <find>CF_COOPERATE</find>
-      <find>create</find>
-      <find>getConf</find>
+      <find>getRow</find>
+      <find>scan</find>
+      <find>relationship</find>
+      <find>scholarName</find>
+      <find>type</find>
+      <find>name</find>
+      <find>result</find>
     </findStrings>
-    <replaceStrings>
-      <replace>10.1.16.122</replace>
-      <replace>10.1.27.119</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/RankService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/bar.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/graph.New.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/treebeifen.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/scholarInfo.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/searchResult.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/bootstrap.New.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/influence.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/tea_stu_main.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/style.New.css" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Teacher_0.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Teacher_1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Teacher_2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Teacher_3.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/graph.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/ReferenceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/A.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/AA.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/reference.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarInfoDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarInfoService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/PaperDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Links_new.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/redis/redis-config.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/TeacherStudentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/FirstCoYear.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/FirstCoYearCount.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/feedback.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/evalue.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater_teastu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/TeacherStudentController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/tree.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/1.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/line.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/ll.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/RecommendService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/TeacherStudentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/test/HbaseTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" />
       </list>
     </option>
   </component>
@@ -421,6 +341,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ftl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -478,6 +446,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -545,20 +517,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WOS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WOS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -567,91 +525,7 @@
       <pane id="AndroidView" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="js.eslint.eslintPackage" value="" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.thealpha.model" />
-      <recent name="org.thealpha.controller" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/css" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/ftl" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/js" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JUnit.HbaseTest.testHTable">
-    <configuration default="false" name="HbaseTest.getHighHindexScholar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="WOS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="HbaseTest" />
-      <option name="METHOD_NAME" value="getHighHindexScholar" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="HbaseTest.testAff" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="WOS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="HbaseTest" />
-      <option name="METHOD_NAME" value="testAff" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="HbaseTest.isEmailExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="WOS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="HbaseTest" />
-      <option name="METHOD_NAME" value="isEmailExist" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Tomcat Server.tomcat">
     <configuration default="false" name="HbaseTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="WOS" />
@@ -673,6 +547,27 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="false" name="HbaseTest.testTempldate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="WOS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HbaseTest" />
+      <option name="METHOD_NAME" value="testTempldate" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
     <configuration default="false" name="HbaseTest.testHTable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="WOS" />
@@ -681,6 +576,27 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HbaseTest" />
       <option name="METHOD_NAME" value="testHTable" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="HbaseTest.getRowkey" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="WOS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HbaseTest" />
+      <option name="METHOD_NAME" value="getRowkey" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -942,7 +858,6 @@
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
-      <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1064,12 +979,6 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -1085,17 +994,17 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="tomcat8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.16" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
-      <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
+    <configuration default="false" name="tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.16" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="WOS:war exploded">
+        <artifact name="WOS:war">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_WOS" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_WOS_3" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -1104,7 +1013,7 @@
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="45225" />
+        <option name="DEBUG_PORT" value="42425" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -1153,32 +1062,25 @@
       </ConfigurationWrapper>
       <method>
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="WOS:war exploded" />
+          <artifact name="WOS:war" />
         </option>
       </method>
     </configuration>
-    <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcat8" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.HbaseTest.getHighHindexScholar" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.HbaseTest.testAff" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.HbaseTest.isEmailExist" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.HbaseTest.test" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.HbaseTest.testHTable" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcat" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.HbaseTest.test" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.HbaseTest.testTempldate" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.HbaseTest.testHTable" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.HbaseTest.getRowkey" />
     </list>
     <recent_temporary>
-      <list size="5">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="JUnit.HbaseTest.testHTable" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.HbaseTest.test" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.HbaseTest.isEmailExist" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.HbaseTest.testAff" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.HbaseTest.getHighHindexScholar" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.HbaseTest.testTempldate" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.HbaseTest.getRowkey" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.HbaseTest.test" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SbtLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -1250,44 +1152,44 @@
       <workItem from="1529022983819" duration="758000" />
       <workItem from="1529027990783" duration="435000" />
       <workItem from="1529196308358" duration="5287000" />
-      <workItem from="1529202945841" duration="18522000" />
+      <workItem from="1529202945841" duration="29457000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HbaseTest_isEmailExist - 2018.06.19 at 16h 37m 26s.xml">
-      <configuration name="HbaseTest.isEmailExist" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HbaseTest_test - 2018.06.19 at 16h 47m 32s.xml">
-      <configuration name="HbaseTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HbaseTest_test - 2018.06.19 at 16h 58m 58s.xml">
-      <configuration name="HbaseTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HbaseTest_test - 2018.06.19 at 16h 59m 30s.xml">
-      <configuration name="HbaseTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HbaseTest_test - 2018.06.19 at 17h 01m 28s.xml">
-      <configuration name="HbaseTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HbaseTest_test - 2018.06.19 at 17h 02m 19s.xml">
-      <configuration name="HbaseTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HbaseTest_testAff - 2018.06.19 at 16h 35m 41s.xml">
-      <configuration name="HbaseTest.testAff" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HbaseTest_testHTable - 2018.06.19 at 17h 04m 53s.xml">
+    <history-entry file="HbaseTest_testHTable - 2018.06.19 at 18h 36m 21s.xml">
       <configuration name="HbaseTest.testHTable" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_testHTable - 2018.06.19 at 17h 05m 33s.xml">
+    <history-entry file="HbaseTest_testHTable - 2018.06.19 at 18h 36m 23s.xml">
       <configuration name="HbaseTest.testHTable" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_testHTable - 2018.06.19 at 17h 06m 27s.xml">
+    <history-entry file="HbaseTest_testHTable - 2018.06.19 at 18h 36m 49s.xml">
       <configuration name="HbaseTest.testHTable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HbaseTest_testHTable - 2018.06.19 at 18h 37m 17s.xml">
+      <configuration name="HbaseTest.testHTable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HbaseTest_testHTable - 2018.06.19 at 18h 38m 55s.xml">
+      <configuration name="HbaseTest.testHTable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HbaseTest_testHTable - 2018.06.19 at 19h 12m 38s.xml">
+      <configuration name="HbaseTest.testHTable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HbaseTest_testHTable - 2018.06.19 at 19h 14m 16s.xml">
+      <configuration name="HbaseTest.testHTable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HbaseTest_testTempldate - 2018.06.19 at 18h 35m 59s.xml">
+      <configuration name="HbaseTest.testTempldate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HbaseTest_testTempldate - 2018.06.19 at 18h 37m 05s.xml">
+      <configuration name="HbaseTest.testTempldate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HbaseTest_testTempldate - 2018.06.19 at 18h 38m 16s.xml">
+      <configuration name="HbaseTest.testTempldate" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1422821000" />
+    <option name="totallyTimeSpent" value="1433756000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1300,7 +1202,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1920" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1322,10 +1224,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882413" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.03746098" sideWeight="0.6315229" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17273673" sideWeight="0.6315229" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882413" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21192758" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21192758" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35171697" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1359,29 +1261,12 @@
       </map>
     </option>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java</url>
-          <line>64</line>
-          <properties />
-          <option name="timeStamp" value="388" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/ScholarController.java</url>
-          <line>24</line>
-          <properties />
-          <option name="timeStamp" value="389" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="393" />
+      <option name="time" value="396" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1394,158 +1279,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/ModifyPswController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/InforController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/io/Serializable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/CountryName.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/freemarker.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="36">
-            <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WOS.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Scholar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="44" column="27" lean-forward="false" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/evalue.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/RecommendService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCoTeamDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="62" column="42" lean-forward="false" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/TeacherStudentDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="54" column="8" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
-          <folding>
-            <element signature="e#2348#3302#0" expanded="false" />
-            <element signature="e#3301#3302#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/util/ListTranscoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/util/JedisClusterFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hbase/hbase-client/1.0.0/hbase-client-1.0.0.jar!/org/apache/hadoop/hbase/client/Result.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1585,14 +1318,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1652,26 +1377,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-hadoop-hbase/2.4.0.RELEASE/spring-data-hadoop-hbase-2.4.0.RELEASE.jar!/org/springframework/data/hadoop/hbase/RowMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="68" lean-forward="true" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/ScholarController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1684,53 +1393,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="33" column="54" lean-forward="true" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
-          <folding>
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="88" column="21" lean-forward="true" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hbase/hbase-client/1.0.0/hbase-client-1.0.0.jar!/org/apache/hadoop/hbase/client/Connection.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="58" lean-forward="true" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="38" column="37" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1743,165 +1409,343 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarInfoDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="378">
+          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarInfoService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/RegisterDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state relative-caret-position="90">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-hadoop-hbase/2.4.0.RELEASE/spring-data-hadoop-hbase-2.4.0.RELEASE.jar!/org/springframework/data/hadoop/hbase/HbaseTemplate.class">
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/io/Serializable.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="154" column="60" lean-forward="true" selection-start-line="154" selection-start-column="60" selection-end-line="154" selection-end-column="60" />
-          <folding>
-            <element signature="e#6491#6492#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="44" column="50" lean-forward="false" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3689#4643#0" expanded="true" />
-            <element signature="e#3872#3884#0" expanded="true" />
-            <element signature="e#4642#4643#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/HbaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="135" column="13" lean-forward="true" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2057#2315#0" expanded="true" />
-            <element signature="e#2314#2315#0" expanded="true" />
-            <element signature="e#4888#5149#0" expanded="true" />
-            <element signature="e#5148#5149#0" expanded="true" />
-            <element signature="e#37419#37711#0" expanded="true" />
-            <element signature="e#37710#37711#0" expanded="true" />
-            <element signature="e#49543#49745#0" expanded="true" />
-            <element signature="e#49744#49745#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        <state relative-caret-position="72">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/TeacherStudentService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="118" column="92" lean-forward="true" selection-start-line="118" selection-start-column="92" selection-end-line="118" selection-end-column="92" />
+        <state relative-caret-position="306">
+          <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/TeacherStudentDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2348#3302#0" expanded="false" />
+            <element signature="e#3301#3302#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="18">
+          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+          <folding>
+            <marker date="1529672712204" expanded="true" signature="110619:110636" ph="..." />
+            <marker date="1529672712204" expanded="true" signature="110619:110667" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/TeacherStudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="44" column="56" lean-forward="true" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>WOS:war</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>WOS</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: asm:asm:3.1</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/redis/spring-redis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hbase/hbase-client/1.0.0/hbase-client-1.0.0.jar!/org/apache/hadoop/hbase/client/HTable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="757" column="118" lean-forward="false" selection-start-line="757" selection-start-column="118" selection-end-line="757" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="47" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+          <folding>
+            <element signature="e#2395#2403#0" expanded="true" />
+            <element signature="e#2456#2464#0" expanded="true" />
+            <element signature="e#2882#2888#0" expanded="true" />
+            <element signature="e#2997#3003#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-hadoop-hbase/2.4.0.RELEASE/spring-data-hadoop-hbase-2.4.0.RELEASE.jar!/org/springframework/data/hadoop/hbase/RowMapperResultsExtractor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="16" column="56" lean-forward="true" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-hadoop-hbase/2.4.0.RELEASE/spring-data-hadoop-hbase-2.4.0.RELEASE.jar!/org/springframework/data/hadoop/hbase/HbaseTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding>
+            <element signature="e#5795#6492#0" expanded="true" />
+            <element signature="e#6491#6492#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-hadoop-hbase/2.4.0.RELEASE/spring-data-hadoop-hbase-2.4.0.RELEASE.jar!/org/springframework/data/hadoop/hbase/RowMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCoTeamDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1525345704518" expanded="true" signature="7527:7614" ph="..." />
+            <marker date="1525345704518" expanded="true" signature="7694:7719" ph="..." />
+            <marker date="1525345704518" expanded="true" signature="7905:7915" ph="..." />
+            <marker date="1525345704518" expanded="true" signature="8317:8338" ph="..." />
+            <marker date="1525345704518" expanded="true" signature="8761:8767" ph="&amp;nbsp;" />
+            <marker date="1525345704518" expanded="true" signature="8925:8931" ph="&amp;nbsp;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/scholarInfo.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="22" column="100" lean-forward="false" selection-start-line="22" selection-start-column="100" selection-end-line="22" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/home.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="258" column="32" lean-forward="true" selection-start-line="258" selection-start-column="32" selection-end-line="258" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="29" column="62" lean-forward="false" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+          <folding>
+            <element signature="e#931#939#0" expanded="true" />
+            <element signature="e#1202#1219#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/HbaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="134" column="56" lean-forward="false" selection-start-line="134" selection-start-column="56" selection-end-line="134" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="88" column="143" lean-forward="false" selection-start-line="88" selection-start-column="135" selection-end-line="88" selection-end-column="143" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3872#3884#0" expanded="true" />
+            <element signature="e#5029#5041#0" expanded="true" />
+            <element signature="e#6208#6220#0" expanded="true" />
+            <element signature="e#7187#7198#0" expanded="true" />
+            <element signature="e#8525#8538#0" expanded="true" />
+            <element signature="e#9919#9931#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1107">
+          <caret line="94" column="38" lean-forward="false" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/RedisTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="34" column="54" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Scholar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="149" column="18" lean-forward="false" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+          <folding>
+            <element signature="e#3282#3283#0" expanded="false" />
+            <element signature="e#3310#3311#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="60" column="61" lean-forward="true" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1098">
+          <caret line="85" column="41" lean-forward="false" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding>
+            <element signature="e#1344#1345#0" expanded="false" />
+            <element signature="e#1407#1408#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarInfoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/ScholarController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1027">
+          <caret line="76" column="25" lean-forward="true" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4720#4726#0" expanded="true" />
+            <element signature="e#4798#4804#0" expanded="true" />
+            <element signature="e#6405#6413#0" expanded="true" />
+            <element signature="e#6466#6474#0" expanded="true" />
+            <element signature="e#6892#6898#0" expanded="true" />
+            <element signature="e#7041#7047#0" expanded="true" />
+            <element signature="e#10853#10861#0" expanded="true" />
+            <element signature="e#10914#10922#0" expanded="true" />
+            <element signature="e#11340#11346#0" expanded="true" />
+            <element signature="e#11455#11461#0" expanded="true" />
+            <element signature="e#12215#12221#0" expanded="true" />
+            <element signature="e#12667#12673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="173" column="6" lean-forward="true" selection-start-line="173" selection-start-column="6" selection-end-line="173" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchResult.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-226">
+          <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+          <folding>
+            <marker date="1529399422494" expanded="true" signature="3356:3391" ph="..." />
+            <marker date="1529399422494" expanded="true" signature="3754:3764" ph="..." />
+            <marker date="1529399422494" expanded="true" signature="4125:4146" ph="..." />
+            <marker date="1529399422494" expanded="true" signature="4548:4554" ph="&amp;nbsp;" />
+            <marker date="1529399422494" expanded="true" signature="4700:4706" ph="&amp;nbsp;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

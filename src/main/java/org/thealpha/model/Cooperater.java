@@ -20,7 +20,6 @@ public class Cooperater implements Serializable{
     private int cooperateNumber;
     private int coTeamNumber;
     private int studentsNumber;
-    private int year;
     private String cooperate;
     public String getCooperate(){
         return cooperate;
@@ -28,15 +27,29 @@ public class Cooperater implements Serializable{
     public void setCooperate(String cooperate){
         this.cooperate=cooperate;
     }
-    public int getYear() {
+
+
+    private List<Cooperater> subCooperaters;
+//    合作强度
+    private double intensity;
+//    合作年份
+    private String year;
+
+    public String getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
 
-    private List<Cooperater> subCooperaters;
+    public double getIntensity() {
+        return intensity;
+    }
+
+    public void setIntensity(double intensity) {
+        this.intensity = intensity;
+    }
 
     public List<Cooperater> getSubCooperaters() {
         return subCooperaters;

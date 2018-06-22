@@ -102,6 +102,26 @@ public class ScholarCooperateDaoImpl implements ScholarCooperateDao{
         return result;
     }
 
+    public List<Cooperater> getCooperatersIntensityById(String id) {
+        List<Cooperater> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new RowMapper<List<Cooperater>>() {
+            public List<Cooperater> mapRow(Result result, int i) throws Exception {
+                List<Cooperater> cooperaterList = new ArrayList<Cooperater>();
+                String cooperate = Bytes.toString(result.getValue(ConfigurationConstant.CF_COOPERATE.getBytes(), ConfigurationConstant.QF_COLLABORATION_INTENSITY.getBytes()));
+                if (cooperate != null && !"".equals(cooperate)) {
+                    String[] cooperates = cooperate.split(", ");
+                    for (String co : cooperates) {
+                        Cooperater cooperater = new Cooperater();
+                        cooperater.setIndex(co.substring(0, co.indexOf(":")));
+                        cooperater.setIntensity(Double.parseDouble(co.substring(co.indexOf(":") + 1, co.length())));
+                        cooperaterList.add(cooperater);
+                    }
+                }
+                return  cooperaterList;
+            }
+        });
+        return result;
+    }
+
     @Override
     public List<Cooperater> getMVCsById(String id) {
         List<Cooperater> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new RowMapper<List<Cooperater>>() {
@@ -144,6 +164,7 @@ public class ScholarCooperateDaoImpl implements ScholarCooperateDao{
         });
         return result;
     }
+
     public List<FirstCoYear> getFirstCooperateYearById(String id) {
         List<FirstCoYear> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new RowMapper<List<FirstCoYear>>() {
             public List<FirstCoYear> mapRow(Result result, int i) throws Exception {
@@ -161,7 +182,43 @@ public class ScholarCooperateDaoImpl implements ScholarCooperateDao{
                         }
                     }
                 }
-                return  firstcooperateYearList;
+                return firstcooperateYearList;
+            }
+        });
+        return result;
+    }
+    public List<Cooperater> getEveryYearCollaboratorsById(String id) {
+        List<Cooperater> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new RowMapper<List<Cooperater>>() {
+            public List<Cooperater> mapRow(org.apache.hadoop.hbase.client.Result result, int i) throws Exception {
+                List<Cooperater> everyYearCollaboratorCountList = new ArrayList<Cooperater>();
+
+                String eveYearCollaborators = Bytes.toString(result.getValue(ConfigurationConstant.CF_COOPERATE.getBytes(), ConfigurationConstant.QF_EVERY_YEAR_COLLABORATORS.getBytes()));
+                if (StringUtils.isNotBlank(eveYearCollaborators)) {
+                    String[] eveYearCollaboratorList = eveYearCollaborators.split(", ");
+
+                    for (String eveYearCollaborator : eveYearCollaboratorList) {
+                        String year = eveYearCollaborator.substring(0, eveYearCollaborator.indexOf(":"));
+                        String collaborators = eveYearCollaborator.substring(eveYearCollaborator.indexOf(":") + 1);
+                        if (StringUtils.isNotBlank(collaborators)) {
+                            String[] collaboratorList = collaborators.split("\\.");
+                            for (String collaborator : collaboratorList) {
+                                Cooperater cooperater = new Cooperater();
+                                cooperater.setYear(year);
+                                if (collaborator.contains("(")) {
+                                    String collaboratorId = collaborator.substring(0, collaborator.indexOf("("));
+                                    String count = collaborator.substring(collaborator.indexOf("(") + 1, collaborator.indexOf(")"));
+                                    cooperater.setIndex(collaboratorId);
+                                    cooperater.setCount(Integer.parseInt(count));
+                                } else {
+                                    cooperater.setIndex(collaborator);
+                                    cooperater.setCount(1);
+                                }
+                                everyYearCollaboratorCountList.add(cooperater);
+                            }
+                        }
+                    }
+                }
+                return  everyYearCollaboratorCountList;
             }
         });
         return result;

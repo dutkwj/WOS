@@ -57,6 +57,11 @@
                     number.push("${scholar.coRefNumber!""}");
                 <#elseif type=='Common referenced number'>
                     number.push("${scholar.coRefedNumber!""}");
+                <#elseif type=='Potential index by growthrate'>
+                    number.push("${scholar.potentialgrowth!""}");
+                <#elseif type=='Potential index by academicage'>
+                    number.push("${scholar.academicage!""}");
+
             </#if>
         </#list>
     </#if>
@@ -76,6 +81,7 @@
                     var subNumber = number.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     var subAff = aff.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
                     var subFieldName = fieldName.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+                    var temp = "";
 
                     thisData.push(subId);
                     thisData.push(subName);
@@ -85,7 +91,18 @@
                     thisData.push(subAff);
                     thisData.push(subFieldName);
 
+
+
                     layui.each(subId, function(index, item){
+                        <#if type != 'Potential index'>
+                            <#if type == 'Potential index by growthrate'>
+                                temp = ' | ' + "Potential Growthrate:" + thisData[4][index];
+                                <#elseif type == 'Potential index by academicage'>
+                                    temp = ' | ' + "Academicage:" + thisData[4][index];
+                                <#else>
+                                    temp = ' | ' + "${type}" + ':' + thisData[4][index];
+                            </#if>
+                        </#if>
                         arr.push('<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;background:#ffffff">' +
                                 '<div class="row tm-media-row">' +
                                 '<div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">' +
@@ -96,7 +113,7 @@
                                 '<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">' +
                                 '<div class="tm-media-text-container">' +
                                 '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/scholar/baseInfo?authorId=' + thisData[0][index] + '">' + thisData[1][index] + '</a></h3>' +
-                                '<p class="tm-media-description tm-gray-text-2">Q-index:' + thisData[3][index] + ' | H-index:' + thisData[2][index] + ' | ' + "${type}" + ':' + thisData[4][index] +
+                                '<p class="tm-media-description tm-gray-text-2">P-index:' + thisData[3][index] + ' | H-index:' + thisData[2][index]  + temp +
                                 '<br/>' +
                                 '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ' + thisData[5][index] + '<br/>' +
                                 '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study field: ' + thisData[6][index] + '</p>' +
@@ -106,6 +123,9 @@
                                 '</fieldset>');
                     });
                     return arr.join('');
+
+
+
                 }();
             }
         });

@@ -1,9 +1,11 @@
 package org.thealpha.model;
 
+import java.io.Serializable;
+
 /**
  * Created by kangwenjie on 18-4-11.
  */
-public class Node {
+public class Node implements Serializable{
     private String id;
     private String name;
     private String size;

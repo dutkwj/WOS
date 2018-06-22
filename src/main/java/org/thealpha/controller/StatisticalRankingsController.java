@@ -29,7 +29,7 @@ public class StatisticalRankingsController {
     }
 
     @RequestMapping("/top100")
-    public String getScholarsByType(@RequestParam String type, @RequestParam String range, @RequestParam String upOrDown, Model model) {
+    public String getScholarsByType(@RequestParam String type, @RequestParam String range, @RequestParam String upOrDown, @RequestParam String period, @RequestParam String academicage, Model model) {
         List<Scholar> scholars = null;
         if ("cooperator number".equals(type)) {
             if ("down".equals(upOrDown)) {
@@ -73,7 +73,164 @@ public class StatisticalRankingsController {
             } else {
                 scholars = rankService.getBottom100CoRefed();
             }
+        } else if ("potential index".equals(type)) {
+            if ("3 years".equals(period)) {
+                if ("down".equals(upOrDown)) {
+                    scholars = rankService.getTop100Potential_3years();
+                } else {
+                    scholars = rankService.getBottom100Potential_3years();
+                }
+            } else if ("5 years".equals(period)) {
+                if ("down".equals(upOrDown)) {
+                    scholars = rankService.getTop100Potential_5years();
+                } else {
+                    scholars = rankService.getBottom100Potential_5years();
+                }
+            } else {
+                if ("down".equals(upOrDown)) {
+                    scholars = rankService.getTop100Potential_10years();
+                } else {
+                    scholars = rankService.getBottom100Potential_10years();
+                }
+            }
+        } else if ("potential index by growthrate".equals(type)) {
+            if ("3 years".equals(period)) {
+                if ("down".equals(upOrDown)) {
+                    scholars = rankService.getTop100Potentialgrowth_3years();
+                } else {
+                    scholars = rankService.getBottom100Potentialgrowth_3years();
+                }
+            } else if ("5 years".equals(period)) {
+                if ("down".equals(upOrDown)) {
+                    scholars = rankService.getTop100Potentialgrowth_5years();
+                } else {
+                    scholars = rankService.getBottom100Potentialgrowth_5years();
+                }
+            } else {
+                if ("down".equals(upOrDown)) {
+                    scholars = rankService.getTop100Potentialgrowth_10years();
+                } else {
+                    scholars = rankService.getBottom100Potentialgrowth_10years();
+                }
+            }
+        } else if ("potential index by academicage".equals(type)) {
+            if ("3 years".equals(period)) {
+                if ("1-5".equals(academicage)) {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca1_5_3years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca1_5_3years();
+                    }
+                } else if ("6-15".equals(academicage)) {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca6_15_3years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca6_15_3years();
+                    }
+                } else if ("16-25".equals(academicage)) {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca16_25_3years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca16_25_3years();
+                    }
+                } else if ("26-40".equals(academicage)) {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca26_40_3years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca26_40_3years();
+                    }
+                } else if ("41-60".equals(academicage)) {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca41_60_3years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca41_60_3years();
+                    }
+                } else {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca61_80_3years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca61_80_3years();
+                    }
+                }
+            } else if ("5 years".equals(period)) {
+                if ("1-5".equals(academicage)) {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca1_5_5years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca1_5_5years();
+                    }
+                } else if ("6-15".equals(academicage)) {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca6_15_5years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca6_15_5years();
+                    }
+                } else if ("16-25".equals(academicage)) {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca16_25_5years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca16_25_5years();
+                    }
+                } else if ("26-40".equals(academicage)) {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca26_40_5years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca26_40_5years();
+                    }
+                } else if ("41-60".equals(academicage)) {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca41_60_5years();
+                    } else {
+                        scholars = rankService.getBottom100Potential41_60_5years();
+                    }
+                } else {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca61_80_5years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca61_80_5years();
+                    }
+                }
+            } else {
+                if ("1-5".equals(academicage)) {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca1_5_10years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca1_5_10years();
+                    }
+                } else if ("6-15".equals(academicage)) {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca6_15_10years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca6_15_10years();
+                    }
+                } else if ("16-25".equals(academicage)) {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca16_25_10years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca16_25_10years();
+                    }
+                } else if ("26-40".equals(academicage)) {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca26_40_10years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca26_40_10years();
+                    }
+                } else if ("41-60".equals(academicage)) {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca41_60_10years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca41_60_10years();
+                    }
+                } else {
+                    if ("down".equals(upOrDown)) {
+                        scholars = rankService.getTop100Potentialaca61_80_10years();
+                    } else {
+                        scholars = rankService.getBottom100Potentialaca61_80_10years();
+                    }
+                }
+            }
         }
+
         if ("top10".equals(range) && scholars.size() > 10) {
             model.addAttribute("scholars", scholars.subList(0, 10));
         } else if ("top50".equals(range) && scholars.size() > 50) {

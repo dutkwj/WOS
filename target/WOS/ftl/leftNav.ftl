@@ -22,9 +22,9 @@
         <li id="team">
             <div class="link">team<i class="fa fa-chevron-down"></i></div>
             <ul class="submenu" id="team-ul">
-                <li id="weak-team-li"><a id="weakTeam">weak team</a></li>
-                <li id="middle-team-li"><a id="middleTeam">middle team</a></li>
                 <li id="strong-team-li"><a id="strongTeam">strong team</a></li>
+                <li id="middle-team-li"><a id="middleTeam">middle team</a></li>
+                <li id="weak-team-li"><a id="weakTeam">weak team</a></li>
             </ul>
         </li>
         <li>
@@ -40,8 +40,8 @@
         <li id="cite">
             <div class="link">cite<i class="fa fa-chevron-down"></i></div>
             <ul class="submenu" id="cite-ul">
-                <li id="direct-cite-li"><a id="directCite">direct cite</a></li>
-                <li id="direct-cited-li"><a id="directCited">direct cited</a></li>
+                <#--<li id="direct-cite-li"><a id="directCite">direct cite</a></li>-->
+                <#--<li id="direct-cited-li"><a id="directCited">direct cited</a></li>-->
                 <li id="common-cite-li"><a id="commonCite">common cite</a></li>
                 <li id="common-cited-li"><a id="commonCited">common cited</a></li>
             </ul>
@@ -169,6 +169,17 @@
         $.ajax({
             type:"POST",
             url:'/coRefed/${scholarId!""}',
+            success:function (data) {
+                $("#bigContainer").html(data);
+            }
+        });
+    } else if ("${type}" == "name") {
+        $("#cooperate").addClass("open");
+        $("#cooperate-ul").css("display", "block");
+        $("#direct-cooperate-li").addClass("current");
+        $.ajax({
+            type:"POST",
+            url:'/cooperate/${scholarName!""}/name',
             success:function (data) {
                 $("#bigContainer").html(data);
             }
