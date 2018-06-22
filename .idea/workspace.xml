@@ -11,11 +11,21 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/flights/3.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/flights/4.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/flights/app.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/img/flights/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/img/flights/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/img/flights/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/img/flights/app.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/flights/fights.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/flights/homepage.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/flights/jquery.inview.min.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/flights/particles.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/flights/unslider.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/flights/fights.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/flights/homepage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/flights/jquery.inview.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/flights/particles.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/flights/unslider.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/HdfsController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/HdfsController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/StatisticalRankingsController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/StatisticalRankingsController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/WorldMapController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/WorldMapController.class" />
@@ -93,10 +103,10 @@
             <state relative-caret-position="-2200">
               <caret line="1332" column="53" lean-forward="false" selection-start-line="1332" selection-start-column="53" selection-end-line="1332" selection-end-column="53" />
               <folding>
-                <marker date="1529672377581" expanded="true" signature="86076:86118" ph="..." />
-                <marker date="1529672377581" expanded="true" signature="86076:86136" ph="..." />
-                <marker date="1529672377581" expanded="true" signature="86076:86149" ph="..." />
-                <marker date="1529672377581" expanded="true" signature="86076:86164" ph="..." />
+                <marker date="1529672379701" expanded="true" signature="86076:86118" ph="..." />
+                <marker date="1529672379701" expanded="true" signature="86076:86136" ph="..." />
+                <marker date="1529672379701" expanded="true" signature="86076:86149" ph="..." />
+                <marker date="1529672379701" expanded="true" signature="86076:86164" ph="..." />
               </folding>
             </state>
           </provider>
@@ -135,8 +145,8 @@
       <file leaf-file-name="HbaseTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/test/HbaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1605">
-              <caret line="1565" column="17" lean-forward="true" selection-start-line="1565" selection-start-column="17" selection-end-line="1565" selection-end-column="17" />
+            <state relative-caret-position="414">
+              <caret line="1589" column="40" lean-forward="true" selection-start-line="1589" selection-start-column="40" selection-end-line="1589" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -181,7 +191,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" />
         <option value="$PROJECT_DIR$/target/WOS/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/main/test/HbaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" />
@@ -189,6 +198,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/register2.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/worldMap.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java" />
+        <option value="$PROJECT_DIR$/src/main/test/HbaseTest.java" />
       </list>
     </option>
   </component>
@@ -1006,7 +1016,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529399739105</updated>
-      <workItem from="1529399749613" duration="5030000" />
+      <workItem from="1529399749613" duration="5095000" />
     </task>
     <servers />
   </component>
@@ -1043,7 +1053,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33674000" />
+    <option name="totallyTimeSpent" value="33739000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1398,10 +1408,10 @@
         <state relative-caret-position="-2200">
           <caret line="1332" column="53" lean-forward="false" selection-start-line="1332" selection-start-column="53" selection-end-line="1332" selection-end-column="53" />
           <folding>
-            <marker date="1529672377581" expanded="true" signature="86076:86118" ph="..." />
-            <marker date="1529672377581" expanded="true" signature="86076:86136" ph="..." />
-            <marker date="1529672377581" expanded="true" signature="86076:86149" ph="..." />
-            <marker date="1529672377581" expanded="true" signature="86076:86164" ph="..." />
+            <marker date="1529672379701" expanded="true" signature="86076:86118" ph="..." />
+            <marker date="1529672379701" expanded="true" signature="86076:86136" ph="..." />
+            <marker date="1529672379701" expanded="true" signature="86076:86149" ph="..." />
+            <marker date="1529672379701" expanded="true" signature="86076:86164" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1493,8 +1503,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/test/HbaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1605">
-          <caret line="1565" column="17" lean-forward="true" selection-start-line="1565" selection-start-column="17" selection-end-line="1565" selection-end-column="17" />
+        <state relative-caret-position="414">
+          <caret line="1589" column="40" lean-forward="true" selection-start-line="1589" selection-start-column="40" selection-end-line="1589" selection-end-column="40" />
           <folding />
         </state>
       </provider>
