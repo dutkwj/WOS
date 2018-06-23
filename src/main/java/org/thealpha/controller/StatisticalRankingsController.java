@@ -25,7 +25,7 @@ public class StatisticalRankingsController {
         List<Scholar> top100Scholars = rankService.getTop100Cooperators();
         model.addAttribute("scholars", top100Scholars);
 //        return "statisticalRankings";
-        return "flights";
+        return "rankIndex";
     }
 
     @RequestMapping("/top100")

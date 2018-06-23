@@ -7,131 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291e2776-134e-423c-b7f9-68e37a8618e2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$6.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Cooperater_teastu.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/FirstCoYear.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/FirstCoYearCount.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Teacher_0.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Teacher_1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Teacher_2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Teacher_3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$6.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Cooperater_teastu.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/FirstCoYear.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/FirstCoYearCount.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Teacher_0.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Teacher_1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Teacher_2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Teacher_3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater_teastu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/FirstCoYear.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/FirstCoYearCount.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Teacher_0.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Teacher_1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Teacher_2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Teacher_3.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap_feedback.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/style_feedback.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/reference.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/bootstrap_feedback.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/style_feedback.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/ftl/reference.ftl" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/1.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/11.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/g1.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/g2.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/g3.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/graph_last.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/influence.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/line.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/ll.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/new.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/tea_stu.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/tea_stu_main.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/treebeifen.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/wang.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/yingxiang.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/1.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/11.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/g1.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/g2.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/g3.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/graph_last.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/influence.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/line.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/ll.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/new.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/tea_stu.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/tea_stu_main.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/treebeifen.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/wang.ftl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/ftl/yingxiang.ftl" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/cc" afterPath="$PROJECT_DIR$/target/WOS/ftl/student_number_year.ftl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/graph.true.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/graph.ftl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/target/WOS/ftl/cc" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/student_number_year.ftl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/target/WOS/ftl/graph.true.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/graph.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS.war" afterPath="$PROJECT_DIR$/target/WOS.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/TeacherStudentController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/TeacherStudentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$4.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$5.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Cooperater.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Cooperater.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Links_new.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Links_new.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarInfoService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarInfoService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/TeacherStudentService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/TeacherStudentService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ConfigurationConstant.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ConfigurationConstant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/TeacherStudentController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/TeacherStudentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$4.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$5.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Cooperater.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Cooperater.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Links_new.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Links_new.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarInfoService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarInfoService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/TeacherStudentService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/TeacherStudentService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/util/ConfigurationConstant.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/ConfigurationConstant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/TeacherStudentController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/TeacherStudentController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/PaperDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/PaperDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Links_new.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Links_new.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarInfoService.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarInfoService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/service/TeacherStudentService.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/service/TeacherStudentService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/HbaseTest.java" afterPath="$PROJECT_DIR$/src/main/test/HbaseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.New.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.New.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/evalue.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/evalue.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/tree.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/tree.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/WOS/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/css/style.New.css" afterPath="$PROJECT_DIR$/target/WOS/css/style.New.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/evalue.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/evalue.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/leftNav.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/leftNav.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/relationGraph.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/relationGraph.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/tree.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/tree.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -270,17 +146,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatisticalRankingsController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StatisticalRankingsController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+            <state relative-caret-position="180">
+              <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HbaseTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HbaseTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/test/HbaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="558">
@@ -366,6 +242,33 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+              <folding>
+                <marker date="1529717279850" expanded="true" signature="91265:91282" ph="..." />
+                <marker date="1529717279850" expanded="true" signature="91265:91300" ph="..." />
+                <marker date="1529717279850" expanded="true" signature="91265:91313" ph="..." />
+                <marker date="1529717279850" expanded="true" signature="91265:91328" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flights.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/flights.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -378,15 +281,15 @@
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" />
         <option value="$PROJECT_DIR$/target/WOS/META-INF/MANIFEST.MF" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/ScholarController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/register2.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/worldMap.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java" />
         <option value="$PROJECT_DIR$/src/main/test/HbaseTest.java" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java" />
       </list>
     </option>
   </component>
@@ -473,7 +376,9 @@
               <item name="WOS" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="thealpha" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
@@ -481,49 +386,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="flights" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="file" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="ftl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="flights" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -614,6 +476,9 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -773,14 +638,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35196000" />
+    <option name="totallyTimeSpent" value="35822000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61264014" sideWeight="0.2884097" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.2884097" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32831" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22982322" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -796,23 +660,48 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2703549" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2107005" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61264014" sideWeight="0.2884097" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32831" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22982322" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2992465" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19673802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20592992" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3519914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3519914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1030,7 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2898">
           <caret line="184" column="22" lean-forward="false" selection-start-line="184" selection-start-column="22" selection-end-line="184" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,7 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="161" column="52" lean-forward="false" selection-start-line="161" selection-start-column="52" selection-end-line="161" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1062,7 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6102">
           <caret line="339" column="7" lean-forward="false" selection-start-line="339" selection-start-column="7" selection-end-line="339" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1099,9 +985,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1022">
-          <caret line="1511" column="53" lean-forward="false" selection-start-line="1511" selection-start-column="53" selection-end-line="1511" selection-end-column="53" />
-          <folding />
+        <state relative-caret-position="90">
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding>
+            <marker date="1529717279850" expanded="true" signature="91265:91282" ph="..." />
+            <marker date="1529717279850" expanded="true" signature="91265:91300" ph="..." />
+            <marker date="1529717279850" expanded="true" signature="91265:91313" ph="..." />
+            <marker date="1529717279850" expanded="true" signature="91265:91328" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1235,7 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1243,15 +1133,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/flights.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1259,15 +1140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1352,6 +1224,24 @@
             <marker date="1529674098689" expanded="false" signature="94800:94812" ph="&lt;~&gt;" />
             <marker date="1529674098689" expanded="false" signature="96740:96755" ph="}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/flights.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
