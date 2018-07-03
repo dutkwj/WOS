@@ -2,6 +2,7 @@ package org.thealpha.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.thealpha.dao.inter.PaperDao;
 import org.thealpha.dao.inter.ScholarInfoDao;
 import org.thealpha.model.Scholar;
 import org.thealpha.model.SearchItem;
@@ -19,7 +20,8 @@ import java.util.Map;
 public class ScholarInfoService {
     @Autowired
     private ScholarInfoDao scholarInfoDao;
-
+    @Autowired
+    private PaperDao paperDao;
     public List<Scholar> getRecommendScholars() {
         List<String> recommendScholarIds = scholarInfoDao.getRecommendScholars();
         return getScholarsByIds(recommendScholarIds);
@@ -33,7 +35,10 @@ public class ScholarInfoService {
     public List<Scholar> getScholarsByIds(List<String> scholarIds) {
         return scholarInfoDao.getScholarsByIds(scholarIds);
     }
+    public List<String> getPaperIdsByAuthorId(String scholarIds) {
 
+        return paperDao.getPaperIdsByAuthorId(scholarIds);
+    }
     public Scholar getScholarById(String scholarId) {
         return scholarInfoDao.getScholarById(scholarId);
     }

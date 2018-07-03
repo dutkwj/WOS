@@ -2240,7 +2240,7 @@ h4.pull-left{
 	text-align: left;
 	padding: 1em;
 	margin: 0;
-	background: #F44336;
+	background: #CCCCFF;
 	color: #fff;
 	text-transform:uppercase;
 	font-size:1em;
@@ -2253,10 +2253,10 @@ h4.pull-left{
 	border-bottom:1px solid #999;
 }
 .activity_box1 h3 {
-	background: #00BCD4;
+	background:#00BCD4;
 }
 .activity_box2 h3 {
-	background:#FFCA28;
+	background:#FFCC99;
 }
 .col_2 {
 	background-color: #fff;

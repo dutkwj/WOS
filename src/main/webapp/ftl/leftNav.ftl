@@ -30,10 +30,11 @@
         <li>
             <div class="link" id="tea_main">Advisor-advise<i class="fa fa-chevron-down"></i></div>
             <ul class="submenu">
-                <li><a id="influence">Influence</a></li>
-                <li><a id="tree">Tree</a></li>
-                <li><a id="graph">Graph</a></li>
-                <li><a id="evalue">Evalue</a></li>
+                <li><a id="tree">Genealogy relationship</a></li>
+                <li><a id="graph">Cooperation relationship</a></li>
+                <li><a id="reference">Reference relationship</a></li>
+                <li><a id="evalue">Evaluation and comparison</a></li>
+                <li><a id="student_number_year">Student_number_year</a></li>
             </ul>
         </li>
         <li id="cite">
@@ -294,19 +295,10 @@
             }
         });
     });
-    $("#tea_main").click(function () {
+    $("#reference").click(function () {
         $.ajax({
             type:"POST",
-            url:'/Advisor-advisee/${scholarId!""}/tea_stu_main',
-            success:function (data) {
-                $("#bigContainer").html(data);
-            }
-        });
-    });
-    $("#influence").click(function () {
-        $.ajax({
-            type:"POST",
-            url:'/Advisor-advisee/${scholarId!""}/influence',
+            url:'/Advisor-advisee/${scholarId!""}/reference',
             success:function (data) {
                 $("#bigContainer").html(data);
             }
@@ -334,6 +326,15 @@
         $.ajax({
             type:"POST",
             url:'/Advisor-advisee/${scholarId!""}/evalue',
+            success:function (data) {
+                $("#bigContainer").html(data);
+            }
+        });
+    });
+    $("#student_number_year").click(function () {
+        $.ajax({
+            type:"POST",
+            url:'/Advisor-advisee/${scholarId!""}/student_number_year',
             success:function (data) {
                 $("#bigContainer").html(data);
             }

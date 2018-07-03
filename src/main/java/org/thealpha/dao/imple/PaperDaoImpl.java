@@ -28,6 +28,7 @@ public class PaperDaoImpl implements PaperDao{
     private HbaseTemplate hbaseTemplate;
 
     public List<String> getPaperIdsByAuthorId(String authorId) {
+        //System.out.println(authorId);
         List<String> paperIds = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_SCHOLAR, authorId, new RowMapper<List<String>>() {
             public List<String> mapRow(Result result, int rowNum) throws Exception {
                 String paperIds = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PAPERS), Bytes.toBytes(ConfigurationConstant.QF_PAPER_IDS)));

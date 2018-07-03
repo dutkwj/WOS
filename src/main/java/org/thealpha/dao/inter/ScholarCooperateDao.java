@@ -1,6 +1,7 @@
 package org.thealpha.dao.inter;
 
 import org.thealpha.model.Cooperater;
+import org.thealpha.model.FirstCoYear;
 import org.thealpha.model.YearCount;
 
 import java.util.List;
@@ -15,5 +16,6 @@ public interface ScholarCooperateDao {
     public List<Cooperater> getCooperatersIntensityById(String id);
     public List<Cooperater> getMVCsById(String id);
     public List<YearCount> getCooperateYearCountsById(String id);
+    public List<FirstCoYear> getFirstCooperateYearById(String id);
     public List<Cooperater> getEveryYearCollaboratorsById(String id);
 }
