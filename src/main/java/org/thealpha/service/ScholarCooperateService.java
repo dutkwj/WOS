@@ -8,6 +8,8 @@ import org.thealpha.dao.inter.ScholarInfoDao;
 import org.thealpha.model.*;
 
 import javax.annotation.Resource;
+import javax.print.attribute.standard.Copies;
+//import java.time.Year;
 import java.util.*;
 
 /**
@@ -28,6 +30,7 @@ public class ScholarCooperateService {
 
     public List<Cooperater> getCooperaterCountById(String scholarId) {
         List<Cooperater> cooperaterList = scholarCooperateDao.getCooperatersById(scholarId);
+//        Map<String, Double> map = scholarCooperateDao.getCoIntensitymapById(scholarId);
         List<String> scholarIds = new ArrayList<String>();
         for (Cooperater cooperater : cooperaterList) {
             scholarIds.add(cooperater.getIndex());
@@ -50,6 +53,10 @@ public class ScholarCooperateService {
             cooperater.setCooperateNumber(scholarIdObjectMap.get(cooperater.getIndex()).getCooperateNumber());
             cooperater.setCoTeamNumber(scholarIdObjectMap.get(cooperater.getIndex()).getCoTeamNumber());
             cooperater.setStudentsNumber(scholarIdObjectMap.get(cooperater.getIndex()).getStudentsNumber());
+            cooperater.setPaperNumber(scholarIdObjectMap.get(cooperater.getIndex()).getPaperNumber());
+//            if(map.containsKey(cooperater.getIndex())){
+//                cooperater.setIntensity(map.get(cooperater.getIndex()));
+//            }
         }
         return cooperaterList;
     }
@@ -78,6 +85,7 @@ public class ScholarCooperateService {
             cooperater.setCooperateNumber(scholarIdObjectMap.get(cooperater.getIndex()).getCooperateNumber());
             cooperater.setCoTeamNumber(scholarIdObjectMap.get(cooperater.getIndex()).getCoTeamNumber());
             cooperater.setStudentsNumber(scholarIdObjectMap.get(cooperater.getIndex()).getStudentsNumber());
+            cooperater.setPaperNumber(scholarIdObjectMap.get(cooperater.getIndex()).getPaperNumber());
         }
         return cooperaterList;
     }
@@ -148,6 +156,13 @@ public class ScholarCooperateService {
         return yearCounts;
     }
 
+    //根据学者id查找每年合作数量
+    public List<YearConumber> getYearConumbersById(String id){
+        List<YearConumber> yearConumberList = scholarCooperateDao.getYearConumbersById(id);
+        return yearConumberList;
+
+    }
+
 //    根据学者id和合作强度得到合作者
     public void getCollaboratorsByScholarIdAndCI(String scholarId, List<Cooperater> collaborators, List<String> visitedNodes, List<String> visitedEdges, List<Node> nodes, List<Link> links, double minCI, int depth, int maxDepth) {
         if (CollectionUtils.isEmpty(collaborators)) {
@@ -160,7 +175,7 @@ public class ScholarCooperateService {
                 Node node = new Node();
                 node.setId(collaborator.getIndex());
                 node.setName(collaborator.getName());
-                node.setSize(String.valueOf(collaborator.getIntensity()));
+//                node.setSize(String.valueOf(collaborator.getIntensity()));
                 node.setQindex(collaborator.getQindex());
                 node.setHindex(collaborator.getHindex());
                 node.setAff(collaborator.getAff());
@@ -207,7 +222,48 @@ public class ScholarCooperateService {
             cooperater.setCoTeamNumber(scholarIdObjectMap.get(cooperater.getIndex()).getCoTeamNumber());
             cooperater.setStudentsNumber(scholarIdObjectMap.get(cooperater.getIndex()).getStudentsNumber());
         }
+
+//        System.out.println(scholarId);
+        return cooperaterList;
+    }
+    public List<String> getCollaboratorsYearById(String scholarId) {
+        List<String> cooperateryearList = scholarCooperateDao.getCollaboratorsYearById(scholarId);
+        return cooperateryearList;
+    }
+    public List<Yearnumber> getEveryYearPapernumberById(String scholarId){
+        List<Yearnumber> cooperaterList = scholarCooperateDao.getEveryYearPapernumberById(scholarId);
         return cooperaterList;
     }
 
+    public List<YearcooperId> getYearCollaboratorsIndexById(String scholarId) {
+        List<Cooperater> cooperaterList = scholarCooperateDao.getEveryYearCollaboratorsById(scholarId);
+        List<String> cooperateryear = scholarCooperateDao.getCollaboratorsYearById(scholarId);
+        HashMap<String,String> YearCollaboratorsIndexMap = new HashMap<String,String>();
+        String index = "";
+        List<YearcooperId> YearCollaboratorsIndex = new ArrayList<YearcooperId>();
+        for(int j = 0;j < cooperateryear.size();j++){
+            index = "";
+            for(int i = 0;i < cooperaterList.size() ;i++) {
+                if (cooperateryear.get(j).equals(cooperaterList.get(i).getYear())) {
+                    index = index + cooperaterList.get(i).getIndex() + ",";
+//                    YearCollaboratorsIndexMap.put(cooperateryear.get(j),index);
+                }
+            }
+            index = index.substring(0,index.length()-1);
+
+            YearCollaboratorsIndexMap.put(cooperateryear.get(j),index);
+        }
+        for(int i = 0;i < cooperateryear.size();i++) {
+            for (String year : YearCollaboratorsIndexMap.keySet()) {
+                if(year.equals(cooperateryear.get(i))) {
+                    YearcooperId id = new YearcooperId();
+                    id.setYear(year);
+                    id.setCoId(YearCollaboratorsIndexMap.get(year));
+                    YearCollaboratorsIndex.add(id);
+                }
+            }
+        }
+
+        return YearCollaboratorsIndex;
+    }
 }

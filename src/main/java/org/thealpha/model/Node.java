@@ -16,6 +16,7 @@ public class Node implements Serializable{
     private String aff;
     private String studyField;
 
+
     public double getQindex() {
         return qindex;
     }

@@ -61,7 +61,8 @@ public class CooperateRelaController {
                 }
             }
             model.addAttribute("scholarId", index);
-            model.addAttribute("type", "directCooperate");
+//            model.addAttribute("type", "directCooperate");
+            model.addAttribute("type", "MVC");
         } else {
             model.addAttribute("scholarId", scholarId);
             model.addAttribute("type", type);
@@ -103,7 +104,8 @@ public class CooperateRelaController {
         model.addAttribute("cooperateType", type);
         model.addAttribute("scholarId", scholarId);
 //        return "cooperate";
-        return "relationGraph";
+//        return "relationGraph";
+        return "cooper_net";
     }
 
     @RequestMapping(value = "/directCooperateJSON/{scholarId}")
@@ -117,6 +119,7 @@ public class CooperateRelaController {
         midNode.setName(scholar.getName());
         midNode.setSize("50");
         midNode.setColor("#FF99CC");
+//        midNode.setGroup(0);
         midNode.setQindex(scholar.getQindex());
         midNode.setHindex(scholar.getHindex());
         midNode.setAff(scholar.getAff());
@@ -129,6 +132,7 @@ public class CooperateRelaController {
             node.setId(cooperater.getIndex());
             node.setName(cooperater.getName());
             node.setSize(String.valueOf(cooperater.getCount() + 5));
+
             if (cooperater.getCount() > 5) {
                 node.setColor("#CCFF66");
             } else {
@@ -151,15 +155,16 @@ public class CooperateRelaController {
         graph.setLinks(links);
         return graph;
     }
-
+    int maxsize,minsize;
+    int maxlink = 0,minlink = 1000;
 //    最有价值的合作者，most valuable collector
     @RequestMapping(value = "/MVCJSON/{scholarId}")
     @ResponseBody
     public Graph getMVCJSON(@PathVariable String scholarId) {
-        Graph g = (Graph) ListTranscoder.deserialize(jedisCluster.hget(ConfigurationConstant.REDIS_AUTHORID_MVC_GRAPH.getBytes(), scholarId.getBytes()));
-        if (g != null) {
-            return g;
-        }
+//        Graph g = (Graph) ListTranscoder.deserialize(jedisCluster.hget(ConfigurationConstant.REDIS_AUTHORID_MVC_GRAPH.getBytes(), scholarId.getBytes()));
+//        if (g != null) {
+//            return g;
+//        }
         List<Cooperater> cooperaters = scholarCooperateService.getCooperaterCountById(scholarId);
         Scholar scholar = scholarInfoService.getScholarById(scholarId);
 
@@ -168,8 +173,19 @@ public class CooperateRelaController {
         Node midNode = new Node();
         midNode.setId(scholarId);
         midNode.setName(scholar.getName());
-        midNode.setSize("50");
-        midNode.setColor("#FF99CC");
+//        if(scholar.getPaperNumber() > 50){
+//            midNode.setSize("20");
+//        }else if(scholar.getPaperNumber() > 20){
+//            midNode.setSize("15");
+//        }else if(scholar.getPaperNumber() > 10){
+//            midNode.setSize("10");
+//        }else{
+//            midNode.setSize("5");
+//        }
+        maxsize = scholar.getPaperNumber();
+        minsize = scholar.getPaperNumber();
+        midNode.setSize(String.valueOf(scholar.getPaperNumber()));
+        midNode.setColor(scholarId);
         midNode.setQindex(scholar.getQindex());
         midNode.setHindex(scholar.getHindex());
         midNode.setAff(scholar.getAff());
@@ -180,18 +196,21 @@ public class CooperateRelaController {
         visitedNodes.add(scholarId);
         List<Link> links = new ArrayList<Link>();
         setAllMVCNodes(scholarId, cooperaters, visitedNodes, joinNodes, nodes, links);
-
         Graph graph = new Graph();
         graph.setNodes(nodes);
         graph.setLinks(links);
-        jedisCluster.hset(ConfigurationConstant.REDIS_AUTHORID_MVC_GRAPH.getBytes(), scholarId.getBytes(), ListTranscoder.serialize(graph));
+        graph.setMaxlink(maxlink);
+        graph.setMaxsize(maxsize);
+        graph.setMinlink(minlink);
+        graph.setMinsize(minsize);
+//        jedisCluster.hset(ConfigurationConstant.REDIS_AUTHORID_MVC_GRAPH.getBytes(), scholarId.getBytes(), ListTranscoder.serialize(graph));
         return graph;
     }
-
-    @RequestMapping("/flights")
-    public String flights() {
-        return "flights";
-    }
+//
+//    @RequestMapping("/flights")
+//    public String flights() {
+//        return "flights";
+//    }
 
     public void setAllMVCNodes(String scholarId, List<Cooperater> cooperaters, List<String> visitedNodes, List<String> joinNodes, List<Node> nodes, List<Link> links) {
         for (Cooperater cooperater : cooperaters) {
@@ -199,25 +218,51 @@ public class CooperateRelaController {
                 Node node = new Node();
                 node.setId(cooperater.getIndex());
                 node.setName(cooperater.getName());
-                node.setSize(String.valueOf(cooperater.getCount() + 2));
-                if (cooperater.getCount() > 5) {
-                    node.setColor("#CCFF66");
-                } else {
-                    node.setColor("#66CCCC");
+//                node.setSize(String.valueOf(cooperater.getCount() + 2));
+                if(cooperater.getPaperNumber() >= maxsize){
+                    maxsize = cooperater.getPaperNumber();
                 }
+                if(cooperater.getPaperNumber() < minsize){
+                    minsize = cooperater.getPaperNumber();
+                }
+                node.setSize(String.valueOf(cooperater.getPaperNumber()));
+//                if(cooperater.getPaperNumber() > 50){
+//                    node.setSize("20");
+//                }else if(cooperater.getPaperNumber() > 20){
+//                    node.setSize("15");
+//                }else if(cooperater.getPaperNumber() > 10){
+//                    node.setSize("10");
+//                }else{
+//                    node.setSize("5");
+//                }
+//                if (cooperater.getCount() > 5) {
+//                    node.setColor("#CCFF66");
+//                } else {
+//                    node.setColor("#66CCCC");
+//                }
+                node.setColor(scholarId);
                 node.setQindex(cooperater.getQindex());
                 node.setHindex(cooperater.getHindex());
                 node.setAff(cooperater.getAff());
                 node.setStudyField(cooperater.getFieldName());
                 nodes.add(node);
                 joinNodes.add(cooperater.getIndex());
-
+//                System.out.println("nodes:[" + "id:" + cooperater.getIndex() +", " + "name:" + cooperater.getName()
+//                        +", " + "size:" + cooperater.getPaperNumber() +", " + "color:" + scholarId +"]");
+//                System.out.println("Link:[" + "source:" + scholarId +", " + "target:" + cooperater.getIndex() +", " +
+//                        "intensity:" + cooperater.getCount());
                 Link link = new Link();
                 link.setSource(scholarId);
                 link.setTarget(cooperater.getIndex());
-                link.setCoCount(cooperater.getCount());
+//                link.setCoCount(cooperater.getCount());
+                if(cooperater.getCount() >= maxlink){
+                    maxlink = cooperater.getCount();
+                }
+                if(cooperater.getCount() < minlink){
+                    minlink = cooperater.getCount();
+                }
+                link.setIntensity(cooperater.getCount());
                 links.add(link);
-
             }
             if (cooperater.getCount() > 5 && !visitedNodes.contains(cooperater.getIndex())) {
                 visitedNodes.add(cooperater.getIndex());
@@ -229,12 +274,22 @@ public class CooperateRelaController {
 
     @RequestMapping("/cooperate/{scholarId}/worldMap")
     public String worldMap(@PathVariable String scholarId, Model model) {
-        List<Cooperater> cooperaters = scholarCooperateService.getCooperaterCountById(scholarId);
+//        List<Cooperater> cooperaters = scholarCooperateService.getCooperaterCountById(scholarId);
+        List<YearConumber> yearConumbers = scholarCooperateService.getYearConumbersById(scholarId);
         Scholar scholar = scholarInfoService.getScholarById(scholarId);
-        model.addAttribute("cooperaters", cooperaters);
+        List<Cooperater> evyecooperaters= scholarCooperateService.getEveryYearCollaboratorsById(scholarId);
+        List<Yearnumber> yearPapernumber = scholarCooperateService.getEveryYearPapernumberById(scholarId);
+        List<String> cooperateyear = scholarCooperateService.getCollaboratorsYearById(scholarId);
+        List<YearcooperId> yearcooperaterid = scholarCooperateService.getYearCollaboratorsIndexById(scholarId);
+        model.addAttribute("yearcooperater", evyecooperaters);
+        model.addAttribute("yearpapernumber", yearPapernumber);
+        model.addAttribute("cooperateyear", cooperateyear);
+        model.addAttribute("yearConumbers", yearConumbers);
+        model.addAttribute("yearcooperaterid", yearcooperaterid);
+//        model.addAttribute("cooperaters", cooperaters);
         model.addAttribute("middleScholar", scholar);
         model.addAttribute("scholarId", scholarId);
-        return "worldMap";
+        return "time_map";
     }
 
     @RequestMapping("/cooperate/{scholarId}/yearCounts")
@@ -262,7 +317,7 @@ public class CooperateRelaController {
         Node midNode = new Node();
         midNode.setId(scholarId);
         midNode.setName(scholar.getName());
-        midNode.setSize("50");
+//        midNode.setSize("50");
         midNode.setColor("#FF99CC");
         midNode.setQindex(scholar.getQindex());
         midNode.setHindex(scholar.getHindex());
@@ -290,7 +345,7 @@ public class CooperateRelaController {
         Node midNode = new Node();
         midNode.setId(scholarId);
         midNode.setName(scholar.getName());
-        midNode.setSize("50");
+//        midNode.setSize("50");
         midNode.setColor("#FF99CC");
         midNode.setQindex(scholar.getQindex());
         midNode.setHindex(scholar.getHindex());
@@ -302,7 +357,7 @@ public class CooperateRelaController {
             Node node = new Node();
             node.setId(cooperater.getIndex());
             node.setName(cooperater.getName());
-            node.setSize(String.valueOf(cooperater.getCount()));
+//            node.setSize(String.valueOf(cooperater.getCount()));
             node.setColor("CCFF66");
             node.setQindex(cooperater.getQindex());
             node.setHindex(scholar.getHindex());

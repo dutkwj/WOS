@@ -17,7 +17,7 @@ public class Scholar implements Serializable{
     private double qindex;
     private String fieldName;
     private int academicage;
-
+    private int paperNumber;
     private int cooperateNumber;
     private int coTeamNumber;
     private int studentsNumber;
@@ -26,6 +26,10 @@ public class Scholar implements Serializable{
     private int coRefNumber;
     private int coRefedNumber;
     private double potentialgrowth;
+
+    public int getPaperNumber(){ return paperNumber; }
+
+    public void setPaperNumber(int paperNumber){ this.paperNumber = paperNumber; }
 
     public int getAcademicage() { return academicage; }
 //

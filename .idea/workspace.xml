@@ -7,7 +7,260 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291e2776-134e-423c-b7f9-68e37a8618e2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/time_map/force.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS.war" afterPath="$PROJECT_DIR$/target/WOS.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CoTeamRelaController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CoTeamRelaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CooperateRelaController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/CooperateRelaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/HdfsController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/HdfsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/IndexController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/InforController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/InforController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/LoginOutController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/LoginOutController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/ModifyPswController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/ModifyPswController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/NetworkController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/NetworkController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/PartnerCountController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/PartnerCountController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/PotentialController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/PotentialController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/ReferenceController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/ReferenceController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/RegisterController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/RegisterController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/ScholarController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/ScholarController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SearchController$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SearchController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SearchController$2.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SearchController$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SearchController$3.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SearchController$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SearchController$4.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SearchController$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SearchController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SearchController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/ShowPersonalInfoController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/ShowPersonalInfoController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SimpleSearchController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/SimpleSearchController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/StatisticalRankingsController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/StatisticalRankingsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/TeacherStudentController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/TeacherStudentController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/WorldMapController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/WorldMapController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/PaperDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/RecommendDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/RecommendDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/RecommendDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/RecommendDaoImpl$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/RecommendDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/RecommendDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ReferenceDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ReferenceDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/RegisterDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/RegisterDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/RegisterDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/RegisterDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCoTeamDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCoTeamDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCoTeamDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCoTeamDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$4.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$5.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$6.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/TeacherStudentDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/TeacherStudentDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/TeacherStudentDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/TeacherStudentDaoImpl$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/TeacherStudentDaoImpl$3.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/TeacherStudentDaoImpl$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/TeacherStudentDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/TeacherStudentDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/UserDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/UserDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/UserDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/UserDaoImpl$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/UserDaoImpl$3.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/UserDaoImpl$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/UserDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/UserDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/PaperDao.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/PaperDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/RecommendDao.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/RecommendDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ReferenceDao.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ReferenceDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/RegisterDao.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/RegisterDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ScholarCoTeamDao.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ScholarCoTeamDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ScholarInfoDao.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ScholarInfoDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/TeacherStudentDao.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/TeacherStudentDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/UserDao.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/UserDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Categories.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Categories.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Cooperater.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Cooperater.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Cooperater_teastu.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Cooperater_teastu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Evalue.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Evalue.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/FirstCoYear.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/FirstCoYear.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/FirstCoYearCount.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/FirstCoYearCount.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Graph.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Graph.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Link.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Link.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Links.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Links.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Links_new.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Links_new.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Node.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Node.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Nodes.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Nodes.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Nodes_Links.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Nodes_Links.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Nodes_Links_new.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Nodes_Links_new.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Nodes_new.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Nodes_new.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Nodes_new_ID.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Nodes_new_ID.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Paper.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Paper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Scholar.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Scholar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/ScholarWeight.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/ScholarWeight.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/SearchItem.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/SearchItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Student.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Student.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Teacher.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Teacher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/TeacherWarp.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/TeacherWarp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Teacher_0.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Teacher_0.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Teacher_1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Teacher_1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Teacher_2.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Teacher_2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Teacher_3.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/Teacher_3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/User.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/YearCount.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/model/YearCount.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/RankService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/RankService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/RecommendService$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/RecommendService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/RecommendService$2.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/RecommendService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/RecommendService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/RecommendService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ReferenceService$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ReferenceService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ReferenceService$2.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ReferenceService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ReferenceService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ReferenceService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/RegisterService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/RegisterService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCoTeamService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCoTeamService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCooperateService$1.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCooperateService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCooperateService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarCooperateService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarInfoService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ScholarInfoService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/TeacherStudentService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/TeacherStudentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/UserService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ConfigurationConstant.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ConfigurationConstant.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/HbaseUtils.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/HbaseUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/JedisClusterFactory.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/JedisClusterFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ListTranscoder.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ListTranscoder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/CoTeamRelaController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/CoTeamRelaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/CooperateRelaController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/CooperateRelaController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/HdfsController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/HdfsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/IndexController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/InforController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/InforController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/LoginOutController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/LoginOutController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/ModifyPswController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/ModifyPswController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/NetworkController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/NetworkController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/PartnerCountController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/PartnerCountController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/PotentialController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/PotentialController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/ReferenceController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/ReferenceController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/RegisterController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/RegisterController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/ScholarController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/ScholarController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SearchController$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SearchController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SearchController$2.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SearchController$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SearchController$3.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SearchController$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SearchController$4.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SearchController$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SearchController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SearchController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/ShowPersonalInfoController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/ShowPersonalInfoController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SimpleSearchController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/SimpleSearchController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/StatisticalRankingsController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/StatisticalRankingsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/TeacherStudentController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/TeacherStudentController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/WorldMapController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/WorldMapController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/PaperDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/RecommendDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/RecommendDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/RecommendDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/RecommendDaoImpl$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/RecommendDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/RecommendDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ReferenceDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ReferenceDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/RegisterDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/RegisterDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/RegisterDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/RegisterDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCoTeamDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCoTeamDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCoTeamDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCoTeamDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$4.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$5.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$6.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarCooperateDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/TeacherStudentDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/TeacherStudentDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/TeacherStudentDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/TeacherStudentDaoImpl$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/TeacherStudentDaoImpl$3.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/TeacherStudentDaoImpl$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/TeacherStudentDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/TeacherStudentDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/UserDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/UserDaoImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/UserDaoImpl$2.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/UserDaoImpl$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/UserDaoImpl$3.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/UserDaoImpl$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/UserDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/UserDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/PaperDao.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/PaperDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/RecommendDao.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/RecommendDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ReferenceDao.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ReferenceDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/RegisterDao.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/RegisterDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ScholarCoTeamDao.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ScholarCoTeamDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ScholarCooperateDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ScholarInfoDao.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ScholarInfoDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/TeacherStudentDao.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/TeacherStudentDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/UserDao.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/UserDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Categories.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Categories.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Cooperater.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Cooperater.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Cooperater_teastu.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Cooperater_teastu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Evalue.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Evalue.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/FirstCoYear.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/FirstCoYear.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/FirstCoYearCount.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/FirstCoYearCount.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Graph.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Graph.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Link.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Link.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Links.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Links.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Links_new.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Links_new.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Node.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Node.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Nodes.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Nodes.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Nodes_Links.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Nodes_Links.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Nodes_Links_new.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Nodes_Links_new.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Nodes_new.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Nodes_new.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Nodes_new_ID.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Nodes_new_ID.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Paper.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Paper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Scholar.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Scholar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/ScholarWeight.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/ScholarWeight.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/SearchItem.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/SearchItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Student.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Student.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Teacher.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Teacher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/TeacherWarp.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/TeacherWarp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Teacher_0.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Teacher_0.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Teacher_1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Teacher_1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Teacher_2.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Teacher_2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/Teacher_3.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/Teacher_3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/User.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/model/YearCount.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/model/YearCount.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/RankService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/RankService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/RecommendService$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/RecommendService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/RecommendService$2.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/RecommendService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/RecommendService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/RecommendService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ReferenceService$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ReferenceService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ReferenceService$2.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ReferenceService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ReferenceService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ReferenceService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/RegisterService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/RegisterService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCoTeamService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCoTeamService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService$1.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarCooperateService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarInfoService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ScholarInfoService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/TeacherStudentService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/TeacherStudentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/util/ConfigurationConstant.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/ConfigurationConstant.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/util/HbaseUtils.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/HbaseUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/util/JedisClusterFactory.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/JedisClusterFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/util/ListTranscoder.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/ListTranscoder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$1.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$10.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$11.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$12.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$13.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$14.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$15.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$16.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$17.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$18.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$2.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$3.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$4.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$5.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$6.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$7.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$8.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$9.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/RedisTest.class" afterPath="$PROJECT_DIR$/target/test-classes/RedisTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Test$1.class" afterPath="$PROJECT_DIR$/target/test-classes/Test$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Test.class" afterPath="$PROJECT_DIR$/target/test-classes/Test.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WOS.iml" afterPath="$PROJECT_DIR$/WOS.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Graph.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Graph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Node.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Node.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Scholar.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/model/Scholar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,255 +274,12 @@
     <favorites_list name="WOS" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CooperateRelaController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="204" column="24" lean-forward="false" selection-start-line="204" selection-start-column="24" selection-end-line="204" selection-end-column="24" />
-              <folding>
-                <marker date="1529674098685" expanded="false" signature="4720:4726" ph="&lt;~&gt;" />
-                <marker date="1529674098685" expanded="false" signature="4798:4804" ph="&lt;~&gt;" />
-                <marker date="1529674098685" expanded="true" signature="5849:5914" ph="@{...}" />
-                <marker date="1529674098685" expanded="true" signature="5975:7404" ph="{...}" />
-                <marker date="1529674098685" expanded="false" signature="6405:6413" ph="&lt;~&gt;" />
-                <marker date="1529674098685" expanded="false" signature="6466:6474" ph="&lt;~&gt;" />
-                <marker date="1529674098685" expanded="false" signature="6892:6898" ph="&lt;~&gt;" />
-                <marker date="1529674098685" expanded="false" signature="7041:7047" ph="&lt;~&gt;" />
-                <marker date="1529674098685" expanded="false" signature="7465:7476" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="7493:7499" ph=" }" />
-                <marker date="1529674098685" expanded="true" signature="7667:9149" ph="{...}" />
-                <marker date="1529674098685" expanded="true" signature="9278:9644" ph="{...}" />
-                <marker date="1529674098685" expanded="true" signature="9777:10305" ph="{...}" />
-                <marker date="1529674098685" expanded="true" signature="10359:10421" ph="@{...}" />
-                <marker date="1529674098685" expanded="true" signature="10631:11820" ph="{...}" />
-                <marker date="1529674098685" expanded="false" signature="10853:10861" ph="&lt;~&gt;" />
-                <marker date="1529674098685" expanded="false" signature="10914:10922" ph="&lt;~&gt;" />
-                <marker date="1529674098685" expanded="false" signature="11340:11346" ph="&lt;~&gt;" />
-                <marker date="1529674098685" expanded="false" signature="11455:11461" ph="&lt;~&gt;" />
-                <marker date="1529674098685" expanded="true" signature="11826:11908" ph="@{...}" />
-                <marker date="1529674098685" expanded="true" signature="11984:13541" ph="{...}" />
-                <marker date="1529674098685" expanded="false" signature="12215:12221" ph="&lt;~&gt;" />
-                <marker date="1529674098685" expanded="false" signature="12667:12673" ph="&lt;~&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cooperater.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Cooperater.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="39" column="5" lean-forward="false" selection-start-line="37" selection-start-column="14" selection-end-line="39" selection-end-column="5" />
-              <folding>
-                <marker date="1529674098685" expanded="false" signature="876:887" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="899:905" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="943:954" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="971:977" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="1011:1022" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="1039:1045" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="1093:1104" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="1131:1137" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="1186:1197" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="1219:1225" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="1293:1304" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="1341:1347" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="1378:1389" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="1403:1409" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="1451:1462" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="1483:1489" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="1520:1531" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="1545:1551" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="1593:1604" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="1625:1631" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="1665:1676" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="1693:1699" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="1747:1758" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="1785:1791" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="1859:1870" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="1893:1899" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="1956:1967" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="2006:2012" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="2046:2057" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="2077:2083" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="2134:2145" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="2178:2184" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="2220:2231" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="2253:2259" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="2314:2325" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="2362:2368" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="2402:2413" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="2430:2436" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="2484:2495" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="2522:2528" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="2561:2572" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="2588:2594" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="2640:2651" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="2676:2682" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="2716:2727" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="2744:2750" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="2798:2809" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="2836:2842" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="2873:2884" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="2898:2904" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="2946:2957" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="2978:2984" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="3012:3023" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="3034:3040" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="3076:3087" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="3102:3108" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="3138:3149" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="3162:3168" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="3208:3219" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="3238:3244" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="3273:3284" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="3296:3302" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="3340:3351" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="3368:3374" ph=" }" />
-                <marker date="1529674098685" expanded="false" signature="3401:3412" ph=" { " />
-                <marker date="1529674098685" expanded="false" signature="3425:3431" ph=" }" />
-                <marker date="1529674098685" expanded="true" signature="3483:3665" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TeacherStudentController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/TeacherStudentController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-              <folding>
-                <marker date="1529674098685" expanded="true" signature="32486:32494" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StatisticalRankingsController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HbaseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/HbaseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="1551" column="56" lean-forward="false" selection-start-line="1551" selection-start-column="56" selection-end-line="1551" selection-end-column="56" />
-              <folding>
-                <marker date="1529674098689" expanded="false" signature="6371:6387" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="6773:6789" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="10845:10861" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="13058:13074" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="15753:15769" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="17857:17873" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="19954:19970" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="22031:22047" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="25427:25443" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="27083:27099" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="29415:29431" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="32662:32793" ph="(RowMapper) (result, rowNum) → {" />
-                <marker date="1529674098689" expanded="false" signature="33045:33060" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="33656:33671" ph="}" />
-                <marker date="1529674098689" expanded="false" signature="34188:34325" ph="(RowMapper) (result, rowNum) → {" />
-                <marker date="1529674098689" expanded="false" signature="36129:36144" ph="}" />
-                <marker date="1529674098689" expanded="false" signature="36227:36311" ph="(Comparator) (o1, o2) → {" />
-                <marker date="1529674098689" expanded="false" signature="36553:36568" ph="}" />
-                <marker date="1529674098689" expanded="false" signature="36622:36631" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="36784:36793" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="37349:37486" ph="(result, rowNum) → {" />
-                <marker date="1529674098689" expanded="false" signature="37626:37641" ph="}" />
-                <marker date="1529674098689" expanded="false" signature="37775:37791" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="39991:40007" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="42066:42082" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="44374:44390" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="46213:46222" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="49105:49189" ph="(Comparator) (o1, o2) → {" />
-                <marker date="1529674098689" expanded="false" signature="49431:49446" ph="}" />
-                <marker date="1529674098689" expanded="false" signature="49505:49514" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="49783:49867" ph="(Comparator) (o1, o2) → {" />
-                <marker date="1529674098689" expanded="false" signature="50109:50124" ph="}" />
-                <marker date="1529674098689" expanded="false" signature="50180:50189" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="51456:51465" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="53840:53924" ph="(Comparator) (o1, o2) → {" />
-                <marker date="1529674098689" expanded="false" signature="54202:54217" ph="}" />
-                <marker date="1529674098689" expanded="false" signature="54276:54285" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="54554:54638" ph="(Comparator) (o1, o2) → {" />
-                <marker date="1529674098689" expanded="false" signature="54916:54931" ph="}" />
-                <marker date="1529674098689" expanded="false" signature="54987:54996" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="56268:56277" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="61248:61332" ph="(Comparator) (o1, o2) → {" />
-                <marker date="1529674098689" expanded="false" signature="61574:61589" ph="}" />
-                <marker date="1529674098689" expanded="false" signature="61648:61657" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="61926:62010" ph="(Comparator) (o1, o2) → {" />
-                <marker date="1529674098689" expanded="false" signature="62252:62267" ph="}" />
-                <marker date="1529674098689" expanded="false" signature="62323:62332" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="68345:68482" ph="(RowMapper) (result, rowNum) → {" />
-                <marker date="1529674098689" expanded="false" signature="70637:70652" ph="}" />
-                <marker date="1529674098689" expanded="false" signature="70735:70819" ph="(Comparator) (o1, o2) → {" />
-                <marker date="1529674098689" expanded="false" signature="71097:71112" ph="}" />
-                <marker date="1529674098689" expanded="false" signature="71168:71177" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="71236:71245" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="71922:72059" ph="(result, rowNum) → {" />
-                <marker date="1529674098689" expanded="false" signature="72109:72124" ph="}" />
-                <marker date="1529674098689" expanded="false" signature="72301:72317" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="74361:74498" ph="(RowMapper) (result, rowNum) → {" />
-                <marker date="1529674098689" expanded="false" signature="74963:74978" ph="}" />
-                <marker date="1529674098689" expanded="false" signature="75061:75145" ph="(Comparator) (o1, o2) → {" />
-                <marker date="1529674098689" expanded="false" signature="75387:75402" ph="}" />
-                <marker date="1529674098689" expanded="false" signature="75476:75492" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="75544:75560" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="75612:75628" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="75680:75696" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="77101:77117" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="79245:79261" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="81578:81594" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="83757:83773" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="85800:85816" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="87930:87946" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="90084:90100" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="92193:92209" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="94570:94720" ph="(result, i) → {" />
-                <marker date="1529674098689" expanded="false" signature="94800:94812" ph="&lt;~&gt;" />
-                <marker date="1529674098689" expanded="false" signature="96740:96755" ph="}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-              <folding>
-                <marker date="1529717279850" expanded="true" signature="91265:91282" ph="..." />
-                <marker date="1529717279850" expanded="true" signature="91265:91300" ph="..." />
-                <marker date="1529717279850" expanded="true" signature="91265:91313" ph="..." />
-                <marker date="1529717279850" expanded="true" signature="91265:91328" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="flights.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/flights.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getYearConumbersById</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -288,8 +298,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/register2.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/worldMap.ftl" />
         <option value="$PROJECT_DIR$/src/main/test/HbaseTest.java" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -331,8 +341,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -378,7 +386,35 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="thealpha" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WOS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="thealpha" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="imple" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WOS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="thealpha" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WOS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="thealpha" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
@@ -387,11 +423,120 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WOS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="ftl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WOS" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:4.3.7.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:4.3.7.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-4.3.7.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:4.3.7.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-4.3.7.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:4.3.7.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-4.3.7.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:4.3.7.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-4.3.7.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="method" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:4.3.7.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-4.3.7.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="method" type="462c0819:PsiDirectoryNode" />
+              <item name="support" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:4.3.7.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:4.3.7.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-4.3.7.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:4.3.7.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-4.3.7.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:4.3.7.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-4.3.7.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:4.3.7.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-4.3.7.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="method" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:4.3.7.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-4.3.7.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="method" type="462c0819:PsiDirectoryNode" />
+              <item name="annotation" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -418,7 +563,13 @@
   <component name="RunManager" selected="Tomcat Server.Tomcat">
     <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.16" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment />
+      <deployment>
+        <artifact name="WOS:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_WOS_3" />
       </server-settings>
@@ -478,6 +629,9 @@
       </ConfigurationWrapper>
       <method>
         <option name="Make" enabled="false" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="WOS:war exploded" />
+        </option>
       </method>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -638,13 +792,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35822000" />
+    <option name="totallyTimeSpent" value="36179000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.2884097" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61264014" sideWeight="0.2884097" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32831" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22982322" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -653,18 +807,18 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2992465" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1529052" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2703549" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35270134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2107005" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21401617" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -815,27 +969,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Link.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="200" column="22" lean-forward="false" selection-start-line="200" selection-start-column="22" selection-end-line="200" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-291">
@@ -854,13 +987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="170" column="102" lean-forward="false" selection-start-line="170" selection-start-column="102" selection-end-line="170" selection-end-column="102" />
         </state>
       </provider>
     </entry>
@@ -911,7 +1037,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -926,7 +1051,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -934,7 +1058,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -954,8 +1077,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="234">
+          <caret line="22" column="49" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -979,51 +1102,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-          <folding>
-            <marker date="1529717279850" expanded="true" signature="91265:91282" ph="..." />
-            <marker date="1529717279850" expanded="true" signature="91265:91300" ph="..." />
-            <marker date="1529717279850" expanded="true" signature="91265:91313" ph="..." />
-            <marker date="1529717279850" expanded="true" signature="91265:91328" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="204" column="24" lean-forward="false" selection-start-line="204" selection-start-column="24" selection-end-line="204" selection-end-column="24" />
+        <state relative-caret-position="-69">
+          <caret line="187" column="0" lean-forward="false" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
           <folding>
-            <marker date="1529674098685" expanded="false" signature="4720:4726" ph="&lt;~&gt;" />
-            <marker date="1529674098685" expanded="false" signature="4798:4804" ph="&lt;~&gt;" />
-            <marker date="1529674098685" expanded="true" signature="5849:5914" ph="@{...}" />
-            <marker date="1529674098685" expanded="true" signature="5975:7404" ph="{...}" />
-            <marker date="1529674098685" expanded="false" signature="6405:6413" ph="&lt;~&gt;" />
-            <marker date="1529674098685" expanded="false" signature="6466:6474" ph="&lt;~&gt;" />
-            <marker date="1529674098685" expanded="false" signature="6892:6898" ph="&lt;~&gt;" />
-            <marker date="1529674098685" expanded="false" signature="7041:7047" ph="&lt;~&gt;" />
-            <marker date="1529674098685" expanded="false" signature="7465:7476" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="7493:7499" ph=" }" />
-            <marker date="1529674098685" expanded="true" signature="7667:9149" ph="{...}" />
-            <marker date="1529674098685" expanded="true" signature="9278:9644" ph="{...}" />
-            <marker date="1529674098685" expanded="true" signature="9777:10305" ph="{...}" />
-            <marker date="1529674098685" expanded="true" signature="10359:10421" ph="@{...}" />
-            <marker date="1529674098685" expanded="true" signature="10631:11820" ph="{...}" />
-            <marker date="1529674098685" expanded="false" signature="10853:10861" ph="&lt;~&gt;" />
-            <marker date="1529674098685" expanded="false" signature="10914:10922" ph="&lt;~&gt;" />
-            <marker date="1529674098685" expanded="false" signature="11340:11346" ph="&lt;~&gt;" />
-            <marker date="1529674098685" expanded="false" signature="11455:11461" ph="&lt;~&gt;" />
-            <marker date="1529674098685" expanded="true" signature="11826:11908" ph="@{...}" />
-            <marker date="1529674098685" expanded="true" signature="11984:13541" ph="{...}" />
-            <marker date="1529674098685" expanded="false" signature="12215:12221" ph="&lt;~&gt;" />
-            <marker date="1529674098685" expanded="false" signature="12667:12673" ph="&lt;~&gt;" />
+            <marker date="1531391511506" expanded="true" signature="16009:16679" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1032,75 +1119,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="39" column="5" lean-forward="false" selection-start-line="37" selection-start-column="14" selection-end-line="39" selection-end-column="5" />
-          <folding>
-            <marker date="1529674098685" expanded="false" signature="876:887" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="899:905" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="943:954" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="971:977" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="1011:1022" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="1039:1045" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="1093:1104" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="1131:1137" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="1186:1197" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="1219:1225" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="1293:1304" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="1341:1347" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="1378:1389" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="1403:1409" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="1451:1462" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="1483:1489" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="1520:1531" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="1545:1551" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="1593:1604" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="1625:1631" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="1665:1676" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="1693:1699" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="1747:1758" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="1785:1791" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="1859:1870" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="1893:1899" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="1956:1967" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="2006:2012" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="2046:2057" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="2077:2083" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="2134:2145" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="2178:2184" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="2220:2231" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="2253:2259" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="2314:2325" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="2362:2368" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="2402:2413" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="2430:2436" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="2484:2495" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="2522:2528" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="2561:2572" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="2588:2594" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="2640:2651" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="2676:2682" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="2716:2727" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="2744:2750" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="2798:2809" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="2836:2842" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="2873:2884" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="2898:2904" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="2946:2957" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="2978:2984" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="3012:3023" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="3034:3040" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="3076:3087" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="3102:3108" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="3138:3149" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="3162:3168" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="3208:3219" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="3238:3244" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="3273:3284" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="3296:3302" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="3340:3351" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="3368:3374" ph=" }" />
-            <marker date="1529674098685" expanded="false" signature="3401:3412" ph=" { " />
-            <marker date="1529674098685" expanded="false" signature="3425:3431" ph=" }" />
-            <marker date="1529674098685" expanded="true" signature="3483:3665" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1118,7 +1137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1231,9 +1249,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1241,6 +1257,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-717">
+          <caret line="104" column="43" lean-forward="false" selection-start-line="104" selection-start-column="43" selection-end-line="104" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarCooperateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3330">
+          <caret line="195" column="9" lean-forward="true" selection-start-line="195" selection-start-column="9" selection-end-line="195" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Link.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
           <folding />
         </state>
       </provider>

@@ -9,6 +9,10 @@ import java.util.List;
 public class Graph implements Serializable{
     private List<Node> nodes;
     private List<Link> links;
+    private int maxsize;
+    private int minsize;
+    private int maxlink;
+    private int minlink;
 
     public List<Node> getNodes() {
         return nodes;
@@ -24,5 +28,37 @@ public class Graph implements Serializable{
 
     public void setLinks(List<Link> links) {
         this.links = links;
+    }
+
+    public int getMaxsize() {
+        return maxsize;
+    }
+
+    public void setMaxsize(int maxsize) {
+        this.maxsize = maxsize;
+    }
+
+    public int getMinsize() {
+        return minsize;
+    }
+
+    public void setMinsize(int minsize) {
+        this.minsize = minsize;
+    }
+
+    public int getMaxlink() {
+        return maxlink;
+    }
+
+    public void setMaxlink(int maxlink) {
+        this.maxlink = maxlink;
+    }
+
+    public int getMinlink() {
+        return minlink;
+    }
+
+    public void setMinlink(int minlink) {
+        this.minlink = minlink;
     }
 }
