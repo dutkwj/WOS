@@ -1,17 +1,12 @@
 <!doctype html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>scholar rank</title>
-    <link rel="stylesheet" href="../css/layui.css" type="text/css">
-    <link rel="stylesheet" href="../css/templatemo-style.css">
+
     <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
     <script type="text/javascript" src="../js/layui.all.js" charset="utf-8"></script>
 </head>
 <body>
-<div class="layui-container" id="scholar_list">
+<div class="" id="scholar_list">
 </div>
 <br/>
 <div class="layui-container">
@@ -103,24 +98,50 @@
                                     temp = ' | ' + "${type}" + ':' + thisData[4][index];
                             </#if>
                         </#if>
-                        arr.push('<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;background:#ffffff">' +
-                                '<div class="row tm-media-row">' +
-                                '<div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">' +
-                                '</div>' +
-                                '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">' +
-                                '<img src="../img/scholarImg.png" style="width:70%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">' +
-                                '</div>' +
-                                '<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">' +
-                                '<div class="tm-media-text-container">' +
-                                '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/scholar/baseInfo?authorId=' + thisData[0][index] + '">' + thisData[1][index] + '</a></h3>' +
-                                '<p class="tm-media-description tm-gray-text-2">P-index:' + thisData[3][index] + ' | H-index:' + thisData[2][index]  + temp +
-                                '<br/>' +
-                                '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ' + thisData[5][index] + '<br/>' +
-                                '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study field: ' + thisData[6][index] + '</p>' +
-                                '</div>' +
-                                '</div>' +
-                                '</div>' +
-                                '</fieldset>');
+
+                        var areas = thisData[6][index].split(';');
+
+                        var result='';
+                        var len = areas.length;
+                        if(len > 4){
+                            len = 4;
+                        }
+                        for(var i = 0 ;i< len;i++){
+                            var cnt = 0;
+                            if(areas[i] !== null && areas[i] !== undefined && areas[i] !== ''){
+                                result += '<span>';
+                                result += areas[i];
+                                result += '</span>';
+                                cnt++;
+                            }
+                            if(cnt!=len && len!=4){
+                                result += '<span>';
+                                result += "no information";
+                                result += '</span>';
+                            }
+                        }
+
+                        arr.push('<div class="profile-content">'+
+                                '<div class="card">'+
+                                '<div class="firstinfo">'+
+                                '<img src="/img/images/users/scholarImg.png"  alt="" class="img-circle img-responsive" />'+
+                                '<div class="profileinfo">'+
+                                '<h1><a href="/scholar/baseInfo?authorId=' + thisData[0][index] + '">' + thisData[1][index] +  '</a></h1>'+
+                                '<h4>P-index:' + thisData[3][index]+ ' ' + 'Hindex:' + thisData[2][index] + '  ' + temp + '</h4>'+
+                                '<p class="bio">'+
+                                'Afliation: '+ thisData[5][index] +'</p>'+
+                                '<div class="profile-skills">'+ result +
+                                '</div>'+
+                                '<div class="hire-btn">'+
+                                '<a href="graph.html" class="btn-default" > <i class="fa fa-location-arrow"></i> Relation</a>'+
+                                '</div>'+
+                                '</div>'+
+                                '</div>'+
+                                '</div>'+
+                                '</div>');
+
+
+
                     });
                     return arr.join('');
 

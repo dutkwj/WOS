@@ -1,221 +1,398 @@
-<#assign path="${request.getContextPath()}">
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>index</title>
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="${path}/css/layui.css" type="text/css">
-    <link rel="stylesheet" href="${path}/css/buttons.css" type="text/css">
-    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="../css/stickup.css" type="text/css">
-    <link rel="stylesheet" href="${path}/css/templatemo-style.css">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ScriptsBundle">
+    <title>Opportunities A Mega Job Board Template</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
+    <!-- BOOTSTRAPE STYLESHEET CSS FILES -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- JQUERY SELECT -->
+    <link href="css/select2.min.css" rel="stylesheet" />
+
+    <!-- JQUERY MENU -->
+    <link rel="stylesheet" href="css/mega_menu.min.css">
+
+    <!-- ANIMATION -->
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <!-- OWl  CAROUSEL-->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.style.css">
+
+    <!-- TEMPLATE CORE CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--  REVOLUTION STYLE SETTING -->
+    <link href="js/revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/et-line-fonts.css" type="text/css">
+    <link rel="stylesheet" href="css/slideshowstyle.css" type="text/css">
+
+    <link rel="stylesheet" href="layui/css/layui.css" type="text/css" media="all">
+
+
+    <!-- Google Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,300" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+
+    <!-- JavaScripts -->
+    <script src="js/modernizr.js"></script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .layui-select-title input{
+            height: 60px;
+        }
+
+        .layui-form-select dl dd.layui-this {
+            /*background-color: #5FB878;*/
+            background-color: rgba(77,196,25);
+            color: #fff
+        }
+    </style>
 </head>
-<body  style="background-color: #EBEBEB">
-<div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
-    <ul class="layui-nav">
-        <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
-    </ul>
-    <ul class="layui-nav layui-layout-right">
-        <#if Session.user?exists>
-            <li class="layui-nav-item">
-                <a href="javascript:;">
-                    <img src="/hdfs/personalPhoto" class="layui-nav-img">
-                    ${Session['user'].name!""}
-                </a>
-                <dl class="layui-nav-child">
-                    <dd><a href="/showPersonalInfo/getUserInfo">base information</a></dd>
-                    <dd><a href="/modifyPsw/modifyPage">modify information</a></dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item"><a href="/logout">logout</a></li>
-            <#else>
-                <li class="layui-nav-item"><a href="/login/index">login</a></li>
-                <li class="layui-nav-item"><a href="/register/index">register</a></li>
-        </#if>
-    </ul>
-</div>
 
-<script type="text/javascript" src="../js/layui.all.js" charset="utf-8"></script>
-<script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/stickUp.min.js"></script>
-
-<script type="text/javascript">
-    layui.use('element', function () {
-        var element = layui.element;
-        element.on('nav(demo)', function (elem) {
-            //console.log(elem)
-            layer.msg(elem.text());
-        });
-    });
-    jQuery(function($) {
-        $(document).ready( function() {
-            $('.topNav').stickUp();
-        });
-    });
-</script>
-
-<br/>
-<br/>
-
-
-<div class="banner">
-    <div class="container">
-        <div style="margin-left:25%">
-            <img src="../img/WOS.png" alt="wos" >
+<body>
+<div class="page">
+    <div id="spinner">
+        <div class="spinner-img"> <img alt="Opportunities Preloader" src="images/loader.gif" />
+            <h2>Please Wait.....</h2>
         </div>
-        <div class="layui-container">
-            <form class="layui-form" action="/simpleSearch/content">
-                <div class="layui-row layui-col-space10">
-                    <div class="layui-col-md1">
+    </div>
+    <header id="header2" class="navbar transparent-header fa-change-white">
+        <nav id="menu-1" class="mega-menu" data-color="">
+            <section class="menu-list-items">
+                <ul class="menu-logo">
+                    <li>
+                        <a href="#"> <img src="images/temp/wos_top.png" width="220px" height="40px" alt="logo" class="img-responsive"> </a>
+                    </li>
+                </ul>
+                <ul class="menu-links pull-right">
+
+                    <li><a href="login.html">Login</a></li>
+                    <li class="no-bg"><a href="register.html" class="p-job">register</a></li>
+                </ul>
+            </section>
+        </nav>
+    </header>
+    <section class="slidershow-bg parallex">
+
+        <div class="container">
+            <div class="row">
+                <ul class="cb-slideshow">
+                    <li><span>Image 01</span></li>
+                    <li><span>Image 02</span></li>
+                    <li><span>Image 03</span></li>
+                    <li><span>Image 04</span></li>
+                </ul>
+                <div class="col-md-10 col-sm-12 col-md-offset-1 col-xs-12 nopadding">
+                    <div class="search-form-contaner">
+                        <h1 class="search-main-title" style="text-transform：lowercase;">Web of Scholars</h1>
+                        <form class="layui-form" action="/register/addUser" method="post" enctype="multipart/form-data">
+
+                            <div class="col-md-2 col-sm-2 col-xs-12 nopadding">
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12 nopadding">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="search" placeholder="Please enter a scholar's name " value="">
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-2 col-xs-12 nopadding">
+                                <div class="form-group" style="height: 80px;">
+
+                                    <select class="" style="height: 80px;">
+                                        <!-- <option>&nbsp;</option> -->
+                                        <option value="0">Cooperation</option>
+                                        <option value="1">Advisor-advise</option>
+                                        <option value="2">Citation</option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- </form> -->
+                            </div>
+
+                            <div class="col-md-2 col-sm-2 col-xs-12 nopadding">
+                                <div class="form-group form-action">
+                                    <button type="button" class="btn btn-default btn-search-submit">Search <i class="fa fa-angle-right"></i></button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="layui-col-md8">
-                        <div class="layui-form-item">
-                            <div class="layui-input-block">
-                                <input type="text" name="scholarName" lay-verify="title" autocomplete="off"
-                                       placeholder="scholar name" class="layui-input">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="search">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
+                    <div class="input-group">
+                        <div class="input-group-btn search-panel">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span id="search_concept">Filter By</span> <span class="caret"></span> </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Cooperation</a></li>
+                                <li><a href="#">Advisor-advise</a></li>
+                                <li><a href="#">Citation</a></li>
+                            </ul>
+                        </div>
+                        <input type="hidden" name="search_param" value="all" id="search_param">
+                        <input type="text" class="form-control search-field" name="x" placeholder="Search term...">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
+                            </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="category-section-3 light-blue">
+
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="Heading-title black">
+                        <h1>Relations</h1>
+                        <p>Based on a large number of academic papers, we conclude the following three relationships.</p>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="category-section-3-box">
+                            <div class="category-section-3-box-inner"> <i class="fa fa-users"></i>
+                                <h4> Cooperation </h4>
+                                <span>( 1980 )</span> </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="category-section-3-box">
+                            <div class="category-section-3-box-inner"> <i class="fa fa-graduation-cap"></i>
+                                <h4> advisor-advise</h4>
+                                <span>( 980 )</span> </div>
+                            <!--  <div class="category-section-3-box-over-text animated fadeIn">
+                                 <h4>FINANCIAL MODELERS</h4>
+                                 <h4>BOOKKEEPERS</h4>
+                                 <h4>TAX ACCOUNTANTS</h4>
+                                 <p><a href=""> See All </a></p>
+                             </div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="category-section-3-box">
+                            <div class="category-section-3-box-inner"> <i class="fa fa-pencil"></i>
+                                <h4> Citation </h4>
+                                <span>( 660 )</span> </div>
+                            <!--  <div class="category-section-3-box-over-text animated fadeIn">
+                                 <h4>SEO SPECIALISTS</h4>
+                                 <h4>MARKETING EXPERTS</h4>
+                                 <h4>EMAIL AUTOMATORS</h4>
+                                 <p><a href=""> See All </a></p>
+                             </div> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-posts-section">
+        <canvas> type="text/javascript" color="0,0,255" opacity='0.7' zIndex="200" count="99" height="200px" src="dist/canvas-nest.js"></canvas>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="Heading-title black">
+                            <h1>The top 3 scholars</h1>
+                            <p>Here are the top three scholars based on a large number of papers.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="blog-post">
+                            <div class="post-img"> <a href="#"> <img src="images/blog/1.jpg" alt="" class="img-responsive"> </a> </div>
+                            <div class="post-info"> <a href="">Aug 30, 2016</a> <a href="#">23 comments</a> </div>
+                            <h3 class="post-title"> <a href="#"> Sketch Designing Artists are beauty: A report </a> </h3>
+                            <p class="post-excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam neque tempora odit
+                                atque repellat est molestiae perferendis. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="blog-post">
+                            <div class="post-img"> <a href="#"> <img src="images/blog/2.jpg" alt="" class="img-responsive"> </a> </div>
+                            <div class="post-info"> <a href="#">august 30, 2016</a> <a href="#">90 comments</a> </div>
+                            <h3 class="post-title"> <a href="#"> A suitable timings for a graphic designers </a> </h3>
+                            <p class="post-excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam neque tempora odit
+                                atque repellat est molestiae perferendis. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="blog-post">
+                            <div class="post-img"> <a href="#"> <img src="images/blog/3.jpg" alt="" class="img-responsive"> </a> </div>
+                            <div class="post-info"> <a href="#">august 02, 2016</a> <a href="#">10 comments</a> </div>
+                            <h3 class="post-title"> <a href="#"> How to get a job on same time same place </a> </h3>
+                            <p class="post-excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam neque tempora odit
+                                atque repellat est molestiae perferendis. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="load-more-btn">
+                            <a href="users.html"><button class="btn-default" style="text-transform:none;">All Rankings<i class="fa fa-angle-right"></i> </button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="fixed-footer-1">
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-xs-12">
+                        <div class="footer_block">
+                            <a href="index.html" class="f_logo"><img src="images/temp/wos.png" class="img-responsive" alt="logo"></a>
+                            <p>A website that draws scholars' connections through a large number of papers and information analysis.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-xs-12">
+                        <div class="footer_block">
+                            <h4>Contact Information</h4>
+                            <ul class="personal-info">
+                                <li><i class="fa fa-map-marker"></i> Development Zone, Dalian 116620, China </li>
+                                <li><i class="fa fa-envelope"></i> http://thealphalab.org/</li>
+                                <li><i class="fa fa-phone"></i> 12345678910 </li>
+                                <!-- <li><i class="fa fa-clock-o"></i> Mon - Sun: 8:00 - 16:00</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="fixed-footer-1">
+
+            <section class="footer-bottom-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="footer-bottom">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <p>Copyright ©2018 - <a href="http://thealphalab.org/">The Alpha Lab </a></p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="layui-col-md3">
-                        <div class="layui-form-item">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <button class="layui-btn layui-btn-radius" lay-submit="">search</button>
-                        </div>
-                    </div>
                 </div>
-            </form>
+            </section>
         </div>
-        <br/>
-        <div class="layui-container">
-            <div class="layui-row layui-col-space10">
-                <div class="layui-col-md2">
-                </div>
-                <div class="layui-col-md9" style="border: 1px solid #FFFFFF;padding: 0; background-color: #FFFFFF">
-                    <ul class="nav navbar-nav">
-                        <#if search??>
-                            <li class="active"><a href="#">search result</a></li>
-                        <#else>
-                            <li class="active"><a href="#">recommend scholar</a></li>
-                        </#if>
-
-                        <li><a href="/searchMore/index">search more scholar</a></li>
-                        <li><a href="/rank/index">statistical rankings</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="layui-row layui-col-space10" id="scholar_list">
-            </div>
-            <br/>
-
-            <div class="layui-row layui-col-space10">
-                <div class="layui-col-md5">
-                </div>
-                <div class="layui-col-md7">
-                    <div id="page"></div>
-                </div>
-            </div>
-            <br/>
-            <br/>
-            <br/>
-
-        </div>
-
     </div>
-</div>
 
-<script>
-    layui.use(['laypage', 'layer'], function(){
-        var laypage = layui.laypage
-                ,layer = layui.layer;
+    <a href="#" class="scrollup"><i class="fa fa-chevron-up"></i></a>
 
-        var name = [];
-        var hindex = [];
-        var qindex = [];
-        var aff = [];
-        var id = [];
-        var fieldName = [];
-        <#if scholars?? && (scholars?size>0)>
-            <#list scholars as scholar>
-                id.push("${scholar.index!""}");
-                name.push("${scholar.name!""}");
-                hindex.push("${scholar.hindex!""}");
-                qindex.push("${scholar.qindex!""}");
-                aff.push("${scholar.aff!""}");
-                fieldName.push("${scholar.fieldName!""}");
-            </#list>
-        </#if>
+    <!-- JAVASCRIPT JS  -->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
 
-        //调用分页
-        laypage.render({
-            elem: 'page'
-            ,count: id.length
-            ,limit: 5
-            ,prev:'prev page'
-            ,next:'next page'
-            ,jump: function(obj){
-                //模拟渲染
-                document.getElementById('scholar_list').innerHTML = function(){
-                    var arr = [];
-                    var thisData = [];
-                    var subId = id.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
-                    var subName = name.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
-                    var subAff = aff.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
-                    var subFieldName = fieldName.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
-                    var subHindex = hindex.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
-                    var subQindex = qindex.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
-                    thisData.push(subId);
-                    thisData.push(subName);
-                    thisData.push(subHindex);
-                    thisData.push(subQindex);
-                    thisData.push(subAff);
-                    thisData.push(subFieldName);
-                    layui.each(subId, function(index, item){
-//                        arr.push('<li>'+ item +'</li>');
-                        arr.push('<div class="layui-col-md2">' +
-                                '</div>' +
-                                '<div class="layui-col-md9" style="border-left: 1px solid #eee;border-right: 1px solid #eee;border-bottom: 1px solid #eee;">' +
-                                    '<div class="row tm-media-row" style="background-color: #ffffff">' +
-                                        '<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">' +
-                                            '<img src="../img/scholarImg.png" style="width: 60%" alt="Image" class="img-fluid img-circle img-thumbnail tm-media-img">' +
-                                        '</div>' +
-                                        '<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">' +
-                                             '<div class="tm-media-text-container">' +
-                                            '<h3 class="tm-media-title tm-gray-text"><a style="text-decoration: none" href="/relationGraph/' + thisData[0][index] + '">' + thisData[1][index] + '</a> </h3>' +
-                                            '<p class="tm-media-description tm-gray-text-2">Q-index:' + thisData[3][index] + ' | H-index:' + thisData[2][index] +
-                                            '<br/>' +
-                                            '<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Affiliation: ' + thisData[4][index] + '<br/>' +
-                                            '<span class="glyphicon glyphicon-tags" aria-hidden="true"></span>&nbsp;Study Field: ' + thisData[5][index] + '</p>' +
-                                            '</div>' +
-                                        '</div>' +
-                                    '</div>' +
-                                '</div>');
-                    });
-                    return arr.join('');
-                }();
-            }
+    <!-- BOOTSTRAP CORE JS -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- JQUERY SELECT -->
+    <script type="text/javascript" src="js/select2.min.js"></script>
+
+    <!-- MEGA MENU -->
+    <script type="text/javascript" src="js/mega_menu.min.js"></script>
+
+    <!-- JQUERY EASING -->
+    <script type="text/javascript" src="js/easing.js"></script>
+
+    <!-- JQUERY COUNTERUP -->
+    <script type="text/javascript" src="js/counterup.js"></script>
+
+    <!-- JQUERY WAYPOINT -->
+    <script type="text/javascript" src="js/waypoints.min.js"></script>
+
+    <!-- Owl Carousel -->
+    <script type="text/javascript" src="js/owl-carousel.js"></script>
+
+    <!-- TEXT ROTATOR -->
+    <script type="text/javascript" src="js/typed.js"></script>
+
+    <!-- JQUERY REVEAL -->
+    <script type="text/javascript" src="js/footer-reveal.min.js"></script>
+
+    <!-- jQuery REVOLUTION Slider  -->
+    <script src="js/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="js/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- CORE JS -->
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <script type="text/javascript" src="layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        layui.use(['form', 'layedit', 'laydate'], function(){
+            var form = layui.form
+                    ,layer = layui.layer
+                    ,laydate = layui.laydate;
+
+            //日期
+            laydate.render({
+                elem: '#bornDate',
+                lang: 'en'
+            });
+            laydate.render({
+                elem: '#gradDate',
+                lang: 'en'
+            });
+
+
+
+            //自定义验证规则
+            form.verify({
+                repass: function(value){
+                    var password = document.getElementById('password').value;
+                    if (!(password == value)) {
+                        return "two input password must be consistent";
+                    }
+                }
+                ,required:[/[\S]+/,"must input area can't be null"]
+                ,pass: [/(.+){6,12}$/, 'password length must between 6 to 12']
+                ,email:[/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,"email format is not right"]
+            });
+
         });
 
-    });
 
-</script>
-<script src="../js/jquery.min.js"></script>
-<script src="../js/stickUp.min.js"></script>
-
-<script type="text/javascript">
-    //initiating jQuery
-    jQuery(function($) {
-        $(document).ready( function() {
-         //enabling stickUp on the '.navbar-wrapper' class
-         $('.qqq').stickUp();
-       });
-    });
     </script>
+</div>
 </body>
+
 </html>
