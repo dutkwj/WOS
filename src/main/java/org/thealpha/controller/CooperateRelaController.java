@@ -106,6 +106,7 @@ public class CooperateRelaController {
 //        return "cooperate";
 //        return "relationGraph";
         return "cooper_net";
+
     }
 
     @RequestMapping(value = "/directCooperateJSON/{scholarId}")

@@ -1,15 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-body {
-    background: #fff;
-    font: 12px Microsoft YaHei, arial, sans-serif;
-}
+.account{}
 
 ul {
     list-style-type: none;
@@ -55,25 +44,29 @@ h1 a {
 .accordion {
     width: 100%;
     max-width: 200px;
-    border: solid 1px #ccc;
+    border: none;
     background: #FFF;
 }
 
 .accordion .link {
     cursor: pointer;
     display: block;
-    padding: 15px 15px 15px 42px;
+    padding: 20px 3px;
     color: #4D4D4D;
     font-size: 14px;
     font-weight: 700;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid #f1f1f1;
     position: relative;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
 
 .accordion li:last-child .link {
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
     border-bottom: 0;
 }
 .accordion li{
@@ -116,12 +109,13 @@ h1 a {
  -----------------------------*/
 .submenu {
     display: none;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
+    background: #FFF;
     font-size: 14px;
 }
 
 .submenu li {
-    border-bottom: 1px solid #d6d7dc;
+    /*border-bottom: 1px solid #d6d7dc;*/
 }
 
 .submenu a {
@@ -129,7 +123,7 @@ h1 a {
     text-decoration: none;
     color: #666;
     padding: 12px;
-    padding-left: 42px;
+    /*padding-left: 42px;*/
     -webkit-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;

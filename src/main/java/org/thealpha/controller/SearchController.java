@@ -31,7 +31,9 @@ public class SearchController {
     private RecommendService recommendService;
 
     @RequestMapping("/index")
-    public String searchMoreIndex() {
+    public String searchMoreIndex(Model model, SearchItem searchItem) {
+        String indexScholarName = searchItem.getScholarName();
+        model.addAttribute("indexScholarName",indexScholarName );
         return "searchIndex";
     }
 

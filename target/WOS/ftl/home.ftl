@@ -1,340 +1,358 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="/css/htmleaf-demo.css">
-    <link rel="stylesheet" href="/css/csslider.default.css" />
-    <link rel="stylesheet" href="/css/inner.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="/css/topNavStyle.css">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ScriptsBundle">
+    <title>Opportunities A Mega Job Board Template</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <script src='/js/jquery-3.2.1.min.js'></script>
-    <script src="/js/megamenu.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <!-- BOOTSTRAPE STYLESHEET CSS FILES -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- JQUERY SELECT -->
+    <link href="css/select2.min.css" rel="stylesheet" />
+
+    <!-- JQUERY MENU -->
+    <link rel="stylesheet" href="css/mega_menu.min.css">
+
+    <!-- ANIMATION -->
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <!-- OWl  CAROUSEL-->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.style.css">
+
+    <!-- TEMPLATE CORE CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--  REVOLUTION STYLE SETTING -->
+    <link href="js/revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/et-line-fonts.css" type="text/css">
+    <link rel="stylesheet" href="css/slideshowstyle.css" type="text/css">
+
+    <link rel="stylesheet" href="layui/css/layui.css" type="text/css" media="all">
+
+
+    <!-- Google Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,300" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+
+    <!-- JavaScripts -->
+    <script src="js/modernizr.js"></script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <style type="text/css">
-        span.counter { display:block; margin:10px auto; font-size:64px; font-family:'Pacifico';color:#ffffcc}
-    </style>
-    <style type="text/css">
-        html, body {
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            overflow: hidden;
-        }
-        #site-landing {
-            position:relative;
-            height: 100%;
-            width: 100%;
-            background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-        }
-        .wrapper {
+        .layui-select-title input{
             height: 60px;
-            width: 460px;
-            border-radius: 4px;
-            box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
-            position: absolute;
-            top: 30%;
-            left: 22%;
-            margin-left: -230px;
-            margin-top: -30px;
-        }
-        .wos-data {
-            position: absolute;
-            top: 38%;
-            left: 10%;
         }
 
-        .inputbox {
-            box-sizing: border-box;
-            width: 400px;
-            height: 100%;
-            font-size: 22px;
-            background-color: #ffffff;
-            border: 2px solid #ffffff;
-            border-right: 0;
-            border-radius: 4px 0 0 4px;
-            padding: 10px;
-            float: left;
-            display: block;
-        }
-
-        .submit {
-            height: 100%;
-            width: 60px;
-            float: left;
-            border: 2px solid #ffffff;
-            border-left: 0;
-            box-sizing: border-box;
-            background-color: #ffffff;
-
-            border-radius: 0 4px 4px 0;
-            text-indent: -200em;
-            overflow: hidden;
-            display: block;
-            cursor: pointer;
-
-            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNy43NSAzNy43NSI+PHBhdGggZD0iTTQyLjA4LDM3LjYxbC04LjItOC4yLS4xNC0uMTFhMTUuNTMsMTUuNTMsMCwxLDAtNC40NCw0LjQ0cy4wNy4xLjExLjE0bDguMiw4LjJhMy4xNSwzLjE1LDAsMSwwLDQuNDYtNC40NlptLTIxLjMxLTYuN0ExMC4xNCwxMC4xNCwwLDEsMSwzMC45MSwyMC43NywxMC4xNCwxMC4xNCwwLDAsMSwyMC43NywzMC45MVptMCwwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNS4yNSAtNS4yNSkiIHN0eWxlPSJmaWxsOiM1ODU4NTg7ZmlsbC1ydWxlOmV2ZW5vZGQiLz48L3N2Zz4=);
-
-            background-size: 28px auto;
-            background-repeat: no-repeat;
-            background-position: center center;
-
-        }
-        input:focus {
-            outline: none;
+        .layui-form-select dl dd.layui-this {
+            /*background-color: #5FB878;*/
+            background-color: rgba(77,196,25);
+            color: #fff
         }
     </style>
 </head>
+
 <body>
-<div id="site-landing">
-</div>
-
-<div>
-    <a href="/index"><img style="position: absolute;width: 20%;left: 20px;top: 5px;" src="/img/wos_top.png"/></a>
-</div>
-
-<div class="menu-container" style="background:none;position: absolute;top:0;left:25%;">
-    <div class="menu" style="background:none">
-        <ul>
-            <li style="background:none"><a href="/index" style="color:#ffffcc">Home</a></li>
-            <li style="background:none"><a href="" style="color:#ffffcc">Relationship</a>
-                <ul>
-                    <li><a href="#">Cooperate</a>
-                        <ul>
-                            <li><a href="/relationGraph/0CAEADF8/directCooperate">Cooperate Graph</a></li>
-                            <li><a href="/relationGraph/0CAEADF8/MVC">Most Valuable Collaborators</a></li>
-                            <li><a href="/relationGraph/0CAEADF8/collaLocation">Collaborators Location</a></li>
-                            <li><a href="/relationGraph/0CAEADF8/collaNumber">Collaborators Number</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Team</a>
-                        <ul>
-                            <li><a href="/relationGraph/0CAEADF8/strongTeam">Strong Team</a></li>
-                            <li><a href="/relationGraph/0CAEADF8/middleTeam">Middle Team</a></li>
-                            <li><a href="/relationGraph/0CAEADF8/weakTeam">Weak Team</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Advisor-advise</a>
-                        <ul>
-                            <li><a href="#">Influence</a></li>
-                            <li><a href="#">Tree</a></li>
-                            <li><a href="#">Graph</a></li>
-                            <li><a href="#">Evalue</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Cite</a>
-                        <ul>
-                            <li><a href="/relationGraph/0CAEADF8/directCite">direct Cite</a></li>
-                            <li><a href="/relationGraph/0CAEADF8/directCited">direct Cited</a></li>
-                            <li><a href="/relationGraph/0CAEADF8/commonCite">Common Cite</a></li>
-                            <li><a href="/relationGraph/0CAEADF8/commonCited">Common Cited</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li style="background:none"><a href="/searchMore/index" style="color:#ffffcc">Search</a>
-            </li>
-            <li style="background:none"><a href="/rank/index" style="color:#ffffcc">Ranking</a>
-            </li>
-            <li style="background:none"><a href="/login/index" style="color:#ffffcc;margin-left: 200%">Login</a>
-            </li>
-            <li style="background:none">    <a href="/register/index" style="color:#ffffcc;margin-left: 150%">Register</a>
-            </li>
-        </ul>
+<div class="page">
+    <div id="spinner">
+        <div class="spinner-img"> <img alt="Opportunities Preloader" src="img/images/loader.gif" />
+            <h2>Please Wait.....</h2>
+        </div>
     </div>
-</div>
-
-<form class="wrapper" action="/relationGraph/index">
-    <input class="inputbox" style="opacity: 0.6" type="text" name="scholarName" id="search" placeholder="input scholar name...">
-    <input class="submit" style="opacity:0.6" type="submit" value="Search">
-</form>
-
-<div class="wos-data">
-    <span class="counter">1,458,510 &nbsp;&nbsp;&nbsp; papers</span>
-    <span class="counter">1,746,281 &nbsp;&nbsp;&nbsp; scholars</span>
-</div>
-
-<div class="htmleaf-container" style="position: absolute;top:20%;left:35%">
-    <header class="htmleaf-header" style="background:none">
-        <div style="padding: 1em 0;">
-            <div id="slider1" class="csslider">
-                <input type="radio" name="slides" id="slides_1" checked="checked"/>
-                <input type="radio" name="slides" id="slides_2"  />
-                <input type="radio" name="slides" id="slides_3" />
-                <input type="radio" name="slides" id="slides_4" />
-                <ul style="border: 1px solid #ffffff;height: 300px;background:#ffffff;opacity:0.6;border-radius:30px 30px 30px 30px">
+    <header id="header2" class="navbar transparent-header fa-change-white">
+        <nav id="menu-1" class="mega-menu" data-color="">
+            <section class="menu-list-items">
+                <ul class="menu-logo">
                     <li>
-                        <div id="c1" style="height:100%;margin-left:10px;margin-right:10px;background: none"></div>
-                    </li>
-                    <li>
-                        <div id="c2" style="height:100%;margin-left:10px;margin-right:10px"></div>
-                    </li>
-                    <li>
-                        <div id="c3" style="height:100%;margin-left:10px;margin-right:10px"></div>
-                    </li>
-                    <li>
-                        <div id="c4" style="height:100%;margin-left:10px;margin-right:10px"></div>
+                        <a href="#"> <img src="img/images/temp/wos_top.png" width="220px" height="40px" alt="logo" class="img-responsive"> </a>
                     </li>
                 </ul>
-                <div class="arrows">
-                    <label for="slides_1"></label>
-                    <label for="slides_2"></label>
-                    <label for="slides_3"></label>
-                    <label for="slides_4"></label>
-                </div>
-                <div class="navigation">
-                    <div>
-                        <label for="slides_1"></label>
-                        <label for="slides_2"></label>
-                        <label for="slides_3"></label>
-                        <label for="slides_4"></label>
+                <ul class="menu-links pull-right">
+
+                    <li><a href="login.html">Login</a></li>
+                    <li class="no-bg"><a href="register.html" class="p-job">register</a></li>
+                </ul>
+            </section>
+        </nav>
+    </header>
+    <section class="slidershow-bg parallex">
+
+        <div class="container">
+            <div class="row">
+                <ul class="cb-slideshow">
+                    <li><span>Image 01</span></li>
+                    <li><span>Image 02</span></li>
+                    <li><span>Image 03</span></li>
+                    <li><span>Image 04</span></li>
+                </ul>
+                <div class="col-md-10 col-sm-12 col-md-offset-1 col-xs-12 nopadding">
+                    <div class="search-form-contaner">
+                        <h1 class="search-main-title" style="text-transform：lowercase;">Web of Scholars</h1>
+                        <form class="layui-form" action="/searchMore/index" method="post" enctype="multipart/form-data">
+
+                            <div class="col-md-2 col-sm-2 col-xs-12 nopadding">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 nopadding">
+                                <div class="form-group">
+                                    <input type="text" id="search" name="scholarName" class="form-control"  placeholder="Please enter a scholar's name">
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-2 col-sm-2 col-xs-12 nopadding">
+                                <div class="form-group form-action">
+                                    <button type="button" id="subBtn" class="btn btn-default btn-search-submit">Search
+                                        <i
+                                            class="fa fa-angle-right"></i></button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+    <div class="search">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
+                    <div class="input-group">
+
+                        <input type="hidden" name="search_param" value="all" id="search_param">
+                        <input type="text" class="form-control search-field" name="x" placeholder="Search term...">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
+                            </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="category-section-3 light-blue">
+
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="Heading-title black">
+                        <h1>Relations</h1>
+                        <p>Based on a large number of academic papers, we conclude the following three relationships.</p>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <a href="/relationGraph/0CAEADF8/MVC">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="category-section-3-box" >
+                            <div class="category-section-3-box-inner">
+                                <i class="fa fa-users"></i>
+                                <h4> Cooperation </h4>
+                                <span>( 1980 )</span> </div>
+
+                        </div>
+                    </div>
+                    </a>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="category-section-3-box">
+                            <div class="category-section-3-box-inner"> <i class="fa fa-graduation-cap"></i>
+                                <h4> advisor-advise</h4>
+                                <span>( 980 )</span> </div>
+                            <!--  <div class="category-section-3-box-over-text animated fadeIn">
+                                 <h4>FINANCIAL MODELERS</h4>
+                                 <h4>BOOKKEEPERS</h4>
+                                 <h4>TAX ACCOUNTANTS</h4>
+                                 <p><a href=""> See All </a></p>
+                             </div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="category-section-3-box">
+                            <div class="category-section-3-box-inner"> <i class="fa fa-pencil"></i>
+                                <h4> Citation </h4>
+                                <span>( 660 )</span> </div>
+                            <!--  <div class="category-section-3-box-over-text animated fadeIn">
+                                 <h4>SEO SPECIALISTS</h4>
+                                 <h4>MARKETING EXPERTS</h4>
+                                 <h4>EMAIL AUTOMATORS</h4>
+                                 <p><a href=""> See All </a></p>
+                             </div> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-posts-section">
+        <#--<canvas type="text/javascript" color="0,0,255" opacity='0.7' zIndex="200" count="99" height="200px" src="dist/canvas-nest.js"></canvas>-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="Heading-title black">
+                            <h1>The top 3 scholars</h1>
+                            <p>Here are the top three scholars based on a large number of papers.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="blog-post">
+                            <div class="post-img"> <a href="#"> <img src="img/images/blog/1.jpg" alt="" class="img-responsive"> </a> </div>
+                            <div class="post-info"> <a href="">Aug 30, 2016</a> <a href="#">23 comments</a> </div>
+                            <h3 class="post-title"> <a href="#"> Sketch Designing Artists are beauty: A report </a> </h3>
+                            <p class="post-excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam neque tempora odit
+                                atque repellat est molestiae perferendis. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="blog-post">
+                            <div class="post-img"> <a href="#"> <img src="img/images/blog/2.jpg" alt="" class="img-responsive"> </a> </div>
+                            <div class="post-info"> <a href="#">august 30, 2016</a> <a href="#">90 comments</a> </div>
+                            <h3 class="post-title"> <a href="#"> A suitable timings for a graphic designers </a> </h3>
+                            <p class="post-excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam neque tempora odit
+                                atque repellat est molestiae perferendis. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="blog-post">
+                            <div class="post-img"> <a href="#"> <img src="img/images/blog/3.jpg" alt="" class="img-responsive"> </a> </div>
+                            <div class="post-info"> <a href="#">august 02, 2016</a> <a href="#">10 comments</a> </div>
+                            <h3 class="post-title"> <a href="#"> How to get a job on same time same place </a> </h3>
+                            <p class="post-excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam neque tempora odit
+                                atque repellat est molestiae perferendis. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="load-more-btn">
+                            <a href="/rank/index"><button class="btn-default" style="text-transform:none;">All Rankings<i class="fa fa-angle-right"></i> </button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="fixed-footer-1">
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-xs-12">
+                        <div class="footer_block">
+                            <a href="index.html" class="f_logo"><img src="img/images/temp/wos.png" class="img-responsive" alt="logo"></a>
+                            <p>A website that draws scholars' connections through a large number of papers and information analysis.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-xs-12">
+                        <div class="footer_block">
+                            <h4>Contact Information</h4>
+                            <ul class="personal-info">
+                                <li><i class="fa fa-map-marker"></i> Development Zone, Dalian 116620, China </li>
+                                <li><i class="fa fa-envelope"></i> http://thealphalab.org/</li>
+                                <li><i class="fa fa-phone"></i> 12345678910 </li>
+                                <!-- <li><i class="fa fa-clock-o"></i> Mon - Sun: 8:00 - 16:00</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="fixed-footer-1">
+
+            <section class="footer-bottom-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="footer-bottom">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <p>Copyright ©2018 - <a href="http://thealphalab.org/">The Alpha Lab </a></p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <a href="#" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JAVASCRIPT JS  -->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+    <!-- BOOTSTRAP CORE JS -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- JQUERY SELECT -->
+    <script type="text/javascript" src="js/select2.min.js"></script>
+
+    <!-- MEGA MENU -->
+    <script type="text/javascript" src="js/mega_menu.min.js"></script>
+
+    <!-- JQUERY EASING -->
+    <script type="text/javascript" src="js/easing.js"></script>
+
+    <!-- JQUERY COUNTERUP -->
+    <script type="text/javascript" src="js/counterup.js"></script>
+
+    <!-- JQUERY WAYPOINT -->
+    <script type="text/javascript" src="js/waypoints.min.js"></script>
+
+    <!-- Owl Carousel -->
+    <script type="text/javascript" src="js/owl-carousel.js"></script>
+
+    <!-- TEXT ROTATOR -->
+    <script type="text/javascript" src="js/typed.js"></script>
+
+    <!-- JQUERY REVEAL -->
+    <script type="text/javascript" src="js/footer-reveal.min.js"></script>
+
+    <!-- jQuery REVOLUTION Slider  -->
+    <script src="js/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="js/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- CORE JS -->
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <script type="text/javascript" src="layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+        $("#subBtn").click(function () {
+
+            var scholarName =  $("#search").val();
+            scholarName = "scholarName="+scholarName+"&affName=&minQindex=&maxQindex=&minHindex=&maxHindex=";
+            location.href = '/searchMore/index?'+scholarName;
+
+        })
+
+
+    </script>
 </div>
-
-<ul class="banners_cycle" style="position: absolute;top:67%;left:20%;">
-    <li class="banners_item style-1 ">
-        <div class="tail">
-            <div class="inner"><i class="fontawesome-icon medium circle-yes icon-globe"></i>
-                <h4>Cooperate</h4>
-                <p>This part describe the cooperate relationship between scholar and scholar.</p>
-                <a href="/relationGraph/0CAEADF8/directCooperate" class="button">Access</a> </div>
-        </div>
-    </li>
-    <li class="banners_item style-2 nomargin">
-        <div class="tail">
-            <div class="inner"><i class="fontawesome-icon medium circle-yes icon-lightbulb"></i>
-                <h4>Team</h4>
-                <p>This part describe the team relationship between scholar and scholar.</p>
-                <a href="/relationGraph/0CAEADF8/strongTeam" class="button">Access</a> </div>
-        </div>
-    </li>
-    <li class="banners_item style-3 ">
-        <div class="tail">
-            <div class="inner"><i class="fontawesome-icon medium circle-yes icon-link"></i>
-                <h4>Advisor-advise</h4>
-                <p>This part describe the Advisor-advise relationship between scholar and scholar.</p>
-                <a href="#" class="button">Access</a> </div>
-        </div>
-    </li>
-    <li class="banners_item style-4 nomargin">
-        <div class="tail">
-            <div class="inner"><i class="fontawesome-icon medium circle-yes icon-hand-down"></i>
-                <h4>Direct cite</h4>
-                <p>This part describe the direct cite relationship between scholar and scholar.</p>
-                <a href="/relationGraph/0CAEADF8/directCite" class="button">Access</a> </div>
-        </div>
-    </li>
-    <li class="banners_item style-5 ">
-        <div class="tail">
-            <div class="inner"><i class="fontawesome-icon medium circle-yes icon-upload-alt"></i>
-                <h4>Common cite</h4>
-                <p>This part describe the common cite relationship between scholar and scholar.</p>
-                <a href="/relationGraph/0CAEADF8/commonCite" class="button">Access</a> </div>
-        </div>
-    </li>
-    <li class="banners_item style-6 nomargin">
-        <div class="tail">
-            <div class="inner"><i class="fontawesome-icon medium circle-yes icon-text-width"></i>
-                <h4>common cited</h4>
-                <p>This part describe the common cited relationship between scholar and scholar.</p>
-                <a href="/relationGraph/0CAEADF8/commonCited" class="button">Access</a> </div>
-        </div>
-    </li>
-</ul>
-
-<script src="/js/polygonizr.min.js"></script>
-<script type="text/javascript">
-    $('#site-landing').polygonizr();
-</script>
-
-
-<script type="text/javascript">
-    $.ajax({
-        type:"POST",
-        url:'/scholar/baseInfo?authorId=0CAEADF8',
-        success:function (data) {
-            $("#c1").html(data);
-        }
-    });
-    $.ajax({
-        type:"POST",
-        url:'/scholar/baseInfo?authorId=7B374211',
-        success:function (data) {
-            $("#c2").html(data);
-        }
-    });
-    $.ajax({
-        type:"POST",
-        url:'/scholar/baseInfo?authorId=6AECDE8A',
-        success:function (data) {
-            $("#c3").html(data);
-        }
-    });
-    $.ajax({
-        type:"POST",
-        url:'/scholar/baseInfo?authorId=7CEFBC45',
-        success:function (data) {
-            $("#c4").html(data);
-        }
-    });
-
-//    window.setInterval("autoSlide()", 3000);
-    var index = 0;
-    function autoSlide() {
-        index = index + 1;
-        if (index > 4) {
-            index = 1;
-        }
-        var slideIndex = "#slides_" + index;
-        $("input").removeAttr("checked");
-        $(slideIndex).attr("checked", "checked");
-    }
-
-
-</script>
-
-
-<script type="text/javascript">
-
-    jQuery(function(){
-        jQuery('ul.banners_cycle li').mouseenter(function(){
-            jQuery(this).find('.button').stop(false,true).fadeIn();
-        });
-        jQuery('ul.banners_cycle li').mouseleave(function(){
-            jQuery(this).find('.button').stop(false,true).fadeOut();
-        });
-        jQuery('ul.banners_cycle li:not(.style-1)').mouseenter(function(){
-            jQuery(this).css('z-index','6');
-            jQuery(this).stop(false, true).animate({right:'-64px'}, {easing:"swing", duration: 300});
-            jQuery(this).animate({right:'0'});
-        });
-        jQuery('ul.banners_cycle li:not(.style-1)').mouseleave(function(){
-            jQuery(this).stop(false, true).animate({right:'-64px'});
-            jQuery(this).stop(false, true).animate({right:'0'}, 'slow');
-        });
-        jQuery('ul.banners_cycle li.style-2').mouseleave(function(){
-            jQuery(this).css('z-index','5');
-        });
-        jQuery('ul.banners_cycle li.style-3').mouseleave(function(){
-            jQuery(this).css('z-index','4');
-        });
-        jQuery('ul.banners_cycle li.style-4').mouseleave(function(){
-            jQuery(this).css('z-index','3');
-        });
-        jQuery('ul.banners_cycle li.style-5').mouseleave(function(){
-            jQuery(this).css('z-index','2');
-        });
-        jQuery('ul.banners_cycle li.style-6').mouseenter(function(){
-            jQuery('body').css('overflow-x','hidden');
-        });
-        jQuery('ul.banners_cycle li.style-6').mouseleave(function(){
-            jQuery(this).css('z-index','1');
-            jQuery('body').css('overflow-x','hidden');
-        });
-    });
-</script>
 </body>
+
 </html>
