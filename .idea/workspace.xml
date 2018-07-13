@@ -7,581 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291e2776-134e-423c-b7f9-68e37a8618e2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/2.ai" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/404-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/404-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/AjaxLoader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/about-us2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/about-us2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/admin.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/as.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/bg-patteren.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/bg/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/bg/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/bg/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/bg/fifth.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/bg/first.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/bg/forth.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/bg/parallax-map.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/bg/second.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/bg/third.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/bg1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/blog/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/blog/10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/blog/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/blog/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/blog/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/blog/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/blog/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/blog/7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/blog/8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/blog/9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/building.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/clients/client_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/clients/client_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/clients/client_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/clients/client_4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/coming-soon.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/comingsoon3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/company-logo/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/company-logo/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/company-logo/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/company-logo/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/company-logo/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/company-logo/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/company/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/company/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/company/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/company/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/company/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/company/logo1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/company/logo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/company/s1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/company/s5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/employee-section-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/employee-section1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/footer/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/footer/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/footer/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/grabbing.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/guy-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/index5-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/index5-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/logo-footer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/pattern.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/phone.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/ps.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/slider/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/slider/10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/slider/11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/slider/13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/slider/14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/slider/15.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/slider/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/slider/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/slider/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/slider/8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/slider/index5-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/team/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/team/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/team/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/team/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/temp/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/temp/web_of_scholar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/temp/worldmap.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/temp/wos.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/temp/wos_index.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/temp/wos_top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/1s.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/2s.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/3s.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/4s.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/5s.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/6s.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/7s.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/profile-avatar.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/users/scholarImg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/images/ws.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/font/iconfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/home_1.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/index_1.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/leftNav_1.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex_1.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/searchMore_1.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/css/layui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/css/layui.mobile.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/font/iconfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/lay/modules/element.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/lay/modules/form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/lay/modules/laydate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/lay/modules/layedit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/lay/modules/table.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/lay/modules/upload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/lay/modules/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/layui.all.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/layui.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-teastu.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.New.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap_feedback.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/buttons.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/chocolat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/component.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/csslider.default.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/demo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/flexslider.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/flights/1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/flights/2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/flights/3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/flights/4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/flights/fights.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/flights/flights.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/flights/logo.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/font-awesome/css/font-awesome-ie7.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/font-awesome/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/font-awesome/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/font-awesome/font/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/font-awesome/font/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/font-awesome/font/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/font-awesome/font/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/font-awesome/font/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/hero-slider-style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/htmleaf-demo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/icomoon.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/inner.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/jquery.easy-gallery.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/layui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/magnific-popup.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/nav/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/nav/leftnav.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/normalize.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/popuo-box.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/css/prettyPhoto.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_rounded/btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_rounded/btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_rounded/contentPattern.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_rounded/default_thumbnail.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_rounded/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_rounded/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_square/btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_square/btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_square/contentPattern.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_square/default_thumbnail.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_square/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_square/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/default/default_thumb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/default/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/default/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/default/sprite_next.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/default/sprite_prev.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/default/sprite_x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/default/sprite_y.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/contentPatternBottom.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/contentPatternLeft.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/contentPatternRight.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/contentPatternTop.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/default_thumbnail.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_rounded/btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_rounded/btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_rounded/default_thumbnail.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_rounded/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_rounded/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_square/btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_square/btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_square/default_thumbnail.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_square/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_square/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/reset.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/showInfo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/stickup.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/style-teastu.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.New.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/style1.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/styleDialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/style_feedback.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/styles.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/templatemo-style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/test.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/topNavStyle.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/images/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/EasePack.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/TweenLite.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/bmap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/china.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/counterup.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/d3.geo.projection.v0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/d3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/d3.v3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/d3.v4.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/dataTool.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/demo-1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/ecStat.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/echars/echarts.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/echars/extension/bmap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/echars/map/js/world.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/echarts-gl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/echarts-gl/echarts-gl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/echarts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/echarts.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/flights/homepage.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/flights/jquery.inview.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/flights/particles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/flights/unslider.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/html5.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery-1.8.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery-2.1.4.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.backstretch.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.chocolat.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.countTo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.easing.1.3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.easy-gallery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.magnific-popup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.magnific-popup.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.pin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.prettyPhoto.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.stellar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.tweet.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.waypoints.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/layui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/magnific-popup-options.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/mainDialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/megamenu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/modernizr-2.6.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/move-top.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/nav/leftnav.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/polygonizr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/rAF.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/showInfo-scripts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/simplex.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/stickUp.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/stickUp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/stickUp.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/topojson.v1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/velocity.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/world.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/layui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/layui.mobile.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/font/iconfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/font/iconfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/element.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/form.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/laydate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/layedit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/table.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/upload.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/util.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/layui.all.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/layui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/bootstrap-teastu.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/bootstrap.New.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/bootstrap_feedback.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/buttons.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/chocolat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/component.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/csslider.default.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/demo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/flexslider.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/flights/1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/flights/2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/flights/3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/flights/4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/flights/fights.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/flights/flights.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/flights/logo.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/font-awesome/css/font-awesome-ie7.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/font-awesome/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/font-awesome/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/font-awesome/font/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/font-awesome/font/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/font-awesome/font/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/font-awesome/font/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/font-awesome/font/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/hero-slider-style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/htmleaf-demo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/icomoon.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/inner.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/jquery.easy-gallery.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/layui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/magnific-popup.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/nav/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/nav/leftnav.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/normalize.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/popuo-box.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/css/prettyPhoto.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_rounded/btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_rounded/btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_rounded/contentPattern.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_rounded/default_thumbnail.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_rounded/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_rounded/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_square/btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_square/btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_square/contentPattern.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_square/default_thumbnail.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_square/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_square/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/default/default_thumb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/default/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/default/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/default/sprite_next.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/default/sprite_prev.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/default/sprite_x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/default/sprite_y.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/contentPatternBottom.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/contentPatternLeft.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/contentPatternRight.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/contentPatternTop.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/default_thumbnail.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_rounded/btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_rounded/btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_rounded/default_thumbnail.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_rounded/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_rounded/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_square/btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_square/btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_square/default_thumbnail.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_square/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_square/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/reset.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/showInfo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/stickup.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/style-teastu.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/style.New.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/style.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/style1.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/styleDialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/style_feedback.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/styles.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/templatemo-style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/test.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/css/topNavStyle.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/images/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/EasePack.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/TweenLite.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/bmap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/china.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/counterup.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/d3.geo.projection.v0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/d3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/d3.v3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/d3.v4.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/dataTool.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/demo-1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/ecStat.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/echars/echarts.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/echars/extension/bmap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/echars/map/js/world.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/echarts-gl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/echarts-gl/echarts-gl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/echarts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/echarts.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/flights/homepage.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/flights/jquery.inview.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/flights/particles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/flights/unslider.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/html5.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/jquery-1.8.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/jquery-2.1.4.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/jquery.backstretch.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/jquery.chocolat.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/jquery.countTo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/jquery.easing.1.3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/jquery.easy-gallery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/jquery.magnific-popup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/jquery.magnific-popup.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/jquery.pin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/jquery.prettyPhoto.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/jquery.stellar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/jquery.tweet.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/jquery.waypoints.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/layui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/magnific-popup-options.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/mainDialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/megamenu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/modernizr-2.6.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/move-top.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/nav/leftnav.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/polygonizr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/rAF.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/showInfo-scripts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/simplex.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/stickUp.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/stickUp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/stickUp.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/topojson.v1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/velocity.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WOS/js/world.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/modules/code.css" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/css/modules/code.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/modules/laydate/default/laydate.css" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/css/modules/laydate/default/laydate.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/modules/layer/default/icon-ext.png" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/css/modules/layer/default/icon-ext.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/modules/layer/default/icon.png" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/css/modules/layer/default/icon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/modules/layer/default/layer.css" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/css/modules/layer/default/layer.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/modules/layer/default/loading-0.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/css/modules/layer/default/loading-0.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/modules/layer/default/loading-1.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/css/modules/layer/default/loading-1.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/modules/layer/default/loading-2.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/css/modules/layer/default/loading-2.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/font/iconfont.eot" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/font/iconfont.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/font/iconfont.ttf" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/font/iconfont.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/0.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/0.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/1.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/1.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/10.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/10.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/11.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/11.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/12.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/12.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/13.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/13.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/14.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/14.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/15.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/15.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/16.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/16.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/17.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/17.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/18.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/18.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/19.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/19.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/2.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/2.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/20.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/20.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/21.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/21.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/22.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/22.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/23.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/23.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/24.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/24.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/25.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/25.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/26.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/26.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/27.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/27.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/28.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/28.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/29.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/29.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/3.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/3.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/30.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/30.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/31.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/31.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/32.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/32.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/33.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/33.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/34.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/34.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/35.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/35.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/36.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/36.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/37.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/37.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/38.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/38.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/39.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/39.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/4.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/4.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/40.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/40.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/41.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/41.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/42.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/42.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/43.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/43.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/44.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/44.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/45.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/45.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/46.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/46.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/47.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/47.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/48.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/48.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/49.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/49.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/5.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/5.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/50.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/50.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/51.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/51.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/52.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/52.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/53.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/53.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/54.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/54.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/55.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/55.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/56.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/56.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/57.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/57.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/58.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/58.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/59.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/59.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/6.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/6.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/60.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/60.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/61.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/61.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/62.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/62.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/63.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/63.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/64.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/64.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/65.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/65.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/66.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/66.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/67.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/67.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/68.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/68.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/69.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/69.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/7.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/7.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/70.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/70.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/71.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/71.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/8.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/8.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/9.gif" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/images/face/9.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/carousel.js" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/lay/modules/carousel.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/code.js" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/lay/modules/code.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/flow.js" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/lay/modules/flow.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/jquery.js" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/lay/modules/jquery.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/layer.js" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/lay/modules/layer.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/laypage.js" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/lay/modules/laypage.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/laytpl.js" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/lay/modules/laytpl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/mobile.js" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/lay/modules/mobile.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/tree.js" afterPath="$PROJECT_DIR$/src/main/webapp/layui_L/lay/modules/tree.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS.war" afterPath="$PROJECT_DIR$/target/WOS.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/dialog/animate.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/dialog/animate.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/dialog/jquery.gDialog.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/dialog/jquery.gDialog.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/dialog/normalize.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/dialog/normalize.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/font-awesome.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/searchResult.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/searchResult.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/dialog/jquery.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/dialog/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/easing.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/easing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/layui.all.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/layui.all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/modernizr.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/modernizr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/waypoints.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/waypoints.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/target/WOS/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/css/dialog/animate.min.css" afterPath="$PROJECT_DIR$/target/WOS/css/dialog/animate.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/css/dialog/jquery.gDialog.css" afterPath="$PROJECT_DIR$/target/WOS/css/dialog/jquery.gDialog.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/css/dialog/normalize.css" afterPath="$PROJECT_DIR$/target/WOS/css/dialog/normalize.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/target/WOS/css/font-awesome.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/css/style.css" afterPath="$PROJECT_DIR$/target/WOS/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/home.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/home.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/index.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/index.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/leftNav.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/leftNav.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/rankIndex.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/rankIndex.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/scholarRank.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/scholarRank.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/searchIndex.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/searchIndex.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/searchResult.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/searchResult.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/target/WOS/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/js/dialog/jquery.js" afterPath="$PROJECT_DIR$/target/WOS/js/dialog/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/js/easing.js" afterPath="$PROJECT_DIR$/target/WOS/js/easing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/js/layui.all.js" afterPath="$PROJECT_DIR$/target/WOS/js/layui.all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/js/modernizr.js" afterPath="$PROJECT_DIR$/target/WOS/js/modernizr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/js/waypoints.min.js" afterPath="$PROJECT_DIR$/target/WOS/js/waypoints.min.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -603,8 +34,8 @@
       <file leaf-file-name="home.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/home.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="264" column="22" lean-forward="true" selection-start-line="264" selection-start-column="22" selection-end-line="264" selection-end-column="22" />
+            <state relative-caret-position="-1620">
+              <caret line="21" column="56" lean-forward="true" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -615,33 +46,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rankIndex.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl">
+      <file leaf-file-name="index.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/index.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="97" column="36" lean-forward="true" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
+            <state relative-caret-position="-900">
+              <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="graph.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/graph.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-450">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="leftNav.ftl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="leftNav.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="232" column="41" lean-forward="false" selection-start-line="232" selection-start-column="41" selection-end-line="232" selection-end-column="41" />
+            <state relative-caret-position="267">
+              <caret line="242" column="15" lean-forward="true" selection-start-line="242" selection-start-column="15" selection-end-line="242" selection-end-column="15" />
               <folding>
                 <element signature="n#style#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_1.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/index_1.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+              <folding>
+                <marker date="1531384467469" expanded="true" signature="7527:7614" ph="..." />
+                <marker date="1531384467469" expanded="true" signature="7694:7719" ph="..." />
+                <marker date="1531384467469" expanded="true" signature="7905:7915" ph="..." />
+                <marker date="1531384467469" expanded="true" signature="8317:8338" ph="..." />
+                <marker date="1531384467469" expanded="true" signature="8761:8767" ph="&amp;nbsp;" />
+                <marker date="1531384467469" expanded="true" signature="8925:8931" ph="&amp;nbsp;" />
               </folding>
             </state>
           </provider>
@@ -650,8 +88,18 @@
       <file leaf-file-name="CooperateRelaController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="-195">
               <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CoTeamRelaController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="86" column="11" lean-forward="false" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -667,77 +115,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="leftNav_1.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav_1.ftl">
+      <file leaf-file-name="SearchController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchIndex.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl">
+      <file leaf-file-name="scholarRank.ftl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="144" column="87" lean-forward="false" selection-start-line="144" selection-start-column="77" selection-end-line="144" selection-end-column="87" />
-              <folding>
-                <element signature="n#style#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#3;n#form#0;n#div#0;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#3;n#form#0;n#div#0;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#4;n#form#0;n#div#0;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#form#0;n#div#0;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#4;n#form#0;n#div#0;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#div#0;n#fieldset#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#fieldset#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#fieldset#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#fieldset#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#label#1;n#div#1;n#form#0;n#fieldset#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#label#1;n#div#1;n#form#0;n#fieldset#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="135" column="121" lean-forward="false" selection-start-line="135" selection-start-column="121" selection-end-line="135" selection-end-column="121" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchIndex_1.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchIndex_1.ftl">
+      <file leaf-file-name="leftNav_1.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav_1.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9">
-              <caret line="150" column="8" lean-forward="false" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="8" />
-              <folding>
-                <element signature="n#style#0;n#form#0;n#fieldset#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="searchMore.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="101" column="14" lean-forward="true" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="14" />
-              <folding>
-                <marker date="1531135622232" expanded="true" signature="11281:11331" ph="..." />
-                <marker date="1531135622232" expanded="true" signature="11411:11451" ph="..." />
-                <marker date="1531135622232" expanded="true" signature="11783:11793" ph="..." />
-                <marker date="1531135622232" expanded="true" signature="12198:12219" ph="..." />
-                <marker date="1531135622232" expanded="true" signature="12653:12659" ph="&amp;nbsp;" />
-                <marker date="1531135622232" expanded="true" signature="12821:12827" ph="&amp;nbsp;" />
-                <marker date="1531135622232" expanded="true" signature="16799:16849" ph="..." />
-                <marker date="1531135622232" expanded="true" signature="16937:16977" ph="..." />
-                <marker date="1531135622232" expanded="true" signature="17321:17331" ph="..." />
-                <marker date="1531135622232" expanded="true" signature="17740:17761" ph="..." />
-                <marker date="1531135622232" expanded="true" signature="18195:18201" ph="&amp;nbsp;" />
-                <marker date="1531135622232" expanded="true" signature="18359:18365" ph="&amp;nbsp;" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="6" lean-forward="true" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -774,8 +177,8 @@
       <find>searchButton</find>
       <find>searchForm</find>
       <find>view</find>
-      <find>rank</find>
       <find>src</find>
+      <find>rank</find>
     </findStrings>
     <replaceStrings>
       <replace>categoryName</replace>
@@ -803,18 +206,18 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/.idea/vcs.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex_1.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex_1.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/searchResult.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/ModifyPswController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/slideshowstyle.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl" />
       </list>
     </option>
   </component>
@@ -1645,12 +1048,12 @@
       <workItem from="1529399749613" duration="6552000" />
       <workItem from="1529720199512" duration="59118000" />
       <workItem from="1531270913126" duration="87000" />
-      <workItem from="1531271239345" duration="8363000" />
+      <workItem from="1531271239345" duration="12225000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103390000" />
+    <option name="totallyTimeSpent" value="107252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -1676,7 +1079,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46185997" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46603972" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20592992" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1819,13 +1222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/ModifyPswController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1844,13 +1240,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-15">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="86" column="11" lean-forward="false" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1974,25 +1363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="38" column="48" lean-forward="false" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
-          <folding>
-            <element signature="e#1026#1027#0" expanded="false" />
-            <element signature="e#1062#1063#0" expanded="false" />
-            <element signature="e#2454#2886#0" expanded="false" />
-            <element signature="e#2885#2886#0" expanded="false" />
-            <element signature="e#2953#3385#0" expanded="false" />
-            <element signature="e#3384#3385#0" expanded="false" />
-            <element signature="e#3536#3968#0" expanded="false" />
-            <element signature="e#3967#3968#0" expanded="false" />
-            <element signature="e#4035#4467#0" expanded="false" />
-            <element signature="e#4466#4467#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/SimpleSearchController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -2033,34 +1403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/index_1.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2175">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding>
-            <marker date="1525308977000" expanded="true" signature="7527:7614" ph="..." />
-            <marker date="1525308977000" expanded="true" signature="7694:7719" ph="..." />
-            <marker date="1525308977000" expanded="true" signature="7905:7915" ph="..." />
-            <marker date="1525308977000" expanded="true" signature="8317:8338" ph="..." />
-            <marker date="1525308977000" expanded="true" signature="8761:8767" ph="&amp;nbsp;" />
-            <marker date="1525308977000" expanded="true" signature="8925:8931" ph="&amp;nbsp;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/index.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="397" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#a#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -2088,7 +1430,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="101" column="14" lean-forward="true" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="14" />
+          <caret line="101" column="14" lean-forward="false" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="14" />
           <folding>
             <marker date="1531135622232" expanded="true" signature="11281:11331" ph="..." />
             <marker date="1531135622232" expanded="true" signature="11411:11451" ph="..." />
@@ -2111,7 +1453,7 @@
         <state relative-caret-position="9">
           <caret line="150" column="8" lean-forward="false" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="8" />
           <folding>
-            <element signature="n#style#0;n#form#0;n#fieldset#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#fieldset#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2140,19 +1482,16 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#fieldset#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#label#1;n#div#1;n#form#0;n#fieldset#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#label#1;n#div#1;n#form#0;n#fieldset#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/home.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="264" column="22" lean-forward="true" selection-start-line="264" selection-start-column="22" selection-end-line="264" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#a#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1531384467469" expanded="true" signature="76:22630" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="2761:19248" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="2794:19240" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="4781:12256" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="4820:12241" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="4876:12226" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="4946:12207" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="5126:12184" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="5242:12157" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="20705:22287" ph="..." />
           </folding>
         </state>
       </provider>
@@ -2160,8 +1499,17 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
-          <caret line="97" column="36" lean-forward="true" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
-          <folding />
+          <caret line="97" column="36" lean-forward="false" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
+          <folding>
+            <marker date="1531384467469" expanded="true" signature="32:25440" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="2717:19852" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="2750:19844" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="3027:3655" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="3085:3641" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="3131:3626" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="3170:3398" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="3195:3376" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2169,22 +1517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-450">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav_1.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -2197,13 +1529,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/index_1.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding>
+            <marker date="1531384467469" expanded="true" signature="7527:7614" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="7694:7719" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="7905:7915" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="8317:8338" ph="..." />
+            <marker date="1531384467469" expanded="true" signature="8761:8767" ph="&amp;nbsp;" />
+            <marker date="1531384467469" expanded="true" signature="8925:8931" ph="&amp;nbsp;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-900">
+          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/home.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1620">
+          <caret line="21" column="56" lean-forward="true" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#a#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="232" column="41" lean-forward="false" selection-start-line="232" selection-start-column="41" selection-end-line="232" selection-end-column="41" />
+        <state relative-caret-position="267">
+          <caret line="242" column="15" lean-forward="true" selection-start-line="242" selection-start-column="15" selection-end-line="242" selection-end-column="15" />
           <folding>
             <element signature="n#style#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav_1.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="true" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-195">
+          <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CoTeamRelaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="86" column="11" lean-forward="false" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="135" column="121" lean-forward="false" selection-start-line="135" selection-start-column="121" selection-end-line="135" selection-end-column="121" />
+          <folding />
         </state>
       </provider>
     </entry>

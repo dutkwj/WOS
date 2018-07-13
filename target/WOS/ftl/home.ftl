@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="ScriptsBundle">
     <title>Opportunities A Mega Job Board Template</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/images/favicon.ico" type="image/x-icon">
 
     <!-- BOOTSTRAPE STYLESHEET CSS FILES -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -47,7 +47,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
 
     <!-- JavaScripts -->
-    <script src="js/modernizr.js"></script>
+    <script src="/js/modernizr.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="ScriptsBundle">
     <title>Opportunities A Mega Job Board Template</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/images/favicon.ico" type="image/x-icon">
 
     <!-- BOOTSTRAPE STYLESHEET CSS FILES -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
