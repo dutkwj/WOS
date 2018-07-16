@@ -123,7 +123,26 @@ function createV4SelectableForceDirectedGraph(svg, graph,id_c) {
         .on("mouseover", mouseOver(.1))
         .on("mouseout", mouseOut)
         .on("click", function(d){
-            console.log(d.id);
+
+            // console.log(d.id);
+            // qindex = d.qindex;
+            // hindex = d.hindex;
+            // aff = d.hindex;
+            // studyfield = d.studyField;
+            // scholarname = d.name;
+            $('#q_index').html(d.qindex);
+            $('#h_index').html(d.hindex);
+            $('#aff').html(d.aff);
+            $('#studyField').html(d.studyField);
+            $('#scholarName').html(d.name);
+            index = d.id;
+            $('.cd-item').append('<img src="/img/images/users/scholarImg.png" >');
+            var selectedImage = $('.cd-item').children('img'),
+                slectedImageUrl = selectedImage.attr('src');
+
+            $('body').addClass('overlay-layer');
+            animateQuickView(selectedImage, sliderFinalWidth, maxQuickWidth, 'open');
+            updateQuickView(slectedImageUrl);
         })
         .call(d3.drag()
             .on("start", dragstarted)

@@ -71,7 +71,8 @@
             <section class="menu-list-items">
                 <ul class="menu-logo">
                     <li>
-                        <a href="../index"> <img src="/img/images/temp/wos_top.png" width="220px" height="40px" alt="logo" class="img-responsive"> </a>
+                        <a href="../../../index"> <img src="/img/images/temp/wos_top.png" width="220px" height="40px"
+                                               alt="logo" class="img-responsive"> </a>
                     </li>
                 </ul>
                 <ul class="menu-links pull-right">
