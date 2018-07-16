@@ -138,7 +138,7 @@
             </li>
             <li style="background:none"><a href="/login/index" style="color:#ffffcc;margin-left: 200%">Login</a>
             </li>
-            <li style="background:none">    <a href="/register/index" style="color:#ffffcc;margin-left: 150%">Register</a>
+            <li style="background:none">    <a href="/register/index" style="color:#ffffcc;margin-left: 150%">Register</a>git
             </li>
         </ul>
     </div>

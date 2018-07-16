@@ -76,35 +76,35 @@
     $("#relationship").click(function () {
         alert("index:" + index);
         var URL = '/cooperate/' + index + '/MVC';
-    <#if cooperateType?? && cooperateType=='directCooperate'>
-        URL = '/cooperate/' + index + '/directCooperate';
-    <#elseif cooperateType?? && cooperateType=='MVC'>
-        URL = '/cooperate/' + index + '/MVC';
-    <#elseif teamType?? && teamType=='weakTeam'>
-        URL = '/team/' + index + '/weakTeam';
-    <#elseif teamType?? && teamType=='middleTeam'>
-        URL = '/team/' + index + '/middleTeam';
-    <#elseif teamType?? && teamType=='strongTeam'>
-        URL = '/team/' + index + '/strongTeam';
-    <#elseif advisorType?? && advisorType=='tree'>
-        URL = '/Advisor-advisee/' + index + '/tree';
-    <#elseif advisorType?? && advisorType=='graph'>
-        URL = '/Advisor-advisee/' + index + '/graph';
-    <#elseif advisorType?? && advisorType=='reference'>
-        URL = '/Advisor-advisee/' + index + '/reference';
-    <#elseif advisorType?? && advisorType=='evalue'>
-        URL = '/Advisor-advisee/' + index + '/evalue';
-    <#elseif advisorType?? && advisorType=='student_number_year'>
-        URL = '/Advisor-advisee/' + index + '/student_number_year';
-    <#elseif refType?? && refType=='ref'>
-        URL = '/ref/' + index;
-    <#elseif refType?? && refType=='refed'>
-        URL = '/refed/' + index;
-    <#elseif refType?? && refType=='coRef'>
-        URL = '/coRef/' + index;
-    <#elseif refType?? && refType=='coRefed'>
-        URL = '/coRefed/' + index;
-    </#if>
+    <#--<#if cooperateType?? && cooperateType=='directCooperate'>-->
+        <#--URL = '/cooperate/' + index + '/directCooperate';-->
+    <#--<#elseif cooperateType?? && cooperateType=='MVC'>-->
+        <#--URL = '/cooperate/' + index + '/MVC';-->
+    <#--<#elseif teamType?? && teamType=='weakTeam'>-->
+        <#--URL = '/team/' + index + '/weakTeam';-->
+    <#--<#elseif teamType?? && teamType=='middleTeam'>-->
+        <#--URL = '/team/' + index + '/middleTeam';-->
+    <#--<#elseif teamType?? && teamType=='strongTeam'>-->
+        <#--URL = '/team/' + index + '/strongTeam';-->
+    <#--<#elseif advisorType?? && advisorType=='tree'>-->
+        <#--URL = '/Advisor-advisee/' + index + '/tree';-->
+    <#--<#elseif advisorType?? && advisorType=='graph'>-->
+        <#--URL = '/Advisor-advisee/' + index + '/graph';-->
+    <#--<#elseif advisorType?? && advisorType=='reference'>-->
+        <#--URL = '/Advisor-advisee/' + index + '/reference';-->
+    <#--<#elseif advisorType?? && advisorType=='evalue'>-->
+        <#--URL = '/Advisor-advisee/' + index + '/evalue';-->
+    <#--<#elseif advisorType?? && advisorType=='student_number_year'>-->
+        <#--URL = '/Advisor-advisee/' + index + '/student_number_year';-->
+    <#--<#elseif refType?? && refType=='ref'>-->
+        <#--URL = '/ref/' + index;-->
+    <#--<#elseif refType?? && refType=='refed'>-->
+        <#--URL = '/refed/' + index;-->
+    <#--<#elseif refType?? && refType=='coRef'>-->
+        <#--URL = '/coRef/' + index;-->
+    <#--<#elseif refType?? && refType=='coRefed'>-->
+        <#--URL = '/coRefed/' + index;-->
+    <#--</#if>-->
         $.ajax({
             type:"POST",
             url:URL,
