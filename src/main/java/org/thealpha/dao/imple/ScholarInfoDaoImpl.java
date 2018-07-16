@@ -97,7 +97,7 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
         List<Get> gets = new ArrayList<Get>();
         for (String id : scholarIds) {
             Get get = new Get(Bytes.toBytes(id));
-            get.addFamily(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO));
+//            get.addFamily(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO));
             gets.add(get);
 
         }
@@ -163,6 +163,10 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                         if (StringUtils.isNotBlank(value)) {
                             scholar.setCoRefedNumber(Integer.parseInt(value));
                         }
+                    }else if (ConfigurationConstant.QF_PAPER_NUMBER.equals(qualiFier)) {
+                        if (StringUtils.isNotBlank(value)) {
+                            scholar.setPaperNumber(Integer.parseInt(value));
+                        }
                     }
                 }
                 scholarList.add(scholar);
@@ -198,6 +202,7 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 String refedNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_REFED_NUMBER)));
                 String coRefNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REF_NUMBER)));
                 String coRefedNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_NUMBER)));
+                String paperNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PAPERS), Bytes.toBytes(ConfigurationConstant.QF_PAPER_NUMBER)));
                 scholar.setIndex(scholarId);
                 scholar.setName(name);
                 scholar.setAff(aff);
@@ -235,6 +240,9 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                 }
                 if (StringUtils.isNotBlank(coRefedNumber)) {
                     scholar.setCoRefedNumber(Integer.parseInt(coRefedNumber));
+                }
+                if (StringUtils.isNotBlank(paperNumber)) {
+                    scholar.setPaperNumber(Integer.parseInt(paperNumber));
                 }
                 return scholar;
             }

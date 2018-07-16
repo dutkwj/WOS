@@ -1,0 +1,20 @@
+#d3_selectable_force_directed_graph svg {
+	pointer-events: all;
+    /*border: 1px solid;*/
+    font: 13px sans-serif;
+    text-anchor: end;
+}
+
+#d3_selectable_force_directed_graph .node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+
+.link {
+  stroke: #999;
+}
+path {
+  fill-opacity: .3;
+  stroke-opacity: 1;
+}

@@ -1,0 +1,17 @@
+
+
+			/* magnifier glass as path */
+			.mag {
+				stroke: gray;
+				stroke-width: 2.0px;
+				stroke-opacity: 1;
+				fill: none;
+			}
+
+			/* magnifier handle as path */
+			.mag2 {
+				stroke: black;
+				stroke-width: 12.0px;
+				stroke-opacity: 1;
+				fill: none;
+			}

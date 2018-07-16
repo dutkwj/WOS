@@ -19,6 +19,7 @@ public class Cooperater implements Serializable{
     private String fieldName;
     private int cooperateNumber;
     private int coTeamNumber;
+    private int paperNumber;
     private int studentsNumber;
     private String cooperate;
     public String getCooperate(){
@@ -42,6 +43,10 @@ public class Cooperater implements Serializable{
     public void setYear(String year) {
         this.year = year;
     }
+
+    public int getPaperNumber(){ return paperNumber; }
+
+    public void setPaperNumber(int paperNumber){ this.paperNumber = paperNumber; }
 
     public double getIntensity() {
         return intensity;

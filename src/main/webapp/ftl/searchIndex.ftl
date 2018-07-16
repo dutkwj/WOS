@@ -106,29 +106,7 @@
             </section>
         </nav>
     </header>
-<#--<div class="search">-->
-<#--<div class="container-fluid">-->
-<#--<div class="row">-->
-<#--<div class="col-md-12 col-sm-12 col-xs-12 nopadding">-->
-<#--<div class="input-group">-->
-<#--<div class="input-group-btn search-panel">-->
-<#--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span id="search_concept">Filter By</span> <span class="caret"></span> </button>-->
-<#--<ul class="dropdown-menu" role="menu">-->
-<#--<li><a href="#">Cooperation</a></li>-->
-<#--<li><a href="#">Advisor-advise</a></li>-->
-<#--<li><a href="#">Citation</a></li>-->
-<#--</ul>-->
-<#--</div>-->
-<#--<input type="hidden" name="search_param" value="all" id="search_param">-->
-<#--<input type="text" class="form-control search-field" name="x" placeholder="Search term...">-->
-<#--<span class="input-group-btn">-->
-<#--<button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>-->
-<#--</span>-->
-<#--</div>-->
-<#--</div>-->
-<#--</div>-->
-<#--</div>-->
-<#--</div>-->
+
     <section class="breadcrumb-search parallex" style="padding-bottom: 0;" >
         <div class="container-fluid">
             <div class="row" style="margin-top: 40px;">
@@ -150,7 +128,7 @@
                                                     <div class="layui-form-item">
                                                         <label class="layui-form-label">scholar</label>
                                                         <div class="layui-input-block">
-                                                            <input type="text" name="scholarName" lay-verify="title" autocomplete="off" placeholder="scholar name" class="layui-input">
+                                                            <input type="text" name="scholarName" id="scholarName" lay-verify="title" autocomplete="off" placeholder="scholar name" class="layui-input">
                                                         </div>
                                                     </div>
                                                     <div class="layui-form-item">
@@ -415,9 +393,12 @@
             alert(textStatus);
         }
     });
+    var indexScholarName = "${indexScholarName}";
+    $("#scholarName").val(indexScholarName);
+
     //scholarName=&affName=&minQindex=&maxQindex=&minHindex=&maxHindex=
     $("#searchButton").on("click", function () {
-
+        //console.log($("#searchForm").serialize());
         $.ajax({
             type:"POST",
             url:'/searchMore/content',
@@ -459,17 +440,7 @@
 
 </script>
 
-<#--<script src="/js/polygonizr.min.js"></script>-->
-<#--<script type="text/javascript">-->
 
-    <#--$("html").css("overflow", "initial");-->
-    <#--$("body").css("overflow", "initial");-->
-
-    <#--$('#site-landing').css('height', document.body.scrollHeight + 800);-->
-
-    <#--$('#site-landing').polygonizr();-->
-
-<#--</script>-->
 </html>
 
 

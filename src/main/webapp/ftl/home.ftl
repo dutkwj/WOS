@@ -105,35 +105,22 @@
                 <div class="col-md-10 col-sm-12 col-md-offset-1 col-xs-12 nopadding">
                     <div class="search-form-contaner">
                         <h1 class="search-main-title" style="text-transform：lowercase;">Web of Scholars</h1>
-                        <form class="layui-form" action="/register/addUser" method="post" enctype="multipart/form-data">
+                        <form class="layui-form" action="/searchMore/index" method="post" enctype="multipart/form-data">
 
                             <div class="col-md-2 col-sm-2 col-xs-12 nopadding">
                             </div>
-                            <div class="col-md-4 col-sm-4 col-xs-12 nopadding">
+                            <div class="col-md-6 col-sm-6 col-xs-12 nopadding">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="search" placeholder="Please enter a scholar's name " value="">
+                                    <input type="text" id="search" name="scholarName" class="form-control"  placeholder="Please  enter  a  scholar's  name">
                                 </div>
                             </div>
-                            <div class="col-md-2 col-sm-2 col-xs-12 nopadding">
-                                <div class="form-group" style="height: 80px;">
 
-                                    <select class="" style="height: 80px;">
-                                        <!-- <option>&nbsp;</option> -->
-                                        <option value="0">Cooperation</option>
-                                        <option value="1">Advisor-advise</option>
-                                        <option value="2">Citation</option>
-
-                                    </select>
-
-                                </div>
-
-
-                                <!-- </form> -->
-                            </div>
 
                             <div class="col-md-2 col-sm-2 col-xs-12 nopadding">
                                 <div class="form-group form-action">
-                                    <button type="button" class="btn btn-default btn-search-submit">Search <i class="fa fa-angle-right"></i></button>
+                                    <button type="button" id="subBtn" class="btn btn-default btn-search-submit">Search
+                                        <i
+                                            class="fa fa-angle-right"></i></button>
                                 </div>
                             </div>
                         </form>
@@ -147,14 +134,7 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
                     <div class="input-group">
-                        <div class="input-group-btn search-panel">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span id="search_concept">Filter By</span> <span class="caret"></span> </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Cooperation</a></li>
-                                <li><a href="#">Advisor-advise</a></li>
-                                <li><a href="#">Citation</a></li>
-                            </ul>
-                        </div>
+
                         <input type="hidden" name="search_param" value="all" id="search_param">
                         <input type="text" class="form-control search-field" name="x" placeholder="Search term...">
                         <span class="input-group-btn">
@@ -179,14 +159,17 @@
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
+                    <a href="/relationGraph/0CAEADF8/MVC">
                     <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="category-section-3-box">
-                            <div class="category-section-3-box-inner"> <i class="fa fa-users"></i>
+                        <div class="category-section-3-box" >
+                            <div class="category-section-3-box-inner">
+                                <i class="fa fa-users"></i>
                                 <h4> Cooperation </h4>
                                 <span>( 1980 )</span> </div>
 
                         </div>
                     </div>
+                    </a>
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="category-section-3-box">
                             <div class="category-section-3-box-inner"> <i class="fa fa-graduation-cap"></i>
@@ -359,39 +342,13 @@
     <script type="text/javascript" src="layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript">
 
-//        alert(screen.width);
-//        alert(screen.height);
-        layui.use(['form', 'layedit', 'laydate'], function(){
-            var form = layui.form
-                    ,layer = layui.layer
-                    ,laydate = layui.laydate;
+        $("#subBtn").click(function () {
 
-            //日期
-            laydate.render({
-                elem: '#bornDate',
-                lang: 'en'
-            });
-            laydate.render({
-                elem: '#gradDate',
-                lang: 'en'
-            });
+            var scholarName =  $("#search").val();
+            scholarName = "scholarName="+scholarName+"&affName=&minQindex=&maxQindex=&minHindex=&maxHindex=";
+            location.href = '/searchMore/index?'+scholarName;
 
-
-
-            //自定义验证规则
-            form.verify({
-                repass: function(value){
-                    var password = document.getElementById('password').value;
-                    if (!(password == value)) {
-                        return "two input password must be consistent";
-                    }
-                }
-                ,required:[/[\S]+/,"must input area can't be null"]
-                ,pass: [/(.+){6,12}$/, 'password length must between 6 to 12']
-                ,email:[/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,"email format is not right"]
-            });
-
-        });
+        })
 
 
     </script>
@@ -399,3 +356,4 @@
 </body>
 
 </html>
+

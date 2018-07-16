@@ -1,5 +1,6 @@
 package org.thealpha.dao.imple;
 
+import org.apache.commons.beanutils.locale.converters.DoubleLocaleConverter;
 import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.Cell;
@@ -13,13 +14,13 @@ import org.springframework.data.hadoop.hbase.HbaseTemplate;
 import org.springframework.data.hadoop.hbase.RowMapper;
 import org.springframework.stereotype.Repository;
 import org.thealpha.dao.inter.ScholarCooperateDao;
-import org.thealpha.model.Cooperater;
-import org.thealpha.model.FirstCoYear;
-import org.thealpha.model.Scholar;
-import org.thealpha.model.YearCount;
+//import org.thealpha.model.*;
+import org.thealpha.model.*;
 import org.thealpha.util.ConfigurationConstant;
 
+import java.io.Console;
 import java.io.IOException;
+//import java.time.Year;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -100,6 +101,53 @@ public class ScholarCooperateDaoImpl implements ScholarCooperateDao{
             }
         });
         return result;
+    }
+    //获取cointensity
+    public Map<String, Double> getCoIntensitymapById(String id) {
+        Map<String, Double> map = new HashMap<String, Double>();
+        List<Cooperater> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new RowMapper<List<Cooperater>>() {
+            public List<Cooperater> mapRow(Result result, int i) throws Exception {
+                List<Cooperater> cooperaterList = new ArrayList<Cooperater>();
+                String cooperate = Bytes.toString(result.getValue(ConfigurationConstant.CF_COOPERATE.getBytes(), ConfigurationConstant.QF_COLLABORATION_INTENSITY.getBytes()));
+                if (cooperate != null && !"".equals(cooperate)) {
+                    String[] cooperates = cooperate.split(", ");
+                    for (String co : cooperates) {
+                        Cooperater cooperater = new Cooperater();
+                        cooperater.setIndex(co.substring(0, co.indexOf(":")));
+                        cooperater.setIntensity(Double.parseDouble(co.substring(co.indexOf(":") + 1, co.length())));
+                        cooperaterList.add(cooperater);
+                    }
+                }
+                return  cooperaterList;
+            }
+        });
+        for(int i = 0;i < result.size();i++){
+            map.put(result.get(i).getIndex(), result.get(i).getIntensity());
+        }
+        return map;
+    }
+
+    public List<YearConumber> getYearConumbersById(String id){
+        List<YearConumber> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new RowMapper<List<YearConumber>>() {
+            @Override
+            public List<YearConumber> mapRow(Result result, int rowNum) throws Exception {
+                List<YearConumber> yearconumberList = new ArrayList<YearConumber>();
+                String yearconumber = Bytes.toString(result.getValue(ConfigurationConstant.CF_COOPERATE
+                        .getBytes(), ConfigurationConstant.QF_EVERY_YEAR_CONUMBER.getBytes()));
+                if(yearconumber != null && !"".equals(yearconumber)){
+                    String[] conumbers = yearconumber.split(", ");
+                    for(String co : conumbers){
+                        YearConumber yearco = new YearConumber();
+                        yearco.setYear(co.substring(0,co.indexOf(":")));
+                        yearco.setCoNumber(Integer.parseInt(co.substring(co.indexOf(":") + 1, co.length())));
+                        yearconumberList.add(yearco);
+//                        System.out.println(yearco.getYear() + ":" + yearco.getCoNumber());
+                    }
+                }
+                return yearconumberList;
+            }
+        });
+                return result;
     }
 
     public List<Cooperater> getCooperatersIntensityById(String id) {
@@ -223,4 +271,50 @@ public class ScholarCooperateDaoImpl implements ScholarCooperateDao{
         });
         return result;
     }
+    public List<Yearnumber> getEveryYearPapernumberById(String id) {
+        List<Yearnumber> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new
+                RowMapper<List<Yearnumber>>() {
+            public List<Yearnumber> mapRow(org.apache.hadoop.hbase.client.Result result, int i) throws Exception {
+                List<Yearnumber> everyYearPapernumberList = new ArrayList<Yearnumber>();
+
+                String eveYearPapernumber = Bytes.toString(result.getValue(ConfigurationConstant.CF_COOPERATE
+                        .getBytes(), ConfigurationConstant.QF_EVERY_YEAR_PAPERNUMBER.getBytes()));
+                if (StringUtils.isNotBlank(eveYearPapernumber)) {
+                    String[] eveYearPapernumberList = eveYearPapernumber.split(", ");
+                    for (String eveYearPaper : eveYearPapernumberList) {
+                        String year = eveYearPaper.substring(0, eveYearPaper.indexOf(":"));
+                        int papernumbers = Integer.parseInt(eveYearPaper.substring(eveYearPaper.indexOf(":") + 1));
+                        Yearnumber yearnumber = new Yearnumber();
+                        yearnumber.setYear(year);
+                        yearnumber.setPaperNumber(papernumbers);
+                        everyYearPapernumberList.add(yearnumber);
+                    }
+                }
+                return  everyYearPapernumberList;
+            }
+        });
+        return result;
+    }
+
+    public List<String> getCollaboratorsYearById(String id) {
+        List<String> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new
+                RowMapper<List<String>>() {
+            public List<String> mapRow(org.apache.hadoop.hbase.client.Result result, int i) throws Exception {
+                List<String> cooperateyearList = new ArrayList<String>();
+
+                String eveYearCollaborators = Bytes.toString(result.getValue(ConfigurationConstant.CF_COOPERATE.getBytes(), ConfigurationConstant.QF_EVERY_YEAR_COLLABORATORS.getBytes()));
+                if (StringUtils.isNotBlank(eveYearCollaborators)) {
+                    String[] eveYearCollaboratorList = eveYearCollaborators.split(", ");
+
+                    for (String eveYearCollaborator : eveYearCollaboratorList) {
+                        String year = eveYearCollaborator.substring(0, eveYearCollaborator.indexOf(":"));
+                        cooperateyearList.add(year);
+                    }
+                }
+                return  cooperateyearList;
+            }
+        });
+        return result;
+    }
+
 }
