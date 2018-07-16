@@ -14,13 +14,13 @@
 
     <link rel="stylesheet" href="/css/nav/leftnav.css" media="screen" type="text/css"/>
 
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/images/favicon.ico" type="image/x-icon">
 
     <!-- BOOTSTRAPE STYLESHEET CSS FILES -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 
     <!-- JQUERY SELECT -->
-    <link href="css/select2.min.css" rel="stylesheet" />
+    <link href="/css/select2.min.css" rel="stylesheet" />
 
     <!-- JQUERY MENU -->
     <link rel="stylesheet" href="/css/mega_menu.min.css">
@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="/css/style.css">
 
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/et-line-fonts.css" type="text/css">
 
     <!-- Google Fonts -->
@@ -51,7 +51,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
-    <!--<script src='/js/jquery-3.2.1.min.js'></script>-->
+
 
     <![endif]-->
 
@@ -71,7 +71,8 @@
             <section class="menu-list-items">
                 <ul class="menu-logo">
                     <li>
-                        <a href="../index"> <img src="/img/images/temp/wos_top.png" width="220px" height="40px" alt="logo" class="img-responsive"> </a>
+                        <a href="../../index"> <img src="/img/images/temp/wos_top.png" width="220px" height="40px"
+                                               alt="logo" class="img-responsive"> </a>
                     </li>
                 </ul>
                 <ul class="menu-links pull-right">
@@ -168,12 +169,12 @@
 
                             <div class="widget">
                                 <div class="widget-heading"><span class="title">Recent search</span></div>
-                                <ul class="categories-module">
-                                    <li> <a href=""> scholar1 <span>(1021)</span> </a> </li>
-                                    <li> <a href=""> scholar2 <span>(54)</span> </a> </li>
-                                    <li> <a href=""> scholar3<span>(13)</span> </a> </li>
-                                    <li> <a href=""> scholar5<span>(23)</span> </a> </li>
-                                    <li> <a href=""> scholar6 <span>(42)</span> </a> </li>
+                                <ul class="categories-module" id="RcentVisited">
+                                    <li>  scholar1 <span>(1021)</span>  </li>
+                                    <li>  scholar2 <span>(54)</span>  </li>
+                                    <li>  scholar3<span>(13)</span>  </li>
+                                    <li>  scholar5<span>(23)</span>  </li>
+                                    <li>  scholar6 <span>(42)</span>  </li>
                                 </ul>
                             </div>
 
@@ -211,9 +212,15 @@
     </div>
     <a href="#" class="scrollup"><i class="fa fa-chevron-up"></i></a>
 
+
+</div>
+</body>
+
     <script type="text/javascript" src="/js/time_map/echarts.min.js"></script>
     <!-- JAVASCRIPT JS  -->
     <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
+
+
 
     <!-- BOOTSTRAP CORE JS -->
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
@@ -224,7 +231,7 @@
     <script type="text/javascript" src="/js/mega_menu.min.js"></script>
 
     <!-- JQUERY EASING -->
-    <script type="text/javascript" src="/js/easing.js"></script>
+    <#--<script type="text/javascript" src="/js/easing.js"></script>-->
 
     <!-- JQUERY COUNTERUP -->
     <script type="text/javascript" src="/js/counterup.js"></script>
@@ -552,7 +559,45 @@
     </script>
 
 
-</div>
-</body>
+    <!--jquery.cookie.js-->
+    <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var COOKIE_NAME = 'test_cookie';
+            //设置cookie，通过时间间隔
+            //alert("fasdfs");
+            $('#RcentVisited').children("li").click(function () {
+                $.cookie('scholars', 'cookieValue', { path: '/', expires: 1 });
+                $.cookie('scholars', 'cookieValuefasdfdasf', { path: '/', expires: 1 });
+                alert($.cookie('scholars'));
+
+            });
+    //        // 设置cookie，到期时间
+    //        $('a').eq(1).click(function() {
+    //            var date = new Date();
+    //            date.setTime(date.getTime() + (1 * 24 * 60 * 60 * 1000));
+    //            $.cookie('cookieName', '11111111111', { path: '/', expires: date });
+    //            return false;
+    //        });
+    //        // 获取 cookie
+    //        $('a').eq(2).click(function () {
+    //
+    //            alert($.cookie('cookieName'));
+    //            return false;
+    //        });
+    //        // 删除cookie
+    //        $('a').eq(3).click(function() {
+    //            $.cookie('cookieName', null, { path: '/' });
+    //            return false;
+    //        });
+        });
+
+    </script>
+
+<script type="text/javascript">
+    function addRecentVisit(scholar) {
+
+    }
+</script>
 
 </html>
