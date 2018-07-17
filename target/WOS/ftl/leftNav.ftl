@@ -71,14 +71,13 @@
             <section class="menu-list-items">
                 <ul class="menu-logo">
                     <li>
-                        <a href="../../index"> <img src="/img/images/temp/wos_top.png" width="220px" height="40px"
-                                               alt="logo" class="img-responsive"> </a>
+                        <a href="../../index"> <img src="/img/images/temp/wos_top.png" width="220px" height="40px" alt="logo" class="img-responsive"> </a>
                     </li>
                 </ul>
                 <ul class="menu-links pull-right">
 
-                    <li><a href="login.html">Login</a></li>
-                    <li class="no-bg"><a href="register.html" class="p-job">register</a></li>
+                    <li><a href="/login/index">Login</a></li>
+                    <li class="no-bg"><a href="/register/index" class="p-job">register</a></li>
                 </ul>
             </section>
         </nav>
@@ -563,15 +562,24 @@
     <script type="text/javascript" src="/js/jquery.cookie.js"></script>
     <script type="text/javascript">
         $(function(){
-            var COOKIE_NAME = 'test_cookie';
-            //设置cookie，通过时间间隔
-            //alert("fasdfs");
+            dispHtml();
+//            var scholars = "_111_222_333".split("_");
+//            for(var i=0;i<scholars.length;i++){
+//                console.log("scholars " + scholars[i]);
+//            }
             $('#RcentVisited').children("li").click(function () {
-                $.cookie('scholars', 'cookieValue', { path: '/', expires: 1 });
-                $.cookie('scholars', 'cookieValuefasdfdasf', { path: '/', expires: 1 });
-                alert($.cookie('scholars'));
+                var sc = {};
+                sc.id = "12";
+                sc.name = "liyunhao";
+
+                addRecentVisit(sc);
+//                $.cookie('scholars', 'cookieValue', { path: '/', expires: 7 });
+//                $.cookie('scholars', 'cookieValuefasdfdasf', { path: '/', expires: 7 });
+//                alert($.cookie('scholars'));
 
             });
+
+
     //        // 设置cookie，到期时间
     //        $('a').eq(1).click(function() {
     //            var date = new Date();
@@ -595,9 +603,44 @@
     </script>
 
 <script type="text/javascript">
+    function dispHtml() {
+        var scholars = JSON.parse($.cookie('scholars'));
+        scholars.forEach(function (item,index) {
+            console.log("index :" + index + JSON.stringify(item));
+            var temp = "li:eq("+index+")";
+            $('#RcentVisited').children(temp).html(item.name);
+        });
+    }
     function addRecentVisit(scholar) {
 
+        var scholars = JSON.parse($.cookie('scholars'));
+        if(isInIt(scholar)){
+            console.log("is in it");
+            dispHtml();
+            return;
+        }else if(scholars.length<5){
+            scholars.push(scholar);
+        }else if(scholars.length==5){
+            scholars.splice(0,1);
+            scholars.push(scholar);
+
+        }
+
+        dispHtml();
+
+        $.cookie('scholars', JSON.stringify(scholars), { path: '/', expires: 7 });
+
     }
+    function isInIt(scholar){
+        var scholars = JSON.parse($.cookie('scholars'));
+        for(var i=0;i<scholars.length;i++){
+            if(scholars[i].id == scholar.id){
+                return true;
+            }
+        }
+        return false;
+    }
+
 </script>
 
 </html>

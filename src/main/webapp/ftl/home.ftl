@@ -86,8 +86,8 @@
                 </ul>
                 <ul class="menu-links pull-right">
 
-                    <li><a href="login.html">Login</a></li>
-                    <li class="no-bg"><a href="register.html" class="p-job">register</a></li>
+                    <li><a href="/login/index">Login</a></li>
+                    <li class="no-bg"><a href="/register/index" class="p-job">register</a></li>
                 </ul>
             </section>
         </nav>
@@ -213,31 +213,41 @@
                             <p>Here are the top three scholars based on a large number of papers.</p>
                         </div>
                     </div>
+                </div>
+
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="blog-post">
                             <div class="post-img"> <a href="#"> <img src="img/images/blog/1.jpg" alt="" class="img-responsive"> </a> </div>
-                            <div class="post-info"> <a href="">Aug 30, 2016</a> <a href="#">23 comments</a> </div>
-                            <h3 class="post-title"> <a href="#"> Sketch Designing Artists are beauty: A report </a> </h3>
-                            <p class="post-excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam neque tempora odit
-                                atque repellat est molestiae perferendis. </p>
+
+                            <div class="post-info" id="c1"><a >Please wait...</a>
+                            <h3 class="post-title" id="n1"> <a href="#">  </a>
+                            </h3>
+                            </div>
+                            <p class="post-excerpt" id="a1"> </p>
                         </div>
                     </div>
+
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="blog-post">
                             <div class="post-img"> <a href="#"> <img src="img/images/blog/2.jpg" alt="" class="img-responsive"> </a> </div>
-                            <div class="post-info"> <a href="#">august 30, 2016</a> <a href="#">90 comments</a> </div>
-                            <h3 class="post-title"> <a href="#"> A suitable timings for a graphic designers </a> </h3>
-                            <p class="post-excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam neque tempora odit
-                                atque repellat est molestiae perferendis. </p>
+
+                            <div class="post-info" id="c2"><a >Please wait...</a>
+                            <h3 class="post-title" id="n2"> <a href="#">
+                            </a> </h3>
+                            </div>
+                            <p class="post-excerpt" id="a2"></p>
                         </div>
                     </div>
+
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="blog-post">
                             <div class="post-img"> <a href="#"> <img src="img/images/blog/3.jpg" alt="" class="img-responsive"> </a> </div>
-                            <div class="post-info"> <a href="#">august 02, 2016</a> <a href="#">10 comments</a> </div>
-                            <h3 class="post-title"> <a href="#"> How to get a job on same time same place </a> </h3>
-                            <p class="post-excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam neque tempora odit
-                                atque repellat est molestiae perferendis. </p>
+
+                            <div class="post-info" id="c3"><a >Please wait...</a>
+                            <h3 class="post-title" id="n3"> <a href="#">
+                            </a> </h3>
+                            </div>
+                            <p class="post-excerpt" id="a3">  </p>
                         </div>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
@@ -303,35 +313,37 @@
     <a href="#" class="scrollup"><i class="fa fa-chevron-up"></i></a>
 
     <!-- JAVASCRIPT JS  -->
-    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
 
     <!-- BOOTSTRAP CORE JS -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 
     <!-- JQUERY SELECT -->
-    <script type="text/javascript" src="js/select2.min.js"></script>
+    <script type="text/javascript" src="/js/select2.min.js"></script>
 
     <!-- MEGA MENU -->
-    <script type="text/javascript" src="js/mega_menu.min.js"></script>
+    <script type="text/javascript" src="/js/mega_menu.min.js"></script>
 
     <!-- JQUERY EASING -->
 
-    <#--<script type="text/javascript" src="js/easing.js"></script>-->
+
+    <script type="text/javascript" src="/js/easing.js"></script>
+
 
     <!-- JQUERY COUNTERUP -->
-    <script type="text/javascript" src="js/counterup.js"></script>
+    <script type="text/javascript" src="/js/counterup.js"></script>
 
     <!-- JQUERY WAYPOINT -->
-    <script type="text/javascript" src="js/waypoints.min.js"></script>
+    <script type="text/javascript" src="/js/waypoints.min.js"></script>
 
     <!-- Owl Carousel -->
-    <script type="text/javascript" src="js/owl-carousel.js"></script>
+    <script type="text/javascript" src="/js/owl-carousel.js"></script>
 
     <!-- TEXT ROTATOR -->
-    <script type="text/javascript" src="js/typed.js"></script>
+    <script type="text/javascript" src="/js/typed.js"></script>
 
     <!-- JQUERY REVEAL -->
-    <script type="text/javascript" src="js/footer-reveal.min.js"></script>
+    <script type="text/javascript" src="/js/footer-reveal.min.js"></script>
 
     <!-- jQuery REVOLUTION Slider  -->
     <script src="js/revolution/js/jquery.themepunch.tools.min.js"></script>
@@ -349,9 +361,45 @@
             scholarName = "scholarName="+scholarName+"&affName=&minQindex=&maxQindex=&minHindex=&maxHindex=";
             location.href = '/searchMore/index?'+scholarName;
 
-        })
+        });
 
+        $.ajax({
+            type:"POST",
+            url:'/scholar/indexinfo?authorId=0CAEADF8',
+            success:function (data) {
 
+                $("#c1").children("a").html('Q-index: '+data.qindex+' | H-index: '+data.hindex);
+
+                $("#n1").children("a").html(data.name);
+                $("#a1").html('Affiliation: '+data.aff+'</br>'+'StudyField: '+data.fieldName);
+            }
+        });
+        $.ajax({
+            type:"POST",
+            url:'/scholar/indexinfo?authorId=7B374211',
+            success:function (data) {
+                $("#c2").children("a").html('Q-index: '+data.qindex+' | H-index: '+data.hindex);
+                $("#n2").children("a").html(data.name);
+                $("#a2").html('Affiliation: '+data.aff+'</br>'+'StudyField: '+data.fieldName);
+            }
+        });
+        $.ajax({
+            type:"POST",
+            url:'/scholar/indexinfo?authorId=6AECDE8A',
+            success:function (data) {
+                $("#c3").children("a").html('Q-index: '+data.qindex+' | H-index: '+data.hindex);
+                $("#n3").children("a").html(data.name);
+                
+                $("#a3").html('Affiliation: '+data.aff+'</br>'+'StudyField: '+data.fieldName);
+            }
+        });
+//        $.ajax({
+//            type:"POST",
+//            url:'/scholar/baseInfo?authorId=7CEFBC45',
+//            success:function (data) {
+//                $("#c4").html(data);
+//            }
+//        });
     </script>
 </div>
 </body>

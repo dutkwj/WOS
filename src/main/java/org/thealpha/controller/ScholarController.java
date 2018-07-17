@@ -28,6 +28,13 @@ public class ScholarController {
 //        return "scholar";
         return "scholarInfo";
     }
+    @RequestMapping("/indexinfo")
+    @ResponseBody
+    public Scholar indexInfo(@RequestParam String authorId){
+        Scholar scholar = scholarInfoService.getScholarById(authorId);
+        System.out.println(scholar.getName());
+        return scholar;
+    }
 
 //    @RequestMapping("/personalInfo/{scholarId}")
 //    @ResponseBody
