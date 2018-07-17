@@ -169,11 +169,12 @@
                             <div class="widget">
                                 <div class="widget-heading"><span class="title">Recent search</span></div>
                                 <ul class="categories-module" id="RcentVisited">
-                                    <li>  scholar1 <span>(1021)</span>  </li>
-                                    <li>  scholar2 <span>(54)</span>  </li>
-                                    <li>  scholar3<span>(13)</span>  </li>
-                                    <li>  scholar5<span>(23)</span>  </li>
-                                    <li>  scholar6 <span>(42)</span>  </li>
+                                    <#--<li>  <a>scholar1  </a> </li>-->
+                                    <#--<li>  <a>scholar1  </a> </li>-->
+                                    <#--<li>  <a>scholar1  </a> </li>-->
+                                    <#--<li>  <a>scholar1  </a> </li>-->
+                                    <#--<li>  <a>scholar1  </a> </li>-->
+
                                 </ul>
                             </div>
 
@@ -561,23 +562,26 @@
     <!--jquery.cookie.js-->
     <script type="text/javascript" src="/js/jquery.cookie.js"></script>
     <script type="text/javascript">
+
         $(function(){
-            dispHtml();
+
 //            var scholars = "_111_222_333".split("_");
 //            for(var i=0;i<scholars.length;i++){
 //                console.log("scholars " + scholars[i]);
 //            }
-            $('#RcentVisited').children("li").click(function () {
-                var sc = {};
-                sc.id = "12";
-                sc.name = "liyunhao";
+            if($.cookie('scholars')==null){
+                var scholars = [];
+                $.cookie('scholars', JSON.stringify(scholars), { path: '/', expires: 7 });
+            }
+            dispHtml();
 
-                addRecentVisit(sc);
+           // $('#RcentVisited').children("li").click(function () {
+
 //                $.cookie('scholars', 'cookieValue', { path: '/', expires: 7 });
 //                $.cookie('scholars', 'cookieValuefasdfdasf', { path: '/', expires: 7 });
 //                alert($.cookie('scholars'));
 
-            });
+            //});
 
 
     //        // 设置cookie，到期时间
@@ -603,12 +607,31 @@
     </script>
 
 <script type="text/javascript">
+    <#--$.ajax({-->
+        <#--type:"POST",-->
+        <#--url:'/cooperate/${scholarId!""}/MVC',-->
+        <#--success:function (data) {-->
+            <#--$("#bigContainer").html(data);-->
+        <#--}-->
+    <#--});-->
+
+
+
+
+
+
     function dispHtml() {
         var scholars = JSON.parse($.cookie('scholars'));
+        $('#RcentVisited').html("");
         scholars.forEach(function (item,index) {
-            console.log("index :" + index + JSON.stringify(item));
+            //console.log("index :" + index + JSON.stringify(item));
             var temp = "li:eq("+index+")";
-            $('#RcentVisited').children(temp).html(item.name);
+            var url = '/relationGraph/'+item.id+'/MVC';
+
+//            <a href="dsfasd"></a>
+           var list = '<li><a href="'+ url+ ' " >' + item.name + '</a> </li>';
+           //console.log(list);
+            $('#RcentVisited').append(list);
         });
     }
     function addRecentVisit(scholar) {

@@ -136,6 +136,16 @@ function createV4SelectableForceDirectedGraph(svg, graph,id_c) {
             $('#studyField').html(d.studyField);
             $('#scholarName').html(d.name);
             index = d.id;
+
+
+            var sc = {};
+            sc.id = d.id;
+            sc.name = d.name;
+
+            addRecentVisit(sc);
+            dispHtml();
+
+
             $('.cd-item').append('<img src="/img/images/users/scholarImg.png" >');
             var selectedImage = $('.cd-item').children('img'),
                 slectedImageUrl = selectedImage.attr('src');
