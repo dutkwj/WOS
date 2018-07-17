@@ -386,7 +386,7 @@
             success:function (data) {
                 $("#c3").children("a").html('Q-index: '+data.qindex+' | H-index: '+data.hindex);
                 $("#n3").children("a").html(data.name);
-                
+
                 $("#a3").html('Affiliation: '+data.aff+'</br>'+'StudyField: '+data.fieldName);
             }
         });
