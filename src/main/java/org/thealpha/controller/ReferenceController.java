@@ -38,7 +38,7 @@ public class ReferenceController {
         model.addAttribute("scholarId", scholarId);
         model.addAttribute("refType", "ref");
 //        return "cooperate";
-        return "relationGraph";
+        return "refrefed_net";
     }
 
     @RequestMapping("/refJSON/{scholarId}")
@@ -46,6 +46,7 @@ public class ReferenceController {
     public Graph getRefJSON(@PathVariable String scholarId) {
         Scholar middleScholar = scholarInfoDao.getScholarById(scholarId);
         List<Scholar> refScholars = referenceService.getRefAuthorsByAuthorId(scholarId);
+        List<Scholar> refedScholars = referenceService.getRefedAuthorsByAuthorId(scholarId);
         List<Node> nodes = new ArrayList<Node>();
         List<Link> links = new ArrayList<Link>();
         List<String> visitedNodes = new ArrayList<String>();
@@ -53,8 +54,8 @@ public class ReferenceController {
         Node midNode = new Node();
         midNode.setId(scholarId);
         midNode.setName(middleScholar.getName());
-        midNode.setSize("50");
-        midNode.setColor("#FF99CC");
+        midNode.setSize(String.valueOf(refedScholars.size()));
+        midNode.setColor(String.valueOf(refScholars.size()));
         midNode.setQindex(middleScholar.getQindex());
         midNode.setHindex(middleScholar.getHindex());
         midNode.setAff(middleScholar.getAff());

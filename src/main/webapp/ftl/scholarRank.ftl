@@ -133,7 +133,7 @@
                                 '<div class="profile-skills">'+ result +
                                 '</div>'+
                                 '<div class="hire-btn">'+
-                                '<a href="graph.html" class="btn-default" > <i class="fa fa-location-arrow"></i> Relation</a>'+
+                                '<a class="btn-default" href="/scholar/baseInfo?authorId=' + thisData[0][index] + '">'+ ' <i class="fa fa-location-arrow"></i> Relation</a>'+
                                 '</div>'+
                                 '</div>'+
                                 '</div>'+

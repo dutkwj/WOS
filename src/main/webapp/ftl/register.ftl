@@ -1,274 +1,350 @@
-<#assign path="${request.getContextPath()}">
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<html long="en" class="no-js">
+<html lang="en">
+
 <head>
-    <meta http-equiv="Content-Type"content="text/html; charset=UTF-8">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ScriptsBundle">
     <title>register</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="${path}/layui/css/layui.css" type="text/css" media="all">
-    <link href="../css/dialog/normalize.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="../css/dialog/animate.min.css">
-    <link rel="stylesheet" href="../css/dialog/jquery.gDialog.css">
-    <script src="../js/dialog/jquery.js"></script>
-    <script src="../js/dialog/jquery.gDialog.js"></script>
+    <link rel="icon" href="../img/images/favicon.ico" type="image/x-icon">
 
+    <!-- BOOTSTRAPE STYLESHEET CSS FILES -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- JQUERY MENU -->
+    <link rel="stylesheet" href="/css/mega_menu.min.css">
+
+    <!-- ANIMATION -->
+    <link rel="stylesheet" href="/css/animate.min.css">
+
+    <!-- OWl  CAROUSEL-->
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/owl.style.css">
+
+    <!-- TEMPLATE CORE CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- FOR THIS PAGE ONLY -->
+    <link href="/css/select2.min.css" rel="stylesheet" />
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/et-line-fonts.css" type="text/css">
+
+    <!-- Google Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,300" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+
+
+    <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
+    <link rel="stylesheet" href="/layui/css/layui.css" type="text/css" media="all">
+    <link href="/css/dialog/normalize.css" rel="stylesheet" type="text/css">
+    <!-- JavaScripts -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+
+        .layui-form-select dl dd.layui-this {
+            /*background-color: #5FB878;*/
+            background-color: rgba(77,196,25);
+            color: #fff;
+        }
+
+        .layui-laydate .layui-this{
+            background-color: rgb(77,196,25);
+            color: #fff;
+        }
+    </style>
 </head>
-<body >
-<div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
-    <ul class="layui-nav">
-        <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
-    </ul>
-    <ul class="layui-nav layui-layout-right">
-    <#if Session.user?exists>
-        <li class="layui-nav-item">
-            <a href="javascript:;">
-                <img src="/hdfs/personalPhoto" class="layui-nav-img">
-            ${Session['user'].name!""}
-            </a>
-            <dl class="layui-nav-child">
-                <dd><a href="">base information</a></dd>
-                <dd><a href="">modify information</a></dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item"><a href="/logout">logout</a></li>
-    <#else>
-        <li class="layui-nav-item"><a href="/login/index">login</a></li>
-        <li class="layui-nav-item"><a href="/register/index">register</a></li>
-    </#if>
-    </ul>
-</div>
-<script type="text/javascript" src="../layui/layui.all.js" charset="utf-8"></script>
-<#--<script src="../js/jquery.js"></script>-->
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/stickUp.min.js"></script>
 
-<script type="text/javascript">
+<body>
+<div class="page category-page">
+    <div id="spinner">
+        <div class="spinner-img"> <img alt="Opportunities Preloader" src="../img/images/loader.gif" />
+            <h2>Please Wait.....</h2>
+        </div>
+    </div>
+    <header id="header2" class="navbar transparent-header fa-change-white">
+        <nav id="menu-1" class="mega-menu" data-color="">
+            <section class="menu-list-items">
+                <ul class="menu-logo">
+                    <li>
+                        <a href="/index"> <img src="../img/images/temp/wos_top.png" width="220px" height="40px" alt="logo" class="img-responsive"> </a>
+                    </li>
+                </ul>
+                <ul class="menu-links pull-right">
 
-    layui.use('element', function () {
-        var element = layui.element;
-        element.on('nav(demo)', function (elem) {
-            //console.log(elem)
-            layer.msg(elem.text());
-        });
-    });
-    jQuery(function($) {
-        $(document).ready( function() {
-            $('.topNav').stickUp();
-        });
-    });
-</script>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+                    <!-- <li><a href="">Login</a></li> -->
+                    <!-- <li class="no-bg"><a href="" class="p-job">register</a></li> -->
+                </ul>
+            </section>
+        </nav>
+    </header>
+    <div class="clearfix"></div>
 
-<div class="layui-container">
-    <form class="layui-form" action="/register/addUser" method="post" enctype="multipart/form-data">
-        <div class="layui-form-item">
-            <label class="layui-form-label"><font color="red">*</font> email</label>
-            <div class="layui-input-block">
-                <input type="text" name="email" required  lay-verify="email" placeholder="please input email" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label"><font color="red">*</font> passward</label>
-            <div class="layui-input-inline">
-                <input type="password" name="password" id="password" required lay-verify="pass" placeholder="please input password" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label"><font color="red">*</font> passward</label>
-            <div class="layui-input-inline">
-                <input type="password" name="rePassword" required lay-verify="repass" placeholder="please input password again" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label"><font color="red">*</font> name</label>
-            <div class="layui-input-block">
-                <input type="text" name="name" required lay-verify="required" placeholder="please input your name" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">sex</label>
-            <div class="layui-input-block">
-                <input type="radio" name="sex" value="male" title="male" checked>
-                <input type="radio" name="sex" value="female" title="female">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">position</label>
-            <div class="layui-input-inline">
-                <select name="position">
-                    <option value="">choose position</option>
-                    <option value="Professor">Professor</option>
-                    <option value="Associate Professor">Associate Professor</option>
-                    <option value="Assitant Professor">Assitant Professor</option>
-                    <option value="Researcher">Researcher</option>
-                    <option value="PostDoc">PostDoc</option>
-                    <option value="Phd Student">Phd Student</option>
-                    <option value="Master Student">Master Student</option>
-                    <option value="Bachelor Student">Bachelor Student</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">org</label>
-            <div class="layui-input-block">
-                <input type="text" name="org" placeholder="please input your organization" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">nation</label>
-            <div class="layui-input-inline">
-                <select name="nation" lay-search="">
-                    <option value="">choose or search</option>
-                    <#list countryNames as countryName>
-                        <option value="${countryName}">${countryName}</option>
-                    </#list>
-                </select>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <div class="layui-inline">
-                <label class="layui-form-label">born date</label>
-                <div class="layui-input-inline">
-                    <input type="text" name="bornDate" id="bornDate" placeholder="choose your born date" autocomplete="off" class="layui-input">
+
+    <section class="breadcrumb-search parallex" style="padding: 40px 0;">
+
+    </section>
+
+    <section class="login-page light-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="login-container">
+                        <div class="loginbox">
+                            <div class="loginbox-title">Sign Up using social accounts</div>
+                            <ul class="social-network social-circle onwhite">
+                                <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" class="icoLinkedin" title="Linkedin +"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                            <div class="loginbox-or">
+                                <div class="or-line"></div>
+                                <div class="or">OR</div>
+                            </div>
+
+
+
+                            <form class="layui-form" action="/register/addUser" method="post" enctype="multipart/form-data">
+
+                                <div class="form-group">
+                                    <label>Email: <span class="required">*</span></label>
+                                    <input placeholder="please input email" class="form-control" type="email">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password: <span class="required">*</span></label>
+                                    <input placeholder="please input password" class="form-control" type="password">
+                                </div>
+                                <div class="form-group">
+                                    <label>Confirm Password: <span class="required">*</span></label>
+                                    <input placeholder="please input password again" class="form-control" type="password">
+                                </div>
+                                <div class="form-group">
+                                    <label>name: <span class="required">*</span></label>
+                                    <input placeholder="please input your name" class="form-control" type="text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>sex: <span class="required">*</span></label>
+                                    <select class="" style="width: 20px;">
+                                        <option value="0">male</option>
+                                        <option value="1">female</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>position: <span class="required">*</span></label>
+                                    <select class="" style="width: 20px;">
+
+                                        <option value="Professor">Professor</option>
+                                        <option value="Associate Professor">Associate Professor</option>
+                                        <option value="Assitant Professor">Assitant Professor</option>
+                                        <option value="Researcher">Researcher</option>
+                                        <option value="PostDoc">PostDoc</option>
+                                        <option value="Phd Student">Phd Student</option>
+                                        <option value="Master Student">Master Student</option>
+                                        <option value="Bachelor Student">Bachelor Student</option>
+                                        <option value="Other">Other</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>org: <span class="required">*</span></label>
+                                    <input placeholder="please input your organization" class="form-control" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <label>nation: <span class="required">*</span></label>
+                                    <select class="">
+                                        <!-- <option>&nbsp;</option> -->
+                                        <option value="0">Cooperation</option>
+                                        <option value="1">Advisor-advise</option>
+                                        <option value="2">Citation</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>born date: <span class="required">*</span></label>
+                                    <input type="text" name="bornDate" id="bornDate" style="height: 48px; border: 1px solid #ccc;" placeholder="choose your born date" autocomplete="off" class="layui-input">
+                                </div>
+                                <div class="form-group">
+                                    <label>supervisor: <span class="required">*</span></label>
+                                    <input placeholder="please input your supervisor name" class="form-control" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <label>grad date: <span class="required">*</span></label>
+                                    <input type="text" name="graduateDate" id="graduateDate" style="height: 48px; border: 1px solid #ccc;" placeholder="choose your grad date" autocomplete="off" class="layui-input">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>grad college: <span class="required">*</span></label>
+                                    <input placeholder="please input your graduate college" class="form-control" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <label>degree: <span class="required">*</span></label>
+                                    <select class="" style="height: 48px; border: 1px solid #ccc;">
+
+                                        <option value="0">Doctor</option>
+                                        <option value="1">master</option>
+                                        <option value="2">Bechelor</option>
+                                        <option value="3">Other</option>
+
+                                    </select>
+                                </div>
+
+
+
+                                <div class="loginbox-forgot">
+                                    <input type="checkbox"> I accept <a href="">Term and consitions?</a>
+                                </div>
+
+                                <div class="loginbox-submit">
+                                    <input type="submit" class="btn btn-default btn-block" value="Register" lay-submit lay-filter="formDemo" id="submit" >
+                                </div>
+                            </form>
+
+
+                            <div class="loginbox-signup"> Already have account <a href="/login/index">Sign in</a> </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">supervisor</label>
-            <div class="layui-input-block">
-                <input type="text" name="supervisorName" placeholder="please input your supervisor name" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <div class="layui-inline">
-                <label class="layui-form-label">grad date</label>
-                <div class="layui-input-inline">
-                    <input type="text" name="gradDate" id="graduateDate" placeholder="choose your graduate date" autocomplete="off" class="layui-input">
+    </section>
+
+    <div class="fixed-footer-1">
+
+        <section class="footer-bottom-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="footer-bottom">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <p>Copyright ©2018 - <a href="http://thealphalab.org/">The Alpha Lab </a></p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">grad college</label>
-            <div class="layui-input-block">
-                <input type="text" name="gradCollege" placeholder="please input your graduate college" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">degree</label>
-            <div class="layui-input-inline">
-                <select name="degree">
-                    <option value="">choose degree</option>
-                    <option value="Doctor">Doctor</option>
-                    <option value="Master">Master</option>
-                    <option value="Bachelor">Bachelor</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-        </div>
-        <#--<div class="layui-form-item">-->
-            <#--<label class="layui-form-label">personal photo</label>-->
-            <#--<div id="test10" >-->
-                <#--<i class="layui-icon"></i>-->
-                <#--<p id="demo1">click or drag</p>-->
-            <#--</div>-->
-        <#--</div>-->
-        <div class="layui-form-item">
-            <div >
+        </section>
+    </div>
 
-                <button type="button" class="layui-btn" id="test1">personal photo</button>
-                &nbsp;&nbsp;
-                <img class="layui-upload-img" id="demo1" width="80" height="80">
-                <p id="demoText"></p>
-            </div>
-        </div>
+    <a href="#" class="scrollup"><i class="fa fa-chevron-up"></i></a>
 
-        <div class="layui-form-item layui-form-text">
-            <label class="layui-form-label">research field</label>
-            <div class="layui-input-block">
-                <textarea name="researchField" placeholder="please input your research field" class="layui-textarea"></textarea>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <div class="layui-input-block">
-                <button class="layui-btn" lay-submit lay-filter="formDemo" id="submit">submit</button>
-                <#--<button>立即提交</button>-->
-                <button type="reset" class="layui-btn layui-btn-primary">reset</button>
-            </div>
-        </div>
-    </form>
-</div>
-<script type="text/javascript" src="../layui/layui.js" charset="utf-8"></script>
+    <!-- JAVASCRIPT JS  -->
 
-<script>
-    layui.use(['form', 'layedit', 'laydate'], function(){
-        var form = layui.form
-                ,layer = layui.layer
-                ,laydate = layui.laydate;
+    <!-- BOOTSTRAP CORE JS -->
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 
-        //日期
-        laydate.render({
-            elem: '#bornDate',
-            lang: 'en'
-        });
-        laydate.render({
-            elem: '#graduateDate',
-            lang: 'en'
-        });
+    <!-- JQUERY SELECT -->
+    <script type="text/javascript" src="/js/select2.min.js"></script>
 
-        //自定义验证规则
-        form.verify({
-            repass: function(value){
-                var password = document.getElementById('password').value;
-                if (!(password == value)) {
-                    return "two input password must be consistent";
-                }
-            }
-            ,required:[/[\S]+/,"must input area can't be null"]
-            ,pass: [/(.+){6,12}$/, 'password length must between 6 to 12']
-            ,email:[/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,"email format is not right"]
-        });
+    <!-- MEGA MENU -->
+    <script type="text/javascript" src="/js/mega_menu.min.js"></script>
+
+    <!-- JQUERY EASING -->
+    <script type="text/javascript" src="/js/easing.js"></script>
+
+    <!-- JQUERY COUNTERUP -->
+    <script type="text/javascript" src="/js/counterup.js"></script>
+
+    <!-- JQUERY WAYPOINT -->
+    <script type="text/javascript" src="/js/waypoints.min.js"></script>
+
+    <!-- JQUERY REVEAL -->
+    <script type="text/javascript" src="/js/footer-reveal.min.js"></script>
+
+    <!-- Owl Carousel -->
+    <script type="text/javascript" src="/js/owl-carousel.js"></script>
+
+    <!-- CORE JS -->
+    <script type="text/javascript" src="/js/custom.js"></script>
+
+    <script type="text/javascript" src="/layui/layui.all.js" charset="utf-8"></script>
 
 
-        //监听提交
-        form.on('submit(demo1)', function(data){
-            layer.alert(JSON.stringify(data.field), {
-                title: '最终的提交信息'
+
+    <script>
+        layui.use(['form', 'layedit', 'laydate'], function(){
+            var form = layui.form
+                    ,layer = layui.layer
+                    ,laydate = layui.laydate;
+
+            //日期
+            laydate.render({
+                elem: '#bornDate',
+                lang: 'en'
             });
-            return false;
-        });
-    });
+            laydate.render({
+                elem: '#graduateDate',
+                lang: 'en'
+            });
 
-
-    layui.use('upload', function(){
-        var $ = layui.jquery
-                ,upload = layui.upload;
-
-
-        //普通图片上传
-        var uploadInst = upload.render({
-            elem: '#test1'
-            ,url: '/register/addUser'
-            ,auto: false //选择文件后不自动上传
-            ,bindAction: '#submit' //指向一个按钮触发上传
-            ,choose: function(obj){
-                obj.preview(function(index, file, result){
-                    $('#demo1').attr('src', result); //图片链接（base64）
-                });
-            }
-            ,done: function(res){
-                //如果上传失败
-                if(res.code > 0){
-                    return layer.msg('上传失败');
+            //自定义验证规则
+            form.verify({
+                repass: function(value){
+                    var password = document.getElementById('password').value;
+                    if (!(password == value)) {
+                        return "two input password must be consistent";
+                    }
                 }
-                //上传成功
-            }
+                ,required:[/[\S]+/,"must input area can't be null"]
+                ,pass: [/(.+){6,12}$/, 'password length must between 6 to 12']
+                ,email:[/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,"email format is not right"]
+            });
+
+
+            //监听提交
+            form.on('submit(demo1)', function(data){
+                layer.alert(JSON.stringify(data.field), {
+                    title: '最终的提交信息'
+                });
+                return false;
+            });
+        });
+
+
+        layui.use('upload', function(){
+            var $ = layui.jquery
+                    ,upload = layui.upload;
+
+
+            //普通图片上传
+            var uploadInst = upload.render({
+                elem: '#test1'
+                ,url: '/register/addUser'
+                ,auto: false //选择文件后不自动上传
+                ,bindAction: '#submit' //指向一个按钮触发上传
+                ,choose: function(obj){
+                    obj.preview(function(index, file, result){
+                        $('#demo1').attr('src', result); //图片链接（base64）
+                    });
+                }
+                ,done: function(res){
+                    //如果上传失败
+                    if(res.code > 0){
+                        return layer.msg('上传失败');
+                    }
+                    //上传成功
+                }
 //            ,error: function(){
 //                //演示失败状态，并实现重传
 ////                var demoText = $('#demoText');
@@ -277,31 +353,22 @@
 ////                    uploadInst.upload();
 ////                });
 //            }
+            });
         });
-    });
 
-    <#if registerError??>
+        <#if registerError??>
         $.gDialog.alert("${registerError!"register error"}", {
             title: "Register Error",
             animateIn: "bounceIn",
             animateOut: "bounceOut"
         });
-    </#if>
+        </#if>
+
 
 </script>
-</script>
-<script src="../js/jquery.min.js"></script>
-<script src="../js/stickUp.min.js"></script>
 
-<script type="text/javascript">
-    //initiating jQuery
-    jQuery(function($) {
-        $(document).ready( function() {
-            //enabling stickUp on the '.navbar-wrapper' class
-            $('.qqq').stickUp();
-        });
-    });
-</script>
-
+</div>
 </body>
+
+
 </html>

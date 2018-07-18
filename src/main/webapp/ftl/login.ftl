@@ -1,100 +1,208 @@
-<#assign path="${request.getContextPath()}">
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
+<html lang="en">
 
-<html long="en" class="no-js">
 <head>
-    <meta http-equiv="Content-Type"content="text/html; charset=UTF-8">
-    <title>login</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../css/component.css" />
-    <link rel="stylesheet" href="../layui/css/layui.css" type="text/css" media="all">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ScriptsBundle">
+    <title>Opportunities A Mega Job Board Template</title>
+    <link rel="icon" href="../img/images/favicon.ico" type="image/x-icon">
 
-    <link href="../css/dialog/normalize.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="../css/dialog/animate.min.css">
-    <link rel="stylesheet" href="../css/dialog/jquery.gDialog.css">
+    <!-- BOOTSTRAPE STYLESHEET CSS FILES -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
-    <script src="../js/dialog/jquery.js"></script>
-    <script src="../js/dialog/jquery.gDialog.js"></script>
+    <!-- JQUERY MENU -->
+    <link rel="stylesheet" href="/css/mega_menu.min.css">
 
+    <!-- ANIMATION -->
+    <link rel="stylesheet" href="/css/animate.min.css">
+
+    <!-- OWl  CAROUSEL-->
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/owl.style.css">
+
+    <!-- TEMPLATE CORE CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- FOR THIS PAGE ONLY -->
+    <link href="/css/select2.min.css" rel="stylesheet" />
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/et-line-fonts.css" type="text/css">
+
+    <!-- Google Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,300" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+    <!-- JavaScripts -->
+    <script src="/js/modernizr.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .breadcrumb-search {
+            background: url("../i.jpg") no-repeat fixed center center / cover;
+            /*background-color: #FFF;*/
+            padding: 70px 0;
+            position: relative;
+        }
+    </style>
 </head>
+
 <body>
-<div class="topNav" style="z-index: 15; margin: 0px; position: fixed; top: 0px;width: 100%">
-    <ul class="layui-nav">
-        <a href="/index"><img src="../img/wos_index.png" alt="" style="height: 60px"/></a>
-    </ul>
-    <ul class="layui-nav layui-layout-right">
-    <#if Session.user?exists>
-        <li class="layui-nav-item">
-            <a href="javascript:;">
-                <img src="/hdfs/personalPhoto" class="layui-nav-img">
-            ${Session['user'].name!""}
-            </a>
-            <dl class="layui-nav-child">
-                <dd><a href="">base information</a></dd>
-                <dd><a href="">modify information</a></dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item"><a href="/logout">logout</a></li>
-    <#else>
-        <li class="layui-nav-item"><a href="/login/index">login</a></li>
-        <li class="layui-nav-item"><a href="/register/index">register</a></li>
-    </#if>
-    </ul>
-</div>
-<script type="text/javascript" src="../layui/layui.all.js" charset="utf-8"></script>
-<script type="text/javascript">
-    layui.use('element', function () {
-        var element = layui.element;
-        element.on('nav(demo)', function (elem) {
-            layer.msg(elem.text());
-        });
-    });
-</script>
-<div id="large-header" class="large-header">
-    <div class="logo_box">
-            <h1 ><img src="../img/web_of_scholar.png" alt="wos" width="400" height="62"></h1>
-        <form class="layui-form" action="/login/verify" name="f" method="post" id="login_form">
-            <#--<input type="text" name="email" required  lay-verify="email" placeholder="please input email" autocomplete="off" class="layui-input">-->
-
-            <div class="input_outer">
-                <span class="u_user"></span>
-                <input name="email" class="text" required lay-verify="usererror" type="text" placeholder="please input email">
-            </div>
-            <div class="input_outer">
-                <span class="us_uer"></span>
-                <input name="password" class="text" value="" type="password" placeholder="please input password">
-            </div>
-            <div class="mb2"><a lay-submit class="act-but submit" href="javascript:;" onclick="submitForm()">login</a></div>
-        </form>
+<div class="page">
+    <div id="spinner">
+        <div class="spinner-img"> <img alt="Opportunities Preloader" src="../img/images/loader.gif" />
+            <h2>Please Wait.....</h2>
+        </div>
     </div>
+    <header id="header2" class="navbar transparent-header fa-change-white">
+        <nav id="menu-1" class="mega-menu" data-color="">
+            <section class="menu-list-items">
+                <ul class="menu-logo">
+                    <li>
+                        <a href="/index"> <img src="../img/images/temp/wos_top.png" width="220px" height="40px" alt="logo" class="img-responsive"> </a>
+                    </li>
+                </ul>
+                <ul class="menu-links pull-right">
+
+                    <li><a href="#"></a></li>
+                <#--${Session['user'].name!""}-->
+                    <li class="no-bg"><a href="/register/index" class="p-job">register</a></li>
+                </ul>
+            </section>
+        </nav>
+    </header>
+    <div class="clearfix"></div>
+
+
+    <section class="breadcrumb-search parallex" style="padding: 40px 0;">
+
+    </section>
+    <section class="login-page light-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="login-container">
+                        <div class="loginbox" id="large-header">
+                            <div class="loginbox-title">sign in using social accounts</div>
+                            <ul class="social-network social-circle onwhite">
+                                <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" class="icoLinkedin" title="Linkedin +"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                            <div class="loginbox-or">
+                                <div class="or-line"></div>
+                                <div class="or">OR</div>
+                            </div>
+
+                            <form class="layui-form" action="/login/verify" name="f" method="post" id="login_form">
+                                <div class="form-group">
+                                    <label>Email: <span class="required">*</span></label>
+                                    <#--<input placeholder="" class="form-control" type="email" name="email">-->
+                                    <input name="email" class="form-control" required lay-verify="usererror" type="text" placeholder="please input email">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password: <span class="required">*</span></label>
+
+                                    <#--<input placeholder="" class="form-control" type="password">-->
+
+                                    <input name="password" class="form-control" value="" type="password" placeholder="please input password">
+                                </div>
+                                <div class="loginbox-forgot">
+                                    <a href="">Forgot Password?</a>
+                                </div>
+                                <div class="loginbox-submit">
+                                    <input type="button" class="btn btn-default btn-block" value="Login" onclick="submitForm()">
+                                </div>
+                            </form>
+
+
+                            <div class="loginbox-signup">
+                                <a href="/register/index">Sign Up With Email</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="fixed-footer-1">
+
+        <section class="footer-bottom-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="footer-bottom">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <p>Copyright ©2018 - <a href="http://thealphalab.org/">The Alpha Lab </a></p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JAVASCRIPT JS  -->
+    <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
+
+    <!-- BOOTSTRAP CORE JS -->
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+    <!-- JQUERY SELECT -->
+    <script type="text/javascript" src="/js/select2.min.js"></script>
+
+    <!-- MEGA MENU -->
+    <script type="text/javascript" src="/js/mega_menu.min.js"></script>
+
+    <!-- JQUERY EASING -->
+    <script type="text/javascript" src="/js/easing.js"></script>
+
+    <!-- JQUERY COUNTERUP -->
+    <script type="text/javascript" src="/js/counterup.js"></script>
+
+    <!-- JQUERY WAYPOINT -->
+    <script type="text/javascript" src="/js/waypoints.min.js"></script>
+
+    <!-- JQUERY REVEAL -->
+    <script type="text/javascript" src="/js/footer-reveal.min.js"></script>
+
+    <!-- Owl Carousel -->
+    <script type="text/javascript" src="/js/owl-carousel.js"></script>
+
+    <!-- CORE JS -->
+    <script type="text/javascript" src="/js/custom.js"></script>
 </div>
-<script src="../js/demo-1.js"></script>
-
-
-<script>
+</body>
+<#--<script src="/js/demo-1.js"></script>-->
+<script type="text/javascript">
     function submitForm(){
         document.getElementById("login_form").submit();
     }
     <#if loginerror??>
-        $.gDialog.alert("${loginerror}", {
-            title: "Login Error",
-            animateIn: "bounceIn",
-            animateOut: "bounceOut"
-        });
+    <#--$.gDialog.alert("${loginerror}", {-->
+        <#--title: "Login Error",-->
+        <#--animateIn: "bounceIn",-->
+        <#--animateOut: "bounceOut"-->
+    <#--});-->
+    alert("${loginerror}");
     </#if>
 
 </script>
-<script src="../js/jquery.min.js"></script>
-<script src="../js/stickUp.min.js"></script>
-
-<script type="text/javascript">
-    //initiating jQuery
-    jQuery(function($) {
-        $(document).ready( function() {
-            //enabling stickUp on the '.navbar-wrapper' class
-            $('.qqq').stickUp();
-        });
-    });
-</script>
-</body>
 </html>

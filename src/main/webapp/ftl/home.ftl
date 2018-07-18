@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="ScriptsBundle">
     <title>Opportunities A Mega Job Board Template</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/images/favicon.ico" type="image/x-icon">
 
     <!-- BOOTSTRAPE STYLESHEET CSS FILES -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -47,7 +47,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
 
     <!-- JavaScripts -->
-    <script src="js/modernizr.js"></script>
+    <script src="/js/modernizr.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -111,7 +111,7 @@
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12 nopadding">
                                 <div class="form-group">
-                                    <input type="text" id="search" name="scholarName" class="form-control"  placeholder="Please enter a scholar's name">
+                                    <input type="text" id="search" name="scholarName" class="form-control"  placeholder="Please  enter  a  scholar's  name">
                                 </div>
                             </div>
 
@@ -325,7 +325,10 @@
     <script type="text/javascript" src="/js/mega_menu.min.js"></script>
 
     <!-- JQUERY EASING -->
+
+
     <script type="text/javascript" src="/js/easing.js"></script>
+
 
     <!-- JQUERY COUNTERUP -->
     <script type="text/javascript" src="/js/counterup.js"></script>
@@ -402,3 +405,4 @@
 </body>
 
 </html>
+

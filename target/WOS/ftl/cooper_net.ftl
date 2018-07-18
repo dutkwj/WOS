@@ -49,7 +49,9 @@
 <script src="/js/time_map/fisheye.js"></script>
 <script type="text/javascript" src="/js/time_map/echarts.min.js"></script>
 <script src="/js/modernizr.js"></script>
-<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+<#--<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>-->
+<#--2018 07 16 这里去掉jquery 重复引入可能导致后面的cookie.js失效!!!!!!!-->
+
 <script src="/js/velocity.min.js"></script>
 <script src="/js/mainDialog.js"></script>
 
@@ -74,7 +76,6 @@
     });
 
     $("#relationship").click(function () {
-        alert("index:" + index);
         var URL = '/cooperate/' + index + '/MVC';
     <#--<#if cooperateType?? && cooperateType=='directCooperate'>-->
         <#--URL = '/cooperate/' + index + '/directCooperate';-->
@@ -187,8 +188,9 @@
     }
 
     function closeNoAnimation(image, finalWidth, maxQuickWidth) {
-        var parentListItem = image.parent('.cd-item'),
-                topSelected = image.offset().top - $(window).scrollTop(),
+        var parentListItem = image.parent('.cd-item');
+        console.log(parentListItem.html());
+               var topSelected = image.offset().top - $(window).scrollTop(),
                 leftSelected = image.offset().left,
                 widthSelected = image.width();
 
