@@ -103,16 +103,16 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="login-container">
                         <div class="loginbox">
-                            <div class="loginbox-title">Sign Up using social accounts</div>
-                            <ul class="social-network social-circle onwhite">
-                                <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" class="icoLinkedin" title="Linkedin +"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
+                            <div class="loginbox-title">Sign Up</div>
+                            <#--<ul class="social-network social-circle onwhite">-->
+                                <#--<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>-->
+                                <#--<li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>-->
+                                <#--<li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>-->
+                                <#--<li><a href="#" class="icoLinkedin" title="Linkedin +"><i class="fa fa-linkedin"></i></a></li>-->
+                            <#--</ul>-->
                             <div class="loginbox-or">
                                 <div class="or-line"></div>
-                                <div class="or">OR</div>
+                                <#--<div class="or">OR</div>-->
                             </div>
 
 

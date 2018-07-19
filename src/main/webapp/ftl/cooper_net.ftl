@@ -76,7 +76,6 @@
     });
 
     $("#relationship").click(function () {
-        alert("index:" + index);
         var URL = '/cooperate/' + index + '/MVC';
     <#--<#if cooperateType?? && cooperateType=='directCooperate'>-->
         <#--URL = '/cooperate/' + index + '/directCooperate';-->

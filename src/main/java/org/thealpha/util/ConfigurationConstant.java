@@ -28,12 +28,13 @@ public class ConfigurationConstant {
 
 
 
-    //    cs_relationship, cooperate:(count, collaboration_intensity, eve_year_count, every_year_collaborators, every_year_conumber, every_year_papernumber), co_team:(team_intension), teacher_student:(teacher, students)
+    //    cs_relationship, cooperate:(count, collaboration_intensity, eve_year_count, every_year_collaborators, every_year_conumber, every_year_papernumber), co_team:(team_intension), teacher_student:(teacher, students), citation:(cite_number, cited_number)
     public static final String TABLE_CS_RELATIONSHIP = "cs_relationship";
     public static final String CF_COOPERATE = "cooperate";
     public static final String CF_CO_TEAM = "co_team";
     public static final String CF_TEACHER_STUDENT = "teacher_student";
     public static final String CF_REFERENCE = "reference";
+    public static final String CF_CITATION= "citation";
     public static final String QF_COUNT = "count";
     public static final String QF_COLLABORATION_INTENSITY = "collaboration_intensity";
     public static final String QF_EVERY_YEAR_COLLABORATORS = "every_year_collaborators";
@@ -45,6 +46,8 @@ public class ConfigurationConstant {
     public static final String QF_TEAM_INTENSION = "team_intension";
     public static final String QF_TEACHER = "tacher";
     public static final String QF_STUDENTS = "students";
+    public static final String QF_CITE_NUMBER = "cite_number";
+    public static final String QF_CITED_NUMBER = "cited_number";
 
 
     //    cs_paper, authors:(author_ids), reference:(ref_ids, every_year_ref_ids, refed_ids, every_year_refed_ids, co_ref_ids, co_refed_ids)
@@ -81,7 +84,7 @@ public class ConfigurationConstant {
     public static final String QF_WEIGHT = "weight";
 
 
-    public static final String ZK_QUORUM = "10.1.0.188,10.1.27.119,10.1.16.122";
+    public static final String ZK_QUORUM = "10.1.0.188,10.1.27.119,10.1.37.157";
     public static final String ZK_CLIENT_PORT = "2181";
 
     public static final String REDIS_ALL_SCHOLARS = "redis_all_scholars";

@@ -6,6 +6,7 @@ import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.filter.*;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.io.IOUtils;
+import org.apache.hadoop.hbase.client.HBaseAdmin;
 import org.junit.Test;
 import org.junit.runner.Result;
 import org.junit.runner.RunWith;
@@ -29,10 +30,10 @@ import java.util.*;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:spring-servlet.xml", "classpath:/redis/spring-redis.xml"})
 public class HbaseTest {
-    private static final String TABLE_NAME    = "cs_scholar";
-    private static final String ROW_KEY       = "r";
+    private static final String TABLE_NAME = "cs_scholar";
+    private static final String ROW_KEY = "r";
     private static final String COLUMN_FAMILY = "info";
-    private static final String QUALIFIER     = "name";
+    private static final String QUALIFIER = "name";
 
     @Autowired
     private HbaseTemplate hbaseTemplate;
@@ -77,11 +78,9 @@ public class HbaseTest {
 //        HbaseTemplate hbaseTemplate = (HbaseTemplate) applicationContext.getBean("hbaseTemplate");
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_co_author_count_list.csv");  // CSV文件路径
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
@@ -106,12 +105,12 @@ public class HbaseTest {
                 System.out.println(cooperateAuthors);
 
             }
-        } catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
+
     @Test
     public void testTempldate() {
         //可行FC81526    不可行0D8CD80
@@ -160,7 +159,7 @@ public class HbaseTest {
         System.out.print("111");
     }
 
-//    导入学者id与姓名之间的对应关系
+    //    导入学者id与姓名之间的对应关系
     @Test
     public void importScholarNameTest() {
         HashMap<String, String> authorIdName = new HashMap<String, String>();
@@ -174,8 +173,7 @@ public class HbaseTest {
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
                 line.substring(0, line.indexOf(","));
                 String authorId = line.substring(0, line.indexOf(","));
@@ -261,24 +259,21 @@ public class HbaseTest {
         }
     }
 
-//    导入学者与学者之间合作次数关系
+    //    导入学者与学者之间合作次数关系
     @Test
     public void importRSCooperate() {
         HashMap<String, String> authorCoAuthorCount = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_co_author_count_list.csv");  // CSV文件路径
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
                 line.substring(0, line.indexOf(","));
                 String authorId = line.substring(0, line.indexOf(","));
@@ -316,23 +311,20 @@ public class HbaseTest {
         }
     }
 
-//    导入学者id与机构对应关系
+    //    导入学者id与机构对应关系
     @Test
     public void importAuthorIdAff() {
         HashMap<String, String> authorIdAff = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_id_aff2.csv");  // CSV文件路径
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 line.substring(0, line.indexOf(","));
                 String authorId = line.substring(0, line.indexOf(",")).replace("\n", "");
                 String aff = line.substring(line.indexOf(",") + 1).replaceAll("\"", "");
@@ -385,24 +377,21 @@ public class HbaseTest {
         System.out.println("coloumn added");
     }
 
-//    导入学者id和论文id的对应关系
+    //    导入学者id和论文id的对应关系
     @Test
     public void importPaperIds() {
         HashMap<String, String> authorIdPaperIds = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_id_paper_ids.csv");  // CSV文件路径
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
                 String authorId = line.substring(0, line.indexOf(","));
                 String paperIds = line.substring(line.indexOf(",") + 1);
@@ -439,24 +428,21 @@ public class HbaseTest {
         }
     }
 
-//    导入论文id与学者id的对应关系
+    //    导入论文id与学者id的对应关系
     @Test
     public void importPaperAuthors() {
         HashMap<String, String> paperIdAuthorIds = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_authors.csv");  // CSV文件路径
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
                 String paperId = line.substring(0, line.indexOf(","));
                 String authorIds = line.substring(line.indexOf(",") + 1);
@@ -493,24 +479,21 @@ public class HbaseTest {
         }
     }
 
-//    导入论文之间的引用关系,包括引用和被引用
+    //    导入论文之间的引用关系,包括引用和被引用
     @Test
     public void importPaperRef() {
         HashMap<String, String> paperIdRefIds = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_cs_ref.csv");  // CSV文件路径
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
                 String paperId = line.substring(0, line.indexOf(","));
                 String refIds = line.substring(line.indexOf(",") + 1);
@@ -547,24 +530,21 @@ public class HbaseTest {
         }
     }
 
-//    导入论文之间的共同引用关系，包括共引和共被引
+    //    导入论文之间的共同引用关系，包括共引和共被引
     @Test
     public void importCoPaperRef() {
         HashMap<String, String> paperIdRefIds = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_paper_cs_co_refed3.csv");  // CSV文件路径
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
                 String paperId = line.substring(0, line.indexOf(","));
                 String refIds = line.substring(line.indexOf(",") + 1);
@@ -626,24 +606,21 @@ public class HbaseTest {
         }
     }
 
-//    导入学者与经纬度关系
+    //    导入学者与经纬度关系
     @Test
     public void importAuthorLatLng() throws IOException {
         HashMap<String, String> authorIdLatLng = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_id_latlng.csv");  // CSV文件路径
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
                 String authorId = line.substring(0, line.indexOf(","));
                 String latlng = line.substring(line.indexOf(",") + 1);
@@ -669,24 +646,21 @@ public class HbaseTest {
         table.put(puts);
     }
 
-//    导入学者团队关系
+    //    导入学者团队关系
     @Test
     public void importCoTeamRef() {
         Map<String, String> authorCoTeam = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/team_file/result.txt");  // CSV文件路径
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
                 String[] lines = line.split(",");
                 String author1 = lines[0];
@@ -728,24 +702,21 @@ public class HbaseTest {
         }
     }
 
-//    导入学者每年合作者数量变化情况
+    //    导入学者每年合作者数量变化情况
     @Test
     public void importCoCountEveYear() {
         Map<String, String> authorYearCount = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_co_authors_count_every_year.csv");  // CSV文件路径
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
 //                System.out.println(line);
                 String authorId = line.substring(0, line.indexOf(","));
@@ -798,12 +769,12 @@ public class HbaseTest {
         Configuration conf = new Configuration(true);
         conf.set("fs.default.name", "hdfs://10.1.0.188:9000");
         FileSystem fs = FileSystem.get(conf);
-        Path  srcPath = new Path("/hbase/photo/b.jpg");
+        Path srcPath = new Path("/hbase/photo/b.jpg");
         InputStream in = fs.open(srcPath);
         try {
             //将文件COPY到标准输出(即控制台输出)
-            IOUtils.copyBytes(in, System.out, 4096,false);
-        }finally{
+            IOUtils.copyBytes(in, System.out, 4096, false);
+        } finally {
             IOUtils.closeStream(in);
             fs.close();
         }
@@ -906,24 +877,21 @@ public class HbaseTest {
         });
     }
 
-//    导入师生关系
+    //    导入师生关系
     @Test
     public void importTeacherStudentTest() {
         Map<String, String> teaStudentsMap = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/tea_stu/cs_tea_stu.csv");  // CSV文件路径
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
 //                System.out.println(line);
 //                if (count > 10) {
@@ -967,19 +935,16 @@ public class HbaseTest {
         Map<String, String> stuTeaMap = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/tea_stu/1970/cs_relation_1970.csv");  // CSV文件路径
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
             br.readLine();
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
 //                System.out.println(line);
 //                if (count > 10) {
@@ -1021,18 +986,15 @@ public class HbaseTest {
         Map<String, String> authorField = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/tags/cs_authorid_fieldname_top5refed.csv");  // CSV文件路径
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
 //                count += 1;
 //                if (count > 10) {
 //                    return;
@@ -1082,17 +1044,14 @@ public class HbaseTest {
         Map<String, String> map = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/statistical/cs_authorid_studentsnumber.csv");
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 String[] lines = line.split(",");
                 map.put(lines[0], lines[1]);
             }
@@ -1131,20 +1090,17 @@ public class HbaseTest {
 //        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential data/potential/hebing2.csv");
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential data/potential/hebing3.csv");
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
 //                System.out.println(line);
                 Scholar scholar = new Scholar();
-                if (line.split("\"").length > 1){
+                if (line.split("\"").length > 1) {
                     String[] lines = line.split("\"");
 //                    System.out.println(lines[0]);
                     String[] lines1 = lines[0].split(",");
@@ -1154,30 +1110,27 @@ public class HbaseTest {
                     scholar.setName(lines1[1]);
                     scholar.setAff(lines[1]);
 //                    System.out.println(lines2.length);
-                    if (lines2.length == 5){
+                    if (lines2.length == 5) {
                         scholar.setQindex(Double.parseDouble(lines2[2]));
                         scholar.setHindex(Double.parseDouble(lines2[3]));
                         scholar.setFieldName(lines2[4]);
-                    }
-                    else {
+                    } else {
                         scholar.setQindex(Double.parseDouble(lines2[2]));
                         scholar.setHindex(Double.parseDouble(lines2[3]));
                     }
 
-                }
-                else {
+                } else {
 
                     String[] lines = line.split(",");
 //                    System.out.println(lines.length);
-                    if (lines.length == 8){
+                    if (lines.length == 8) {
                         scholar.setIndex(lines[0]);
                         scholar.setName(lines[1]);
                         scholar.setAff(lines[3]);
                         scholar.setQindex(Double.parseDouble(lines[5]));
                         scholar.setHindex(Double.parseDouble(lines[6]));
                         scholar.setFieldName(lines[7]);
-                    }
-                    else {
+                    } else {
                         scholar.setIndex(lines[0]);
                         scholar.setName(lines[1]);
                         scholar.setAff(lines[3]);
@@ -1252,20 +1205,17 @@ public class HbaseTest {
 //        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_growth/hebinggrowth2(1).csv");
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_growth/hebinggrowth3(1).csv");
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
 //                System.out.println(line);
                 Scholar scholar = new Scholar();
-                if (line.split("\"").length > 1){
+                if (line.split("\"").length > 1) {
                     String[] lines = line.split("\"");
 //                    System.out.println(lines[0]);
                     String[] lines1 = lines[0].split(",");
@@ -1281,8 +1231,7 @@ public class HbaseTest {
                     scholar.setQindex(Double.parseDouble(lines2[5]));
 
 
-                }
-                else {
+                } else {
 
                     String[] lines = line.split(",");
 //                    System.out.println(lines.length);
@@ -1376,20 +1325,17 @@ public class HbaseTest {
 //        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_61_80_2.csv");
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_age/hebingage_61_80_3.csv");
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
 //                System.out.println(line);
                 Scholar scholar = new Scholar();
-                if (line.split("\"").length > 1){
+                if (line.split("\"").length > 1) {
                     String[] lines = line.split("\"");
 //                    System.out.println(lines[0]);
                     String[] lines1 = lines[0].split(",");
@@ -1400,22 +1346,20 @@ public class HbaseTest {
                     scholar.setAcademicage(Integer.parseInt(lines1[2]));
                     scholar.setAff(lines[1]);
 //                    System.out.println(lines2.length);
-                    if (lines2.length == 5){
+                    if (lines2.length == 5) {
                         scholar.setQindex(Double.parseDouble(lines2[2]));
                         scholar.setHindex(Double.parseDouble(lines2[3]));
                         scholar.setFieldName(lines2[4]);
-                    }
-                    else {
+                    } else {
                         scholar.setQindex(Double.parseDouble(lines2[2]));
                         scholar.setHindex(Double.parseDouble(lines2[3]));
                     }
 
-                }
-                else {
+                } else {
 
                     String[] lines = line.split(",");
 //                    System.out.println(lines.length);
-                    if (lines.length == 8){
+                    if (lines.length == 8) {
                         scholar.setIndex(lines[0]);
                         scholar.setName(lines[1]);
                         scholar.setAcademicage(Integer.parseInt(lines[2]));
@@ -1423,8 +1367,7 @@ public class HbaseTest {
                         scholar.setQindex(Double.parseDouble(lines[5]));
                         scholar.setHindex(Double.parseDouble(lines[6]));
                         scholar.setFieldName(lines[7]);
-                    }
-                    else {
+                    } else {
                         scholar.setIndex(lines[0]);
                         scholar.setName(lines[1]);
                         scholar.setAcademicage(Integer.parseInt(lines[2]));
@@ -1593,7 +1536,7 @@ public class HbaseTest {
         System.out.println(isExist);
     }
 
-//    导入学者的H因子和潜力指数
+    //    导入学者的H因子和潜力指数
     @Test
     public void importScholarHindex() {
         HashMap<String, String> authorIdHindex = new HashMap<String, String>();
@@ -1606,8 +1549,7 @@ public class HbaseTest {
         }
         String line = "";
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 line.substring(0, line.indexOf(","));
                 String authorId = line.substring(0, line.indexOf(","));
                 String hindex = line.substring(line.indexOf(",") + 1);
@@ -1641,7 +1583,7 @@ public class HbaseTest {
         }
     }
 
-//    设置缓存中的学者H因子和潜力指数
+    //    设置缓存中的学者H因子和潜力指数
     @Test
     public void setAuthorIdQindexRedis() {
         List<Scholar> scholars = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
@@ -1700,18 +1642,15 @@ public class HbaseTest {
         HashMap<String, String> authorMVCs = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/file/cs_author_co_author_top10LIM.csv");  // CSV文件路径
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
                 line.substring(0, line.indexOf(","));
                 String authorId = line.substring(0, line.indexOf(","));
@@ -1747,24 +1686,21 @@ public class HbaseTest {
         }
     }
 
-//    导入学者与学者之间的合作强度
+    //    导入学者与学者之间的合作强度
     @Test
     public void importCollaborationIntensity() {
         HashMap<String, String> authorCoAuthorCount = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/zhanghuijie/cs_author_collaboration_intensity.csv");  // CSV文件路径
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
 //                全部导入会出现内存不够用的情况,分批导入
 //                if (count <= 1000001) {
@@ -1811,18 +1747,15 @@ public class HbaseTest {
         HashMap<String, String> authorCoAuthorYear = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/zhanghuijie/cs_author_time_coauthor3.csv");
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
                 String authorId = line.substring(0, line.indexOf(","));
                 String cooperateAuthors = line.substring(line.indexOf(",") + 1);
@@ -1859,7 +1792,7 @@ public class HbaseTest {
         }
     }
 
-//    导入学者发表论文数量
+    //    导入学者发表论文数量
     @Test
     public void importScholarPaperNumber() {
         HashMap<String, String> authorPaperNumber = new HashMap<String, String>();
@@ -1873,8 +1806,7 @@ public class HbaseTest {
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
                 String authorId = line.substring(0, line.indexOf(","));
                 String paperNumber = line.substring(line.indexOf(",") + 1);
@@ -1915,18 +1847,15 @@ public class HbaseTest {
         HashMap<String, String> authorCoNumberYear = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/zhanghuijie/cs_author_time_conumber.csv");
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
                 String authorId = line.substring(0, line.indexOf(","));
                 String coNumber = line.substring(line.indexOf(",") + 1);
@@ -1969,18 +1898,15 @@ public class HbaseTest {
         HashMap<String, String> authorPaperNumberYear = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/zhanghuijie/cs_author_time_paper_number.csv");
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
                 String authorId = line.substring(0, line.indexOf(","));
                 String paperNumber = line.substring(line.indexOf(",") + 1);
@@ -2017,24 +1943,21 @@ public class HbaseTest {
         }
     }
 
-//    导入论文每年所引用的论文
+    //    导入论文每年所引用的论文
     @Test
     public void importRefPapersByYear() {
         HashMap<String, String> paperRefPapersYear = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/zhanghuijie/cs_paper_time_refed_papers.csv");
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
                 String paperId = line.substring(0, line.indexOf(","));
                 String refPapers = line.substring(line.indexOf(",") + 1);
@@ -2076,18 +1999,15 @@ public class HbaseTest {
         HashMap<String, String> paperCoRefPapersDetail = new HashMap<String, String>();
         File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/zhanghuijie/cs_paper_co_refed_papers_detail.csv");
         BufferedReader br = null;
-        try
-        {
+        try {
             br = new BufferedReader(new FileReader(csv));
-        } catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         String line = "";
         int count = 0;
         try {
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 count += 1;
                 if (count <= 400001) {
                     continue;
@@ -2163,12 +2083,154 @@ public class HbaseTest {
                         }
                     }
                 }
-                return  everyYearCollaboratorCountList;
+                return everyYearCollaboratorCountList;
             }
         });
 
         for (Cooperater c : result) {
             System.out.println(c.getIndex() + " " + c.getCount() + " " + c.getYear());
         }
+    }
+
+    //    导入学者引用的学者的id+论文数量
+    @Test
+    public void importAuthorRefNumber() {
+        HashMap<String, String> citationNumber = new HashMap<String, String>();
+        File csv = new File("/home/zhengwenqing/data/wos_data/citation/cs_author_ref_authors.csv");
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null) {
+                count += 1;
+                String authorId = line.substring(0, line.indexOf(","));
+                String authorandnumber = line.substring(line.indexOf(",") + 1);
+                authorandnumber = authorandnumber.replaceAll("\"\\[", "").replaceAll("\\]\"", "").replaceAll
+                        ("\\[", "").replaceAll("\\]", "").replaceAll("\'", "");
+//                String[] authornumber = authorandnumber.split(",");
+                ArrayList<citationnumber> indexnumber = new ArrayList<citationnumber>();
+//                for(int i = 0;i < authornumber.length; i ++){
+////                    System.out.println(authornumber[i]);
+//                    citationnumber c = new citationnumber();
+//                    c.setIndex(authornumber[i].split(":")[0]);
+//                    c.setNumber(authornumber[i].split(":")[1]);
+//                    indexnumber.add(c);
+//                }
+
+                citationNumber.put(authorId, authorandnumber);
+
+            }
+            System.out.println(count);
+//            System.out.println(authorId + ":" + indexnumber);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : citationNumber.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String citenumber = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_CITATION), Bytes.toBytes(ConfigurationConstant.QF_CITE_NUMBER), Bytes.toBytes(citenumber));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+//    //    导入学者被引用的学者的id+论文数量
+//    @Test
+//    public void importAuthorRefNumber() {
+//        HashMap<String, String> citationNumber = new HashMap<String, String>();
+//        File csv = new File("/home/zhengwenqing/data/wos_data/citation/cs_author_ref_authors.csv");
+//        BufferedReader br = null;
+//        try {
+//            br = new BufferedReader(new FileReader(csv));
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        String line = "";
+//        int count = 0;
+//        try {
+//            while ((line = br.readLine()) != null) {
+//                count += 1;
+//                String authorId = line.substring(0, line.indexOf(","));
+//                String authorandnumber = line.substring(line.indexOf(",") + 1);
+//                authorandnumber = authorandnumber.replaceAll("\"\\[", "").replaceAll("\\]\"", "").replaceAll
+//                        ("\\[", "").replaceAll("\\]", "").replaceAll("\'", "");
+////                String[] authornumber = authorandnumber.split(",");
+//                ArrayList<citationnumber> indexnumber = new ArrayList<citationnumber>();
+////                for(int i = 0;i < authornumber.length; i ++){
+//////                    System.out.println(authornumber[i]);
+////                    citationnumber c = new citationnumber();
+////                    c.setIndex(authornumber[i].split(":")[0]);
+////                    c.setNumber(authornumber[i].split(":")[1]);
+////                    indexnumber.add(c);
+////                }
+//
+//                citationNumber.put(authorId, authorandnumber);
+//                System.out.println(count);
+//            }
+////            System.out.println(authorId + ":" + indexnumber);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//
+//        Connection connection = null;
+//        Table table = null;
+//        Configuration conf = HBaseConfiguration.create();
+//        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+//        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+//
+//        List<Put> puts = new ArrayList<Put>();
+//        for (Map.Entry entry : citationNumber.entrySet()) {
+//            String authorId = (String) entry.getKey();
+//            String citenumber = (String) entry.getValue();
+//            Put put = new Put(Bytes.toBytes(authorId));
+//            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_CITATION), Bytes.toBytes(ConfigurationConstant.QF_CITE_NUMBER), Bytes.toBytes(citenumber));
+//            puts.add(put);
+//        }
+//        try {
+//            connection = ConnectionFactory.createConnection(conf);
+//            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+//            table.put(puts);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
+    @Test
+    public void addColumnFamily() throws IOException {
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        // Instantiating HBaseAdmin class.
+        HBaseAdmin admin = new HBaseAdmin(conf);
+
+        // Instantiating columnDescriptor class
+        HColumnDescriptor columnDescriptor = new HColumnDescriptor(ConfigurationConstant.CF_CITATION);
+
+        // Adding column family
+        admin.addColumn(ConfigurationConstant.TABLE_CS_RELATIONSHIP, columnDescriptor);
+        System.out.println("coloumn added");
     }
 }
