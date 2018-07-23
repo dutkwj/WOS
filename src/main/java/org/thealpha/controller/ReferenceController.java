@@ -7,10 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.thealpha.dao.inter.ScholarInfoDao;
-import org.thealpha.model.Graph;
-import org.thealpha.model.Link;
-import org.thealpha.model.Node;
-import org.thealpha.model.Scholar;
+import org.thealpha.model.*;
 import org.thealpha.service.ReferenceService;
 
 import java.util.ArrayList;
@@ -45,17 +42,16 @@ public class ReferenceController {
     @ResponseBody
     public Graph getRefJSON(@PathVariable String scholarId) {
         Scholar middleScholar = scholarInfoDao.getScholarById(scholarId);
-        List<Scholar> refScholars = referenceService.getRefAuthorsByAuthorId(scholarId);
-        List<Scholar> refedScholars = referenceService.getRefedAuthorsByAuthorId(scholarId);
+        List<citationnumber> refScholars = referenceService.getcitationNumberbyId(scholarId);
         List<Node> nodes = new ArrayList<Node>();
-        List<Link> links = new ArrayList<Link>();
+//        List<Link> links = new ArrayList<Link>();
         List<String> visitedNodes = new ArrayList<String>();
 
         Node midNode = new Node();
         midNode.setId(scholarId);
         midNode.setName(middleScholar.getName());
-        midNode.setSize(String.valueOf(refedScholars.size()));
-        midNode.setColor(String.valueOf(refScholars.size()));
+        midNode.setSize(String.valueOf(middleScholar.getRefNumber()));
+        midNode.setColor(String.valueOf(middleScholar.getRefedNumber()));
         midNode.setQindex(middleScholar.getQindex());
         midNode.setHindex(middleScholar.getHindex());
         midNode.setAff(middleScholar.getAff());
@@ -63,7 +59,7 @@ public class ReferenceController {
         nodes.add(midNode);
         visitedNodes.add(scholarId);
 
-        for (Scholar refScholar : refScholars) {
+        for (citationnumber refScholar : refScholars) {
             if (visitedNodes.contains(refScholar.getIndex())) {
                 continue;
             }
@@ -71,31 +67,77 @@ public class ReferenceController {
             Node refNode = new Node();
             refNode.setId(refScholar.getIndex());
             refNode.setName(refScholar.getName());
-            refNode.setSize("5");
-            if (refScholar.getCount() > 10) {
-                refNode.setColor("#CCFF66");
-            } else {
-                refNode.setColor("#66CCCC");
+            if(refScholar.getCitenumber() == null){
+                refNode.setSize("0");
+            }else{
+                refNode.setSize(refScholar.getCitenumber());
             }
-            refNode.setQindex(refScholar.getQindex());
-            refNode.setHindex(refScholar.getHindex());
-            refNode.setAff(refScholar.getAff());
-            refNode.setStudyField(refScholar.getFieldName());
+            if(refScholar.getCitednumber() == null) {
+                refNode.setColor("0");
+            }else{
+                refNode.setColor(refScholar.getCitednumber());
+            }
             nodes.add(refNode);
 
-            Link link = new Link();
-            link.setSource(scholarId);
-            link.setTarget(refScholar.getIndex());
-            link.setCoCount(1);
-            links.add(link);
+//        }
         }
 
         Graph graph = new Graph();
         graph.setNodes(nodes);
-        graph.setLinks(links);
         return graph;
     }
-
+//    public Graph getRefJSON(@PathVariable String scholarId) {
+//        Scholar middleScholar = scholarInfoDao.getScholarById(scholarId);
+//        List<Scholar> refScholars = referenceService.getRefAuthorsByAuthorId(scholarId);
+//        List<Scholar> refedScholars = referenceService.getRefedAuthorsByAuthorId(scholarId);
+//        List<Node> nodes = new ArrayList<Node>();
+//        List<Link> links = new ArrayList<Link>();
+//        List<String> visitedNodes = new ArrayList<String>();
+//
+//        Node midNode = new Node();
+//        midNode.setId(scholarId);
+//        midNode.setName(middleScholar.getName());
+//        midNode.setSize(String.valueOf(refedScholars.size()));
+//        midNode.setColor(String.valueOf(refScholars.size()));
+//        midNode.setQindex(middleScholar.getQindex());
+//        midNode.setHindex(middleScholar.getHindex());
+//        midNode.setAff(middleScholar.getAff());
+//        midNode.setStudyField(middleScholar.getFieldName());
+//        nodes.add(midNode);
+//        visitedNodes.add(scholarId);
+//
+//        for (Scholar refScholar : refScholars) {
+//            if (visitedNodes.contains(refScholar.getIndex())) {
+//                continue;
+//            }
+//            visitedNodes.add(refScholar.getIndex());
+//            Node refNode = new Node();
+//            refNode.setId(refScholar.getIndex());
+//            refNode.setName(refScholar.getName());
+//            refNode.setSize("5");
+//            if (refScholar.getCount() > 10) {
+//                refNode.setColor("#CCFF66");
+//            } else {
+//                refNode.setColor("#66CCCC");
+//            }
+//            refNode.setQindex(refScholar.getQindex());
+//            refNode.setHindex(refScholar.getHindex());
+//            refNode.setAff(refScholar.getAff());
+//            refNode.setStudyField(refScholar.getFieldName());
+//            nodes.add(refNode);
+//
+//            Link link = new Link();
+//            link.setSource(scholarId);
+//            link.setTarget(refScholar.getIndex());
+//            link.setCoCount(1);
+//            links.add(link);
+//        }
+//
+//        Graph graph = new Graph();
+//        graph.setNodes(nodes);
+//        graph.setLinks(links);
+//        return graph;
+//    }
     @RequestMapping("/refed/{scholarId}")
     public String referencedRelationship(@PathVariable String scholarId, Model model) {
 //        Scholar middleScholar = scholarInfoDao.getScholarById(authorId);

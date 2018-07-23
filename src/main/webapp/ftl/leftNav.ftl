@@ -44,12 +44,13 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
 
     <!-- JavaScripts -->
-    <script src="/js/modernizr.js"></script>
+    <#--<script src="/js/modernizr.js"></script>-->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
 
 
 
@@ -125,7 +126,7 @@
                                 <div class="widget-heading"><span class="title" style="border-bottom-color: #f39800;">Relationship</span></div>
                                 <ul id="accordion" class="accordion">
                                     <li id="cooperate">
-                                        <div class="link">Cooperation<i class="fa fa-chevron-down"></i></div>
+                                        <div class="links">Cooperation<i class="fa fa-chevron-down"></i></div>
                                         <ul class="submenu" id="cooperate-ul">
                                             <#--<li id="direct-cooperate-li"><a id="directCooperate">direct cooperate</a></li>-->
                                             <li id="mvc-li"><a id="mvc">MVC</a></li>
@@ -143,7 +144,8 @@
                                         <#--</ul>-->
                                     <#--</li>-->
                                     <li>
-                                        <div class="link" id="tea_main">Advisor-advise<i class="fa fa-chevron-down"></i></div>
+                                        <div class="links" id="tea_main">Advisor-advise<i class="fa
+                                        fa-chevron-down"></i></div>
                                         <ul class="submenu">
                                             <li><a id="tree">Genealogy relationship</a></li>
                                             <li><a id="graph">Cooperation relationship</a></li>
@@ -153,12 +155,12 @@
                                         </ul>
                                     </li>
                                     <li id="cite">
-                                        <div class="link">Citation<i class="fa fa-chevron-down"></i></div>
+                                        <div class="links">Citation<i class="fa fa-chevron-down"></i></div>
                                         <ul class="submenu" id="cite-ul">
                                             <li id="direct-cite-li"><a id="directCite">direct cite</a></li>
-                                            <li id="direct-cited-li"><a id="directCited">direct cited</a></li>
+                                            <#--<li id="direct-cited-li"><a id="directCited">direct cited</a></li>-->
                                             <li id="common-cite-li"><a id="commonCite">Common cite</a></li>
-                                            <li id="common-cited-li"><a id="commonCited">Common cited</a></li>
+                                            <#--<li id="common-cited-li"><a id="commonCited">Common cited</a></li>-->
                                         </ul>
                                     </li>
                                 </ul>
@@ -216,11 +218,12 @@
 </div>
 </body>
 
-    <script type="text/javascript" src="/js/time_map/echarts.min.js"></script>
+    <#--<script type="text/javascript" src="/js/time_map/echarts.min.js"></script>-->
     <!-- JAVASCRIPT JS  -->
-    <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
 
-
+    <script src="/js/time_map/d3.v4.min.js"></script>
+    <script src="/js/time_map/d3.v3.min.js"></script>
 
     <!-- BOOTSTRAP CORE JS -->
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
@@ -231,7 +234,7 @@
     <script type="text/javascript" src="/js/mega_menu.min.js"></script>
 
     <!-- JQUERY EASING -->
-    <#--<script type="text/javascript" src="/js/easing.js"></script>-->
+    <script type="text/javascript" src="/js/easing.js"></script>
 
     <!-- JQUERY COUNTERUP -->
     <script type="text/javascript" src="/js/counterup.js"></script>
@@ -473,10 +476,12 @@
         });
 
         $("#directCite").click(function () {
+            $("#bigContainer").html(" ");
             $.ajax({
                 type:"POST",
                 url:'/ref/${scholarId!""}',
                 success:function (data) {
+//                    alert("ddd");
                     $("#bigContainer").html(data);
                 }
             });
@@ -493,6 +498,7 @@
         });
 
         $("#commonCite").click(function () {
+            $("#bigContainer").html("");
             $.ajax({
                 type:"POST",
                 url:'/coRef/${scholarId!""}',

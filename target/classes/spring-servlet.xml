@@ -71,7 +71,8 @@
     </hdp:configuration>
 
     <!-- HBase连接配置 -->
-    <hdp:hbase-configuration id="hbaseConfiguration" zk-quorum="10.1.0.188,10.1.27.119,10.1.16.122" zk-port="2181" delete-connection="false"/>
+    <hdp:hbase-configuration id="hbaseConfiguration" zk-quorum="10.1.0.188,10.1.27.119,10.1.37.157" zk-port="2181"
+                             delete-connection="false"/>
 
     <!-- HbaseTemplate Bean配置-->
     <bean id="hbaseTemplate" class="org.springframework.data.hadoop.hbase.HbaseTemplate">

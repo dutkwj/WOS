@@ -2155,67 +2155,67 @@ public class HbaseTest {
         }
     }
 
-//    //    导入学者被引用的学者的id+论文数量
-//    @Test
-//    public void importAuthorRefNumber() {
-//        HashMap<String, String> citationNumber = new HashMap<String, String>();
-//        File csv = new File("/home/zhengwenqing/data/wos_data/citation/cs_author_ref_authors.csv");
-//        BufferedReader br = null;
-//        try {
-//            br = new BufferedReader(new FileReader(csv));
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//        String line = "";
-//        int count = 0;
-//        try {
-//            while ((line = br.readLine()) != null) {
-//                count += 1;
-//                String authorId = line.substring(0, line.indexOf(","));
-//                String authorandnumber = line.substring(line.indexOf(",") + 1);
-//                authorandnumber = authorandnumber.replaceAll("\"\\[", "").replaceAll("\\]\"", "").replaceAll
-//                        ("\\[", "").replaceAll("\\]", "").replaceAll("\'", "");
-////                String[] authornumber = authorandnumber.split(",");
-//                ArrayList<citationnumber> indexnumber = new ArrayList<citationnumber>();
-////                for(int i = 0;i < authornumber.length; i ++){
-//////                    System.out.println(authornumber[i]);
-////                    citationnumber c = new citationnumber();
-////                    c.setIndex(authornumber[i].split(":")[0]);
-////                    c.setNumber(authornumber[i].split(":")[1]);
-////                    indexnumber.add(c);
-////                }
+    //    导入学者被引用的学者的id+论文数量
+    @Test
+    public void importAuthorRefedNumber() {
+        HashMap<String, String> citationNumber = new HashMap<String, String>();
+        File csv = new File("/home/zhengwenqing/data/wos_data/citation/cs_author_refed_authors.csv");
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null) {
+                count += 1;
+                String authorId = line.substring(0, line.indexOf(","));
+                String authorandnumber = line.substring(line.indexOf(",") + 1);
+                authorandnumber = authorandnumber.replaceAll("\"\\[", "").replaceAll("\\]\"", "").replaceAll
+                        ("\\[", "").replaceAll("\\]", "").replaceAll("\'", "");
+//                String[] authornumber = authorandnumber.split(",");
+                ArrayList<citationnumber> indexnumber = new ArrayList<citationnumber>();
+//                for(int i = 0;i < authornumber.length; i ++){
+////                    System.out.println(authornumber[i]);
+//                    citationnumber c = new citationnumber();
+//                    c.setIndex(authornumber[i].split(":")[0]);
+//                    c.setNumber(authornumber[i].split(":")[1]);
+//                    indexnumber.add(c);
+//                }
+
+                citationNumber.put(authorId, authorandnumber);
+//                System.out.println(authorId + ":" + authorandnumber);
+            }
+            System.out.println(count);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 //
-//                citationNumber.put(authorId, authorandnumber);
-//                System.out.println(count);
-//            }
-////            System.out.println(authorId + ":" + indexnumber);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//
-//        Connection connection = null;
-//        Table table = null;
-//        Configuration conf = HBaseConfiguration.create();
-//        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
-//        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
-//
-//        List<Put> puts = new ArrayList<Put>();
-//        for (Map.Entry entry : citationNumber.entrySet()) {
-//            String authorId = (String) entry.getKey();
-//            String citenumber = (String) entry.getValue();
-//            Put put = new Put(Bytes.toBytes(authorId));
-//            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_CITATION), Bytes.toBytes(ConfigurationConstant.QF_CITE_NUMBER), Bytes.toBytes(citenumber));
-//            puts.add(put);
-//        }
-//        try {
-//            connection = ConnectionFactory.createConnection(conf);
-//            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
-//            table.put(puts);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : citationNumber.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String citenumber = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_CITATION), Bytes.toBytes(ConfigurationConstant.QF_CITED_NUMBER), Bytes.toBytes(citenumber));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Test
     public void addColumnFamily() throws IOException {

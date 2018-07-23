@@ -1,6 +1,7 @@
 package org.thealpha.dao.inter;
 
 import org.thealpha.model.Paper;
+import org.thealpha.model.citationnumber;
 
 import java.util.List;
 
@@ -13,5 +14,6 @@ public interface ReferenceDao {
     public List<String> getRefedPaperIdsByPaperIds(List<String> paperIds);
     public List<String> getCoRefPapersByPaperIds(List<String> paperIds);
     public List<String> getCoRefedPapersByPaperIds(List<String> paperIds);
-
+    public List<citationnumber> getciteNumberbyId(String id);
+    public List<citationnumber> getcitedNumberbyId(String id);
 }
