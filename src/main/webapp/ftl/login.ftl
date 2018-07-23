@@ -92,16 +92,16 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="login-container">
                         <div class="loginbox" id="large-header">
-                            <div class="loginbox-title">sign in using social accounts</div>
-                            <ul class="social-network social-circle onwhite">
-                                <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" class="icoLinkedin" title="Linkedin +"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
+                            <div class="loginbox-title">sign in</div>
+                            <#--<ul class="social-network social-circle onwhite">-->
+                                <#--<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>-->
+                                <#--<li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>-->
+                                <#--<li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>-->
+                                <#--<li><a href="#" class="icoLinkedin" title="Linkedin +"><i class="fa fa-linkedin"></i></a></li>-->
+                            <#--</ul>-->
                             <div class="loginbox-or">
                                 <div class="or-line"></div>
-                                <div class="or">OR</div>
+                                <#--<div class="or">OR</div>-->
                             </div>
 
                             <form class="layui-form" action="/login/verify" name="f" method="post" id="login_form">

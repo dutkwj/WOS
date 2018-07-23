@@ -13,19 +13,19 @@
 <#--&lt;#&ndash;<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>&ndash;&gt;-->
 <#--<script src="/js/jquery-3.2.1.min.js"></script>-->
 <div class="ui-widget">
-    <input id="search" placeholder="search by name">
-    <button type="button" id="search_button">查找</button>
-    <button type="button" id="clear_button">恢复</button>
+    <#--<input id="search" placeholder="search by name">-->
+    <#--<button type="button" id="search_button">查找</button>-->
+    <#--<button type="button" id="clear_button">恢复</button>-->
     <input type="radio"  name="yin" id="kaiguan" value="0" />&nbsp;引用
     <input type="radio"  name="yin" id="kaiguan" value="1" />&nbsp;被引
     <input type="radio"  name="yin" id="kaiguan" value="2" checked />&nbsp;引用+被引
-    <select id="circlesize" style="float:right">
-        <option value="total">Total Interactions</option>
-        <option value="discussions">Discussions</option>
-        <option value="replies">Replies</option>
-        <option value="comments">Comments</option>
-        <option value="connections">Connections</option>
-    </select>
+    <#--<select id="circlesize" style="float:right">-->
+        <#--<option value="total">Total Interactions</option>-->
+        <#--<option value="discussions">Discussions</option>-->
+        <#--<option value="replies">Replies</option>-->
+        <#--<option value="comments">Comments</option>-->
+        <#--<option value="connections">Connections</option>-->
+    <#--</select>-->
 
 </div>
 

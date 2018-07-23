@@ -66,13 +66,34 @@
             background-color: rgba(77,196,25);
             color: #fff
         }
+        .post-img{
+            width: auto;
+            margin-bottom: 30px;
+            overflow: hidden;
+            padding-left: 8rem;
+            padding-top: 2rem;
+        }
+        .post-img img{
+            width: 13rem;
+            height: 13rem;
+            /*width: 100%;*/
+            /*height: auto;*/
+            -moz-transition: all 2s;
+            -o-transition: all 2s;
+            -webkit-transition: all 2s;
+            transition: all 2s;
+        }
+
     </style>
 </head>
 
 <body>
+
+
+
 <div class="page">
     <div id="spinner">
-        <div class="spinner-img"> <img alt="Opportunities Preloader" src="img/images/loader.gif" />
+        <div class="spinner-img"> <img alt="Opportunities Preloader" src="/img/images/loader.gif" />
             <h2>Please Wait.....</h2>
         </div>
     </div>
@@ -81,7 +102,7 @@
             <section class="menu-list-items">
                 <ul class="menu-logo">
                     <li>
-                        <a href="#"> <img src="img/images/temp/wos_top.png" width="220px" height="40px" alt="logo" class="img-responsive"> </a>
+                        <a href="#"> <img src="/img/images/temp/wos_top.png" width="220px" height="40px" alt="logo" class="img-responsive"> </a>
                     </li>
                 </ul>
                 <ul class="menu-links pull-right">
@@ -145,10 +166,13 @@
             </div>
         </div>
     </div>
-    <section class="category-section-3 light-blue">
+    <section class="category-section-3 light-blue" id="cas">
 
 
         <div class="container">
+
+
+
             <div class="row">
 
                 <div class="col-md-12 col-sm-12 col-xs-12">
@@ -203,7 +227,10 @@
     </section>
 
     <section class="blog-posts-section">
-        <#--<canvas type="text/javascript" color="0,0,255" opacity='0.7' zIndex="200" count="99" height="200px" src="dist/canvas-nest.js"></canvas>-->
+
+
+
+
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
@@ -217,7 +244,7 @@
 
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="blog-post">
-                            <div class="post-img"> <a href="#"> <img src="img/images/blog/1.jpg" alt="" class="img-responsive"> </a> </div>
+                            <div class="post-img"> <a href="#"> <img src="/img/images/users/scholarImg.png" alt="" class="img-responsive"> </a> </div>
 
                             <div class="post-info" id="c1"><a >Please wait...</a>
                             <h3 class="post-title" id="n1"> <a href="#">  </a>
@@ -229,7 +256,7 @@
 
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="blog-post">
-                            <div class="post-img"> <a href="#"> <img src="img/images/blog/2.jpg" alt="" class="img-responsive"> </a> </div>
+                            <div class="post-img"> <a href="#"> <img src="/img/images/users/scholarImg.png" alt="" class="img-responsive"> </a> </div>
 
                             <div class="post-info" id="c2"><a >Please wait...</a>
                             <h3 class="post-title" id="n2"> <a href="#">
@@ -241,7 +268,7 @@
 
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="blog-post">
-                            <div class="post-img"> <a href="#"> <img src="img/images/blog/3.jpg" alt="" class="img-responsive"> </a> </div>
+                            <div class="post-img"> <a href="#"> <img src="/img/images/users/scholarImg.png" alt="" class="img-responsive"> </a> </div>
 
                             <div class="post-info" id="c3"><a >Please wait...</a>
                             <h3 class="post-title" id="n3"> <a href="#">
@@ -402,6 +429,10 @@
 //        });
     </script>
 </div>
+<#--<div id="cas"></div>-->
+<script  src="/js/dist/canvas-nest.js"  count="100"></script>
+
+
 </body>
 
 </html>

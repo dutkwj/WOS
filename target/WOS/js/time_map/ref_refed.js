@@ -75,9 +75,9 @@ function yinyong(zhong){
         graph.nodes[0].size=centersize;
         graph.nodes[0].color=centercolor;
 
-        alert(graph.nodes[0].size);
-        alert(graph.nodes[0].color);
-        alert(graph.nodes[7].name);
+        // alert(graph.nodes[0].size);
+        // alert(graph.nodes[0].color);
+        // alert(graph.nodes[7].name);
         var linkedByIndex = {};
         var force = d3v3.layout.force()
             .linkDistance(100)
@@ -171,7 +171,7 @@ function yinyong(zhong){
 
         // add circle clip
         var clipPath = node.append("clipPath")
-            .attr("id", function(d){return "clipCircle_" + d.name})
+            .attr("id", function(d){return "clipCircle_" + d.id})
             .append("circle")
             .attr("r", function(d,i){
                 return judge_size(+d.size+(+d.color),i)/2});
@@ -526,7 +526,7 @@ function yinyong(zhong){
         if(selectedVal!=""){
             svg.selectAll(".node")
                 .filter(function (d) {
-                    return d.id != selectedVal;})
+                    return d.name != selectedVal;})
                 .style("opacity", highlight_trans/2);
 
         }else{

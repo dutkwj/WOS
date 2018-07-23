@@ -73,10 +73,15 @@
             padding-top: 30px;
         }
         .layui-form-label{
-            color: white;
+            color: #333;
             padding:none;
             height: 30px;
+            border-color: #e6e6e6;
             /*margin:auto auto;*/
+        }
+        .layui-form-item .layui-input-inline {
+
+            width: 143px;
         }
     </style>
 </head>
@@ -100,8 +105,8 @@
                 </ul>
                 <ul class="menu-links pull-right">
 
-                    <li><a href="">Login</a></li>
-                    <li class="no-bg"><a href="" class="p-job">register</a></li>
+                    <li><a href="/login/index">Login</a></li>
+                    <li class="no-bg"><a href="/register/index" class="p-job">register</a></li>
                 </ul>
             </section>
         </nav>
@@ -111,55 +116,60 @@
         <div class="container-fluid">
             <div class="row" style="margin-top: 40px;">
                 <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
+
                     <div class="col-md-2 col-sm-0  col-xs-0 nopadding" ></div>
-                    <div class="col-md-6 col-sm-12  col-xs-12 nopadding" style="margin-top:-100px;">
+                    <div class="col-md-8 col-sm-12  col-xs-12 nopadding" style="margin-top:-100px;">
                         <div class="search-form-contaner" style="text-align: center;margin-top: 2rem;width: auto;">
                             <#--<form class="layui-form" action="" method="post" enctype="multipart/form-data">-->
 
-                                <div class="layui-container" style="">
-                                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;border-width: 1px;background-color: #ffffff;opacity: 0.6">
+
+                                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;border-width: 1px;background-color: #ffffff;opacity: 1">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <div class="col-md-10 col-sm-12 col-xs-10">
+                                            <div class="col-md-10 col-sm-10 col-xs-12">
                                                 <form class="layui-form" id="searchForm" style="margin-right: 10px">
 
                                                     <div class="layui-form-item">
                                                     </div>
-
-                                                    <div class="layui-form-item">
-                                                        <label class="layui-form-label">scholar</label>
-                                                        <div class="layui-input-block">
-                                                            <input type="text" name="scholarName" id="scholarName" lay-verify="title" autocomplete="off" placeholder="scholar name" class="layui-input">
+                                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                                        <div class="layui-form-item">
+                                                            <label class="layui-form-label">scholar</label>
+                                                            <div class="layui-input-block">
+                                                                <input type="text" name="scholarName" id="scholarName" lay-verify="title" autocomplete="off" placeholder="scholar name" class="layui-input">
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="layui-form-item">
-                                                        <label class="layui-form-label">affiliation</label>
-                                                        <div class="layui-input-block">
-                                                            <input type="text" name="affName" lay-verify="title" autocomplete="off" placeholder="affiliation name" class="layui-input">
+                                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                                        <div class="layui-form-item">
+                                                            <label class="layui-form-label">affiliation</label>
+                                                            <div class="layui-input-block">
+                                                                <input type="text" name="affName" lay-verify="title" autocomplete="off" placeholder="affiliation name" class="layui-input">
+                                                            </div>
                                                         </div>
                                                     </div>
-
-                                                    <div class="layui-form-item">
-                                                        <label class="layui-form-label" style="width: 110px;text-align: left">p-index</label>
-                                                        <div class="layui-input-inline" style="width: 50px;">
-                                                            <input type="text" name="minQindex" placeholder="start" autocomplete="off" class="layui-input">
-                                                        </div>
-                                                        <div class="layui-form-mid">-</div>
-                                                        <div class="layui-input-inline" style="width: 50px;">
-                                                            <input type="text" name="maxQindex" placeholder="end" autocomplete="off" class="layui-input">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="layui-form-item">
-                                                        <label class="layui-form-label" style="width: 110px;text-align: left">h-index</label>
-                                                        <div class="layui-input-inline" style="width: 50px;">
-                                                            <input type="text" name="minHindex" placeholder="start" autocomplete="off" class="layui-input">
-                                                        </div>
-                                                        <div class="layui-form-mid">-</div>
-                                                        <div class="layui-input-inline" style="width: 50px;">
-                                                            <input type="text" name="maxHindex" placeholder="end" autocomplete="off" class="layui-input">
+                                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                                        <div class="layui-form-item">
+                                                            <label class="layui-form-label" style="width: 110px;text-align: left">p-index</label>
+                                                            <div class="layui-input-inline">
+                                                                <input type="text" name="minQindex" placeholder="start" autocomplete="off" class="layui-input">
+                                                            </div>
+                                                            <div class="layui-form-mid">-</div>
+                                                            <div class="layui-input-inline" >
+                                                                <input type="text" name="maxQindex" placeholder="end" autocomplete="off" class="layui-input">
+                                                            </div>
                                                         </div>
                                                     </div>
-
+                                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                                        <div class="layui-form-item">
+                                                            <label class="layui-form-label" style="width: 110px;text-align: left">h-index</label>
+                                                            <div class="layui-input-inline" >
+                                                                <input type="text" name="minHindex" placeholder="start" autocomplete="off" class="layui-input">
+                                                            </div>
+                                                            <div class="layui-form-mid">-</div>
+                                                            <div class="layui-input-inline">
+                                                                <input type="text" name="maxHindex" placeholder="end" autocomplete="off" class="layui-input">
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </form>
                                             </div>
                                             <div class="col-md-2 col-sm-12 col-xs-2">
@@ -173,26 +183,29 @@
                                             </div>
                                         </div>
                                     </fieldset>
-                                </div>
 
-                                <div class="layui-container" style="">
-                                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 10px;border-width: 1px;background-color: #ffffff;opacity:0.6;">
+
+
+                                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 10px;border-width: 1px;background-color: #ffffff;opacity:1;">
                                         <form id="sort_form" class="layui-form" action="" style="margin-right: 10px">
-                                            <div class="layui-form-item">
-                                            </div>
-                                            <input type="hidden" id="scholarIds" name="scholarIds" value=""/>
-                                            <div class="layui-form-item">
-                                                <label class="layui-form-label">sort</label>
-                                                <div class="layui-input-inline" style="width: 240px">
-                                                    <input type="radio" name="sortItem" value="q_index" title="p-index" checked="">
-                                                    <input type="radio" name="sortItem" value="h_index" title="h-index">
+                                            <div class="col-md-3 col-sm-3 col-xs-0"></div>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="layui-form-item">
                                                 </div>
-                                                <label class="layui-form-label"><a style="cursor: pointer" class="sort_type" value="up"><span class="glyphicon glyphicon-arrow-up"></span></a>&nbsp;&nbsp;&nbsp;
-                                                    <a style="cursor: pointer" class="sort_type" value="down"><span class="glyphicon glyphicon-arrow-down"></span></a></label>
+                                                <input type="hidden" id="scholarIds" name="scholarIds" value=""/>
+                                                <div class="layui-form-item">
+                                                    <label class="layui-form-label">sort</label>
+                                                    <div class="layui-input-inline" style="width: 240px">
+                                                        <input type="radio" name="sortItem" value="q_index" title="p-index" checked="">
+                                                        <input type="radio" name="sortItem" value="h_index" title="h-index">
+                                                    </div>
+                                                    <label class="layui-form-label"><a style="cursor: pointer" class="sort_type" value="up"><span class="glyphicon glyphicon-arrow-up"></span></a>&nbsp;&nbsp;&nbsp;
+                                                        <a style="cursor: pointer" class="sort_type" value="down"><span class="glyphicon glyphicon-arrow-down"></span></a></label>
+                                                </div>
                                             </div>
                                         </form>
                                     </fieldset>
-                                </div>
+
 
                             <#--</form>-->
                         </div>
@@ -388,9 +401,9 @@
 
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert(XMLHttpRequest.status);
-            alert(XMLHttpRequest.readyState);
-            alert(textStatus);
+//            alert(XMLHttpRequest.status);
+//            alert(XMLHttpRequest.readyState);
+//            alert(textStatus);
         }
     });
     var indexScholarName = "${indexScholarName}";

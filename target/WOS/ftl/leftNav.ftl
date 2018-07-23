@@ -83,6 +83,8 @@
             </section>
         </nav>
     </header>
+
+    <div class="clearfix"></div>
     <#--<div class="search">-->
         <#--<div class="container-fluid">-->
             <#--<div class="row">-->
@@ -571,59 +573,17 @@
 
         $(function(){
 
-//            var scholars = "_111_222_333".split("_");
-//            for(var i=0;i<scholars.length;i++){
-//                console.log("scholars " + scholars[i]);
-//            }
             if($.cookie('scholars')==null){
                 var scholars = [];
                 $.cookie('scholars', JSON.stringify(scholars), { path: '/', expires: 7 });
             }
             dispHtml();
 
-           // $('#RcentVisited').children("li").click(function () {
-
-//                $.cookie('scholars', 'cookieValue', { path: '/', expires: 7 });
-//                $.cookie('scholars', 'cookieValuefasdfdasf', { path: '/', expires: 7 });
-//                alert($.cookie('scholars'));
-
-            //});
-
-
-    //        // 设置cookie，到期时间
-    //        $('a').eq(1).click(function() {
-    //            var date = new Date();
-    //            date.setTime(date.getTime() + (1 * 24 * 60 * 60 * 1000));
-    //            $.cookie('cookieName', '11111111111', { path: '/', expires: date });
-    //            return false;
-    //        });
-    //        // 获取 cookie
-    //        $('a').eq(2).click(function () {
-    //
-    //            alert($.cookie('cookieName'));
-    //            return false;
-    //        });
-    //        // 删除cookie
-    //        $('a').eq(3).click(function() {
-    //            $.cookie('cookieName', null, { path: '/' });
-    //            return false;
-    //        });
         });
 
     </script>
 
 <script type="text/javascript">
-    <#--$.ajax({-->
-        <#--type:"POST",-->
-        <#--url:'/cooperate/${scholarId!""}/MVC',-->
-        <#--success:function (data) {-->
-            <#--$("#bigContainer").html(data);-->
-        <#--}-->
-    <#--});-->
-
-
-
-
 
 
     function dispHtml() {
