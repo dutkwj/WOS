@@ -88,6 +88,7 @@ public class ConfigurationConstant {
     public static final String ZK_CLIENT_PORT = "2181";
 
     public static final String REDIS_ALL_SCHOLARS = "redis_all_scholars";
+
     public static final String REDIS_HINDEX_TOP10_SCHOLARS = "redis_hindex_top10_scholars";
     public static final String REDIS_HINDEX_TOP100_SCHOLARS = "redis_hindex_top100_scholars";
 
