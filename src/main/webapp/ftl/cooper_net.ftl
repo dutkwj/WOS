@@ -42,8 +42,8 @@
     <a href="#0" class="cd-close">Close</a>
 </div>
 
-<script src="/js/time_map/d3.v4.min.js"></script>
-<script src="/js/time_map/d3.v3.min.js"></script>
+<#--<script src="/js/time_map/d3.v4.min.js"></script>-->
+<#--<script src="/js/time_map/d3.v3.min.js"></script>-->
 <script src="/js/time_map/d3v4-brush-lite.js"></script>
 <script src="/js/time_map/force.js"></script>
 <script src="/js/time_map/fisheye.js"></script>

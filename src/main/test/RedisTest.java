@@ -11,6 +11,8 @@ import org.thealpha.util.ListTranscoder;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisCluster;
 
+
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +22,8 @@ public class RedisTest {
 
     private Jedis jedis;
 
-    @Autowired
+//    @Autowired
+    @Resource
     private JedisCluster jedisCluster;
 
 //    @Before
@@ -30,7 +33,7 @@ public class RedisTest {
 
     @Test
     public void redisConnectTest() {
-//        jedis.set("name", "123");
+//        jedisCluster.set("name", "123");
 //        System.out.println(jedis.get("name"));
         System.out.println(jedisCluster.get("hello"));
     }

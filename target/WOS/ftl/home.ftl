@@ -100,16 +100,7 @@
     <header id="header2" class="navbar transparent-header fa-change-white">
         <nav id="menu-1" class="mega-menu" data-color="">
             <section class="menu-list-items">
-                <ul class="menu-logo">
-                    <li>
-                        <a href="#"> <img src="/img/images/temp/wos_top.png" width="220px" height="40px" alt="logo" class="img-responsive"> </a>
-                    </li>
-                </ul>
-                <ul class="menu-links pull-right">
-
-                    <li><a href="/login/index">Login</a></li>
-                    <li class="no-bg"><a href="/register/index" class="p-job">register</a></li>
-                </ul>
+                <#include "nav.ftl">
             </section>
         </nav>
     </header>
@@ -183,7 +174,7 @@
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
-                    <a href="/relationGraph/7B374211/MVC">
+                    <a href="/relationGraph/0CAEADF8/MVC">
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="category-section-3-box" >
                             <div class="category-section-3-box-inner">

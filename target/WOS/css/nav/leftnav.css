@@ -48,7 +48,7 @@ h1 a {
     background: #FFF;
 }
 
-.accordion .link {
+.accordion .links {
     cursor: pointer;
     display: block;
     padding: 20px 3px;
@@ -64,7 +64,7 @@ h1 a {
     transition: all 0.4s ease;
 }
 
-.accordion li:last-child .link {
+.accordion li:last-child .links {
     font-weight: 600;
     font-family: "Source Sans Pro", sans-serif;
     border-bottom: 0;
@@ -89,7 +89,7 @@ h1 a {
     font-size: 16px;
 }
 
-.accordion li.open .link {
+.accordion li.open .links {
     color: #f39800;
 }
 
