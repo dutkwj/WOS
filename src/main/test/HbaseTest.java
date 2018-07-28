@@ -2198,10 +2198,10 @@ public class HbaseTest {
             e.printStackTrace();
         }
         String line = "";
-        int count = 100;
+        int count = 0;
         try {
-            while ((line = br.readLine()) != null && count>0) {
-                count -= 1;
+            while ((line = br.readLine()) != null) {
+                count += 1;
                 String authorId = line.substring(0, line.indexOf(","));
                 String authorandnumber = line.substring(line.indexOf(",") + 1);
                 authorandnumber = authorandnumber.replaceAll("\"|\\[|\\]|'|\\{|\\}", "").replaceAll(", \\(","; (").replaceAll("\\(|\\)","");
@@ -2226,30 +2226,30 @@ public class HbaseTest {
         }
 
 
-//        Connection connection = null;
-//        Table table = null;
-//        Configuration conf = HBaseConfiguration.create();
-//        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
-//        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
-//
-//        List<Put> puts = new ArrayList<Put>();
-//        for (Map.Entry entry : citationNumber.entrySet()) {
-//            String authorId = (String) entry.getKey();
-//            String citenumber = (String) entry.getValue();
-//            Put put = new Put(Bytes.toBytes(authorId));
-//            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_CITATION), Bytes.toBytes(ConfigurationConstant.QF_CITED_NUMBER), Bytes.toBytes(citenumber));
-//            puts.add(put);
-//        }
-//        try {
-//            connection = ConnectionFactory.createConnection(conf);
-//            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
-//            table.put(puts);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : citationNumber.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String citenumber = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_TEACHER_STUDENT), Bytes.toBytes(ConfigurationConstant.QF_CO_TEACHER_STUDENT), Bytes.toBytes(citenumber));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-
+    //删除的函数,用来删除具体的某一列,每次传入一个id
     public  void deleteQualifier(String id,Connection connection) throws IOException {
 
         Table table = null;

@@ -130,6 +130,9 @@
                     </div>
 
                     <div class="col-md-2 col-sm-12 col-xs-12" style="margin-top: 30px">
+                        <aside id="waitChoose"  style="z-index: 99999999999;margin-top: 0px;position: absolute;width: 26rem;height: 61rem;cursor: wait;display:none;">
+
+                        </aside>
                         <aside>
 
                             <div class="widget">
@@ -295,11 +298,14 @@
             $("#cooperate").addClass("open");
             $("#cooperate-ul").css("display", "block");
             $("#mvc-li").addClass("current");
+            $("#waitChoose").show();
             $.ajax({
                 type:"POST",
                 url:'/cooperate/${scholarId!""}/MVC',
                 success:function (data) {
+
                     $("#bigContainer").html(data);
+                    $("#waitChoose").hide();
                 }
             });
         } else if ("${type}" == "collaLocation") {
@@ -365,6 +371,7 @@
                 type:"POST",
                 url:'/ref/${scholarId!""}',
                 success:function (data) {
+                    $("#bigContainer").html("");
                     $("#bigContainer").html(data);
                 }
             });
@@ -387,6 +394,7 @@
                 type:"POST",
                 url:'/coRef/${scholarId!""}',
                 success:function (data) {
+                    $("#bigContainer").html("");
                     $("#bigContainer").html(data);
                 }
             });
@@ -398,6 +406,7 @@
                 type:"POST",
                 url:'/coRefed/${scholarId!""}',
                 success:function (data) {
+                    $("#bigContainer").html("");
                     $("#bigContainer").html(data);
                 }
             });
@@ -430,6 +439,7 @@
                 type:"POST",
                 url:'/cooperate/${scholarId!""}/MVC',
                 success:function (data) {
+                    $("#bigContainer").html("");
                     $("#bigContainer").html(data);
                 }
             });
@@ -486,13 +496,14 @@
         });
 
         $("#directCite").click(function () {
-            //$("#bigContainer").html(" ");
+            $("#waitChoose").show();
             $.ajax({
                 type:"POST",
                 url:'/ref/${scholarId!""}',
                 success:function (data) {
-//                    alert("ddd");
+
                     $("#bigContainer").html(data);
+                    $("#waitChoose").hide();
                 }
             });
         });
@@ -508,12 +519,14 @@
         });
 
         $("#commonCite").click(function () {
-
+            $("#waitChoose").show();
             $.ajax({
                 type:"POST",
                 url:'/coRef/${scholarId!""}',
                 success:function (data) {
+
                     $("#bigContainer").html(data);
+                    $("#waitChoose").hide();
                 }
             });
         });
