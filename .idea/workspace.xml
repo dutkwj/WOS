@@ -9,18 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/webapp/ftl/refrefed_net.ftl" line="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="291e2776-134e-423c-b7f9-68e37a8618e2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/HbaseTest.java" afterPath="$PROJECT_DIR$/src/main/test/HbaseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/login.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/login.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/register.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/register.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl" />
-    </list>
+    <list default="true" id="291e2776-134e-423c-b7f9-68e37a8618e2" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,8 +93,8 @@
       <file leaf-file-name="cooper_net.ftl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/cooper_net.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-750">
-              <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="43" />
+            <state relative-caret-position="89">
+              <caret line="102" column="26" lean-forward="false" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -166,14 +155,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>url1</find>
       <find>url</find>
       <find>id</find>
       <find>800</find>
       <find>svg</find>
       <find>width</find>
       <find>commonCite</find>
-      <find>d3_selectable_force_directed_graph</find>
       <find>w</find>
       <find>zhong</find>
       <find>name</find>
@@ -196,6 +183,8 @@
       <find>res</find>
       <find>cite</find>
       <find>$(&quot;#waitChoose&quot;).show();</find>
+      <find>closeQuickView</find>
+      <find>d3_selectable_force_directed_graph</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -1205,7 +1194,7 @@
       <workItem from="1532314916410" duration="35234000" />
       <workItem from="1532505684297" duration="43000" />
       <workItem from="1532506187320" duration="22691000" />
-      <workItem from="1532662174287" duration="18339000" />
+      <workItem from="1532662174287" duration="19697000" />
     </task>
     <servers />
   </component>
@@ -1242,7 +1231,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202137000" />
+    <option name="totallyTimeSpent" value="203495000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -1495,6 +1484,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1740,8 +1730,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/cooper_net.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-750">
-          <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="43" />
+        <state relative-caret-position="89">
+          <caret line="102" column="26" lean-forward="false" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
           <folding />
         </state>
       </provider>
