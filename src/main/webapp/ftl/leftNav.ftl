@@ -203,28 +203,8 @@
         </div>
     </section>
 
-    <div class="fixed-footer-1">
-
-        <section class="footer-bottom-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="footer-bottom">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <p>Copyright ©2018 - <a href="http://thealphalab.org/">The Alpha Lab </a></p>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+    <#--在footer.ftl里面进行修改-->
+    <#include "footer.ftl">
     <a href="#" class="scrollup"><i class="fa fa-chevron-up"></i></a>
 
 
@@ -235,8 +215,8 @@
     <!-- JAVASCRIPT JS  -->
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
 
-    <script src="/js/time_map/d3.v4.min.js"></script>
-    <script src="/js/time_map/d3.v3.min.js"></script>
+    <#--<script src="/js/time_map/d3.v4.min.js"></script>-->
+    <#--<script src="/js/time_map/d3.v3.min.js"></script>-->
 
     <!-- BOOTSTRAP CORE JS -->
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
@@ -247,7 +227,7 @@
     <script type="text/javascript" src="/js/mega_menu.min.js"></script>
 
     <!-- JQUERY EASING -->
-    <script type="text/javascript" src="/js/easing.js"></script>
+    <#--<script type="text/javascript" src="/js/easing.js"></script>-->
 
     <!-- JQUERY COUNTERUP -->
     <script type="text/javascript" src="/js/counterup.js"></script>
@@ -298,6 +278,7 @@
             $("#cooperate").addClass("open");
             $("#cooperate-ul").css("display", "block");
             $("#mvc-li").addClass("current");
+            //为右侧的选择框加上等待的遮罩
             $("#waitChoose").show();
             $.ajax({
                 type:"POST",
@@ -305,13 +286,16 @@
                 success:function (data) {
 
                     $("#bigContainer").html(data);
-                    $("#waitChoose").hide();
+
                 }
             });
         } else if ("${type}" == "collaLocation") {
             $("#cooperate").addClass("open");
             $("#cooperate-ul").css("display", "block");
             $("#collaborator-location-li").addClass("current");
+            //为右侧的选择框加上等待的遮罩
+            $("#waitChoose").show();
+            $("#bigContainer").html("");
             $.ajax({
                 type:"POST",
                 url:'/cooperate/${scholarId!""}/worldMap',
@@ -435,6 +419,8 @@
         });
 
         $("#mvc").click(function () {
+            //为右侧的选择框加上等待的遮罩
+            $("#waitChoose").show();
             $.ajax({
                 type:"POST",
                 url:'/cooperate/${scholarId!""}/MVC',
@@ -496,6 +482,7 @@
         });
 
         $("#directCite").click(function () {
+            //为右侧的选择框加上等待的遮罩
             $("#waitChoose").show();
             $.ajax({
                 type:"POST",
@@ -503,7 +490,7 @@
                 success:function (data) {
 
                     $("#bigContainer").html(data);
-                    $("#waitChoose").hide();
+
                 }
             });
         });
@@ -519,6 +506,7 @@
         });
 
         $("#commonCite").click(function () {
+            //为右侧的选择框加上等待的遮罩
             $("#waitChoose").show();
             $.ajax({
                 type:"POST",
@@ -526,7 +514,7 @@
                 success:function (data) {
 
                     $("#bigContainer").html(data);
-                    $("#waitChoose").hide();
+
                 }
             });
         });
@@ -589,68 +577,9 @@
 
 
     <!--jquery.cookie.js-->
-    <script type="text/javascript" src="/js/jquery.cookie.js"></script>
-    <script type="text/javascript">
-
-        $(function(){
-
-            if($.cookie('scholars')==null){
-                var scholars = [];
-                $.cookie('scholars', JSON.stringify(scholars), { path: '/', expires: 7 });
-            }
-            dispHtml();
-
-        });
-
-    </script>
-
-<script type="text/javascript">
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
 
 
-    function dispHtml() {
-        var scholars = JSON.parse($.cookie('scholars'));
-        $('#RcentVisited').html("");
-        scholars.forEach(function (item,index) {
-            //console.log("index :" + index + JSON.stringify(item));
-            var temp = "li:eq("+index+")";
-            var url = '/relationGraph/'+item.id+'/MVC';
-
-//            <a href="dsfasd"></a>
-           var list = '<li><a href="'+ url+ ' " >' + item.name + '</a> </li>';
-           //console.log(list);
-            $('#RcentVisited').append(list);
-        });
-    }
-    function addRecentVisit(scholar) {
-
-        var scholars = JSON.parse($.cookie('scholars'));
-        if(isInIt(scholar)){
-            console.log("is in it");
-            dispHtml();
-            return;
-        }else if(scholars.length<5){
-            scholars.push(scholar);
-        }else if(scholars.length==5){
-            scholars.splice(0,1);
-            scholars.push(scholar);
-
-        }
-
-        dispHtml();
-
-        $.cookie('scholars', JSON.stringify(scholars), { path: '/', expires: 7 });
-
-    }
-    function isInIt(scholar){
-        var scholars = JSON.parse($.cookie('scholars'));
-        for(var i=0;i<scholars.length;i++){
-            if(scholars[i].id == scholar.id){
-                return true;
-            }
-        }
-        return false;
-    }
-
-</script>
+<script type="text/javascript" src="/js/wosCookie.js"></script>
 
 </html>

@@ -241,12 +241,13 @@
                         <aside>
                             <div class="widget">
                                 <div class="widget-heading"><span class="title">Recent search</span></div>
-                                <ul class="categories-module">
-                                    <li> <a href=""> scholar1 <span>(1021)</span> </a> </li>
-                                    <li> <a href=""> scholar2 <span>(54)</span> </a> </li>
-                                    <li> <a href=""> scholar3<span>(13)</span> </a> </li>
-                                    <li> <a href=""> scholar5<span>(23)</span> </a> </li>
-                                    <li> <a href=""> scholar6 <span>(42)</span> </a> </li>
+                                <ul class="categories-module" id="RcentVisited">
+                                <#--<li>  <a>scholar1  </a> </li>-->
+                                    <#--<li>  <a>scholar1  </a> </li>-->
+                                    <#--<li>  <a>scholar1  </a> </li>-->
+                                    <#--<li>  <a>scholar1  </a> </li>-->
+                                    <#--<li>  <a>scholar1  </a> </li>-->
+
                                 </ul>
                             </div>
                             <!-- <div class="widget">
@@ -301,29 +302,8 @@
             </div>
         </div>
     </section>
-
-    <div class="fixed-footer-1">
-
-        <section class="footer-bottom-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="footer-bottom">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <p>Copyright ©2018 - <a href="http://thealphalab.org/">The Alpha Lab </a></p>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+    <#--在footer.ftl里面进行修改-->
+    <#include "footer.ftl">
     <a href="#" class="scrollup"><i class="fa fa-chevron-up"></i></a>
 
 </div>
@@ -380,6 +360,31 @@
 
     <#--kgjgjhgjghjghj-->
 <#--</div>-->
+
+
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+
+
+<script type="text/javascript" src="/js/wosCookie.js"></script>
+<#--最近访问-->
+<script type="text/javascript">
+
+    function initVisit() {
+       // alert($("#scholar_list").html());
+
+        $("#scholar_list").children(".profile-content").click(function () {
+            //alert("222222");
+            var temp = $(this);
+            var a = temp.children(".card").children(".firstinfo").children(".profileinfo").find("h1").children("a");
+            var id = a.attr("href").split("/")[2];
+            var name  = a.html();
+            //console.log(id + " " + name);
+
+            addRecentVisit(id,name);
+        })
+    }
+</script>
+
 <script type="text/javascript">
 
 
@@ -389,6 +394,7 @@
         success:function (data) {
 //            console.log(data);
             $("#result").html(data);
+            setTimeout(initVisit,1000);
 
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -402,14 +408,14 @@
 
     //scholarName=&affName=&minQindex=&maxQindex=&minHindex=&maxHindex=
     $("#searchButton").on("click", function () {
-        //console.log($("#searchForm").serialize());
+        console.log($("#searchForm").serialize());
         $.ajax({
             type:"POST",
             url:'/searchMore/content',
             data:$("#searchForm").serialize(),
             success:function (data) {
                 $("#result").html(data);
-
+                initVisit()
             },
             error:function (jqXHR,textStatus,errorThrown) {
                 console.log(jqXHR);
@@ -432,6 +438,7 @@
             success:function (data) {
 
                 $("#result").html(data);
+                initVisit();
             },
             error:function (jqXHR,textStatus,errorThrown) {
                 console.log(jqXHR);
@@ -443,7 +450,7 @@
 
 
 </script>
-
+<!--jquery.cookie.js-->
 
 </html>
 

@@ -38,7 +38,10 @@ public class TeacherStudentService {
         }
         return null;
     }
-
+    public List<String> getStudenIdsByTeacherId(String teacherId) {
+        List<String> studentIds = teacherStudentDao.getStudentsByTeacherId(teacherId);
+        return studentIds;
+    }
     public Scholar getTeacherByStudentId(String studentId) {
         String teacherId = teacherStudentDao.getTeacherByStudentId(studentId);
         if (StringUtils.isNotBlank(teacherId)) {

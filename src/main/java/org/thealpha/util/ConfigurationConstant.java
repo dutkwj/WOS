@@ -28,7 +28,11 @@ public class ConfigurationConstant {
 
 
 
-    //    cs_relationship, cooperate:(count, collaboration_intensity, eve_year_count, every_year_collaborators, every_year_conumber, every_year_papernumber), co_team:(team_intension), teacher_student:(teacher, students,co_teacher_student), citation:(cite_number, cited_number, co_cite_number, co_cited_number)
+
+
+    //    cs_relationship, cooperate:(count, collaboration_intensity, eve_year_count, every_year_collaborators, every_year_conumber, every_year_papernumber), co_team:(team_intension), teacher_student:(teacher, students, student_number_year,co_teacher_student), citation:(cite_number, cited_number, co_cite_number,
+        // co_cited_number)
+
     public static final String TABLE_CS_RELATIONSHIP = "cs_relationship";
     public static final String CF_COOPERATE = "cooperate";
     public static final String CF_CO_TEAM = "co_team";
@@ -48,6 +52,7 @@ public class ConfigurationConstant {
     public static final String QF_STUDENTS = "students";
     public static final String QF_CITE_NUMBER = "cite_number";
     public static final String QF_CITED_NUMBER = "cited_number";
+    public static final String QF_STUDENT_NUMBER_YEAR = "student_number_year";
     public static final String QF_CO_CITE_NUMBER ="co_cite_number";
     public static final String QF_CO_CITED_NUMBER ="co_cited_number";
     public static final String QF_CO_TEACHER_STUDENT ="co_teacher_student";

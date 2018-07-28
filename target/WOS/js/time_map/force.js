@@ -138,11 +138,7 @@ function createV4SelectableForceDirectedGraph(svg, graph,id_c) {
             index = d.id;
 
 
-            var sc = {};
-            sc.id = d.id;
-            sc.name = d.name;
-
-            addRecentVisit(sc);
+            addRecentVisit(d.id, d.name);
             dispHtml();
 
 

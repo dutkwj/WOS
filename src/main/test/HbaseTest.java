@@ -1587,6 +1587,7 @@ public class HbaseTest {
     //    设置缓存中的学者H因子和潜力指数
     @Test
     public void setAuthorIdQindexRedis() {
+
         List<Scholar> scholars = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
             public Scholar mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
                 Scholar scholar = new Scholar();
@@ -1617,24 +1618,29 @@ public class HbaseTest {
         HashMap<String, String> m4 = new HashMap<String, String>();
         for (Scholar scholar : scholars) {
             if (count <= 500000) {
-                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_0_50W, scholar.getIndex());
+//                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_0_50W, scholar.getIndex());
                 m1.put(scholar.getIndex(), String.valueOf(scholar.getHindex()));
+//                System.out.print(m1);
             } else if (count <= 1000000) {
-                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_50_100W, scholar.getIndex());
+//                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_50_100W, scholar.getIndex());
                 m2.put(scholar.getIndex(), String.valueOf(scholar.getHindex()));
+//                System.out.print(m2);
             } else if (count <= 1500000) {
-                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_100_150W, scholar.getIndex());
+//                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_100_150W, scholar.getIndex());
                 m3.put(scholar.getIndex(), String.valueOf(scholar.getHindex()));
+//                System.out.print(m3);
             } else {
-                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_150_200W, scholar.getIndex());
+//                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_150_200W, scholar.getIndex());
                 m4.put(scholar.getIndex(), String.valueOf(scholar.getHindex()));
+//                System.out.print(m4);
             }
             count += 1;
         }
+        System.out.print("m1 "+count);
         jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_0_50W, m1);
-        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_50_100W, m2);
-        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_100_150W, m3);
-        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_150_200W, m4);
+//        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_50_100W, m2);
+//        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_100_150W, m3);
+//        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_150_200W, m4);
 
     }
 
@@ -2204,18 +2210,12 @@ public class HbaseTest {
                 count += 1;
                 String authorId = line.substring(0, line.indexOf(","));
                 String authorandnumber = line.substring(line.indexOf(",") + 1);
-                authorandnumber = authorandnumber.replaceAll("\"|\\[|\\]|'|\\{|\\}", "").replaceAll(", \\(","; (").replaceAll("\\(|\\)","");
-                System.out.println(authorId + ":" + authorandnumber);
+                authorandnumber = authorandnumber.replaceAll("\"\\[", "").replaceAll("\\]\"", "").replaceAll
+                        ("\\[", "").replaceAll("\\]", "").replaceAll("\'", "");
+//                authorandnumber = authorandnumber.replaceAll("\"|\\[|\\]|'|\\{|\\}", "").replaceAll(", \\(","; (").replaceAll("\\(|\\)","");
+//                System.out.println(authorId + ":" + authorandnumber);
 // String[] authornumber = authorandnumber.split(",");
                 ArrayList<citationnumber> indexnumber = new ArrayList<citationnumber>();
-//                for(int i = 0;i < authornumber.length; i ++){
-////                    System.out.println(authornumber[i]);
-//                    citationnumber c = new citationnumber();
-//                    c.setIndex(authornumber[i].split(":")[0]);
-//                    c.setNumber(authornumber[i].split(":")[1]);
-//                    indexnumber.add(c);
-//                }
-
                 citationNumber.put(authorId, authorandnumber);
 //                System.out.println(authorId + ":" + authorandnumber);
                 //deleteQualifier(authorId,connection);
@@ -2280,14 +2280,11 @@ public class HbaseTest {
         System.out.println("coloumn added");
     }
 
-    ///home/kangwenjie/PycharmProjects/WOS/MS-DATA/师生关系数据6.4/cs_cooperate.csv
-    //导入师生的合作关系
-
+    //导入学生数量时间关系
     @Test
-    public void importTeaStuCooperate() {
-//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-servlet.xml");
-//        HbaseTemplate hbaseTemplate = (HbaseTemplate) applicationContext.getBean("hbaseTemplate");
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/师生关系数据6.4/cs_cooperate.csv");  // CSV文件路径
+    public void importStudentNumberYear() {
+        HashMap<String, String> citationNumber = new HashMap<String, String>();
+        File csv = new File("/home/zhengwenqing/data/wos_data/student/cs_student_number.csv");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(csv));
@@ -2296,30 +2293,94 @@ public class HbaseTest {
         }
         String line = "";
         int count = 0;
-        // 787016   4CDAA40  1514846 9CE917C
         try {
-            while ((line = br.readLine()) != null && count>0)  //读取到的内容给line变量
-            {
-                count -= 1;
-//                if (count <= 1514846) {
-//                    System.out.println(count);
-//                    continue;
-//                }
-                line.substring(0, line.indexOf(","));
+            while ((line = br.readLine()) != null) {
+                count += 1;
                 String authorId = line.substring(0, line.indexOf(","));
-                String cooperateAuthors = line.substring(line.indexOf(",") + 1);
-                cooperateAuthors = line.replaceAll("\"|\\[|\\]|'|\\{|\\}", "").replace(", (","; (");
-                hbaseTemplate.put(TABLE_NAME, authorId, COLUMN_FAMILY, QUALIFIER, cooperateAuthors.getBytes());
-
-                //System.out.println(count);
-//                System.out.print(authorId);
-                System.out.println(cooperateAuthors);
-
+                String authorandnumber = line.substring(line.indexOf(",") + 3);
+                authorandnumber = authorandnumber.replaceAll("\\[\\['", "").replaceAll("'\\]", "").replaceAll("\\]}\"", "").replaceAll("\'", "").replaceAll("'\\]", "").replaceAll("\\],", ";");
+//                System.out.println(authorId+":"+authorandnumber);
+                citationNumber.put(authorId, authorandnumber);
             }
+            System.out.println(count);
         } catch (IOException e) {
             e.printStackTrace();
         }
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
 
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : citationNumber.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String citenumber = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_TEACHER_STUDENT), Bytes.toBytes(ConfigurationConstant
+                    .QF_STUDENT_NUMBER_YEAR), Bytes.toBytes(citenumber));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
+    //导入师生的合作关系
+
+//    @Test
+//    public void importTeaStuCooperate() {
+////        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-servlet.xml");
+////        HbaseTemplate hbaseTemplate = (HbaseTemplate) applicationContext.getBean("hbaseTemplate");
+//        HashMap<String, String> citationNumber = new HashMap<String, String>();
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/师生关系数据6.4/cs_cooperate.csv");  // CSV文件路径
+//        BufferedReader br = null;
+//        try {
+//            br = new BufferedReader(new FileReader(csv));
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        String line = "";
+//        int count = 0;
+//
+//        try {
+//            while ((line = br.readLine()) != null) {
+//                count += 1;
+//                String authorId = line.substring(0, line.indexOf(","));
+//                String authorandnumber = line.substring(line.indexOf(",") + 3);
+//                authorandnumber = authorandnumber.replaceAll("\\[\\['", "").replaceAll("'\\]", "").replaceAll("\\]}\"", "").replaceAll("\'", "").replaceAll("'\\]","").replaceAll("\\],",";");
+////                System.out.println(authorId+":"+authorandnumber);
+//                citationNumber.put(authorId, authorandnumber);
+//            }
+//            System.out.println(count);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        Connection connection = null;
+//        Table table = null;
+//        Configuration conf = HBaseConfiguration.create();
+//        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+//        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+//
+//        List<Put> puts = new ArrayList<Put>();
+//        for (Map.Entry entry : citationNumber.entrySet()) {
+//            String authorId = (String) entry.getKey();
+//            String citenumber = (String) entry.getValue();
+//            Put put = new Put(Bytes.toBytes(authorId));
+//            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_TEACHER_STUDENT), Bytes.toBytes(ConfigurationConstant
+//                    .QF_CO_), Bytes.toBytes(citenumber));
+//            puts.add(put);
+//        }
+//        try {
+//            connection = ConnectionFactory.createConnection(conf);
+//            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+//            table.put(puts);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }

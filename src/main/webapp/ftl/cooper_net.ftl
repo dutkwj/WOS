@@ -42,8 +42,8 @@
     <a href="#0" class="cd-close">Close</a>
 </div>
 
-<#--<script src="/js/time_map/d3.v4.min.js"></script>-->
-<#--<script src="/js/time_map/d3.v3.min.js"></script>-->
+<script src="/js/time_map/d3.v4.min.js"></script>
+<script src="/js/time_map/d3.v3.min.js"></script>
 <script src="/js/time_map/d3v4-brush-lite.js"></script>
 <script src="/js/time_map/force.js"></script>
 <script src="/js/time_map/fisheye.js"></script>
@@ -70,6 +70,8 @@
            myChart.hideLoading();
             dom.innerHTML = "<svg />";
             createV4SelectableForceDirectedGraph(svg, graph,"${scholarId!""}");
+            //去掉右侧选择框的等待遮罩
+            $("#waitChoose").hide();
         }else {
             console.error(error);
         }
@@ -110,6 +112,7 @@
             type:"POST",
             url:URL,
             success:function (data) {
+                //console.log("data " + JSON.stringify(data));
                 $("#bigContainer").html(data);
             }
         });

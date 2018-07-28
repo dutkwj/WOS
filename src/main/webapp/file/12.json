@@ -1,0 +1,36 @@
+
+{
+	"name" : "Genealogy",
+	"children": [
+		{ 
+			"AuthorId": "06CB40E7",     
+			"children": [
+				{
+					"year":"1999",
+					"name":"7F3354E8",
+					"isLoggedUser": true, 
+					"student_number":"1" 
+				}
+			] 
+		}, 
+		{ 
+			"AuthorId": "8148E2AE",     
+			"children": [
+				{
+					"year":"1994",
+					"name":"84D3A68E",
+					"isLoggedUser": true, 
+					"student_number":"1"
+				},
+				{
+					"year":"1998",
+					"name":"7FD6B832",
+					"isLoggedUser": true, 
+					"student_number":"1"
+				}
+			] 
+		}
+
+
+	]
+} 
