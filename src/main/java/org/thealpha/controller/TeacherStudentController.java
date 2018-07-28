@@ -16,7 +16,9 @@ import org.thealpha.service.ScholarInfoService;
 import org.thealpha.service.TeacherStudentService;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import javax.swing.*;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -43,254 +45,303 @@ public class TeacherStudentController {
 
     //师生宗谱关系
     @RequestMapping("/Advisor-advisee/{scholarId}/tree")
-    public String Tree(@PathVariable String scholarId, Model model) {
+    public String Tree(@PathVariable String scholarId, Model model){
+        model.addAttribute("scholarId", scholarId);
+        return "student_tree";
+    }
+    @RequestMapping("/JSON/{scholarId}")
+    @ResponseBody()
+    public List<List<TeacherStudent>> JSONTree(@PathVariable String scholarId, Model model) {
         //当前学者在第0层，他的老师从上到下依次为03,02,01，他的学生依次为1,2,3
 
-        List<String> all=new ArrayList<String>();//存放所有学者
+        List<List<TeacherStudent>> all=new ArrayList<>();//存放所有学者
         List<Scholar> stu_01 = students(scholarId); //当前学者的学生,即01层学生
-
-        String userName = teacher(stu_01.get(0).getIndex()).getName();//当前学者姓名
-        Scholar aa=new Scholar();
-        //实例化Scholar对象
-        aa.setIndex(scholarId);
-        aa.setName(userName);
-        all.add(scholarId);//加入当前学者
+        TeacherStudent middlescholar = new TeacherStudent();
+//        String userName = teacher(stu_01.get(0).getIndex()).getName();
+        Scholar aa = scholarInfoService.getScholarById(scholarId);//当前学者信息
+//        List<String> visited = new ArrayList<>();
+//        //实例化Scholar对象
+//        aa.setIndex(scholarId);
+//        aa.setName(userName);
+        middlescholar.setNowscholar(aa);
+//        visited.add(aa.getIndex());
         //以下为寻找老师的代码
+//        List<Scholar> t = new LinkedList<>();
         Scholar t_01=teacher(scholarId);//当前学者的老师，即01层老师
-        if(t_01!=null&&!all.contains(t_01.getIndex())){//当前学者的老师存在且未加入all
-            aa=new Scholar();
-            aa.setIndex(t_01.getIndex());
-            aa.setName(t_01.getName());
-            all.add(t_01.getIndex());//加入01层老师
+        if(t_01!=null/*&&!isited.contains(t_01.getIndex())*/){//当前学者的老师存在且未加入all
+//            aa=new Scholar();
+//            aa.setIndex(t_01.getIndex());
+//            aa.setName(t_01.getName());
+              List<Scholar> classmate = students(t_01.getIndex());
+              middlescholar.setClassmate(classmate);
+              middlescholar.setTeacher(t_01);//加入01层老师
         }
-
-        Scholar t_02=teacher(t_01.getIndex());//01层老师的老师，即02层老师
-        if(t_02!=null&&!all.contains(t_02.getIndex())){//02层老师存在且未加入all
-            //实例化Scholar对象
-            aa=new Scholar();
-            aa.setIndex(t_02.getIndex());
-            aa.setName(t_02.getName());
-            all.add(t_02.getIndex());//加入02层老师
-        }
-
-        Scholar t_03=teacher(t_02.getIndex());//02层老师的老师，即03层老师
-        if(t_03!=null&&!all.contains(t_03.getIndex())){//03层老师存在且未加入all
-            if(t_03.getIndex().equals(t_01.getIndex())){//判断是否存在02层老师的老师（03层老师）同时也是他的学生的情况，如果有，移除02层老师
-                all.remove(t_02.getIndex());
-                t_02=null;
-                t_03=null;
-            }
-            else{//如果没有。正常实例化，03层老师加入all
-                aa=new Scholar();
-                aa.setIndex(t_03.getIndex());
-                aa.setName(t_03.getName());
-                all.add(t_03.getIndex());
-            }
-        }
+//        Scholar t_02=teacher(t_01.getIndex());//01层老师的老师，即02层老师
+//        if(t_02!=null&&!all.contains(t_02.getIndex())){//02层老师存在且未加入all
+//            //实例化Scholar对象
+//            aa=new Scholar();
+//            aa.setIndex(t_02.getIndex());
+//            aa.setName(t_02.getName());
+//            all.add(t_02.getIndex());//加入02层老师
+//        }
+//
+//        Scholar t_03=teacher(t_02.getIndex());//02层老师的老师，即03层老师
+//        if(t_03!=null&&!all.contains(t_03.getIndex())){//03层老师存在且未加入all
+//            if(t_03.getIndex().equals(t_01.getIndex())){//判断是否存在02层老师的老师（03层老师）同时也是他的学生的情况，如果有，移除02层老师
+//                all.remove(t_02.getIndex());
+//                t_02=null;
+//                t_03=null;
+//            }
+//            else{//如果没有。正常实例化，03层老师加入all
+//                aa=new Scholar();
+//                aa.setIndex(t_03.getIndex());
+//                aa.setName(t_03.getName());
+//                all.add(t_03.getIndex());
+//            }
+//        }
 
         if(t_01!=null){//如果01层老师找到
-            for(int i=0;i<stu_01.size();i++){//判断是否存在当前学者的学生同时也是他的老师的情况，如果有，移除这个学生
+             for(int i=0;i<stu_01.size();i++){//判断是否存在当前学者的学生同时也是他的老师的情况，如果有，移除这个学生
                 if(stu_01.get(i).getName().equals(t_01.getName())){
                     stu_01.remove(stu_01.get(i));
                 }
-                else if(all.contains(stu_01.get(i).getIndex())){
-                    stu_01.remove(stu_01.get(i));
+//                else if(all.contains(stu_01.get(i).getIndex())){
+//                    stu_01.remove(stu_01.get(i));
+//                }
+            }
+        }
+        middlescholar.setStudents(stu_01);
+        List<TeacherStudent> stu01list = new ArrayList<>();
+        stu01list.add(middlescholar);
+//        System.out.println(middlescholar.getClassmate());
+//        System.out.println(middlescholar.getStudents());
+
+        List<TeacherStudent> stu02list = new ArrayList<>();
+        if (stu_01 != null) {
+            List<Scholar> stu_02 = new ArrayList<>();
+            for(int i = 0; i < stu_01.size(); i++){
+                Scholar thismiddle = stu_01.get(i);
+                stu_02 = students(thismiddle.getIndex());
+//                visited02.add(teacherStudentService.getStudenIdsByTeacherId(thismiddle.getIndex()));
+                TeacherStudent ts = new TeacherStudent();
+                ts.setNowscholar(thismiddle);
+                ts.setStudents(stu_02);
+                stu02list.add(ts);
+            }
+        }
+
+        List<TeacherStudent> stu03list = new ArrayList<>();
+        if(stu02list != null){
+            List<Scholar> stu_03 = new ArrayList<>();
+            for(int i = 0; i < stu02list.size(); i++){
+                List<Scholar> visited02 = stu02list.get(i).getStudents();
+                if(visited02 != null) {
+                    for (int j = 0; j < visited02.size(); j++) {
+                        Scholar thismiddle = visited02.get(j);
+                        stu_03 = students(thismiddle.getIndex());
+                        TeacherStudent ts = new TeacherStudent();
+                        ts.setNowscholar(thismiddle);
+                        ts.setStudents(stu_03);
+                        stu03list.add(ts);
+                    }
                 }
             }
         }
+        all.add(stu01list);
+        all.add(stu02list);
+        all.add(stu03list);
         //以下为寻找学生的代码
-        List<TeacherWarp> teacherwarpList = new ArrayList<TeacherWarp>();
+//        List<TeacherWarp> teacherwarpList = new ArrayList<TeacherWarp>();
 
-        if (stu_01 != null) {//如果当前学者的学生。即01层学生存在
-            for (int i = 0; i < stu_01.size(); i++) {
-                if(!all.contains(stu_01.get(i).getIndex())){ //all中不含该学生
-                    //实例化对象
-                    aa=new Scholar();
-                    aa.setIndex(stu_01.get(i).getIndex());
-                    aa.setName(stu_01.get(i).getName());
-                    all.add(stu_01.get(i).getIndex());
-                }
-                TeacherWarp teacherWarp = new TeacherWarp();
-                List<Student> studentList = new ArrayList<Student>();
-                List<Teacher> teacherList = new ArrayList<Teacher>();
-
-                List<Scholar> stu_02 = students(stu_01.get(i).getIndex());//02层学生
-                if (stu_02 != null) { //如果02层学生存在
-                    for(int ii=0;ii<stu_02.size();ii++){
-                        if(stu_02.get(ii).getIndex().equals(scholarId)){ //判断02层学生是否同时为01层学生的老师，如果是，将其移除
-                            stu_02.remove(stu_02.get(ii));
-                        }
-                        else if(all.contains(stu_02.get(ii).getIndex())){//判断all中是否有02层学生
-                            stu_02.remove(stu_02.get(ii));
-                        }
-                    }
-                    for (int j = 0; j < stu_02.size(); j++) {
-                        if(!all.contains(stu_02.get(j).getIndex())){
-                            aa=new Scholar();
-                            aa.setIndex(stu_02.get(j).getIndex());
-                            aa.setName(stu_02.get(j).getName());
-                            all.add(stu_02.get(j).getIndex());
-                        }
-                        studentList = new ArrayList<Student>();
-                        Teacher teachers = new Teacher();
-                        teachers.setName(stu_02.get(j).getName());//02层学生作为老师
-
-                        List<Scholar> stu_03 = students(stu_02.get(j).getIndex());//03层学生
-                        if (stu_03 != null) {
-                            for(int ii=0;ii<stu_03.size();ii++){
-                                if(stu_03.get(ii).getIndex().equals(stu_01.get(i).getIndex())){
-                                    stu_03.remove(stu_03.get(ii));
-                                }
-                                else if(all.contains(stu_03.get(ii).getIndex())){
-                                    stu_03.remove(stu_03.get(ii));
-                                }
-                            }
-                            for (int k = 0; k < stu_03.size(); k++) {
-                                if(!all.contains(stu_03.get(k).getIndex())){
-                                    aa=new Scholar();
-                                    aa.setIndex(stu_03.get(k).getIndex());
-                                    aa.setName(stu_03.get(k).getName());
-                                    all.add(stu_03.get(k).getIndex());
-                                }
-                                Student student = new Student();
-                                student.setName(stu_03.get(k).getName());
-                                studentList.add(student);
-                            }
-                            //03层学生和02层学生建立师生关系
-                            teachers.setChildren(studentList);//03层学生作为02层学生的学生
-                            teacherList.add(teachers);
-
-                        } else {
-                            //System.out.println("list3 is null");
-                        }
-
-                    }
-
-                } else {
-                    //System.out.println("list2 is null");
-                }
-                //01层学生和02层学生建立师生关系
-                teacherWarp.setName(stu_01.get(i).getName());//01层学生作为老师
-                teacherWarp.setChildren(teacherList);//02层学生作为01层学生的学生
-                teacherwarpList.add(teacherWarp);
-            }
-        } else {
-            //System.out.println("list1 is null");
-        }
+//        if (stu_01 != null) {//如果当前学者的学生。即01层学生存在
+//            for (int i = 0; i < stu_01.size(); i++) {
+//                if(!all.contains(stu_01.get(i).getIndex())){ //all中不含该学生
+//                    //实例化对象
+//                    aa=new Scholar();
+//                    aa.setIndex(stu_01.get(i).getIndex());
+//                    aa.setName(stu_01.get(i).getName());
+//                    all.add(stu_01.get(i).getIndex());
+//                }
+//                TeacherWarp teacherWarp = new TeacherWarp();
+//                List<Student> studentList = new ArrayList<Student>();
+//                List<Teacher> teacherList = new ArrayList<Teacher>();
+//
+//                List<Scholar> stu_02 = students(stu_01.get(i).getIndex());//02层学生
+//                if (stu_02 != null) { //如果02层学生存在
+//                    for(int ii=0;ii<stu_02.size();ii++){
+//                        if(stu_02.get(ii).getIndex().equals(scholarId)){ //判断02层学生是否同时为01层学生的老师，如果是，将其移除
+//                            stu_02.remove(stu_02.get(ii));
+//                        }
+//                        else if(all.contains(stu_02.get(ii).getIndex())){//判断all中是否有02层学生
+//                            stu_02.remove(stu_02.get(ii));
+//                        }
+//                    }
+//                    for (int j = 0; j < stu_02.size(); j++) {
+//                        if(!all.contains(stu_02.get(j).getIndex())){
+//                            aa=new Scholar();
+//                            aa.setIndex(stu_02.get(j).getIndex());
+//                            aa.setName(stu_02.get(j).getName());
+//                            all.add(stu_02.get(j).getIndex());
+//                        }
+//                        studentList = new ArrayList<Student>();
+//                        Teacher teachers = new Teacher();
+//                        teachers.setName(stu_02.get(j).getName());//02层学生作为老师
+//
+//                        List<Scholar> stu_03 = students(stu_02.get(j).getIndex());//03层学生
+//                        if (stu_03 != null) {
+//                            for(int ii=0;ii<stu_03.size();ii++){
+//                                if(stu_03.get(ii).getIndex().equals(stu_01.get(i).getIndex())){
+//                                    stu_03.remove(stu_03.get(ii));
+//                                }
+//                                else if(all.contains(stu_03.get(ii).getIndex())){
+//                                    stu_03.remove(stu_03.get(ii));
+//                                }
+//                            }
+//                            for (int k = 0; k < stu_03.size(); k++) {
+//                                if(!all.contains(stu_03.get(k).getIndex())){
+//                                    aa=new Scholar();
+//                                    aa.setIndex(stu_03.get(k).getIndex());
+//                                    aa.setName(stu_03.get(k).getName());
+//                                    all.add(stu_03.get(k).getIndex());
+//                                }
+//                                Student student = new Student();
+//                                student.setName(stu_03.get(k).getName());
+//                                studentList.add(student);
+//                            }
+//                            //03层学生和02层学生建立师生关系
+//                            teachers.setChildren(studentList);//03层学生作为02层学生的学生
+//                            teacherList.add(teachers);
+//
+//                        } else {
+//                            //System.out.println("list3 is null");
+//                        }
+//
+//                    }
+//
+//                } else {
+//                    //System.out.println("list2 is null");
+//                }
+//                //01层学生和02层学生建立师生关系
+//                teacherWarp.setName(stu_01.get(i).getName());//01层学生作为老师
+//                teacherWarp.setChildren(teacherList);//02层学生作为01层学生的学生
+//                teacherwarpList.add(teacherWarp);
+//            }
+//        } else {
+//            //System.out.println("list1 is null");
+//        }
         //当前学者与01层学生建立师生关系
-        Teacher_0 teacher_0 = new Teacher_0();
-        teacher_0.setName(userName);
-        teacher_0.setChildren(teacherwarpList);
-
-        List<Teacher_0> teacher_0_List = new ArrayList<Teacher_0>();
-        teacher_0_List.add(teacher_0);
-
-        Teacher_1 teacher_1 = new Teacher_1();
-        List<Teacher_1> teacher_1_List = new ArrayList<Teacher_1>();
-        Teacher_2 teacher_2 = new Teacher_2();
-        List<Teacher_2> teacher_2_List = new ArrayList<Teacher_2>();
-
-        if(t_01!=null){//如果01层老师存在
-            List<Scholar> stu01 = students(t_01.getIndex());//01层老师的学生，含当前学者及其同门
-            if(t_02!=null){
-                for(int g=0;g<stu01.size();g++){
-                    if(stu01.get(g).getIndex().equals(t_02.getIndex())){//判断是否存在01层老师的学生同时也为他的老师的情况，若有，移除该学生
-                        stu01.remove(stu01.get(g));
-                    }
-                }
-            }
-            for (int g = 0; g < stu01.size(); g++) {
-                teacher_0 = new Teacher_0();
-                if (!stu01.get(g).getIndex().equals(scholarId) ) {//把除去当前学者的0层老师的其他学生加入
-                    //建立当前学者所在层其他学生的师生关系
-                    teacher_0.setName(stu01.get(g).getName());
-                    teacher_0.setChildren(null);//不再寻找其他学生的学生
-                    teacher_0_List.add(teacher_0);
-                }
-            }
-            //建立01层老师和当前学者所在层学生的师生关系
-            teacher_1.setName(t_01.getName());
-            teacher_1.setChildren(teacher_0_List);
-            teacher_1_List.add(teacher_1);
-        }
-        else{//如果01层老师不存在
-            Gson gson = new Gson();
-            String tea_stu_json = gson.toJson(teacher_0_List);
-            System.out.println(tea_stu_json);
-            System.out.println("finish01");
-            model.addAttribute("tea_stu_tree", tea_stu_json);
-            return "tree";
-        }
-
-        if(t_02!=null){//如果02层老师存在
-            List<Scholar> stu02 = students(t_02.getIndex());//02层老师的所有学生，其中包含01层老师及其同门
-            if(t_03!=null){//如果03层老师存在
-                for(int g=0;g<stu02.size();g++){
-                    if(stu02.get(g).getIndex().equals(t_03.getIndex())){
-                        stu02.remove(stu02.get(g));
-                    }
-                }
-            }
-            for (int g = 0; g < stu02.size(); g++) {
-                teacher_1 = new Teacher_1();
-                if (!stu02.get(g).getIndex().equals(t_01.getIndex()) ) {//把除01层老师之外的学生加入
-                    //建立除01层老师之外的其他学生的师生关系
-                    teacher_1.setName(stu02.get(g).getName());
-                    teacher_1.setChildren(null);//不再寻找其他该层其他学生的学生
-                    teacher_1_List.add(teacher_1);
-                }
-            }
-            //建立02层老师01层老师所在层的学生的师生关系
-            teacher_2.setName(t_02.getName());
-            teacher_2.setChildren(teacher_1_List);
-            teacher_2_List.add(teacher_2);
-        }
-        else{
-            Gson gson = new Gson();
-            String tea_stu_json = gson.toJson(teacher_1_List);
-            System.out.println(tea_stu_json);
-            System.out.println("finish02");
-            model.addAttribute("tea_stu_tree", tea_stu_json);
-            return "tree";
-        }
-
-        if(t_03!=null){//03层老师
-            List<Scholar> stu03 = students(t_03.getIndex());//03层老师的所有学生，含02层老师及其同门
-            for (int g = 0; g < stu03.size(); g++) {
-                teacher_2 = new Teacher_2();
-                if (!stu03.get(g).getIndex().equals(t_02.getIndex())) {//把除02层老师之外的学生加入
-                    //建立除02层老师之外的其他学生的师生关系
-                    teacher_2.setName(stu03.get(g).getName());
-                    teacher_2.setChildren(null);
-                    teacher_2_List.add(teacher_2);
-                }
-            }
-            //建立03层老师02层老师所在层的学生的师生关系
-            Teacher_3 teacher_3 = new Teacher_3();
-            teacher_3.setName(t_03.getName());
-            teacher_3.setChildren(teacher_2_List);
-            Gson gson = new Gson();
-            String tea_stu_json = gson.toJson(teacher_3);
-            System.out.println(tea_stu_json);
-            System.out.println("finish03");
-            model.addAttribute("tea_stu_tree", tea_stu_json);
-            return "tree";
-
-        }else{
-            Gson gson = new Gson();
-            //将list转换为json格式
-            String tea_stu_json = gson.toJson(teacher_2_List);
-            System.out.println(tea_stu_json);
-            System.out.println("finish04");
-            //将json格式的字符串传到前台
-            model.addAttribute("tea_stu_tree", tea_stu_json);
-            //传到对应ftl文件：tree.ftl
-            return "tree";
-        }
+//        Teacher_0 teacher_0 = new Teacher_0();
+//        teacher_0.setName(userName);
+//        teacher_0.setChildren(teacherwarpList);
+//
+//        List<Teacher_0> teacher_0_List = new ArrayList<Teacher_0>();
+//        teacher_0_List.add(teacher_0);
+//
+//        Teacher_1 teacher_1 = new Teacher_1();
+//        List<Teacher_1> teacher_1_List = new ArrayList<Teacher_1>();
+//        Teacher_2 teacher_2 = new Teacher_2();
+//        List<Teacher_2> teacher_2_List = new ArrayList<Teacher_2>();
+//
+//        if(t_01!=null){//如果01层老师存在
+//            List<Scholar> stu01 = students(t_01.getIndex());//01层老师的学生，含当前学者及其同门
+//            if(t_02!=null){
+//                for(int g=0;g<stu01.size();g++){
+//                    if(stu01.get(g).getIndex().equals(t_02.getIndex())){//判断是否存在01层老师的学生同时也为他的老师的情况，若有，移除该学生
+//                        stu01.remove(stu01.get(g));
+//                    }
+//                }
+//            }
+//            for (int g = 0; g < stu01.size(); g++) {
+//                teacher_0 = new Teacher_0();
+//                if (!stu01.get(g).getIndex().equals(scholarId) ) {//把除去当前学者的0层老师的其他学生加入
+//                    //建立当前学者所在层其他学生的师生关系
+//                    teacher_0.setName(stu01.get(g).getName());
+//                    teacher_0.setChildren(null);//不再寻找其他学生的学生
+//                    teacher_0_List.add(teacher_0);
+//                }
+//            }
+//            //建立01层老师和当前学者所在层学生的师生关系
+//            teacher_1.setName(t_01.getName());
+//            teacher_1.setChildren(teacher_0_List);
+//            teacher_1_List.add(teacher_1);
+//        }
+//        else{//如果01层老师不存在
+//            Gson gson = new Gson();
+//            String tea_stu_json = gson.toJson(teacher_0_List);
+//            System.out.println(tea_stu_json);
+//            System.out.println("finish01");
+//            model.addAttribute("tea_stu_tree", tea_stu_json);
+//            return "tree";
+//        }
+//
+//        if(t_02!=null){//如果02层老师存在
+//            List<Scholar> stu02 = students(t_02.getIndex());//02层老师的所有学生，其中包含01层老师及其同门
+//            if(t_03!=null){//如果03层老师存在
+//                for(int g=0;g<stu02.size();g++){
+//                    if(stu02.get(g).getIndex().equals(t_03.getIndex())){
+//                        stu02.remove(stu02.get(g));
+//                    }
+//                }
+//            }
+//            for (int g = 0; g < stu02.size(); g++) {
+//                teacher_1 = new Teacher_1();
+//                if (!stu02.get(g).getIndex().equals(t_01.getIndex()) ) {//把除01层老师之外的学生加入
+//                    //建立除01层老师之外的其他学生的师生关系
+//                    teacher_1.setName(stu02.get(g).getName());
+//                    teacher_1.setChildren(null);//不再寻找其他该层其他学生的学生
+//                    teacher_1_List.add(teacher_1);
+//                }
+//            }
+//            //建立02层老师01层老师所在层的学生的师生关系
+//            teacher_2.setName(t_02.getName());
+//            teacher_2.setChildren(teacher_1_List);
+//            teacher_2_List.add(teacher_2);
+//        }
+//        else{
+//            Gson gson = new Gson();
+//            String tea_stu_json = gson.toJson(teacher_1_List);
+//            System.out.println(tea_stu_json);
+//            System.out.println("finish02");
+//            model.addAttribute("tea_stu_tree", tea_stu_json);
+//            return "tree";
+//        }
+//
+//        if(t_03!=null){//03层老师
+//            List<Scholar> stu03 = students(t_03.getIndex());//03层老师的所有学生，含02层老师及其同门
+//            for (int g = 0; g < stu03.size(); g++) {
+//                teacher_2 = new Teacher_2();
+//                if (!stu03.get(g).getIndex().equals(t_02.getIndex())) {//把除02层老师之外的学生加入
+//                    //建立除02层老师之外的其他学生的师生关系
+//                    teacher_2.setName(stu03.get(g).getName());
+//                    teacher_2.setChildren(null);
+//                    teacher_2_List.add(teacher_2);
+//                }
+//            }
+//            //建立03层老师02层老师所在层的学生的师生关系
+//            Teacher_3 teacher_3 = new Teacher_3();
+//            teacher_3.setName(t_03.getName());
+//            teacher_3.setChildren(teacher_2_List);
+//            Gson gson = new Gson();
+//            String tea_stu_json = gson.toJson(teacher_3);
+//            System.out.println(tea_stu_json);
+//            System.out.println("finish03");
+//            model.addAttribute("tea_stu_tree", tea_stu_json);
+//            return "tree";
+//
+//        }else{
+//            Gson gson = new Gson();
+//            //将list转换为json格式
+//            String tea_stu_json = gson.toJson(teacher_2_List);
+//            System.out.println(tea_stu_json);
+//            System.out.println("finish04");
+//            //将json格式的字符串传到前台
+//            model.addAttribute("tea_stu_tree", tea_stu_json);
+//            //传到对应ftl文件：tree.ftl
+            return all;
     }
 
     //师生合作关系
-    @RequestMapping("/Advisor-advisee/{scholarId}/graph")
+//    @RequestMapping("/Advisor-advisee/{scholarId}/graph")
     public String Co_graph(@PathVariable String scholarId, Model model) {
         //与上述师生宗谱关系代码基本相同，不同点是定义了AllScholar,用来存放实体类对象aa
         List<String> all=new ArrayList<String>();

@@ -129,7 +129,7 @@ public class HbaseTest {
     @Test
     public void testHTable() {
         Configuration conf = HBaseConfiguration.create();
-        conf.set("hbase.zookeeper.quorum", "10.1.0.188,10.1.27.119,10.1.16.122");
+        conf.set("hbase.zookeeper.quorum", "10.1.0.188,10.1.27.119,10.1.37.157");
         conf.set("hbase.zookeeper.property.clientPort", "2181");
         Get get = new Get(Bytes.toBytes("0CAEADF8"));
         try {
@@ -215,7 +215,7 @@ public class HbaseTest {
         Connection connection = null;
         Table table = null;
         Configuration conf = HBaseConfiguration.create();
-        conf.set("hbase.zookeeper.quorum", "10.1.0.188,10.1.27.119,10.1.16.122");
+        conf.set("hbase.zookeeper.quorum", "10.1.0.188,10.1.27.119,10.1.37.157");
         conf.set("hbase.zookeeper.property.clientPort", "2181");
 
         List<Get> gets = new ArrayList<Get>();
@@ -2175,25 +2175,13 @@ public class HbaseTest {
                 String authorandnumber = line.substring(line.indexOf(",") + 1);
                 authorandnumber = authorandnumber.replaceAll("\"\\[", "").replaceAll("\\]\"", "").replaceAll
                         ("\\[", "").replaceAll("\\]", "").replaceAll("\'", "");
-//                String[] authornumber = authorandnumber.split(",");
                 ArrayList<citationnumber> indexnumber = new ArrayList<citationnumber>();
-//                for(int i = 0;i < authornumber.length; i ++){
-////                    System.out.println(authornumber[i]);
-//                    citationnumber c = new citationnumber();
-//                    c.setIndex(authornumber[i].split(":")[0]);
-//                    c.setNumber(authornumber[i].split(":")[1]);
-//                    indexnumber.add(c);
-//                }
-
                 citationNumber.put(authorId, authorandnumber);
-//                System.out.println(authorId + ":" + authorandnumber);
             }
             System.out.println(count);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-//
         Connection connection = null;
         Table table = null;
         Configuration conf = HBaseConfiguration.create();
@@ -2232,5 +2220,56 @@ public class HbaseTest {
         // Adding column family
         admin.addColumn(ConfigurationConstant.TABLE_CS_RELATIONSHIP, columnDescriptor);
         System.out.println("coloumn added");
+    }
+
+    //导入学生数量时间关系
+    @Test
+    public void importStudentNumberYear(){
+        HashMap<String, String> citationNumber = new HashMap<String, String>();
+        File csv = new File("/home/zhengwenqing/data/wos_data/student/cs_student_number.csv");
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(csv));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        String line = "";
+        int count = 0;
+        try {
+            while ((line = br.readLine()) != null) {
+                count += 1;
+                String authorId = line.substring(0, line.indexOf(","));
+                String authorandnumber = line.substring(line.indexOf(",") + 3);
+                authorandnumber = authorandnumber.replaceAll("\\[\\['", "").replaceAll("'\\]", "").replaceAll("\\]}\"", "").replaceAll("\'", "").replaceAll("'\\]","").replaceAll("\\],",";");
+//                System.out.println(authorId+":"+authorandnumber);
+                citationNumber.put(authorId, authorandnumber);
+            }
+            System.out.println(count);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : citationNumber.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String citenumber = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_TEACHER_STUDENT), Bytes.toBytes(ConfigurationConstant
+                    .QF_STUDENT_NUMBER_YEAR), Bytes.toBytes(citenumber));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }

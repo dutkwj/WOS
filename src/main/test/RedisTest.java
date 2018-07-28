@@ -30,7 +30,7 @@ public class RedisTest {
 
     @Test
     public void redisConnectTest() {
-//        jedis.set("name", "123");
+//        jedisCluster.set("name", "123");
 //        System.out.println(jedis.get("name"));
         System.out.println(jedisCluster.get("hello"));
     }

@@ -224,8 +224,8 @@
     <!-- JAVASCRIPT JS  -->
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
 
-    <script src="/js/time_map/d3.v4.min.js"></script>
-    <script src="/js/time_map/d3.v3.min.js"></script>
+    <#--<script src="/js/time_map/d3.v4.min.js"></script>-->
+    <#--<script src="/js/time_map/d3.v3.min.js"></script>-->
 
     <!-- BOOTSTRAP CORE JS -->
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
@@ -236,7 +236,7 @@
     <script type="text/javascript" src="/js/mega_menu.min.js"></script>
 
     <!-- JQUERY EASING -->
-    <script type="text/javascript" src="/js/easing.js"></script>
+    <#--<script type="text/javascript" src="/js/easing.js"></script>-->
 
     <!-- JQUERY COUNTERUP -->
     <script type="text/javascript" src="/js/counterup.js"></script>

@@ -159,9 +159,9 @@
                                     <li id="cite">
                                         <div class="links">Citation<i class="fa fa-chevron-down"></i></div>
                                         <ul class="submenu" id="cite-ul">
-                                            <li id="direct-cite-li"><a id="directCite">direct cite</a></li>
+                                            <li id="direct-cite-li"><a id="directCite">Direct citation</a></li>
                                             <#--<li id="direct-cited-li"><a id="directCited">direct cited</a></li>-->
-                                            <li id="common-cite-li"><a id="commonCite">Common cite</a></li>
+                                            <li id="common-cite-li"><a id="commonCite">Common citation</a></li>
                                             <#--<li id="common-cited-li"><a id="commonCited">Common cited</a></li>-->
                                         </ul>
                                     </li>
@@ -224,8 +224,8 @@
     <!-- JAVASCRIPT JS  -->
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
 
-    <script src="/js/time_map/d3.v4.min.js"></script>
-    <script src="/js/time_map/d3.v3.min.js"></script>
+    <#--<script src="/js/time_map/d3.v4.min.js"></script>-->
+    <#--<script src="/js/time_map/d3.v3.min.js"></script>-->
 
     <!-- BOOTSTRAP CORE JS -->
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
@@ -236,7 +236,7 @@
     <script type="text/javascript" src="/js/mega_menu.min.js"></script>
 
     <!-- JQUERY EASING -->
-    <script type="text/javascript" src="/js/easing.js"></script>
+    <#--<script type="text/javascript" src="/js/easing.js"></script>-->
 
     <!-- JQUERY COUNTERUP -->
     <script type="text/javascript" src="/js/counterup.js"></script>

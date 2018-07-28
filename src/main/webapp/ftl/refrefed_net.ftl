@@ -7,8 +7,8 @@
     }
 </style>
 <body>
-<#--<script src="/js/time_map/d3.v3.min.js"></script>-->
-<#--<script src="/js/time_map/d3.v4.min.js"></script>-->
+<script src="/js/time_map/d3.v3.min.js"></script>
+<script src="/js/time_map/d3.v4.min.js"></script>
 <#--<!-- search input &ndash;&gt;-->
 <#--&lt;#&ndash;<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>&ndash;&gt;-->
 <#--<script src="/js/jquery-3.2.1.min.js"></script>-->
