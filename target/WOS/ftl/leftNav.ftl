@@ -72,13 +72,21 @@
             <section class="menu-list-items">
                 <ul class="menu-logo">
                     <li>
-                        <a href="../../index"> <img src="/img/images/temp/wos_top.png" width="220px" height="40px" alt="logo" class="img-responsive"> </a>
+                        <a href="/index"> <img src="/img/images/temp/wos_top.png" width="220px" height="40px" alt="logo" class="img-responsive"> </a>
                     </li>
                 </ul>
                 <ul class="menu-links pull-right">
+                <#if Session.user?exists>
+                    <li><a href="">${Session['user'].name!""}</a></li>
+                    <li class="no-bg"><a href="/logout" class="p-job">logout</a></li>
 
+                <#else>
                     <li><a href="/login/index">Login</a></li>
                     <li class="no-bg"><a href="/register/index" class="p-job">register</a></li>
+                </#if>
+
+
+
                 </ul>
             </section>
         </nav>
@@ -478,7 +486,7 @@
         });
 
         $("#directCite").click(function () {
-            $("#bigContainer").html(" ");
+            //$("#bigContainer").html(" ");
             $.ajax({
                 type:"POST",
                 url:'/ref/${scholarId!""}',
@@ -500,7 +508,7 @@
         });
 
         $("#commonCite").click(function () {
-            $("#bigContainer").html("");
+
             $.ajax({
                 type:"POST",
                 url:'/coRef/${scholarId!""}',

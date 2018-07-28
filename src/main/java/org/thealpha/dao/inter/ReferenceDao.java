@@ -16,4 +16,6 @@ public interface ReferenceDao {
     public List<String> getCoRefedPapersByPaperIds(List<String> paperIds);
     public List<citationnumber> getciteNumberbyId(String id);
     public List<citationnumber> getcitedNumberbyId(String id);
+    public List<citationnumber> getCociteNumberbyId(String id);
+    public List<citationnumber> getCocitedNumberbyId(String id);
 }

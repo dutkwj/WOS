@@ -46,14 +46,20 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style type="text/css">
-        .breadcrumb-search {
-            background: url("../i.jpg") no-repeat fixed center center / cover;
-            /*background-color: #FFF;*/
-            padding: 70px 0;
-            position: relative;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/dialog/animate.min.css">
+    <link rel="stylesheet" href="/css/dialog/jquery.gDialog.css">
+    <script src="/js/dialog/jquery.js"></script>
+    <script src="/js/dialog/jquery.gDialog.js"></script>
+
+
+    <#--<style type="text/css">-->
+        <#--.breadcrumb-search {-->
+            <#--background: url("/img/i.jpg") no-repeat fixed center center / cover;-->
+            <#--/*background-color: #FFF;*/-->
+            <#--padding: 70px 0;-->
+            <#--position: relative;-->
+        <#--}-->
+    <#--</style>-->
 </head>
 
 <body>
@@ -66,17 +72,7 @@
     <header id="header2" class="navbar transparent-header fa-change-white">
         <nav id="menu-1" class="mega-menu" data-color="">
             <section class="menu-list-items">
-                <ul class="menu-logo">
-                    <li>
-                        <a href="/index"> <img src="../img/images/temp/wos_top.png" width="220px" height="40px" alt="logo" class="img-responsive"> </a>
-                    </li>
-                </ul>
-                <ul class="menu-links pull-right">
-
-                    <li><a href="#"></a></li>
-                <#--${Session['user'].name!""}-->
-                    <li class="no-bg"><a href="/register/index" class="p-job">register</a></li>
-                </ul>
+            <#include "nav.ftl">
             </section>
         </nav>
     </header>
@@ -108,14 +104,14 @@
                                 <div class="form-group">
                                     <label>Email: <span class="required">*</span></label>
                                     <#--<input placeholder="" class="form-control" type="email" name="email">-->
-                                    <input name="email" class="form-control" required lay-verify="usererror" type="text" placeholder="please input email">
+                                    <input name="email" class="form-control" required lay-verify="usererror" type="text" placeholder="please input email" style="text-transform: none;">
                                 </div>
                                 <div class="form-group">
                                     <label>Password: <span class="required">*</span></label>
 
                                     <#--<input placeholder="" class="form-control" type="password">-->
 
-                                    <input name="password" class="form-control" value="" type="password" placeholder="please input password">
+                                    <input name="password" class="form-control" value="" type="password" placeholder="please input password" style="text-transform: none;">
                                 </div>
                                 <div class="loginbox-forgot">
                                     <a href="">Forgot Password?</a>
@@ -196,12 +192,13 @@
         document.getElementById("login_form").submit();
     }
     <#if loginerror??>
-    <#--$.gDialog.alert("${loginerror}", {-->
-        <#--title: "Login Error",-->
-        <#--animateIn: "bounceIn",-->
-        <#--animateOut: "bounceOut"-->
-    <#--});-->
-    alert("${loginerror}");
+    $.gDialog.alert("${loginerror}", {
+        title: "Login Error",
+        animateIn: "bounceIn",
+        animateOut: "bounceOut"
+    });
+    <#else>
+        //location.href = "/index";
     </#if>
 
 </script>

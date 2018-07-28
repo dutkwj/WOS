@@ -273,4 +273,109 @@ public class ReferenceService {
         }
         return cite;
     }
+
+
+    public List<citationnumber> getCocitationNumberbyId(String id) {
+        List<citationnumber> cite = referenceDao.getCociteNumberbyId(id);
+        List<citationnumber> cited = referenceDao.getCocitedNumberbyId(id);
+        if(cite.size() > 20 && cited.size() > 20){
+            List<citationnumber> citation = new ArrayList<citationnumber>();
+            List<citationnumber> add = new ArrayList<citationnumber>();
+            for(int i = 0; i < 20; i++){
+                citation.add(cite.get(i));
+                add.add(cited.get(i));
+            }
+            for(int i = 0; i < 20; i++){
+                citation.get(i).setName(scholarInfoDao.getScholarById(citation.get(i).getIndex()).getName());
+//            cite.get(i).setName(scholarInfoDao.getScholarById(cite.get(i).getIndex()).getName());
+                for(int j = 0; j < 20; j++) {
+                    if (citation.get(i).getIndex().equals(add.get(j).getIndex())) {
+                        citation.get(i).setCitednumber(add.get(j).getCitednumber());
+                        add.remove(j);
+                    }
+                }
+            }
+            if(!add.isEmpty()){
+                for(int i = 0; i < add.size(); i++) {
+                    add.get(i).setName(scholarInfoDao.getScholarById(add.get(i).getIndex()).getName());
+                    citation.add(add.get(i));
+                }
+            }
+            return citation;
+        }else if(cite.size() > 20){
+            List<citationnumber> citation = new ArrayList<citationnumber>();
+//            List<citationnumber> add = new ArrayList<citationnumber>();
+            for(int i = 0; i < 20; i++){
+                citation.add(cite.get(i));
+//                add.add(cited.get(i));
+            }
+            for(int i = 0; i < 20; i++){
+                citation.get(i).setName(scholarInfoDao.getScholarById(citation.get(i).getIndex()).getName());
+//            cite.get(i).setName(scholarInfoDao.getScholarById(cite.get(i).getIndex()).getName());
+                for(int j = 0; j < cited.size(); j++) {
+                    if (citation.get(i).getIndex().equals(cited.get(j).getIndex())) {
+                        citation.get(i).setCitednumber(cited.get(j).getCitednumber());
+                        cited.remove(j);
+                    }
+                }
+            }
+            if(!cited.isEmpty()){
+                for(int i = 0; i < cited.size(); i++) {
+                    cited.get(i).setName(scholarInfoDao.getScholarById(cited.get(i).getIndex()).getName());
+                    citation.add(cited.get(i));
+                }
+            }
+            return citation;
+        }else if(cited.size() > 20){
+//            List<citationnumber> citation = new ArrayList<citationnumber>();
+            List<citationnumber> add = new ArrayList<citationnumber>();
+            for(int i = 0; i < 20; i++){
+//                citation.add(cite.get(i));
+                add.add(cited.get(i));
+            }
+            for(int i = 0; i < cite.size(); i++){
+                cite.get(i).setName(scholarInfoDao.getScholarById(cite.get(i).getIndex()).getName());
+//            cite.get(i).setName(scholarInfoDao.getScholarById(cite.get(i).getIndex()).getName());
+                for(int j = 0; j < 20; j++) {
+                    if (cite.get(i).getIndex().equals(add.get(j).getIndex())) {
+                        cite.get(i).setCitednumber(add.get(j).getCitednumber());
+                        add.remove(j);
+                    }
+                }
+            }
+            if(!add.isEmpty()){
+                for(int i = 0; i < add.size(); i++) {
+                    add.get(i).setName(scholarInfoDao.getScholarById(add.get(i).getIndex()).getName());
+                    cite.add(add.get(i));
+                }
+            }
+            return cite;
+        }
+//        List<citationnumber> add = new ArrayList<citationnumber>();
+//        for(int i = 0; i < 20; i++){
+////                citation.add(cite.get(i));
+//            add.add(cited.get(i));
+//        }
+        for(int i = 0; i < cite.size(); i++){
+            cite.get(i).setName(scholarInfoDao.getScholarById(cite.get(i).getIndex()).getName());
+//            cite.get(i).setName(scholarInfoDao.getScholarById(cite.get(i).getIndex()).getName());
+            for(int j = 0; j < cited.size(); j++) {
+                if (cite.get(i).getIndex().equals(cited.get(j).getIndex())) {
+                    cite.get(i).setCitednumber(cited.get(j).getCitednumber());
+                    cited.remove(j);
+                }
+            }
+        }
+        if(!cited.isEmpty()){
+            for(int i = 0; i < cited.size(); i++) {
+                cited.get(i).setName(scholarInfoDao.getScholarById(cited.get(i).getIndex()).getName());
+                cite.add(cited.get(i));
+            }
+        }
+        return cite;
+    }
+
+
+
+
 }

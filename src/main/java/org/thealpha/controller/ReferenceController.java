@@ -218,66 +218,119 @@ public class ReferenceController {
         model.addAttribute("refType", "coRef");
 //        return "ref";
 //        return "cooperate";
-        return "relationGraph";
+//        return "relationGraph";
+        return "refrefed_net";
     }
+
+//    @RequestMapping("/coRefJSON/{scholarId}")
+//    @ResponseBody
+//    public Graph getCoRefJSON(@PathVariable String scholarId) {
+//        Scholar middleScholar = scholarInfoDao.getScholarById(scholarId);
+//        List<Scholar> coRefScholars = referenceService.getCoRefAuthorsByAuthorId(scholarId);
+//        List<Node> nodes = new ArrayList<Node>();
+//        List<Link> links = new ArrayList<Link>();
+//        List<String> visitedNodes = new ArrayList<String>();
+//        Node midNode = new Node();
+//        midNode.setId(scholarId);
+//        midNode.setName(middleScholar.getName());
+//        midNode.setSize("50");
+//        midNode.setColor("#FF99CC");
+//        midNode.setQindex(middleScholar.getQindex());
+//        midNode.setHindex(middleScholar.getHindex());
+//        midNode.setAff(middleScholar.getAff());
+//        midNode.setStudyField(middleScholar.getFieldName());
+//        nodes.add(midNode);
+//        visitedNodes.add(scholarId);
+//        int max = 0;
+//
+//        for (Scholar coRefScholar : coRefScholars) {
+//            if (max < coRefScholar.getCoRefNumber()) {
+//                max = coRefScholar.getCoRefNumber();
+//            }
+//            if (visitedNodes.contains(coRefScholar.getIndex())) {
+//                continue;
+//            }
+//            visitedNodes.add(coRefScholar.getIndex());
+//            Node coRefNode = new Node();
+//            coRefNode.setId(coRefScholar.getIndex());
+//            coRefNode.setName(coRefScholar.getName());
+//            coRefNode.setSize(String.valueOf(coRefScholar.getCount()));
+//            if (coRefScholar.getCount() > 10) {
+//                coRefNode.setColor("#CCFF66");
+//            } else {
+//                coRefNode.setColor("#66CCCC");
+//            }
+//            coRefNode.setQindex(coRefScholar.getQindex());
+//            coRefNode.setHindex(coRefScholar.getHindex());
+//            coRefNode.setAff(coRefScholar.getAff());
+//            coRefNode.setStudyField(coRefScholar.getFieldName());
+//            nodes.add(coRefNode);
+//
+//            Link link = new Link();
+//            link.setSource(scholarId);
+//            link.setTarget(coRefScholar.getIndex());
+//            link.setCoCount(1);
+//            links.add(link);
+//        }
+//
+//        System.out.println(max);
+//        Graph graph = new Graph();
+//        graph.setNodes(nodes);
+//        graph.setLinks(links);
+//        return graph;
+//    }
+
 
     @RequestMapping("/coRefJSON/{scholarId}")
     @ResponseBody
     public Graph getCoRefJSON(@PathVariable String scholarId) {
         Scholar middleScholar = scholarInfoDao.getScholarById(scholarId);
-        List<Scholar> coRefScholars = referenceService.getCoRefAuthorsByAuthorId(scholarId);
+        List<citationnumber> refScholars = referenceService.getCocitationNumberbyId(scholarId);
         List<Node> nodes = new ArrayList<Node>();
-        List<Link> links = new ArrayList<Link>();
+//        List<Link> links = new ArrayList<Link>();
         List<String> visitedNodes = new ArrayList<String>();
+
         Node midNode = new Node();
         midNode.setId(scholarId);
         midNode.setName(middleScholar.getName());
-        midNode.setSize("50");
-        midNode.setColor("#FF99CC");
+        midNode.setSize(String.valueOf(middleScholar.getRefNumber()));
+        midNode.setColor(String.valueOf(middleScholar.getRefedNumber()));
         midNode.setQindex(middleScholar.getQindex());
         midNode.setHindex(middleScholar.getHindex());
         midNode.setAff(middleScholar.getAff());
         midNode.setStudyField(middleScholar.getFieldName());
         nodes.add(midNode);
         visitedNodes.add(scholarId);
-        int max = 0;
 
-        for (Scholar coRefScholar : coRefScholars) {
-            if (max < coRefScholar.getCoRefNumber()) {
-                max = coRefScholar.getCoRefNumber();
-            }
-            if (visitedNodes.contains(coRefScholar.getIndex())) {
+        for (citationnumber refScholar : refScholars) {
+            if (visitedNodes.contains(refScholar.getIndex())) {
                 continue;
             }
-            visitedNodes.add(coRefScholar.getIndex());
-            Node coRefNode = new Node();
-            coRefNode.setId(coRefScholar.getIndex());
-            coRefNode.setName(coRefScholar.getName());
-            coRefNode.setSize(String.valueOf(coRefScholar.getCount()));
-            if (coRefScholar.getCount() > 10) {
-                coRefNode.setColor("#CCFF66");
-            } else {
-                coRefNode.setColor("#66CCCC");
+            visitedNodes.add(refScholar.getIndex());
+            Node refNode = new Node();
+            refNode.setId(refScholar.getIndex());
+            refNode.setName(refScholar.getName());
+            if(refScholar.getCitenumber() == null){
+                refNode.setSize("0");
+            }else{
+                refNode.setSize(refScholar.getCitenumber());
             }
-            coRefNode.setQindex(coRefScholar.getQindex());
-            coRefNode.setHindex(coRefScholar.getHindex());
-            coRefNode.setAff(coRefScholar.getAff());
-            coRefNode.setStudyField(coRefScholar.getFieldName());
-            nodes.add(coRefNode);
+            if(refScholar.getCitednumber() == null) {
+                refNode.setColor("0");
+            }else{
+                refNode.setColor(refScholar.getCitednumber());
+            }
+            nodes.add(refNode);
 
-            Link link = new Link();
-            link.setSource(scholarId);
-            link.setTarget(coRefScholar.getIndex());
-            link.setCoCount(1);
-            links.add(link);
+//        }
         }
 
-        System.out.println(max);
         Graph graph = new Graph();
         graph.setNodes(nodes);
-        graph.setLinks(links);
         return graph;
     }
+
+
 
     @RequestMapping("/coRefed/{scholarId}")
     public String coReferencedRelationship(@PathVariable String scholarId, Model model) {

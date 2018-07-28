@@ -1,7 +1,7 @@
 
 //github
 
-function yinyong(zhong){
+function yinyong(zhong,url){
     var optArray = []; //place holder for search names
     var w = document.getElementById("graph").scrollWidth,
         h = document.getElementById("graph").scrollHeight;
@@ -51,8 +51,8 @@ function yinyong(zhong){
 
 
 
-    d3.json(url1,function(graph){
-
+    d3.json(url,function(graph){
+         console.log("graph" + JSON.stringify(graph));
 //d3v3.json("graph.json", function(error, graph) {
         var links=[];
         var centersize=0;

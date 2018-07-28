@@ -31,11 +31,32 @@
 
 
 
-<div id="graph" style="width: 800px;height: 800px;">
+<div id="graph" style="width: 1200px;height: 800px;">
 </div>
 <script src="/js/time_map/ref_refed.js"></script>
 <script>
-    var url1 = '/refJSON/${scholarId!""}';
-    yinyong("${scholarId!""}");
+
+    var URL = '/directCooperateJSON/${scholarId!""}';
+    <#if cooperateType?? && cooperateType=='directCooperate'>
+    URL = '/directCooperateJSON/${scholarId!""}';
+    <#elseif cooperateType?? && cooperateType=='MVC'>
+    URL = '/MVCJSON/${scholarId!""}';
+    <#elseif teamType?? && teamType=='weakTeam'>
+    URL = '/teamJSON/${scholarId!""}/weakTeam';
+    <#elseif teamType?? && teamType=='middleTeam'>
+    URL = '/teamJSON/${scholarId!""}/middleTeam';
+    <#elseif teamType?? && teamType=='strongTeam'>
+    URL = '/teamJSON/${scholarId!""}/strongTeam';
+    <#elseif refType?? && refType=='ref'>
+    URL = '/refJSON/${scholarId!""}';
+    <#elseif refType?? && refType=='refed'>
+    URL = '/refedJSON/${scholarId!""}';
+    <#elseif refType?? && refType=='coRef'>
+    URL = '/coRefJSON/${scholarId!""}';
+    <#elseif refType?? && refType=='coRefed'>
+    URL = '/coRefedJSON/${scholarId!""}';
+    </#if>
+
+    yinyong("${scholarId!""}" ,URL);
 //    alert(url1);
 </script>

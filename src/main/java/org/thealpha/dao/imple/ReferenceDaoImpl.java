@@ -183,4 +183,50 @@ public class ReferenceDaoImpl implements ReferenceDao{
         });
         return result;
     }
+
+
+
+    public List<citationnumber> getCociteNumberbyId(String id) {
+        List<citationnumber> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new
+                RowMapper<List<citationnumber>>() {
+                    public List<citationnumber> mapRow(Result result, int i) throws Exception {
+                        List<citationnumber> citeList = new ArrayList<citationnumber>();
+                        String cite = Bytes.toString(result.getValue(ConfigurationConstant.CF_CITATION.getBytes(), ConfigurationConstant.QF_CO_CITE_NUMBER.getBytes()));
+                        if (cite != null && !"".equals(cite)) {
+                            String[] cites = cite.split(", ");
+                            for (String co : cites) {
+                                citationnumber citen = new citationnumber();
+                                citen.setIndex(co.substring(0, co.indexOf(":")));
+                                citen.setCitenumber(co.substring(co.indexOf(":") + 1, co.length()));
+                                citeList.add(citen);
+//                        System.out.println(citen.getIndex()+":"+citen.getNumber());
+                            }
+                        }
+                        return  citeList;
+                    }
+                });
+        return result;
+    }
+    public List<citationnumber> getCocitedNumberbyId(String id) {
+        List<citationnumber> result = hbaseTemplate.get(ConfigurationConstant.TABLE_CS_RELATIONSHIP, id, new RowMapper<List<citationnumber>>() {
+            public List<citationnumber> mapRow(Result result, int i) throws Exception {
+                List<citationnumber> citedList = new ArrayList<citationnumber>();
+                String cite = Bytes.toString(result.getValue(ConfigurationConstant.CF_CITATION.getBytes(), ConfigurationConstant.QF_CO_CITED_NUMBER.getBytes()));
+                if (cite != null && !"".equals(cite)) {
+                    String[] cites = cite.split(", ");
+                    for (String co : cites) {
+                        citationnumber citen = new citationnumber();
+                        citen.setIndex(co.substring(0, co.indexOf(":")));
+                        citen.setCitednumber(co.substring(co.indexOf(":") + 1, co.length()));
+                        citedList.add(citen);
+//                        System.out.println(citen.getIndex()+":"+citen.getNumber());
+                    }
+                }
+                return  citedList;
+            }
+        });
+        return result;
+    }
+
+
 }

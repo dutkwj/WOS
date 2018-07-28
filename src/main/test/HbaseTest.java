@@ -1086,9 +1086,10 @@ public class HbaseTest {
     @Test // potential排名
     public void setPotentialTest() {
         List<Scholar> scholars = new ArrayList<Scholar>();
-//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential data/potential/hebing1.csv");
-//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential data/potential/hebing2.csv");
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential data/potential/hebing3.csv");
+
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential/hebing1.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential/hebing2.csv");
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential/hebing3.csv");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(csv));
@@ -1201,9 +1202,9 @@ public class HbaseTest {
     @Test // potential growth排名
     public void setPotentialGrowthTest() {
         List<Scholar> scholars = new ArrayList<Scholar>();
-//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_growth/hebinggrowth1(1).csv");
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_growth/hebinggrowth1(1).csv");
 //        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_growth/hebinggrowth2(1).csv");
-        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_growth/hebinggrowth3(1).csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/potential_data/potential_growth/hebinggrowth3(1).csv");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(csv));
@@ -1295,12 +1296,12 @@ public class HbaseTest {
 //        }
 
 
-//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_GROWTH_3YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
-//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_GROWTH_3YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_GROWTH_3YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_GROWTH_3YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
 //        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_GROWTH_5YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
 //        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_GROWTH_5YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
-        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_GROWTH_10YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
-        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_GROWTH_10YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_GROWTH_10YEARS_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_POTENTIAL_GROWTH_10YEARS_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
     }
 
     @Test // potential academic排名
@@ -2093,10 +2094,28 @@ public class HbaseTest {
     }
 
     //    导入学者引用的学者的id+论文数量
+    //errorliyunhao
     @Test
     public void importAuthorRefNumber() {
         HashMap<String, String> citationNumber = new HashMap<String, String>();
-        File csv = new File("/home/zhengwenqing/data/wos_data/citation/cs_author_ref_authors.csv");
+//        File csv = new File("/home/zhengwenqing/data/wos_data/citation/cs_author_ref_authors.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/zhanghuijie/wos_data/引用/cs_author_refed_authors.csv");
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/zhanghuijie/wos_data/引用/cs_author_co_ref_authors.csv");
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/zhanghuijie/wos_data/引用/cs_author_co_refed_authors.csv");
+        //此处更换三个文件名 又csv分别向数据库导入三个不同的数据20180724  2153line
+
+
+//
+//        Connection connection = null;
+//        Configuration conf = HBaseConfiguration.create();
+//        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+//        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+//        try {
+//            connection = ConnectionFactory.createConnection(conf);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(csv));
@@ -2113,7 +2132,7 @@ public class HbaseTest {
                 authorandnumber = authorandnumber.replaceAll("\"\\[", "").replaceAll("\\]\"", "").replaceAll
                         ("\\[", "").replaceAll("\\]", "").replaceAll("\'", "");
 //                String[] authornumber = authorandnumber.split(",");
-                ArrayList<citationnumber> indexnumber = new ArrayList<citationnumber>();
+//                ArrayList<citationnumber> indexnumber = new ArrayList<citationnumber>();
 //                for(int i = 0;i < authornumber.length; i ++){
 ////                    System.out.println(authornumber[i]);
 //                    citationnumber c = new citationnumber();
@@ -2121,8 +2140,9 @@ public class HbaseTest {
 //                    c.setNumber(authornumber[i].split(":")[1]);
 //                    indexnumber.add(c);
 //                }
-
+                System.out.println(count + " "+ authorId);
                 citationNumber.put(authorId, authorandnumber);
+                //deleteQualifier(authorId,connection);
 
             }
             System.out.println(count);
@@ -2143,7 +2163,17 @@ public class HbaseTest {
             String authorId = (String) entry.getKey();
             String citenumber = (String) entry.getValue();
             Put put = new Put(Bytes.toBytes(authorId));
-            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_CITATION), Bytes.toBytes(ConfigurationConstant.QF_CITE_NUMBER), Bytes.toBytes(citenumber));
+
+//            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_CITATION), Bytes.toBytes(ConfigurationConstant.QF_CITE_NUMBER), Bytes.toBytes(citenumber));
+
+//            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_CITATION), Bytes.toBytes(ConfigurationConstant.QF_CITED_NUMBER), Bytes.toBytes(citenumber));
+//
+//            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_CITATION), Bytes.toBytes(ConfigurationConstant.QF_CO_CITE_NUMBER), Bytes.toBytes(citenumber));
+
+              put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_CITATION), Bytes.toBytes(ConfigurationConstant.QF_CO_CITED_NUMBER), Bytes.toBytes(citenumber));
+
+
+
             puts.add(put);
         }
         try {
@@ -2159,7 +2189,8 @@ public class HbaseTest {
     @Test
     public void importAuthorRefedNumber() {
         HashMap<String, String> citationNumber = new HashMap<String, String>();
-        File csv = new File("/home/zhengwenqing/data/wos_data/citation/cs_author_refed_authors.csv");
+//        File csv = new File("/home/zhengwenqing/data/wos_data/citation/cs_author_refed_authors.csv");
+        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/师生关系数据6.4/cs_cooperate.csv");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(csv));
@@ -2167,43 +2198,63 @@ public class HbaseTest {
             e.printStackTrace();
         }
         String line = "";
-        int count = 0;
+        int count = 100;
         try {
-            while ((line = br.readLine()) != null) {
-                count += 1;
+            while ((line = br.readLine()) != null && count>0) {
+                count -= 1;
                 String authorId = line.substring(0, line.indexOf(","));
                 String authorandnumber = line.substring(line.indexOf(",") + 1);
                 authorandnumber = authorandnumber.replaceAll("\"\\[", "").replaceAll("\\]\"", "").replaceAll
                         ("\\[", "").replaceAll("\\]", "").replaceAll("\'", "");
+//                authorandnumber = authorandnumber.replaceAll("\"|\\[|\\]|'|\\{|\\}", "").replaceAll(", \\(","; (").replaceAll("\\(|\\)","");
+//                System.out.println(authorId + ":" + authorandnumber);
+// String[] authornumber = authorandnumber.split(",");
                 ArrayList<citationnumber> indexnumber = new ArrayList<citationnumber>();
                 citationNumber.put(authorId, authorandnumber);
+//                System.out.println(authorId + ":" + authorandnumber);
+                //deleteQualifier(authorId,connection);
             }
             System.out.println(count);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Connection connection = null;
-        Table table = null;
-        Configuration conf = HBaseConfiguration.create();
-        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
-        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
 
-        List<Put> puts = new ArrayList<Put>();
-        for (Map.Entry entry : citationNumber.entrySet()) {
-            String authorId = (String) entry.getKey();
-            String citenumber = (String) entry.getValue();
-            Put put = new Put(Bytes.toBytes(authorId));
-            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_CITATION), Bytes.toBytes(ConfigurationConstant.QF_CITED_NUMBER), Bytes.toBytes(citenumber));
-            puts.add(put);
-        }
-        try {
-            connection = ConnectionFactory.createConnection(conf);
-            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
-            table.put(puts);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        Connection connection = null;
+//        Table table = null;
+//        Configuration conf = HBaseConfiguration.create();
+//        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+//        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+//
+//        List<Put> puts = new ArrayList<Put>();
+//        for (Map.Entry entry : citationNumber.entrySet()) {
+//            String authorId = (String) entry.getKey();
+//            String citenumber = (String) entry.getValue();
+//            Put put = new Put(Bytes.toBytes(authorId));
+//            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_CITATION), Bytes.toBytes(ConfigurationConstant.QF_CITED_NUMBER), Bytes.toBytes(citenumber));
+//            puts.add(put);
+//        }
+//        try {
+//            connection = ConnectionFactory.createConnection(conf);
+//            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+//            table.put(puts);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
+
+
+    public  void deleteQualifier(String id,Connection connection) throws IOException {
+
+        Table table = null;
+
+        table = connection.getTable(TableName.valueOf("cs_relationship"));
+        Delete delete = new Delete(id.getBytes());
+        delete.addColumns("citation".getBytes(), "co_cited_number".getBytes());
+        table.delete(delete);
+
+    }
+
+
 
     @Test
     public void addColumnFamily() throws IOException {
@@ -2224,7 +2275,7 @@ public class HbaseTest {
 
     //导入学生数量时间关系
     @Test
-    public void importStudentNumberYear(){
+    public void importStudentNumberYear() {
         HashMap<String, String> citationNumber = new HashMap<String, String>();
         File csv = new File("/home/zhengwenqing/data/wos_data/student/cs_student_number.csv");
         BufferedReader br = null;
@@ -2240,7 +2291,7 @@ public class HbaseTest {
                 count += 1;
                 String authorId = line.substring(0, line.indexOf(","));
                 String authorandnumber = line.substring(line.indexOf(",") + 3);
-                authorandnumber = authorandnumber.replaceAll("\\[\\['", "").replaceAll("'\\]", "").replaceAll("\\]}\"", "").replaceAll("\'", "").replaceAll("'\\]","").replaceAll("\\],",";");
+                authorandnumber = authorandnumber.replaceAll("\\[\\['", "").replaceAll("'\\]", "").replaceAll("\\]}\"", "").replaceAll("\'", "").replaceAll("'\\]", "").replaceAll("\\],", ";");
 //                System.out.println(authorId+":"+authorandnumber);
                 citationNumber.put(authorId, authorandnumber);
             }
@@ -2270,6 +2321,59 @@ public class HbaseTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
+
+    //导入师生的合作关系
+
+//    @Test
+//    public void importTeaStuCooperate() {
+////        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-servlet.xml");
+////        HbaseTemplate hbaseTemplate = (HbaseTemplate) applicationContext.getBean("hbaseTemplate");
+//        HashMap<String, String> citationNumber = new HashMap<String, String>();
+//        File csv = new File("/home/kangwenjie/PycharmProjects/WOS/MS-DATA/师生关系数据6.4/cs_cooperate.csv");  // CSV文件路径
+//        BufferedReader br = null;
+//        try {
+//            br = new BufferedReader(new FileReader(csv));
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        String line = "";
+//        int count = 0;
+//
+//        try {
+//            while ((line = br.readLine()) != null) {
+//                count += 1;
+//                String authorId = line.substring(0, line.indexOf(","));
+//                String authorandnumber = line.substring(line.indexOf(",") + 3);
+//                authorandnumber = authorandnumber.replaceAll("\\[\\['", "").replaceAll("'\\]", "").replaceAll("\\]}\"", "").replaceAll("\'", "").replaceAll("'\\]","").replaceAll("\\],",";");
+////                System.out.println(authorId+":"+authorandnumber);
+//                citationNumber.put(authorId, authorandnumber);
+//            }
+//            System.out.println(count);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        Connection connection = null;
+//        Table table = null;
+//        Configuration conf = HBaseConfiguration.create();
+//        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+//        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+//
+//        List<Put> puts = new ArrayList<Put>();
+//        for (Map.Entry entry : citationNumber.entrySet()) {
+//            String authorId = (String) entry.getKey();
+//            String citenumber = (String) entry.getValue();
+//            Put put = new Put(Bytes.toBytes(authorId));
+//            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_TEACHER_STUDENT), Bytes.toBytes(ConfigurationConstant
+//                    .QF_CO_), Bytes.toBytes(citenumber));
+//            puts.add(put);
+//        }
+//        try {
+//            connection = ConnectionFactory.createConnection(conf);
+//            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+//            table.put(puts);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }
