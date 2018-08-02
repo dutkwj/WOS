@@ -10,120 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291e2776-134e-423c-b7f9-68e37a8618e2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_rounded/btnNext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_rounded/btnPrevious.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_rounded/contentPattern.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_rounded/default_thumbnail.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_rounded/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_rounded/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_square/btnNext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_square/btnPrevious.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_square/contentPattern.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_square/default_thumbnail.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_square/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/dark_square/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/default/default_thumb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/default/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/default/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/default/sprite_next.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/default/sprite_prev.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/default/sprite_x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/default/sprite_y.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/btnNext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/btnPrevious.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/contentPatternBottom.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/contentPatternLeft.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/contentPatternRight.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/contentPatternTop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/default_thumbnail.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/facebook/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_rounded/btnNext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_rounded/btnPrevious.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_rounded/default_thumbnail.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_rounded/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_rounded/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_square/btnNext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_square/btnPrevious.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_square/default_thumbnail.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_square/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/images/prettyPhoto/light_square/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ReferenceDaoImpl$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ReferenceDaoImpl$5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_rounded/btnNext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_rounded/btnPrevious.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_rounded/contentPattern.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_rounded/default_thumbnail.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_rounded/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_rounded/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_square/btnNext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_square/btnPrevious.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_square/contentPattern.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_square/default_thumbnail.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_square/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/dark_square/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/default/default_thumb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/default/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/default/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/default/sprite_next.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/default/sprite_prev.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/default/sprite_x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/default/sprite_y.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/btnNext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/btnPrevious.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/contentPatternBottom.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/contentPatternLeft.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/contentPatternRight.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/contentPatternTop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/default_thumbnail.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/facebook/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_rounded/btnNext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_rounded/btnPrevious.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_rounded/default_thumbnail.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_rounded/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_rounded/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_square/btnNext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_square/btnPrevious.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_square/default_thumbnail.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_square/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/images/prettyPhoto/light_square/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ReferenceDaoImpl$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ReferenceDaoImpl$5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/css/component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/prettyPhoto/css/prettyPhoto.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/showInfo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/nav.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/registerSuccess_1.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-1.8.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery.backstretch.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery.prettyPhoto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery.tweet.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/megamenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/showInfo-scripts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/stickUp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/css/component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/prettyPhoto/css/prettyPhoto.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/css/showInfo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/ftl/nav.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/ftl/registerSuccess_1.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/jquery-1.8.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/jquery.backstretch.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/jquery.prettyPhoto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/jquery.tweet.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/megamenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/showInfo-scripts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/WOS/js/stickUp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/ReferenceController.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/controller/ReferenceController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ReferenceDao.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/inter/ReferenceDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ReferenceService.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/service/ReferenceService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ConfigurationConstant.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/util/ConfigurationConstant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/controller/ReferenceController.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/controller/ReferenceController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ReferenceDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ReferenceDao.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/inter/ReferenceDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/service/ReferenceService.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/service/ReferenceService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/util/ConfigurationConstant.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/util/ConfigurationConstant.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/WOS/WEB-INF/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/thealpha/dao/imple/ScholarInfoDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$10.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$10.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$11.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$11.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$12.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$12.class" />
@@ -133,42 +21,21 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$16.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$16.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$17.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$17.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$18.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$6.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$7.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$8.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$8.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest$9.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/HbaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/HbaseTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/RedisTest.class" afterPath="$PROJECT_DIR$/target/test-classes/RedisTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/ReferenceController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/ReferenceController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ReferenceDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ReferenceDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ReferenceDao.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ReferenceDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/service/ReferenceService.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/service/ReferenceService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" afterPath="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/HbaseTest.java" afterPath="$PROJECT_DIR$/src/main/test/HbaseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/RedisTest.java" afterPath="$PROJECT_DIR$/src/main/test/RedisTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/login.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/login.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/modifyPsw.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/modifyPsw.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/refrefed_net.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/refrefed_net.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/register.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/register.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/registerSuccess.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/registerSuccess.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/showPersonalInfo.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/showPersonalInfo.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/time_map/ref_refed.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/time_map/ref_refed.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/WOS/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/home.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/home.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/leftNav.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/leftNav.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/login.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/login.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/modifyPsw.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/modifyPsw.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/rankIndex.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/rankIndex.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/refrefed_net.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/refrefed_net.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/register.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/register.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/registerSuccess.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/registerSuccess.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/searchIndex.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/searchIndex.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/ftl/showPersonalInfo.ftl" afterPath="$PROJECT_DIR$/target/WOS/ftl/showPersonalInfo.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WOS/js/time_map/ref_refed.js" afterPath="$PROJECT_DIR$/target/WOS/js/time_map/ref_refed.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -183,156 +50,7 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="modifyPsw.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/modifyPsw.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="62" lean-forward="false" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HbaseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/HbaseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="2329" column="66" lean-forward="true" selection-start-line="2329" selection-start-column="66" selection-end-line="2329" selection-end-column="66" />
-              <folding>
-                <element signature="e#6385#6401#0" expanded="true" />
-                <element signature="e#6791#6807#0" expanded="true" />
-                <element signature="e#10855#10871#0" expanded="true" />
-                <element signature="e#13044#13060#0" expanded="true" />
-                <element signature="e#15715#15731#0" expanded="true" />
-                <element signature="e#17795#17811#0" expanded="true" />
-                <element signature="e#19868#19884#0" expanded="true" />
-                <element signature="e#21921#21937#0" expanded="true" />
-                <element signature="e#25293#25309#0" expanded="true" />
-                <element signature="e#26925#26941#0" expanded="true" />
-                <element signature="e#29233#29249#0" expanded="true" />
-                <element signature="e#32837#32852#0" expanded="true" />
-                <element signature="e#36414#36423#0" expanded="true" />
-                <element signature="e#36576#36585#0" expanded="true" />
-                <element signature="e#37571#37587#0" expanded="true" />
-                <element signature="e#39759#39775#0" expanded="true" />
-                <element signature="e#41806#41822#0" expanded="true" />
-                <element signature="e#44086#44102#0" expanded="true" />
-                <element signature="e#45897#45906#0" expanded="true" />
-                <element signature="e#49109#49118#0" expanded="true" />
-                <element signature="e#49784#49793#0" expanded="true" />
-                <element signature="e#51060#51069#0" expanded="true" />
-                <element signature="e#53837#53846#0" expanded="true" />
-                <element signature="e#54548#54557#0" expanded="true" />
-                <element signature="e#55829#55838#0" expanded="true" />
-                <element signature="e#61128#61137#0" expanded="true" />
-                <element signature="e#61803#61812#0" expanded="true" />
-                <element signature="e#70648#70657#0" expanded="true" />
-                <element signature="e#70716#70725#0" expanded="true" />
-                <element signature="e#71785#71801#0" expanded="true" />
-                <element signature="e#74952#74968#0" expanded="true" />
-                <element signature="e#75020#75036#0" expanded="true" />
-                <element signature="e#75088#75104#0" expanded="true" />
-                <element signature="e#75156#75172#0" expanded="true" />
-                <element signature="e#76577#76593#0" expanded="true" />
-                <element signature="e#78697#78713#0" expanded="true" />
-                <element signature="e#81002#81018#0" expanded="true" />
-                <element signature="e#83157#83173#0" expanded="true" />
-                <element signature="e#85188#85204#0" expanded="true" />
-                <element signature="e#87290#87306#0" expanded="true" />
-                <element signature="e#89420#89436#0" expanded="true" />
-                <element signature="e#91501#91517#0" expanded="true" />
-                <element signature="e#94080#94092#0" expanded="true" />
-                <element signature="e#96340#96356#0" expanded="true" />
-                <element signature="e#100666#100682#0" expanded="true" />
-                <element signature="e#101924#101940#0" expanded="true" />
-                <element signature="e#104584#104600#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.ftl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/login.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1062">
-              <caret line="59" column="38" lean-forward="true" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RedisTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/RedisTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConfigurationConstant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="38" column="86" lean-forward="true" selection-start-line="38" selection-start-column="86" selection-end-line="38" selection-end-column="86" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="leftNav.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1314">
-              <caret line="73" column="24" lean-forward="false" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="refrefed_net.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/refrefed_net.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ref_refed.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/time_map/ref_refed.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-702">
-              <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/index.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="156" column="14" lean-forward="false" selection-start-line="156" selection-start-column="14" selection-end-line="156" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/home.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="155" column="22" lean-forward="true" selection-start-line="155" selection-start-column="22" selection-end-line="157" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -347,36 +65,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>refType</find>
-      <find>CF_CITATION</find>
-      <find>QF_CO_CITE_NUMBER</find>
-      <find>getcitedNumberbyId</find>
-      <find>url1</find>
-      <find>url</find>
-      <find>id</find>
-      <find>800</find>
-      <find>svg</find>
-      <find>width</find>
+      <find>REDIS_POTENTIAL_INEDX_3YEARS_TOP100_SCHOLARS</find>
+      <find>REDIS_POTENTIAL_INEDX_5YEARS_TOP100_SCHOLARS</find>
+      <find>REDIS_POTENTIAL_INEDX_10YEARS_TOP100_SCHOLARS</find>
+      <find>REDIS_POTENTIAL_GROWTH_3YEARS_TOP100_SCHOLARS</find>
+      <find>REDIS_POTENTIAL_GROWTH_5YEARS_TOP100_SCHOLARS</find>
+      <find>i.jpg</find>
+      <find>REDIS_AUTHORID_HINDEX_0_50W</find>
+      <find>REDIS_POTENTIAL_ACA_26_40_10YEARS_BOTTOM100_SCHOLARS</find>
+      <find>REDIS_POTENTIAL_ACA_1_5_3YEARS_TOP100_SCHOLARS</find>
+      <find>redis_cooperate_number_top100_scholars</find>
+      <find>REDIS_COOPERATE_NUMBER_BOTTOM100_SCHOLARS</find>
+      <find>REDIS_HINDEX_0_50W</find>
+      <find>getScholarIdsBySearchItem</find>
+      <find>sort_type</find>
+      <find>REDIS_INDEX_0_50W</find>
+      <find>REDIS_QINDEX_0_50W</find>
+      <find>return</find>
+      <find>50_100W</find>
+      <find>layui-btn</find>
+      <find>minQindex</find>
+      <find>redis</find>
+      <find>potential</find>
+      <find>potential index</find>
+      <find>po</find>
+      <find>sort_item1</find>
+      <find>academicage</find>
+      <find>Advisor-Advise</find>
+      <find>cite</find>
       <find>commonCite</find>
-      <find>d3_selectable_force_directed_graph</find>
-      <find>w</find>
-      <find>zhong</find>
-      <find>name</find>
-      <find>layui-nav</find>
-      <find>menu-links</find>
-      <find>/js/stickUp.min.js</find>
-      <find>jquery</find>
-      <find>=====</find>
-      <find>bootstrap</find>
-      <find>product-showcase-pattern</find>
-      <find>normalize</find>
-      <find>dialog</find>
-      <find>layui</find>
-      <find>gDialog</find>
-      <find>img/ima</find>
-      <find>合作</find>
-      <find>cooperate</find>
-      <find>errorliyunhao</find>
+      <find>poten</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -397,11 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/layui.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/test.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/buttons.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/index.ftl" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/ScholarController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/cooperate_rela.ftl" />
@@ -431,7 +144,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/registerSuccess.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/model/Scholar.java" />
         <option value="$PROJECT_DIR$/src/main/test/RedisTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ReferenceDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ReferenceDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/ReferenceService.java" />
@@ -440,14 +152,20 @@
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/refrefed_net.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/nav.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/register.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/searchIndex.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/showPersonalInfo.ftl" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/modifyPsw.ftl" />
-        <option value="$PROJECT_DIR$/src/main/test/HbaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/ftl/login.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/test/HbaseTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/home.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl" />
       </list>
     </option>
   </component>
@@ -495,10 +213,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="279" />
-    <option name="y" value="87" />
-    <option name="width" value="1221" />
-    <option name="height" value="852" />
+    <option name="x" value="365" />
+    <option name="y" value="88" />
+    <option name="width" value="1241" />
+    <option name="height" value="940" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -518,8 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -544,37 +260,6 @@
               <item name="WOS" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="thealpha" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="thealpha" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -585,44 +270,12 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="ftl" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WOS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="time_map" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -668,14 +321,14 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.tomcat8">
-    <configuration name="HbaseTest.deleteQualifier" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HbaseTest.getHighHindexScholar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="WOS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HbaseTest" />
-      <option name="METHOD_NAME" value="deleteQualifier" />
+      <option name="METHOD_NAME" value="getHighHindexScholar" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -728,14 +381,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="HbaseTest.importTeaStuCooperate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HbaseTest.setAuthorIdQindexRedis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="WOS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HbaseTest" />
-      <option name="METHOD_NAME" value="importTeaStuCooperate" />
+      <option name="METHOD_NAME" value="setAuthorIdQindexRedis" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -748,14 +401,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="HbaseTest.setPotentialTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HbaseTest.setStatisticalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="WOS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HbaseTest" />
-      <option name="METHOD_NAME" value="setPotentialTest" />
+      <option name="METHOD_NAME" value="setStatisticalTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1277,19 +930,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcat8" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.HbaseTest.setPotentialTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.HbaseTest.importAuthorRefNumber" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.HbaseTest.importTeaStuCooperate" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.HbaseTest.importAuthorRefedNumber" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.HbaseTest.deleteQualifier" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.HbaseTest.importAuthorRefNumber" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.HbaseTest.importAuthorRefedNumber" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.HbaseTest.getHighHindexScholar" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.HbaseTest.setStatisticalTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.HbaseTest.setAuthorIdQindexRedis" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.HbaseTest.importAuthorRefedNumber" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.HbaseTest.importAuthorRefNumber" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.HbaseTest.deleteQualifier" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.HbaseTest.importTeaStuCooperate" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.HbaseTest.setPotentialTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.HbaseTest.setAuthorIdQindexRedis" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.HbaseTest.setStatisticalTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.HbaseTest.getHighHindexScholar" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.HbaseTest.importAuthorRefedNumber" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.HbaseTest.importAuthorRefNumber" />
       </list>
     </recent_temporary>
   </component>
@@ -1322,48 +975,48 @@
       <workItem from="1532505684297" duration="43000" />
       <workItem from="1532506187320" duration="22691000" />
       <workItem from="1532662174287" duration="13301000" />
-      <workItem from="1532747947333" duration="757000" />
+      <workItem from="1532747947333" duration="21234000" />
+      <workItem from="1532832010784" duration="13736000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HbaseTest_importAuthorRefNumber - 2018.07.27 at 17h 03m 48s.xml">
-      <configuration name="HbaseTest.importAuthorRefNumber" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setAuthorIdQindexRedis - 2018.07.29 at 10h 05m 07s.xml">
+      <configuration name="HbaseTest.setAuthorIdQindexRedis" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_importAuthorRefNumber - 2018.07.27 at 17h 04m 30s.xml">
-      <configuration name="HbaseTest.importAuthorRefNumber" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setAuthorIdQindexRedis - 2018.07.29 at 15h 11m 14s.xml">
+      <configuration name="HbaseTest.setAuthorIdQindexRedis" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_importAuthorRefNumber - 2018.07.27 at 17h 22m 34s.xml">
-      <configuration name="HbaseTest.importAuthorRefNumber" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.07.28 at 21h 43m 38s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_importAuthorRefNumber - 2018.07.27 at 17h 23m 33s.xml">
-      <configuration name="HbaseTest.importAuthorRefNumber" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.07.28 at 21h 54m 01s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_importAuthorRefNumber - 2018.07.27 at 17h 28m 02s.xml">
-      <configuration name="HbaseTest.importAuthorRefNumber" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.07.28 at 21h 57m 31s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_importAuthorRefNumber - 2018.07.27 at 17h 36m 29s.xml">
-      <configuration name="HbaseTest.importAuthorRefNumber" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.07.28 at 22h 00m 28s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_importAuthorRefNumber - 2018.07.27 at 17h 57m 52s.xml">
-      <configuration name="HbaseTest.importAuthorRefNumber" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.07.28 at 22h 03m 06s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_importAuthorRefNumber - 2018.07.27 at 17h 59m 59s.xml">
-      <configuration name="HbaseTest.importAuthorRefNumber" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.07.28 at 22h 04m 39s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_importAuthorRefedNumber - 2018.07.27 at 18h 08m 01s.xml">
-      <configuration name="HbaseTest.importAuthorRefedNumber" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.07.28 at 22h 07m 24s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HbaseTest_importAuthorRefedNumber - 2018.07.27 at 18h 10m 48s.xml">
-      <configuration name="HbaseTest.importAuthorRefedNumber" configurationId="JUnit" />
+    <history-entry file="HbaseTest_setStatisticalTest - 2018.07.28 at 22h 11m 13s.xml">
+      <configuration name="HbaseTest.setStatisticalTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197856000" />
+    <option name="totallyTimeSpent" value="232069000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1371,22 +1024,22 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22982322" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984003" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984003" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3842239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10135841" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46346554" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49478078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16492693" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2275574" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10125261" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13623828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16492002" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1411,13 +1064,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/test/HbaseTest.java</url>
-          <line>1197</line>
+          <url>file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java</url>
+          <line>50</line>
           <properties />
-          <option name="timeStamp" value="13" />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="14" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1426,150 +1085,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="262" column="221" lean-forward="false" selection-start-line="262" selection-start-column="221" selection-end-line="262" selection-end-column="221" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.9.0/jedis-2.9.0-sources.jar!/redis/clients/jedis/BinaryJedisCluster.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/redis/redis-config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/CooperateRelaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarInfoDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="52" lean-forward="false" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav_1.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarCooperateDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/PaperDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="37" column="17" lean-forward="true" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/RegisterDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-hadoop-hbase/2.4.0.RELEASE/spring-data-hadoop-hbase-2.4.0.RELEASE-sources.jar!/org/springframework/data/hadoop/hbase/HbaseTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="187" column="30" lean-forward="false" selection-start-line="187" selection-start-column="30" selection-end-line="187" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ReferenceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41">
-          <caret line="278" column="48" lean-forward="false" selection-start-line="278" selection-start-column="36" selection-end-line="278" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarCooperateDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/util/HbaseUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/relationGraph.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3100">
-          <caret line="75" column="23" lean-forward="false" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/graph.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-790">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/cooper_net.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="58" column="73" lean-forward="false" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/cooperate.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="112" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/citationnumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/ReferenceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="217" column="44" lean-forward="false" selection-start-line="217" selection-start-column="39" selection-end-line="217" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ReferenceDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ReferenceDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -1679,55 +1194,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="5387" column="0" lean-forward="false" selection-start-line="5387" selection-start-column="0" selection-end-line="5389" selection-end-column="1" />
-          <folding>
-            <element signature="e#6385#6401#0" expanded="true" />
-            <element signature="e#6791#6807#0" expanded="true" />
-            <element signature="e#10855#10871#0" expanded="true" />
-            <element signature="e#13044#13060#0" expanded="true" />
-            <element signature="e#15715#15731#0" expanded="true" />
-            <element signature="e#17795#17811#0" expanded="true" />
-            <element signature="e#19868#19884#0" expanded="true" />
-            <element signature="e#21921#21937#0" expanded="true" />
-            <element signature="e#25293#25309#0" expanded="true" />
-            <element signature="e#26925#26941#0" expanded="true" />
-            <element signature="e#29233#29249#0" expanded="true" />
-            <element signature="e#32837#32852#0" expanded="true" />
-            <element signature="e#36414#36423#0" expanded="true" />
-            <element signature="e#36576#36585#0" expanded="true" />
-            <element signature="e#37571#37587#0" expanded="true" />
-            <element signature="e#39759#39775#0" expanded="true" />
-            <element signature="e#41806#41822#0" expanded="true" />
-            <element signature="e#44086#44102#0" expanded="true" />
-            <element signature="e#45897#45906#0" expanded="true" />
-            <element signature="e#49109#49118#0" expanded="true" />
-            <element signature="e#49784#49793#0" expanded="true" />
-            <element signature="e#51060#51069#0" expanded="true" />
-            <element signature="e#53837#53846#0" expanded="true" />
-            <element signature="e#54548#54557#0" expanded="true" />
-            <element signature="e#55829#55838#0" expanded="true" />
-            <element signature="e#61128#61137#0" expanded="true" />
-            <element signature="e#61803#61812#0" expanded="true" />
-            <element signature="e#70648#70657#0" expanded="true" />
-            <element signature="e#70716#70725#0" expanded="true" />
-            <element signature="e#71785#71801#0" expanded="true" />
-            <element signature="e#74952#74968#0" expanded="true" />
-            <element signature="e#75020#75036#0" expanded="true" />
-            <element signature="e#75088#75104#0" expanded="true" />
-            <element signature="e#75156#75172#0" expanded="true" />
-            <element signature="e#76577#76593#0" expanded="true" />
-            <element signature="e#78697#78713#0" expanded="true" />
-            <element signature="e#81002#81018#0" expanded="true" />
-            <element signature="e#83157#83173#0" expanded="true" />
-            <element signature="e#85188#85204#0" expanded="true" />
-            <element signature="e#87290#87306#0" expanded="true" />
-            <element signature="e#89420#89436#0" expanded="true" />
-            <element signature="e#91501#91517#0" expanded="true" />
-            <element signature="e#94080#94092#0" expanded="true" />
-            <element signature="e#96340#96356#0" expanded="true" />
-            <element signature="e#100666#100682#0" expanded="true" />
-            <element signature="e#101924#101940#0" expanded="true" />
-            <element signature="e#104584#104600#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1743,14 +1210,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="95" column="16" lean-forward="false" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1777,26 +1236,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1314">
-          <caret line="73" column="24" lean-forward="false" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/modifyPsw.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="62" lean-forward="false" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/RedisTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1817,75 +1260,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/HbaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="2329" column="66" lean-forward="true" selection-start-line="2329" selection-start-column="66" selection-end-line="2329" selection-end-column="66" />
-          <folding>
-            <element signature="e#6385#6401#0" expanded="true" />
-            <element signature="e#6791#6807#0" expanded="true" />
-            <element signature="e#10855#10871#0" expanded="true" />
-            <element signature="e#13044#13060#0" expanded="true" />
-            <element signature="e#15715#15731#0" expanded="true" />
-            <element signature="e#17795#17811#0" expanded="true" />
-            <element signature="e#19868#19884#0" expanded="true" />
-            <element signature="e#21921#21937#0" expanded="true" />
-            <element signature="e#25293#25309#0" expanded="true" />
-            <element signature="e#26925#26941#0" expanded="true" />
-            <element signature="e#29233#29249#0" expanded="true" />
-            <element signature="e#32837#32852#0" expanded="true" />
-            <element signature="e#36414#36423#0" expanded="true" />
-            <element signature="e#36576#36585#0" expanded="true" />
-            <element signature="e#37571#37587#0" expanded="true" />
-            <element signature="e#39759#39775#0" expanded="true" />
-            <element signature="e#41806#41822#0" expanded="true" />
-            <element signature="e#44086#44102#0" expanded="true" />
-            <element signature="e#45897#45906#0" expanded="true" />
-            <element signature="e#49109#49118#0" expanded="true" />
-            <element signature="e#49784#49793#0" expanded="true" />
-            <element signature="e#51060#51069#0" expanded="true" />
-            <element signature="e#53837#53846#0" expanded="true" />
-            <element signature="e#54548#54557#0" expanded="true" />
-            <element signature="e#55829#55838#0" expanded="true" />
-            <element signature="e#61128#61137#0" expanded="true" />
-            <element signature="e#61803#61812#0" expanded="true" />
-            <element signature="e#70648#70657#0" expanded="true" />
-            <element signature="e#70716#70725#0" expanded="true" />
-            <element signature="e#71785#71801#0" expanded="true" />
-            <element signature="e#74952#74968#0" expanded="true" />
-            <element signature="e#75020#75036#0" expanded="true" />
-            <element signature="e#75088#75104#0" expanded="true" />
-            <element signature="e#75156#75172#0" expanded="true" />
-            <element signature="e#76577#76593#0" expanded="true" />
-            <element signature="e#78697#78713#0" expanded="true" />
-            <element signature="e#81002#81018#0" expanded="true" />
-            <element signature="e#83157#83173#0" expanded="true" />
-            <element signature="e#85188#85204#0" expanded="true" />
-            <element signature="e#87290#87306#0" expanded="true" />
-            <element signature="e#89420#89436#0" expanded="true" />
-            <element signature="e#91501#91517#0" expanded="true" />
-            <element signature="e#94080#94092#0" expanded="true" />
-            <element signature="e#96340#96356#0" expanded="true" />
-            <element signature="e#100666#100682#0" expanded="true" />
-            <element signature="e#101924#101940#0" expanded="true" />
-            <element signature="e#104584#104600#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="38" column="86" lean-forward="true" selection-start-line="38" selection-start-column="86" selection-end-line="38" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/time_map/ref_refed.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-702">
           <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1897,18 +1275,234 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/home.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/LoginOutController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="155" column="22" lean-forward="true" selection-start-line="155" selection-start-column="22" selection-end-line="157" selection-end-column="6" />
+        <state relative-caret-position="304">
+          <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/util/ListTranscoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/RankService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="26" column="58" lean-forward="false" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/login.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
+        <state relative-caret-position="-1966">
           <caret line="59" column="38" lean-forward="true" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hbase/hbase-client/1.0.0/hbase-client-1.0.0.jar!/org/apache/hadoop/hbase/filter/CompareFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="109" column="8" lean-forward="false" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/inter/ScholarInfoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/jedis/JedisCluster.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="350" column="24" lean-forward="false" selection-start-line="350" selection-start-column="24" selection-end-line="350" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/RedisTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/SearchItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchMore.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="84" column="50" lean-forward="false" selection-start-line="84" selection-start-column="50" selection-end-line="84" selection-end-column="50" />
+          <folding>
+            <marker date="1525309835632" expanded="true" signature="11281:11331" ph="..." />
+            <marker date="1525309835632" expanded="true" signature="11411:11451" ph="..." />
+            <marker date="1525309835632" expanded="true" signature="11783:11793" ph="..." />
+            <marker date="1525309835632" expanded="true" signature="12198:12219" ph="..." />
+            <marker date="1525309835632" expanded="true" signature="12653:12659" ph="&amp;nbsp;" />
+            <marker date="1525309835632" expanded="true" signature="12821:12827" ph="&amp;nbsp;" />
+            <marker date="1525309835632" expanded="true" signature="16799:16849" ph="..." />
+            <marker date="1525309835632" expanded="true" signature="16937:16977" ph="..." />
+            <marker date="1525309835632" expanded="true" signature="17321:17331" ph="..." />
+            <marker date="1525309835632" expanded="true" signature="17740:17761" ph="..." />
+            <marker date="1525309835632" expanded="true" signature="18195:18201" ph="&amp;nbsp;" />
+            <marker date="1525309835632" expanded="true" signature="18359:18365" ph="&amp;nbsp;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/searchResult.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1531394110354" expanded="true" signature="4022:4043" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/util/ConfigurationConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar!/org/apache/commons/collections/CollectionUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/service/ScholarInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/model/Scholar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540">
+          <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/rankIndex_1.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="162" column="55" lean-forward="true" selection-start-line="162" selection-start-column="55" selection-end-line="162" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/rankIndex.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="108" column="66" lean-forward="false" selection-start-line="108" selection-start-column="52" selection-end-line="108" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/scholarRank.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="126" column="79" lean-forward="false" selection-start-line="126" selection-start-column="78" selection-end-line="126" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/home.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="188" column="61" lean-forward="false" selection-start-line="188" selection-start-column="57" selection-end-line="188" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ftl/leftNav.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-94">
+          <caret line="167" column="97" lean-forward="true" selection-start-line="167" selection-start-column="97" selection-end-line="167" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/HbaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="1092" column="105" lean-forward="true" selection-start-line="1092" selection-start-column="105" selection-end-line="1092" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/dao/imple/ScholarInfoDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="563" column="0" lean-forward="false" selection-start-line="563" selection-start-column="0" selection-end-line="563" selection-end-column="0" />
+          <folding>
+            <element signature="e#1404#1412#0" expanded="true" />
+            <element signature="e#2335#2343#0" expanded="true" />
+            <element signature="e#3937#3946#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/SearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/util/HbaseUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/thealpha/controller/StatisticalRankingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="216" column="21" lean-forward="true" selection-start-line="216" selection-start-column="21" selection-end-line="216" selection-end-column="21" />
           <folding />
         </state>
       </provider>

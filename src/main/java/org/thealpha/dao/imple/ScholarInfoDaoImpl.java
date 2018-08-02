@@ -378,7 +378,8 @@ public class ScholarInfoDaoImpl implements ScholarInfoDao{
                         continue;
                     }
                     for (String authorId : authorIdList) {
-                        double sQindex = Double.parseDouble(jedisCluster.hmget(ConfigurationConstant.REDIS_AUTHORID_QINDEX_150_200W, authorId).get(0));
+                        double sQindex = Double.parseDouble(jedisCluster.hmget(ConfigurationConstant
+                                .REDIS_AUTHORID_QINDEX_150_200W, authorId).get(0));//获取hash中的值
                         if (lowQindex > sQindex) {
                             break;
                         }

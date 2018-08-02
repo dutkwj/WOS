@@ -49,6 +49,7 @@ public class SearchController {
     @RequestMapping("/content")
     public String getContentBySearchItems(Model model, SearchItem searchItem) {
         List<Scholar> searchScholars = null;
+        System.out.println(searchItem.getMinQindex()+","+searchItem.getMaxQindex());
         try {
             searchScholars = scholarInfoService.getScholarsBySearchItems(searchItem);
         } catch (IOException e) {

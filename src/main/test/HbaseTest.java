@@ -849,7 +849,7 @@ public class HbaseTest {
                     return -1;
                 }
                 if (o1.getHindex() < o2.getHindex()) {
-                    return 1;
+                    return 1;//返回值为1两个值需要交换
                 }
                 return 0;
             }
@@ -861,6 +861,7 @@ public class HbaseTest {
         List<Scholar> top100Scholars = new ArrayList<Scholar>();
         for (int i = 0; i < 100; i++) {
             top100Scholars.add(scholars.get(i));
+            System.out.println(scholars.get(i).getHindex());
         }
         jedisCluster.set(ConfigurationConstant.REDIS_HINDEX_TOP10_SCHOLARS.getBytes(), ListTranscoder.serialize(top10Scholars));
         jedisCluster.set(ConfigurationConstant.REDIS_HINDEX_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
@@ -1479,7 +1480,13 @@ public class HbaseTest {
                 String hindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_H_INDEX)));
                 String qindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_Q_INDEX)));
                 String fieldName = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_FIELD_NAME)));
-                String cooperateNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_COOPERATE_NUMBER)));
+//                String cooperateNumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_COOPERATE_NUMBER)));
+//                String coteamnumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_TEAM_NUMBER)));
+//                String studentnumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_STUDENTS_NUMBER)));
+//                String refnumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_REF_NUMBER)));
+                String refednumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_REFED_NUMBER)));
+//                String corefnumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REF_NUMBER)));
+//                String corefednumber = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_CO_REFED_NUMBER)));
 
                 if (StringUtils.isNotBlank(latlng)) {
                     scholar.setLatlng(latlng);
@@ -1496,19 +1503,37 @@ public class HbaseTest {
                 if (StringUtils.isNotBlank(fieldName)) {
                     scholar.setFieldName(fieldName);
                 }
-                if (StringUtils.isNotBlank(cooperateNumber)) {
-                    scholar.setCooperateNumber(Integer.parseInt(cooperateNumber));
+//                if (StringUtils.isNotBlank(cooperateNumber)) {
+//                    scholar.setCooperateNumber(Integer.parseInt(cooperateNumber));
+//                }
+//                if (StringUtils.isNotBlank(coteamnumber)) {
+//                    scholar.setCoTeamNumber(Integer.parseInt(coteamnumber));
+//                }
+//                if (StringUtils.isNotBlank(studentnumber)) {
+//                    scholar.setStudentsNumber(Integer.parseInt(studentnumber));
+//                }
+//                if (StringUtils.isNotBlank(refnumber)) {
+//                    scholar.setRefNumber(Integer.parseInt(refnumber));
+//                }
+                if (StringUtils.isNotBlank(refednumber)) {
+                    scholar.setRefedNumber(Integer.parseInt(refednumber));
                 }
+//                if (StringUtils.isNotBlank(corefnumber)) {
+//                    scholar.setCoRefNumber(Integer.parseInt(corefnumber));
+//                }
+//                if (StringUtils.isNotBlank(corefednumber)) {
+//                    scholar.setCoRefedNumber(Integer.parseInt(corefednumber));
+//                }
                 return scholar;
             }
         });
         System.out.println(scholars.size());
         Collections.sort(scholars, new Comparator<Scholar>() {
             public int compare(Scholar o1, Scholar o2) {
-                if (o1.getCooperateNumber() > o2.getCooperateNumber()) {
+                if (o1.getRefedNumber() > o2.getRefedNumber()) {
                     return 1;
                 }
-                if (o1.getCooperateNumber() < o2.getCooperateNumber()) {
+                if (o1.getRefedNumber() < o2.getRefedNumber()) {
                     return -1;
                 }
                 return 0;
@@ -1523,8 +1548,20 @@ public class HbaseTest {
         for (int i = scholars.size() - 1; i >= scholars.size() - 101; i--) {
             top100Scholars.add(scholars.get(i));
         }
-        jedisCluster.set(ConfigurationConstant.REDIS_COOPERATE_NUMBER_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
-        jedisCluster.set(ConfigurationConstant.REDIS_COOPERATE_NUMBER_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_COOPERATE_NUMBER_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_COOPERATE_NUMBER_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_CO_TEAM_NUMBER_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_CO_TEAM_NUMBER_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_STUDENTS_NUMBER_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_STUDENTS_NUMBER_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_REF_NUMBER_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_REF_NUMBER_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_REFED_NUMBER_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+        jedisCluster.set(ConfigurationConstant.REDIS_REFED_NUMBER_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_CO_REF_NUMBER_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_CO_REF_NUMBER_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_CO_REFED_NUMBER_BOTTOM100_SCHOLARS.getBytes(), ListTranscoder.serialize(bottom100Scholars));
+//        jedisCluster.set(ConfigurationConstant.REDIS_CO_REFED_NUMBER_TOP100_SCHOLARS.getBytes(), ListTranscoder.serialize(top100Scholars));
     }
 
     @Test
@@ -1586,7 +1623,7 @@ public class HbaseTest {
 
     //    设置缓存中的学者H因子和潜力指数
     @Test
-    public void setAuthorIdQindexRedis() {
+    public void setAuthorIdHindexRedis() {
         List<Scholar> scholars = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
             public Scholar mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
                 Scholar scholar = new Scholar();
@@ -1635,6 +1672,59 @@ public class HbaseTest {
         jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_50_100W, m2);
         jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_100_150W, m3);
         jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_150_200W, m4);
+
+    }
+    //    设置缓存中的学者Q因子
+    @Test
+    public void setAuthorIdQindexRedis() {
+        List<Scholar> scholars = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
+            public Scholar mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
+                Scholar scholar = new Scholar();
+                scholar.setIndex(Bytes.toString(result.getRow()));
+                String qindex = Bytes.toString(result.getValue(Bytes.toBytes(ConfigurationConstant.CF_PERSONAL_INFO), Bytes.toBytes(ConfigurationConstant.QF_Q_INDEX)));
+                if (StringUtils.isNotBlank(qindex)) {
+                    scholar.setQindex(Double.parseDouble(qindex));
+                }
+                return scholar;
+            }
+        });
+
+        Collections.sort(scholars, new Comparator<Scholar>() {
+            public int compare(Scholar o1, Scholar o2) {
+                if (o1.getQindex() > o2.getQindex()) {
+                    return -1;
+                }
+                if (o1.getQindex() < o2.getQindex()) {
+                    return 1;
+                }
+                return 0;
+            }
+        });
+        int count = 0;
+        HashMap<String, String> m1 = new HashMap<String, String>();
+        HashMap<String, String> m2 = new HashMap<String, String>();
+        HashMap<String, String> m3 = new HashMap<String, String>();
+        HashMap<String, String> m4 = new HashMap<String, String>();
+        for (Scholar scholar : scholars) {
+            if (count <= 500000) {
+                jedisCluster.rpush(ConfigurationConstant.REDIS_QINDEX_0_50W, scholar.getIndex());
+                m1.put(scholar.getIndex(), String.valueOf(scholar.getQindex()));
+            } else if (count <= 1000000) {
+                jedisCluster.rpush(ConfigurationConstant.REDIS_QINDEX_50_100W, scholar.getIndex());
+                m2.put(scholar.getIndex(), String.valueOf(scholar.getQindex()));
+            } else if (count <= 1500000) {
+                jedisCluster.rpush(ConfigurationConstant.REDIS_QINDEX_100_150W, scholar.getIndex());
+                m3.put(scholar.getIndex(), String.valueOf(scholar.getQindex()));
+            } else {
+                jedisCluster.rpush(ConfigurationConstant.REDIS_QINDEX_150_200W, scholar.getIndex());
+                m4.put(scholar.getIndex(), String.valueOf(scholar.getQindex()));
+            }
+            count += 1;
+        }
+        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_QINDEX_0_50W, m1);
+        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_QINDEX_50_100W, m2);
+        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_QINDEX_100_150W, m3);
+        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_QINDEX_150_200W, m4);
 
     }
 

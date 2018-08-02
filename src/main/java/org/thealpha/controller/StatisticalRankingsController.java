@@ -238,10 +238,12 @@ public class StatisticalRankingsController {
         } else {
             model.addAttribute("scholars", scholars);
         }
+//        System.out.println(type);
         char[] caType = type.toCharArray();
         caType[0] -= 32;
         type = String.valueOf(caType);
         model.addAttribute("type", type);
+
         return "scholarRank";
     }
 }

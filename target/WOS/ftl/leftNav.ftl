@@ -153,14 +153,14 @@
                                             <#--<li id="weak-team-li"><a id="weakTeam">weak team</a></li>-->
                                         <#--</ul>-->
                                     <#--</li>-->
-                                    <li>
+                                    <li id="advise">
                                         <div class="links" id="tea_main">Advisor-advise<i class="fa
                                         fa-chevron-down"></i></div>
-                                        <ul class="submenu">
-                                            <li><a id="tree">Genealogy relationship</a></li>
-                                            <li><a id="graph">Cooperation relationship</a></li>
-                                            <li><a id="reference">Reference relationship</a></li>
-                                            <li><a id="evalue">Evaluation and comparison</a></li>
+                                        <ul class="submenu" id="advise-ul">
+                                            <li id="tree-advise-li"><a id="tree">Genealogy relationship</a></li>
+                                            <li><a id="graph-advise-li">Cooperation relationship</a></li>
+                                            <li><a id="reference-advise-li">Reference relationship</a></li>
+                                            <li><a id="evalue-advise-li">Evaluation and comparison</a></li>
                                             <li><a id="student_number_year">Student_number_year</a></li>
                                         </ul>
                                     </li>
@@ -353,6 +353,17 @@
             $.ajax({
                 type:"POST",
                 url:'/team/${scholarId!""}/strongTeam',
+                success:function (data) {
+                    $("#bigContainer").html(data);
+                }
+            });
+        } else if("${type}" == "Tree"){
+            $("#advise").addClass("open");
+            $("#advise-ul").css("display", "block");
+            $("#tree-advise-li").addClass("current");
+            $.ajax({
+                type:"POST",
+                url:'/Advisor-advisee/${scholarId!""}/tree',
                 success:function (data) {
                     $("#bigContainer").html(data);
                 }

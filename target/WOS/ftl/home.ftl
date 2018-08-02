@@ -186,6 +186,7 @@
                     </div>
                     </a>
                     <div class="col-md-4 col-sm-6 col-xs-12">
+                        <a href="/relationGraph/0CAEADF8/Tree">
                         <div class="category-section-3-box">
                             <div class="category-section-3-box-inner"> <i class="fa fa-graduation-cap"></i>
                                 <h4> advisor-advise</h4>
@@ -197,8 +198,10 @@
                                  <p><a href=""> See All </a></p>
                              </div> -->
                         </div>
+                        </a>
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
+                        <a href="/relationGraph/0CAEADF8/directCite">
                         <div class="category-section-3-box">
                             <div class="category-section-3-box-inner"> <i class="fa fa-pencil"></i>
                                 <h4> Citation </h4>
@@ -210,6 +213,7 @@
                                  <p><a href=""> See All </a></p>
                              </div> -->
                         </div>
+                        </a>
                     </div>
 
                 </div>

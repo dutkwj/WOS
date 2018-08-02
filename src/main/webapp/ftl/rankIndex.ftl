@@ -473,13 +473,14 @@
             var form = layui.form;
             form.on('select(sort_item1)', function (data) {
                 var categoryName = data.value;
+//                alert(categoryName);
 //                var categoryName = data.elem[data.elem.selectedIndex].text;
 //                console.log(category);
-                console.log(categoryName);
+//                console.log(categoryName);
 //                form.render('select');
 
                 if ((categoryName == 'potential index')||(categoryName == 'potential index by growthrate')){
-                    console.log("1");
+//                    console.log("1");
 //                    $('#period_label').removeClass('layui-hide');
 //                    $('#period_select').removeClass('layui-hide');
                     $('#part_3').css('display','block');
@@ -491,14 +492,14 @@
                     $('#academicage_div').css('display','none');
                     form.render();
                 } else if(categoryName == 'potential index by academicage'){
-                    console.log("2");
+//                    console.log("2");
                     $('#part_3').css('display','none');
                     $('#part_2').css('display','block');
                     $('#academicage_div').css('display','block');
                     $('#academicage_div').css('display','block');
                     form.render();
                 } else {
-                    console.log("3");
+//                    console.log("3");
                     $('#part_3').css('display','block');
                     $('#part_2').css('display','none');
                     $('#period').css('display','none');

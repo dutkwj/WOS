@@ -4,7 +4,7 @@ package org.thealpha.util;
  * Created by kangwenjie on 17-12-14.
  */
 public class ConfigurationConstant {
-//    cs_scholar, personal_info:(name, aff, lat_lng, h_index, field_name, cooperate_number, co_team_number, students_number, ref_number, refed_number, co_ref_number, co_refed_number), papers:(paper_ids, paper_number)
+//    cs_scholar, personal_info:(name, aff, lat_lng, h_index, q_index, field_name, cooperate_number, co_team_number, students_number, ref_number, refed_number, co_ref_number, co_refed_number), papers:(paper_ids, paper_number)
     public static final String TABLE_CS_SCHOLAR = "cs_scholar";
     public static final String CF_PERSONAL_INFO = "personal_info";
     public static final String CF_PAPERS = "papers";
@@ -108,7 +108,8 @@ public class ConfigurationConstant {
     public static final String REDIS_POTENTIAL_GROWTH_3YEARS_TOP100_SCHOLARS = "redis_potential_growth_3years_top100_scholars";
     public static final String REDIS_POTENTIAL_GROWTH_5YEARS_TOP100_SCHOLARS = "redis_potential_growth_5years_top100_scholars";
     public static final String REDIS_POTENTIAL_GROWTH_10YEARS_TOP100_SCHOLARS = "redis_potential_growth_10years_top100_scholars";
-    public static final String REDIS_POTENTIAL_ACA_1_5_3YEARS_TOP100_SCHOLARS = "redis_potential_aca_1_5_3years_top100_scholars";
+    public static final String REDIS_POTENTIAL_ACA_1_5_3YEARS_TOP100_SCHOLARS =
+            "redis_potential_aca_1_5_3years_top100_scholars";//
     public static final String REDIS_POTENTIAL_ACA_6_15_3YEARS_TOP100_SCHOLARS = "redis_potential_aca_6_15_3years_top100_scholars";
     public static final String REDIS_POTENTIAL_ACA_16_25_3YEARS_TOP100_SCHOLARS = "redis_potential_aca_16_25_3years_top100_scholars";
     public static final String REDIS_POTENTIAL_ACA_26_40_3YEARS_TOP100_SCHOLARS = "redis_potential_aca_26_40_3years_top100_scholars";
@@ -140,7 +141,8 @@ public class ConfigurationConstant {
     public static final String REDIS_POTENTIAL_GROWTH_3YEARS_BOTTOM100_SCHOLARS = "redis_potential_growth_3years_bottom100_scholars";
     public static final String REDIS_POTENTIAL_GROWTH_5YEARS_BOTTOM100_SCHOLARS = "redis_potential_growth_5years_bottom100_scholars";
     public static final String REDIS_POTENTIAL_GROWTH_10YEARS_BOTTOM100_SCHOLARS = "redis_potential_growth_10years_bottom100_scholars";
-    public static final String REDIS_POTENTIAL_ACA_1_5_3YEARS_BOTTOM100_SCHOLARS = "redis_potential_aca_1_5_3years_bottom100_scholars";
+    public static final String REDIS_POTENTIAL_ACA_1_5_3YEARS_BOTTOM100_SCHOLARS =
+            "redis_potential_aca_1_5_3years_bottom100_scholars";//
     public static final String REDIS_POTENTIAL_ACA_6_15_3YEARS_BOTTOM100_SCHOLARS = "redis_potential_aca_6_15_3years_bottom100_scholars";
     public static final String REDIS_POTENTIAL_ACA_16_25_3YEARS_BOTTOM100_SCHOLARS = "redis_potential_aca_16_25_3years_bottom100_scholars";
     public static final String REDIS_POTENTIAL_ACA_26_40_3YEARS_BOTTOM100_SCHOLARS = "redis_potential_aca_26_40_3years_bottom100_scholars";
