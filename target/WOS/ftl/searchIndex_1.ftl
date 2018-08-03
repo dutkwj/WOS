@@ -239,7 +239,11 @@
     $('#site-landing').polygonizr();
 
 </script>
+<!--jquery.cookie.js-->
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
 
+
+<script type="text/javascript" src="/js/wosCookie.js"></script>
 
 
 </body>

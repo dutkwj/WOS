@@ -52,8 +52,12 @@ function yinyong(zhong,url){
 
 
     d3.json(url,function(graph){
-         console.log("graph" + JSON.stringify(graph));
+         //console.log("graph" + JSON.stringify(graph));
 //d3v3.json("graph.json", function(error, graph) {
+
+        //去掉右侧选择框的等待遮罩
+        $("#waitChoose").hide();
+
         var links=[];
         var centersize=0;
         var centercolor=0;
@@ -379,6 +383,7 @@ function yinyong(zhong,url){
 
             h = height;
         }
+
 
     });
 

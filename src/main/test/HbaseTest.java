@@ -1623,6 +1623,7 @@ public class HbaseTest {
 
     //    设置缓存中的学者H因子和潜力指数
     @Test
+
     public void setAuthorIdHindexRedis() {
         List<Scholar> scholars = hbaseTemplate.find(ConfigurationConstant.TABLE_CS_SCHOLAR, new Scan(), new RowMapper<Scholar>() {
             public Scholar mapRow(org.apache.hadoop.hbase.client.Result result, int rowNum) throws Exception {
@@ -1654,24 +1655,29 @@ public class HbaseTest {
         HashMap<String, String> m4 = new HashMap<String, String>();
         for (Scholar scholar : scholars) {
             if (count <= 500000) {
-                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_0_50W, scholar.getIndex());
+//                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_0_50W, scholar.getIndex());
                 m1.put(scholar.getIndex(), String.valueOf(scholar.getHindex()));
+//                System.out.print(m1);
             } else if (count <= 1000000) {
-                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_50_100W, scholar.getIndex());
+//                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_50_100W, scholar.getIndex());
                 m2.put(scholar.getIndex(), String.valueOf(scholar.getHindex()));
+//                System.out.print(m2);
             } else if (count <= 1500000) {
-                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_100_150W, scholar.getIndex());
+//                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_100_150W, scholar.getIndex());
                 m3.put(scholar.getIndex(), String.valueOf(scholar.getHindex()));
+//                System.out.print(m3);
             } else {
-                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_150_200W, scholar.getIndex());
+//                jedisCluster.rpush(ConfigurationConstant.REDIS_HINDEX_150_200W, scholar.getIndex());
                 m4.put(scholar.getIndex(), String.valueOf(scholar.getHindex()));
+//                System.out.print(m4);
             }
             count += 1;
         }
+        System.out.print("m1 "+count);
         jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_0_50W, m1);
-        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_50_100W, m2);
-        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_100_150W, m3);
-        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_150_200W, m4);
+//        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_50_100W, m2);
+//        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_100_150W, m3);
+//        jedisCluster.hmset(ConfigurationConstant.REDIS_AUTHORID_HINDEX_150_200W, m4);
 
     }
     //    设置缓存中的学者Q因子
@@ -2288,10 +2294,10 @@ public class HbaseTest {
             e.printStackTrace();
         }
         String line = "";
-        int count = 100;
+        int count = 0;
         try {
-            while ((line = br.readLine()) != null && count>0) {
-                count -= 1;
+            while ((line = br.readLine()) != null) {
+                count += 1;
                 String authorId = line.substring(0, line.indexOf(","));
                 String authorandnumber = line.substring(line.indexOf(",") + 1);
                 authorandnumber = authorandnumber.replaceAll("\"\\[", "").replaceAll("\\]\"", "").replaceAll
@@ -2309,30 +2315,31 @@ public class HbaseTest {
             e.printStackTrace();
         }
 
-//        Connection connection = null;
-//        Table table = null;
-//        Configuration conf = HBaseConfiguration.create();
-//        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
-//        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
-//
-//        List<Put> puts = new ArrayList<Put>();
-//        for (Map.Entry entry : citationNumber.entrySet()) {
-//            String authorId = (String) entry.getKey();
-//            String citenumber = (String) entry.getValue();
-//            Put put = new Put(Bytes.toBytes(authorId));
-//            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_CITATION), Bytes.toBytes(ConfigurationConstant.QF_CITED_NUMBER), Bytes.toBytes(citenumber));
-//            puts.add(put);
-//        }
-//        try {
-//            connection = ConnectionFactory.createConnection(conf);
-//            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
-//            table.put(puts);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+
+        Connection connection = null;
+        Table table = null;
+        Configuration conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", ConfigurationConstant.ZK_QUORUM);
+        conf.set("hbase.zookeeper.property.clientPort", ConfigurationConstant.ZK_CLIENT_PORT);
+
+        List<Put> puts = new ArrayList<Put>();
+        for (Map.Entry entry : citationNumber.entrySet()) {
+            String authorId = (String) entry.getKey();
+            String citenumber = (String) entry.getValue();
+            Put put = new Put(Bytes.toBytes(authorId));
+            put.addColumn(Bytes.toBytes(ConfigurationConstant.CF_TEACHER_STUDENT), Bytes.toBytes(ConfigurationConstant.QF_CO_TEACHER_STUDENT), Bytes.toBytes(citenumber));
+            puts.add(put);
+        }
+        try {
+            connection = ConnectionFactory.createConnection(conf);
+            table = connection.getTable(TableName.valueOf(ConfigurationConstant.TABLE_CS_RELATIONSHIP));
+            table.put(puts);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-
+    //删除的函数,用来删除具体的某一列,每次传入一个id
     public  void deleteQualifier(String id,Connection connection) throws IOException {
 
         Table table = null;

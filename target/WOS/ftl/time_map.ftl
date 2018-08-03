@@ -8,14 +8,63 @@
     <script src="/js/time_map/echarts.min.js"></script>
     <script src="/js/time_map/walden.js"></script>
     <script type="text/javascript" src="/js/time_map/d3-ForceEdgeBundling.js"></script>
+    <style>
+
+
+        #time_map{
+            width:600px;
+            height: 400px;
+            margin-left: -8rem;
+            float: left;
+        }
+        #time_map:hover{
+            width:1200px;
+            height: 500px;
+            margin: 0 auto;
+            float: left;
+        }
+        #time_map:hover + #timechart{
+            display: none;
+        }
+
+        #timechart{
+            width:800px;
+            height: 400px;
+            margin-top: -2rem;
+            float: right;
+        }
+
+        #timechart:hover{
+            width:1200px;
+            height: 1000px;
+            margin-top: 16rem;
+            margin-left: 25rem;
+            float: right;
+        }
+    </style>
 </head>
 
 <body>
-<div id="time_map" style="width:800px; height: 500px; margin: 0 auto;float: left; /*background: #ebe5da*/"></div>
-<div id="timechart" style="width:800px; height: 500px; margin: 0 auto; float: left;/*background: #ebe5da*/">
-</div>
-
+<div id="time_map" style=" /*background: #ebe5da*/"></div>
+<div id="timechart" style="/*background: #ebe5da*/" onmouseover = "func()"  onmouseout = "func1()"></div>
+<script type="text/javascript">
+    <!--
+    function func(){
+        var p = document.getElementById("time_map");
+//1、采用style修改。
+//      p.style.color = "red";
+//2、采用类选择器className修改。
+        p.style.display = "none";
+    }
+    function func1(){
+        var p = document.getElementById("time_map");
+        p.style.display = "block";
+    }
+    //-->
+</script>
 <script>
+    //去掉右侧选择框的等待遮罩
+    $("#waitChoose").hide();
     var middleScholar = {};
     var yearpapernumber = {};
     var yearcooperater = new Array();

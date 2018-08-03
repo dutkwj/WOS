@@ -341,6 +341,11 @@ public class TeacherStudentController {
     }
 
     //师生合作关系
+    @RequestMapping("/Advisor-advisee/{scholarId}/graph")
+    public String studentCooperate(@PathVariable String scholarId, Model model){
+        model.addAttribute("scholarId", scholarId);
+        return "Student_relationship";
+    }
 //    @RequestMapping("/Advisor-advisee/{scholarId}/graph")
     public String Co_graph(@PathVariable String scholarId, Model model) {
         //与上述师生宗谱关系代码基本相同，不同点是定义了AllScholar,用来存放实体类对象aa

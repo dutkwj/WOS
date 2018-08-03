@@ -70,6 +70,8 @@
            myChart.hideLoading();
             dom.innerHTML = "<svg />";
             createV4SelectableForceDirectedGraph(svg, graph,"${scholarId!""}");
+            //去掉右侧选择框的等待遮罩
+            $("#waitChoose").hide();
         }else {
             console.error(error);
         }
@@ -110,6 +112,7 @@
             type:"POST",
             url:URL,
             success:function (data) {
+                //console.log("data " + JSON.stringify(data));
                 $("#bigContainer").html(data);
             }
         });

@@ -16,9 +16,9 @@
     <#--<input id="search" placeholder="search by name">-->
     <#--<button type="button" id="search_button">查找</button>-->
     <#--<button type="button" id="clear_button">恢复</button>-->
-    <input type="radio"  name="yin" id="kaiguan" value="0" />&nbsp;引用
-    <input type="radio"  name="yin" id="kaiguan" value="1" />&nbsp;被引
-    <input type="radio"  name="yin" id="kaiguan" value="2" checked />&nbsp;引用+被引
+    <input type="radio"  name="yin" id="kaiguan" value="0" />&nbsp;cite
+    <input type="radio"  name="yin" id="kaiguan" value="1" />&nbsp;cited
+    <input type="radio"  name="yin" id="kaiguan" value="2" checked />&nbsp;cite & cited
     <#--<select id="circlesize" style="float:right">-->
         <#--<option value="total">Total Interactions</option>-->
         <#--<option value="discussions">Discussions</option>-->
